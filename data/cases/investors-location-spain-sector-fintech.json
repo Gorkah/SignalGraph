@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "query": "investors.location=Spain.sector=fintech",
+  "slug": "investors-location-spain-sector-fintech",
+  "generatedAt": "2026-08-29T13:29:21.421Z",
+  "model": "gpt-5.6-sol",
+  "calls": 8,
+  "question": "¿Hasta qué punto comparten inversiones los fondos españoles activos en fintech, y dónde empieza el coto propio de cada uno?",
+  "subtitle": "Seis firmas independientes de Madrid y Barcelona revelan una red de coinversiones dentro y fuera del fintech.",
+  "openVerb": {
+    "relation": "INVESTED_IN",
+    "label": "cartera",
+    "noun": "inversión"
+  },
+  "ring": [
+    {
+      "id": "d13f79c8-6698-4f4f-b98c-1a28d60d80b8",
+      "name": "Kibo Ventures",
+      "role": "protagonista",
+      "subtitle": "Fondo madrileño de tecnología y fintech; comparte varias participadas con K-Fund y JME."
+    },
+    {
+      "id": "4712a5e8-fa2e-4f27-9375-73b8fdbd3faf",
+      "name": "K-Fund",
+      "role": "protagonista",
+      "subtitle": "Inversor de software y fintech con sede en Madrid; es el nodo más conectado del reparto."
+    },
+    {
+      "id": "8aad7b66-72a3-4778-9e44-82373c15e79f",
+      "name": "JME Ventures",
+      "role": "protagonista",
+      "subtitle": "Especialista madrileño en late seed y Serie A; enlaza con Kibo, K-Fund y 4Founders."
+    },
+    {
+      "id": "73a2fa29-c572-4f3e-9c25-22abf944a752",
+      "name": "4Founders Capital",
+      "role": "protagonista",
+      "subtitle": "Fondo barcelonés de etapa temprana; conecta el bloque madrileño con varias fintech."
+    },
+    {
+      "id": "90871b30-2cfb-46f3-bc5a-44593ac0648f",
+      "name": "Encomenda Smart Capital",
+      "role": "protagonista",
+      "subtitle": "Inversor seed de Barcelona con apuestas fintech como Goin y Nemuru."
+    },
+    {
+      "id": "76516af3-d6c5-4762-8f89-c3159f69c264",
+      "name": "Samaipata Ventures",
+      "role": "protagonista",
+      "subtitle": "Fondo madrileño de plataformas digitales que coincide con 4Founders en Embat."
+    }
+  ],
+  "headline": {
+    "bridge": "Embat",
+    "why": "Es el cruce más alineado con la consulta: una fintech de tesorería aparece al abrir tanto 4Founders Capital como Samaipata Ventures. La coincidencia usa la misma entidad relacional y evita depender de homónimos."
+  },
+  "bridges": [
+    {
+      "name": "Embat",
+      "id": "3105fdbe-e3c9-4019-bc71-7c89d36f4d84",
+      "holders": [
+        "4Founders Capital",
+        "Samaipata Ventures"
+      ],
+      "verified": true
+    },
+    {
+      "name": "THEKER Robotics",
+      "id": "1a0edbf9-deb5-45be-ba24-0e7a0377cc92",
+      "holders": [
+        "Kibo Ventures",
+        "K-Fund",
+        "JME Ventures"
+      ],
+      "verified": true
+    },
+    {
+      "name": "Job&Talent",
+      "id": "1ce07185-3589-4b04-afd8-e8ce5238d9b1",
+      "holders": [
+        "Kibo Ventures",
+        "JME Ventures"
+      ],
+      "verified": true
+    },
+    {
+      "name": "MITO AI",
+      "id": "2a628d23-dfc6-48f9-a5d0-cbfee08001a0",
+      "holders": [
+        "Kibo Ventures",
+        "K-Fund"
+      ],
+      "verified": true
+    },
+    {
+      "name": "BankTrack",
+      "id": "269e515a-4927-484f-922f-e4fd932d7669",
+      "holders": [
+        "K-Fund",
+        "4Founders Capital"
+      ],
+      "verified": true
+    },
+    {
+      "name": "Goin",
+      "id": "97984bfa-98a0-4094-8b9a-8fc060188ace",
+      "holders": [
+        "K-Fund",
+        "Encomenda Smart Capital"
+      ],
+      "verified": true
+    },
+    {
+      "name": "Flanks",
+      "id": "68c5f371-3149-4213-9e73-704a1d7550dd",
+      "holders": [
+        "JME Ventures",
+        "4Founders Capital"
+      ],
+      "verified": true
+    }
+  ],
+  "cover": [
+    {
+      "label": "Sede",
+      "fields": [
+        "location",
+        "city",
+        "headquarters_address",
+        "registered_address"
+      ],
+      "fallback": "sin sede conocida"
+    },
+    {
+      "label": "Tipo de inversor",
+      "fields": [
+        "type",
+        "investor_type",
+        "description"
+      ],
+      "fallback": "tipo no especificado"
+    },
+    {
+      "label": "Tesis y etapa",
+      "fields": [
+        "focus",
+        "stage",
+        "investment_stage",
+        "description",
+        "notable_details"
+      ],
+      "fallback": "tesis no documentada"
+    }
+  ],
+  "back": {
+    "fields": [
+      "description",
+      "notable_details",
+      "website",
+      "founding_date"
+    ],
+    "hint": "Relato del fondo, foco inversor, trayectoria y referencia para seguir investigando."
+  },
+  "nouns": [
+    {
+      "type": "INVESTED_IN",
+      "noun": "inversión"
+    },
+    {
+      "type": "OPERATES_IN_INDUSTRY",
+      "noun": "sector"
+    },
+    {
+      "type": "HAS_PRESENCE_IN",
+      "noun": "presencia"
+    },
+    {
+      "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+      "noun": "evento corporativo"
+    },
+    {
+      "type": "IS_MEMBER_OF",
+      "noun": "membresía"
+    },
+    {
+      "type": "IS_CEO_OF",
+      "noun": "dirección ejecutiva"
+    },
+    {
+      "type": "IS_CFO_OF",
+      "noun": "dirección financiera"
+    },
+    {
+      "type": "IS_COO_OF",
+      "noun": "dirección operativa"
+    },
+    {
+      "type": "WORKS_AT",
+      "noun": "vínculo laboral"
+    },
+    {
+      "type": "FOUNDED",
+      "noun": "fundación"
+    },
+    {
+      "type": "OPERATED_BY",
+      "noun": "operación"
+    },
+    {
+      "type": "PUBLISHED_BY",
+      "noun": "publicación"
+    }
+  ],
+  "finding": {
+    "template": "{holders} coinciden en una inversión: {target}.",
+    "toast": "Cruce encontrado: {target} aparece en las carteras de {holders}."
+  },
+  "notes": "La consulta devolvió 17 actores entre fondos independientes, brazos corporativos y ángeles. El anillo se limitó a seis firmas de venture capital comparables y con cruces visibles en las relaciones descargadas; los brazos de bancos y corporaciones y los inversores individuales quedaron fuera para no mezclar modelos. También se inspeccionaron Seaya Ventures e Inveready, pero no añadían un cruce inequívoco al subgrafo elegido. Se descartó cantar Tucuvi como puente entre Seaya y K-Fund: aparece con el mismo nombre pero con UUID distintos y la búsqueda devuelve varias entidades homónimas, por lo que no hay un canónico seguro. Flanks y Embat también presentan duplicados nominales, pero los cruces declarados usan el UUID exacto que salió de todas las carteras indicadas. THEKER Robotics es el cruce más amplio —tres fondos—, aunque queda como hallazgo secundario porque es robótica y no fintech. No se trataron como puentes las relaciones entre gestoras, socios o eventos corporativos."
+}

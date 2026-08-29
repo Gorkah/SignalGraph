@@ -7,12 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "cala": "node --env-file=.env scripts/cala-query.mjs"
+    "cala": "node --env-file=.env scripts/cala-query.mjs",
+    "case": "node --env-file=.env scripts/build-case.mjs"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^4.0.51",
+    "ai": "^7.0.84",
     "next": "16.3.3",
     "react": "19.2.8",
     "react-dom": "19.2.8",
+    "zod": "^4.5.2",
     "zustand": "^5.0.15"
   },
   "devDependencies": {

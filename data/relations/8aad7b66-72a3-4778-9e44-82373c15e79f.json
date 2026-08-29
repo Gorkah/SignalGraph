@@ -1,0 +1,1159 @@
+{
+  "id": "8aad7b66-72a3-4778-9e44-82373c15e79f",
+  "name": "JME Ventures",
+  "introspection": {
+    "properties": [
+      "description",
+      "website",
+      "id",
+      "headquarters_address",
+      "name",
+      "registered_address"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY",
+        "INVESTED_IN",
+        "PARTICIPATES_IN_CORPORATE_EVENT",
+        "HAS_PRESENCE_IN"
+      ],
+      "incoming": [
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "8aad7b66-72a3-4778-9e44-82373c15e79f",
+    "name": "JME Ventures",
+    "entity_type": "Company",
+    "description": "Venture capital firm based in Madrid focusing on late seed and Series A of Spanish technology companies.",
+    "properties": {
+      "name": {
+        "value": "JME Ventures",
+        "sources": [
+          {
+            "name": "Top 10 VC Firms in Spain",
+            "document": "https://investorhunt.co/blogs/top-10-vc-firms-in-spain",
+            "date": "2023-11-04"
+          },
+          {
+            "name": "Top 10 VC Investors in Spain in 2026 | Startup Investors",
+            "document": "https://www.basetemplates.com/investors/top-10-vc-investors-in-spain",
+            "date": "2009-05-29"
+          }
+        ]
+      },
+      "description": {
+        "value": "Venture capital firm based in Madrid focusing on late seed and Series A of Spanish technology companies.",
+        "sources": [
+          {
+            "name": "Top 10 VC Firms in Spain",
+            "document": "https://investorhunt.co/blogs/top-10-vc-firms-in-spain",
+            "date": "2023-11-04"
+          },
+          {
+            "name": "Top 10 VC Investors in Spain in 2026 | Startup Investors",
+            "document": "https://www.basetemplates.com/investors/top-10-vc-investors-in-spain",
+            "date": "2009-05-29"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "1df5b32c-1db4-4368-9b3b-84604324aec9",
+            "name": "TRANSPORTATION_AND_LOGISTICS",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Failory: 90% of Startups Fail — Learn How Not To.",
+                  "document": "https://failory.com/blog/venture-capital-firms-spain",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "87800d85-bc64-54a3-aef2-31c76410bbc5"
+            }
+          },
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Failory: 90% of Startups Fail — Learn How Not To.",
+                  "document": "https://failory.com/blog/venture-capital-firms-spain",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "a0723add-243d-511e-ba11-6f3823380308"
+            }
+          },
+          {
+            "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+            "name": "VENTURE_CAPITAL",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Top 10 VC Firms in Spain",
+                  "document": "https://investorhunt.co/blogs/top-10-vc-firms-in-spain",
+                  "date": "2023-11-04"
+                },
+                {
+                  "name": "Top 10 VC Investors in Spain in 2026 | Startup Investors",
+                  "document": "https://www.basetemplates.com/investors/top-10-vc-investors-in-spain",
+                  "date": "2009-05-29"
+                }
+              ],
+              "id": "e91e6cf6-43ed-4acc-9bb1-643e40f4935f"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "03eb4238-2a39-43ee-b94d-e20fc6d6da58",
+            "name": "Wagmi VS",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/502642-81",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "wellfound.com",
+                  "document": "https://wellfound.com/company/wagmi-venture-studio/funding",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "Wagmi Venture Studio: Funding, Team & Investors",
+                  "document": "https://startupintros.com/orgs/wagmi-venture-studio",
+                  "date": "2026-07-13"
+                }
+              ],
+              "id": "12cd78ea-ba38-45c8-bd3b-cdb704736e77"
+            }
+          },
+          {
+            "id": "06656d93-f6ef-4d85-bac7-4a2b956ca442",
+            "name": "Galtea AI",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "WWWhat's new",
+                  "document": "https://wwwhatsnew.com/?p=489059",
+                  "date": "2026-06-28"
+                },
+                {
+                  "name": "WWWhat's new",
+                  "document": "https://wwwhatsnew.com/2026/03/27/galtea-barcelona-testing-agentes-ia-seed-32-millones",
+                  "date": "2026-06-28"
+                }
+              ],
+              "id": "4738046d-0524-587b-b2d3-6f7027d0453f"
+            }
+          },
+          {
+            "id": "1a0edbf9-deb5-45be-ba24-0e7a0377cc92",
+            "name": "THEKER Robotics",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/investor/174882-34",
+                  "date": "2026-06-09"
+                },
+                {
+                  "name": "Our investment in Theker: automating real-world problems — K Fund",
+                  "document": "https://www.kfund.vc/post/our-investment-in-theker-automating-real-world-problems",
+                  "date": "2025-08-29"
+                },
+                {
+                  "name": "Theker Robotics raised €3m seed in a deal led by JME Ventures, joined by investors including MissionVC, S16VC and Itnig Capital.",
+                  "document": "https://nordic9.com/news/theker-robotics-raised-3m-seed-in-a-deal-led-by-jme-ventures-joined-by-investors-including-missionvc-s16vc-and-itnig-capital",
+                  "date": "2025-01-05"
+                }
+              ],
+              "id": "1a5d9763-46d9-4706-a4b8-79f5544e340c"
+            }
+          },
+          {
+            "id": "1cd23ace-567a-4817-bc12-3e580d59e543",
+            "name": "Tolemy Bio",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "app.dealroom.co",
+                  "document": "https://app.dealroom.co/investors/jme_venture_capital",
+                  "date": "2026-06-09"
+                },
+                {
+                  "name": "Tolemy Bio secures €1.4M to turn messy lab data into AI-ready intelligence | Startups Magazine",
+                  "document": "https://startupsmagazine.co.uk/tolemy-bio-secures-1-4m-to-turn-messy-lab-data-into-ai-ready-intelligence",
+                  "date": "2026-05-12"
+                },
+                {
+                  "name": "Tolemy Bio raises €1.4M to unlock AI in biopharma, accelerating therapeutics development! More than 70% of biopharma companies say AI is their most needed investment in the coming years. Fewer than… | Norrsken",
+                  "document": "https://www.linkedin.com/posts/norrsken-foundation_tolemy-bio-raises-14m-to-unlock-ai-in-biopharma-activity-7459930139485732865-p7ZO",
+                  "date": "2026-05-12"
+                }
+              ],
+              "id": "415d3caf-ed6d-487b-83bb-7094c7607685"
+            }
+          },
+          {
+            "id": "1ce07185-3589-4b04-afd8-e8ce5238d9b1",
+            "name": "Job&Talent",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "JME Ventures: The Early Stage Founder's Guide",
+                  "document": "https://superscout.co/investor/jme-ventures",
+                  "date": "2012-01-01"
+                },
+                {
+                  "name": "JME Ventures",
+                  "document": "https://www.capboard.io/en/investor/jme-ventures",
+                  "date": "2012-01-01"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/jmeventurecapital/__tNgUgIgRVrNGibQkazdPvbPFFy4R39mDVpe1ThoNfTY",
+                  "date": "2026-06-09"
+                }
+              ],
+              "id": "e056f126-9971-4ca7-ba22-18c45c512647"
+            }
+          },
+          {
+            "id": "227fe6f5-93b9-45a1-9e82-46e0632138e0",
+            "name": "Rauda AI",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Articles by Jme Venture Capital",
+                  "document": "https://capital-riesgo.es/en/articles/jme+venture+capital?p=1",
+                  "date": "2012-01-01"
+                },
+                {
+                  "name": "Rauda AI | Rauda raises €2.4M to make AI voice central to customer support automation",
+                  "document": "https://www.rauda.ai/blog-posts/rauda-raises-eu2-4m-to-make-ai-voice-central-to-customer-support-automation",
+                  "date": "2025-09-01"
+                },
+                {
+                  "name": "Rauda AI closes a €2.4 million seed round led by JME Ventures, joined by Bonsai Partners, Demium Capital, Fides Capital, and Juanjo Mostazo in Spain.",
+                  "document": "https://nordic9.com/news/rauda-ai-closes-a-24-million-seed-round-led-by-jme-ventures-joined-by-bonsai-partners-demium-capital-fides-capital-and-juanjo-mostazo-in-spain",
+                  "date": "2025-08-01"
+                }
+              ],
+              "id": "d59ead0f-8354-41b3-8c3d-a62aed78ce8c"
+            }
+          },
+          {
+            "id": "51e4e1a5-7548-4299-8d99-a06ff34a7801",
+            "name": "Kymatio",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Kymatio closed a 725.000 euros financing round with Sabadell and JME",
+                  "document": "https://startupsreal.com/kymatio-closed-a-725-000-euros-financing-round-with-the-entry-of-sabadell-and-jme-ventures",
+                  "date": "2020-06-23"
+                },
+                {
+                  "name": "Kymatio closes €725K funding round with Banco Sabadell and JME Ventures",
+                  "document": "https://kymatio.com/news/the-cybersecurity-startup-kymatio-closed-a-725-000-euros-financing-round-with-participation-from-sabadell-and-jme",
+                  "date": "2020-06-18"
+                }
+              ],
+              "id": "f8b04c46-2d6e-4e1d-8ed9-44c0f9811f5f"
+            }
+          },
+          {
+            "id": "5db8ef80-73c3-45bb-bd93-dac9e8f60fcf",
+            "name": "Lingokids",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/jmeventurecapital/__tNgUgIgRVrNGibQkazdPvbPFFy4R39mDVpe1ThoNfTY",
+                  "date": "2026-06-09"
+                },
+                {
+                  "name": "Edtech startup Lingokids lands $4 mln",
+                  "document": "https://www.venturecapitaljournal.com/edtech-startup-lingokids-lands-4-mln",
+                  "date": "2017-06-21"
+                }
+              ],
+              "id": "01139ee8-1cf1-4d5c-ae8d-c66cbe1bb805"
+            }
+          },
+          {
+            "id": "5f902d2a-f11e-4b03-8c0e-f5732367134e",
+            "name": "Konvo AI",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/ringr-ai-raised-a-3-million-funding-round-led-by-pangram-capital-in-spain",
+                  "date": "2026-06-11"
+                },
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/bookline-raised-1m-with-investors-in-spain",
+                  "date": "2026-06-11"
+                },
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/hamelyn-in-a-2m-equity-financing-round-led-by-inclimo-climate-tech-joined-by-trind-vc",
+                  "date": "2026-06-11"
+                }
+              ],
+              "id": "511e85ae-f3cf-5422-b534-8fef0c07d25e"
+            }
+          },
+          {
+            "id": "60500afd-f89f-4f2c-9b6a-2bba7baa2dfb",
+            "name": "Reveni",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "JME Ventures: The Early Stage Founder's Guide",
+                  "document": "https://superscout.co/investor/jme-ventures",
+                  "date": "2012-01-01"
+                },
+                {
+                  "name": "www.crowdfundinsider.com",
+                  "document": "https://www.crowdfundinsider.com/2025/10/253792-logistics-fintech-reveni-closes-e7-5m-series-a",
+                  "date": "2026-06-09"
+                },
+                {
+                  "name": "Reveni raised €3M in a round led by JME, joined by Fin Capital , Big Sur Ventures and Bynd .",
+                  "document": "https://nordic9.com/news/reveni-raised-3m-in-a-round-led-by-jme-joined-by-fin-capital-big-sur-ventures-and-bynd",
+                  "date": "2022-09-16"
+                }
+              ],
+              "id": "c03f7eb9-93a5-425b-8912-4c67f0d2c32c"
+            }
+          },
+          {
+            "id": "607cd4f1-dd5e-4b16-b848-d1fbdc74ab37",
+            "name": "Genially",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "JME Ventures",
+                  "document": "https://www.capboard.io/en/investor/jme-ventures",
+                  "date": "2012-01-01"
+                },
+                {
+                  "name": "Genial.ly Raises 5 Million Dollars in an Investment Round",
+                  "document": "https://startupsreal.com/genial-ly-raises-5-million-dollars-in-an-investment-round",
+                  "date": "2020-02-05"
+                },
+                {
+                  "name": "Genially closed €17 million series B led by the US venture capital firms 645 Ventures and Owl Ventures.",
+                  "document": "https://nordic9.com/news/genially-closed-17-million-series-b-led-by-the-us-venture-capital-firms-645-ventures-and-owl-ventures",
+                  "date": "2021-09-22"
+                }
+              ],
+              "id": "1fc2451c-bcb3-4d7b-9977-c52190af3644"
+            }
+          },
+          {
+            "id": "66ab2d3f-9ae0-4090-95be-ad9d433080cd",
+            "name": "Flywire",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "JME Ventures: The Early Stage Founder's Guide",
+                  "document": "https://superscout.co/investor/jme-ventures",
+                  "date": "2012-01-01"
+                },
+                {
+                  "name": "JME Ventures",
+                  "document": "https://www.capboard.io/en/investor/jme-ventures",
+                  "date": "2012-01-01"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/jmeventurecapital/__tNgUgIgRVrNGibQkazdPvbPFFy4R39mDVpe1ThoNfTY",
+                  "date": "2026-06-09"
+                }
+              ],
+              "id": "c2f8e7fd-97c6-4811-803f-c82790c64f98"
+            }
+          },
+          {
+            "id": "68c5f371-3149-4213-9e73-704a1d7550dd",
+            "name": "Flanks",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Home page new - StartupCentrum Media",
+                  "document": "https://media.startupcentrum.com/en/weekly-startup-ecosystem-overview-in-europe-february-24-28",
+                  "date": "2026-06-28"
+                }
+              ],
+              "id": "7d03c757-e738-56d2-b25b-6e19d60d6911"
+            }
+          },
+          {
+            "id": "70ed4929-2a94-4867-906c-92f3848838cf",
+            "name": "PAYLOAD AEROSPACE SA",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "PLD Space company information, funding & investors",
+                  "document": "https://app.dealroom.co/companies/pld_space",
+                  "date": "2011-09-01"
+                },
+                {
+                  "name": "novobrief.com",
+                  "document": "https://novobrief.com/space-reusable-rockets/6740",
+                  "date": "2026-07-28"
+                },
+                {
+                  "name": "PLD Space Completes Its 17 Million Euro Investment Round",
+                  "document": "https://spacenews.com/pld-space-completes-its-17-million-euro-investment-round",
+                  "date": "2018-06-14"
+                }
+              ],
+              "id": "dbe8532b-a74e-40a4-9005-48a1749cc4cb"
+            }
+          },
+          {
+            "id": "7cd5dd91-ab91-405d-9621-ad6aa64faca9",
+            "name": "Atani",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "JME Ventures — Web3 Venture Capital Portfolio | Crypto-Fundraising",
+                  "document": "https://crypto-fundraising.info/funds/jme-ventures",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "JME Ventures | ICO Analytics",
+                  "document": "https://icoanalytics.org/funds/jme-ventures",
+                  "date": "2026-01-01"
+                }
+              ],
+              "id": "fef6464a-0922-4e36-b29d-1cefdc8e264c"
+            }
+          },
+          {
+            "id": "7d6d63c7-bac0-4079-bf29-0089ed7e8ff8",
+            "name": "8Layers",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Articles by Jme Venture Capital",
+                  "document": "https://capital-riesgo.es/en/articles/jme+venture+capital?p=1",
+                  "date": "2012-01-01"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/876910-06",
+                  "date": "2026-06-09"
+                },
+                {
+                  "name": "directory.startupluxembourg.com",
+                  "document": "https://directory.startupluxembourg.com/investors/secways/news",
+                  "date": "2026-06-09"
+                }
+              ],
+              "id": "dc55a346-b1c0-4f3b-ab35-2cf3806c35fa"
+            }
+          },
+          {
+            "id": "82ccf0e7-c211-480c-9848-fc6a03a51bc0",
+            "name": "Harbiz",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.seedtable.com",
+                  "document": "https://www.seedtable.com/investors/jme-ventures",
+                  "date": "2026-06-09"
+                },
+                {
+                  "name": "www.finsmes.com",
+                  "document": "https://www.finsmes.com/2024/01/harbiz-raises-e5m-in-funding.html",
+                  "date": "2026-06-09"
+                },
+                {
+                  "name": "Harbiz secures €5M funding to expand fitnesstech platform internationally",
+                  "document": "https://tech.eu/2024/01/18/harbiz-secures-eur5m-funding-to-expand-fitnesstech-platform",
+                  "date": "2024-01-18"
+                }
+              ],
+              "id": "0a3a1839-13d1-4a6b-87d0-60185ef2d964"
+            }
+          },
+          {
+            "id": "866f7bf3-8974-4f13-9a49-c4f40a74c01c",
+            "name": "Chekin",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "JME Venture Capital - Portfolio, Partners, Reviews, News",
+                  "document": "https://parsers.vc/fund/jme.vc",
+                  "date": "2026-05-13"
+                }
+              ],
+              "id": "eea1d16b-051c-44dc-b647-8d5677cbb7bf"
+            }
+          },
+          {
+            "id": "895ce412-8d72-4d68-914c-063082228b85",
+            "name": "Genesy AI",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "VCBacked - Find venture funded startups for your business",
+                  "document": "https://www.vcbacked.co/company/genesy-ai",
+                  "date": "2026-06-12"
+                }
+              ],
+              "id": "f4ce136e-af41-5044-b4ef-33f7ce238475"
+            }
+          },
+          {
+            "id": "8f4fd64b-9acf-4a58-ae57-995e0c0ffcfa",
+            "name": "Charms",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/investor/174882-34",
+                  "date": "2026-06-09"
+                },
+                {
+                  "name": "JME Ventures — Web3 Venture Capital Portfolio | Crypto-Fundraising",
+                  "document": "https://crypto-fundraising.info/funds/jme-ventures",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "app.dealroom.co",
+                  "document": "https://app.dealroom.co/investors/jme_venture_capital",
+                  "date": "2026-06-09"
+                }
+              ],
+              "id": "3e8488b8-dfdc-4a67-94e8-b26b6a569aaf"
+            }
+          }
+        ],
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "120d587a-9c98-43ab-b70b-34b1b32dde77",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/funding_round/genially-series-a--23758886",
+                  "date": "2026-06-10"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/117200-17",
+                  "date": "2026-06-10"
+                }
+              ],
+              "id": "6b358c78-dfec-4505-8861-e7b485aa0da1"
+            }
+          },
+          {
+            "id": "1f646a40-8185-43c3-86d2-9d5c0c56047a",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Charms closes $1.5M pre-seed to launch the AI character economy",
+                  "document": "https://techcrunch.com/press-release/charms-closes-1-5m-pre-seed-to-launch-the-ai-character-economy",
+                  "date": "2026-05-12"
+                },
+                {
+                  "name": "Charms Raises $1.5M Pre-Seed to Bring the AI Character Economy Onchain",
+                  "document": "https://www.theglobeandmail.com/investing/markets/markets-news/Tipranks/1905427/charms-raises-1-5m-pre-seed-to-bring-the-ai-character-economy-onchain",
+                  "date": "2026-06-09"
+                },
+                {
+                  "name": "Charms Funding Rounds, Investors & Valuation",
+                  "document": "https://alphadrops.net/raises/charms",
+                  "date": "2026-06-01"
+                },
+                {
+                  "name": "defillama.com",
+                  "document": "https://defillama.com/raises/base-ecosystem-fund",
+                  "date": "2026-06-10"
+                }
+              ],
+              "event_date": "2026-05-12",
+              "id": "09a94a6f-6607-4e8e-87a1-8b84d7216b79"
+            }
+          },
+          {
+            "id": "25b08484-32f3-4d46-8cd6-b43bfc2dc17c",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Quantum Computing Startup Multiverse Computing Closes $11.5M Investment Round",
+                  "document": "https://multiversecomputing.com/resources/quantum-computing-startup-multiverse-computing-closes-11-5m-investment-round",
+                  "date": "2026-04-14"
+                },
+                {
+                  "name": "Multiverse Computing Raises $11.5M for Quantum Finance",
+                  "document": "https://startupsavant.com/news/multiverse-computing",
+                  "date": "2024-07-02"
+                }
+              ],
+              "event_date": "2021-10-20",
+              "id": "34c1f271-81f3-432f-8753-13ab5cfb24df"
+            }
+          },
+          {
+            "id": "27f5ba13-2a35-4afb-9e97-9956611c6972",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "PLD Space company information, funding & investors",
+                  "document": "https://app.dealroom.co/companies/pld_space",
+                  "date": "2011-09-01"
+                },
+                {
+                  "name": "novobrief.com",
+                  "document": "https://novobrief.com/space-reusable-rockets/6740",
+                  "date": "2026-07-28"
+                },
+                {
+                  "name": "PLD Space Completes Its 17 Million Euro Investment Round",
+                  "document": "https://spacenews.com/pld-space-completes-its-17-million-euro-investment-round",
+                  "date": "2018-06-14"
+                }
+              ],
+              "event_date": "2018-06-01",
+              "id": "e7556bab-8dde-4f85-a4e3-763fd6b929fa"
+            }
+          },
+          {
+            "id": "3fe4fbbc-3039-4f78-b6bf-38b863cea374",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/briefing/briefing-4-6-21",
+                  "date": "2026-06-10"
+                }
+              ],
+              "event_date": "2021-04-06",
+              "id": "85015c4a-f7a6-4888-8193-3b88cc6cba6d"
+            }
+          },
+          {
+            "id": "9ce13912-ff5d-4685-9ba0-14b477798527",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "PLD Space company information, funding & investors",
+                  "document": "https://app.dealroom.co/companies/pld_space",
+                  "date": "2011-09-01"
+                }
+              ],
+              "event_date": "2020-12-17",
+              "id": "dc4c2c06-99b3-4ea1-91b6-c1b987ef8b2e"
+            }
+          },
+          {
+            "id": "a53e3893-4fcd-43ba-94bb-7f48fa34bc25",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/rever/__1UaxQOnbe0Rap-6D4Pk5dxA0iUWybrScPfb1IBU9_8A",
+                  "date": "2026-06-10"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/refundid/__za73wWdyp6OUUqXHUxa7L60TnTgu_t8ObSNlveMfGHc",
+                  "date": "2026-06-10"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/494659-54",
+                  "date": "2026-06-10"
+                }
+              ],
+              "id": "1dad288f-677c-4913-8819-b0948090bcf4"
+            }
+          },
+          {
+            "id": "b38e22d8-8aa7-4796-bc21-95da209afd27",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/502642-81",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "wellfound.com",
+                  "document": "https://wellfound.com/company/wagmi-venture-studio/funding",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "Wagmi Venture Studio: Funding, Team & Investors",
+                  "document": "https://startupintros.com/orgs/wagmi-venture-studio",
+                  "date": "2026-07-13"
+                }
+              ],
+              "event_date": "2022-05-19",
+              "id": "6561acd8-699b-44f3-8c07-f1c17d8e4e20"
+            }
+          },
+          {
+            "id": "d061c510-457e-4bf2-a694-9ca1e561b277",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/8layers/__ApM8HKYXEOcDqmEMiiZAy3RXc-KxSihfUfVbm60mnRE",
+                  "date": "2026-06-10"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/8layers/__ApM8HKYXEOcDqmEMiiZAy3RXc-KxSihfUfVbm60mnRE/funding-and-investors",
+                  "date": "2026-06-10"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/lanai/__M486AWGURT_ugEhKfBIgr5seQJySPgLR9dPey7w52Fw",
+                  "date": "2026-06-10"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/investor/497650-69",
+                  "date": "2026-06-10"
+                }
+              ],
+              "event_date": "2025-06-25",
+              "id": "5a213a69-4ac8-4753-afd0-385e475e1677"
+            }
+          },
+          {
+            "id": "db6aaadd-53c3-4015-aebe-bcfdfc09d77c",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Voi raises another $85M for its European e-scooter service | TechCrunch",
+                  "document": "https://techcrunch.com/2019/11/10/voi-raises-another-85m",
+                  "date": "2019-11-10"
+                }
+              ],
+              "event_date": "2019-11-10",
+              "id": "5fd69051-c631-4c93-a6de-9233e8f22bc7"
+            }
+          }
+        ],
+        "HAS_PRESENCE_IN": [
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Top 10 VC Firms in Spain",
+                  "document": "https://investorhunt.co/blogs/top-10-vc-firms-in-spain",
+                  "date": "2023-11-04"
+                },
+                {
+                  "name": "Top 10 VC Investors in Spain in 2026 | Startup Investors",
+                  "document": "https://www.basetemplates.com/investors/top-10-vc-investors-in-spain",
+                  "date": "2009-05-29"
+                }
+              ],
+              "id": "3bbae330-7c87-457c-84d3-a198f9eeca9c"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "06656d93-f6ef-4d85-bac7-4a2b956ca442",
+            "name": "Galtea AI",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startup Intelligence Platform – Funding, Companies & Investors | Raising.fi",
+                  "document": "https://raising.fi/news/galtea-seed-march-2026",
+                  "date": "2026-07-09"
+                }
+              ],
+              "id": "a8d7ec09-51c1-5737-8d4f-92e36c917cb5"
+            }
+          },
+          {
+            "id": "227fe6f5-93b9-45a1-9e82-46e0632138e0",
+            "name": "Rauda AI",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/ringr-ai-raised-a-3-million-funding-round-led-by-pangram-capital-in-spain",
+                  "date": "2026-06-11"
+                }
+              ],
+              "id": "1fa270ed-21a8-5de7-a2d7-aae04d060a56"
+            }
+          },
+          {
+            "id": "29f5f788-b844-4b12-a98c-9eef460f1944",
+            "name": "Smart Protection",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Tech.eu - European Startup, Funding and Technology News",
+                  "document": "https://tech.eu/2020/11/18/smart-protection-series-b",
+                  "date": "2026-07-17"
+                }
+              ],
+              "id": "4d8106fb-0747-5301-bb50-b513f9afd79f"
+            }
+          },
+          {
+            "id": "3a9c0371-21e0-46d0-a15d-df434973dd7d",
+            "name": "Genesy",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "bouncewatch.com",
+                  "document": "https://bouncewatch.com/company/genesy-ai",
+                  "date": "2026-07-22"
+                }
+              ],
+              "id": "ba806c39-5a03-51b1-a4d3-acf4753a4959"
+            }
+          },
+          {
+            "id": "45596f04-9e03-4442-a697-e1da92511210",
+            "name": "Multiverse Computing",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/tag/multiverse-computing",
+                  "date": "2026-06-28"
+                }
+              ],
+              "id": "241089c8-ca36-57f3-9755-b3b60ed4e64b"
+            }
+          },
+          {
+            "id": "639ee45d-79de-4cbb-bf82-c616637950c4",
+            "name": "PLD Grupp OÜ",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "European Spaceflight Homepage",
+                  "document": "https://europeanspaceflight.com/",
+                  "date": "2026-06-29"
+                },
+                {
+                  "name": "www.pldspace.com",
+                  "document": "https://www.pldspace.com/",
+                  "date": "2026-06-29"
+                },
+                {
+                  "name": "JME Ventures - Lean SpaceTech",
+                  "document": "https://leanspacetech.com/",
+                  "date": "2026-06-29"
+                },
+                {
+                  "name": "cincodias.elpais.com",
+                  "document": "https://cincodias.elpais.com/",
+                  "date": "2026-06-29"
+                },
+                {
+                  "name": "De PLD Space a Fossa y Sateliot: España lanza más de €430M al espacio en un año con mucho dinero público",
+                  "document": "https://www.ecotechers.com/",
+                  "date": "2026-06-29"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/",
+                  "date": "2026-06-29"
+                },
+                {
+                  "name": "COFIDES invests €50 million in PLD Space to accelerate access to space with MIURA 5",
+                  "document": "https://www.cofides.es/",
+                  "date": "2026-06-29"
+                },
+                {
+                  "name": "spaceintelreport.com",
+                  "document": "https://www.spaceintelreport.com/",
+                  "date": "2026-06-29"
+                },
+                {
+                  "name": "app.dealroom.co",
+                  "document": "https://app.dealroom.co/",
+                  "date": "2026-06-29"
+                },
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/",
+                  "date": "2026-06-29"
+                },
+                {
+                  "name": "www.seedtable.com",
+                  "document": "https://www.seedtable.com/",
+                  "date": "2026-06-29"
+                }
+              ],
+              "id": "08e982a1-1e7a-5794-a20f-0a3519aecc9e"
+            }
+          },
+          {
+            "id": "68c5f371-3149-4213-9e73-704a1d7550dd",
+            "name": "Flanks",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Home page new - StartupCentrum Media",
+                  "document": "https://media.startupcentrum.com/en/weekly-startup-ecosystem-overview-in-europe-february-24-28",
+                  "date": "2026-06-28"
+                }
+              ],
+              "id": "51bd860a-fcc6-541a-a22e-31fc2ebeb108"
+            }
+          },
+          {
+            "id": "78763d4a-21d3-49b9-ba10-3cb3ee22064f",
+            "name": "Galtea Solutions SL",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/galtea-to-raise-pre-seed-funding-with-jme-ventures-wayra-and-abac-capital-in-spain",
+                  "date": "2026-07-09"
+                }
+              ],
+              "id": "7b18734f-206f-5bae-a3c9-81194f491eaf"
+            }
+          },
+          {
+            "id": "8794d022-25ec-40ed-9c3f-e7c6176de2e1",
+            "name": "VCBacked",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "COMPUTERWORLD ESPAÑA",
+                  "document": "https://www.computerworld.es/article/3530674/la-startup-de-atencion-al-cliente-rauda-ai-capta-520-000-euros-de-financiacion.html",
+                  "date": "2026-06-12"
+                },
+                {
+                  "name": "VCBacked - Find venture funded startups for your business",
+                  "document": "https://vcbacked.co/company/rauda-ai",
+                  "date": "2026-06-12"
+                }
+              ],
+              "id": "d8834820-9a4c-5033-beb4-f63230535342"
+            }
+          },
+          {
+            "id": "895ce412-8d72-4d68-914c-063082228b85",
+            "name": "Genesy AI",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "VCBacked - Find venture funded startups for your business",
+                  "document": "https://www.vcbacked.co/company/genesy-ai",
+                  "date": "2026-06-12"
+                }
+              ],
+              "id": "59ddf065-f625-509e-910b-eb742d341061"
+            }
+          },
+          {
+            "id": "96fbca65-63df-4c3a-9a0b-9fdcc5d25191",
+            "name": "Genially",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "edtechreview.in",
+                  "document": "https://www.edtechreview.in/news/spanish-edtech-genially-raises-20m-in-series-b-funding-interactive-content",
+                  "date": "2026-08-02"
+                }
+              ],
+              "id": "542b2611-197d-55b5-881e-8d436808baf8"
+            }
+          },
+          {
+            "id": "9c34001c-d7be-4f84-94f6-f946be19d635",
+            "name": "LINGOKIDS LANGUAGE SCHOOL LTD",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "FORTUNE | Fortune",
+                  "document": "https://fortune.com/2020/10/09/coinbase-says-60-employees-are-leaving-over-its-apolitical-stance",
+                  "date": "2026-06-27"
+                }
+              ],
+              "id": "826f5920-7d51-5335-94b2-a2b718a5946f"
+            }
+          },
+          {
+            "id": "b3b494ed-c14f-466a-8e7a-0606159edc9c",
+            "name": "IriusRisk",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/?p=354695",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "b435c4ff-16b1-5337-94d6-d1557e8daf5e"
+            }
+          },
+          {
+            "id": "bf51f256-8fa0-4fc8-bd73-c2d2a53cf021",
+            "name": "Galtea",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "SaaS B2B Fundraising News | The SaaS News",
+                  "document": "https://www.thesaasnews.com/news/galtea-raises-3-2-million-seed-round",
+                  "date": "2026-07-09"
+                },
+                {
+                  "name": "TNW | The heart of tech",
+                  "document": "http://thenextweb.com/news/galtea-3-2m-ai-evaluation-platform",
+                  "date": "2026-07-09"
+                }
+              ],
+              "id": "239e1c66-0da3-5d19-9023-0649f7e74907"
+            }
+          },
+          {
+            "id": "c626eb0c-a507-4167-b289-f60e2e0edac9",
+            "name": "Galtea",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "WWWhat's new",
+                  "document": "https://wwwhatsnew.com/?p=489059",
+                  "date": "2026-06-28"
+                },
+                {
+                  "name": "WWWhat's new",
+                  "document": "https://wwwhatsnew.com/2026/03/27/galtea-barcelona-testing-agentes-ia-seed-32-millones",
+                  "date": "2026-06-28"
+                }
+              ],
+              "id": "d7911103-5cd2-5da8-9fe1-ff76bd6615ff"
+            }
+          },
+          {
+            "id": "cac5c8eb-f483-428a-9ee1-0897ae037133",
+            "name": "TaxDown",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/taxdown-raised-55-million-in-a-funding-round-backed-by-base10-partners-and-jme-ventures",
+                  "date": "2026-07-23"
+                }
+              ],
+              "id": "7d030057-ae51-5f64-af03-2efa31bf812a"
+            }
+          },
+          {
+            "id": "da14978a-cf6d-45fd-920f-b96683b1aeac",
+            "name": "Jobandtalent",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Repositorio Institucional de Documentos",
+                  "document": "https://zaguan.unizar.es/record/129248/files/TAZ-TFG-2023-1692.pdf",
+                  "date": "2026-08-27"
+                }
+              ],
+              "id": "e3d3f90a-9bc5-5204-9970-216db159e332"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

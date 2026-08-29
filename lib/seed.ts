@@ -3,7 +3,7 @@ import "server-only";
 import { createHash } from "node:crypto";
 import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
-import { combPosition } from "@/lib/geometry";
+import { loadManifest, clientView } from "@/lib/manifest";
 import { CASE_RELATION } from "@/lib/relations";
 import type {
   CalaEntity,
@@ -13,15 +13,13 @@ import type {
   ClaimSource,
   CaseNode,
   Dossier,
-  Edge,
   EntityCard,
-  Pin,
   ResearchCase,
   SeedPayload,
 } from "@/lib/types";
 
 const DATA_DIR = path.join(process.cwd(), "data", "cala");
-export const DEFAULT_REPORT_QUERY = "startups.location=Spain.sector=fintech";
+export const DEFAULT_REPORT_QUERY = "investors.location=Spain.sector=fintech";
 
 const CENTRE = { x: 1100, y: 620 };
 
@@ -30,18 +28,13 @@ const CENTRE = { x: 1100, y: 620 };
  * derivan del centro, para que el tablón siempre se lea como un caso con
  * un punto de origen y no como fichas sueltas.
  */
-const RING = [
+const RING_FALLBACK = [
   ["dc60f800-f723-41b8-9482-810db28c9d70", "DN Capital", "Venture capital"],
   ["d13f79c8-6698-4f4f-b98c-1a28d60d80b8", "Kibo Ventures", "Venture capital"],
   ["4712a5e8-fa2e-4f27-9375-73b8fdbd3faf", "K-Fund", "Venture capital"],
   ["e1bedcfd-ee74-4cb3-8059-d30de61462af", "Seaya Ventures", "Venture capital"],
   ["e3a596f9-cb53-454e-ac29-8bf2c69f1d67", "BBVA Spark Fund", "Growth finance"],
-  ["eb86df55-d9fb-41bc-8104-ad6a892dc7ec", "Bnext", "Fintech"],
-  ["f214cceb-1823-442b-b891-4f5e4047cab5", "Fintonic", "Fintech"],
 ] as const;
-
-/** Ficha cuyo hilo viene ya tirado en la semilla, para enseñar la gramática. */
-const SEEDED_PULL = { entityId: "dc60f800-f723-41b8-9482-810db28c9d70", relationType: "INVESTED_IN", count: 4 };
 
 const LABELS: Record<string, string> = {
   name: "Nombre",
@@ -99,12 +92,40 @@ function entityNames(entity: CalaEntity) {
   return [entity.name, ...(entity.mentions ?? [])];
 }
 
+let neighbourIndex: Map<string, CalaEntity> | undefined;
+
+/**
+ * Índice de todo lo alcanzable tirando de un hilo. Sin esto, cualquier entidad
+ * que llegue de `data/relations` y no salga además en un dossier de query
+ * revienta con "entidad no encontrada" al abrirla.
+ */
+function loadNeighbourIndex() {
+  if (neighbourIndex) return neighbourIndex;
+  neighbourIndex = new Map();
+  for (const dump of loadRelations().values()) {
+    for (const types of Object.values(dump.projection?.relationships ?? {})) {
+      for (const items of Object.values(types)) {
+        for (const item of items) {
+          if (neighbourIndex.has(item.id)) continue;
+          neighbourIndex.set(item.id, {
+            id: item.id,
+            name: item.name,
+            entity_type: item.entity_type ?? "Entity",
+            mentions: [item.name],
+          });
+        }
+      }
+    }
+  }
+  return neighbourIndex;
+}
+
 export function entityById(id: string, dumps = loadCalaDumps()) {
   for (const { dump } of dumps) {
     const entity = dump.data?.entities?.find((item) => item.id === id);
     if (entity) return entity;
   }
-  return undefined;
+  return loadNeighbourIndex().get(id);
 }
 
 export function entityForName(name: string, dumps = loadCalaDumps()) {
@@ -134,11 +155,12 @@ function sourceFor(file: string, dump: CalaQueryDump): ClaimSource {
   };
 }
 
-function claimsFromResult(result: CalaResult, source: ClaimSource): Claim[] {
+function claimsFromResult(result: CalaResult, source: ClaimSource, mention: boolean): Claim[] {
   return Object.entries(result).flatMap(([key, raw]) => {
     if (raw === null || raw === "" || key === "name" || key === "startup") return [];
     const value = String(raw);
-    return [{ key, label: LABELS[key] ?? key, value, date: dateFromText(value), source }];
+    const claim: Claim = { key, label: LABELS[key] ?? key, value, date: dateFromText(value), source };
+    return [mention ? { ...claim, mention: true as const } : claim];
   });
 }
 
@@ -148,9 +170,9 @@ export function claimsForEntity(entity: CalaEntity, dumps = loadCalaDumps()) {
   for (const { file, dump } of dumps) {
     for (const result of dump.data?.results ?? []) {
       if (!resultMentionsEntity(result, entity)) continue;
-      const claims = claimsFromResult(result, sourceFor(file, dump));
       const resultName = principal(result);
-      const isDirect = resultName && entityNames(entity).some((name) => normalized(name) === normalized(resultName));
+      const isDirect = Boolean(resultName && entityNames(entity).some((name) => normalized(name) === normalized(resultName)));
+      const claims = claimsFromResult(result, sourceFor(file, dump), !isDirect);
       (isDirect ? direct : supporting).push(...claims);
     }
   }
@@ -236,8 +258,8 @@ function cardCorner(centreX: number, centreY: number) {
   return { x: snapTo(centreX - CARD_W / 2), y: snapTo(centreY - CARD_H / 2) };
 }
 
-const RING_RX = 540;
-const RING_RY = 340;
+const RING_RX = 660;
+const RING_RY = 430;
 
 function ringAngle(index: number, total: number) {
   return (index / total) * Math.PI * 2 - Math.PI / 2;
@@ -248,7 +270,16 @@ function ringCentre(index: number, total: number) {
   return { x: CENTRE.x + Math.cos(angle) * RING_RX, y: CENTRE.y + Math.sin(angle) * RING_RY };
 }
 
-function buildCards(dumps: ReturnType<typeof loadCalaDumps>): EntityCard[] {
+/** Anillo del manifiesto si lo hay; si no, la semilla escrita a mano. */
+function ringEntries(manifest: ReturnType<typeof loadManifest>) {
+  if (manifest?.ring?.length) {
+    return manifest.ring.map((entry) => [entry.id, entry.name, entry.subtitle] as const);
+  }
+  return RING_FALLBACK.map(([id, name, category]) => [id, name, category] as const);
+}
+
+function buildCards(dumps: ReturnType<typeof loadCalaDumps>, manifest: ReturnType<typeof loadManifest>): EntityCard[] {
+  const RING = ringEntries(manifest);
   const cards: EntityCard[] = [];
   const centres = new Map<string, { x: number; y: number }>();
 
@@ -264,52 +295,19 @@ function buildCards(dumps: ReturnType<typeof loadCalaDumps>): EntityCard[] {
       position: cardCorner(centre.x, centre.y),
       claims: entity ? claimsForEntity(entity, dumps) : [],
       relations: relationsFor(id),
+      density: "full",
     });
   });
 
   return cards;
 }
 
-function buildSeededPins(cards: EntityCard[], dumps: ReturnType<typeof loadCalaDumps>) {
-  const parent = cards.find((card) => card.id === SEEDED_PULL.entityId);
-  if (!parent) return { pins: [] as Pin[], edges: [] as Edge[] };
-  const neighbours = relationNeighbours(SEEDED_PULL.entityId, SEEDED_PULL.relationType).slice(0, SEEDED_PULL.count);
-  const origin = { x: parent.position.x + CARD_W / 2, y: parent.position.y + CARD_H / 2 };
-  const pins: Pin[] = [];
-  const edges: Edge[] = [];
-  neighbours.forEach((neighbour, index) => {
-    const entity = entityById(neighbour.id, dumps);
-    pins.push({
-      id: neighbour.id,
-      name: neighbour.name,
-      entityType: neighbour.entityType,
-      position: combPosition(origin, CENTRE, index),
-      parentId: SEEDED_PULL.entityId,
-      relationType: SEEDED_PULL.relationType,
-      claims: entity ? claimsForEntity(entity, dumps) : [],
-    });
-    edges.push({
-      id: `${SEEDED_PULL.entityId}:${SEEDED_PULL.relationType}:${neighbour.id}`,
-      sourceId: SEEDED_PULL.entityId,
-      targetId: neighbour.id,
-      relationType: SEEDED_PULL.relationType,
-    });
-  });
-  return { pins, edges };
-}
-
-function buildCase(dumps: ReturnType<typeof loadCalaDumps>): ResearchCase {
-  const relationSource: ClaimSource = {
-    label: "Cala · relaciones de entidad",
-    query: "entity_retrieval · INVESTED_IN",
-    file: "data/relations",
-    runAt: new Date(0).toISOString(),
-  };
-
+function buildCase(dumps: ReturnType<typeof loadCalaDumps>, manifest: ReturnType<typeof loadManifest>): ResearchCase {
+  const RING = ringEntries(manifest);
   const focus: CaseNode = {
     id: "case-root",
-    title: "¿Quién financia el fintech español?",
-    query: DEFAULT_REPORT_QUERY,
+    title: manifest?.question ?? "¿Se reparten el fintech español entre los mismos fondos?",
+    query: manifest?.query ?? DEFAULT_REPORT_QUERY,
     position: { x: snapTo(CENTRE.x - 148), y: snapTo(CENTRE.y - 92) },
   };
 
@@ -321,34 +319,22 @@ function buildCase(dumps: ReturnType<typeof loadCalaDumps>): ResearchCase {
     relationType: CASE_RELATION,
   }));
 
-  const cards = buildCards(dumps);
-  const seeded = buildSeededPins(cards, dumps);
-  const edges = [...caseEdges, ...seeded.edges.map((edge) => ({ ...edge, source: relationSource }))];
-
-  // El cabo ya no ofrece lo que está pineado: el contador refleja lo que queda.
-  for (const card of cards) {
-    if (card.id !== SEEDED_PULL.entityId) continue;
-    card.relations = card.relations.map((relation) =>
-      relation.type === SEEDED_PULL.relationType
-        ? { ...relation, count: Math.max(0, relation.count - seeded.pins.length) }
-        : relation,
-    );
-  }
+  const cards = buildCards(dumps, manifest);
+  const edges = [...caseEdges];
 
   // El id sale del contenido: si cambia la semilla o el layout, el tablón
   // guardado en localStorage deja de coincidir y se regenera solo. Sin esto,
   // cualquier ajuste de posición queda invisible tras el primer render.
   const signature = createHash("sha1")
-    .update(JSON.stringify([focus.position, cards.map((c) => [c.id, c.position]), seeded.pins.map((p) => [p.id, p.position]), edges.map((e) => e.id)]))
+    .update(JSON.stringify([focus.position, cards.map((c) => [c.id, c.position]), edges.map((e) => e.id)]))
     .digest("hex")
     .slice(0, 8);
 
   return {
     id: `cala-case-${signature}`,
-    title: "Caso · capital fintech España",
+    title: manifest?.subtitle ?? "Caso · el reparto del fintech español",
     focus,
     cards,
-    pins: seeded.pins,
     edges,
   };
 }
@@ -364,7 +350,7 @@ function buildFallbackDossier(dumps: ReturnType<typeof loadCalaDumps>): Dossier 
       name,
       entityType: entity?.entity_type,
       category: typeof result.focus === "string" ? result.focus : undefined,
-      claims: claimsFromResult(result, sourceFor(entry.file, entry.dump)),
+      claims: claimsFromResult(result, sourceFor(entry.file, entry.dump), false),
     };
   });
   return {
@@ -379,8 +365,10 @@ function buildFallbackDossier(dumps: ReturnType<typeof loadCalaDumps>): Dossier 
 
 export function getSeedPayload(): SeedPayload {
   const dumps = loadCalaDumps();
+  const manifest = loadManifest();
   return {
-    researchCase: buildCase(dumps),
+    caseView: clientView(manifest),
+    researchCase: buildCase(dumps, manifest),
     fallbackDossier: buildFallbackDossier(dumps),
     defaultReportQuery: DEFAULT_REPORT_QUERY,
   };

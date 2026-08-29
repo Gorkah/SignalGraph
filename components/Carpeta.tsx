@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { relationNoun } from "@/lib/relations";
 import { useBoardStore } from "@/lib/store";
 
 export function Carpeta() {
@@ -10,7 +11,6 @@ export function Carpeta() {
   const pullRelation = useBoardStore((state) => state.pullRelation);
   const [checked, setChecked] = useState<string[]>([]);
   const card = graph?.cards.find((item) => item.id === selectedId);
-  const pin = graph?.pins.find((item) => item.id === selectedId);
 
   const selectableRelations = card?.relations.map((relation) => relation.type) ?? [];
   const validChecked = checked.filter((relation) => selectableRelations.includes(relation));
@@ -18,21 +18,20 @@ export function Carpeta() {
     ? [...new Map(card.claims.map((claim) => [claim.source.file, claim.source])).values()]
     : [];
 
-  if (!card && !pin) return null;
+  if (!card) return null;
 
   return (
     <aside className="folder" aria-label="Carpeta de entidad">
       <header>
         <div>
-          <span>CARPETA / {card ? "FICHA" : "CHINCHETA"}</span>
-          <h2>{card?.name ?? pin?.name}</h2>
+          <span>CARPETA</span>
+          <h2>{card.name}</h2>
         </div>
         <button type="button" onClick={() => selectNode(undefined)} aria-label="Cerrar carpeta">×</button>
       </header>
-      {card ? (
-        <>
+      <>
           <section>
-            <h3>Campos con procedencia</h3>
+            <h3>Qué se sabe, y quién lo dice</h3>
             <dl className="claim-list">
               {card.claims.map((claim, index) => (
                 <div key={`${claim.key}-${index}`}>
@@ -46,7 +45,7 @@ export function Carpeta() {
             </dl>
           </section>
           <section>
-            <h3>Fuentes</h3>
+            <h3>De dónde sale</h3>
             <ul className="source-list">
               {sources.map((source) => (
                 <li key={source.file}>
@@ -58,7 +57,7 @@ export function Carpeta() {
           </section>
           {card.relations.length > 0 && (
             <section>
-              <h3>Reclutar relaciones</h3>
+              <h3>Seguir un hilo desde aquí</h3>
               <div className="relation-checklist">
                 {card.relations.map((relation) => (
                   <label key={relation.type}>
@@ -69,7 +68,7 @@ export function Carpeta() {
                         ? [...current, relation.type]
                         : current.filter((item) => item !== relation.type))}
                     />
-                    {relation.type} <b>{relation.count}</b>
+                    {relationNoun(relation.type)} <b>{relation.count}</b>
                   </label>
                 ))}
               </div>
@@ -79,14 +78,11 @@ export function Carpeta() {
                 disabled={!validChecked.length}
                 onClick={() => validChecked.slice(0, 2).forEach((relation) => void pullRelation(card.id, relation))}
               >
-                subir al tablón
+                traer al tablón
               </button>
             </section>
           )}
         </>
-      ) : (
-        <p className="folder-empty">Ascendé la chincheta desde su etiqueta para cargar la introspección.</p>
-      )}
     </aside>
   );
 }

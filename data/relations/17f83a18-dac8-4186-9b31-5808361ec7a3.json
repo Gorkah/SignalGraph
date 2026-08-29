@@ -1,0 +1,260 @@
+{
+  "id": "17f83a18-dac8-4186-9b31-5808361ec7a3",
+  "name": "Sesame",
+  "introspection": {
+    "properties": [
+      "description",
+      "founding_date",
+      "id",
+      "aliases",
+      "employee_count",
+      "name",
+      "website",
+      "registered_address"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY",
+        "INVESTED_IN",
+        "IS_MEMBER_OF"
+      ],
+      "incoming": [
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "17f83a18-dac8-4186-9b31-5808361ec7a3",
+    "name": "Sesame",
+    "entity_type": "Organization",
+    "description": "A Valencia-based Spanish HRTech and fintech SaaS startup founded in 2024.",
+    "properties": {
+      "name": {
+        "value": "Sesame",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-06-26"
+          }
+        ]
+      },
+      "description": {
+        "value": "A Valencia-based Spanish HRTech and fintech SaaS startup founded in 2024.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-03"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/?p=343296",
+                  "date": "2026-06-27"
+                }
+              ],
+              "id": "d2db2681-a8cd-5b0b-bc34-27e0c07813d7"
+            }
+          },
+          {
+            "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+            "name": "SOFTWARE_AND_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/?p=343296",
+                  "date": "2026-06-27"
+                }
+              ],
+              "id": "db0d9de2-9fe7-5d9b-90d7-2c29dd828b84"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "7447faaf-8cf8-4c1e-be4b-746dece1dbe9",
+            "name": "BBVA Spark",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "venturebeat.com",
+                  "document": "https://venturebeat.com/2016/06/14/spains-jobandtalent-raises-42m-to-match-job-seekers-with-vacancies-using-algorithms",
+                  "date": "2026-06-28"
+                }
+              ],
+              "id": "bbee81f3-2844-583d-aa79-1e8b66a4e166"
+            }
+          },
+          {
+            "id": "c254f0f5-d39e-4ba7-8b7f-eb2308d00589",
+            "name": "BBVA Spark Growth Instrument",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "bouncewatch.com",
+                  "document": "https://bouncewatch.com/explore/startup/orbio",
+                  "date": "2026-08-01"
+                }
+              ],
+              "id": "59296cda-c251-5708-9f62-fc94ef21c2d7"
+            }
+          },
+          {
+            "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+            "name": "BBVA Spark Fund",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "bouncewatch.com",
+                  "document": "https://bouncewatch.com/explore/startup/orbio",
+                  "date": "2026-08-01"
+                },
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/2025/10/valencias-sesame-secures-up-to-e50-million-through-bbva-sparks-new-equity-free-growth-instrument",
+                  "date": "2026-08-01"
+                }
+              ],
+              "id": "bf02123b-4bc1-5bcc-a909-0a6d764dd046"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "7447faaf-8cf8-4c1e-be4b-746dece1dbe9",
+            "name": "BBVA Spark",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/habitacion-raised-15m-in-seed-funding-with-demium-capital-dozens-investments-and-ebisu-in-spain",
+                  "date": "2026-06-29"
+                }
+              ],
+              "id": "e3aa9339-38a3-505c-a75f-09e89656b8fb"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "7447faaf-8cf8-4c1e-be4b-746dece1dbe9",
+            "name": "BBVA Spark",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "venturebeat.com",
+                  "document": "https://venturebeat.com/2016/06/14/spains-jobandtalent-raises-42m-to-match-job-seekers-with-vacancies-using-algorithms",
+                  "date": "2026-06-28"
+                }
+              ],
+              "id": "307fb1ee-edec-58d1-b079-d2c81c4749ba"
+            }
+          },
+          {
+            "id": "83e96495-8c13-4c94-bab8-3b810651955d",
+            "name": "BBVA",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "bouncewatch.com",
+                  "document": "https://bouncewatch.com/explore/startup/orbio",
+                  "date": "2026-08-28"
+                }
+              ],
+              "id": "98a98a2d-be0c-5139-bcd1-cd2eb7821b14"
+            }
+          },
+          {
+            "id": "8672a93f-fa51-4933-a8f3-9b4b74557373",
+            "name": "BBVA",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/directory/lca",
+                  "date": "2026-08-09"
+                },
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/?p=343296",
+                  "date": "2026-08-09"
+                }
+              ],
+              "id": "30c153f9-7a6d-59f4-b947-5213b3cb3b40"
+            }
+          },
+          {
+            "id": "c254f0f5-d39e-4ba7-8b7f-eb2308d00589",
+            "name": "BBVA Spark Growth Instrument",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/?p=343296",
+                  "date": "2026-08-20"
+                }
+              ],
+              "id": "c85ade9a-60b6-5705-a714-377428d92e61"
+            }
+          },
+          {
+            "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+            "name": "BBVA Spark Fund",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/tag/hrtech/feed",
+                  "date": "2026-07-17"
+                },
+                {
+                  "name": "Pulse 2.0",
+                  "document": "https://pulse2.com/sesame-e50-million-financing-secured-from-bbva-spark",
+                  "date": "2026-07-17"
+                },
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/2025/10/valencias-sesame-secures-up-to-e50-million-through-bbva-sparks-new-equity-free-growth-instrument",
+                  "date": "2026-07-17"
+                },
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/?p=343296",
+                  "date": "2026-07-17"
+                }
+              ],
+              "id": "b566d43f-c0ac-568a-bd5e-7744d449c9ff"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

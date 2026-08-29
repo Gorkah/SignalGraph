@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Silkscreen, VT323 } from "next/font/google";
 import "./globals.css";
+// Separadas de globals para poder trabajarlas de forma aislada.
+import "./cards.css";
+import "./board.css";
 
 const pixel = VT323({
   weight: "400",

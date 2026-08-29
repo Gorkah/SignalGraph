@@ -1,0 +1,176 @@
+{
+  "id": "0b3aaf51-1b00-4598-a7db-b88fb0b028ee",
+  "name": "Plenummedia",
+  "introspection": {
+    "properties": [
+      "name",
+      "registered_address",
+      "description",
+      "employee_count",
+      "id"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY",
+        "INVESTED_IN"
+      ],
+      "incoming": [
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "0b3aaf51-1b00-4598-a7db-b88fb0b028ee",
+    "name": "Plenummedia",
+    "entity_type": "Organization",
+    "description": "Spanish media and content company operating in the news, banking and advertising sectors",
+    "properties": {
+      "name": {
+        "value": "Plenummedia",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-07-15"
+          }
+        ]
+      },
+      "description": {
+        "value": "Spanish media and content company operating in the news, banking and advertising sectors",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-07-30"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "01552894-6b07-4396-b18b-006cdbf489c4",
+            "name": "NEWS_AND_INFORMATION",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/59231-80",
+                  "date": "2026-07-20"
+                }
+              ],
+              "id": "1bbbb681-4a61-5cc9-ba92-e87a14467a76"
+            }
+          },
+          {
+            "id": "a710b325-14d8-4652-854a-f4ea646f15d3",
+            "name": "BANKING",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.zoominfo.com",
+                  "document": "https://www.zoominfo.com/pic/plenummedia-sl/358022710",
+                  "date": "2026-07-20"
+                }
+              ],
+              "id": "6541221a-7256-5019-adef-f9d8c8a86ff0"
+            }
+          },
+          {
+            "id": "b1d0a7c0-7986-4a8f-a0d5-c78f03d956c6",
+            "name": "ADVERTISING_AND_MARKETING",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Plenummedia S.L. Asset Profile | Preqin",
+                  "document": "https://www.preqin.com/data/profile/asset/plenummedia-s-l-/122862",
+                  "date": "2025-02-19"
+                }
+              ],
+              "id": "1a8a5d6b-bebf-510c-9ca4-1137f74c6410"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "2e080463-5d93-4c77-9885-d9b7edf570b7",
+            "name": "Incientra",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "ecommerce-news.es",
+                  "document": "https://ecommerce-news.es/plenummedia-adquiere-la-plataforma-tecnologica-incuentra",
+                  "date": "2026-07-20"
+                }
+              ],
+              "id": "f53e7cbd-91eb-5f89-86ce-706b53b24fe9"
+            }
+          },
+          {
+            "id": "745df860-9f85-48c2-bca8-e06fea723f7e",
+            "name": "Relevant Traffic",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.linkedin.com",
+                  "document": "https://www.linkedin.com/company/relevant-traffic",
+                  "date": "2026-07-20"
+                }
+              ],
+              "id": "aec07e3e-bf86-550f-803f-26c5e7d77ee7",
+              "valid_since": "2013-05-01"
+            }
+          },
+          {
+            "id": "ddbd7fac-5176-4980-9f79-c62826113643",
+            "name": "DIGITAL CLICK MEDIA LTD",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.programapublicidad.com",
+                  "document": "https://www.programapublicidad.com/plenummedia-madrid-barcelona-vigo-y-malaga-mexico-df-y-puebla-adquiere-la-agencia-de-marketing-digital-click-media",
+                  "date": "2026-07-20"
+                },
+                {
+                  "name": "Plenummedia adquiere la compañía de marketing online Digital Click Media",
+                  "document": "https://www.elpublicista.es/servicios-de-marketing/plenummedia-adquiere-compania-marketing-online-digital-click",
+                  "date": "2012-11-02"
+                }
+              ],
+              "id": "eb529f10-fe06-511e-9195-2508fd1bd4aa",
+              "valid_since": "2012-10-31"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+            "name": "Seaya Ventures",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Tech.eu - European Startup, Funding and Technology News",
+                  "document": "https://tech.eu/2014/05/30/spanish-vc-industry-just-got-248-million-euro-capital-injection",
+                  "date": "2026-07-15"
+                }
+              ],
+              "id": "709c792d-bc5c-57e5-84d2-1f370e0a84d4"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "id": "1a2f0cac-5a0b-44ff-9304-b65498da6ac6",
+  "name": "CrowdFarming",
+  "introspection": {
+    "properties": [
+      "description",
+      "founding_date",
+      "id",
+      "name",
+      "registered_address",
+      "employee_count",
+      "website"
+    ],
+    "relationships": {
+      "outgoing": [
+        "PARTICIPATES_IN_CORPORATE_EVENT",
+        "INVESTED_IN",
+        "OPERATES_IN_INDUSTRY",
+        "HAS_HEADQUARTERS_IN"
+      ],
+      "incoming": [
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "1a2f0cac-5a0b-44ff-9304-b65498da6ac6",
+    "name": "CrowdFarming",
+    "entity_type": "Organization",
+    "description": "a Spanish food‑and‑beverage platform founded in 2017 that links farmers directly to consumers",
+    "properties": {
+      "name": {
+        "value": "CrowdFarming",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-03-04"
+          }
+        ]
+      },
+      "description": {
+        "value": "a Spanish food‑and‑beverage platform founded in 2017 that links farmers directly to consumers",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-20"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "58fd376e-37a9-40ea-bd5a-439ae80e9db2",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/454795-39",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/crowdfarming/__EL8B3M9hKxrH4BSlM64e1R5pFqzZPw_y3HfMaVfWbGY",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/crowdfarming/__EL8B3M9hKxrH4BSlM64e1R5pFqzZPw_y3HfMaVfWbGY/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2021-10-06",
+              "id": "ebcad899-ff68-4aa7-807e-0fd51fe48fcb"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+            "name": "Seaya Ventures",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/investors/seaya-ventures",
+                  "date": "2026-06-01"
+                },
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://seedtable.com/investors/seaya-ventures",
+                  "date": "2026-06-01"
+                }
+              ],
+              "id": "1b2bb03e-87fb-5c48-b32e-8a7895e819ec"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "158d8539-b41b-4ef1-94e1-56906da02337",
+            "name": "RETAIL",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio - Astanor",
+                  "document": "https://astanor.com/portfolio",
+                  "date": "2026-07-21"
+                },
+                {
+                  "name": "Astanor Job Board",
+                  "document": "https://jobs.astanor.com/jobs",
+                  "date": "2025-04-24"
+                }
+              ],
+              "id": "23090577-a8d8-4261-ab71-88ebdc41bffc"
+            }
+          },
+          {
+            "id": "b58fd009-906d-4a11-9aef-8ef566128a5c",
+            "name": "FOOD_AND_BEVERAGE",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/investors/seaya-ventures",
+                  "date": "2026-06-01"
+                }
+              ],
+              "id": "dedf0096-6424-57ce-b05b-fea2a12f55cb"
+            }
+          },
+          {
+            "id": "bb7858a2-51d8-45e2-82bd-3ea6a06d317a",
+            "name": "INTERNET_AND_WEB_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio - Astanor",
+                  "document": "https://astanor.com/portfolio",
+                  "date": "2026-07-21"
+                },
+                {
+                  "name": "Astanor Job Board",
+                  "document": "https://jobs.astanor.com/jobs",
+                  "date": "2025-04-24"
+                }
+              ],
+              "id": "a968a98c-b209-4f04-939c-56c82092d6a0"
+            }
+          }
+        ],
+        "HAS_HEADQUARTERS_IN": [
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio - Astanor",
+                  "document": "https://astanor.com/portfolio",
+                  "date": "2026-07-21"
+                },
+                {
+                  "name": "Astanor Job Board",
+                  "document": "https://jobs.astanor.com/jobs",
+                  "date": "2025-04-24"
+                }
+              ],
+              "id": "8e5991fe-c407-4cd4-9e2a-fa3b953fd2d4"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "3f7c054b-b3fa-4641-b349-cee146c7a620",
+            "name": "Astanor Ventures",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/454795-39",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/crowdfarming/__EL8B3M9hKxrH4BSlM64e1R5pFqzZPw_y3HfMaVfWbGY",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/crowdfarming/__EL8B3M9hKxrH4BSlM64e1R5pFqzZPw_y3HfMaVfWbGY/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "65588e00-33ea-405f-97e1-88dbff881868"
+            }
+          },
+          {
+            "id": "5ec07c08-dcf4-4c11-b174-69be110f220b",
+            "name": "Seaya Capital Gestión SGEIC SA",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/454795-39",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/crowdfarming/__EL8B3M9hKxrH4BSlM64e1R5pFqzZPw_y3HfMaVfWbGY",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/crowdfarming/__EL8B3M9hKxrH4BSlM64e1R5pFqzZPw_y3HfMaVfWbGY/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "ca1e4eaa-2af1-424d-a919-58967324f916"
+            }
+          },
+          {
+            "id": "85635854-6d65-4bf9-8019-0ca5966ce7e9",
+            "name": "Cipio Partners",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/454795-39",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/crowdfarming/__EL8B3M9hKxrH4BSlM64e1R5pFqzZPw_y3HfMaVfWbGY",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/crowdfarming/__EL8B3M9hKxrH4BSlM64e1R5pFqzZPw_y3HfMaVfWbGY/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "e67857ed-49cd-4627-80aa-ad56c566824b"
+            }
+          },
+          {
+            "id": "acc24eab-8b33-4143-9484-60f04a6c4322",
+            "name": "Good Harvest Ventures Management S.à r.l.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio - Astanor",
+                  "document": "https://astanor.com/portfolio",
+                  "date": "2026-07-21"
+                },
+                {
+                  "name": "Astanor Job Board",
+                  "document": "https://jobs.astanor.com/jobs",
+                  "date": "2025-04-24"
+                }
+              ],
+              "id": "3479a8e2-3aa3-41b8-baa3-736cc6f2426c"
+            }
+          },
+          {
+            "id": "d1f90da7-7cb5-4462-bfbd-df9670f5ad7a",
+            "name": "Pymwymic",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/454795-39",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/crowdfarming/__EL8B3M9hKxrH4BSlM64e1R5pFqzZPw_y3HfMaVfWbGY",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/crowdfarming/__EL8B3M9hKxrH4BSlM64e1R5pFqzZPw_y3HfMaVfWbGY/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "eef9a98d-69c1-4c98-8800-7d9996d902b5"
+            }
+          },
+          {
+            "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+            "name": "Seaya Ventures",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/investors/seaya-ventures",
+                  "date": "2026-06-24"
+                }
+              ],
+              "id": "c18e2f23-38c7-56b1-ba61-1c63a2b5e9d2"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

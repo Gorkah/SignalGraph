@@ -1,0 +1,3832 @@
+{
+  "version": 1,
+  "case": "¿Quién financia el fintech español?",
+  "note": "Reparto de papeles del tablón. Lo escribe una pasada de LLM sobre el borrador de scripts/build-roles.mjs y a partir de ahí se edita a mano: la demo solo lee este fichero, nunca ejecuta nada en vivo.",
+  "regenerate": "node scripts/build-roles.mjs            # borrador limpio por stdout\nnode scripts/build-roles.mjs --merge    # borrador conservando el juicio ya escrito aquí\nnode scripts/build-roles.mjs --merge --diff  # solo qué entró, qué salió y qué cambió de rol",
+  "sources": [
+    "data/cala/*.json",
+    "data/relations/*.json"
+  ],
+  "roles": {
+    "financia": "Pone dinero: fondos, family offices, bancos, corporate venture, programas públicos, business angels.",
+    "financiada": "Empresa que recibe inversión.",
+    "puente": "Aparece en la cartera de dos o más financiadores que tienen hilo propio en data/relations. Es el reencuentro que busca la demo: la misma ficha alcanzable desde dos sitios del anillo.",
+    "ruido": "Sectores, países, eventos de financiación sin nombre, personas, categorías abstractas y duplicados. No ocupan sitio en el corcho."
+  },
+  "fields": {
+    "id": "UUID canónico de Cala. Manda el que tiene volcado en data/relations; si no, el del dossier.",
+    "aliases": "Los demás UUID con los que Cala fragmenta la misma entidad. Indexalos también al construir el mapa por id.",
+    "backers": "Financiadores del anillo desde los que se llega a esta ficha. Solo en financiada y puente.",
+    "ring": "Las fichas del corcho, en el orden en que se reparten por el anillo. Subconjunto de los financia."
+  },
+  "ring": [
+    "d13f79c8-6698-4f4f-b98c-1a28d60d80b8",
+    "4712a5e8-fa2e-4f27-9375-73b8fdbd3faf",
+    "8aad7b66-72a3-4778-9e44-82373c15e79f",
+    "76516af3-d6c5-4762-8f89-c3159f69c264",
+    "65b357e1-d365-48fb-8343-b2cf371a5475",
+    "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+    "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+    "dc60f800-f723-41b8-9482-810db28c9d70",
+    "b186979d-5ba6-4b48-87f9-9ea26753f683"
+  ],
+  "entities": [
+    {
+      "id": "73a2fa29-c572-4f3e-9c25-22abf944a752",
+      "name": "4Founders Capital",
+      "role": "financia",
+      "subtitle": "El fondo de fundadores de Barcelona; entró en Flanks y en Embat."
+    },
+    {
+      "id": "302606c8-55fb-41e9-a556-b692b024d553",
+      "name": "6 Degrees Capital",
+      "role": "financia",
+      "subtitle": "Fondo británico en la cap table de Payflow."
+    },
+    {
+      "id": "b186979d-5ba6-4b48-87f9-9ea26753f683",
+      "name": "Aldea Ventures",
+      "role": "financia",
+      "subtitle": "Fondo de etapa temprana; se cruza con medio anillo en su cartera."
+    },
+    {
+      "id": "f36abff9-79ae-4fef-990f-9fedc1d51fb5",
+      "name": "ALSTIN Capital",
+      "role": "financia",
+      "subtitle": "Fondo alemán; entró en la semilla de NeuralTrust."
+    },
+    {
+      "id": "daebf7ee-cf07-459c-a3c6-65523efcefa7",
+      "name": "Andreessen Horowitz",
+      "role": "financia",
+      "subtitle": "Fondo de Silicon Valley; lideró la semilla de Supersonik."
+    },
+    {
+      "id": "e4207c0a-7a67-46cf-bf72-455705ec80e4",
+      "name": "Angyal",
+      "role": "financia",
+      "subtitle": "Vehículo húngaro en la ronda de Artur'In."
+    },
+    {
+      "id": "3f7c054b-b3fa-4641-b349-cee146c7a620",
+      "name": "Astanor Ventures",
+      "role": "financia",
+      "subtitle": "Fondo de agrifood; entró en CrowdFarming."
+    },
+    {
+      "id": "d4640009-5578-485e-9f77-3ab64881cddd",
+      "name": "Atomico",
+      "role": "financia",
+      "subtitle": "Fondo de Londres; lideró la Serie B de Onna."
+    },
+    {
+      "id": "a86da67a-786b-41e2-904c-db485bde5aea",
+      "name": "Avala Capital GmbH",
+      "role": "financia",
+      "subtitle": "Vehículo alemán, en el accionariado de Bonify."
+    },
+    {
+      "id": "4f58ee07-8093-4dfc-ba31-c71c02e4fee0",
+      "name": "Bailador",
+      "role": "financia",
+      "subtitle": "Fondo australiano; coinvierte con BBVA Spark en Prophero."
+    },
+    {
+      "id": "fcaf58a0-b1db-47f6-a2d4-9fafa019d547",
+      "name": "Banco Sabadell",
+      "role": "financia",
+      "subtitle": "El banco que hay detrás de BStartup."
+    },
+    {
+      "id": "7addeb6d-ab4e-4848-b5b5-dc20ab862bc0",
+      "name": "Bankia Fintech Venture",
+      "role": "financia",
+      "subtitle": "El fondo fintech de Bankia, hoy dentro de CaixaBank."
+    },
+    {
+      "id": "8924aa9a-c152-4d3a-9d27-8f913abbb811",
+      "name": "Bankinter",
+      "role": "financia",
+      "subtitle": "El banco que respaldó la semilla de Devengo."
+    },
+    {
+      "id": "3a801afa-9716-49f5-9832-7b642206ca28",
+      "name": "Banorte",
+      "role": "financia",
+      "subtitle": "El banco mexicano que respalda a Habi."
+    },
+    {
+      "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+      "name": "BBVA Spark",
+      "role": "financia",
+      "subtitle": "El banco que pone dinero de crecimiento sin pedir acciones.",
+      "aliases": [
+        {
+          "id": "7447faaf-8cf8-4c1e-be4b-746dece1dbe9",
+          "name": "BBVA Spark"
+        },
+        {
+          "id": "c254f0f5-d39e-4ba7-8b7f-eb2308d00589",
+          "name": "BBVA Spark Growth Instrument"
+        },
+        {
+          "id": "941759e7-8275-4ddc-a569-a0b8b3e82844",
+          "name": "BBVA SA"
+        },
+        {
+          "id": "83e96495-8c13-4c94-bab8-3b810651955d",
+          "name": "BBVA"
+        },
+        {
+          "id": "8672a93f-fa51-4933-a8f3-9b4b74557373",
+          "name": "BBVA"
+        }
+      ]
+    },
+    {
+      "id": "cf3556bd-4eb3-4eee-8e08-c8e886564851",
+      "name": "BITKRAFT Ventures",
+      "role": "financia",
+      "subtitle": "Fondo de videojuegos; está en la Serie B de Voicemod."
+    },
+    {
+      "id": "e54f3f3b-1c7b-47b0-9915-a5730f7be7c5",
+      "name": "BlackRock",
+      "role": "financia",
+      "subtitle": "La gestora más grande del mundo; aquí solo pasa de lejos."
+    },
+    {
+      "id": "741e026e-344c-4f0b-9af1-19945cfd582b",
+      "name": "Bonsai Partners",
+      "role": "financia",
+      "subtitle": "El fondo de Madrid que entra en cualquier etapa."
+    },
+    {
+      "id": "297c9eca-62f5-4046-bdfb-5ddfe2b5f02c",
+      "name": "BStartup",
+      "role": "financia",
+      "subtitle": "El programa de Sabadell para empresas de menos de tres años."
+    },
+    {
+      "id": "e2a48684-3bb8-4398-956b-a8a0938a97c3",
+      "name": "Caixa Capital Risc",
+      "role": "financia",
+      "subtitle": "El venture de La Caixa."
+    },
+    {
+      "id": "048fc63f-4764-4073-ad1a-e97048f50a43",
+      "name": "CaixaBank",
+      "role": "financia",
+      "subtitle": "El banco que heredó el fondo fintech de Bankia."
+    },
+    {
+      "id": "7faf31b1-b7a2-4e93-b820-1fed0d86d2fa",
+      "name": "Candor",
+      "role": "financia",
+      "subtitle": "Vehículo inversor en la ronda de Gotrade."
+    },
+    {
+      "id": "65b357e1-d365-48fb-8343-b2cf371a5475",
+      "name": "Cathay Innovation",
+      "role": "financia",
+      "subtitle": "El fondo global que entra en España de la mano de Seaya."
+    },
+    {
+      "id": "7614f41d-233c-4bda-9fde-30052a9039ac",
+      "name": "CATS.VC",
+      "role": "financia",
+      "subtitle": "Fondo de semilla en la cap table de Payflow."
+    },
+    {
+      "id": "85635854-6d65-4bf9-8019-0ca5966ce7e9",
+      "name": "Cipio Partners",
+      "role": "financia",
+      "subtitle": "Fondo de secundarios europeo, en CrowdFarming."
+    },
+    {
+      "id": "de8fa8db-c9a3-4e9c-9388-b3cc3bced403",
+      "name": "Criteria Venture Tech",
+      "role": "financia",
+      "subtitle": "El vehículo tecnológico de Criteria, La Caixa."
+    },
+    {
+      "id": "71f202e5-20c3-4637-9fc3-2a7d2eea826d",
+      "name": "Cusp Capital",
+      "role": "financia",
+      "subtitle": "Fondo alemán en la cap table de Payflow."
+    },
+    {
+      "id": "adabc025-7491-4d21-9c0e-40974a780998",
+      "name": "David Conde",
+      "role": "financia",
+      "subtitle": "Business angel con oficio de banca; tickets de 1.000 a 25.000 euros."
+    },
+    {
+      "id": "2c9aa35a-deb9-4076-a8e7-e5aaf6bd3388",
+      "name": "David Riudor",
+      "role": "financia",
+      "subtitle": "Business angel de Barcelona; cheques pequeños en fintech."
+    },
+    {
+      "id": "dc60f800-f723-41b8-9482-810db28c9d70",
+      "name": "DN Capital",
+      "role": "financia",
+      "subtitle": "El fondo que lideró la Serie A de 21 millones de Bnext.",
+      "aliases": [
+        {
+          "id": "6fec62d7-11ed-46dc-8922-eb24c6ecf635",
+          "name": "DN Capital"
+        }
+      ]
+    },
+    {
+      "id": "90871b30-2cfb-46f3-bc5a-44593ac0648f",
+      "name": "Encomenda Smart Capital",
+      "role": "financia",
+      "subtitle": "El fondo semilla que hay detrás de Goin y de Nemuru."
+    },
+    {
+      "id": "01c894d5-9eee-4929-a536-c1626fcddb96",
+      "name": "European Investment Bank",
+      "role": "financia",
+      "subtitle": "Dinero público europeo; prestó a Lifeness y coinvierte con K-Fund."
+    },
+    {
+      "id": "abd4cae6-8be9-4671-923f-8c4d3a901547",
+      "name": "FJ Labs",
+      "role": "financia",
+      "subtitle": "Fondo de Nueva York especializado en marketplaces; coinvirtió en Artur'In."
+    },
+    {
+      "id": "27d940fd-6a3f-4bb8-b638-f650fec5d282",
+      "name": "Flybridge",
+      "role": "financia",
+      "subtitle": "El vehículo con que Flybridge entró en Habi."
+    },
+    {
+      "id": "67cc3732-d079-4306-837e-c70c3b4e9ac8",
+      "name": "Fondo OÜ",
+      "role": "financia",
+      "subtitle": "Vehículo estonio que aparece pegado a Capchase."
+    },
+    {
+      "id": "f8080db9-34c4-4e20-a096-96f78fd0dfe9",
+      "name": "Force Over Mass",
+      "role": "financia",
+      "subtitle": "Fondo británico en la cap table de Payflow."
+    },
+    {
+      "id": "363d5692-004d-493e-aec1-424a35663c25",
+      "name": "Founders Future",
+      "role": "financia",
+      "subtitle": "Fondo francés de fundadores, en la cap table de Bnext."
+    },
+    {
+      "id": "3e0fb84a-1b4c-46c9-865a-c071ca1e29c3",
+      "name": "German Media Pool",
+      "role": "financia",
+      "subtitle": "Fondo de medios alemán; entró en Bonify.",
+      "aliases": [
+        {
+          "id": "17001ee5-714a-4b2e-8f85-b4511bef2f23",
+          "name": "GMPVC German Media Pool GmbH"
+        }
+      ]
+    },
+    {
+      "id": "1c4f55fa-654c-4f82-a47b-8622cd4b9c9c",
+      "name": "German Startups Group",
+      "role": "financia",
+      "subtitle": "Cartera de participaciones alemana; estuvo en eWings."
+    },
+    {
+      "id": "acc24eab-8b33-4143-9484-60f04a6c4322",
+      "name": "Good Harvest Ventures",
+      "role": "financia",
+      "subtitle": "Fondo de alimentación sostenible, en CrowdFarming."
+    },
+    {
+      "id": "63a2fb1b-119c-4c3d-84af-40a49dc0ea64",
+      "name": "High-Tech Gründerfonds",
+      "role": "financia",
+      "subtitle": "El fondo semilla público alemán."
+    },
+    {
+      "id": "1e1dfdd3-687a-4493-80da-783efa4a5be7",
+      "name": "HWK Techinvestment",
+      "role": "financia",
+      "subtitle": "Vehículo inversor en la órbita de Kibo."
+    },
+    {
+      "id": "9267b99c-27ec-4fb2-8439-ee1f73ba0d5b",
+      "name": "i-Source N.V.",
+      "role": "financia",
+      "subtitle": "Fondo belga de los primeros años de eYeka."
+    },
+    {
+      "id": "da2d99e4-cb84-4fad-9c1e-763e9024f56e",
+      "name": "ING Ventures",
+      "role": "financia",
+      "subtitle": "El venture del banco holandés, accionista de Fintonic."
+    },
+    {
+      "id": "463bf2e2-a1f7-4d0a-b5f0-afa60379995c",
+      "name": "Inveready",
+      "role": "financia",
+      "subtitle": "El fondo de Barcelona que entra en cualquier etapa."
+    },
+    {
+      "id": "8aad7b66-72a3-4778-9e44-82373c15e79f",
+      "name": "JME Ventures",
+      "role": "financia",
+      "subtitle": "El fondo de Madrid que coinvierte con todos los demás."
+    },
+    {
+      "id": "4712a5e8-fa2e-4f27-9375-73b8fdbd3faf",
+      "name": "K-Fund",
+      "role": "financia",
+      "subtitle": "El fondo generalista de Madrid, de semilla a Serie B."
+    },
+    {
+      "id": "d13f79c8-6698-4f4f-b98c-1a28d60d80b8",
+      "name": "Kibo Ventures",
+      "role": "financia",
+      "subtitle": "Uno de los VC más activos de Madrid, de Aquilino Peña y Javier Torremocha.",
+      "aliases": [
+        {
+          "id": "a81efff2-1b1b-41e0-b068-3216380923a7",
+          "name": "KIBO VENTURES PARTNERS SGEIC, SA"
+        }
+      ]
+    },
+    {
+      "id": "1a8eec4b-b382-46b0-82f4-c31eb0a424f6",
+      "name": "La Bolsa Social",
+      "role": "financia",
+      "subtitle": "La plataforma de inversión de impacto: canaliza dinero, no lo recibe."
+    },
+    {
+      "id": "16bdbb1a-6658-4fa2-9b04-0a48011841d2",
+      "name": "Lakestar",
+      "role": "financia",
+      "subtitle": "Fondo de Zúrich; lideró la Serie A de Holded."
+    },
+    {
+      "id": "9cfec194-2d5a-4e5e-8ec8-128147936447",
+      "name": "Lanai Partners",
+      "role": "financia",
+      "subtitle": "Vehículo inversor en la cap table de Payflow."
+    },
+    {
+      "id": "e1b579ed-3983-4387-9a75-651072c0d26b",
+      "name": "Mango group",
+      "role": "financia",
+      "subtitle": "El brazo inversor del grupo textil, en la cap table de Payflow."
+    },
+    {
+      "id": "f2b20ea8-c011-4ee4-b038-4bee061c8145",
+      "name": "Masia VC",
+      "role": "financia",
+      "subtitle": "Micro-fondo catalán, coinversor de Aldea."
+    },
+    {
+      "id": "45319364-1317-4510-a153-24af17d43fc7",
+      "name": "METROPOLITAN FILMEXPORT",
+      "role": "financia",
+      "subtitle": "Distribuidora francesa; accionista de Filmin."
+    },
+    {
+      "id": "7347b1be-94ea-48e8-9338-6067dd6859ef",
+      "name": "Mosaic Ventures",
+      "role": "financia",
+      "subtitle": "Fondo de Londres, en el accionariado de Bonify."
+    },
+    {
+      "id": "cc4b1e7e-a167-472a-b9f4-f833a2c86db0",
+      "name": "Octopus Ventures",
+      "role": "financia",
+      "subtitle": "Fondo de Londres; respaldó la Serie A de DOST."
+    },
+    {
+      "id": "c3959932-3f3b-48ee-8c2f-8008d907ab0f",
+      "name": "Plug and Play Ventures",
+      "role": "financia",
+      "subtitle": "La aceleradora de Silicon Valley, en la cap table de Payflow."
+    },
+    {
+      "id": "1150ec4f-b397-4155-bd4c-da78fab80208",
+      "name": "Propel",
+      "role": "financia",
+      "subtitle": "El brazo de venture de BBVA, anterior a Spark."
+    },
+    {
+      "id": "1cbcede3-7d94-4def-bf7e-b0f799b0daa3",
+      "name": "PSG Equity",
+      "role": "financia",
+      "subtitle": "Growth equity de Boston; entró en Artur'In."
+    },
+    {
+      "id": "232d0a38-d6d0-41e2-aeaa-988fa8b51533",
+      "name": "PSN Group",
+      "role": "financia",
+      "subtitle": "Grupo asegurador, en el accionariado de Fintonic."
+    },
+    {
+      "id": "d1f90da7-7cb5-4462-bfbd-df9670f5ad7a",
+      "name": "Pymwymic",
+      "role": "financia",
+      "subtitle": "Fondo de impacto holandés, en CrowdFarming."
+    },
+    {
+      "id": "6e64f944-0dc0-4a84-a68a-ff0005433d89",
+      "name": "Rakuten",
+      "role": "financia",
+      "subtitle": "El grupo japonés que lideró la ronda de Glovo de 2017."
+    },
+    {
+      "id": "12dfcb17-7c0a-46f2-87df-4915124fbac4",
+      "name": "Rebel Fund",
+      "role": "financia",
+      "subtitle": "Fondo que invierte en alumnos de Y Combinator; está en Payflow."
+    },
+    {
+      "id": "8932a610-7903-431d-8366-905e45c68ee4",
+      "name": "Redalpine",
+      "role": "financia",
+      "subtitle": "Fondo suizo, en la cap table de Bnext."
+    },
+    {
+      "id": "e1e1434e-1090-4bf1-a6ba-480b44b803de",
+      "name": "Rocket Internet GmbH",
+      "role": "financia",
+      "subtitle": "La constructora de startups de Berlín, en la cap table de Payflow."
+    },
+    {
+      "id": "d5cfe795-cf3c-4949-af42-1f2371db52f4",
+      "name": "Sabadell Venture Capital",
+      "role": "financia",
+      "subtitle": "El fondo de Banco Sabadell."
+    },
+    {
+      "id": "76516af3-d6c5-4762-8f89-c3159f69c264",
+      "name": "Samaipata Ventures",
+      "role": "financia",
+      "subtitle": "El fondo de plataformas y marketplaces, desde Madrid y para toda Europa."
+    },
+    {
+      "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+      "name": "Seaya Ventures",
+      "role": "financia",
+      "subtitle": "Unos 300 millones bajo gestión en Madrid; socio de Cathay Innovation.",
+      "aliases": [
+        {
+          "id": "5ec07c08-dcf4-4c11-b174-69be110f220b",
+          "name": "Seaya Capital Gestión SGEIC SA"
+        }
+      ]
+    },
+    {
+      "id": "151bf814-7566-4b14-a7d2-f0d802ef0981",
+      "name": "Sequoia Capital",
+      "role": "financia",
+      "subtitle": "Fondo de Silicon Valley; entró en Rever."
+    },
+    {
+      "id": "67180cf0-dfe5-442c-a580-255752eb0f96",
+      "name": "SGT German Private Equity",
+      "role": "financia",
+      "subtitle": "El private equity que sucedió a German Startups Group."
+    },
+    {
+      "id": "0e43f081-ce1f-4542-90c6-b94b7631dd21",
+      "name": "SIX FinTech Ventures",
+      "role": "financia",
+      "subtitle": "El corporate de la bolsa suiza; entró en Toqio junto a Seaya."
+    },
+    {
+      "id": "a491fa9e-8529-4391-9d2f-dcfd7875691a",
+      "name": "SOFIMAC INNOVATION",
+      "role": "financia",
+      "subtitle": "Fondo regional francés, coinversor en eYeka."
+    },
+    {
+      "id": "94e0ca6a-4e39-4181-bd84-11f264d0aa62",
+      "name": "Speedinvest GmbH",
+      "role": "financia",
+      "subtitle": "Fondo vienés de semilla, en la cap table de Bnext."
+    },
+    {
+      "id": "6eb0f1a7-d891-481f-825a-25cc6edacb07",
+      "name": "Square One Capital",
+      "role": "financia",
+      "subtitle": "Fondo inversor de Fintonic."
+    },
+    {
+      "id": "1a6b7e08-aeed-489c-aeb6-c22cffdedfa0",
+      "name": "Telefónica",
+      "role": "financia",
+      "subtitle": "La operadora invierte por su cuenta y por Wayra; está en Payflow.",
+      "aliases": [
+        {
+          "id": "2a979c15-6838-4fbf-8735-59b8dc89ac8e",
+          "name": "TELEFONICA S A"
+        }
+      ]
+    },
+    {
+      "id": "9d6f393d-e70d-4030-81c2-f3e75e71401a",
+      "name": "Thomson Reuters Ventures",
+      "role": "financia",
+      "subtitle": "El corporate del grupo Reuters, en la cap table de Payflow."
+    },
+    {
+      "id": "0ea5659d-662f-410c-93e6-1775879f5989",
+      "name": "Velocity Capital Fintech Ventures",
+      "role": "financia",
+      "subtitle": "Fondo fintech holandés; entró en Gotrade."
+    },
+    {
+      "id": "12f25b56-5c30-4cc2-a844-499cc138d2f6",
+      "name": "Ventech",
+      "role": "financia",
+      "subtitle": "Fondo francés; comparte Artur'In y eYeka con DN Capital.",
+      "aliases": [
+        {
+          "id": "5a079c02-0e55-4b48-a203-54c69ea16a13",
+          "name": "Ventech"
+        }
+      ]
+    },
+    {
+      "id": "eaf1f667-4d67-41ff-83fa-0df3cdd0ed49",
+      "name": "Wayra",
+      "role": "financia",
+      "subtitle": "La aceleradora de Telefónica, presente en la ronda de Payflow.",
+      "aliases": [
+        {
+          "id": "43575cf7-b13e-4738-abd2-2f79c2fa2c3f",
+          "name": "Wayra"
+        }
+      ]
+    },
+    {
+      "id": "c5f31218-d353-40a8-baf6-e33befb66a1b",
+      "name": "Wille Finance AG",
+      "role": "financia",
+      "subtitle": "Family office suiza en la cap table de Payflow."
+    },
+    {
+      "id": "1e86655e-373d-4fe8-be13-af3713581f73",
+      "name": "Y Combinator",
+      "role": "financia",
+      "subtitle": "La aceleradora de California; por ahí pasaron Payflow y Gotrade."
+    },
+    {
+      "id": "685a2360-b8c3-41f7-87bd-de616026c569",
+      "name": "Zank Financial",
+      "role": "financia",
+      "subtitle": "El préstamo entre particulares que acabó dentro de Fintonic."
+    },
+    {
+      "id": "05d25283-f7ff-4cac-933d-0c6c85cffbc6",
+      "name": "011h",
+      "role": "puente",
+      "subtitle": "Aldea y Seaya, en la constructora industrializada de Barcelona.",
+      "backers": [
+        "Aldea Ventures",
+        "Seaya Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "6fd43585-338c-49b2-a10f-377b395fa930",
+          "name": "011H SUSTAINABLE CONSTRUCTION S.L."
+        }
+      ]
+    },
+    {
+      "id": "01c0d729-be62-48e2-aeaf-313dfe311c61",
+      "name": "Abacum",
+      "role": "puente",
+      "subtitle": "K-Fund y Cathay coinciden en la planificación financiera.",
+      "backers": [
+        "Cathay Innovation",
+        "K-Fund"
+      ],
+      "aliases": [
+        {
+          "id": "2102bd9c-8835-4cbe-8d34-1999d874ebc8",
+          "name": "ABACUM PLANNING S.L. (SOCIEDAD UNIPERSONAL)"
+        }
+      ]
+    },
+    {
+      "id": "2448ce87-71ca-43c2-912e-6fd06057ced6",
+      "name": "Embat",
+      "role": "puente",
+      "subtitle": "Cathay y Samaipata, juntos en la tesorería corporativa.",
+      "backers": [
+        "Cathay Innovation",
+        "Samaipata Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "3105fdbe-e3c9-4019-bc71-7c89d36f4d84",
+          "name": "EMBAT TECHNOLOGIES SL"
+        }
+      ]
+    },
+    {
+      "id": "89db388f-a216-4cd1-ab27-f6a684e876e9",
+      "name": "Exoticca",
+      "role": "puente",
+      "subtitle": "K-Fund y Aldea comparten la agencia de viajes.",
+      "backers": [
+        "Aldea Ventures",
+        "K-Fund"
+      ],
+      "aliases": [
+        {
+          "id": "17fdba51-ef48-424d-8de7-05deb1cf1b94",
+          "name": "Exoticca"
+        }
+      ]
+    },
+    {
+      "id": "3a9c0371-21e0-46d0-a15d-df434973dd7d",
+      "name": "Genesy",
+      "role": "puente",
+      "subtitle": "K-Fund, JME y Samaipata coinciden en la misma empresa.",
+      "backers": [
+        "JME Ventures",
+        "K-Fund",
+        "Samaipata Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "895ce412-8d72-4d68-914c-063082228b85",
+          "name": "Genesy AI"
+        }
+      ]
+    },
+    {
+      "id": "bfcd3b17-8e15-4a0b-aa79-2cbded0456df",
+      "name": "Glovo",
+      "role": "puente",
+      "subtitle": "Cathay y Seaya, ambos en el reparto a domicilio.",
+      "backers": [
+        "Cathay Innovation",
+        "Seaya Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "74bd652d-b5e9-438b-b76f-7e6dcfce36c5",
+          "name": "TCA GLOVO SL"
+        }
+      ]
+    },
+    {
+      "id": "12e3d6ea-316f-4718-8d32-3a3bfabc0151",
+      "name": "Habyt",
+      "role": "puente",
+      "subtitle": "Inveready y Aldea, en el mismo operador de coliving.",
+      "backers": [
+        "Aldea Ventures",
+        "Inveready"
+      ],
+      "aliases": [
+        {
+          "id": "c0bc83be-2451-4828-9bdd-bddc1bec0289",
+          "name": "Habyt"
+        }
+      ]
+    },
+    {
+      "id": "85d4bdcd-e15d-41e2-beac-c7eb7772becd",
+      "name": "Housfy",
+      "role": "puente",
+      "subtitle": "Aldea y DN Capital coinciden en la inmobiliaria.",
+      "backers": [
+        "Aldea Ventures",
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "1ce07185-3589-4b04-afd8-e8ce5238d9b1",
+      "name": "Job&Talent",
+      "role": "puente",
+      "subtitle": "El empleo temporal a escala; Kibo, JME y Aldea, todos dentro.",
+      "backers": [
+        "Aldea Ventures",
+        "JME Ventures",
+        "Kibo Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "da14978a-cf6d-45fd-920f-b96683b1aeac",
+          "name": "Jobandtalent"
+        },
+        {
+          "id": "a8c9c792-d9ee-486f-915a-ed434094e798",
+          "name": "Jobandtalent"
+        },
+        {
+          "id": "2ea52267-5360-48b1-8c36-c41ec14f1b51",
+          "name": "Jobandtalent"
+        }
+      ]
+    },
+    {
+      "id": "1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca",
+      "name": "Payflow",
+      "role": "puente",
+      "subtitle": "El nudo del caso: un banco, una operadora y dos fondos en la misma tabla.",
+      "backers": [
+        "BBVA Spark",
+        "Cathay Innovation",
+        "Seaya Ventures",
+        "Telefónica"
+      ],
+      "aliases": [
+        {
+          "id": "8296d62a-fae3-4041-9ddc-e490722aada1",
+          "name": "Payflow"
+        }
+      ]
+    },
+    {
+      "id": "1b0605e7-06a4-492c-b822-37ee1e0da8dd",
+      "name": "Prophero",
+      "role": "puente",
+      "subtitle": "Samaipata y BBVA Spark comparten la proptech australiana.",
+      "backers": [
+        "BBVA Spark",
+        "Samaipata Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "97c68379-ff00-4569-b475-22271a047f8c",
+          "name": "PROPHERO GLOBAL SL"
+        }
+      ]
+    },
+    {
+      "id": "928f810a-2bf8-4a87-8fb7-7e4873e6adf7",
+      "name": "Savana",
+      "role": "puente",
+      "subtitle": "Cathay y Seaya comparten la lectura de historias clínicas.",
+      "backers": [
+        "Cathay Innovation",
+        "Seaya Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "5c0fcdcd-67fe-4fea-a782-35afdc5504d4",
+          "name": "Savana Médica"
+        }
+      ]
+    },
+    {
+      "id": "5366d6c0-ae86-45f7-aace-561ade113193",
+      "name": "Sorare",
+      "role": "puente",
+      "subtitle": "Kibo y Aldea, en los cromos digitales de fútbol.",
+      "backers": [
+        "Aldea Ventures",
+        "Kibo Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "1a4e810e-083e-4430-a421-4ce0ae9b0683",
+          "name": "Sorare SAS"
+        }
+      ]
+    },
+    {
+      "id": "cac5c8eb-f483-428a-9ee1-0897ae037133",
+      "name": "TaxDown",
+      "role": "puente",
+      "subtitle": "BBVA Spark y JME, en la misma declaración de la renta.",
+      "backers": [
+        "BBVA Spark",
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "1a0edbf9-deb5-45be-ba24-0e7a0377cc92",
+      "name": "THEKER Robotics",
+      "role": "puente",
+      "subtitle": "La participada compartida: cuatro fondos del anillo a la vez.",
+      "backers": [
+        "Cathay Innovation",
+        "JME Ventures",
+        "K-Fund",
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "175aa84a-2d6b-4b94-a43e-fde275d7bee0",
+      "name": "Toqio",
+      "role": "puente",
+      "subtitle": "Seaya y el suizo SIX, en la misma plataforma bancaria.",
+      "backers": [
+        "Seaya Ventures",
+        "SIX FinTech Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "480d77d9-8907-444c-99d5-93797a1f2d9e",
+          "name": "Toqio"
+        }
+      ]
+    },
+    {
+      "id": "57dcbb4a-e060-42b3-9f16-d1b96372ef9b",
+      "name": "Tucuvi",
+      "role": "puente",
+      "subtitle": "Tres fondos del anillo en la misma Serie A.",
+      "backers": [
+        "Cathay Innovation",
+        "K-Fund",
+        "Seaya Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "8ecb289d-6c04-4fb9-ab08-a007c5ef9fa6",
+          "name": "Tucuvi"
+        },
+        {
+          "id": "5d71f10c-423f-4efb-9abf-2d9466a21607",
+          "name": "Tucuvi"
+        },
+        {
+          "id": "94760486-f84a-4d16-8efb-54cb3ba194b9",
+          "name": "Tucuvi"
+        },
+        {
+          "id": "b595161d-1507-475f-b8a5-30e0427049fe",
+          "name": "Tucuvi"
+        },
+        {
+          "id": "c7a1ff6f-d18c-4931-8efe-7d94ad79c980",
+          "name": "Tucuvi"
+        }
+      ]
+    },
+    {
+      "id": "a3715bbc-d851-4a7f-a2eb-0f1b9f39f799",
+      "name": "2501",
+      "role": "financiada",
+      "subtitle": "Producto de la cartera de K-Fund.",
+      "backers": [
+        "K-Fund"
+      ]
+    },
+    {
+      "id": "7d6d63c7-bac0-4079-bf29-0089ed7e8ff8",
+      "name": "8Layers",
+      "role": "financiada",
+      "subtitle": "Cartera de JME.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "7d5361d1-5ec0-44ab-bb14-01687e149113",
+      "name": "Adsmurai",
+      "role": "financiada",
+      "subtitle": "La agencia de publicidad digital que Seaya vendió.",
+      "backers": [
+        "Seaya Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "7d9b857b-aa5f-4414-8cfb-96e8ac778de1",
+          "name": "Adsmurai S.L."
+        },
+        {
+          "id": "df1949b1-4652-4070-921a-cc74b0c6ead1",
+          "name": "Adsmurai"
+        },
+        {
+          "id": "17679909-b322-4a18-815e-aac945bfb815",
+          "name": "Seaya → Adsmurai"
+        },
+        {
+          "id": "3c5232d5-33f6-49a2-93f4-10c269cef502",
+          "name": "Seaya → Adsmurai"
+        },
+        {
+          "id": "5c0812a6-7efd-40c1-8ae6-640b7f9c2cd6",
+          "name": "Seaya → Adsmurai"
+        }
+      ]
+    },
+    {
+      "id": "2b99245f-110b-4f5a-b522-faa2a0dad5d6",
+      "name": "Aegir Insights",
+      "role": "financiada",
+      "subtitle": "Analítica para eólica marina.",
+      "backers": [
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "id": "2e257390-ec08-4545-94b4-7fb471a34aaf",
+      "name": "Agile Content",
+      "role": "financiada",
+      "subtitle": "Vídeo y televisión por internet para operadores."
+    },
+    {
+      "id": "5b6cfe8e-6b0b-45e5-ab70-2b55f2939602",
+      "name": "ALMA",
+      "role": "financiada",
+      "subtitle": "Cartera de Seaya.",
+      "backers": [
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "id": "3f7ad5f6-cc3b-4c19-8943-7c410239ed9f",
+      "name": "Amobee",
+      "role": "financiada",
+      "subtitle": "Publicidad programática que Telefónica compró y vendió.",
+      "backers": [
+        "Telefónica"
+      ]
+    },
+    {
+      "id": "63733f59-2db8-43a0-bdf4-362731f631a7",
+      "name": "AQEMIA",
+      "role": "financiada",
+      "subtitle": "Descubrimiento de fármacos con física y aprendizaje automático.",
+      "backers": [
+        "Cathay Innovation"
+      ],
+      "aliases": [
+        {
+          "id": "660b62ff-6886-4f0c-a860-da7cba810e57",
+          "name": "Aqemia"
+        }
+      ]
+    },
+    {
+      "id": "0e4d8ed2-a1ba-44f2-b57f-9550915149bb",
+      "name": "Artur'In",
+      "role": "financiada",
+      "subtitle": "Marketing automatizado para pymes francesas; DN Capital y Ventech.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "3990c877-3206-40bd-9333-bd25b3654209",
+      "name": "Atani",
+      "role": "financiada",
+      "subtitle": "Trading de criptomonedas con más de veinte exchanges integrados.",
+      "backers": [
+        "JME Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "7cd5dd91-ab91-405d-9621-ad6aa64faca9",
+          "name": "Atani"
+        }
+      ]
+    },
+    {
+      "id": "2d40c798-6d85-48da-8f4e-1b9c374ced48",
+      "name": "Aunoa",
+      "role": "financiada",
+      "subtitle": "Chatbots de atención al cliente.",
+      "backers": [
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "id": "48ade3d4-5def-4a58-88a3-28c80f2502c3",
+      "name": "AUTO1 Group SE",
+      "role": "financiada",
+      "subtitle": "El mercado europeo de coche usado; salida de DN Capital.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "00ec3bb5-f97e-4c3a-866b-4ff9546ac9f2",
+      "name": "Automata",
+      "role": "financiada",
+      "subtitle": "Automatización de laboratorio.",
+      "backers": [
+        "Aldea Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "794bddc3-978f-4900-8f6e-537455073acc",
+          "name": "AUTOMATA FRANCE"
+        }
+      ]
+    },
+    {
+      "id": "269e515a-4927-484f-922f-e4fd932d7669",
+      "name": "BankTrack",
+      "role": "financiada",
+      "subtitle": "Producto financiero de la cartera de K-Fund.",
+      "backers": [
+        "K-Fund"
+      ]
+    },
+    {
+      "id": "08ced7a4-94ad-4d45-83d7-99d2d86204be",
+      "name": "Barkibu",
+      "role": "financiada",
+      "subtitle": "Consulta veterinaria y seguro para mascotas.",
+      "backers": [
+        "K-Fund"
+      ]
+    },
+    {
+      "id": "8057c278-8959-4069-afa1-62ca16c68a57",
+      "name": "Baubap",
+      "role": "financiada",
+      "subtitle": "Microcrédito móvil en México; dinero de BBVA Spark.",
+      "backers": [
+        "BBVA Spark"
+      ]
+    },
+    {
+      "id": "eee2451a-4772-4d24-b90a-c97542cf82ee",
+      "name": "BCAS",
+      "role": "financiada",
+      "subtitle": "Financiación para estudiantes; 30 millones en deuda."
+    },
+    {
+      "id": "070aedfb-ce05-484f-947f-228d2360a7e7",
+      "name": "Belvo",
+      "role": "financiada",
+      "subtitle": "La conexión con las cuentas bancarias de Latinoamérica.",
+      "backers": [
+        "Kibo Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "e927ec62-539d-4eb2-b24f-0393c5078388",
+          "name": "Belvo"
+        },
+        {
+          "id": "f426c7e0-f3d1-4e3d-a90e-bb84fd5ef385",
+          "name": "Belvo"
+        }
+      ]
+    },
+    {
+      "id": "0804911d-7269-4d24-af73-0acbcd79bb8a",
+      "name": "BEONx",
+      "role": "financiada",
+      "subtitle": "Precios inteligentes para hoteles.",
+      "backers": [
+        "K-Fund"
+      ]
+    },
+    {
+      "id": "00005f80-7ee1-4de9-9417-4fda19c2e5ab",
+      "name": "Bioptimus",
+      "role": "financiada",
+      "subtitle": "Modelos fundacionales para biología.",
+      "backers": [
+        "Cathay Innovation"
+      ]
+    },
+    {
+      "id": "853573cb-50dd-4950-9271-d084ced6b80a",
+      "name": "Biorce",
+      "role": "financiada",
+      "subtitle": "Ensayos clínicos con IA; Serie A de 43,8 millones."
+    },
+    {
+      "id": "0f9290b7-348e-49f0-8272-16abe09c1483",
+      "name": "Bipi",
+      "role": "financiada",
+      "subtitle": "Suscripción de coche, comprada por Renault.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "4f8bde7c-e795-4da5-8410-a6acf259dfb8",
+      "name": "Bit2Me",
+      "role": "financiada",
+      "subtitle": "El exchange de criptomonedas español, más de 400.000 usuarios."
+    },
+    {
+      "id": "eb86df55-d9fb-41bc-8104-ad6a892dc7ec",
+      "name": "Bnext",
+      "role": "financiada",
+      "subtitle": "El primer neobanco español: el dinero se lo puso DN Capital, no al revés.",
+      "backers": [
+        "DN Capital"
+      ],
+      "aliases": [
+        {
+          "id": "9e1a6699-2bba-4d10-852a-3b895a0061fa",
+          "name": "Bnext"
+        }
+      ]
+    },
+    {
+      "id": "289fd898-2edc-4355-b5ac-58f2b6cdbb8c",
+      "name": "Bonify",
+      "role": "financiada",
+      "subtitle": "La puntuación de crédito alemana; DN Capital y German Media Pool.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "cb466d32-7179-455a-8690-1285a74c2728",
+      "name": "Book A Tiger",
+      "role": "financiada",
+      "subtitle": "Limpieza a domicilio por horas, en Berlín.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "c136b338-071c-4a5f-bd50-f9d171e4fd5d",
+      "name": "Cafler",
+      "role": "financiada",
+      "subtitle": "Servicios para el coche a domicilio."
+    },
+    {
+      "id": "81cfdabc-53f7-426a-b358-a942e159ca0f",
+      "name": "Cala AI",
+      "role": "financiada",
+      "subtitle": "El propio grafo, en la cartera de Kibo: el caso se encuentra a sí mismo.",
+      "backers": [
+        "Kibo Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "2bdea5e8-a630-4098-9fb1-3f84bbaa77a2",
+          "name": "Cala"
+        }
+      ]
+    },
+    {
+      "id": "b20582ee-8896-427c-a0c9-d8189f09f17c",
+      "name": "Capchase",
+      "role": "financiada",
+      "subtitle": "Adelanta ingresos a otros, pero su propia ronda la puso Kibo.",
+      "aliases": [
+        {
+          "id": "01c2ec42-cb2e-443a-a947-7d9e29420454",
+          "name": "Capchase"
+        },
+        {
+          "id": "5e028c18-54a9-4d0f-b9fc-294d1c26b682",
+          "name": "CAPCHASE FINANCE LLC"
+        }
+      ]
+    },
+    {
+      "id": "7c2be268-82cf-4924-8f60-408cd6d94980",
+      "name": "Carbon Maps",
+      "role": "financiada",
+      "subtitle": "Huella de carbono para la industria alimentaria.",
+      "backers": [
+        "Samaipata Ventures"
+      ]
+    },
+    {
+      "id": "1a501268-d3e2-4dea-9925-d1bdb1fcb1b9",
+      "name": "CartoDB",
+      "role": "financiada",
+      "subtitle": "Los mapas de datos que salieron de Madrid.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "349658f4-f353-496c-a2dd-cf7f38692cfc",
+      "name": "Caser Residencial",
+      "role": "financiada",
+      "subtitle": "Residencias de mayores, en la órbita de Kibo.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "8f4fd64b-9acf-4a58-ae57-995e0c0ffcfa",
+      "name": "Charms",
+      "role": "financiada",
+      "subtitle": "Cartera de JME.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "866f7bf3-8974-4f13-9a49-c4f40a74c01c",
+      "name": "Chekin",
+      "role": "financiada",
+      "subtitle": "Registro de viajeros automatizado para alojamientos.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "1db88a5c-5b39-4904-9559-f27034b10314",
+      "name": "Chime",
+      "role": "financiada",
+      "subtitle": "El neobanco estadounidense de la cartera de Cathay.",
+      "backers": [
+        "Cathay Innovation"
+      ]
+    },
+    {
+      "id": "29c9c19f-992d-4769-9b57-8d67f20185a7",
+      "name": "Citibox",
+      "role": "financiada",
+      "subtitle": "Buzones inteligentes para paquetería.",
+      "backers": [
+        "Aldea Ventures"
+      ]
+    },
+    {
+      "id": "4342ab23-3e2a-43b4-b9e0-c76a84b170fa",
+      "name": "Clara",
+      "role": "financiada",
+      "subtitle": "Tarjetas corporativas en México; el dinero es de BBVA Spark.",
+      "backers": [
+        "BBVA Spark"
+      ]
+    },
+    {
+      "id": "0024a3af-98bc-4374-9ce7-d4cb315546d6",
+      "name": "Clarity AI",
+      "role": "financiada",
+      "subtitle": "Datos de sostenibilidad para inversores.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "bc8ea47b-cf3e-4858-bc36-12ab026d3c30",
+      "name": "Cleverea",
+      "role": "financiada",
+      "subtitle": "Seguros digitales contratados por meses."
+    },
+    {
+      "id": "7b2c9a92-07e3-4ce3-8bd9-ffc0a897747a",
+      "name": "ClimateTrade",
+      "role": "financiada",
+      "subtitle": "Mercado de créditos de carbono en blockchain.",
+      "backers": [
+        "SIX FinTech Ventures"
+      ]
+    },
+    {
+      "id": "b8ac6dd9-8705-4a95-ad61-7998acfd92bb",
+      "name": "Cobee",
+      "role": "financiada",
+      "subtitle": "Retribución flexible y beneficios para empleados."
+    },
+    {
+      "id": "e60cddc8-bdf6-46a2-b261-ad098893009f",
+      "name": "Copernicus Credit",
+      "role": "financiada",
+      "subtitle": "Préstamos para promoción inmobiliaria y reestructuración."
+    },
+    {
+      "id": "a5929218-834b-4526-9830-766f004f965d",
+      "name": "CoverWallet",
+      "role": "financiada",
+      "subtitle": "Seguros para pequeñas empresas, vendida a Aon."
+    },
+    {
+      "id": "ee8dd31d-eff3-4772-a2b9-822ada157ba6",
+      "name": "Crescenta",
+      "role": "financiada",
+      "subtitle": "La plataforma que abre los fondos privados al inversor de a pie."
+    },
+    {
+      "id": "1a2f0cac-5a0b-44ff-9304-b65498da6ac6",
+      "name": "CrowdFarming",
+      "role": "financiada",
+      "subtitle": "La fruta directa del agricultor; Seaya y cuatro fondos de impacto.",
+      "backers": [
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "id": "e3a4ce4f-1672-40db-b7ad-7966781902c8",
+      "name": "Cubiq Foods",
+      "role": "financiada",
+      "subtitle": "Grasas alternativas para alimentación."
+    },
+    {
+      "id": "1e41dbb0-6298-4d94-927f-97c8ccf3d37c",
+      "name": "Cuidum",
+      "role": "financiada",
+      "subtitle": "Cuidadores a domicilio para mayores.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "3a04c361-5124-492e-9ff7-210553552aa0",
+      "name": "Curenergía",
+      "role": "financiada",
+      "subtitle": "Comercializadora eléctrica que aparece junto a Kibo.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "7de642cc-fd51-4560-8fbf-168f1749f006",
+      "name": "Dersu",
+      "role": "financiada",
+      "subtitle": "Producto de la cartera de K-Fund.",
+      "backers": [
+        "K-Fund"
+      ]
+    },
+    {
+      "id": "585d7fab-e4a9-4f54-a96f-295ded5c6409",
+      "name": "Devengo",
+      "role": "financiada",
+      "subtitle": "Semilla respaldada por Bankinter."
+    },
+    {
+      "id": "24c216c7-8b4d-419e-adfa-e3f27cadb88a",
+      "name": "Devo",
+      "role": "financiada",
+      "subtitle": "Analítica de seguridad sobre grandes volúmenes de registro.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "ddbd7fac-5176-4980-9f79-c62826113643",
+      "name": "Digital Click Media",
+      "role": "financiada",
+      "subtitle": "Agencia comprada por Plenummedia."
+    },
+    {
+      "id": "c1fbb13c-6686-4951-9da7-7c3792d5e9f9",
+      "name": "Divilo",
+      "role": "financiada",
+      "subtitle": "Plataforma financiera para empresas y autónomos."
+    },
+    {
+      "id": "1b256b95-4fc6-4510-9244-32bfacb7bff3",
+      "name": "DOST",
+      "role": "financiada",
+      "subtitle": "Serie A de 8,5 millones con Octopus Ventures."
+    },
+    {
+      "id": "b819bb0f-6b81-4a9f-9424-f62182ccbe1e",
+      "name": "Dott",
+      "role": "financiada",
+      "subtitle": "Patinetes y bicicletas compartidos en Europa.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "46d8809a-8a60-44f9-bb64-45d089d12c34",
+      "name": "Drivy",
+      "role": "financiada",
+      "subtitle": "Alquiler de coches entre particulares, comprado por Getaround.",
+      "backers": [
+        "Cathay Innovation"
+      ]
+    },
+    {
+      "id": "a4aa33ab-ab65-4380-96fb-f86e70615593",
+      "name": "Edurino",
+      "role": "financiada",
+      "subtitle": "Aprendizaje digital para niños, en Alemania.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "1eae53e4-907c-4e7c-9adc-98dc08628cbf",
+      "name": "EnjoyHQ",
+      "role": "financiada",
+      "subtitle": "Repositorio de investigación de usuarios.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "25f8d4ae-ffd6-4e13-9ebe-a70a4b72f978",
+      "name": "Entalpic",
+      "role": "financiada",
+      "subtitle": "Materiales para química industrial con IA.",
+      "backers": [
+        "Cathay Innovation"
+      ]
+    },
+    {
+      "id": "d076fe0d-4e98-4f32-86e7-5645354daee9",
+      "name": "Eolas Medical",
+      "role": "financiada",
+      "subtitle": "Guías clínicas en el móvil para el personal sanitario.",
+      "backers": [
+        "Samaipata Ventures"
+      ]
+    },
+    {
+      "id": "12168685-b7e3-4988-8464-c3449af6d824",
+      "name": "Evernest",
+      "role": "financiada",
+      "subtitle": "Inmobiliaria digital alemana.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "2d984e0e-d11b-41b7-8a57-b63c029e01b7",
+      "name": "eWings.com",
+      "role": "financiada",
+      "subtitle": "El viaje online alemán; DN Capital y el fondo público Gründerfonds.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "3df9655a-97e6-4a02-a994-e8f7cae409f3",
+      "name": "Exaccta",
+      "role": "financiada",
+      "subtitle": "Extracción de datos de facturas y control de gastos."
+    },
+    {
+      "id": "2b569ae9-388e-43b5-a055-cd6cb2fa5f48",
+      "name": "eYeka",
+      "role": "financiada",
+      "subtitle": "La plataforma de creatividad colaborativa; DN Capital y Ventech.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "ecb117ca-3bfb-488c-aa8b-b053328d5c70",
+      "name": "FacePhi",
+      "role": "financiada",
+      "subtitle": "Biometría facial para verificar identidad; cotiza en bolsa."
+    },
+    {
+      "id": "d108a1a5-d9cc-42f8-87f4-3872b111c5a5",
+      "name": "Factorial",
+      "role": "financiada",
+      "subtitle": "Recursos humanos en la nube; unicornio de Barcelona.",
+      "backers": [
+        "K-Fund"
+      ]
+    },
+    {
+      "id": "05f78ca8-e852-45ba-8b28-a6684677621f",
+      "name": "Filmin",
+      "role": "financiada",
+      "subtitle": "Filmin, el cine en streaming; Seaya está en el accionariado.",
+      "backers": [
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "id": "f6ba60a1-e1b5-45c6-89c2-f0d6133d928e",
+      "name": "Fimple",
+      "role": "financiada",
+      "subtitle": "Núcleo bancario en la nube.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "54fdc8a0-0e71-4c1b-81d3-92ebc0862b5e",
+      "name": "FINTECTURE",
+      "role": "financiada",
+      "subtitle": "Pagos por transferencia inmediata en Francia.",
+      "backers": [
+        "Samaipata Ventures"
+      ]
+    },
+    {
+      "id": "f214cceb-1823-442b-b891-4f5e4047cab5",
+      "name": "Fintonic",
+      "role": "financiada",
+      "subtitle": "Recibe, no reparte: ING Ventures y Square One están en su accionariado.",
+      "backers": [
+        "ING Ventures"
+      ]
+    },
+    {
+      "id": "68c5f371-3149-4213-9e73-704a1d7550dd",
+      "name": "Flanks",
+      "role": "financiada",
+      "subtitle": "Agregación de datos de patrimonio; Serie B en 2025.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "f8b44f1a-20d8-43c9-b142-8975380369d6",
+      "name": "flexiWAN",
+      "role": "financiada",
+      "subtitle": "Redes definidas por software, de código abierto.",
+      "backers": [
+        "Telefónica"
+      ]
+    },
+    {
+      "id": "66ab2d3f-9ae0-4090-95be-ad9d433080cd",
+      "name": "Flywire",
+      "role": "financiada",
+      "subtitle": "Pagos internacionales de matrículas y facturas médicas.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "3835fc1c-2333-4476-b1d0-7382ff63b588",
+      "name": "Foodles",
+      "role": "financiada",
+      "subtitle": "Comedor de empresa en formato nevera conectada.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "1471d16c-8a5d-4d1f-89ea-50f2187c701d",
+      "name": "FOSSA Systems",
+      "role": "financiada",
+      "subtitle": "Nanosatélites para internet de las cosas.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "561f0678-111a-4513-9478-b04e48ba0c03",
+      "name": "Fracttal SpA",
+      "role": "financiada",
+      "subtitle": "Mantenimiento de activos en la nube.",
+      "backers": [
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "id": "54e4650a-d7b6-461c-bd2d-2a473b1c98ed",
+      "name": "Frontity",
+      "role": "financiada",
+      "subtitle": "El framework de WordPress con React, comprado por Automattic.",
+      "backers": [
+        "K-Fund"
+      ]
+    },
+    {
+      "id": "52e8e920-a418-4108-bcc3-fd933f3dd132",
+      "name": "Fuell",
+      "role": "financiada",
+      "subtitle": "Contabilidad y finanzas para pymes."
+    },
+    {
+      "id": "bf51f256-8fa0-4fc8-bd73-c2d2a53cf021",
+      "name": "Galtea",
+      "role": "financiada",
+      "subtitle": "Evaluación de modelos de lenguaje.",
+      "backers": [
+        "JME Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "c626eb0c-a507-4167-b289-f60e2e0edac9",
+          "name": "Galtea"
+        },
+        {
+          "id": "06656d93-f6ef-4d85-bac7-4a2b956ca442",
+          "name": "Galtea AI"
+        },
+        {
+          "id": "78763d4a-21d3-49b9-ba10-3cb3ee22064f",
+          "name": "Galtea Solutions SL"
+        }
+      ]
+    },
+    {
+      "id": "eefad00e-b2f8-4503-bf56-e84e495a92fb",
+      "name": "Gamelearn",
+      "role": "financiada",
+      "subtitle": "Formación de empresa en formato videojuego.",
+      "backers": [
+        "Inveready"
+      ]
+    },
+    {
+      "id": "dad59a83-62e9-412b-808c-816d85623d46",
+      "name": "Gate2Brain",
+      "role": "financiada",
+      "subtitle": "Fármacos que cruzan la barrera hematoencefálica."
+    },
+    {
+      "id": "607cd4f1-dd5e-4b16-b848-d1fbdc74ab37",
+      "name": "Genially",
+      "role": "financiada",
+      "subtitle": "Contenidos interactivos para clase y para empresa.",
+      "backers": [
+        "JME Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "96fbca65-63df-4c3a-9a0b-9fdcc5d25191",
+          "name": "Genially"
+        }
+      ]
+    },
+    {
+      "id": "45d1120b-5d7d-435c-8edf-8d694ec3c5fe",
+      "name": "Gibobs Allbanks",
+      "role": "financiada",
+      "subtitle": "Comparador que empareja clientes con productos financieros."
+    },
+    {
+      "id": "4e3870ac-0c1c-4954-95c3-87029561fb20",
+      "name": "GO PONTIO",
+      "role": "financiada",
+      "subtitle": "Financiación en el punto de venta para proyectos de energía."
+    },
+    {
+      "id": "fcb82b73-fdfe-4504-8b4f-ac7979f2e251",
+      "name": "Goin",
+      "role": "financiada",
+      "subtitle": "El ahorro automático de Barcelona; K-Fund y Encomenda detrás.",
+      "aliases": [
+        {
+          "id": "97984bfa-98a0-4094-8b9a-8fc060188ace",
+          "name": "Goin"
+        }
+      ]
+    },
+    {
+      "id": "0241c00b-bb0a-4968-9dfc-f7da6596fa13",
+      "name": "Gotrade",
+      "role": "financiada",
+      "subtitle": "El bróker de acciones fraccionadas; Kibo y Y Combinator detrás."
+    },
+    {
+      "id": "04401b32-b3f6-442a-80b2-673a5ecc3b59",
+      "name": "Green Eagle Solutions",
+      "role": "financiada",
+      "subtitle": "Operación automatizada de parques renovables.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "191aec45-7cd4-4bf2-a6d8-3848d5799af1",
+      "name": "Habi",
+      "role": "financiada",
+      "subtitle": "La proptech colombiana; BBVA Spark y Flybridge.",
+      "backers": [
+        "BBVA Spark"
+      ],
+      "aliases": [
+        {
+          "id": "e8e7255c-1c3d-45ab-842e-a6578a3422b9",
+          "name": "Tuhabi"
+        }
+      ]
+    },
+    {
+      "id": "82ccf0e7-c211-480c-9848-fc6a03a51bc0",
+      "name": "Harbiz",
+      "role": "financiada",
+      "subtitle": "Gestión de negocio para entrenadores personales.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "4a4d0378-1cc9-4b1e-b3fe-db057548a54f",
+      "name": "Heetch",
+      "role": "financiada",
+      "subtitle": "El VTC francés de la cartera de Cathay.",
+      "backers": [
+        "Cathay Innovation"
+      ]
+    },
+    {
+      "id": "7d56f0b2-cf04-43a4-91e7-c564b3d871d5",
+      "name": "Holded",
+      "role": "financiada",
+      "subtitle": "El sistema operativo de gestión para pymes; Serie A con Lakestar."
+    },
+    {
+      "id": "12459b37-17fb-4ccd-8307-d8e22da64e66",
+      "name": "Hubtype",
+      "role": "financiada",
+      "subtitle": "Atención al cliente conversacional.",
+      "backers": [
+        "K-Fund"
+      ]
+    },
+    {
+      "id": "a3b32963-8bf4-49e2-84ac-f33d89daa146",
+      "name": "ID Finance",
+      "role": "financiada",
+      "subtitle": "Préstamo al consumo con puntuación de crédito propia."
+    },
+    {
+      "id": "3c0347a2-3c01-4e29-827a-435269ad06a4",
+      "name": "IDOVEN",
+      "role": "financiada",
+      "subtitle": "Cardiología con IA sobre electrocardiogramas."
+    },
+    {
+      "id": "7fd4c726-99ee-4318-b9d5-b06aeea49a91",
+      "name": "IMAGINO",
+      "role": "financiada",
+      "subtitle": "Marketing con datos de cliente, en la cartera de Cathay.",
+      "backers": [
+        "Cathay Innovation"
+      ]
+    },
+    {
+      "id": "16efbc09-0d98-45dc-8069-4cef62e95097",
+      "name": "Imperia",
+      "role": "financiada",
+      "subtitle": "Planificación de la cadena de suministro.",
+      "backers": [
+        "Samaipata Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "fe92b6b3-5873-437d-9ece-affc317a7ffc",
+          "name": "Imperia"
+        },
+        {
+          "id": "398863f9-880e-4502-906a-66d1074ad096",
+          "name": "Imperia"
+        },
+        {
+          "id": "4621528d-937b-4b13-bb9c-b84f8fe1a40f",
+          "name": "Imperia"
+        },
+        {
+          "id": "a3b082e0-72a3-44b4-b999-ae9379c87b33",
+          "name": "Imperia"
+        },
+        {
+          "id": "c8558e12-3d9e-45c9-b274-d7123245e95e",
+          "name": "Imperia"
+        },
+        {
+          "id": "cdd5db4b-ab00-47e4-90a5-8933db8196d2",
+          "name": "Imperia"
+        },
+        {
+          "id": "43138329-ec24-453a-8cdf-6e9c9fdbd492",
+          "name": "Imperia SCM"
+        }
+      ]
+    },
+    {
+      "id": "5d737e5f-0866-4f5f-81bd-a1879373f7c0",
+      "name": "Impress",
+      "role": "financiada",
+      "subtitle": "Ortodoncia invisible con clínicas propias."
+    },
+    {
+      "id": "2e080463-5d93-4c77-9885-d9b7edf570b7",
+      "name": "Incientra",
+      "role": "financiada",
+      "subtitle": "Agencia comprada por Plenummedia."
+    },
+    {
+      "id": "3a45763c-41db-4951-95fa-79d0a9971b06",
+      "name": "Indexa Capital",
+      "role": "financiada",
+      "subtitle": "El gestor automatizado de carteras indexadas."
+    },
+    {
+      "id": "51c0573f-6d61-4d78-b351-ffe0221f5f15",
+      "name": "Interloom",
+      "role": "financiada",
+      "subtitle": "Aparece del lado que recibe en la ficha de DN Capital.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "556d1087-f7e0-4acf-9fb5-560848ea197d",
+      "name": "iPronics",
+      "role": "financiada",
+      "subtitle": "Circuitos fotónicos programables.",
+      "backers": [
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "id": "b3b494ed-c14f-466a-8e7a-0606159edc9c",
+      "name": "IriusRisk",
+      "role": "financiada",
+      "subtitle": "Modelado de amenazas para equipos de desarrollo.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "3ef8e2d5-31ad-49de-8095-8713fc1ce3e7",
+      "name": "Kenbi",
+      "role": "financiada",
+      "subtitle": "Cuidados a domicilio en Alemania.",
+      "backers": [
+        "Aldea Ventures"
+      ]
+    },
+    {
+      "id": "437241ff-69da-4c50-a519-08e8ece61352",
+      "name": "Koa Health",
+      "role": "financiada",
+      "subtitle": "Salud mental digital, escindida de Telefónica."
+    },
+    {
+      "id": "5f902d2a-f11e-4b03-8c0e-f5732367134e",
+      "name": "Konvo AI",
+      "role": "financiada",
+      "subtitle": "IA conversacional, cartera de JME.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "51e4e1a5-7548-4299-8d99-a06ff34a7801",
+      "name": "Kymatio",
+      "role": "financiada",
+      "subtitle": "Ciberseguridad centrada en el comportamiento del empleado.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "9f61f462-baf1-4bc1-8986-525a9d52b000",
+      "name": "Kyte",
+      "role": "financiada",
+      "subtitle": "Alquiler de coche entregado en la puerta.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "64a4dd46-856b-45fe-ba9b-816cc448fc1b",
+      "name": "Ledger",
+      "role": "financiada",
+      "subtitle": "La cartera física para criptomonedas.",
+      "backers": [
+        "Cathay Innovation"
+      ]
+    },
+    {
+      "id": "19e23bec-a315-440c-b560-cede7eb69b09",
+      "name": "Legl",
+      "role": "financiada",
+      "subtitle": "Software de cumplimiento para despachos de abogados.",
+      "backers": [
+        "Samaipata Ventures"
+      ]
+    },
+    {
+      "id": "091c396a-b15e-4aed-b7a4-7fc62ad180c8",
+      "name": "Lifeness",
+      "role": "financiada",
+      "subtitle": "Biotecnología con 11 millones de deuda del Banco Europeo de Inversiones.",
+      "backers": [
+        "Kibo Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "149d1c24-edb8-454c-bc3a-cde87f9f5dd6",
+          "name": "Lifeness"
+        }
+      ]
+    },
+    {
+      "id": "5db8ef80-73c3-45bb-bd93-dac9e8f60fcf",
+      "name": "Lingokids",
+      "role": "financiada",
+      "subtitle": "Inglés para niños en el móvil.",
+      "backers": [
+        "JME Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "9c34001c-d7be-4f84-94f6-f946be19d635",
+          "name": "LINGOKIDS LANGUAGE SCHOOL LTD"
+        }
+      ]
+    },
+    {
+      "id": "1610f0ed-2677-4503-8633-115c5a27446c",
+      "name": "Lodgify",
+      "role": "financiada",
+      "subtitle": "Web y reservas directas para alquiler vacacional.",
+      "backers": [
+        "Aldea Ventures"
+      ]
+    },
+    {
+      "id": "41357013-833e-4464-8a36-fecc68d464d3",
+      "name": "Lucera",
+      "role": "financiada",
+      "subtitle": "Comercializadora de luz cien por cien renovable.",
+      "backers": [
+        "K-Fund"
+      ]
+    },
+    {
+      "id": "d65d9abb-105c-4532-9609-681d69764c8a",
+      "name": "Mediktor",
+      "role": "financiada",
+      "subtitle": "Triaje médico conversacional."
+    },
+    {
+      "id": "e6588df7-62ea-47b7-b48a-01c086ba198b",
+      "name": "Meditelecom",
+      "role": "financiada",
+      "subtitle": "Participada de Telefónica.",
+      "backers": [
+        "Telefónica"
+      ]
+    },
+    {
+      "id": "ef4382fb-51e4-446c-bf8c-a0c1d56fb244",
+      "name": "MedKitDoc",
+      "role": "financiada",
+      "subtitle": "Consulta médica a distancia con aparatos de medición.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "b6994604-a464-4aa2-bfad-da6d87bf0413",
+      "name": "Mioti",
+      "role": "financiada",
+      "subtitle": "Escuela de datos e inteligencia artificial.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "f2dd4315-469a-4e5a-8a41-e2608ed092a8",
+      "name": "Mirai Advisory",
+      "role": "financiada",
+      "subtitle": "Cartera de Kibo.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "1f0d86a5-f6c6-4561-b910-2bb084003849",
+      "name": "Mitiga",
+      "role": "financiada",
+      "subtitle": "Respuesta a incidentes en la nube.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "2a628d23-dfc6-48f9-a5d0-cbfee08001a0",
+      "name": "MITO AI",
+      "role": "financiada",
+      "subtitle": "Producto de la cartera de K-Fund.",
+      "backers": [
+        "K-Fund"
+      ]
+    },
+    {
+      "id": "37974fda-2069-4174-8edf-869330fc9a83",
+      "name": "Miuda",
+      "role": "financiada",
+      "subtitle": "Cartera de Kibo.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "80583d4e-fa59-47a4-956c-e425b7c98de5",
+      "name": "Monogoto",
+      "role": "financiada",
+      "subtitle": "Conectividad celular para internet de las cosas.",
+      "backers": [
+        "Telefónica"
+      ]
+    },
+    {
+      "id": "5bef6530-1129-4fb4-b33e-0d42e7708bd7",
+      "name": "Movo",
+      "role": "financiada",
+      "subtitle": "Motos compartidas, de la primera cartera de Seaya.",
+      "backers": [
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "id": "227a3980-35bf-43f1-9bfd-1daf29f045a2",
+      "name": "Mowido",
+      "role": "financiada",
+      "subtitle": "Cartera de Kibo.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "45596f04-9e03-4442-a697-e1da92511210",
+      "name": "Multiverse Computing",
+      "role": "financiada",
+      "subtitle": "Compresión de modelos con métodos cuánticos.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "c0f9fdec-2e96-4bee-aa3a-cc17b4a244fa",
+      "name": "MyInvestor",
+      "role": "financiada",
+      "subtitle": "El neobanco de inversión, primero de Madrid según StartupBlink."
+    },
+    {
+      "id": "f1a5b5e7-2e23-49d9-ac60-23d4be9b71d7",
+      "name": "Nemuru",
+      "role": "financiada",
+      "subtitle": "El préstamo en el punto de venta; Encomenda y Bankia Fintech detrás."
+    },
+    {
+      "id": "f402cd6a-58a1-4b50-9d04-7d689c6817a1",
+      "name": "NeuralTrust",
+      "role": "financiada",
+      "subtitle": "Seguridad para aplicaciones de IA; semilla con Alstin.",
+      "backers": [
+        "Seaya Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "7eb121ed-7c27-40da-9683-a7eb2b031c5b",
+          "name": "NeuralTrust"
+        }
+      ]
+    },
+    {
+      "id": "0df44995-b588-429d-8738-0d743767dde1",
+      "name": "Nile",
+      "role": "financiada",
+      "subtitle": "Base de datos pensada para SaaS multiempresa.",
+      "backers": [
+        "Cathay Innovation"
+      ]
+    },
+    {
+      "id": "98c8618e-8ca6-48de-96c1-1bb86f241c74",
+      "name": "NoviCap",
+      "role": "financiada",
+      "subtitle": "Anticipo de facturas para pymes."
+    },
+    {
+      "id": "a40d05fa-e437-4558-b0b3-61a8f5627ae5",
+      "name": "Nuclia",
+      "role": "financiada",
+      "subtitle": "Búsqueda con IA sobre datos propios; la compró Progress."
+    },
+    {
+      "id": "6d369240-d20a-4be7-913a-a02620e2b0a1",
+      "name": "Nymiz",
+      "role": "financiada",
+      "subtitle": "Anonimización de datos personales."
+    },
+    {
+      "id": "bd8eeaad-7409-4c32-8ca6-c6addc68a8fa",
+      "name": "Olé",
+      "role": "financiada",
+      "subtitle": "Participada de Telefónica.",
+      "backers": [
+        "Telefónica"
+      ]
+    },
+    {
+      "id": "c860834d-d74e-4d37-848b-9343cb091614",
+      "name": "Onna Technologies",
+      "role": "financiada",
+      "subtitle": "Buscador del conocimiento interno; Serie B con Atomico."
+    },
+    {
+      "id": "e7449bbf-7400-45ab-9f23-c47d1d65c181",
+      "name": "OnTruck",
+      "role": "financiada",
+      "subtitle": "El transporte de mercancías por carretera, gestionado en app.",
+      "backers": [
+        "Samaipata Ventures"
+      ]
+    },
+    {
+      "id": "8851b4f9-a2ac-47d2-b4d3-d992b53bffd0",
+      "name": "Orain",
+      "role": "financiada",
+      "subtitle": "Servicios financieros digitales desde Barcelona."
+    },
+    {
+      "id": "851995b0-ff1b-47a2-a520-391dd3a2523c",
+      "name": "Performance Horizon",
+      "role": "financiada",
+      "subtitle": "Marketing de afiliación, comprada por Partnerize.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "639ee45d-79de-4cbb-bf82-c616637950c4",
+      "name": "PLD Grupp OÜ",
+      "role": "financiada",
+      "subtitle": "Vehículo de PLD Space, la empresa de cohetes de Elche.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "70ed4929-2a94-4867-906c-92f3848838cf",
+      "name": "PLD Space",
+      "role": "financiada",
+      "subtitle": "PLD Space: cohetes desde Elche.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "0b3aaf51-1b00-4598-a7db-b88fb0b028ee",
+      "name": "Plenummedia",
+      "role": "financiada",
+      "subtitle": "Agencia de marketing con Seaya detrás; ella misma compra otras agencias.",
+      "backers": [
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "id": "333355df-cca1-48a4-aa98-7da6341e4ac8",
+      "name": "Podimo",
+      "role": "financiada",
+      "subtitle": "Pódcast y audiolibros por suscripción.",
+      "backers": [
+        "Aldea Ventures"
+      ]
+    },
+    {
+      "id": "3bbce8b4-dced-4c25-9875-ad7638f0b393",
+      "name": "Pompeii",
+      "role": "financiada",
+      "subtitle": "Zapatillas nacidas en Madrid.",
+      "backers": [
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "id": "2ea24cc7-6d17-4a89-b641-2dc01c0128c4",
+      "name": "Prometeo OpenBanking",
+      "role": "financiada",
+      "subtitle": "Banca abierta para Latinoamérica; DN Capital.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "0e1c37bc-21de-43b2-851f-1ab64df718e0",
+      "name": "Promofarma",
+      "role": "financiada",
+      "subtitle": "La parafarmacia online que acabó en DocMorris.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "6234c314-b004-4fe8-9437-f8da6059ce67",
+      "name": "Purplebricks",
+      "role": "financiada",
+      "subtitle": "La inmobiliaria sin oficinas del Reino Unido.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "345e13d4-3e47-4ef6-98c1-540d905c4bdc",
+      "name": "Qida",
+      "role": "financiada",
+      "subtitle": "Atención domiciliaria para mayores en Cataluña.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "3282b141-fd2f-49fd-a27d-84e6fd5c5889",
+      "name": "Qogita",
+      "role": "financiada",
+      "subtitle": "Mayorista online de gran consumo.",
+      "backers": [
+        "Aldea Ventures"
+      ]
+    },
+    {
+      "id": "227fe6f5-93b9-45a1-9e82-46e0632138e0",
+      "name": "Rauda AI",
+      "role": "financiada",
+      "subtitle": "IA aplicada, cartera de JME.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "c2413391-5436-4e1b-b54c-0de3bc273358",
+      "name": "Raylo",
+      "role": "financiada",
+      "subtitle": "Suscripción de móviles en el Reino Unido.",
+      "backers": [
+        "Telefónica"
+      ]
+    },
+    {
+      "id": "42c0645b-8c0a-486e-9dc8-96918c0ca69d",
+      "name": "receeve",
+      "role": "financiada",
+      "subtitle": "Gestión de cobros e impagos.",
+      "backers": [
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "id": "745df860-9f85-48c2-bca8-e06fea723f7e",
+      "name": "Relevant Traffic",
+      "role": "financiada",
+      "subtitle": "Agencia comprada por Plenummedia."
+    },
+    {
+      "id": "2419a648-b092-4386-b3fd-556e52ed293f",
+      "name": "Restalo",
+      "role": "financiada",
+      "subtitle": "Reservas de restaurante, de la primera hornada de Seaya.",
+      "backers": [
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "id": "779c7f10-3f4b-40bf-9634-906cfbc0ac0e",
+      "name": "restb.ai",
+      "role": "financiada",
+      "subtitle": "Visión artificial para fotos inmobiliarias.",
+      "backers": [
+        "K-Fund"
+      ]
+    },
+    {
+      "id": "24b6968d-5690-4131-9843-709b0465333d",
+      "name": "Reuse",
+      "role": "financiada",
+      "subtitle": "Envases reutilizables, cartera de Seaya.",
+      "backers": [
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "id": "3ff9f1fd-b7d8-44a5-813a-0cd33e4045fa",
+      "name": "Revelock",
+      "role": "financiada",
+      "subtitle": "Biometría de comportamiento antifraude, comprada por Feedzai.",
+      "backers": [
+        "Aldea Ventures"
+      ]
+    },
+    {
+      "id": "60500afd-f89f-4f2c-9b6a-2bba7baa2dfb",
+      "name": "Reveni",
+      "role": "financiada",
+      "subtitle": "Devoluciones instantáneas para tiendas online.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "5c40f779-f30a-47de-bf02-70ac9db7d522",
+      "name": "Rever",
+      "role": "financiada",
+      "subtitle": "Devoluciones para tiendas online; Sequoia e Y Combinator."
+    },
+    {
+      "id": "3df66369-7305-4405-bca1-222b69fda8fc",
+      "name": "Salsify",
+      "role": "financiada",
+      "subtitle": "Gestión de fichas de producto para marcas.",
+      "backers": [
+        "Cathay Innovation"
+      ]
+    },
+    {
+      "id": "7c68c8ff-aa38-4072-bd22-59bfc9829fef",
+      "name": "Salupro",
+      "role": "financiada",
+      "subtitle": "Aparece del lado que pone dinero en la ficha de Telefónica.",
+      "backers": [
+        "Telefónica"
+      ]
+    },
+    {
+      "id": "2d06d820-5f25-4c06-a0da-3b71888d487c",
+      "name": "SAMY Alliance",
+      "role": "financiada",
+      "subtitle": "Grupo de agencias de influencia y creadores.",
+      "backers": [
+        "Inveready"
+      ],
+      "aliases": [
+        {
+          "id": "38a4374a-4867-4579-afe2-9233cce483c6",
+          "name": "Samy for Brands"
+        }
+      ]
+    },
+    {
+      "id": "2b6fbe57-c5cd-49b7-b7bd-ba7587bfd77f",
+      "name": "Sateliot",
+      "role": "financiada",
+      "subtitle": "Constelación de satélites para internet de las cosas."
+    },
+    {
+      "id": "169615f8-9d70-47a8-bd8e-ccb71847fe4c",
+      "name": "Seabery",
+      "role": "financiada",
+      "subtitle": "Formación en soldadura con realidad aumentada.",
+      "backers": [
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "id": "5762b7df-8aad-4d8f-9567-ee4cdcb37ddb",
+      "name": "Seedtag",
+      "role": "financiada",
+      "subtitle": "Publicidad contextual con IA, sin cookies."
+    },
+    {
+      "id": "521f5052-f9aa-48aa-a1a7-b0ab5195c431",
+      "name": "Sensei",
+      "role": "financiada",
+      "subtitle": "Tienda sin cajas ni colas.",
+      "backers": [
+        "Seaya Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "235c173a-531f-4353-8e2c-d67cdc0c227b",
+          "name": "SENSEI AI LTD"
+        }
+      ]
+    },
+    {
+      "id": "703e07c2-4e86-4445-bb91-1d178dc7cc73",
+      "name": "SeQura",
+      "role": "financiada",
+      "subtitle": "El pago aplazado que lidera el mercado español."
+    },
+    {
+      "id": "17f83a18-dac8-4186-9b31-5808361ec7a3",
+      "name": "Sesame",
+      "role": "financiada",
+      "subtitle": "Hasta 50 millones de BBVA Spark; parecen varios inversores y es uno.",
+      "backers": [
+        "BBVA Spark"
+      ],
+      "aliases": [
+        {
+          "id": "86401f6b-1283-4929-8d23-da96ec53b184",
+          "name": "Sesame"
+        },
+        {
+          "id": "89db031c-2fd8-4484-ae6f-4314d8e4f9fc",
+          "name": "Sesame"
+        },
+        {
+          "id": "b26d8977-8d98-4483-bd45-518f4b49f568",
+          "name": "Sesame"
+        },
+        {
+          "id": "c06d86cd-ad0c-4c83-86db-39a163db957f",
+          "name": "Sesame"
+        },
+        {
+          "id": "9d674d01-af3d-4423-af7c-5fcde1793f20",
+          "name": "Sesame HR"
+        }
+      ]
+    },
+    {
+      "id": "aa02c0e4-438e-4897-b4b9-974fec80fe92",
+      "name": "Shazam",
+      "role": "financiada",
+      "subtitle": "Reconocer canciones; la salida de DN Capital, comprada por Apple.",
+      "aliases": [
+        {
+          "id": "53f27696-7872-474e-aa57-811f4e697c18",
+          "name": "Shazam"
+        }
+      ]
+    },
+    {
+      "id": "c166cb69-dddb-451d-bf8b-5b1c4d012202",
+      "name": "Shift Cryptosecurity",
+      "role": "financiada",
+      "subtitle": "Carteras físicas de criptomonedas, suizas.",
+      "backers": [
+        "SIX FinTech Ventures"
+      ]
+    },
+    {
+      "id": "29f5f788-b844-4b12-a98c-9eef460f1944",
+      "name": "Smart Protection",
+      "role": "financiada",
+      "subtitle": "Retirada automática de contenido pirata.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "229fb23b-c0c0-4344-a671-896dd3bc5c71",
+      "name": "Smartvel",
+      "role": "financiada",
+      "subtitle": "Contenido de viaje actualizado para marcas turísticas."
+    },
+    {
+      "id": "988baeef-5fdf-41ab-8bac-4b433bb97f03",
+      "name": "Solvento",
+      "role": "financiada",
+      "subtitle": "Financiación para el transporte mexicano; dinero de BBVA Spark.",
+      "backers": [
+        "BBVA Spark"
+      ]
+    },
+    {
+      "id": "d5de6fdd-0847-4da6-8e5d-5e519a0b12b2",
+      "name": "Spotahome",
+      "role": "financiada",
+      "subtitle": "Alquiler de media estancia sin visita presencial.",
+      "backers": [
+        "Samaipata Ventures"
+      ]
+    },
+    {
+      "id": "5cf7bc0b-33cf-4553-afaa-e37391559d96",
+      "name": "Supersonik",
+      "role": "financiada",
+      "subtitle": "Demos de software en directo con IA; semilla con a16z."
+    },
+    {
+      "id": "ca8b2a6e-eff3-43fb-8fe1-28ed799eef74",
+      "name": "TechRules",
+      "role": "financiada",
+      "subtitle": "Herramientas de gestión patrimonial para asesores."
+    },
+    {
+      "id": "5039a4a1-24a3-4f0e-9f9d-0b1b5ed4abd2",
+      "name": "Telxius",
+      "role": "financiada",
+      "subtitle": "La filial de torres y cables submarinos de Telefónica.",
+      "backers": [
+        "Telefónica"
+      ]
+    },
+    {
+      "id": "1f226088-b72b-4a74-b35f-a54a05e949bc",
+      "name": "Terminal",
+      "role": "financiada",
+      "subtitle": "Equipos de ingeniería contratados en remoto.",
+      "backers": [
+        "Cathay Innovation"
+      ],
+      "aliases": [
+        {
+          "id": "59b58810-5ec3-4191-bada-9fd89463f92a",
+          "name": "Terminal"
+        }
+      ]
+    },
+    {
+      "id": "c7ac4a90-45f0-4a13-af7f-8dd5b892ab8e",
+      "name": "Tiger Facility Services",
+      "role": "financiada",
+      "subtitle": "El giro a servicios de limpieza para empresa de Book A Tiger.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "1cd23ace-567a-4817-bc12-3e580d59e543",
+      "name": "Tolemy Bio",
+      "role": "financiada",
+      "subtitle": "Biotecnología de la cartera de JME.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "f8df4e20-4094-4826-9364-a8204dd9a6cb",
+      "name": "Valerann",
+      "role": "financiada",
+      "subtitle": "Sensores y datos para carreteras.",
+      "backers": [
+        "Telefónica"
+      ]
+    },
+    {
+      "id": "118c5a40-f9c7-4112-b992-0957e710c89a",
+      "name": "Vambe",
+      "role": "financiada",
+      "subtitle": "Ventas conversacionales por WhatsApp en Latinoamérica.",
+      "backers": [
+        "Cathay Innovation"
+      ]
+    },
+    {
+      "id": "2935910d-2624-4291-857a-712fc8c05617",
+      "name": "Verse",
+      "role": "financiada",
+      "subtitle": "El pago entre particulares nacido en Barcelona."
+    },
+    {
+      "id": "ffe1ba1c-c236-41d1-8245-946ea2ad458d",
+      "name": "Vestr Ag",
+      "role": "financiada",
+      "subtitle": "Producto financiero suizo de la cartera de SIX.",
+      "backers": [
+        "SIX FinTech Ventures"
+      ]
+    },
+    {
+      "id": "a824ee30-acd3-4a6a-b575-8ff1f4ef490c",
+      "name": "Videdressing",
+      "role": "financiada",
+      "subtitle": "Moda de segunda mano en Francia.",
+      "backers": [
+        "DN Capital"
+      ]
+    },
+    {
+      "id": "325d22b8-f25e-4a8a-a46e-fb2dd4bfe566",
+      "name": "Viniexport",
+      "role": "financiada",
+      "subtitle": "Participada italiana de Inveready, en liquidación.",
+      "backers": [
+        "Inveready"
+      ]
+    },
+    {
+      "id": "81410730-336a-455d-aa77-1098b4fc9a23",
+      "name": "Voicemod",
+      "role": "financiada",
+      "subtitle": "Cambio de voz en tiempo real; K-Fund y BITKRAFT.",
+      "backers": [
+        "K-Fund"
+      ]
+    },
+    {
+      "id": "8e25c612-4c4c-4a89-86e2-13b1f4bd6b06",
+      "name": "Vumi",
+      "role": "financiada",
+      "subtitle": "Gestión patrimonial en modo SaaS; semilla de 100.000 euros."
+    },
+    {
+      "id": "03eb4238-2a39-43ee-b94d-e20fc6d6da58",
+      "name": "Wagmi VS",
+      "role": "financiada",
+      "subtitle": "Cartera de JME.",
+      "backers": [
+        "JME Ventures"
+      ]
+    },
+    {
+      "id": "386c88b9-20d2-46c9-93b5-86055b52b097",
+      "name": "Wallbox",
+      "role": "financiada",
+      "subtitle": "Cargadores para coche eléctrico; salió a bolsa en Nueva York.",
+      "backers": [
+        "Seaya Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "3fa26ad5-e213-4aa9-bb59-71d0abeb40db",
+          "name": "Wallbox N.V."
+        },
+        {
+          "id": "7c8a608e-a8c1-4102-98e5-94eb64e98464",
+          "name": "Wallbox N.V."
+        }
+      ]
+    },
+    {
+      "id": "155d4eab-1239-4b42-9e5e-7aab643933c9",
+      "name": "White Vega",
+      "role": "financiada",
+      "subtitle": "Cartera de Kibo.",
+      "backers": [
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "id": "0f9ee0a8-c70f-4650-9142-180bd4b159b7",
+      "name": "Yaba",
+      "role": "financiada",
+      "subtitle": "Agregador de marcas de Amazon.",
+      "backers": [
+        "Aldea Ventures"
+      ]
+    },
+    {
+      "id": "b5097b92-a66b-40b3-bf95-5f10837fe071",
+      "name": "Zepo Intelligence",
+      "role": "financiada",
+      "subtitle": "Ciberseguridad centrada en la persona; 12,8 millones.",
+      "backers": [
+        "Kibo Ventures"
+      ],
+      "aliases": [
+        {
+          "id": "ca676678-cc30-4da0-b5e2-eb13a66663d0",
+          "name": "Zepo Intelligence"
+        }
+      ]
+    },
+    {
+      "id": "a26ccd22-8986-4fcd-b029-b4b53821f14d",
+      "name": "Zynap",
+      "role": "financiada",
+      "subtitle": "Producto de la cartera de K-Fund.",
+      "backers": [
+        "K-Fund"
+      ]
+    },
+    {
+      "id": "c2aa8e13-c810-4af4-9f31-29236d989f2b",
+      "name": "Adam Bain",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "b1d0a7c0-7986-4a8f-a0d5-c78f03d956c6",
+      "name": "ADVERTISING_AND_MARKETING",
+      "role": "ruido",
+      "subtitle": "Token de relación o sector, no un actor."
+    },
+    {
+      "id": "4c8cbba0-5548-439a-831b-c23ed073c2fa",
+      "name": "Alexandre Bartolini",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "de77a110-0f53-4a37-a014-e8f9d4adaca6",
+      "name": "Alfonso Bassols",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "ed1ecdd2-fa79-4792-bb39-40cbe03bbf1c",
+      "name": "Andrés Padilla Fuentes",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "6cd40fea-39e3-438b-a07a-68693cfde48c",
+      "name": "Andrew Haryono",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "4a411217-13cf-4722-bdd1-ac299fbf15a6",
+      "name": "Aquilino Peña",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero.",
+      "aliases": [
+        {
+          "id": "2c439612-7bec-4517-bdd8-c560f779e858",
+          "name": "Aquilino Peña"
+        }
+      ]
+    },
+    {
+      "id": "d0bc843f-df34-42df-9cc4-a0d5ab9ee1e5",
+      "name": "Argentina",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "92a3b004-2bdb-47f6-8a16-c508cd078da6",
+      "name": "Artificial Intelligence companies in Spain",
+      "role": "ruido",
+      "subtitle": "Una categoría entera devuelta como si fuera una empresa."
+    },
+    {
+      "id": "a865be69-166b-46bd-ac27-9afcbc7108a8",
+      "name": "ASCRI",
+      "role": "ruido",
+      "subtitle": "La patronal española del capital riesgo, no un inversor."
+    },
+    {
+      "id": "8fb5fa24-b302-409b-abfd-28f114cc7db4",
+      "name": "Asia",
+      "role": "ruido",
+      "subtitle": "Marcador de posición del grafo, no una entidad."
+    },
+    {
+      "id": "708a2cd3-d084-4edd-aa83-927e8527d82a",
+      "name": "ASSET_MANAGEMENT",
+      "role": "ruido",
+      "subtitle": "Token de relación o sector, no un actor."
+    },
+    {
+      "id": "3bbe8853-c47f-442c-b9b3-e1f522ba614e",
+      "name": "Australia",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "a710b325-14d8-4652-854a-f4ea646f15d3",
+      "name": "BANKING",
+      "role": "ruido",
+      "subtitle": "Etiqueta de sector, no un actor."
+    },
+    {
+      "id": "7d7e89cd-567d-554c-9a67-7a4a0c9915ab",
+      "name": "Barcelona",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "24cc6c1e-8913-49d8-80aa-6c29b61e2e9d",
+      "name": "Beatriz González",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "7ca47922-bfba-4a24-a443-83ad666da4f5",
+      "name": "Benjamin Jacquard",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "8e3b62f5-616d-43ac-8ff2-73942f8319b1",
+      "name": "Berlin",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "21e141a1-a3f2-5eb6-8441-21a3a1186d05",
+      "name": "Cai Mingpo",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "989f6539-ce4e-4589-8dd9-8759f33524da",
+      "name": "Cámara de Comercio Francesa de Barcelona",
+      "role": "ruido",
+      "subtitle": "Cámara de comercio; no financia nada en este grafo."
+    },
+    {
+      "id": "1a108dbb-f10c-4cd4-88b7-372aa8aae442",
+      "name": "Carlos Conti",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "7b853886-fe5f-4092-ad2f-468aba758846",
+      "name": "Carlos Trenchs",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "98b1e3f1-c781-4216-978c-d1c018e6929c",
+      "name": "Catalonia.health",
+      "role": "ruido",
+      "subtitle": "Programa sectorial, no una entidad que financia."
+    },
+    {
+      "id": "f27a792d-a346-4e63-bba9-917eb64fc758",
+      "name": "César Bardají",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "2e1907c4-9921-4d0d-8d46-c92ff29cef53",
+      "name": "Colombia",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "1c1977b3-663a-47fb-81eb-51958758b70b",
+      "name": "CONSTRUCTION_AND_ENGINEERING",
+      "role": "ruido",
+      "subtitle": "Token de relación o sector, no un actor."
+    },
+    {
+      "id": "d6890173-dff2-43c2-832e-b7aad69a1b97",
+      "name": "David Grant",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "a3263b7f-7d25-418a-bbb1-f28f456c08a8",
+      "name": "Delaware",
+      "role": "ruido",
+      "subtitle": "Estado de constitución, no un actor."
+    },
+    {
+      "id": "4f67e2f4-1466-4b1e-91ea-df5985dc497c",
+      "name": "Denis Barrier",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "9b72c259-dc5a-5c90-8126-af1de76a4504",
+      "name": "Enric Asuncion Escorsa",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "de30a936-1fad-4fa8-a729-c2b75fc8818c",
+      "name": "Enrique González Macho",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "a9408cad-8127-4c2e-a327-fbdc7ca55088",
+      "name": "Europa",
+      "role": "ruido",
+      "subtitle": "Nombre a medias que devuelve el grafo, no una entidad."
+    },
+    {
+      "id": "66cf65cf-d7e5-479c-9381-966699086591",
+      "name": "Europe",
+      "role": "ruido",
+      "subtitle": "Marcador de posición del grafo, no una entidad."
+    },
+    {
+      "id": "f02ffdf8-34b1-4a1e-aaf7-9f7d82f9e849",
+      "name": "Experian",
+      "role": "ruido",
+      "subtitle": "Compró Bonify: una adquisición no es una ronda."
+    },
+    {
+      "id": "5f375742-7899-400f-ba2a-34a661e9411b",
+      "name": "FINANCIAL_INSURANCE",
+      "role": "ruido",
+      "subtitle": "Token de relación o sector, no un actor."
+    },
+    {
+      "id": "14a04520-c069-447d-bd87-d06ed83b5440",
+      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+      "role": "ruido",
+      "subtitle": "El evento de ronda, repetido con 131 UUID distintos. El ruido más caro del grafo.",
+      "aliases": [
+        {
+          "id": "cca52a98-80f6-45b4-b73d-87db10b9f2e7",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "0d895500-09ff-4d65-9847-509cc7861623",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "63af7b10-8720-4cf5-9eea-70afd532010b",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "83999ecc-9618-47c2-b84a-a3e95f1bcdf1",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "584fdcb8-c663-4ac6-8cad-98060f642453",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "d16a2cd1-475c-47ba-8467-b9efec584d27",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "58fd376e-37a9-40ea-bd5a-439ae80e9db2",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "161e58e5-147d-4344-97a2-f2889afe63dd",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "2c043435-d623-4ba8-b5d0-bb713ec74bc1",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "5966543c-0aec-4430-b0c2-18ec8e459c89",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "6ea968fc-fb2d-47d2-9293-87d6f695b43d",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "82803fc4-aa54-4fa9-8b55-68215f20b976",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "a6e53263-2e5b-4f3a-a5b4-baf96ba72b8b",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "de735947-994a-4d29-bb1f-42a68b93a777",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "e3d09deb-9f65-4741-b7b6-5ff56db1e071",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "edc659dd-9d69-40b0-ba83-0366621dd821",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "59168477-d930-4658-a03c-2a87daebb6c3",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "0f40c9c8-c0a6-4409-a0bf-e9be4f84743c",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "49c09381-6c5e-43b2-9350-a02017724e65",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "837b850d-ead0-4947-aa49-aa01035b44b5",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "31ce2ee3-1a21-4018-9c38-1c4880566307",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "456aa1a6-459d-4d13-b1c2-d2d03fe0084c",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "5a6110b3-3f70-49c1-a6bc-4cc13a7a688d",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "053b7bd1-5c77-4788-8e1a-ccd6798ee8fe",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "64c415f5-d5a2-4ac3-8ec6-869823814bfd",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "06582c4d-0e54-4a6e-8753-b0e84905fa7f",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "0c4f5339-c0e8-411f-b4b6-c8eb91a0c4fe",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "1a2e4edf-73a0-4ff0-b7d5-124ca46350cc",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "268e27a8-6d89-42c0-b0f4-cb17f4d7cda4",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "2fe34a8c-4760-4a18-a82e-6930b24b0187",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "30968e9f-22ad-4b5a-8c50-9c9f75a640c0",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "46b129e5-785b-406f-b4bd-eb85dec38dc1",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "4d5051e4-fe5e-4211-827f-ebc43395d41b",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "57296257-dba3-4970-b825-c24411bc0440",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "5d0e6343-816a-4587-b6ca-428e4a1153a4",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "6200ee35-c051-4111-9b97-cd1b98efafd8",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "6cb580ab-5ebc-490c-8da7-12085160d5cc",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "90d47e1b-a107-4229-aa02-9bb1fb834a69",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "9f5a29be-4262-4dad-8b8e-ab919b37172b",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "b25ee349-c081-4161-b420-be649e53c84f",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "b7d83422-4d3a-4c0e-a1db-993bb11126a4",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "b870217d-e25b-4948-b88b-a0c3b6170ab9",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "bb622623-2c35-4c15-96ee-c50e9b9fe9db",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "beda5617-2af2-4cea-8acb-eb0447dc5096",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "cac24563-3e46-41a3-81b9-718897c4cea2",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "07fb0241-27f9-44e4-99a0-806c633320e5",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "099ccfec-030f-4cc3-9ad3-ce484ea7cac9",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "0aa0a184-a21d-4925-8a07-27e4ec75e4fa",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "12710f44-bef8-4dd2-80fe-267a69b870b0",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "202fac90-a76b-40b2-9ae8-f8969547df49",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "25dac78e-6509-44ad-b10a-e1190a33c37b",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "33824b4a-4454-4151-9b69-e3b105058194",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "34404231-68b8-418a-aaf1-458073b4eab1",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "42cb1686-3232-41cb-a320-2e759a0dbd02",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "44405b07-5c08-4ed0-8513-c17c687b062d",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "4b5d3a98-7227-4dfd-96cb-b660bb04f431",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "4bf0ac04-0430-4d0c-b11b-2545cab38dd8",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "591d2518-1b32-4e66-8ee0-f91c7370bd2e",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "5af76087-2189-46ba-8299-6016fec0c6dc",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "5c066a13-5900-4e07-98ce-2590e3746d08",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "601854e6-e8d0-41af-85ef-58228281f068",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "69ddd28c-a9fa-4305-bc42-dd8080d8c78b",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "6b3dfd88-c8e3-4b11-96b2-3354c0732c84",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "6fe3b482-d3aa-48a2-80bb-edc58e859382",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "22bc3756-0ca7-40b6-ae21-e2609ea53b9a",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "25b6d8cc-11ee-495e-82c0-8552603733f6",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "3469a76a-cdd9-474b-9107-0f9c11b81d7c",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "9c6d787c-5ba1-4339-b3e1-a866ec596496",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "a69e782e-c492-4a98-a72c-52546e163ab8",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "b97286bd-50e2-47c7-9c67-d47c4bdf4d12",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "dc139e3a-6a0f-4e25-923b-24c19ca23ac6",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "dc3a2433-0a54-4e03-ac64-5deb94efb15f",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "f3b73ab0-bbbd-4f5f-92b3-42b310224261",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "120d587a-9c98-43ab-b70b-34b1b32dde77",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "1f646a40-8185-43c3-86d2-9d5c0c56047a",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "25b08484-32f3-4d46-8cd6-b43bfc2dc17c",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "27f5ba13-2a35-4afb-9e97-9956611c6972",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "3fe4fbbc-3039-4f78-b6bf-38b863cea374",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "9ce13912-ff5d-4685-9ba0-14b477798527",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "a53e3893-4fcd-43ba-94bb-7f48fa34bc25",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "b38e22d8-8aa7-4796-bc21-95da209afd27",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "d061c510-457e-4bf2-a694-9ca1e561b277",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "db6aaadd-53c3-4015-aebe-bcfdfc09d77c",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "2522945f-6b58-42a2-8ca4-680884e68ef1",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "30c6b5b9-db86-442a-a899-2b180e1320d4",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "5ecce220-4626-4ec0-8d71-4ed239af1d57",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "771e6ba1-9b05-4797-9363-320cec369347",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "8ef7d1ae-7a44-4e52-bb53-e4f006152ac4",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "a00fa590-8e76-4340-99d1-1541cfbf15a5",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "a17857ac-1c2d-40a0-8d01-1b4dc3a12f2d",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "ab1980b4-f316-4272-bcaa-33903ee5bb2c",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "b7da1e47-8c99-447f-b50d-b42af2afb000",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "03eb1c3b-ba25-4ade-a227-ec417e833f76",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "0739e238-fa33-4e69-bef9-9740af95861a",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "16b6655a-c2cd-4086-9cd8-da6b7f2348ba",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "1b82ee68-eb12-415b-9608-4221b07d6e0d",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "2014875d-b77f-4a18-9778-371cec787152",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "2160c404-716e-4fd1-9e86-d0ce4aa8b348",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "21b66237-c5d2-47f8-bbbf-3084bf7b86c5",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "2414c0e5-b2be-46ae-adee-5f5e302c6db1",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "26cbfad9-dcf3-46b3-be9a-43917d05dce4",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "283ef7a8-bad8-4156-9f7a-1a21f7562e5f",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "28813070-83ea-4dd7-a762-d5b47e38df51",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "2ee0c201-2e9b-421f-ab5a-57a356e9c623",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "2ee1c629-3ed4-4987-8370-26c5d9af0b17",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "320dc904-e222-44bf-93b5-1ade74dcdc54",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "38e4b376-f9ea-4a3b-b548-510dddc836d0",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "39e073e5-cdc8-4f30-9b0b-328750fbe3ee",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "39f0568e-ae32-4758-b65b-179e43c419c5",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "40c8efc4-d3b2-4554-af23-7d78638c7f96",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "41a717bd-35ea-4bbb-a42d-87c347136cf7",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "0536dda2-bf96-48a5-afe2-c0a7d69f960e",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "0bce10de-6ecc-4c33-954a-7d3186ce070c",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "369ed177-b5cf-4535-8051-31847b187690",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "38047888-22e1-48d2-8c96-c002b88292e0",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "45c366a1-8e47-45a4-a19d-79144cdeab29",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "7a0df97d-a380-4a99-9e84-2932a7306506",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "7ae39950-98d1-4484-87fc-f752fac18b79",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "7bf4883b-4d0e-4311-ad4d-7f19465303a4",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "b023f4a3-012d-466d-949d-3958869bfe7e",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "b42b28bd-ead0-4685-9ce1-4fb63220a321",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "b45e88ae-bcc0-472d-8c15-af13bb10e8fe",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "e42b8032-cd91-4a6a-a6a4-c9107f82f0c2",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "e88351c7-a7a7-4ac4-90e8-083023611399",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "0938cf9b-9b99-40bf-8dce-b55d3b28fd82",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "77b6b8bf-bc4d-46bd-86b5-cbc118945aba",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "819efc67-d778-4ab0-84aa-97b1f9d9a704",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "a32c8bf0-c64b-4646-b6b8-7920eaf8117a",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "b6fb4812-3f62-4b2a-ad05-dd1978f601a8",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        },
+        {
+          "id": "c6805f6a-589d-4328-9ba7-ffba96559e9d",
+          "name": "FINANCING_RAISED_OR_FACILITY_ENTERED"
+        }
+      ]
+    },
+    {
+      "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+      "name": "FINTECH",
+      "role": "ruido",
+      "subtitle": "Etiqueta de sector: la llevan doce entidades del volcado."
+    },
+    {
+      "id": "b58fd009-906d-4a11-9aef-8ef566128a5c",
+      "name": "FOOD_AND_BEVERAGE",
+      "role": "ruido",
+      "subtitle": "Token de relación o sector, no un actor."
+    },
+    {
+      "id": "b6f57d8b-33dd-409a-9fbb-269947c54e23",
+      "name": "France",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "fce36ae0-a284-47cf-aa2a-70af7eeaf9ff",
+      "name": "Fundación Ship2B",
+      "role": "ruido",
+      "subtitle": "Fundación de emprendimiento social; no aparece poniendo dinero."
+    },
+    {
+      "id": "61901653-115d-4cc4-a4e4-04d8c5009f1e",
+      "name": "Germany",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "ffd5d305-0c99-4d78-812d-25ea5d0c8f50",
+      "name": "Gonzalo Duarte Señor",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "80016840-3b5e-4e4e-a5b9-67c98122274b",
+      "name": "Gonzalo Rodés",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "dd70bbef-ce9b-4560-babf-e60310d2c6b1",
+      "name": "HEALTHCARE_PROVIDERS",
+      "role": "ruido",
+      "subtitle": "Token de relación o sector, no un actor."
+    },
+    {
+      "id": "49e7435a-1935-49a2-bec7-a7848147893e",
+      "name": "HOSPITALITY_AND_TOURISM",
+      "role": "ruido",
+      "subtitle": "Token de relación o sector, no un actor."
+    },
+    {
+      "id": "ad5ba5d9-82d2-4409-ae25-36af5c5b50a8",
+      "name": "Ignacio Moreno",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "1f2eb8e4-87c9-4b1e-a16c-ed4dda34fc9a",
+      "name": "Ignacio Pallás",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "91f6c02c-8be2-4654-b1d2-4c66b64d1d47",
+      "name": "Ignacio Puig Masllorens",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "ae488aa7-a00f-4f47-a108-e895c3ff4f52",
+      "name": "India",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "d7ca2138-2706-4fa0-8c77-f59b0fae9249",
+      "name": "Indonesia",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "bb7858a2-51d8-45e2-82bd-3ea6a06d317a",
+      "name": "INTERNET_AND_WEB_SERVICES",
+      "role": "ruido",
+      "subtitle": "Token de relación o sector, no un actor."
+    },
+    {
+      "id": "868d9b68-6729-40bb-b7d1-444bfc9f96e7",
+      "name": "Invest Europe",
+      "role": "ruido",
+      "subtitle": "La asociación europea del capital riesgo, no un inversor."
+    },
+    {
+      "id": "f90e4eaa-58dd-4f17-853d-c395c8f224ca",
+      "name": "Íñigo María de Arrola Ruiz de la Escalera",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "52454e7c-081b-4cc9-ba80-460d55900127",
+      "name": "Ireland",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "c75dfde8-5164-4513-8afb-63a7a4eaa3e8",
+      "name": "Jacky Abitbol",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "93b896dc-da83-45ab-9687-5aa95466d1f0",
+      "name": "Jaume Ripoll",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "3cdae03c-b346-4a40-8811-8fa17e4710a4",
+      "name": "Javier Torremocha",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "abc036f9-8750-430c-ab1d-c2726c35bdd1",
+      "name": "Jesús Encinar",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "6d3096fb-5a33-4bf3-a2ca-c61ca90f3e1a",
+      "name": "Joaquín Melgarejo",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "9e367cfd-e2b0-48b7-8edb-6ad2c5383cec",
+      "name": "Jordi Vidal",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero.",
+      "aliases": [
+        {
+          "id": "decc8f11-d36f-43c6-9aae-3f7d052852c8",
+          "name": "Jordi Vidal"
+        }
+      ]
+    },
+    {
+      "id": "08a67896-18ed-4b75-9f99-30e48c1cd24c",
+      "name": "Jorge Campo",
+      "role": "ruido",
+      "subtitle": "Persona; el caso pregunta por quién pone el dinero, no por quién lo firma."
+    },
+    {
+      "id": "54046ac5-fa09-4f52-88c5-fdbd4339640a",
+      "name": "José Antonio de Luna",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "cd21137a-34e5-4c5f-9fab-70780dc661c8",
+      "name": "José del Barrio",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "c4f0f1b7-0b50-48f3-aecf-5de9bcc5f227",
+      "name": "José María Amusategui",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "a0d2a666-0b45-462f-94a7-02e97ab635e3",
+      "name": "Josep Duran",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "04464363-4a5a-4153-8bce-13ff925446ca",
+      "name": "Juan Carlos Tous",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "7bd74a42-1747-46ae-96a6-b511daae7289",
+      "name": "Juan Esteve Soler",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "d64e7428-875a-40e9-b1b7-b35f3b5985d7",
+      "name": "Juan López Santamaría",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "1ffc7330-0716-4a23-8f02-581209fc0e60",
+      "name": "L'Oréal",
+      "role": "ruido",
+      "subtitle": "Socio industrial de Cathay; no financia startups españolas.",
+      "aliases": [
+        {
+          "id": "4ab534d2-5769-4f47-8ba8-d7295835b5e6",
+          "name": "L OREAL                                                 /FI"
+        }
+      ]
+    },
+    {
+      "id": "54b2f84c-0dbb-4ed0-90a8-0ca5e6f62a0e",
+      "name": "Level20.org",
+      "role": "ruido",
+      "subtitle": "Iniciativa por la diversidad en el capital riesgo, no un inversor."
+    },
+    {
+      "id": "e122a8b3-d711-53bf-b81a-d843895c5081",
+      "name": "Madrid",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "876bf47e-226b-40a1-a1bc-ffd91a0ec66e",
+      "name": "Massachusetts",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "80570ae7-a8b1-485d-b1a9-cee2b6db40a1",
+      "name": "Mazowieckie",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "9d338ece-9519-450f-a095-732cfe6ab42c",
+      "name": "Miguel Fernandez Larrea",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "2710c6a1-7f73-4015-a8eb-dfaa0c57e251",
+      "name": "MNA_COMPLETED",
+      "role": "ruido",
+      "subtitle": "El evento de compraventa, sin nombre propio detrás."
+    },
+    {
+      "id": "01552894-6b07-4396-b18b-006cdbf489c4",
+      "name": "NEWS_AND_INFORMATION",
+      "role": "ruido",
+      "subtitle": "Token de relación o sector, no un actor."
+    },
+    {
+      "id": "334efcc9-4c89-480d-b32e-1da7ac17b74b",
+      "name": "Norman Wanto",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "bae69919-f41d-4f34-89aa-35418bc7c615",
+      "name": "Pablo Ventura Aranguren",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "0f793746-4205-4ac8-9a1d-65b6b7169697",
+      "name": "Peter Hoang",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "9929317f-bdad-448a-8658-898fc7ec6e30",
+      "name": "Poland",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "21774ccd-d5c5-4fa2-8ed1-ac3d20b46339",
+      "name": "PRIVATE_EQUITY",
+      "role": "ruido",
+      "subtitle": "Token de relación o sector, no un actor."
+    },
+    {
+      "id": "0c55d211-23d0-4638-a636-157db7b1fd8e",
+      "name": "Progress Software",
+      "role": "ruido",
+      "subtitle": "Compró Nuclia: una adquisición no es una ronda."
+    },
+    {
+      "id": "1ad8156b-4253-4cda-a719-5e395732aa8a",
+      "name": "Przemyslaw Gotfryd",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+      "name": "REAL_ESTATE",
+      "role": "ruido",
+      "subtitle": "Token de relación o sector, no un actor."
+    },
+    {
+      "id": "11ce48e0-a853-4085-8142-f674977b1a3a",
+      "name": "RENEWABLE_ENERGY",
+      "role": "ruido",
+      "subtitle": "Token de relación o sector, no un actor."
+    },
+    {
+      "id": "158d8539-b41b-4ef1-94e1-56906da02337",
+      "name": "RETAIL",
+      "role": "ruido",
+      "subtitle": "Etiqueta de sector, no un actor."
+    },
+    {
+      "id": "3322933a-0ed0-4b39-94c3-c40cba85b574",
+      "name": "Rohit Mulani",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "3d296c9e-c3da-4e2e-9b3e-e2a57410c881",
+      "name": "Sara Secall",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "e93eee2c-f1e6-411c-804b-03349955b786",
+      "name": "Senior-care startup",
+      "role": "ruido",
+      "subtitle": "Descripción genérica en el sitio de un nombre propio."
+    },
+    {
+      "id": "7531aa19-e755-4106-ac78-ce0d984e4de0",
+      "name": "Singapore",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+      "name": "SOFTWARE_AND_SERVICES",
+      "role": "ruido",
+      "subtitle": "Token de relación o sector, no un actor."
+    },
+    {
+      "id": "96f677de-e09f-4be2-b8de-c1c122951627",
+      "name": "Sonia Fernandez",
+      "role": "ruido",
+      "subtitle": "Persona, y el caso pregunta por quién pone el dinero."
+    },
+    {
+      "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+      "name": "Spain",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "1d0f51aa-09c4-4203-bbe7-be996554be52",
+      "name": "Startup Growth Pains: what are they and how to navigate through them (with the great Kintxo Cortés!)",
+      "role": "ruido",
+      "subtitle": "Un episodio de pódcast que el grafo devuelve como entidad."
+    },
+    {
+      "id": "1df5b32c-1db4-4368-9b3b-84604324aec9",
+      "name": "TRANSPORTATION_AND_LOGISTICS",
+      "role": "ruido",
+      "subtitle": "Token de relación o sector, no un actor."
+    },
+    {
+      "id": "e332ff3d-605d-4b01-8222-5098236a3aff",
+      "name": "United Kingdom",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "37a1f0f5-f5ef-4b63-b3d8-14f5636be703",
+      "name": "United States",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "6182d1da-bf29-4e2c-844b-77c600dcdd96",
+      "name": "Unknown Investor",
+      "role": "ruido",
+      "subtitle": "Inversor sin nombre: el grafo admite que no lo sabe."
+    },
+    {
+      "id": "de6868da-e543-4c5b-a987-2df61392b42d",
+      "name": "Unnamed senior care services company",
+      "role": "ruido",
+      "subtitle": "Descripción genérica en el sitio de un nombre propio."
+    },
+    {
+      "id": "66cab772-4e9c-431b-8d86-25afd809954a",
+      "name": "Unnamed senior services company",
+      "role": "ruido",
+      "subtitle": "Descripción genérica en el sitio de un nombre propio."
+    },
+    {
+      "id": "74ff2e4b-b589-5646-9432-f3b8dc2c2592",
+      "name": "Valencia",
+      "role": "ruido",
+      "subtitle": "Geografía, no un actor."
+    },
+    {
+      "id": "8794d022-25ec-40ed-9c3f-e7c6176de2e1",
+      "name": "VCBacked",
+      "role": "ruido",
+      "subtitle": "Etiqueta de estado, no una empresa."
+    },
+    {
+      "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+      "name": "VENTURE_CAPITAL",
+      "role": "ruido",
+      "subtitle": "Etiqueta de sector: la llevan cinco fichas del anillo a la vez."
+    },
+    {
+      "id": "1989f4c8-697c-5f3a-ac84-06c525b7d933",
+      "name": "YC Summer 2019",
+      "role": "ruido",
+      "subtitle": "Una promoción de aceleradora, no una entidad."
+    }
+  ]
+}

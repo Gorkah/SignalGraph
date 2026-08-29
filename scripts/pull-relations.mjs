@@ -11,6 +11,15 @@ const KEY = process.env.CALA_API_KEY;
 const OUT = 'data/relations';
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// `--ids fichero` (líneas `uuid,nombre`) permite ampliar el grafo a las pistas
+// que caen al tirar de un hilo, para que no lleguen vacías al tablón.
+const idsFlag = process.argv.indexOf('--ids');
+const EXTRA = idsFlag > -1
+  ? (await readFile(process.argv[idsFlag + 1], 'utf8'))
+      .split('\n').map((l) => l.trim()).filter(Boolean)
+      .map((l) => { const [id, ...rest] = l.split(','); return [id, rest.join(',')]; })
+  : [];
+
 const SEED = [
   ['dc60f800-f723-41b8-9482-810db28c9d70', 'DN Capital'],
   ['eb86df55-d9fb-41bc-8104-ad6a892dc7ec', 'Bnext'],
@@ -40,7 +49,7 @@ async function api(path, body) {
 await mkdir(OUT, { recursive: true });
 const graph = {};
 
-for (const [id, name] of SEED) {
+for (const [id, name] of [...SEED, ...EXTRA]) {
   const file = `${OUT}/${id}.json`;
   if (existsSync(file)) {
     graph[id] = JSON.parse(await readFile(file, 'utf8'));

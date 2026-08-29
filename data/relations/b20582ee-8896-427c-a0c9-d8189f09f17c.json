@@ -1,0 +1,635 @@
+{
+  "id": "b20582ee-8896-427c-a0c9-d8189f09f17c",
+  "name": "Capchase",
+  "introspection": {
+    "properties": [
+      "name",
+      "legal_name",
+      "registered_address",
+      "lei",
+      "description",
+      "website",
+      "founding_date",
+      "headquarters_address",
+      "employee_count",
+      "aliases",
+      "id"
+    ],
+    "relationships": {
+      "outgoing": [
+        "IS_REGISTERED_IN",
+        "IS_ULTIMATE_PARENT_OF",
+        "IS_DIRECT_PARENT_OF",
+        "PARTICIPATES_IN_CORPORATE_EVENT",
+        "HAS_HEADQUARTERS_IN",
+        "INVESTED_IN",
+        "OPERATES_IN_INDUSTRY"
+      ],
+      "incoming": [
+        "INVESTED_IN",
+        "WORKS_AT",
+        "IS_MEMBER_OF",
+        "FOUNDED"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "b20582ee-8896-427c-a0c9-d8189f09f17c",
+    "name": "Capchase",
+    "entity_type": "Company",
+    "description": "A US fintech and software services company headquartered in Cambridge, Massachusetts, founded in 2020.",
+    "properties": {
+      "name": {
+        "value": "Capchase",
+        "sources": [
+          {
+            "name": "VC Analyst @ KIBO Ventures in Madrid, Spain",
+            "document": "https://johngannonblog.com/job/vc-analyst-kibo-ventures-in-madrid-spain/",
+            "date": "2022-10-15"
+          },
+          {
+            "name": "Yesterday we were supporting our portfolio company Capchase in their NightCap SaaS Founders Meet up in Madrid! Impressive to see the help Miguel Fernandez, Przemek Gotfryd, Luis Basagoiti, Ignacio… | Kibo Ventures",
+            "document": "https://www.linkedin.com/posts/kiboventures_yesterday-we-were-supporting-our-portfolio-activity-6947837851619217409-wRt2",
+            "date": "2022-06-29"
+          }
+        ]
+      },
+      "description": {
+        "value": "A US fintech and software services company headquartered in Cambridge, Massachusetts, founded in 2020.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-23"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "IS_REGISTERED_IN": [
+          {
+            "id": "37a1f0f5-f5ef-4b63-b3d8-14f5636be703",
+            "name": "United States",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/98450035A5A374962D48",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "56c0eb6d-6719-5619-ab62-330f1f064470"
+            }
+          },
+          {
+            "id": "a3263b7f-7d25-418a-bbb1-f28f456c08a8",
+            "name": "Delaware",
+            "entity_type": "CountrySubdivision",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/98450035A5A374962D48",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "add0769c-275e-53a2-90a1-0a2a4b975e4c"
+            }
+          }
+        ],
+        "IS_ULTIMATE_PARENT_OF": [
+          {
+            "id": "5e028c18-54a9-4d0f-b9fc-294d1c26b682",
+            "name": "CAPCHASE FINANCE LLC",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/98450037D1015FB51477",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "0d86d98f-81ab-522c-9de2-b32051092f25",
+              "valid_since": "2020-11-10"
+            }
+          }
+        ],
+        "IS_DIRECT_PARENT_OF": [
+          {
+            "id": "5e028c18-54a9-4d0f-b9fc-294d1c26b682",
+            "name": "CAPCHASE FINANCE LLC",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/98450037D1015FB51477",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "9539ada2-b350-5e9a-8e01-85f63478fed7",
+              "valid_since": "2020-11-10"
+            }
+          }
+        ],
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "30c6b5b9-db86-442a-a899-2b180e1320d4",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/capchase/__fMT-33Nn0toz81IYfVXFCsri0j0VFafY4g2hDzHVrGY/founders-and-board-of-directors",
+                  "date": "2026-05-11"
+                }
+              ],
+              "event_date": "2020-08-31",
+              "id": "1ce8dae1-f581-4957-9591-30855ba23b7b"
+            }
+          },
+          {
+            "id": "5ecce220-4626-4ec0-8d71-4ed239af1d57",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/fondo/__PZoi8unwxHZlDd2Azh0Tq7p_0flnrjciIB0i1aApUps/funding-and-investors",
+                  "date": "2026-07-28"
+                }
+              ],
+              "event_date": "2023-02-14",
+              "id": "65623da9-fa81-4dc4-8d57-e6a4ce702412"
+            }
+          },
+          {
+            "id": "771e6ba1-9b05-4797-9363-320cec369347",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/venture/capchase-raises-400m-debt/",
+                  "date": "2026-05-11"
+                }
+              ],
+              "event_date": "2022-07-01",
+              "id": "22a985c8-0594-44a5-9c39-0b04650029d9"
+            }
+          },
+          {
+            "id": "8ef7d1ae-7a44-4e52-bb53-e4f006152ac4",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/venture/capchase-doubles-down-raises-fresh-280m-round/",
+                  "date": "2026-05-11"
+                }
+              ],
+              "event_date": "2021-01-01",
+              "id": "5335519b-7b45-444f-9d9a-73d0edba4daf"
+            }
+          },
+          {
+            "id": "a00fa590-8e76-4340-99d1-1541cfbf15a5",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/venture/capchase-doubles-down-raises-fresh-280m-round/",
+                  "date": "2026-05-11"
+                }
+              ],
+              "event_date": "2021-07-20",
+              "id": "437998ba-a28c-4ff2-a233-ecc96dedc219"
+            }
+          },
+          {
+            "id": "a17857ac-1c2d-40a0-8d01-1b4dc3a12f2d",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/capchase/__fMT-33Nn0toz81IYfVXFCsri0j0VFafY4g2hDzHVrGY/founders-and-board-of-directors",
+                  "date": "2026-05-11"
+                }
+              ],
+              "event_date": "2024-05-21",
+              "id": "a5b26d1b-8703-42e0-bc37-242cf166f001"
+            }
+          },
+          {
+            "id": "ab1980b4-f316-4272-bcaa-33903ee5bb2c",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/fintech-ecommerce/capchase-lands-125m-series-a-to-help-founders-avoid-dilution/",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/fintech-ecommerce/capchase-lands-125m-series-a-to-help-founders-avoid-dilution?hss_channel=tw-1271065157679054848",
+                  "date": "2026-05-11"
+                }
+              ],
+              "event_date": "2021-03-01",
+              "id": "5373a2f1-76c7-4584-9d75-f01ac797b970"
+            }
+          },
+          {
+            "id": "b7da1e47-8c99-447f-b50d-b42af2afb000",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/fintech-ecommerce/novel-capital-capchase-pipe/",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/capchase/__fMT-33Nn0toz81IYfVXFCsri0j0VFafY4g2hDzHVrGY/funding-and-investors",
+                  "date": "2026-05-11"
+                }
+              ],
+              "event_date": "2022-03-10",
+              "id": "5576725c-467d-471d-b016-781385a19aa8"
+            }
+          }
+        ],
+        "HAS_HEADQUARTERS_IN": [
+          {
+            "id": "37a1f0f5-f5ef-4b63-b3d8-14f5636be703",
+            "name": "United States",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "VC Analyst @ KIBO Ventures in Madrid, Spain",
+                  "document": "https://johngannonblog.com/job/vc-analyst-kibo-ventures-in-madrid-spain/",
+                  "date": "2022-10-15"
+                },
+                {
+                  "name": "Yesterday we were supporting our portfolio company Capchase in their NightCap SaaS Founders Meet up in Madrid! Impressive to see the help Miguel Fernandez, Przemek Gotfryd, Luis Basagoiti, Ignacio… | Kibo Ventures",
+                  "document": "https://www.linkedin.com/posts/kiboventures_yesterday-we-were-supporting-our-portfolio-activity-6947837851619217409-wRt2",
+                  "date": "2022-06-29"
+                }
+              ],
+              "id": "38ab2248-5c8b-4865-930d-0f7dd3d5d3dd"
+            }
+          },
+          {
+            "id": "876bf47e-226b-40a1-a1bc-ffd91a0ec66e",
+            "name": "Massachusetts",
+            "entity_type": "CountrySubdivision",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/98450035A5A374962D48",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "a98e739f-12f7-51e9-98c7-4180d0fc46a9"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "67cc3732-d079-4306-837e-c70c3b4e9ac8",
+            "name": "Fondo OÜ",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/fondo/__PZoi8unwxHZlDd2Azh0Tq7p_0flnrjciIB0i1aApUps/funding-and-investors",
+                  "date": "2026-07-28"
+                }
+              ],
+              "id": "24d91e13-4121-448b-85c1-4b7ae61ac2e5"
+            }
+          },
+          {
+            "id": "d13f79c8-6698-4f4f-b98c-1a28d60d80b8",
+            "name": "Kibo Ventures",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/investors/kibo-ventures",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "b5912e9b-480c-52b0-9d36-2fa3695d0343"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "VC Analyst @ KIBO Ventures in Madrid, Spain",
+                  "document": "https://johngannonblog.com/job/vc-analyst-kibo-ventures-in-madrid-spain/",
+                  "date": "2022-10-15"
+                },
+                {
+                  "name": "Yesterday we were supporting our portfolio company Capchase in their NightCap SaaS Founders Meet up in Madrid! Impressive to see the help Miguel Fernandez, Przemek Gotfryd, Luis Basagoiti, Ignacio… | Kibo Ventures",
+                  "document": "https://www.linkedin.com/posts/kiboventures_yesterday-we-were-supporting-our-portfolio-activity-6947837851619217409-wRt2",
+                  "date": "2022-06-29"
+                }
+              ],
+              "id": "ffae157d-6e5d-4470-bb9b-dc21f9cc9184"
+            }
+          },
+          {
+            "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+            "name": "SOFTWARE_AND_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "VC Analyst @ KIBO Ventures in Madrid, Spain",
+                  "document": "https://johngannonblog.com/job/vc-analyst-kibo-ventures-in-madrid-spain/",
+                  "date": "2022-10-15"
+                },
+                {
+                  "name": "Yesterday we were supporting our portfolio company Capchase in their NightCap SaaS Founders Meet up in Madrid! Impressive to see the help Miguel Fernandez, Przemek Gotfryd, Luis Basagoiti, Ignacio… | Kibo Ventures",
+                  "document": "https://www.linkedin.com/posts/kiboventures_yesterday-we-were-supporting-our-portfolio-activity-6947837851619217409-wRt2",
+                  "date": "2022-06-29"
+                }
+              ],
+              "id": "6e266988-2b94-4e9f-bd53-95ddccf75028"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "d13f79c8-6698-4f4f-b98c-1a28d60d80b8",
+            "name": "Kibo Ventures",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "VC Analyst @ KIBO Ventures in Madrid, Spain",
+                  "document": "https://johngannonblog.com/job/vc-analyst-kibo-ventures-in-madrid-spain/",
+                  "date": "2022-10-15"
+                },
+                {
+                  "name": "Yesterday we were supporting our portfolio company Capchase in their NightCap SaaS Founders Meet up in Madrid! Impressive to see the help Miguel Fernandez, Przemek Gotfryd, Luis Basagoiti, Ignacio… | Kibo Ventures",
+                  "document": "https://www.linkedin.com/posts/kiboventures_yesterday-we-were-supporting-our-portfolio-activity-6947837851619217409-wRt2",
+                  "date": "2022-06-29"
+                }
+              ],
+              "id": "5bfefee2-d9fb-431b-a935-30ae97e0ce5f"
+            }
+          }
+        ],
+        "WORKS_AT": [
+          {
+            "id": "1ad8156b-4253-4cda-a719-5e395732aa8a",
+            "name": "Przemyslaw Gotfryd",
+            "entity_type": "Person",
+            "properties": {
+              "role": "COO",
+              "sources": [
+                {
+                  "name": "Capchase is reimagining B2B payments and financing | About Us",
+                  "document": "https://www.capchase.com/about",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/venture/fintech-capchase-b2b-bnpl-200m-debt-equity",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "rocketreach.co",
+                  "document": "https://rocketreach.co/capchase-profile_b42a10eefe33026d",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Capchase | The Org",
+                  "document": "https://theorg.com/org/capchase/org-chart/miguel-fernandez-larrea",
+                  "date": "2026-01-20"
+                },
+                {
+                  "name": "Capchase",
+                  "document": "https://startupintros.com/orgs/capchase",
+                  "date": "2026-07-13"
+                }
+              ],
+              "id": "b9e0f667-4536-4ea1-b580-499a9a3d9443"
+            }
+          },
+          {
+            "id": "9d338ece-9519-450f-a095-732cfe6ab42c",
+            "name": "Miguel Fernandez Larrea",
+            "entity_type": "Person",
+            "properties": {
+              "role": "CEO",
+              "sources": [
+                {
+                  "name": "Capchase is reimagining B2B payments and financing | About Us",
+                  "document": "https://www.capchase.com/about",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/venture/fintech-capchase-b2b-bnpl-200m-debt-equity",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Miguel Fernandez, Co-founder & CEO, Capchase",
+                  "document": "https://ramp.com/authors/miguel-fernandez",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "rocketreach.co",
+                  "document": "https://rocketreach.co/capchase-profile_b42a10eefe33026d",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Capchase | The Org",
+                  "document": "https://theorg.com/org/capchase/org-chart/miguel-fernandez-larrea",
+                  "date": "2026-01-20"
+                },
+                {
+                  "name": "Capchase",
+                  "document": "https://startupintros.com/orgs/capchase",
+                  "date": "2026-07-13"
+                }
+              ],
+              "id": "ceb3ead6-630f-4d33-89b0-808b89992cf5"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "c2aa8e13-c810-4af4-9f31-29236d989f2b",
+            "name": "Adam Bain",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Board Director",
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/investor/184920-13",
+                  "date": "2026-05-22"
+                }
+              ],
+              "id": "501e526c-905b-54e2-8984-4752b0fbca72"
+            }
+          }
+        ],
+        "FOUNDED": [
+          {
+            "id": "1ad8156b-4253-4cda-a719-5e395732aa8a",
+            "name": "Przemyslaw Gotfryd",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Capchase is reimagining B2B payments and financing | About Us",
+                  "document": "https://www.capchase.com/about",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/venture/fintech-capchase-b2b-bnpl-200m-debt-equity",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "rocketreach.co",
+                  "document": "https://rocketreach.co/capchase-profile_b42a10eefe33026d",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Capchase | The Org",
+                  "document": "https://theorg.com/org/capchase/org-chart/miguel-fernandez-larrea",
+                  "date": "2026-01-20"
+                },
+                {
+                  "name": "Capchase",
+                  "document": "https://startupintros.com/orgs/capchase",
+                  "date": "2026-07-13"
+                }
+              ],
+              "id": "beebe483-cc4b-4455-8356-222df783f156"
+            }
+          },
+          {
+            "id": "9d338ece-9519-450f-a095-732cfe6ab42c",
+            "name": "Miguel Fernandez Larrea",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Capchase is reimagining B2B payments and financing | About Us",
+                  "document": "https://www.capchase.com/about",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/venture/fintech-capchase-b2b-bnpl-200m-debt-equity",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Miguel Fernandez, Co-founder & CEO, Capchase",
+                  "document": "https://ramp.com/authors/miguel-fernandez",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "rocketreach.co",
+                  "document": "https://rocketreach.co/capchase-profile_b42a10eefe33026d",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Capchase | The Org",
+                  "document": "https://theorg.com/org/capchase/org-chart/miguel-fernandez-larrea",
+                  "date": "2026-01-20"
+                },
+                {
+                  "name": "Capchase",
+                  "document": "https://startupintros.com/orgs/capchase",
+                  "date": "2026-07-13"
+                }
+              ],
+              "id": "07db622e-4db1-4972-82de-7c999b134a2a"
+            }
+          },
+          {
+            "id": "ad5ba5d9-82d2-4409-ae25-36af5c5b50a8",
+            "name": "Ignacio Moreno",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Capchase is reimagining B2B payments and financing | About Us",
+                  "document": "https://www.capchase.com/about",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "rocketreach.co",
+                  "document": "https://rocketreach.co/capchase-profile_b42a10eefe33026d",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Capchase | The Org",
+                  "document": "https://theorg.com/org/capchase/org-chart/miguel-fernandez-larrea",
+                  "date": "2026-01-20"
+                },
+                {
+                  "name": "Capchase",
+                  "document": "https://startupintros.com/orgs/capchase",
+                  "date": "2026-07-13"
+                },
+                {
+                  "name": "Capchase Review: Pricing, Terms & Alternatives Compared",
+                  "document": "https://founderpath.com/blog/capchase-review",
+                  "date": "2025-06-06"
+                }
+              ],
+              "id": "0fdcf002-7693-4002-be32-7cef224d3366"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

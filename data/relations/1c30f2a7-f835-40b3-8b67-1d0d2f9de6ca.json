@@ -1,0 +1,615 @@
+{
+  "id": "1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca",
+  "name": "Payflow",
+  "introspection": {
+    "properties": [
+      "name",
+      "founding_date",
+      "employee_count",
+      "website",
+      "description",
+      "id",
+      "registered_address"
+    ],
+    "relationships": {
+      "outgoing": [
+        "PARTICIPATES_IN_CORPORATE_EVENT",
+        "HAS_HEADQUARTERS_IN",
+        "INVESTED_IN",
+        "OPERATES_IN_INDUSTRY",
+        "IS_MEMBER_OF"
+      ],
+      "incoming": [
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca",
+    "name": "Payflow",
+    "entity_type": "Organization",
+    "description": "Spanish fintech startup founded in 2020 that provides earned wage access and is based in Madrid.",
+    "properties": {
+      "name": {
+        "value": "Payflow",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-07-09"
+          }
+        ]
+      },
+      "description": {
+        "value": "Spanish fintech startup founded in 2020 that provides earned wage access and is based in Madrid.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-07-30"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "59168477-d930-4658-a03c-2a87daebb6c3",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "Spain's Payflow, a salary advance startup, banks $9.1M",
+                  "document": "https://techcrunch.com/2022/01/17/payflow-series-a",
+                  "date": "2022-01-17"
+                }
+              ],
+              "event_date": "2022-01-17",
+              "id": "5de5e8ff-e840-4790-9531-15647bbd8e93"
+            }
+          }
+        ],
+        "HAS_HEADQUARTERS_IN": [
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "CATS.VC — Venture Capital for AI & FinTech",
+                  "document": "https://cats.vc",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/cats/__1FP283Y54xq8hRLuFSuTuuf_f6-ZMAKARLyel0ZbIwo",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "7237fef3-adc6-41f2-a498-00cdc06741a4"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "1e86655e-373d-4fe8-be13-af3713581f73",
+            "name": "Y Combinator",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/payflow-announced-closing-a-91-million-series-a-funding-round-co-led-by-seaya-ventures-cathay-innovation-and-entrepreneurs-fund",
+                  "date": "2026-07-21"
+                }
+              ],
+              "id": "f679bae6-75a7-568c-a97a-ae4d51e76a33"
+            }
+          },
+          {
+            "id": "2a979c15-6838-4fbf-8735-59b8dc89ac8e",
+            "name": "TELEFONICA S A",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/spanish-fintech-payflow-snaps-e20m-to-expand-its-financial-superapp-for-employees",
+                  "date": "2026-07-31"
+                }
+              ],
+              "id": "23801e0e-c948-5017-8d2b-fb2c945a700c"
+            }
+          },
+          {
+            "id": "302606c8-55fb-41e9-a556-b692b024d553",
+            "name": "6 DEGREES CAPITAL LLP",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "EYE NEWSFLASH: Bruce brothers back in the game with surprise Purplebricks return",
+                  "document": "https://bebeez.eu/2024/07/24/barcelona-based-payflow-raises-e6-million-to-expand-flexible-salary-in-iberian-and-latam-markets",
+                  "date": "2026-07-21"
+                }
+              ],
+              "id": "4fe8237f-6046-53b2-972e-4795f15d3081"
+            }
+          },
+          {
+            "id": "43575cf7-b13e-4738-abd2-2f79c2fa2c3f",
+            "name": "Wayra",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "EYE NEWSFLASH: Bruce brothers back in the game with surprise Purplebricks return",
+                  "document": "https://bebeez.eu/2024/07/24/barcelona-based-payflow-raises-e6-million-to-expand-flexible-salary-in-iberian-and-latam-markets",
+                  "date": "2026-07-21"
+                }
+              ],
+              "id": "e165bba2-40f1-5333-bea1-a6d44c28e1ec"
+            }
+          },
+          {
+            "id": "65b357e1-d365-48fb-8343-b2cf371a5475",
+            "name": "CATHAY INNOVATION",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/payflow-announced-closing-a-91-million-series-a-funding-round-co-led-by-seaya-ventures-cathay-innovation-and-entrepreneurs-fund",
+                  "date": "2026-07-21"
+                },
+                {
+                  "name": "EYE NEWSFLASH: Bruce brothers back in the game with surprise Purplebricks return",
+                  "document": "https://bebeez.eu/2024/07/24/barcelona-based-payflow-raises-e6-million-to-expand-flexible-salary-in-iberian-and-latam-markets",
+                  "date": "2026-07-21"
+                }
+              ],
+              "id": "52704833-222f-5b1b-a750-4afe409341fa"
+            }
+          },
+          {
+            "id": "71f202e5-20c3-4637-9fc3-2a7d2eea826d",
+            "name": "Cusp Capital",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/2025/06/madrid-based-payflow-raises-e10-million-to-expand-their-earned-wage-access-platform-across-europe-and-lam",
+                  "date": "2026-07-11"
+                }
+              ],
+              "id": "ced97e14-fba6-5eb8-9f07-49261b6b04f6"
+            }
+          },
+          {
+            "id": "7447faaf-8cf8-4c1e-be4b-746dece1dbe9",
+            "name": "BBVA Spark",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/2025/06/madrid-based-payflow-raises-e10-million-to-expand-their-earned-wage-access-platform-across-europe-and-lam",
+                  "date": "2026-07-11"
+                }
+              ],
+              "id": "14db452e-b672-510e-b40b-c43836b29bf0"
+            }
+          },
+          {
+            "id": "8296d62a-fae3-4041-9ddc-e490722aada1",
+            "name": "Payflow",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/directory/payflow",
+                  "date": "2026-07-22"
+                }
+              ],
+              "id": "ec2d1e70-c759-5528-8016-aaa8d20037dd"
+            }
+          },
+          {
+            "id": "9cfec194-2d5a-4e5e-8ec8-128147936447",
+            "name": "Lanai Partners",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/2020/07/barcelona-based-payflow-raises-e1-6-million-to-provide-financial-wellbeing-and-to-disrupt-payroll",
+                  "date": "2026-08-13"
+                }
+              ],
+              "id": "e3b84c36-3d4c-5fc6-b131-c4823ff4506a"
+            }
+          },
+          {
+            "id": "9d6f393d-e70d-4030-81c2-f3e75e71401a",
+            "name": "Thomson Reuters Ventures",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "EYE NEWSFLASH: Bruce brothers back in the game with surprise Purplebricks return",
+                  "document": "https://bebeez.eu/2024/07/24/barcelona-based-payflow-raises-e6-million-to-expand-flexible-salary-in-iberian-and-latam-markets",
+                  "date": "2026-07-21"
+                }
+              ],
+              "id": "00321c6c-5460-5a4b-bdd4-2b05c777d392"
+            }
+          },
+          {
+            "id": "c254f0f5-d39e-4ba7-8b7f-eb2308d00589",
+            "name": "BBVA Spark Growth Instrument",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/tag/bbva-spark",
+                  "date": "2026-07-26"
+                }
+              ],
+              "id": "5ee92585-97c3-515f-a092-b60a2bf506d5"
+            }
+          },
+          {
+            "id": "c3959932-3f3b-48ee-8c2f-8008d907ab0f",
+            "name": "Plug and Play Ventures",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/spanish-fintech-payflow-snaps-e20m-to-expand-its-financial-superapp-for-employees",
+                  "date": "2026-07-31"
+                }
+              ],
+              "id": "4bb1c45e-2410-5f4c-ae26-a195b3076bb8"
+            }
+          },
+          {
+            "id": "c5f31218-d353-40a8-baf6-e33befb66a1b",
+            "name": "Wille Finance AG",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/explore/hrtech-startups-in-spain/__W6UHDU8SJIWmMZu88NGkwnVrZ_japjzK6je7WFHpCD8/companies",
+                  "date": "2026-07-11"
+                }
+              ],
+              "id": "06605c1f-41df-56d8-9e02-cd9af95997fd"
+            }
+          },
+          {
+            "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+            "name": "Seaya Ventures",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/payflow-announced-closing-a-91-million-series-a-funding-round-co-led-by-seaya-ventures-cathay-innovation-and-entrepreneurs-fund",
+                  "date": "2026-07-21"
+                },
+                {
+                  "name": "EYE NEWSFLASH: Bruce brothers back in the game with surprise Purplebricks return",
+                  "document": "https://bebeez.eu/2024/07/24/barcelona-based-payflow-raises-e6-million-to-expand-flexible-salary-in-iberian-and-latam-markets",
+                  "date": "2026-07-21"
+                }
+              ],
+              "id": "5fc8db98-d625-54cd-9776-6be78e9c1bea"
+            }
+          },
+          {
+            "id": "e1e1434e-1090-4bf1-a6ba-480b44b803de",
+            "name": "Rocket Internet GmbH",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/2020/07/barcelona-based-payflow-raises-e1-6-million-to-provide-financial-wellbeing-and-to-disrupt-payroll",
+                  "date": "2026-08-13"
+                }
+              ],
+              "id": "cf7e45de-bfc5-59bb-9155-29fe2f2a898b"
+            }
+          },
+          {
+            "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+            "name": "BBVA Spark Fund",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startup Rise EU - European Startup News | Funding | Startup Insights",
+                  "document": "https://startuprise.co.uk/payflow-funding-news-madrid-based-payflow-raises-e10-million-funding-round",
+                  "date": "2026-07-26"
+                }
+              ],
+              "id": "b4540fe8-2dad-5837-b080-96328ade38e3"
+            }
+          },
+          {
+            "id": "f8080db9-34c4-4e20-a096-96f78fd0dfe9",
+            "name": "FORCE OVER MASS CAPITAL LLP",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/payflow-announced-closing-a-91-million-series-a-funding-round-co-led-by-seaya-ventures-cathay-innovation-and-entrepreneurs-fund",
+                  "date": "2026-07-21"
+                }
+              ],
+              "id": "0e39e282-a3d4-53eb-8606-72f0a1ea3636"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "5f375742-7899-400f-ba2a-34a661e9411b",
+            "name": "FINANCIAL_INSURANCE",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "bouncewatch.com",
+                  "document": "https://bouncewatch.com/company/payflow",
+                  "date": "2026-08-08"
+                }
+              ],
+              "id": "7e6a0315-c887-50f4-b7ce-a735c8696bd0"
+            }
+          },
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/directory/payflow",
+                  "date": "2026-07-10"
+                }
+              ],
+              "id": "2c6216b2-e552-558d-a1fe-e22eacdc590f"
+            }
+          },
+          {
+            "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+            "name": "SOFTWARE_AND_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "CATS.VC — Venture Capital for AI & FinTech",
+                  "document": "https://cats.vc",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/cats/__1FP283Y54xq8hRLuFSuTuuf_f6-ZMAKARLyel0ZbIwo",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "9d334d8b-27a6-424e-9a20-56df13c400f8"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "1e86655e-373d-4fe8-be13-af3713581f73",
+            "name": "Y Combinator",
+            "entity_type": "Company",
+            "properties": {
+              "role": "YC S21 batch participant",
+              "sources": [
+                {
+                  "name": "Payflow: AI FP&A Agent for insights, reports, planning and forecasting. | Y Combinator",
+                  "document": "https://www.ycombinator.com/companies/payflow-2",
+                  "date": "2026-07-10"
+                }
+              ],
+              "id": "8e3c9767-0452-53ae-a456-f437d01dd8a8"
+            }
+          },
+          {
+            "id": "989f6539-ce4e-4589-8dd9-8759f33524da",
+            "name": "CAMARA DE COMERCIO Y DE INDUSTRIA FRANCESA DE BARCELONA",
+            "entity_type": "Company",
+            "properties": {
+              "role": "member of Comité de Patronage",
+              "sources": [
+                {
+                  "name": "Payflow",
+                  "document": "https://www.camarafrancesa.es/es/noticias/n/news/payflow.html",
+                  "date": "2021-01-01"
+                }
+              ],
+              "id": "308e77c9-5c3c-5b38-9cc5-a90ec84ee01f"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "12dfcb17-7c0a-46f2-87df-4915124fbac4",
+            "name": "Rebel Fund",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Spain's Payflow, a salary advance startup, banks $9.1M",
+                  "document": "https://techcrunch.com/2022/01/17/payflow-series-a",
+                  "date": "2022-01-17"
+                }
+              ],
+              "id": "825aac57-b14e-40bf-86d5-abf3f9336c5c"
+            }
+          },
+          {
+            "id": "1e86655e-373d-4fe8-be13-af3713581f73",
+            "name": "Y Combinator",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Spain's Payflow, a salary advance startup, banks $9.1M",
+                  "document": "https://techcrunch.com/2022/01/17/payflow-series-a",
+                  "date": "2022-01-17"
+                }
+              ],
+              "id": "c03bfa01-fb8b-4e77-9333-c6cc8d5231e0"
+            }
+          },
+          {
+            "id": "65b357e1-d365-48fb-8343-b2cf371a5475",
+            "name": "CATHAY INNOVATION",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Spain's Payflow, a salary advance startup, banks $9.1M",
+                  "document": "https://techcrunch.com/2022/01/17/payflow-series-a",
+                  "date": "2022-01-17"
+                }
+              ],
+              "id": "b7bc039f-db0d-40df-916f-41647b924a33"
+            }
+          },
+          {
+            "id": "71f202e5-20c3-4637-9fc3-2a7d2eea826d",
+            "name": "Cusp Capital",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/companies/payflow/__gljGw1IO872nHj5pynfWsN9yh3gD6Z6UYAnLKhlxOP8",
+                  "date": "2026-07-30"
+                }
+              ],
+              "id": "40e096d4-22cb-5309-82e2-671bc96bdb0d"
+            }
+          },
+          {
+            "id": "7614f41d-233c-4bda-9fde-30052a9039ac",
+            "name": "CATS.VC",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "CATS.VC — Venture Capital for AI & FinTech",
+                  "document": "https://cats.vc",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/cats/__1FP283Y54xq8hRLuFSuTuuf_f6-ZMAKARLyel0ZbIwo",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "a4d77349-f794-4680-a852-f17f9e694ad0"
+            }
+          },
+          {
+            "id": "e1b579ed-3983-4387-9a75-651072c0d26b",
+            "name": "Mango group",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "app.dealroom.co",
+                  "document": "https://app.dealroom.co/investors/mango_startup_studio/portfolio/rounds",
+                  "date": "2026-07-10"
+                },
+                {
+                  "name": "Mango invests in Payflow, an on-demand and flexible remuneration start-up, to strengthen its innovation model",
+                  "document": "https://mangofashiongroup.com/en/w/mango-invierte-en-payflow-start-up-de-salario-bajo-demanda-y-retribuci%C3%B3n-flexible-para-reforzar-su-modelo-de-innovaci%C3%B3n",
+                  "date": "2023-02-17"
+                }
+              ],
+              "id": "ab8a2ce8-bb91-55f1-9b34-06f16b8a0e57",
+              "valid_since": "2022-10-01"
+            }
+          },
+          {
+            "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+            "name": "Seaya Ventures",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Spain's Payflow, a salary advance startup, banks $9.1M",
+                  "document": "https://techcrunch.com/2022/01/17/payflow-series-a",
+                  "date": "2022-01-17"
+                }
+              ],
+              "id": "eaa79fe5-6a6a-4d69-b346-53bc477cbbad"
+            }
+          },
+          {
+            "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+            "name": "BBVA Spark Fund",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/spanish-fintech-payflow-snaps-e20m-to-expand-its-financial-superapp-for-employees",
+                  "date": "2026-08-13"
+                },
+                {
+                  "name": "Tech.eu - European Startup, Funding and Technology News",
+                  "document": "https://tech.eu/2023/09/18/spanish-fintech-lender-payflow-secures-up-to-eur20m-growth-capital-in-bbva-spark-deal",
+                  "date": "2026-08-13"
+                },
+                {
+                  "name": "bouncewatch.com",
+                  "document": "https://bouncewatch.com/company/payflow",
+                  "date": "2026-08-13"
+                }
+              ],
+              "id": "103c4570-513f-5f8d-8770-f55523e947cf"
+            }
+          },
+          {
+            "id": "f8080db9-34c4-4e20-a096-96f78fd0dfe9",
+            "name": "FORCE OVER MASS CAPITAL LLP",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Spain's Payflow, a salary advance startup, banks $9.1M",
+                  "document": "https://techcrunch.com/2022/01/17/payflow-series-a",
+                  "date": "2022-01-17"
+                }
+              ],
+              "id": "69abe7b6-c8a9-431b-a4ab-6cc9172482aa"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

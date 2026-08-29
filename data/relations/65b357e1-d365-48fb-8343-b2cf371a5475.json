@@ -1,0 +1,1706 @@
+{
+  "id": "65b357e1-d365-48fb-8343-b2cf371a5475",
+  "name": "CATHAY INNOVATION",
+  "introspection": {
+    "properties": [
+      "description",
+      "employee_count",
+      "website",
+      "headquarters_address",
+      "lei",
+      "name",
+      "id",
+      "registered_address",
+      "esg_policy",
+      "legal_name",
+      "founding_date"
+    ],
+    "relationships": {
+      "outgoing": [
+        "HAS_PRESENCE_IN",
+        "INVESTED_IN",
+        "IS_REGISTERED_IN",
+        "OPERATES_IN_INDUSTRY",
+        "PARTICIPATES_IN_CORPORATE_EVENT",
+        "HAS_HEADQUARTERS_IN"
+      ],
+      "incoming": [
+        "WORKS_AT",
+        "IS_MEMBER_OF",
+        "FOUNDED",
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "65b357e1-d365-48fb-8343-b2cf371a5475",
+    "name": "CATHAY INNOVATION",
+    "entity_type": "Company",
+    "description": "Paris‑based venture capital firm founded in 2016 by Cai Mingpo and Denis Barrier.",
+    "properties": {
+      "name": {
+        "value": "CATHAY INNOVATION",
+        "sources": [
+          {
+            "name": "GLEIF",
+            "document": "https://search.gleif.org/#/record/969500ISUB5AFUA69173",
+            "date": "2026-06-29"
+          }
+        ]
+      },
+      "description": {
+        "value": "Paris‑based venture capital firm founded in 2016 by Cai Mingpo and Denis Barrier.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-21"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "HAS_PRESENCE_IN": [
+          {
+            "id": "37a1f0f5-f5ef-4b63-b3d8-14f5636be703",
+            "name": "United States",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover the top and emerging startups in Africa",
+                  "document": "https://startuplist.africa/funding/glovo-series-c-115m-eur-8925ffc",
+                  "date": "2026-05-07"
+                }
+              ],
+              "id": "9a94dd2f-9aca-56a0-b4ac-e82e2650163f"
+            }
+          },
+          {
+            "id": "8e3b62f5-616d-43ac-8ff2-73942f8319b1",
+            "name": "Berlin",
+            "entity_type": "CountrySubdivision",
+            "properties": {
+              "sources": [
+                {
+                  "name": "SaaS B2B Fundraising News | The SaaS News",
+                  "document": "http://www.thesaasnews.com/news/tucuvi-raises-20-million-in-series-a",
+                  "date": "2026-05-04"
+                }
+              ],
+              "id": "9b972a15-2a99-5dd9-8da4-f45177b951bb"
+            }
+          },
+          {
+            "id": "b6f57d8b-33dd-409a-9fbb-269947c54e23",
+            "name": "France",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/abacum-raised-25-million-in-a-series-a-round-led-by-atomico",
+                  "date": "2026-05-02"
+                }
+              ],
+              "id": "ad7a3bfd-1208-54b3-9bff-a0b76f9e79a7"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "00005f80-7ee1-4de9-9417-4fda19c2e5ab",
+            "name": "Bioptimus",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Business Insider - Latest News in Tech, Markets, Economy & Innovation",
+                  "document": "http://www.businessinsider.com/bioptimus-new-ai-powered-bioscience-startup-raises-cash-top-funds-2024-2",
+                  "date": "2026-06-02"
+                },
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/bioptimus-raised-a-41m-series-a-led-by-cathay-innovation-joined-by-bpifrance-sofinnova-partners-andera-partners-hitachi-ventures-boom-capital-pomifer",
+                  "date": "2026-06-02"
+                },
+                {
+                  "name": "SaaS B2B Fundraising News | The SaaS News",
+                  "document": "https://www.thesaasnews.com/news/bioptimus-raises-35-million-in-seed-round",
+                  "date": "2026-06-02"
+                }
+              ],
+              "id": "c2eee0f5-81fa-50f5-97bd-d2d86e17e472"
+            }
+          },
+          {
+            "id": "0df44995-b588-429d-8738-0d743767dde1",
+            "name": "Nile",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/nile/__qBD1a_PHu6uPYSDpMXLUogjH0dAnM68h1rtUAXNKH74/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "2265a55c-43b3-4f09-9c21-971492de4fe5"
+            }
+          },
+          {
+            "id": "118c5a40-f9c7-4112-b992-0957e710c89a",
+            "name": "Vambe",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/vambe/__ZG3_yWO9l7ky9tKktfYc5aZhvMOm2K8CZKCmzBYpfhU",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/vambe/__ZG3_yWO9l7ky9tKktfYc5aZhvMOm2K8CZKCmzBYpfhU/funding-and-investors",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/vambe",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "7eff2374-db97-4a59-9166-a92df731bdfe"
+            }
+          },
+          {
+            "id": "1a0edbf9-deb5-45be-ba24-0e7a0377cc92",
+            "name": "THEKER Robotics",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "MapCo AI Deal Intelligence",
+                  "document": "https://www.mapco.ai/company/theker",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "27ac1026-15d0-5088-86cc-46f11bc7ccac"
+            }
+          },
+          {
+            "id": "1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca",
+            "name": "Payflow",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Spain's Payflow, a salary advance startup, banks $9.1M",
+                  "document": "https://techcrunch.com/2022/01/17/payflow-series-a",
+                  "date": "2022-01-17"
+                }
+              ],
+              "id": "b7bc039f-db0d-40df-916f-41647b924a33"
+            }
+          },
+          {
+            "id": "1db88a5c-5b39-4904-9559-f27034b10314",
+            "name": "Chime Financial, Inc.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Chime raises $18 million for mobile banking without the fees | TechCrunch",
+                  "document": "https://techcrunch.com/2017/09/27/chime-raises-18-million-for-mobile-banking-without-the-fees",
+                  "date": "2017-09-27"
+                }
+              ],
+              "id": "51b4d78a-98ba-4761-a914-6d30c8c752e2"
+            }
+          },
+          {
+            "id": "1f226088-b72b-4a74-b35f-a54a05e949bc",
+            "name": "Terminal",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Terminal raises $17M led by 8VC to source and build remote teams of engineers | TechCrunch",
+                  "document": "https://techcrunch.com/2019/09/26/terminal-raises-17m-led-by-8vc-to-source-and-build-remote-teams-of-engineers",
+                  "date": "2019-09-26"
+                },
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/startups/remote-software-development-team-builder-terminal-raises-17m-series-b",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/terminal/__eM1o1SxY9QIKfPYIuJ4FhWMs13DloyOrkWLgdGRITUM",
+                  "date": "2026-07-29"
+                }
+              ],
+              "id": "95569b1f-f91e-4222-b598-82b59147ad64"
+            }
+          },
+          {
+            "id": "2102bd9c-8835-4cbe-8d34-1999d874ebc8",
+            "name": "ABACUM PLANNING S.L. (SOCIEDAD UNIPERSONAL)",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Abacum Review [2026]: Pricing, AI & Mid-Market FP&A Fit",
+                  "document": "https://www.cfoshortlist.com/vendors/abacum",
+                  "date": "2026-07-15"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/abacum/__xDxRifljOKgQzZe2E_piFD7so-KdlCGxVaHO-det66A/funding-and-investors",
+                  "date": "2026-07-28"
+                }
+              ],
+              "id": "88f1cc05-f5ce-4669-a969-780d05dc76b5"
+            }
+          },
+          {
+            "id": "25f8d4ae-ffd6-4e13-9ebe-a70a4b72f978",
+            "name": "Entalpic",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/entalpic/__vZM_Exg7PAugLjEl6DCmyW_F0WfGP2GWwXl02U0PsjQ",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/entalpic/__vZM_Exg7PAugLjEl6DCmyW_F0WfGP2GWwXl02U0PsjQ/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/608771-80",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/entalpic/financial_details",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/person/gilles-wainrib",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "2576bd26-9e09-4b45-9550-7f3144d2b5ec"
+            }
+          },
+          {
+            "id": "3105fdbe-e3c9-4019-bc71-7c89d36f4d84",
+            "name": "EMBAT TECHNOLOGIES SL",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/embat/__U9jK-4YRpbTUmyuPIclbHXdzAhwq12ZYGUejWW8IVBs/funding-and-investors",
+                  "date": "2026-07-28"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/samaipata/__EbTTkgNtiNBpqqSHOg5y19YV8fg7FIMfUCt6XNmTfAQ",
+                  "date": "2026-07-28"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/cathayinnovation/__wih0DGEsHfrTzlhcF-LOfzcQKuMWIfhriAGd0XsP-gE",
+                  "date": "2026-07-28"
+                }
+              ],
+              "id": "3e7123e1-76c2-4910-8434-39c6f921eef9"
+            }
+          },
+          {
+            "id": "3df66369-7305-4405-bca1-222b69fda8fc",
+            "name": "Salsify Inc.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/salsify/__YL2e22M89IMxqD0hfGWtVQ0YlCT2Jy8rRmEKyQdtP9A/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "895b5963-a388-41d0-b877-4c00b2491cdd"
+            }
+          },
+          {
+            "id": "46d8809a-8a60-44f9-bb64-45d089d12c34",
+            "name": "Drivy",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Drivy grabs $35 million for its car rental marketplace | TechCrunch",
+                  "document": "https://techcrunch.com/2016/04/27/drivy-grabs-35-million-for-its-car-rental-marketplace",
+                  "date": "2016-04-27"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/drivy/__uYo9hv48575lkGOTEgCpAXDmxwFcb09ydlaKRdKR05E/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "af48129a-58b5-4b96-bdf6-ca01ab4f0c02"
+            }
+          },
+          {
+            "id": "4a4d0378-1cc9-4b1e-b3fe-db057548a54f",
+            "name": "Heetch",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Heetch raises $38M to take on Uber in French-speaking countries | TechCrunch",
+                  "document": "https://techcrunch.com/2019/05/08/heetch-raises-38m-to-take-on-uber-in-french-speaking-countries",
+                  "date": "2019-05-08"
+                }
+              ],
+              "id": "8ef8a4a5-9070-449a-bc1d-5456a2728e64"
+            }
+          },
+          {
+            "id": "59b58810-5ec3-4191-bada-9fd89463f92a",
+            "name": "Terminal",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Terminal raises $17M led by 8VC to source and build remote teams of engineers | TechCrunch",
+                  "document": "https://techcrunch.com/2019/09/26/terminal-raises-17m-led-by-8vc-to-source-and-build-remote-teams-of-engineers",
+                  "date": "2019-09-26"
+                },
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/startups/remote-software-development-team-builder-terminal-raises-17m-series-b",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/terminal/__eM1o1SxY9QIKfPYIuJ4FhWMs13DloyOrkWLgdGRITUM",
+                  "date": "2026-07-29"
+                }
+              ],
+              "id": "a04ad6c3-f6a3-4fed-9f60-b68df172cab9"
+            }
+          },
+          {
+            "id": "5d71f10c-423f-4efb-9abf-2d9466a21607",
+            "name": "Tucuvi",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/explore/adtech-startups-in-spain/__4XIwsSkiNhGztSUpkG057s61d16N0mQJPRmkCmzjOMU/companies",
+                  "date": "2026-06-29"
+                }
+              ],
+              "id": "b47693d2-263f-500a-83f5-8233057318b0"
+            }
+          },
+          {
+            "id": "63733f59-2db8-43a0-bdf4-362731f631a7",
+            "name": "AQEMIA",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Aqemia raises $38M to find new drugs by meshing theoretical physics with GenAI | TechCrunch",
+                  "document": "https://techcrunch.com/2024/12/10/aqemia-raises-38m-to-find-new-drugs-by-meshing-theoretical-physics-with-genai",
+                  "date": "2024-12-10"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/aqemia/__izGruVjbEeIkXW4xZc5-3bqKsYIt1qUNNuJ5LDQ26ZA/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/funding_round/aqemia-series-a--57cd2925",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "84447941-5f0a-4bd0-9dd8-c7d68ec1d4e2"
+            }
+          },
+          {
+            "id": "64a4dd46-856b-45fe-ba9b-816cc448fc1b",
+            "name": "Ledger",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Ledger raises another $75 million to become the leader in cryptocurrency hardware wallets | TechCrunch",
+                  "document": "https://techcrunch.com/2018/01/18/ledger-raises-another-70-million-to-become-the-leader-in-cryptocurrency-hardware-wallets",
+                  "date": "2018-01-18"
+                },
+                {
+                  "name": "With at least $1.3 billion invested globally in 2018, VC funding for blockchain blows past 2017 totals | TechCrunch",
+                  "document": "https://techcrunch.com/2018/05/20/with-at-least-1-3-billion-invested-globally-in-2018-vc-funding-for-blockchain-blows-past-2017-totals",
+                  "date": "2018-05-20"
+                }
+              ],
+              "id": "2052be2a-0416-4c2a-b576-f55849f48ca8"
+            }
+          },
+          {
+            "id": "660b62ff-6886-4f0c-a860-da7cba810e57",
+            "name": "Aqemia",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/aqemia-hits-100-million-funding-milestone-paving-way-to-clinical-trials-and-global-expansion-starting-with-london-uk",
+                  "date": "2026-06-02"
+                },
+                {
+                  "name": "Maginative",
+                  "document": "https://www.maginative.com/article/aqemia-raises-38-million-to-propel-quantum-powered-ai-drug-discovery",
+                  "date": "2026-06-02"
+                },
+                {
+                  "name": "finance.yahoo.com",
+                  "document": "https://finance.yahoo.com/news/aqemia-raises-38m-drugs-meshing-111348468.html",
+                  "date": "2026-06-02"
+                }
+              ],
+              "id": "d9d7ae83-6572-5196-a045-811a7a951fe4"
+            }
+          },
+          {
+            "id": "74bd652d-b5e9-438b-b76f-7e6dcfce36c5",
+            "name": "TCA GLOVO SL",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/european-on-demand-delivery-startup-glovo-raises-e30-million-series-b",
+                  "date": "2026-07-16"
+                },
+                {
+                  "name": "TechCrunch | Startup and Technology News",
+                  "document": "https://techcrunch.com/2017/10/04/glovo-series-b",
+                  "date": "2026-07-16"
+                }
+              ],
+              "id": "2fd32da9-7409-5c8c-9545-d3d72a52333a"
+            }
+          },
+          {
+            "id": "7fd4c726-99ee-4318-b9d5-b06aeea49a91",
+            "name": "IMAGINO",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/imagino/__Harv0S6VOhcr7qxCFpJ2wNd4jk72AJoV-ckZBaKPyDQ",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/imagino/__Harv0S6VOhcr7qxCFpJ2wNd4jk72AJoV-ckZBaKPyDQ/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/481274-83",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "799cdcd1-c44e-4e5e-ac18-b42a45885f26"
+            }
+          }
+        ],
+        "IS_REGISTERED_IN": [
+          {
+            "id": "b6f57d8b-33dd-409a-9fbb-269947c54e23",
+            "name": "France",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/969500ISUB5AFUA69173",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "bdd16202-788c-52d2-8b35-7abd126a607f"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "capital-riesgo.es",
+                  "document": "https://capital-riesgo.es/es/articles/tags/seaya+ventures?p=4",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "09a0840b-6eb3-52ec-9c3e-b5062b9b0153"
+            }
+          },
+          {
+            "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+            "name": "VENTURE_CAPITAL",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/startups/bioptimus",
+                  "date": "2026-06-02"
+                }
+              ],
+              "id": "b3d15658-e77f-5556-8c06-e49231ae64ed"
+            }
+          }
+        ],
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "07fb0241-27f9-44e4-99a0-806c633320e5",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Medwing, a recruitment marketplace for Europe's healthcare workforce, raises $47M | TechCrunch",
+                  "document": "https://techcrunch.com/2023/03/14/medwing-a-recruitment-marketplace-for-europes-healthcare-workforce-raises-47m",
+                  "date": "2023-03-14"
+                },
+                {
+                  "name": "Medwing, a recruitment marketplace for Europe's healthcare workforce, raises $47M | TechCrunch",
+                  "document": "https://techcrunch.com?p=2500057",
+                  "date": "2023-03-14"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/medwing/__JVqwuJCeEvkmVY-d4W2OUjzAcY6ESDZOMs8GZn9bHzk/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2023-03-15",
+              "id": "4a299e9c-bddb-45f2-940a-f9f2076b9296"
+            }
+          },
+          {
+            "id": "099ccfec-030f-4cc3-9ad3-ce484ea7cac9",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Terminal raises $17M led by 8VC to source and build remote teams of engineers | TechCrunch",
+                  "document": "https://techcrunch.com/2019/09/26/terminal-raises-17m-led-by-8vc-to-source-and-build-remote-teams-of-engineers",
+                  "date": "2019-09-26"
+                },
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/startups/remote-software-development-team-builder-terminal-raises-17m-series-b",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/terminal/__eM1o1SxY9QIKfPYIuJ4FhWMs13DloyOrkWLgdGRITUM",
+                  "date": "2026-07-29"
+                }
+              ],
+              "event_date": "2019-09-26",
+              "id": "024a42cd-7e23-4fdb-9ee5-e7ee310f0f0f"
+            }
+          },
+          {
+            "id": "0aa0a184-a21d-4925-8a07-27e4ec75e4fa",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Glovo gets $134M to beef up its on-demand delivery business | TechCrunch",
+                  "document": "https://techcrunch.com/2018/07/18/glovo-gets-134m-to-beef-up-its-on-demand-delivery-business",
+                  "date": "2018-07-18"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/glovo/__-2D9UfkDSWBfX0LNRAy7wkKbf3t2P_7oH-o1tHwmkzI/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2018-07-18",
+              "id": "7893a70e-4bbc-4ce7-81fd-f2800d38b8ac"
+            }
+          },
+          {
+            "id": "12710f44-bef8-4dd2-80fe-267a69b870b0",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Aqemia raises $38M to find new drugs by meshing theoretical physics with GenAI | TechCrunch",
+                  "document": "https://techcrunch.com/2024/12/10/aqemia-raises-38m-to-find-new-drugs-by-meshing-theoretical-physics-with-genai",
+                  "date": "2024-12-10"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/aqemia/__izGruVjbEeIkXW4xZc5-3bqKsYIt1qUNNuJ5LDQ26ZA/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/funding_round/aqemia-series-a--57cd2925",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2024-12-10",
+              "id": "17c5d250-1fc4-4a2c-9354-03230919b52e"
+            }
+          },
+          {
+            "id": "202fac90-a76b-40b2-9ae8-f8969547df49",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/tucuvi/__yQiJieZ1zjklaIcdyu9_0pX_1l2rUKBber4mIJ7Xa7I/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/tucuvi/__yQiJieZ1zjklaIcdyu9_0pX_1l2rUKBber4mIJ7Xa7I",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/436813-75",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/tucuvi",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2026-01-08",
+              "id": "73f8a92e-a526-4a09-ad2e-f4c453613929"
+            }
+          },
+          {
+            "id": "25dac78e-6509-44ad-b10a-e1190a33c37b",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Crypto wallet company Ledger raises another $108 million | TechCrunch",
+                  "document": "https://techcrunch.com/2023/03/30/crypto-wallet-company-ledger-raises-another-108-million",
+                  "date": "2023-03-30"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/ledger/__XnvoT8aqZFxBAXNoB7Nz7tvkdptVRIaTcm2FIX_w-70",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2023-03-30",
+              "id": "a95d4f64-508f-4c44-9eeb-1b95ce1402e9"
+            }
+          },
+          {
+            "id": "33824b4a-4454-4151-9b69-e3b105058194",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Southeast Asia insurtech Igloo increases its Series B to $46M | TechCrunch",
+                  "document": "https://techcrunch.com/2022/11/28/igloo-series-b-extension",
+                  "date": "2022-11-28"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/igloo/__rzha72Fw5XKY7DB3iQSIvr1GuuX2ngx7jWVn0ibCx30/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2022-11-29",
+              "id": "fc61c753-bbd7-498b-bffe-0776c3ac6323"
+            }
+          },
+          {
+            "id": "34404231-68b8-418a-aaf1-458073b4eab1",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Finalcad, the mobile platform for the construction industry, raises $40M Series C | TechCrunch",
+                  "document": "https://techcrunch.com/2018/12/12/finalcad",
+                  "date": "2018-12-12"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/finalcad/__4DQvmbgt42jytqqYonkwCBXe2LrH0XgIkesZQpf3Jx0",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/finalcad/__4DQvmbgt42jytqqYonkwCBXe2LrH0XgIkesZQpf3Jx0/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2018-12-12",
+              "id": "d85ce497-83ec-4b26-9966-6d73e18cf18e"
+            }
+          },
+          {
+            "id": "42cb1686-3232-41cb-a320-2e759a0dbd02",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/nile/__qBD1a_PHu6uPYSDpMXLUogjH0dAnM68h1rtUAXNKH74/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "299565fc-f364-417e-b45c-bbf5d5cb9718"
+            }
+          },
+          {
+            "id": "44405b07-5c08-4ed0-8513-c17c687b062d",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "ZenBusiness snags $55M Series B for its incorporation and growth platform for micro businesses | TechCrunch",
+                  "document": "https://techcrunch.com/2020/11/19/zenbusiness-series-b",
+                  "date": "2020-11-19"
+                },
+                {
+                  "name": "The Briefing: SellerX Raises $118M, ZenBusiness Lands $55M, And More",
+                  "document": "https://news.crunchbase.com/venture/briefing-11-19-20",
+                  "date": "2020-11-19"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/zenbusiness/__mEHoPxfs8SRftmKviV7Ba5kKCMmAdOggrSegeL6vMz0/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2020-11-19",
+              "id": "f2f7840e-e1b1-4814-a241-3e068dd65511"
+            }
+          },
+          {
+            "id": "4b5d3a98-7227-4dfd-96cb-b660bb04f431",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/embat/__U9jK-4YRpbTUmyuPIclbHXdzAhwq12ZYGUejWW8IVBs/funding-and-investors",
+                  "date": "2026-07-28"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/samaipata/__EbTTkgNtiNBpqqSHOg5y19YV8fg7FIMfUCt6XNmTfAQ",
+                  "date": "2026-07-28"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/cathayinnovation/__wih0DGEsHfrTzlhcF-LOfzcQKuMWIfhriAGd0XsP-gE",
+                  "date": "2026-07-28"
+                }
+              ],
+              "event_date": "2026-05-12",
+              "id": "6d6cb1c3-90ea-46a1-8070-e0b8ce34e607"
+            }
+          },
+          {
+            "id": "4bf0ac04-0430-4d0c-b11b-2545cab38dd8",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "European on-demand delivery startup Glovo raises €30 million Series B | TechCrunch",
+                  "document": "https://techcrunch.com/2017/10/04/glovo-series-b",
+                  "date": "2017-10-04"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/glovo/__-2D9UfkDSWBfX0LNRAy7wkKbf3t2P_7oH-o1tHwmkzI/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2017-10-04",
+              "id": "9f980ab1-9040-43b5-88a4-c0fd6573b510"
+            }
+          },
+          {
+            "id": "59168477-d930-4658-a03c-2a87daebb6c3",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Spain's Payflow, a salary advance startup, banks $9.1M",
+                  "document": "https://techcrunch.com/2022/01/17/payflow-series-a",
+                  "date": "2022-01-17"
+                }
+              ],
+              "event_date": "2022-01-17",
+              "id": "da9fc7f6-cd47-4a64-8d37-aeac357be1b8"
+            }
+          },
+          {
+            "id": "591d2518-1b32-4e66-8ee0-f91c7370bd2e",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Terminal raises $17M led by 8VC to source and build remote teams of engineers | TechCrunch",
+                  "document": "https://techcrunch.com/2019/09/26/terminal-raises-17m-led-by-8vc-to-source-and-build-remote-teams-of-engineers",
+                  "date": "2019-09-26"
+                },
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/startups/remote-software-development-team-builder-terminal-raises-17m-series-b",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/terminal/__eM1o1SxY9QIKfPYIuJ4FhWMs13DloyOrkWLgdGRITUM",
+                  "date": "2026-07-29"
+                }
+              ],
+              "event_date": "2019-09-26",
+              "id": "1d810cdd-0764-40c7-bf83-9bd8443fd259"
+            }
+          },
+          {
+            "id": "5af76087-2189-46ba-8299-6016fec0c6dc",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Getaround raises a $140 million Series E amid rebound in short-distance travel | TechCrunch",
+                  "document": "https://techcrunch.com/2020/10/14/getaround-raises-a-140-million-series-e-amid-rebound-in-short-distance-travel",
+                  "date": "2020-10-14"
+                },
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/startups/getaround-funding-series-e",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/newsletter/getaround-speeds-off-with-140m-series-e",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2020-10-14",
+              "id": "a36180c6-6461-4bac-9b40-d5c1f960b2a5"
+            }
+          },
+          {
+            "id": "5c066a13-5900-4e07-98ce-2590e3746d08",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Heetch raises $38M to take on Uber in French-speaking countries | TechCrunch",
+                  "document": "https://techcrunch.com/2019/05/08/heetch-raises-38m-to-take-on-uber-in-french-speaking-countries",
+                  "date": "2019-05-08"
+                }
+              ],
+              "event_date": "2019-05-08",
+              "id": "2fb59408-6dcc-4bc2-b7f6-054074d1a3a7"
+            }
+          },
+          {
+            "id": "601854e6-e8d0-41af-85ef-58228281f068",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Terminal raises $17M led by 8VC to source and build remote teams of engineers | TechCrunch",
+                  "document": "https://techcrunch.com/2019/09/26/terminal-raises-17m-led-by-8vc-to-source-and-build-remote-teams-of-engineers",
+                  "date": "2019-09-26"
+                },
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/startups/remote-software-development-team-builder-terminal-raises-17m-series-b",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/terminal/__eM1o1SxY9QIKfPYIuJ4FhWMs13DloyOrkWLgdGRITUM",
+                  "date": "2026-07-29"
+                }
+              ],
+              "event_date": "2019-09-26",
+              "id": "7ed02a31-6df2-4d6f-909f-cfc7c543cd27"
+            }
+          },
+          {
+            "id": "69ddd28c-a9fa-4305-bc42-dd8080d8c78b",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Bioptimus raises $35 million seed round to develop AI foundational model focused on biology | TechCrunch",
+                  "document": "https://techcrunch.com/2024/02/20/bioptimus-raises-35-million-seed-round-to-develop-ai-foundational-model-focused-on-biology",
+                  "date": "2024-02-20"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/bioptimus/__J_MSyS4J0xheQaCCvAw6_TV_JnPzaqACMz37Ho_NH6Y",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/funding_round/bioptimus-seed--17761233",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2024-02-20",
+              "id": "7b7070c3-fb5a-4c2b-a7f3-d5391effdfd3"
+            }
+          },
+          {
+            "id": "6b3dfd88-c8e3-4b11-96b2-3354c0732c84",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Terminal raises $17M led by 8VC to source and build remote teams of engineers | TechCrunch",
+                  "document": "https://techcrunch.com/2019/09/26/terminal-raises-17m-led-by-8vc-to-source-and-build-remote-teams-of-engineers",
+                  "date": "2019-09-26"
+                },
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/startups/remote-software-development-team-builder-terminal-raises-17m-series-b",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/terminal/__eM1o1SxY9QIKfPYIuJ4FhWMs13DloyOrkWLgdGRITUM",
+                  "date": "2026-07-29"
+                }
+              ],
+              "event_date": "2019-09-26",
+              "id": "f11ec81d-ca03-43fc-b267-3d8eb0536b8f"
+            }
+          },
+          {
+            "id": "6fe3b482-d3aa-48a2-80bb-edc58e859382",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Cathay Innovation's first investment in Germany is healthcare startup Medwing | TechCrunch",
+                  "document": "https://techcrunch.com/2020/05/25/cathay-innovation-investment-in-german-healthcare-medwing",
+                  "date": "2020-05-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/medwing/__JVqwuJCeEvkmVY-d4W2OUjzAcY6ESDZOMs8GZn9bHzk",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/medwing/news_and_analysis",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2020-05-26",
+              "id": "b984c44e-2d09-492a-a979-06f538ad12e3"
+            }
+          }
+        ],
+        "HAS_HEADQUARTERS_IN": [
+          {
+            "id": "b6f57d8b-33dd-409a-9fbb-269947c54e23",
+            "name": "France",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/969500ISUB5AFUA69173",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "06251a3a-a764-5962-82c2-fdf344a6aab7"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "WORKS_AT": [
+          {
+            "id": "21e141a1-a3f2-5eb6-8441-21a3a1186d05",
+            "name": "Cai Mingpo",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Chairman",
+              "sources": [
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/people/mingpo-cai",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/people",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/philosophy",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/cathay-innovation-fund",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.cathaycapital.com",
+                  "document": "https://www.cathaycapital.com/cathay-innovation-closes-1b-vertical-ai-fund-to-power-europes-industry-transformation",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.cathaycapital.com",
+                  "document": "https://www.cathaycapital.com/record-fundraising-for-cathay-innovations-first-fund",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Why Cathay Innovation: Interviews, Careers, & Portfolio",
+                  "document": "https://growthequityinterviewguide.com/firms/cathay-innovation",
+                  "date": "2025-02-27"
+                }
+              ],
+              "id": "fac5b521-b787-46c7-8b2d-841487d7b44e"
+            }
+          },
+          {
+            "id": "4f67e2f4-1466-4b1e-91ea-df5985dc497c",
+            "name": "Denis Barrier",
+            "entity_type": "Person",
+            "properties": {
+              "role": "CEO",
+              "sources": [
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/people/denis-barrier",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/people",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/philosophy",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/cathay-innovation-fund",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.cathaycapital.com",
+                  "document": "https://www.cathaycapital.com/fr/equipe",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.cathaycapital.com",
+                  "document": "https://www.cathaycapital.com/record-fundraising-for-cathay-innovations-first-fund",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Cathay Innovation | LinkedIn",
+                  "document": "https://fr.linkedin.com/company/cathay-innovation",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.wsj.com",
+                  "document": "https://www.wsj.com/articles/cathay-innovation-reloads-with-a-1-billion-ai-focused-venture-fund-902aa2e6",
+                  "date": "2026-07-29"
+                }
+              ],
+              "id": "ef2c25b5-e8b0-4c51-872d-a79c47039a8c"
+            }
+          },
+          {
+            "id": "c75dfde8-5164-4513-8afb-63a7a4eaa3e8",
+            "name": "Jacky Abitbol",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Managing Partner",
+              "sources": [
+                {
+                  "name": "Jacky Abitbol - Cathay Innovation",
+                  "document": "https://www.mwcdoha.com/agenda/speakers/16518-jacky-abitbol",
+                  "date": "2025-05-23"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/person/jacky-abitbol",
+                  "date": "2026-05-12"
+                }
+              ],
+              "id": "94639d09-f616-5f01-84e7-b6a71b1dc402"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "7ca47922-bfba-4a24-a443-83ad666da4f5",
+            "name": "Benjamin Jacquard",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Operating Partner",
+              "sources": [
+                {
+                  "name": "Benjamin Jacquard Email & Phone Number | Cathay Innovation Operating Partner Contact Information",
+                  "document": "https://rocketreach.co/benjamin-jacquard-email_106471379",
+                  "date": "2026-01-01"
+                }
+              ],
+              "id": "1afbcf18-beb4-5f56-8586-072aea946eaa"
+            }
+          },
+          {
+            "id": "c75dfde8-5164-4513-8afb-63a7a4eaa3e8",
+            "name": "Jacky Abitbol",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Inicio - Webcapitalriesgo",
+                  "document": "https://www.webcapitalriesgo.com/cafler-cierra-una-ronda-de-e5m-liderada-por-seaya-acuden-tambien-bstartup-encomenda-didac-lee-rene-de-jong-y-jacky-abitbol",
+                  "date": "2026-05-12"
+                }
+              ],
+              "id": "520ed261-4d79-5cbe-8c05-d6c991162fd3"
+            }
+          },
+          {
+            "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+            "name": "Seaya Ventures",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/tag/seaya-ventures",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "03e26679-3cfe-56b3-9454-de140cb2502d"
+            }
+          }
+        ],
+        "FOUNDED": [
+          {
+            "id": "21e141a1-a3f2-5eb6-8441-21a3a1186d05",
+            "name": "Cai Mingpo",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/people/mingpo-cai",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/people",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/philosophy",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/cathay-innovation-fund",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.cathaycapital.com",
+                  "document": "https://www.cathaycapital.com/cathay-innovation-closes-1b-vertical-ai-fund-to-power-europes-industry-transformation",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.cathaycapital.com",
+                  "document": "https://www.cathaycapital.com/record-fundraising-for-cathay-innovations-first-fund",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Why Cathay Innovation: Interviews, Careers, & Portfolio",
+                  "document": "https://growthequityinterviewguide.com/firms/cathay-innovation",
+                  "date": "2025-02-27"
+                }
+              ],
+              "id": "8ed72db7-1876-4784-842b-ddbb826c2b2d"
+            }
+          },
+          {
+            "id": "4f67e2f4-1466-4b1e-91ea-df5985dc497c",
+            "name": "Denis Barrier",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/people/denis-barrier",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/people",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/philosophy",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/cathay-innovation-fund",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.cathaycapital.com",
+                  "document": "https://www.cathaycapital.com/fr/equipe",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.cathaycapital.com",
+                  "document": "https://www.cathaycapital.com/record-fundraising-for-cathay-innovations-first-fund",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Cathay Innovation | LinkedIn",
+                  "document": "https://fr.linkedin.com/company/cathay-innovation",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.wsj.com",
+                  "document": "https://www.wsj.com/articles/cathay-innovation-reloads-with-a-1-billion-ai-focused-venture-fund-902aa2e6",
+                  "date": "2026-07-29"
+                }
+              ],
+              "id": "0cb1b393-368e-4a0b-bdce-a7fb965f15bd"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "00005f80-7ee1-4de9-9417-4fda19c2e5ab",
+            "name": "Bioptimus",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Business Insider - Latest News in Tech, Markets, Economy & Innovation",
+                  "document": "http://www.businessinsider.com/bioptimus-new-ai-powered-bioscience-startup-raises-cash-top-funds-2024-2",
+                  "date": "2026-06-02"
+                },
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/bioptimus-raised-a-41m-series-a-led-by-cathay-innovation-joined-by-bpifrance-sofinnova-partners-andera-partners-hitachi-ventures-boom-capital-pomifer",
+                  "date": "2026-06-02"
+                }
+              ],
+              "id": "97b7183c-d9d2-5aa6-b99a-a24bd2805572"
+            }
+          },
+          {
+            "id": "01c0d729-be62-48e2-aeaf-313dfe311c61",
+            "name": "Abacum",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/jobandtalent-raised-a-92-million-series-f-with-atomico-blackrock-dn-capital-hercules-infravia-kibo-and-kinnevik",
+                  "date": "2026-06-24"
+                }
+              ],
+              "id": "1bef0bfc-37cf-5138-a914-8e2c7b48e302"
+            }
+          },
+          {
+            "id": "1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca",
+            "name": "Payflow",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/payflow-announced-closing-a-91-million-series-a-funding-round-co-led-by-seaya-ventures-cathay-innovation-and-entrepreneurs-fund",
+                  "date": "2026-07-21"
+                },
+                {
+                  "name": "EYE NEWSFLASH: Bruce brothers back in the game with surprise Purplebricks return",
+                  "document": "https://bebeez.eu/2024/07/24/barcelona-based-payflow-raises-e6-million-to-expand-flexible-salary-in-iberian-and-latam-markets",
+                  "date": "2026-07-21"
+                }
+              ],
+              "id": "52704833-222f-5b1b-a750-4afe409341fa"
+            }
+          },
+          {
+            "id": "1ffc7330-0716-4a23-8f02-581209fc0e60",
+            "name": "L OREAL S A",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.cathaycapital.com",
+                  "document": "https://www.cathaycapital.com/loreal-invests-in-global-venture-capital-fund-cathay-innovation-to-develop-beauty-tech-startups-in-china",
+                  "date": "2026-06-08"
+                }
+              ],
+              "id": "88b10789-ccd4-5ed1-8afd-0bb2a2bb2f77",
+              "valid_since": "2019-10-24"
+            }
+          },
+          {
+            "id": "2102bd9c-8835-4cbe-8d34-1999d874ebc8",
+            "name": "ABACUM PLANNING S.L. (SOCIEDAD UNIPERSONAL)",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startup Rise EU - European Startup News | Funding | Startup Insights",
+                  "document": "https://startuprise.co.uk/barcelona-based-abacum-secures-over-e50-million-in-series-b-round",
+                  "date": "2026-06-20"
+                }
+              ],
+              "id": "725d6264-72c8-5a23-b1a2-2d993d5960c5"
+            }
+          },
+          {
+            "id": "2448ce87-71ca-43c2-912e-6fd06057ced6",
+            "name": "Embat",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/fracttal-raised-a-35-million-round-led-by-riverwood-capital-with-seaya-ventures-kayyak-gohub-and-amador",
+                  "date": "2026-06-19"
+                }
+              ],
+              "id": "f33f5ed3-417d-51a6-b70f-1bc473ad04d2"
+            }
+          },
+          {
+            "id": "3105fdbe-e3c9-4019-bc71-7c89d36f4d84",
+            "name": "EMBAT TECHNOLOGIES SL",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Pulse 2.0",
+                  "document": "https://pulse2.com/artificial-intelligence/page/23",
+                  "date": "2026-07-26"
+                }
+              ],
+              "id": "f7fbf401-20cf-57b7-96aa-4064e4debdb5"
+            }
+          },
+          {
+            "id": "4ab534d2-5769-4f47-8ba8-d7295835b5e6",
+            "name": "L OREAL                                                 /FI",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/category/news/page/17",
+                  "date": "2026-06-29"
+                },
+                {
+                  "name": "www.cathaycapital.com",
+                  "document": "https://www.cathaycapital.com/loreal-invests-in-global-venture-capital-fund-cathay-innovation-to-develop-beauty-tech-startups-in-china",
+                  "date": "2026-06-29"
+                }
+              ],
+              "id": "f153e677-8a2f-570a-88ea-70889753815e",
+              "valid_since": "2019-10-23"
+            }
+          },
+          {
+            "id": "57dcbb4a-e060-42b3-9f16-d1b96372ef9b",
+            "name": "Tucuvi",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/jobandtalent-secured-42-million-in-series-b-investment-round-led-by-atomico-news8155825230",
+                  "date": "2026-08-28"
+                },
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/category/investments",
+                  "date": "2026-08-28"
+                }
+              ],
+              "id": "58b2fd48-ae5e-5931-9c06-b8d607ef0a9b"
+            }
+          },
+          {
+            "id": "5c0fcdcd-67fe-4fea-a782-35afdc5504d4",
+            "name": "Savana Médica",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "siliconcanals.com",
+                  "document": "https://siliconcanals.com/healthcare-savana-raises-12-8m",
+                  "date": "2026-06-12"
+                },
+                {
+                  "name": "Tech.eu - European Startup, Funding and Technology News",
+                  "document": "https://tech.eu/2022/04/05/savana-gets-25-million-booster-to-make-clinical-research-faster-and-more-powerful",
+                  "date": "2026-06-12"
+                }
+              ],
+              "id": "8b6f2176-465f-50a9-a883-1539ac5ca342"
+            }
+          },
+          {
+            "id": "5d71f10c-423f-4efb-9abf-2d9466a21607",
+            "name": "Tucuvi",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/tucuvi-raised-20-million-in-series-a-funding-co-led-by-cathay-innovation-and-leadwind-joined-by-frontline-ventures-seaya-ventures-and-shilling",
+                  "date": "2026-06-30"
+                },
+                {
+                  "name": "app.fundz.net",
+                  "document": "https://app.fundz.net/fundings/tucuvi-funding-round-series-a-fb0861",
+                  "date": "2026-06-30"
+                }
+              ],
+              "id": "10ee5cbb-5352-5ccc-8d47-099fae489195"
+            }
+          },
+          {
+            "id": "660b62ff-6886-4f0c-a860-da7cba810e57",
+            "name": "Aqemia",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/aqemia-hits-100-million-funding-milestone-paving-way-to-clinical-trials-and-global-expansion-starting-with-london-uk",
+                  "date": "2026-06-02"
+                },
+                {
+                  "name": "Maginative",
+                  "document": "https://www.maginative.com/article/aqemia-raises-38-million-to-propel-quantum-powered-ai-drug-discovery",
+                  "date": "2026-06-02"
+                }
+              ],
+              "id": "959624cc-750f-5ce3-b8c3-74f3de84456a"
+            }
+          },
+          {
+            "id": "74bd652d-b5e9-438b-b76f-7e6dcfce36c5",
+            "name": "TCA GLOVO SL",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/european-on-demand-delivery-startup-glovo-raises-e30-million-series-b",
+                  "date": "2026-07-14"
+                }
+              ],
+              "id": "2748b31e-629a-5952-ad3d-a5ae4043191e"
+            }
+          },
+          {
+            "id": "8296d62a-fae3-4041-9ddc-e490722aada1",
+            "name": "Payflow",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startup Rise EU - European Startup News | Funding | Startup Insights",
+                  "document": "https://startuprise.co.uk/top-funding-wrap-of-the-week-february-10-14-2025",
+                  "date": "2026-06-13"
+                }
+              ],
+              "id": "64041b48-b470-566f-a0cc-7f6d54a987be"
+            }
+          },
+          {
+            "id": "8ecb289d-6c04-4fb9-ab08-a007c5ef9fa6",
+            "name": "Tucuvi",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/category/investments",
+                  "date": "2026-07-10"
+                }
+              ],
+              "id": "5b7e09e2-d093-5e1d-a2e8-46a844994ca4"
+            }
+          },
+          {
+            "id": "928f810a-2bf8-4a87-8fb7-7e4873e6adf7",
+            "name": "Savana",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Home",
+                  "document": "http://www.mobihealthnews.com/news/98point6s-118m-series-e-text-based-primary-care-savanas-15m-series-b-free-text-extraction-and",
+                  "date": "2026-06-10"
+                }
+              ],
+              "id": "d3b79d55-395c-5097-b91b-8a49e07ea8f6"
+            }
+          },
+          {
+            "id": "94760486-f84a-4d16-8efb-54cb3ba194b9",
+            "name": "Tucuvi",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/abacum-raised-25-million-in-a-series-a-round-led-by-atomico",
+                  "date": "2026-06-07"
+                }
+              ],
+              "id": "da414bf1-3532-5257-aaf2-4b3f19b4e3c9"
+            }
+          },
+          {
+            "id": "b595161d-1507-475f-b8a5-30e0427049fe",
+            "name": "Tucuvi",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/jobandtalent-secured-42-million-in-series-b-investment-round-led-by-atomico-news8155825230",
+                  "date": "2026-08-09"
+                }
+              ],
+              "id": "b5bdb26f-4099-5b1a-a52a-adb738195296"
+            }
+          },
+          {
+            "id": "bfcd3b17-8e15-4a0b-aa79-2cbded0456df",
+            "name": "Glovo",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/explore/gig-economy-startups-in-barcelona-spain/__pd61S0Qh_0rvgbSQQgAHUrp0WrGSMpKWSnCIolv2OSI/companies",
+                  "date": "2026-06-02"
+                }
+              ],
+              "id": "380b8faa-844a-542d-976e-87dd16106823"
+            }
+          },
+          {
+            "id": "c7a1ff6f-d18c-4931-8efe-7d94ad79c980",
+            "name": "Tucuvi",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/maisa-raised-25m-in-seed-funding-led-by-creandum-joined-by-forgepoint-capital-nfx-and-village-global",
+                  "date": "2026-08-04"
+                }
+              ],
+              "id": "08c7ad41-4d89-53b4-bd63-4b218c3a7ee1"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

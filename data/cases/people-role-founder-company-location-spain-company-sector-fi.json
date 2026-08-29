@@ -1,0 +1,224 @@
+{
+  "version": 1,
+  "query": "people.role=founder.company.location=Spain.company.sector=fintech",
+  "slug": "people-role-founder-company-location-spain-company-sector-fi",
+  "generatedAt": "2026-08-29T13:18:21.178Z",
+  "model": "gpt-5.6-sol",
+  "calls": 23,
+  "question": "¿Los fundadores de fintech españolas convergen en equipos compartidos o cada trayectoria lleva a una empresa distinta?",
+  "subtitle": "Nueve fundadores del ecosistema español; al abrir sus trayectorias aparecen equipos compartidos, entidades duplicadas y recorridos propios.",
+  "openVerb": {
+    "relation": "FOUNDED",
+    "label": "trayectoria fundadora",
+    "noun": "fundación"
+  },
+  "ring": [
+    {
+      "id": "4d88d901-99ba-4288-bc95-da57af261d8e",
+      "name": "Antonio Berga",
+      "role": "protagonista",
+      "subtitle": "Cofundador de Embat; forma parte del cruce triple más nítido del caso."
+    },
+    {
+      "id": "7356d084-9897-4bb0-8c55-6bb3237ddbf5",
+      "name": "Carlos Serrano García‑Lisón",
+      "role": "protagonista",
+      "subtitle": "Cofundador y CEO de Embat; su trayectoria conduce al mismo nodo que las de Berga y Gil."
+    },
+    {
+      "id": "392a1caf-1601-436f-b3a5-4fa178c94033",
+      "name": "Tomás Gil",
+      "role": "protagonista",
+      "subtitle": "Cofundador y CTO de Embat; completa el cruce de tres fundadores."
+    },
+    {
+      "id": "8a71f6a5-eaa4-4b3a-bdf6-ff64e4b2754b",
+      "name": "Jordi Romero",
+      "role": "protagonista",
+      "subtitle": "Fundador y CEO de Factorial; también fundó Itnig Capital."
+    },
+    {
+      "id": "249d899e-500f-4d00-904f-8622a99757d8",
+      "name": "Bernat Farrero",
+      "role": "protagonista",
+      "subtitle": "Cofundador de Factorial; comparte con Jordi Romero el nodo canónico de la empresa."
+    },
+    {
+      "id": "862e0204-ef41-4829-ba5b-bf8e7092dbb8",
+      "name": "Pau Ramon",
+      "role": "protagonista",
+      "subtitle": "Cofundador asociado a Factorial, aunque su hilo apunta a la razón social EVERYDAY SOFTWARE bajo otro UUID."
+    },
+    {
+      "id": "a118f91e-7a0f-41a6-8f8d-7afb668bad48",
+      "name": "Guillermo Vicandi",
+      "role": "protagonista",
+      "subtitle": "Fundador de Bnext; sostiene un cruce exacto con Juan Antonio Rullán."
+    },
+    {
+      "id": "0d962017-df40-4a78-b669-0e54a4fb1cc3",
+      "name": "Juan Antonio Rullán de la Mata",
+      "role": "protagonista",
+      "subtitle": "Cofundador y perfil tecnológico de Bnext; comparte el mismo nodo con Vicandi."
+    },
+    {
+      "id": "da9f151e-19e6-419c-8ca3-426bc2369e45",
+      "name": "Sergio Chalbaud",
+      "role": "protagonista",
+      "subtitle": "Cofundador y CEO de Fintonic; aporta el contraste de una trayectoria sin cruce visible en este reparto."
+    }
+  ],
+  "headline": {
+    "bridge": "EMBAT TECHNOLOGIES SL",
+    "why": "Es el cruce más legible: aparece con el mismo UUID al abrir las trayectorias de tres protagonistas, mientras que Factorial y Bnext producen cruces de solo dos."
+  },
+  "bridges": [
+    {
+      "name": "EMBAT TECHNOLOGIES SL",
+      "id": "3105fdbe-e3c9-4019-bc71-7c89d36f4d84",
+      "holders": [
+        "Antonio Berga",
+        "Carlos Serrano García‑Lisón",
+        "Tomás Gil"
+      ],
+      "verified": true
+    },
+    {
+      "name": "Factorial",
+      "id": "d108a1a5-d9cc-42f8-87f4-3872b111c5a5",
+      "holders": [
+        "Jordi Romero",
+        "Bernat Farrero"
+      ],
+      "verified": true
+    },
+    {
+      "name": "Bnext",
+      "id": "2f74845b-c378-4c9e-9d3f-785b86940def",
+      "holders": [
+        "Guillermo Vicandi",
+        "Juan Antonio Rullán de la Mata"
+      ],
+      "verified": true
+    }
+  ],
+  "cover": [
+    {
+      "label": "Rol y empresa",
+      "fields": [
+        "description"
+      ],
+      "fallback": "sin rol o empresa documentados"
+    },
+    {
+      "label": "Perfil profesional",
+      "fields": [
+        "linkedin_url",
+        "personal_website",
+        "github_url"
+      ],
+      "fallback": "sin perfil profesional conocido"
+    },
+    {
+      "label": "Otros nombres",
+      "fields": [
+        "aliases"
+      ],
+      "fallback": "sin otros nombres conocidos"
+    }
+  ],
+  "back": {
+    "fields": [
+      "description",
+      "place_of_birth",
+      "aliases",
+      "linkedin_url",
+      "personal_website",
+      "github_url"
+    ],
+    "hint": "La trayectoria completa: funciones, empresas vinculadas, origen documentado y perfiles públicos."
+  },
+  "nouns": [
+    {
+      "type": "FOUNDED",
+      "noun": "fundación"
+    },
+    {
+      "type": "FEATURED_IN",
+      "noun": "aparición en medios"
+    },
+    {
+      "type": "WORKS_AT",
+      "noun": "vínculo laboral"
+    },
+    {
+      "type": "RECEIVED_AWARD",
+      "noun": "premio"
+    },
+    {
+      "type": "STUDIED_AT",
+      "noun": "estudios"
+    },
+    {
+      "type": "HAS_NATIONALITY",
+      "noun": "nacionalidad"
+    },
+    {
+      "type": "DESIGNED_BY",
+      "noun": "diseño"
+    },
+    {
+      "type": "CREATED_BY",
+      "noun": "creación"
+    },
+    {
+      "type": "IS_COO_OF",
+      "noun": "dirección de operaciones"
+    },
+    {
+      "type": "IS_CFO_OF",
+      "noun": "dirección financiera"
+    },
+    {
+      "type": "IS_CEO_OF",
+      "noun": "dirección ejecutiva"
+    },
+    {
+      "type": "IS_MEMBER_OF",
+      "noun": "membresía"
+    },
+    {
+      "type": "IS_CTO_OF",
+      "noun": "dirección tecnológica"
+    },
+    {
+      "type": "IS_VICEPRESIDENT_OF",
+      "noun": "vicepresidencia"
+    },
+    {
+      "type": "SPOKE_AT",
+      "noun": "ponencia"
+    },
+    {
+      "type": "IS_CRO_OF",
+      "noun": "dirección de ingresos"
+    },
+    {
+      "type": "INVESTED_IN",
+      "noun": "inversión"
+    },
+    {
+      "type": "IS_BOARD_MEMBER_OF",
+      "noun": "consejo de administración"
+    },
+    {
+      "type": "IS_EXECUTIVE_OF",
+      "noun": "cargo ejecutivo"
+    }
+  ],
+  "finding": {
+    "template": "{holders} comparten una fundación: {target}.",
+    "toast": "Cruce encontrado: {target} aparece en las trayectorias de {holders}."
+  },
+  "notes": "La consulta devolvió once personas, pero el anillo admite como máximo nueve. Se priorizaron los tres equipos que producen cruces visibles y se conservó a Sergio Chalbaud como contraste sin solape. Benoît Menardo y Avinash Sukhwani quedaron fuera: Payflow aparece en FOUNDED para Menardo, pero la ficha de Sukhwani solo expone IS_BOARD_MEMBER_OF e IS_EXECUTIVE_OF; por tanto, el cruce no puede verse desde ambas carteras. Factorial presenta una duplicación relevante: Bernat Farrero y Jordi Romero apuntan al mismo UUID canónico de Factorial, mientras que Pau Ramon apunta a EVERYDAY SOFTWARE, S.L., probablemente su razón social, bajo otro UUID; no se contó a Pau como sostén del puente porque el tablón no produciría el cruce exacto. Fintonic aparece en la trayectoria de Sergio Chalbaud, junto con Senior Expert, pero ninguna otra ficha del reparto devuelve esos nodos. Los cruces de Embat, Factorial y Bnext se comprobaron tirando de FOUNDED en todos los titulares indicados."
+}

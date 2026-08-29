@@ -1,0 +1,312 @@
+{
+  "id": "463bf2e2-a1f7-4d0a-b5f0-afa60379995c",
+  "name": "Inveready Technology Investment Group",
+  "introspection": {
+    "properties": [
+      "description",
+      "id",
+      "name",
+      "registered_address",
+      "employee_count",
+      "website"
+    ],
+    "relationships": {
+      "outgoing": [
+        "INVESTED_IN",
+        "IS_MEMBER_OF",
+        "OPERATES_IN_INDUSTRY"
+      ],
+      "incoming": [
+        "WORKS_AT",
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "463bf2e2-a1f7-4d0a-b5f0-afa60379995c",
+    "name": "Inveready Technology Investment Group",
+    "entity_type": "Organization",
+    "description": "a technology investment group",
+    "properties": {
+      "name": {
+        "value": "Inveready Technology Investment Group",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-06-21"
+          }
+        ]
+      },
+      "description": {
+        "value": "a technology investment group",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-04"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "INVESTED_IN": [
+          {
+            "id": "12e3d6ea-316f-4718-8d32-3a3bfabc0151",
+            "name": "Habyt",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "capital-riesgo.es",
+                  "document": "https://capital-riesgo.es/en/articles?category=private-equity-investors-in-internet-ai-technology-companies-and-deep-tech&p=56",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "684900a9-5ed6-555f-be5f-e6c746458dd0"
+            }
+          },
+          {
+            "id": "2d06d820-5f25-4c06-a0da-3b71888d487c",
+            "name": "SAMY Alliance",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "CB Insights — Predictive Intelligence on Private Companies",
+                  "document": "https://www.cbinsights.com/company/samy-alliance/financials",
+                  "date": "2026-08-26"
+                },
+                {
+                  "name": "Bridgepoint Corporate2022",
+                  "document": "https://www.bridgepoint.eu/about-us/news-and-insights/press-releases/2023/bridgepoint-takes-a-stake-in-samy-alliance-alongside-aurica-capital",
+                  "date": "2026-08-26"
+                },
+                {
+                  "name": "iberianlawyer.com",
+                  "document": "https://iberianlawyer.com/uria-menendez-advises-on-the-acquisition-of-a-minority-stake-of-samy-road",
+                  "date": "2026-08-26"
+                },
+                {
+                  "name": "Reason Why",
+                  "document": "https://reasonwhy.es/actualidad/samy-alliance-liderazgo-social-media-marketing-bridgepoint-accionista-mayoritario",
+                  "date": "2026-08-26"
+                }
+              ],
+              "id": "16a50e71-32d0-5046-8b7e-13d58d639263"
+            }
+          },
+          {
+            "id": "325d22b8-f25e-4a8a-a46e-fb2dd4bfe566",
+            "name": "VINIEXPORT S.R.L. IN LIQUIDAZIONE",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "EYE NEWSFLASH: Bruce brothers back in the game with surprise Purplebricks return",
+                  "document": "https://bebeez.eu/2018/08/06/italys-crowdinvesting-angels-incubators-and-venture-capital-pre-summertime-roundup-news-from-sorgente-samaipata-inveready",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "5756f664-a54d-51e5-a31f-353b121de9d8"
+            }
+          },
+          {
+            "id": "38a4374a-4867-4579-afe2-9233cce483c6",
+            "name": "Samy for Brands",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/companies/samy-for-brands/__5Dpg32wM-Nmn8LzEmfkEPEySjo12REhaE1BQQjAolvo",
+                  "date": "2026-08-26"
+                }
+              ],
+              "id": "161c26c6-793d-5143-8806-362c2f3931f5"
+            }
+          },
+          {
+            "id": "eefad00e-b2f8-4503-bf56-e84e495a92fb",
+            "name": "GAMELEARN SL",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Inicio - Webcapitalriesgo",
+                  "document": "https://www.webcapitalriesgo.com/gamelearn-cierra-una-ronda-serie-a-de-5m-e43m-acuden-kibo-ventures-oak3capital-all-iron-ventures-ul-invest-e-inveready",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "ce895195-717f-539a-b5c3-34229170d49e"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "98b1e3f1-c781-4216-978c-d1c018e6929c",
+            "name": "Catalonia.health",
+            "entity_type": "Organization",
+            "properties": {
+              "role": "member",
+              "sources": [
+                {
+                  "name": "Inveready surpasses the 500 million euros raised with its second private equity fund and validates its first investment with the purchase of Avatel",
+                  "document": "https://catalonia.health/news/inveready-supera-els-500-milions-deuros-captats-amb-el-seu-segon-fons-de-private-equity-i-tanca-la-seva-primera-inversio-amb-la-compra-davatel?lang=en",
+                  "date": "2025-06-23"
+                },
+                {
+                  "name": "Qui som",
+                  "document": "https://catalonia.health/about-catalonia-health",
+                  "date": "2026-01-01"
+                }
+              ],
+              "id": "9dd22bdd-f106-5c9b-a2b1-0c13c53a0afa"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "21774ccd-d5c5-4fa2-8ed1-ac3d20b46339",
+            "name": "PRIVATE_EQUITY",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Meet the team — Inveready",
+                  "document": "https://inveready.com/about/team",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "306ec8b2-9f6d-584e-83e9-f8efd46d0356"
+            }
+          },
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Inicio - Webcapitalriesgo",
+                  "document": "https://www.webcapitalriesgo.com/gamelearn-cierra-una-ronda-serie-a-de-5m-e43m-acuden-kibo-ventures-oak3capital-all-iron-ventures-ul-invest-e-inveready",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "7b7d1b6d-3f32-51c7-8bd5-5eeee7a7d605"
+            }
+          },
+          {
+            "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+            "name": "VENTURE_CAPITAL",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Inveready Technology Investment Group",
+                  "document": "https://serveisperemprendre.gencat.cat/serveis-per-emprendre/en/institution/barcelona/inveready-technology-investment-group-1",
+                  "date": "2026-08-26"
+                },
+                {
+                  "name": "Inveready",
+                  "document": "https://mtec-sc.org/life-sciences/inveready",
+                  "date": "2025-02-13"
+                }
+              ],
+              "id": "4dc9412a-ae66-587b-bf67-e952f3b4c74a"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "WORKS_AT": [
+          {
+            "id": "1a108dbb-f10c-4cd4-88b7-372aa8aae442",
+            "name": "Carlos Conti",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "bloomberg.com",
+                  "document": "https://www.bloomberg.com/profile/person/19068826",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "Signal",
+                  "document": "https://signal.nfx.com/investors/carlos-conti",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "1767c0ef-6d2b-5b2a-9e3e-da4011d866fc"
+            }
+          },
+          {
+            "id": "3d296c9e-c3da-4e2e-9b3e-e2a57410c881",
+            "name": "Sara Secall",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Signal",
+                  "document": "https://signal.nfx.com/investors/sara-secall",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "985d77d6-0a00-587d-a96e-db193992bbd8"
+            }
+          },
+          {
+            "id": "4c8cbba0-5548-439a-831b-c23ed073c2fa",
+            "name": "Alexandre Bartolini",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Signal",
+                  "document": "https://signal.nfx.com/investors/sara-secall",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "11b00ae7-73e8-574b-9db5-700086654f30"
+            }
+          },
+          {
+            "id": "91f6c02c-8be2-4654-b1d2-4c66b64d1d47",
+            "name": "Ignacio Puig Masllorens",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Signal",
+                  "document": "https://signal.nfx.com/investors/ignacio-puig-masllorens",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "60fc8c13-718f-538d-a297-ed552742f4de"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "2d06d820-5f25-4c06-a0da-3b71888d487c",
+            "name": "SAMY Alliance",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Bridgepoint Corporate2022",
+                  "document": "https://www.bridgepoint.eu/about-us/news-and-insights/press-releases/2023/bridgepoint-takes-a-stake-in-samy-alliance-alongside-aurica-capital",
+                  "date": "2026-08-26"
+                }
+              ],
+              "id": "a143afd4-4797-5c0d-b4b6-32c95869ba89"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

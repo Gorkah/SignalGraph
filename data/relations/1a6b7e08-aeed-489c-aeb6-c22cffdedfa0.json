@@ -1,0 +1,555 @@
+{
+  "id": "1a6b7e08-aeed-489c-aeb6-c22cffdedfa0",
+  "name": "TELEFONICA SA",
+  "introspection": {
+    "properties": [
+      "aliases",
+      "description",
+      "id",
+      "name"
+    ],
+    "relationships": {
+      "outgoing": [
+        "PARTICIPATES_IN_CORPORATE_EVENT",
+        "INVESTED_IN"
+      ],
+      "incoming": [
+        "IS_MEMBER_OF",
+        "IS_BENEFICIARY_OWNER_OF",
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "1a6b7e08-aeed-489c-aeb6-c22cffdedfa0",
+    "name": "TELEFONICA SA",
+    "entity_type": "Company",
+    "description": "Spanish multinational telecommunications company",
+    "properties": {
+      "name": {
+        "value": "TELEFONICA SA",
+        "sources": [
+          {
+            "name": "SEC",
+            "document": "https://www.sec.gov/Archives/edgar/data/1364742/000083423720006779/es0178430e18_020520.txt",
+            "date": "2020-02-06"
+          }
+        ]
+      },
+      "description": {
+        "value": "Spanish multinational telecommunications company",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-04"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "161e58e5-147d-4344-97a2-f2889afe63dd",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Raylo raises $136M to build out its gadget lease-and-reuse 'fintech' platform | TechCrunch",
+                  "document": "https://techcrunch.com/2023/01/30/raylo-raises-136m-to-build-out-its-gadget-lease-and-reuse-fintech-platform",
+                  "date": "2023-01-30"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/raylo/__bXctEGZkpjYnlaereZnP22S50yw99pYA9k7VvPA7gmQ/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2023-01-30",
+              "id": "c5345ac3-f834-4ec8-9b43-b6231f596365"
+            }
+          },
+          {
+            "id": "2c043435-d623-4ba8-b5d0-bb713ec74bc1",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/amobee/__u27w1U4Amgx-IGRPzhCURS22rSmNJ6M1j92kFgzsZok/funding-and-investors",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/amobee/__u27w1U4Amgx-IGRPzhCURS22rSmNJ6M1j92kFgzsZok",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2007-11-28",
+              "id": "60932cf9-125d-4bbb-92f6-8f220c2772b9"
+            }
+          },
+          {
+            "id": "5966543c-0aec-4430-b0c2-18ec8e459c89",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Telefónica strengthens its alliance with Pontegadea to increase its stake in Telxius Telecom’s submarine cable infrastructure - Telxius",
+                  "document": "https://telxius.com/en/telefonica-strengthens-its-alliance-with-pontegadea",
+                  "date": "2022-02-02"
+                },
+                {
+                  "name": "Telefónica strengthens its alliance with Pontegadea to increase its stake in Telxius Telecom’s submarine cable infrastructure",
+                  "document": "https://www.telefonica.com/en/communication-room/press-room/telefonica-strengthens-its-alliance-with-pontegadea-to-increase-its-stake-in-telxius-telecoms-submarine-cable-infrastructure",
+                  "date": "2022-02-01"
+                },
+                {
+                  "name": "Telxius: Telefónica and Pontegadea Buy KKR’s 40% Stake for €215.7m",
+                  "document": "https://dgtlinfra.com/telxius-telecom-telefonica-pontegadea-kkr",
+                  "date": "2022-02-02"
+                },
+                {
+                  "name": "en.wikipedia.org",
+                  "document": "https://en.wikipedia.org/wiki/Telxius",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2022-02-02",
+              "id": "e5f87711-84af-49e5-8016-81b922dbaeec"
+            }
+          },
+          {
+            "id": "6ea968fc-fb2d-47d2-9293-87d6f695b43d",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Monogoto, an innovator in ‘connectivity as a service,’ raises $27M | TechCrunch",
+                  "document": "https://techcrunch.com/2024/10/15/monogoto-an-innovator-in-connectivity-as-a-service-raises-27m",
+                  "date": "2024-10-15"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/monogoto/__O-i1SjEDCRqI5ltSYAEWXND3norup1bI0J3uRI8ajd8/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2024-10-15",
+              "id": "636142f4-17fa-41e5-9a67-22d53d5eddfb"
+            }
+          },
+          {
+            "id": "82803fc4-aa54-4fa9-8b55-68215f20b976",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Telefónica creates Telxius, a global telecommunications infrastructure company",
+                  "document": "https://www.telefonica.com/en/communication-room/press-room/telefonica-creates-telxius-a-global-telecommunications-infrastructure-company",
+                  "date": "2016-02-10"
+                },
+                {
+                  "name": "Telefónica creates Telxius, a global telecommunications infrastructure company - Telxius",
+                  "document": "https://telxius.com/en/telefonica-creates-telxius",
+                  "date": "2016-02-10"
+                },
+                {
+                  "name": "en.wikipedia.org",
+                  "document": "https://en.wikipedia.org/wiki/Telxius",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2016-02-10",
+              "id": "bf77c766-7d8f-47c8-a6ee-7e1c27ecfeb7"
+            }
+          },
+          {
+            "id": "a6e53263-2e5b-4f3a-a5b4-baf96ba72b8b",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "en.wikipedia.org",
+                  "document": "https://en.wikipedia.org/wiki/Orange_Morocco",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "documents1.worldbank.org",
+                  "document": "https://documents1.worldbank.org/curated/en/732191468758119342/pdf/19930-Replacement-file-199WELLE.pdf",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "allafrica.com",
+                  "document": "https://allafrica.com/stories/199912270006.html",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.imf.org",
+                  "document": "https://www.imf.org/external/pubs/ft/scr/2001/cr01205.pdf",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "1999-08-02",
+              "id": "b24d99dd-3ec7-4cd3-83b9-3e28c2d9559e"
+            }
+          },
+          {
+            "id": "de735947-994a-4d29-bb1f-42a68b93a777",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/valerann/__zTELihqq3ZFhWq3kkMfq3wV_vZY7BLW8srzH-xE7USw",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2018-12-21",
+              "id": "6b163240-471e-47a0-89c4-d4c1190d7f2a"
+            }
+          },
+          {
+            "id": "e3d09deb-9f65-4741-b7b6-5ff56db1e071",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/flexiwan/__YRWrdZn9UDgQbWfIEiw5pFZ-s2uW0r3nIXgAYq24LEQ",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/flexiwan/__YRWrdZn9UDgQbWfIEiw5pFZ-s2uW0r3nIXgAYq24LEQ/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2019-12-01",
+              "id": "1e741f75-b790-412c-99ad-420754614725"
+            }
+          },
+          {
+            "id": "edc659dd-9d69-40b0-ba83-0366621dd821",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "es.wikipedia.org",
+                  "document": "https://es.wikipedia.org/wiki/Ol%C3%A9_(buscador)",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "en.wikipedia.org",
+                  "document": "https://en.wikipedia.org/wiki/Ol%C3%A9_(search_engine)",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "Olé era el tercer buscador más visitado de España cuando la FCR lo vendió por 200.000 pesetas",
+                  "document": "https://elpais.com/diario/2001/05/23/catalunya/990580043_850215.html",
+                  "date": "2001-05-23"
+                },
+                {
+                  "name": "¡Olé! - 129 | CRODOC 2022. Cronología de la Documentación Española",
+                  "document": "https://www.crodoc.es/ficha129",
+                  "date": "1999-11-04"
+                },
+                {
+                  "name": "Pep Vallés, de cibermillonario a atrapado en la OPA sobre Terra",
+                  "document": "https://www.lavanguardia.com/internet/20030630/51262777455/pep-valles-de-cibermillonario-a-atrapado-en-la-opa-sobre-terra.html",
+                  "date": "2003-06-30"
+                },
+                {
+                  "name": "parceladigital.com",
+                  "document": "https://parceladigital.com/articulo/ole-el-primer-buscador-en-castellano-y-el-primer-gran-pelotazo-espanol-en-internet",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "1999-03-10",
+              "id": "8c94f842-ab60-4e0a-92a9-395aaa5fd16d"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "3f7ad5f6-cc3b-4c19-8943-7c410239ed9f",
+            "name": "Amobee",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/amobee/__u27w1U4Amgx-IGRPzhCURS22rSmNJ6M1j92kFgzsZok/funding-and-investors",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/amobee/__u27w1U4Amgx-IGRPzhCURS22rSmNJ6M1j92kFgzsZok",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "ce994d93-5292-4250-9730-b37d34c733e7"
+            }
+          },
+          {
+            "id": "5039a4a1-24a3-4f0e-9f9d-0b1b5ed4abd2",
+            "name": "TELXIUS TELECOM S.A.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Telefónica creates Telxius, a global telecommunications infrastructure company",
+                  "document": "https://www.telefonica.com/en/communication-room/press-room/telefonica-creates-telxius-a-global-telecommunications-infrastructure-company",
+                  "date": "2016-02-10"
+                },
+                {
+                  "name": "Telefónica creates Telxius, a global telecommunications infrastructure company - Telxius",
+                  "document": "https://telxius.com/en/telefonica-creates-telxius",
+                  "date": "2016-02-10"
+                },
+                {
+                  "name": "en.wikipedia.org",
+                  "document": "https://en.wikipedia.org/wiki/Telxius",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "b15ecb02-0110-4b76-a511-516583c5c705"
+            }
+          },
+          {
+            "id": "80583d4e-fa59-47a4-956c-e425b7c98de5",
+            "name": "Monogoto",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Monogoto, an innovator in ‘connectivity as a service,’ raises $27M | TechCrunch",
+                  "document": "https://techcrunch.com/2024/10/15/monogoto-an-innovator-in-connectivity-as-a-service-raises-27m",
+                  "date": "2024-10-15"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/monogoto/__O-i1SjEDCRqI5ltSYAEWXND3norup1bI0J3uRI8ajd8/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "fe0f888e-dfb3-48ae-880b-d1db9534905e"
+            }
+          },
+          {
+            "id": "bd8eeaad-7409-4c32-8ca6-c6addc68a8fa",
+            "name": "Olé",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "es.wikipedia.org",
+                  "document": "https://es.wikipedia.org/wiki/Ol%C3%A9_(buscador)",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "en.wikipedia.org",
+                  "document": "https://en.wikipedia.org/wiki/Ol%C3%A9_(search_engine)",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "Olé era el tercer buscador más visitado de España cuando la FCR lo vendió por 200.000 pesetas",
+                  "document": "https://elpais.com/diario/2001/05/23/catalunya/990580043_850215.html",
+                  "date": "2001-05-23"
+                },
+                {
+                  "name": "¡Olé! - 129 | CRODOC 2022. Cronología de la Documentación Española",
+                  "document": "https://www.crodoc.es/ficha129",
+                  "date": "1999-11-04"
+                },
+                {
+                  "name": "Pep Vallés, de cibermillonario a atrapado en la OPA sobre Terra",
+                  "document": "https://www.lavanguardia.com/internet/20030630/51262777455/pep-valles-de-cibermillonario-a-atrapado-en-la-opa-sobre-terra.html",
+                  "date": "2003-06-30"
+                },
+                {
+                  "name": "parceladigital.com",
+                  "document": "https://parceladigital.com/articulo/ole-el-primer-buscador-en-castellano-y-el-primer-gran-pelotazo-espanol-en-internet",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "ed746bfc-a51a-4ffd-b11b-e82a99191300"
+            }
+          },
+          {
+            "id": "c2413391-5436-4e1b-b54c-0de3bc273358",
+            "name": "Raylo",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Raylo raises $136M to build out its gadget lease-and-reuse 'fintech' platform | TechCrunch",
+                  "document": "https://techcrunch.com/2023/01/30/raylo-raises-136m-to-build-out-its-gadget-lease-and-reuse-fintech-platform",
+                  "date": "2023-01-30"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/raylo/__bXctEGZkpjYnlaereZnP22S50yw99pYA9k7VvPA7gmQ/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "0fb293ce-cbe8-4142-96a2-e67da12d2037"
+            }
+          },
+          {
+            "id": "e6588df7-62ea-47b7-b48a-01c086ba198b",
+            "name": "Meditelecom",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "en.wikipedia.org",
+                  "document": "https://en.wikipedia.org/wiki/Orange_Morocco",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "documents1.worldbank.org",
+                  "document": "https://documents1.worldbank.org/curated/en/732191468758119342/pdf/19930-Replacement-file-199WELLE.pdf",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "allafrica.com",
+                  "document": "https://allafrica.com/stories/199912270006.html",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.imf.org",
+                  "document": "https://www.imf.org/external/pubs/ft/scr/2001/cr01205.pdf",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "72e59bf9-0fdb-499d-bdf0-7f0b3ffe4718"
+            }
+          },
+          {
+            "id": "f8b44f1a-20d8-43c9-b142-8975380369d6",
+            "name": "flexiWAN",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/flexiwan/__YRWrdZn9UDgQbWfIEiw5pFZ-s2uW0r3nIXgAYq24LEQ",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/flexiwan/__YRWrdZn9UDgQbWfIEiw5pFZ-s2uW0r3nIXgAYq24LEQ/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "e0f36707-138b-4a1e-9058-e313f3fd712d"
+            }
+          },
+          {
+            "id": "f8df4e20-4094-4826-9364-a8204dd9a6cb",
+            "name": "VALERANN UK LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/valerann/__zTELihqq3ZFhWq3kkMfq3wV_vZY7BLW8srzH-xE7USw",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "655aaa46-d01e-4426-a05e-f7f0a931756d"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "IS_MEMBER_OF": [
+          {
+            "id": "ed1ecdd2-fa79-4792-bb39-40cbe03bbf1c",
+            "name": "Andrés Padilla Fuentes",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Leader of global IoT business area",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/person/andres-padilla",
+                  "date": "2026-08-26"
+                }
+              ],
+              "id": "328721f8-634a-5c17-b478-91db913b3519"
+            }
+          }
+        ],
+        "IS_BENEFICIARY_OWNER_OF": [
+          {
+            "id": "e54f3f3b-1c7b-47b0-9915-a5730f7be7c5",
+            "name": "BlackRock, Inc.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "SEC",
+                  "document": "https://www.sec.gov/Archives/edgar/data/1364742/000083423720006779/es0178430e18_020520.txt",
+                  "date": "2020-02-06"
+                }
+              ],
+              "percent_shares": [
+                {
+                  "time": "2022-10-07T00:00:00Z",
+                  "value": 5,
+                  "origin": {
+                    "name": "SC 13G/A",
+                    "url": "https://www.sec.gov/Archives/edgar/data/1364742/000083423722010846/es0178430e18_100622.txt",
+                    "source": "SEC",
+                    "published_time": "2022-10-07T00:00:00Z"
+                  }
+                }
+              ],
+              "id": "631102cc-981a-536f-ad70-1566ad83efad"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "7c68c8ff-aa38-4072-bd22-59bfc9829fef",
+            "name": "SALUPRO SPAIN SL",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Expertos en la compraventa de empresas tecnologicas | Baker Tilly M&A GDA",
+                  "document": "https://techma.bakertilly.es/en/salupro-recibe-e6m-financiacion-q-growth-bonsai-k-fund",
+                  "date": "2026-08-26"
+                }
+              ],
+              "id": "aae3fa3e-7828-55f0-9886-ca8afd970153"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

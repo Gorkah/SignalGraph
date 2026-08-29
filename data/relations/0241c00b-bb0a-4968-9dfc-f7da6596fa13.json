@@ -1,0 +1,678 @@
+{
+  "id": "0241c00b-bb0a-4968-9dfc-f7da6596fa13",
+  "name": "Gotrade",
+  "introspection": {
+    "properties": [
+      "description",
+      "id",
+      "founding_date",
+      "headquarters_address",
+      "name",
+      "operational_status",
+      "registered_address",
+      "aliases",
+      "esg_policy",
+      "legal_name",
+      "employee_count",
+      "lei",
+      "website"
+    ],
+    "relationships": {
+      "outgoing": [
+        "PARTICIPATES_IN_CORPORATE_EVENT",
+        "IS_REGISTERED_IN",
+        "OPERATES_IN_INDUSTRY",
+        "IS_MEMBER_OF",
+        "HAS_PRESENCE_IN",
+        "HAS_HEADQUARTERS_IN"
+      ],
+      "incoming": [
+        "WORKS_AT",
+        "INVESTED_IN",
+        "FOUNDED"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "0241c00b-bb0a-4968-9dfc-f7da6596fa13",
+    "name": "Gotrade",
+    "entity_type": "Company",
+    "description": "Polish fintech and software‑services company founded in 2019 and headquartered in Warsaw.",
+    "properties": {
+      "name": {
+        "value": "Gotrade",
+        "sources": [
+          {
+            "name": "www.velocityfintech.com",
+            "document": "https://www.velocityfintech.com/portfolio",
+            "date": "2026-06-09"
+          },
+          {
+            "name": "dfkcompany.com",
+            "document": "https://dfkcompany.com/velocity-capital-fintech-ventures",
+            "date": "2026-06-09"
+          },
+          {
+            "name": "Velocity Capital Fintech Ventures - Portfolio, Partners, Reviews, News",
+            "document": "https://parsers.vc/fund/velocityfintech.com",
+            "date": "2024-01-10"
+          }
+        ]
+      },
+      "description": {
+        "value": "Polish fintech and software‑services company founded in 2019 and headquartered in Warsaw.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-19"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "14a04520-c069-447d-bd87-d06ed83b5440",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/gotrade/__oXy4CcGXJRxphKM9AgTrH5TzEdO0SAJnxGgwnpAlB_Y/funding-and-investors",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/gotrade/__oXy4CcGXJRxphKM9AgTrH5TzEdO0SAJnxGgwnpAlB_Y",
+                  "date": "2026-05-11"
+                }
+              ],
+              "event_date": "2022-04-04",
+              "id": "9a259c07-2cdf-44f1-9a0f-0383001b52e7"
+            }
+          },
+          {
+            "id": "cca52a98-80f6-45b4-b73d-87db10b9f2e7",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/gotrade/__oXy4CcGXJRxphKM9AgTrH5TzEdO0SAJnxGgwnpAlB_Y/funding-and-investors",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/gotrade/__oXy4CcGXJRxphKM9AgTrH5TzEdO0SAJnxGgwnpAlB_Y",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/briefing/briefing-6-3-21/",
+                  "date": "2026-05-11"
+                }
+              ],
+              "event_date": "2021-06-24",
+              "id": "067984d1-5914-40f2-9468-d2103ceb287e"
+            }
+          }
+        ],
+        "IS_REGISTERED_IN": [
+          {
+            "id": "80570ae7-a8b1-485d-b1a9-cee2b6db40a1",
+            "name": "Mazowieckie",
+            "entity_type": "CountrySubdivision",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/259400ECF8SJ3SDTQ549",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "db618ed7-c874-54f6-b0b5-5efc221bd2a0"
+            }
+          },
+          {
+            "id": "9929317f-bdad-448a-8658-898fc7ec6e30",
+            "name": "Poland",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/259400ECF8SJ3SDTQ549",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "cffc9686-3e9c-558a-93d0-605842654bad"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio — KIBO",
+                  "document": "https://kiboventures.com/portfolio",
+                  "date": "2012-09-27"
+                }
+              ],
+              "id": "0d551e05-40f9-4e5c-b51d-68eb6cadfd02"
+            }
+          },
+          {
+            "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+            "name": "SOFTWARE_AND_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio — KIBO",
+                  "document": "https://kiboventures.com/portfolio",
+                  "date": "2012-09-27"
+                }
+              ],
+              "id": "e6fac165-894c-42db-ac9e-1823299368da"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "1989f4c8-697c-5f3a-ac84-06c525b7d933",
+            "name": "YC Summer 2019",
+            "entity_type": "Group",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Y Combinator",
+                  "document": "https://github.com/yc-oss/api",
+                  "date": "2026-06-05"
+                }
+              ],
+              "id": "d3bc0f27-1c3a-57c3-a41a-387964278375"
+            }
+          }
+        ],
+        "HAS_PRESENCE_IN": [
+          {
+            "id": "7531aa19-e755-4106-ac78-ce0d984e4de0",
+            "name": "Singapore",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Y Combinator",
+                  "document": "https://github.com/yc-oss/api",
+                  "date": "2026-06-05"
+                }
+              ],
+              "id": "d35357e1-8f1c-501d-a1f4-000c0599324f"
+            }
+          }
+        ],
+        "HAS_HEADQUARTERS_IN": [
+          {
+            "id": "7531aa19-e755-4106-ac78-ce0d984e4de0",
+            "name": "Singapore",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio — KIBO",
+                  "document": "https://kiboventures.com/portfolio",
+                  "date": "2012-09-27"
+                }
+              ],
+              "id": "d64ecea3-e812-48e4-9017-6d00b50327a2"
+            }
+          },
+          {
+            "id": "80570ae7-a8b1-485d-b1a9-cee2b6db40a1",
+            "name": "Mazowieckie",
+            "entity_type": "CountrySubdivision",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/259400ECF8SJ3SDTQ549",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "a77dd0cf-b185-59a3-8c4a-e0a4831797ba"
+            }
+          },
+          {
+            "id": "e332ff3d-605d-4b01-8222-5098236a3aff",
+            "name": "United Kingdom",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "vc.projectstartups.com",
+                  "document": "https://vc.projectstartups.com/kiboventureskiboventures.com/",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "9aeef381-5084-4f86-bd94-72c0fda9a066"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "WORKS_AT": [
+          {
+            "id": "0f793746-4205-4ac8-9a1d-65b6b7169697",
+            "name": "Peter Hoang",
+            "entity_type": "Person",
+            "properties": {
+              "role": "CPO",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/gotrade",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "wellfound.com",
+                  "document": "https://wellfound.com/p/peterhoang",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "rocketreach.co",
+                  "document": "https://rocketreach.co/peter-hoang-email_71141156",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "Ice Breakers with Peter Hoang",
+                  "document": "https://www.backscoop.com/newsletter-posts/ice-breakers-with-peter-hoang",
+                  "date": "2022-04-20"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/person/peter-hoang-7563",
+                  "date": "2026-07-30"
+                }
+              ],
+              "id": "9ebe9491-7379-4413-8c94-5cb9cc0e2fe5"
+            }
+          },
+          {
+            "id": "3322933a-0ed0-4b39-94c3-c40cba85b574",
+            "name": "Rohit Mulani",
+            "entity_type": "Person",
+            "properties": {
+              "role": "CEO",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/gotrade",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "guce",
+                  "document": "https://finance.yahoo.com/news/gotrade-raises-15-5-million-040100590.html",
+                  "date": "2017-01-01"
+                },
+                {
+                  "name": "Gotrade",
+                  "document": "https://www.cbinsights.com/company/gotrade/people",
+                  "date": "2026-06-01"
+                },
+                {
+                  "name": "Gotrade",
+                  "document": "https://www.phoenixcourt.vc/companies/gotrade",
+                  "date": "2023-01-01"
+                },
+                {
+                  "name": "technode.global",
+                  "document": "https://technode.global/2022/04/06/singapores-gotrade-raises-15-5m-in-series-a-round-led-by-velocity-capital-fintech-ventures",
+                  "date": "2026-07-30"
+                }
+              ],
+              "id": "30282a76-54a9-44a0-8f25-4810d2ada417"
+            }
+          },
+          {
+            "id": "334efcc9-4c89-480d-b32e-1da7ac17b74b",
+            "name": "Norman Wanto",
+            "entity_type": "Person",
+            "properties": {
+              "role": "CEO",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/gotrade",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "Gotrade: Robinhood for Southeast Asia (SEA) | Y Combinator",
+                  "document": "https://www.ycombinator.com/companies/gotrade",
+                  "date": "2021-06-24"
+                },
+                {
+                  "name": "guce",
+                  "document": "https://finance.yahoo.com/news/gotrade-raises-15-5-million-040100590.html",
+                  "date": "2017-01-01"
+                },
+                {
+                  "name": "Gotrade",
+                  "document": "https://www.phoenixcourt.vc/companies/gotrade",
+                  "date": "2023-01-01"
+                },
+                {
+                  "name": "technode.global",
+                  "document": "https://technode.global/2022/04/06/singapores-gotrade-raises-15-5m-in-series-a-round-led-by-velocity-capital-fintech-ventures",
+                  "date": "2026-07-30"
+                }
+              ],
+              "id": "1a00fe26-6ad5-4e9d-bdbf-9691165f4350"
+            }
+          },
+          {
+            "id": "d6890173-dff2-43c2-832e-b7aad69a1b97",
+            "name": "David Grant",
+            "entity_type": "Person",
+            "properties": {
+              "role": "COO",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/gotrade",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "guce",
+                  "document": "https://finance.yahoo.com/news/gotrade-raises-15-5-million-040100590.html",
+                  "date": "2017-01-01"
+                },
+                {
+                  "name": "Gotrade",
+                  "document": "https://www.phoenixcourt.vc/companies/gotrade",
+                  "date": "2023-01-01"
+                },
+                {
+                  "name": "Gotrade launches fractional shares investing in US stocks to 150+ countries with Alpaca Broker API",
+                  "document": "https://alpaca.markets/blog/gotrade-launches-fractional-shares-investing-in-us-stocks-to-150-countries-with-alpaca-broker-api",
+                  "date": "2021-08-05"
+                },
+                {
+                  "name": "technode.global",
+                  "document": "https://technode.global/2022/04/06/singapores-gotrade-raises-15-5m-in-series-a-round-led-by-velocity-capital-fintech-ventures",
+                  "date": "2026-07-30"
+                }
+              ],
+              "id": "599bf6d4-8121-4b6e-81cf-f56ced9bf2c6"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "0ea5659d-662f-410c-93e6-1775879f5989",
+            "name": "Velocity Capital Fintech Ventures Coöperatief U.A.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.velocityfintech.com",
+                  "document": "https://www.velocityfintech.com/portfolio",
+                  "date": "2026-06-09"
+                },
+                {
+                  "name": "dfkcompany.com",
+                  "document": "https://dfkcompany.com/velocity-capital-fintech-ventures",
+                  "date": "2026-06-09"
+                },
+                {
+                  "name": "Velocity Capital Fintech Ventures - Portfolio, Partners, Reviews, News",
+                  "document": "https://parsers.vc/fund/velocityfintech.com",
+                  "date": "2024-01-10"
+                }
+              ],
+              "id": "ef7e3360-56dc-471e-9c2b-0b12dff50fd4"
+            }
+          },
+          {
+            "id": "1e86655e-373d-4fe8-be13-af3713581f73",
+            "name": "Y Combinator",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Y Combinator",
+                  "document": "https://github.com/yc-oss/api",
+                  "date": "2026-06-09"
+                }
+              ],
+              "id": "cfc5afc9-31ed-5d82-a16f-0215002baf51"
+            }
+          },
+          {
+            "id": "7faf31b1-b7a2-4e93-b820-1fed0d86d2fa",
+            "name": "Candor",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Y Combinator",
+                  "document": "https://github.com/yc-oss/api",
+                  "date": "2026-06-05"
+                }
+              ],
+              "id": "a7b41549-9d3a-5c8d-a378-7e9cecc6f5c0"
+            }
+          },
+          {
+            "id": "a81efff2-1b1b-41e0-b068-3216380923a7",
+            "name": "KIBO VENTURES PARTNERS SGEIC, SA",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio — KIBO",
+                  "document": "https://kiboventures.com/portfolio",
+                  "date": "2012-09-27"
+                }
+              ],
+              "id": "b43df8a4-9ed2-4f0d-8754-41274776b686"
+            }
+          },
+          {
+            "id": "d13f79c8-6698-4f4f-b98c-1a28d60d80b8",
+            "name": "Kibo Ventures",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "vc.projectstartups.com",
+                  "document": "https://vc.projectstartups.com/kiboventureskiboventures.com/",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "52cf100d-b16f-4465-85b3-6877a5198e1b"
+            }
+          }
+        ],
+        "FOUNDED": [
+          {
+            "id": "0f793746-4205-4ac8-9a1d-65b6b7169697",
+            "name": "Peter Hoang",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/gotrade",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "wellfound.com",
+                  "document": "https://wellfound.com/p/peterhoang",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "rocketreach.co",
+                  "document": "https://rocketreach.co/peter-hoang-email_71141156",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "Ice Breakers with Peter Hoang",
+                  "document": "https://www.backscoop.com/newsletter-posts/ice-breakers-with-peter-hoang",
+                  "date": "2022-04-20"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/person/peter-hoang-7563",
+                  "date": "2026-07-30"
+                }
+              ],
+              "id": "f5ab339a-486d-4285-ae5a-aa06203f2e4c"
+            }
+          },
+          {
+            "id": "3322933a-0ed0-4b39-94c3-c40cba85b574",
+            "name": "Rohit Mulani",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/gotrade",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "guce",
+                  "document": "https://finance.yahoo.com/news/gotrade-raises-15-5-million-040100590.html",
+                  "date": "2017-01-01"
+                },
+                {
+                  "name": "Gotrade",
+                  "document": "https://www.cbinsights.com/company/gotrade/people",
+                  "date": "2026-06-01"
+                },
+                {
+                  "name": "Gotrade",
+                  "document": "https://www.phoenixcourt.vc/companies/gotrade",
+                  "date": "2023-01-01"
+                },
+                {
+                  "name": "technode.global",
+                  "document": "https://technode.global/2022/04/06/singapores-gotrade-raises-15-5m-in-series-a-round-led-by-velocity-capital-fintech-ventures",
+                  "date": "2026-07-30"
+                }
+              ],
+              "id": "8c4f8fdf-e937-4365-9fa9-9cae0bba3846"
+            }
+          },
+          {
+            "id": "334efcc9-4c89-480d-b32e-1da7ac17b74b",
+            "name": "Norman Wanto",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/gotrade",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "Gotrade: Robinhood for Southeast Asia (SEA) | Y Combinator",
+                  "document": "https://www.ycombinator.com/companies/gotrade",
+                  "date": "2021-06-24"
+                },
+                {
+                  "name": "guce",
+                  "document": "https://finance.yahoo.com/news/gotrade-raises-15-5-million-040100590.html",
+                  "date": "2017-01-01"
+                },
+                {
+                  "name": "Gotrade",
+                  "document": "https://www.phoenixcourt.vc/companies/gotrade",
+                  "date": "2023-01-01"
+                },
+                {
+                  "name": "technode.global",
+                  "document": "https://technode.global/2022/04/06/singapores-gotrade-raises-15-5m-in-series-a-round-led-by-velocity-capital-fintech-ventures",
+                  "date": "2026-07-30"
+                }
+              ],
+              "id": "3cd5266b-c133-42af-8435-517d73ecbd13"
+            }
+          },
+          {
+            "id": "6cd40fea-39e3-438b-a07a-68693cfde48c",
+            "name": "Andrew Haryono",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "guce",
+                  "document": "https://finance.yahoo.com/news/gotrade-raises-15-5-million-040100590.html",
+                  "date": "2017-01-01"
+                },
+                {
+                  "name": "Gotrade Raises $15.5 Million to Make Investing Fun, Fair and Simple in Southeast Asia, Launches in Indonesia",
+                  "document": "https://www.newswire.com/news/gotrade-raises-15-5-million-to-make-investing-fun-fair-and-simple-in-21671927",
+                  "date": "2022-04-05"
+                },
+                {
+                  "name": "Gotrade Raises $15.5 Million to Make Investing Fun, Fair and Simple in Southeast Asia, Launches in Indonesia",
+                  "document": "https://www.globenewswire.com/news-release/2022/04/05/2416180/0/en/gotrade-raises-15-5-million-to-make-investing-fun-fair-and-simple-in-southeast-asia-launches-in-indonesia.html",
+                  "date": "2022-04-05"
+                }
+              ],
+              "id": "81834334-9301-41a5-8663-2bef0642cfc8"
+            }
+          },
+          {
+            "id": "d6890173-dff2-43c2-832e-b7aad69a1b97",
+            "name": "David Grant",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/gotrade",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "guce",
+                  "document": "https://finance.yahoo.com/news/gotrade-raises-15-5-million-040100590.html",
+                  "date": "2017-01-01"
+                },
+                {
+                  "name": "Gotrade",
+                  "document": "https://www.phoenixcourt.vc/companies/gotrade",
+                  "date": "2023-01-01"
+                },
+                {
+                  "name": "Gotrade launches fractional shares investing in US stocks to 150+ countries with Alpaca Broker API",
+                  "document": "https://alpaca.markets/blog/gotrade-launches-fractional-shares-investing-in-us-stocks-to-150-countries-with-alpaca-broker-api",
+                  "date": "2021-08-05"
+                },
+                {
+                  "name": "technode.global",
+                  "document": "https://technode.global/2022/04/06/singapores-gotrade-raises-15-5m-in-series-a-round-led-by-velocity-capital-fintech-ventures",
+                  "date": "2026-07-30"
+                }
+              ],
+              "id": "240e355a-af1f-4ada-afe4-9862af76daf9"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

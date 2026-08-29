@@ -1,0 +1,235 @@
+{
+  "id": "2d984e0e-d11b-41b7-8a57-b63c029e01b7",
+  "name": "eWings.com",
+  "introspection": {
+    "properties": [
+      "id",
+      "name",
+      "website",
+      "description"
+    ],
+    "relationships": {
+      "outgoing": [
+        "HAS_HEADQUARTERS_IN",
+        "OPERATES_IN_INDUSTRY",
+        "PARTICIPATES_IN_CORPORATE_EVENT"
+      ],
+      "incoming": [
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "2d984e0e-d11b-41b7-8a57-b63c029e01b7",
+    "name": "eWings.com",
+    "entity_type": "Company",
+    "description": "An online travel/corporate travel management platform acquired by Hogg Robinson Group, offering business travel booking services.",
+    "properties": {
+      "name": {
+        "value": "eWings.com",
+        "sources": [
+          {
+            "name": "Our Holdings - German Startups Group VC",
+            "document": "https://www.german-startups.com/for-shareholders/about-us/our-holdings",
+            "date": "2026-07-31"
+          }
+        ]
+      },
+      "description": {
+        "value": "An online travel/corporate travel management platform acquired by Hogg Robinson Group, offering business travel booking services.",
+        "sources": [
+          {
+            "name": "Our Holdings - German Startups Group VC",
+            "document": "https://www.german-startups.com/for-shareholders/about-us/our-holdings",
+            "date": "2026-07-31"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "HAS_HEADQUARTERS_IN": [
+          {
+            "id": "61901653-115d-4cc4-a4e4-04d8c5009f1e",
+            "name": "Germany",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Our Holdings - German Startups Group VC",
+                  "document": "https://www.german-startups.com/for-shareholders/about-us/our-holdings",
+                  "date": "2026-07-31"
+                }
+              ],
+              "id": "fc5fc420-9f7d-4424-bb6c-2106c9a012e3"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "49e7435a-1935-49a2-bec7-a7848147893e",
+            "name": "HOSPITALITY_AND_TOURISM",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Our Holdings - German Startups Group VC",
+                  "document": "https://www.german-startups.com/for-shareholders/about-us/our-holdings",
+                  "date": "2026-07-31"
+                }
+              ],
+              "id": "6c3c8a5c-8600-4c8e-bccf-9fecebf20419"
+            }
+          },
+          {
+            "id": "bb7858a2-51d8-45e2-82bd-3ea6a06d317a",
+            "name": "INTERNET_AND_WEB_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Our Holdings - German Startups Group VC",
+                  "document": "https://www.german-startups.com/for-shareholders/about-us/our-holdings",
+                  "date": "2026-07-31"
+                }
+              ],
+              "id": "201583ac-ef59-4df4-94e4-c71e03cbfec9"
+            }
+          }
+        ],
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "053b7bd1-5c77-4788-8e1a-ccd6798ee8fe",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "DN Capital Raises $200M For 3rd European Fund, As Euro Tech Resurges | TechCrunch",
+                  "document": "https://techcrunch.com/2014/09/02/dn-capital-raises-200m-for-3rd-european-fund-as-euro-tech-resurges",
+                  "date": "2014-09-02"
+                }
+              ],
+              "event_date": "2014-09-02",
+              "id": "19a688d9-e3d0-4705-9393-6940164961a1"
+            }
+          },
+          {
+            "id": "64c415f5-d5a2-4ac3-8ec6-869823814bfd",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/ewingscom/__9gjyqDppKShv3ex1GtDwlJ4iPHgns99pyK-WGLcFss0",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/ewingscom/__9gjyqDppKShv3ex1GtDwlJ4iPHgns99pyK-WGLcFss0/funding-and-investors",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/64285-93",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2015-06-22",
+              "id": "404fffdc-199f-4e5f-8f56-422191ad5d13"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "1c4f55fa-654c-4f82-a47b-8622cd4b9c9c",
+            "name": "German Startups Group VC GmbH",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/ewingscom/__9gjyqDppKShv3ex1GtDwlJ4iPHgns99pyK-WGLcFss0",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/ewingscom/__9gjyqDppKShv3ex1GtDwlJ4iPHgns99pyK-WGLcFss0/funding-and-investors",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/64285-93",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "0f137763-f88c-4e30-942f-d7641cccdd76"
+            }
+          },
+          {
+            "id": "63a2fb1b-119c-4c3d-84af-40a49dc0ea64",
+            "name": "High-Tech Gründerfonds",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/ewingscom/__9gjyqDppKShv3ex1GtDwlJ4iPHgns99pyK-WGLcFss0",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/ewingscom/__9gjyqDppKShv3ex1GtDwlJ4iPHgns99pyK-WGLcFss0/funding-and-investors",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/64285-93",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "311f952c-ea84-4d2d-bd22-25d7f9d77798"
+            }
+          },
+          {
+            "id": "67180cf0-dfe5-442c-a580-255752eb0f96",
+            "name": "SGT German Private Equity Management GmbH",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Our Holdings - German Startups Group VC",
+                  "document": "https://www.german-startups.com/for-shareholders/about-us/our-holdings",
+                  "date": "2026-07-31"
+                }
+              ],
+              "id": "cff0530f-83bc-4627-89b7-3edd8e04069c"
+            }
+          },
+          {
+            "id": "dc60f800-f723-41b8-9482-810db28c9d70",
+            "name": "DN Capital",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "DN Capital Raises $200M For 3rd European Fund, As Euro Tech Resurges | TechCrunch",
+                  "document": "https://techcrunch.com/2014/09/02/dn-capital-raises-200m-for-3rd-european-fund-as-euro-tech-resurges",
+                  "date": "2014-09-02"
+                }
+              ],
+              "id": "ef9376bd-dbb4-4349-8091-4609ed313ff8"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

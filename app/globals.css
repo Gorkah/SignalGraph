@@ -116,7 +116,7 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 .thread:hover polyline:not(.thread-hit) { stroke-width: 5; }
 
 .entity-card {
-  position: absolute; z-index: 10; width: 240px; height: 176px; display: flex; flex-direction: column;
+  position: absolute; z-index: 10; width: 240px; height: 208px; display: flex; flex-direction: column;
   border: var(--border) solid var(--ink); background: var(--paper-bright); box-shadow: 6px 6px 0 rgba(32, 27, 24, .72);
   cursor: default; transition: box-shadow 100ms linear, translate 100ms linear;
 }
@@ -143,11 +143,6 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 .no-relations { padding: 3px 7px; opacity: .55; font-size: 14px; }
 .dedup-badge { padding: 2px 4px; background: var(--green); color: white; font-family: var(--font-display); font-size: 7px; animation: badge-pop 280ms steps(3, end); }
 
-.pin-wrap { position: absolute; z-index: 12; display: flex; align-items: center; gap: 7px; touch-action: none; cursor: move; }
-.pin-dot { width: 12px; height: 12px; flex: 0 0 12px; border: 2px solid var(--ink); background: var(--red); box-shadow: 2px 2px 0 var(--ink); }
-.pin-label { border: 1px solid var(--ink); background: var(--paper-bright); padding: 1px 5px; box-shadow: 3px 3px 0 rgba(32, 27, 24, .5); cursor: pointer; white-space: nowrap; }
-.pin-label:hover { background: var(--yellow); }
-.pin-land { animation: pin-land 300ms steps(4, end) both; }
 
 .inbox { min-width: 0; overflow: hidden; display: flex; flex-direction: column; background: #aa9a72; }
 .inbox > header { height: 42px; flex: 0 0 42px; display: flex; justify-content: space-between; align-items: center; padding: 0 10px; border-bottom: 2px solid var(--ink); background: var(--blue); color: white; font-family: var(--font-display); font-size: 9px; }
@@ -206,6 +201,10 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 
 @keyframes pin-land { from { opacity: 0; transform: translateY(-48px) rotate(-5deg); } to { opacity: 1; transform: none; } }
 @keyframes badge-pop { from { transform: scale(0); } to { transform: scale(1); } }
+@keyframes cruce-land {
+  0%, 49% { box-shadow: 6px 6px 0 rgba(32, 27, 24, .6), 0 0 0 11px var(--yellow); }
+  50%, 100% { box-shadow: 6px 6px 0 rgba(32, 27, 24, .6), 0 0 0 4px var(--green); }
+}
 @keyframes dossier-arrive { from { opacity: 0; transform: translateX(30px) rotate(1deg); } to { opacity: 1; transform: none; } }
 @keyframes folder-open { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
 @keyframes toast-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
@@ -257,28 +256,6 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 
 .more-relations { display: grid; place-items: center; padding: 0 7px; background: #ded0a4; font-size: 13px; }
 
-/* ── La lente: instrumento del tablón, no pestañas ─────────────────── */
-.lens-dock {
-  position: absolute; left: 14px; top: 14px; z-index: 30; width: 186px;
-  display: flex; flex-direction: column;
-  border: var(--border) solid var(--ink); background: var(--paper);
-  box-shadow: 6px 6px 0 rgba(32, 27, 24, .55);
-}
-.lens-title {
-  padding: 5px 8px; background: var(--ink); color: var(--paper-bright);
-  font-family: var(--font-display); font-size: 8px; letter-spacing: .12em;
-}
-.lens-dock button {
-  display: grid; grid-template-columns: 18px 1fr; align-items: center; gap: 2px 6px;
-  border: 0; border-top: 1px solid rgba(32, 27, 24, .35); background: transparent;
-  padding: 5px 8px; text-align: left; cursor: pointer;
-}
-.lens-dock button i { grid-row: span 2; font-style: normal; font-size: 15px; opacity: .5; }
-.lens-dock button span { font-size: 17px; line-height: 1; }
-.lens-dock button small { font-size: 12px; opacity: .6; }
-.lens-dock button:hover { background: #e8dcb6; }
-.lens-dock button.is-active { background: var(--yellow); box-shadow: inset 5px 0 0 var(--red); }
-.lens-dock button.is-active i { opacity: 1; color: var(--red); }
 
 /* ── Zoom ──────────────────────────────────────────────────────────── */
 .zoom-dock {
@@ -307,3 +284,99 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 }
 .case-node.has-finding { border-top-color: var(--green); }
 .case-node.has-finding > header { background: var(--green); }
+
+/* El marco del retrato lo dibuja el propio SVG; aquí solo va lo que lo clava
+   al corcho: sombra dura, cero suavizado y prohibido encogerse dentro de la
+   rejilla de la cabecera. */
+.retrato {
+  display: block;
+  flex: none;
+  background: var(--paper-bright);
+  box-shadow: 2px 2px 0 rgba(32, 27, 24, .55);
+}
+
+
+/* ── Pista: la ficha en su densidad mínima ─────────────────────────── */
+.lead-card {
+  position: absolute; z-index: 24; width: 176px; height: 96px;
+  display: grid; grid-template-columns: 36px minmax(0, 1fr); align-items: center; gap: 9px;
+  padding: 9px 10px; border: var(--border) solid var(--ink); border-left: 6px solid var(--thread-investment);
+  background: var(--paper-bright); box-shadow: 4px 4px 0 rgba(32, 27, 24, .6);
+  cursor: pointer; touch-action: none; transition: box-shadow 90ms linear, translate 90ms linear;
+}
+.lead-card { box-shadow: 5px 5px 0 rgba(32, 27, 24, .55), 0 0 0 3px rgba(201, 185, 143, .9); }
+.lead-card:hover { box-shadow: 7px 7px 0 var(--yellow), 0 0 0 3px rgba(201, 185, 143, .9); translate: -1px -1px; }
+.lead-card.is-selected { box-shadow: 6px 6px 0 var(--yellow); }
+.lead-card strong {
+  display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-family: var(--font-display); font-size: 9px; line-height: 1.25;
+}
+.lead-card small { display: block; margin-top: 4px; font-size: 13px; opacity: .6; }
+.lead-busy { position: absolute; right: 6px; bottom: 4px; font-size: 11px; opacity: .7; }
+
+/* ── El reencuentro: la ficha que ya estaba ────────────────────────────
+   Es el instante por el que existe la app, así que el resaltado no caduca
+   solo: dura hasta el siguiente gesto del usuario (lib/store.ts). Por eso se
+   dibuja como estado estable —anillo verde, el mismo verde del hallazgo del
+   caso— con dos destellos de aterrizaje al caer, y no como parpadeo eterno.
+   Va después de :hover y .is-selected para ganarles a igual especificidad. */
+.entity-card:has(.dedup-badge),
+.lead-card:has(.dedup-badge) {
+  z-index: 30;
+  box-shadow: 6px 6px 0 rgba(32, 27, 24, .6), 0 0 0 4px var(--green);
+  animation: cruce-land 460ms 2;
+}
+.entity-card:has(.dedup-badge) { border-top-color: var(--green); }
+.lead-card:has(.dedup-badge) { border-left-color: var(--green); }
+.entity-card:has(.dedup-badge):hover,
+.lead-card:has(.dedup-badge):hover {
+  box-shadow: 8px 8px 0 var(--yellow), 0 0 0 4px var(--green); translate: -1px -1px;
+}
+
+/* ── Mazo: varias pistas del mismo tirón, apiladas ─────────────────── */
+.lead-stack { position: absolute; z-index: 13; width: 196px; cursor: pointer; }
+.stack-sheet {
+  position: absolute; inset: 0; height: 104px;
+  border: var(--border) solid var(--ink); background: var(--paper);
+  box-shadow: 2px 2px 0 rgba(32, 27, 24, .3);
+}
+.stack-sheet-2 { translate: 6px 6px; }
+.stack-sheet-3 { translate: 12px 12px; opacity: .75; }
+.stack-top {
+  position: relative; height: 104px;
+  display: grid; grid-template-columns: 42px minmax(0, 1fr); grid-template-rows: auto auto;
+  align-items: center; gap: 2px 10px;
+  padding: 10px; border: var(--border) solid var(--ink); border-left: 7px solid var(--thread-investment);
+  background: var(--paper-bright); box-shadow: 5px 5px 0 rgba(32, 27, 24, .5);
+  touch-action: none;
+}
+.stack-count {
+  grid-row: span 2; display: grid; place-items: center; align-self: stretch;
+  border: var(--border) solid var(--ink); background: var(--ink); color: var(--paper-bright);
+  font-family: var(--font-display); font-size: 20px;
+}
+.stack-body strong {
+  display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-family: var(--font-display); font-size: 10px;
+}
+.stack-body small { display: block; margin-top: 3px; font-size: 13px; opacity: .7; }
+.stack-faces { grid-column: 2; display: flex; gap: 3px; }
+.lead-stack footer {
+  position: relative; margin-top: 3px; padding: 4px 6px;
+  border: var(--border) solid var(--ink); background: var(--yellow);
+  font-family: var(--font-display); font-size: 8px; text-align: center;
+}
+.lead-stack:hover .stack-top { translate: -2px -2px; box-shadow: 8px 8px 0 rgba(32, 27, 24, .5); }
+.lead-stack:hover footer { background: var(--red); color: var(--paper-bright); }
+
+/* Recoger: sin este control, desplegar un mazo no tenía vuelta atrás. */
+.stack-collapse {
+  position: absolute; z-index: 26; padding: 5px 10px;
+  border: var(--border) solid var(--ink); background: var(--yellow);
+  box-shadow: 4px 4px 0 rgba(32, 27, 24, .55);
+  font-family: var(--font-display); font-size: 8px; cursor: pointer;
+}
+.stack-collapse:hover { background: var(--red); color: var(--paper-bright); }
+
+/* El retrato de la ficha completa vive en la cabecera, junto al nombre. */
+.card-drag { grid-template-columns: 30px minmax(0, 1fr) auto; }

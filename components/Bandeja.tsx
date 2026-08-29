@@ -78,11 +78,11 @@ export function Bandeja({ fallbackDossier, defaultReportQuery }: Pick<SeedPayloa
   return (
     <aside className="inbox" aria-label="Bandeja de dossieres">
       <header>
-        <span>BANDEJA / CONFIDENTE</span>
+        <span>DOSSIERES PEDIDOS</span>
         <b>{inbox.filter((item) => item.state === "arrived").length}</b>
       </header>
       <div className="query-box">
-        <label htmlFor="archive-query">Consulta al archivo</label>
+        <label htmlFor="archive-query">Preguntá al archivo</label>
         <textarea id="archive-query" value={query} onChange={(event) => setQuery(event.target.value)} rows={2} />
         <button className="primary-button" type="button" onClick={() => void submit()}>pedir dossier</button>
       </div>
@@ -91,13 +91,13 @@ export function Bandeja({ fallbackDossier, defaultReportQuery }: Pick<SeedPayloa
         {inbox.map((receipt) => (
           <article className={`receipt is-${receipt.state}`} key={receipt.id}>
             <div className="receipt-head">
-              <span>{receipt.state === "pending" ? "INVESTIGANDO" : receipt.state === "arrived" ? "ENTREGADO" : "FALLÓ"}</span>
+              <span>{receipt.state === "pending" ? "BUSCANDO…" : receipt.state === "arrived" ? "HA LLEGADO" : "NO LLEGÓ"}</span>
               {receipt.state === "pending" && <ReceiptTimer startedAt={receipt.startedAt} />}
             </div>
             <p>{receipt.query}</p>
             {receipt.dossier && (
               <div className="candidate-fan">
-                <small>{receipt.dossier.source.toUpperCase()} · {receipt.dossier.candidates.length} candidatas</small>
+                <small>{receipt.dossier.candidates.length} pistas · clic para clavarlas</small>
                 {receipt.dossier.candidates.slice(0, 8).map((candidate, index) => (
                   <button
                     key={`${candidate.id ?? candidate.name}-${index}`}

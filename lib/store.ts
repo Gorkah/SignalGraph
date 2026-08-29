@@ -3,22 +3,20 @@
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 import { CARD_HEIGHT, CARD_WIDTH, combPosition, snapPoint } from "@/lib/geometry";
-import { CASE_RELATION } from "@/lib/relations";
+import { CASE_RELATION, relationNoun, registerNouns } from "@/lib/relations";
 import type {
+  CaseView,
   Dossier,
   DossierCandidate,
-  EntityCard,
   InboxReceipt,
   IntrospectionResponse,
   Point,
   ProjectionResponse,
   ResearchCase,
-  SelectorMode,
 } from "@/lib/types";
 
 type BoardState = {
   researchCase: ResearchCase | null;
-  selector: SelectorMode;
   pan: Point;
   zoom: number;
   inbox: InboxReceipt[];
@@ -29,7 +27,6 @@ type BoardState = {
   toast?: string;
   initialize: (researchCase: ResearchCase) => void;
   finishHydration: () => void;
-  setSelector: (selector: SelectorMode) => void;
   setPan: (pan: Point) => void;
   setZoom: (zoom: number, anchor?: Point) => void;
   setView: (view: { pan: Point; zoom: number }) => void;
@@ -37,7 +34,11 @@ type BoardState = {
   moveNode: (id: string, point: Point) => void;
   selectNode: (id?: string) => void;
   pullRelation: (entityId: string, relationType: string) => Promise<void>;
-  promotePin: (id: string) => Promise<void>;
+  openCard: (id: string) => Promise<void>;
+  toggleStack: (stackId: string) => void;
+  expandedStacks: string[];
+  caseView?: CaseView;
+  setCaseView: (view?: CaseView) => void;
   addReceipt: (receipt: InboxReceipt) => void;
   deliverDossier: (receiptId: string, dossier: Dossier) => void;
   failReceipt: (receiptId: string, error: string) => void;
@@ -50,6 +51,35 @@ export const MAX_ZOOM = 2;
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
+/**
+ * Misma normalización que la capa de datos (`normalized` en lib/seed.ts,
+ * `normalize` en lib/cala.ts). Cala fragmenta una misma empresa en varios
+ * UUID —hay tres "Sesame"—, así que el nombre normalizado es lo único que la
+ * identifica de verdad; el id sigue siendo la identidad del tablón.
+ */
+const nameKey = (value: string) => value.toLocaleLowerCase("en").replace(/[^a-z0-9]+/g, "");
+const sameName = (a: string, b: string) => nameKey(a) === nameKey(b);
+
+/** "por Seaya Ventures y por BBVA Spark Fund"; con más de dos, comas. */
+function eachOf(names: string[], preposition: string) {
+  const parts = names.map((name) => `${preposition} ${name}`);
+  if (parts.length < 2) return parts.join("");
+  return `${parts.slice(0, -1).join(", ")} y ${parts[parts.length - 1]}`;
+}
+
+// El cruce se anuncia como hallazgo, no como mecánica: la demo tira de
+// `inversión`, pero cualquier cabo improvisado tiene que sonar a frase.
+const CROSS_PHRASE: Record<string, { verb: string; preposition: string }> = {
+  INVESTED_IN: { verb: "financiada", preposition: "por" },
+  FINANCED: { verb: "financiada", preposition: "por" },
+};
+
+function crossToast(name: string, holders: string[], relationType: string) {
+  const phrase = CROSS_PHRASE[relationType]
+    ?? { verb: `${relationNoun(relationType)} en común`, preposition: "con" };
+  return `${name} — ${phrase.verb} ${eachOf(holders, phrase.preposition)}`;
+}
+
 async function apiJson<T>(url: string, init?: RequestInit): Promise<T> {
   const response = await fetch(url, init);
   const body = await response.json().catch(() => ({})) as { error?: string } & T;
@@ -61,19 +91,24 @@ export const useBoardStore = create<BoardState>()(
   persist(
     (set, get) => ({
       researchCase: null,
-      selector: "description",
       pan: { x: 40, y: 24 },
       zoom: 1,
       inbox: [],
       hydrated: false,
       busy: {},
       dedup: {},
+      expandedStacks: [],
 
       initialize: (researchCase) => set((state) => ({
         researchCase: state.researchCase?.id === researchCase.id ? state.researchCase : researchCase,
       })),
       finishHydration: () => set({ hydrated: true }),
-      setSelector: (selector) => set({ selector }),
+      // El resaltado del reencuentro no caduca solo: vive hasta el siguiente
+      // gesto del usuario sobre el caso —tirar de un cabo, abrir una ficha,
+      // seleccionar, desplegar un mazo—, que es lo que lo apaga. Encuadrar
+      // (pan, zoom, arrastrar una ficha) no lo mata: se puede recorrer el
+      // cruce mientras se cuenta. Hojear una ficha tampoco: la portada y el
+      // dorso son lectura, y viven dentro del propio componente.
       setPan: (pan) => set({ pan }),
       // El anclaje mantiene quieto el punto del tablón que hay bajo el cursor.
       setZoom: (zoom, anchor) => set((state) => {
@@ -90,7 +125,17 @@ export const useBoardStore = create<BoardState>()(
       }),
       setView: ({ pan, zoom }) => set({ pan, zoom }),
       setToast: (toast) => set({ toast }),
-      selectNode: (selectedId) => set({ selectedId }),
+      setCaseView: (caseView) => {
+        registerNouns(caseView?.nouns);
+        set({ caseView });
+      },
+      toggleStack: (stackId) => set((state) => ({
+        dedup: {},
+        expandedStacks: state.expandedStacks.includes(stackId)
+          ? state.expandedStacks.filter((item) => item !== stackId)
+          : [...state.expandedStacks, stackId],
+      })),
+      selectNode: (selectedId) => set({ selectedId, dedup: {} }),
       moveNode: (id, point) => set((state) => {
         if (!state.researchCase) return state;
         const position = snapPoint(point);
@@ -98,7 +143,9 @@ export const useBoardStore = create<BoardState>()(
           researchCase: {
             ...state.researchCase,
             cards: state.researchCase.cards.map((card) => card.id === id ? { ...card, position } : card),
-            pins: state.researchCase.pins.map((pin) => pin.id === id ? { ...pin, position } : pin),
+            focus: state.researchCase.focus.id === id
+              ? { ...state.researchCase.focus, position }
+              : state.researchCase.focus,
           },
         };
       }),
@@ -106,12 +153,12 @@ export const useBoardStore = create<BoardState>()(
       pullRelation: async (entityId, relationType) => {
         const busyKey = `${entityId}:${relationType}`;
         if (get().busy[busyKey]) return;
-        set((state) => ({ busy: { ...state.busy, [busyKey]: true }, toast: undefined }));
+        set((state) => ({ busy: { ...state.busy, [busyKey]: true }, toast: undefined, dedup: {} }));
         try {
           const projection = await apiJson<ProjectionResponse>(`/api/entity/${encodeURIComponent(entityId)}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ projection: relationType, limit: 8 }),
+            body: JSON.stringify({ projection: relationType, limit: 5 }),
           });
           if (projection.entities.length === 0) {
             set({ toast: "No hay más evidencia local para este cabo." });
@@ -122,45 +169,76 @@ export const useBoardStore = create<BoardState>()(
             set((state) => {
               if (!state.researchCase) return state;
               const graph = state.researchCase;
-              const existingCard = graph.cards.find((card) => card.id === entity.id);
-              const existingPin = graph.pins.find((pin) => pin.id === entity.id);
-              const alreadyLinked = graph.edges.some((edge) => edge.sourceId === entityId && edge.targetId === entity.id && edge.relationType === relationType);
+              // El reencuentro se empareja por nombre normalizado, como la capa
+              // de datos: por UUID solo salía cuando las dos carteras traían el
+              // mismo id, y una participada compartida con id distinto se
+              // clavaba dos veces desmintiendo la tesis en pantalla.
+              const existingCard = graph.cards.find((card) => sameName(card.name, entity.name));
+              // La identidad del tablón sigue siendo el id: el hilo se ata a la
+              // ficha ya clavada, no al UUID recién llegado.
+              const targetId = existingCard?.id ?? entity.id;
+              // Un cabo que vuelve al propio fondo (otra grafía de su nombre)
+              // no es cruce ni hilo.
+              if (targetId === entityId) return state;
+              const alreadyLinked = graph.edges.some((edge) => edge.sourceId === entityId && edge.targetId === targetId && edge.relationType === relationType);
               const edge = alreadyLinked ? [] : [{
-                id: `${entityId}:${relationType}:${entity.id}`,
+                id: `${entityId}:${relationType}:${targetId}`,
                 sourceId: entityId,
-                targetId: entity.id,
+                targetId,
                 relationType,
                 source: entity.claims[0]?.source,
               }];
-              if (existingCard || existingPin) {
+              if (existingCard) {
                 // El cruce: este nodo ya estaba en el corcho y ahora lo
                 // sostiene un segundo fondo. Ahí la pregunta se vuelve
                 // respuesta, y por eso el hallazgo sube a la tarjeta de caso.
                 const nextEdges = [...graph.edges, ...edge];
                 const holders = new Set(
                   nextEdges
-                    .filter((item) => item.targetId === entity.id && item.relationType !== CASE_RELATION)
+                    .filter((item) => item.targetId === targetId && item.relationType !== CASE_RELATION)
                     .map((item) => item.sourceId),
                 );
                 const names = [...holders]
                   .map((holderId) => graph.cards.find((card) => card.id === holderId)?.name)
-                  .filter(Boolean);
-                const finding = holders.size > 1
-                  ? `${names.join(" y ")} coinciden en ${entity.name}.`
+                  .filter((name): name is string => Boolean(name));
+                // Hay cruce cuando la sostienen dos manos distintas; volver a
+                // tirar del mismo fondo no resalta media cartera.
+                const crossed = holders.size > 1;
+                // El hallazgo se redacta con la plantilla que decidió el
+                // agente para este caso, no con una frase de financiación.
+                const view = state.caseView;
+                const fill = (tpl: string) => tpl
+                  .replace("{holders}", names.join(" y "))
+                  .replace("{target}", existingCard.name);
+                const finding = crossed
+                  ? fill(view?.finding.template ?? "{holders} coinciden en {target}.")
                   : graph.focus.finding;
+                // Si la reencontrada seguía dentro de un mazo cerrado, el
+                // mazo se abre: un resaltado que nadie ve no es un clímax.
+                const crossedStack = existingCard.stackId;
+                const expandedStacks = crossed && crossedStack && !state.expandedStacks.includes(crossedStack)
+                  ? [...state.expandedStacks, crossedStack]
+                  : state.expandedStacks;
                 return {
+                  expandedStacks,
                   researchCase: { ...graph, focus: { ...graph.focus, finding }, edges: nextEdges },
-                  dedup: { ...state.dedup, [entity.id]: true },
-                  toast: holders.size > 1 ? `Coincidencia: ${entity.name} ya estaba en el tablón.` : state.toast,
+                  dedup: crossed ? { ...state.dedup, [existingCard.id]: true } : state.dedup,
+                  // El aviso cuenta el hallazgo con nombres, no la mecánica.
+                  toast: crossed
+                    ? (view?.finding.toast
+                        ? fill(view.finding.toast)
+                        : crossToast(existingCard.name, names, relationType))
+                    : state.toast,
                 };
               }
               const parent = graph.cards.find((card) => card.id === entityId);
               if (!parent) return state;
+              const stackId = `${entityId}:${relationType}`;
               return {
                 researchCase: {
                   ...graph,
                   edges: [...graph.edges, ...edge],
-                  pins: [...graph.pins, {
+                  cards: [...graph.cards, {
                     id: entity.id,
                     name: entity.name,
                     entityType: entity.entityType,
@@ -168,21 +246,20 @@ export const useBoardStore = create<BoardState>()(
                     position: combPosition(
                       { x: parent.position.x + CARD_WIDTH / 2, y: parent.position.y + CARD_HEIGHT / 2 },
                       graph.focus.position,
-                      // El filtro ya crece con cada chincheta añadida en este
-                      // bucle; sumarle `index` saltaba de columna a mitad del tirón.
-                      graph.pins.filter((item) => item.parentId === entityId).length,
+                      // El filtro ya crece con cada pista añadida en este bucle;
+                      // sumarle `index` saltaba de columna a mitad del tirón.
+                      graph.cards.filter((item) => item.stackId === stackId).length,
                     ),
+                    claims: entity.claims,
+                    relations: [],
+                    density: "lead" as const,
                     parentId: entityId,
                     relationType,
-                    claims: entity.claims,
+                    stackId,
                   }],
                 },
               };
             });
-          }
-          const dedupIds = Object.keys(get().dedup);
-          if (dedupIds.length) {
-            window.setTimeout(() => set({ dedup: {} }), 2400);
           }
         } catch (error) {
           set({ toast: error instanceof Error ? error.message : "Archivo saturado" });
@@ -191,35 +268,31 @@ export const useBoardStore = create<BoardState>()(
         }
       },
 
-      promotePin: async (id) => {
-        if (get().busy[`promote:${id}`]) return;
-        set((state) => ({ busy: { ...state.busy, [`promote:${id}`]: true }, toast: undefined }));
+      openCard: async (id) => {
+        if (get().busy[`open:${id}`]) return;
+        set((state) => ({ busy: { ...state.busy, [`open:${id}`]: true }, toast: undefined, dedup: {} }));
         try {
           const result = await apiJson<IntrospectionResponse>(`/api/entity/${encodeURIComponent(id)}/introspection`);
           set((state) => {
             if (!state.researchCase) return state;
-            const pin = state.researchCase.pins.find((item) => item.id === id);
-            if (!pin) return state;
-            const card: EntityCard = {
-              ...result.entity,
-              category: result.entity.category ?? pin.category,
-              position: pin.position,
-              claims: result.entity.claims.length ? result.entity.claims : pin.claims ?? [],
-              relations: result.relations,
-            };
             return {
               selectedId: id,
               researchCase: {
                 ...state.researchCase,
-                pins: state.researchCase.pins.filter((item) => item.id !== id),
-                cards: [...state.researchCase.cards, card],
+                cards: state.researchCase.cards.map((card) => card.id !== id ? card : {
+                  ...card,
+                  density: "full" as const,
+                  category: result.entity.category ?? card.category,
+                  claims: result.entity.claims.length ? result.entity.claims : card.claims,
+                  relations: result.relations,
+                }),
               },
             };
           });
         } catch (error) {
           set({ toast: error instanceof Error ? error.message : "No se pudo abrir la ficha" });
         } finally {
-          set((state) => ({ busy: { ...state.busy, [`promote:${id}`]: false } }));
+          set((state) => ({ busy: { ...state.busy, [`open:${id}`]: false } }));
         }
       },
 
@@ -237,19 +310,25 @@ export const useBoardStore = create<BoardState>()(
           : receipt),
       })),
       pinCandidate: (candidate) => set((state) => {
-        if (!candidate.id || !state.researchCase) return { toast: "Esta candidata no tiene UUID fiable." };
+        if (!state.researchCase) return state;
         const graph = state.researchCase;
-        const existing = graph.cards.find((card) => card.id === candidate.id) ?? graph.pins.find((pin) => pin.id === candidate.id);
+        // Misma política que el tirón de cabo: por nombre, no por UUID.
+        const existing = graph.cards.find((card) => sameName(card.name, candidate.name));
         if (existing) {
-          window.setTimeout(() => set({ dedup: {} }), 2400);
-          return { selectedId: candidate.id, dedup: { ...state.dedup, [candidate.id]: true }, toast: "Coincidencia: ya estaba en el tablón." };
+          return {
+            selectedId: existing.id,
+            dedup: { [existing.id]: true },
+            toast: `${existing.name} — el dossier apunta a una ficha que ya estaba en el tablón.`,
+          };
         }
+        if (!candidate.id) return { toast: "Esta candidata no tiene UUID fiable." };
         const anchor = graph.cards[0];
         if (!anchor) return state;
         return {
+          dedup: {},
           researchCase: {
             ...graph,
-            pins: [...graph.pins, {
+            cards: [...graph.cards, {
               id: candidate.id,
               name: candidate.name,
               entityType: candidate.entityType ?? "Entity",
@@ -257,11 +336,14 @@ export const useBoardStore = create<BoardState>()(
               position: combPosition(
                 { x: anchor.position.x + CARD_WIDTH / 2, y: anchor.position.y + CARD_HEIGHT / 2 },
                 graph.focus.position,
-                graph.pins.filter((item) => item.parentId === anchor.id).length,
+                graph.cards.filter((item) => item.stackId === `${anchor.id}:REPORT_MATCH`).length,
               ),
+              claims: candidate.claims,
+              relations: [],
+              density: "lead" as const,
               parentId: anchor.id,
               relationType: "REPORT_MATCH",
-              claims: candidate.claims,
+              stackId: `${anchor.id}:REPORT_MATCH`,
             }],
             edges: [...graph.edges, {
               id: `report:${anchor.id}:${candidate.id}`,
@@ -280,7 +362,6 @@ export const useBoardStore = create<BoardState>()(
       skipHydration: true,
       partialize: (state) => ({
         researchCase: state.researchCase,
-        selector: state.selector,
         pan: state.pan,
         zoom: state.zoom,
         inbox: state.inbox,

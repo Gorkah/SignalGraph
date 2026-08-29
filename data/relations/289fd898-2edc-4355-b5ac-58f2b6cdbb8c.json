@@ -1,0 +1,286 @@
+{
+  "id": "289fd898-2edc-4355-b5ac-58f2b6cdbb8c",
+  "name": "Bonify",
+  "introspection": {
+    "properties": [
+      "description",
+      "employee_count",
+      "website",
+      "headquarters_address",
+      "name",
+      "id",
+      "registered_address"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY",
+        "PARTICIPATES_IN_CORPORATE_EVENT",
+        "HAS_HEADQUARTERS_IN"
+      ],
+      "incoming": [
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "289fd898-2edc-4355-b5ac-58f2b6cdbb8c",
+    "name": "Bonify",
+    "entity_type": "Company",
+    "description": "Personal finance management",
+    "properties": {
+      "name": {
+        "value": "Bonify",
+        "sources": [
+          {
+            "name": "mosaicventures.com",
+            "document": "https://mosaicventures.com/portfolio",
+            "date": "2026-05-11"
+          }
+        ]
+      },
+      "description": {
+        "value": "Personal finance management",
+        "sources": [
+          {
+            "name": "mosaicventures.com",
+            "document": "https://mosaicventures.com/portfolio",
+            "date": "2026-05-11"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "mosaicventures.com",
+                  "document": "https://mosaicventures.com/portfolio",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "da90b871-9199-43ad-be11-0395b9cbda0b"
+            }
+          }
+        ],
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "0f40c9c8-c0a6-4409-a0bf-e9be4f84743c",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/bonify/__B3c7B9x6L-DAJfA3yr3nYHoGU9u7DtqgWzcfKjWFL8M/funding-and-investors",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/168344-83",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2020-08-25",
+              "id": "576f95f1-0a83-445f-ad04-0498cd92d7bf"
+            }
+          },
+          {
+            "id": "49c09381-6c5e-43b2-9350-a02017724e65",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/bonify/__B3c7B9x6L-DAJfA3yr3nYHoGU9u7DtqgWzcfKjWFL8M/funding-and-investors",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/bonify/company_overview/overview_timeline",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/168344-83",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2019-07-16",
+              "id": "af92c2a7-a9ac-4798-a0e2-583f9b95f874"
+            }
+          },
+          {
+            "id": "837b850d-ead0-4947-aa49-aa01035b44b5",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/bonify/__B3c7B9x6L-DAJfA3yr3nYHoGU9u7DtqgWzcfKjWFL8M/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2020-01-27",
+              "id": "0ea9dfe8-9367-4a0c-adbb-f2ee97f6cbe6"
+            }
+          }
+        ],
+        "HAS_HEADQUARTERS_IN": [
+          {
+            "id": "61901653-115d-4cc4-a4e4-04d8c5009f1e",
+            "name": "Germany",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GMPVC invests in bonify - German Media Pool",
+                  "document": "https://www.germanmediapool.com/news/gmpvc-invests-in-bonify",
+                  "date": "2020-01-27"
+                },
+                {
+                  "name": "Presskit - German Media Pool",
+                  "document": "https://www.germanmediapool.com/presskit",
+                  "date": "2018-01-01"
+                }
+              ],
+              "id": "60b8e8bc-10cf-4330-a94c-b0fc252f78e8"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "17001ee5-714a-4b2e-8f85-b4511bef2f23",
+            "name": "GMPVC German Media Pool GmbH",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GMPVC invests in bonify - German Media Pool",
+                  "document": "https://www.germanmediapool.com/news/gmpvc-invests-in-bonify",
+                  "date": "2020-01-27"
+                },
+                {
+                  "name": "Presskit - German Media Pool",
+                  "document": "https://www.germanmediapool.com/presskit",
+                  "date": "2018-01-01"
+                }
+              ],
+              "id": "e2f436fb-27a9-4004-88db-6193d064c4e6"
+            }
+          },
+          {
+            "id": "3e0fb84a-1b4c-46c9-865a-c071ca1e29c3",
+            "name": "German Media Pool",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.andrew-doherty-pbm4.squarespace.com",
+                  "document": "https://www.andrew-doherty-pbm4.squarespace.com/press-media",
+                  "date": "2026-06-20"
+                }
+              ],
+              "id": "f8dceda1-aa78-5b18-a16b-5cf3091b535c",
+              "valid_since": "2020-01-01"
+            }
+          },
+          {
+            "id": "7347b1be-94ea-48e8-9338-6067dd6859ef",
+            "name": "Mosaic Ventures",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "mosaicventures.com",
+                  "document": "https://mosaicventures.com/portfolio",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "adf09775-7bcf-496a-b3b4-d94991a7c574"
+            }
+          },
+          {
+            "id": "a86da67a-786b-41e2-904c-db485bde5aea",
+            "name": "Avala Capital GmbH",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/bonify/__B3c7B9x6L-DAJfA3yr3nYHoGU9u7DtqgWzcfKjWFL8M/funding-and-investors",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/bonify/company_overview/overview_timeline",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/168344-83",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "9b934997-f583-4a63-bb22-8d9e64e3685b"
+            }
+          },
+          {
+            "id": "dc60f800-f723-41b8-9482-810db28c9d70",
+            "name": "DN Capital",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/bonify/__B3c7B9x6L-DAJfA3yr3nYHoGU9u7DtqgWzcfKjWFL8M/funding-and-investors",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/168344-83",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "4d008733-9cd2-4b6e-9ce2-e9b7ccab04c6"
+            }
+          },
+          {
+            "id": "f02ffdf8-34b1-4a1e-aaf7-9f7d82f9e849",
+            "name": "Experian",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/bonify/__B3c7B9x6L-DAJfA3yr3nYHoGU9u7DtqgWzcfKjWFL8M/funding-and-investors",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/168344-83",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "1eaf5f95-5988-4182-b7cd-9535e656349c"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

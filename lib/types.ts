@@ -1,5 +1,3 @@
-export type SelectorMode = "description" | "money" | "city" | "latest";
-
 export type Point = { x: number; y: number };
 
 export type ClaimSource = {
@@ -15,13 +13,25 @@ export type Claim = {
   label: string;
   value: string;
   date?: string;
+  /** El resultado nombraba a la entidad de pasada; el dato es de otra ficha. */
+  mention?: true;
   source: ClaimSource;
 };
 
 export type RelationSummary = {
   type: string;
-  count: number;
+  /** Ausente cuando el cabo viene de introspección en vivo: Cala lista los
+   *  tipos disponibles pero no cuántos hay hasta que se proyecta. */
+  count?: number;
 };
+
+/**
+ * Un solo vocabulario para todo lo que hay en el corcho. Una pista es la misma
+ * ficha en su densidad mínima —retrato, nombre y tipo—; se vuelve completa al
+ * abrirla. Antes había dos símbolos (chincheta y ficha) para la misma cosa, y
+ * obligaba a aprender dos gramáticas.
+ */
+export type CardDensity = "lead" | "full";
 
 export type EntityCard = {
   id: string;
@@ -31,17 +41,12 @@ export type EntityCard = {
   position: Point;
   claims: Claim[];
   relations: RelationSummary[];
-};
-
-export type Pin = {
-  id: string;
-  name: string;
-  entityType: string;
-  category?: string;
-  position: Point;
-  parentId: string;
-  relationType: string;
-  claims?: Claim[];
+  density: CardDensity;
+  /** De qué ficha y por qué hilo salió esta pista. */
+  parentId?: string;
+  relationType?: string;
+  /** Pistas del mismo tirón comparten mazo y se apilan hasta que lo abrís. */
+  stackId?: string;
 };
 
 export type Edge = {
@@ -66,7 +71,6 @@ export type ResearchCase = {
   title: string;
   focus: CaseNode;
   cards: EntityCard[];
-  pins: Pin[];
   edges: Edge[];
 };
 
@@ -97,6 +101,7 @@ export type InboxReceipt = {
 };
 
 export type SeedPayload = {
+  caseView?: CaseView;
   researchCase: ResearchCase;
   fallbackDossier: Dossier;
   defaultReportQuery: string;
@@ -157,3 +162,24 @@ export type ApiErrorResponse = {
   error: string;
   code: ApiErrorCode;
 };
+
+/** Lo que un agente decide sobre un caso. Ver `scripts/case-agent.md`. */
+export type CaseManifest = {
+  version: number;
+  query: string;
+  slug: string;
+  generatedAt: string;
+  question: string;
+  subtitle: string;
+  openVerb: { relation: string; label: string; noun: string };
+  ring: Array<{ id: string; name: string; role: string; subtitle: string }>;
+  headline?: { bridge: string; why: string };
+  bridges: Array<{ name: string; id: string | null; holders: string[]; verified: boolean }>;
+  cover: Array<{ label: string; fields: string[]; fallback: string }>;
+  back: { fields: string[]; hint: string };
+  nouns: Array<{ type: string; noun: string }>;
+  finding: { template: string; toast: string };
+  notes: string;
+};
+
+export type CaseView = Pick<CaseManifest, "query" | "openVerb" | "cover" | "back" | "nouns" | "finding">;

@@ -1,0 +1,196 @@
+{
+  "id": "191aec45-7cd4-4bf2-a6d8-3848d5799af1",
+  "name": "Habi",
+  "introspection": {
+    "properties": [
+      "name",
+      "description",
+      "id"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY"
+      ],
+      "incoming": [
+        "IS_CMO_OF",
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "191aec45-7cd4-4bf2-a6d8-3848d5799af1",
+    "name": "Habi",
+    "entity_type": "Organization",
+    "description": "Colombian proptech platform that facilitates buying and selling apartments",
+    "properties": {
+      "name": {
+        "value": "Habi",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-04-30"
+          }
+        ]
+      },
+      "description": {
+        "value": "Colombian proptech platform that facilitates buying and selling apartments",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-20"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+            "name": "REAL_ESTATE",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio — Flybridge - The East Coast Firm Backing Our AI-Powered Future",
+                  "document": "https://flybridge.com/portfolio",
+                  "date": "2025-07-17"
+                }
+              ],
+              "id": "554edd6a-9dc7-453c-b964-13adb299124f"
+            }
+          },
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio — Flybridge - The East Coast Firm Backing Our AI-Powered Future",
+                  "document": "https://flybridge.com/portfolio",
+                  "date": "2025-07-17"
+                }
+              ],
+              "id": "cdfbc7f4-876e-4810-b6d3-a9cefa7a02dc"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "IS_CMO_OF": [
+          {
+            "id": "7bd74a42-1747-46ae-96a6-b511daae7289",
+            "name": "Juan Esteve Soler",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "acis.org.co",
+                  "document": "https://acis.org.co/portal/content/noticiasdelsector/juan-soler-se-une-habi-como-nuevo-chief-marketing-officer-luego-de-3-exitosos-a%C3%B1os-como-head",
+                  "date": "2026-04-30"
+                },
+                {
+                  "name": "Inicio - COPU",
+                  "document": "https://copublicitarias.com/juan-soler-se-une-a-habi-como-nuevo-chief-marketing-officer-luego-de-3-exitosos-anos-como-head-regional-de-marketing-en-uber/",
+                  "date": "2024-05-08"
+                },
+                {
+                  "name": "Juan Soler se une a HABI como nuevo Chief Marketing Officer | PR Noticias",
+                  "document": "https://prnoticias.com/2021/09/14/juan-soler-se-une-a-habi-como-nuevo-chief-marketing-officer/",
+                  "date": "2021-09-14"
+                }
+              ],
+              "id": "c269c725-a06d-5749-86a9-2f397a21d8e6",
+              "valid_since": "2021-09-09"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "27d940fd-6a3f-4bb8-b638-f650fec5d282",
+            "name": "FlyBridge Zártkörűen Működő Részvénytársaság",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio — Flybridge - The East Coast Firm Backing Our AI-Powered Future",
+                  "document": "https://flybridge.com/portfolio",
+                  "date": "2025-07-17"
+                }
+              ],
+              "id": "91c6126a-6854-41dc-8f40-23f06178b6bf"
+            }
+          },
+          {
+            "id": "3a801afa-9716-49f5-9832-7b642206ca28",
+            "name": "Banorte",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/banorte/__5BihayCXw6a8PwW25oHDVDeevVUAZqvOsClqGBB5N7Q",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "investors.banorte.com",
+                  "document": "https://investors.banorte.com/~/media/Files/B/Banorte-IR/press-release/en/2022/MatEv_HABI_may22.pdf",
+                  "date": "2026-07-29"
+                }
+              ],
+              "id": "393bf971-e294-5164-a233-fe68691bfd8a",
+              "valid_since": "2022-05-11"
+            }
+          },
+          {
+            "id": "c254f0f5-d39e-4ba7-8b7f-eb2308d00589",
+            "name": "BBVA Spark Growth Instrument",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/corporate-investments/investments-by-bbva-spark/__VvVZe2cfsToIkMH8cuB2Gv7xiw4CqPPkldxYhBrFvMY",
+                  "date": "2026-07-17"
+                },
+                {
+                  "name": "BBVA Spark finances Habi with USD 40 million to boost Colombian housing market",
+                  "document": "https://www.cuatrecasas.com/en/latam/art/bbva-spark-finances-habi-usd-40-million-boost-colombian-housing-market",
+                  "date": "2026-05-12"
+                }
+              ],
+              "id": "f328627a-7cd6-57a4-a324-74f6f8c7d527",
+              "valid_since": "2026-04-21"
+            }
+          },
+          {
+            "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+            "name": "BBVA Spark Fund",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/corporate-investments/investments-by-bbva-spark/__VvVZe2cfsToIkMH8cuB2Gv7xiw4CqPPkldxYhBrFvMY",
+                  "date": "2026-07-16"
+                },
+                {
+                  "name": "Habi - Structured Line of Credit - Colombia",
+                  "document": "https://idbinvest.org/en/projects/habi-structured-line-credit-colombia",
+                  "date": "2025-08-07"
+                }
+              ],
+              "id": "a9e68e9a-1f8c-5302-8545-ee0587356d29",
+              "valid_since": "2026-04-21"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

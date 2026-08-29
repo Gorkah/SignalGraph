@@ -1,0 +1,161 @@
+{
+  "id": "4342ab23-3e2a-43b4-b9e0-c76a84b170fa",
+  "name": "Clara",
+  "introspection": {
+    "properties": [
+      "description",
+      "founding_date",
+      "id",
+      "employee_count",
+      "name",
+      "website",
+      "registered_address"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY",
+        "INVESTED_IN"
+      ],
+      "incoming": [
+        "INVESTED_IN",
+        "IS_MEMBER_OF"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "4342ab23-3e2a-43b4-b9e0-c76a84b170fa",
+    "name": "Clara",
+    "entity_type": "Organization",
+    "description": "Mexican fintech company founded in 2020 that provides corporate cards and spend-management services.",
+    "properties": {
+      "name": {
+        "value": "Clara",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-07-01"
+          }
+        ]
+      },
+      "description": {
+        "value": "Mexican fintech company founded in 2020 that provides corporate cards and spend-management services.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-07-31"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Failory: 90% of Startups Fail — Learn How Not To.",
+                  "document": "https://failory.com/startups/2020-unicorns",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "75040f47-02eb-5e4d-be04-efeab794645f"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "6182d1da-bf29-4e2c-844b-77c600dcdd96",
+            "name": "Unknown Investor",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Hyper LATAM",
+                  "document": "https://www.hyperlatam.com/latin-american-startups-that-raised-capital-in-august",
+                  "date": "2026-07-19"
+                }
+              ],
+              "id": "8efa0330-2f0e-5dcd-9a8e-99d979211fd0"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "c254f0f5-d39e-4ba7-8b7f-eb2308d00589",
+            "name": "BBVA Spark Growth Instrument",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/corporate-investments/investments-by-bbva-spark/__VvVZe2cfsToIkMH8cuB2Gv7xiw4CqPPkldxYhBrFvMY",
+                  "date": "2026-07-17"
+                },
+                {
+                  "name": "BBVA Spark grants $36 million loan to fintech Clara",
+                  "document": "https://www.cuatrecasas.com/en/latam/art/bbva-spark-grants-36-million-loan-fintech-clara",
+                  "date": "2025-12-24"
+                }
+              ],
+              "id": "90220b21-10c4-538c-ad7c-d81e8748a301",
+              "valid_since": "2025-12-01"
+            }
+          },
+          {
+            "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+            "name": "BBVA Spark Fund",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/corporate-investments/investments-by-bbva-spark/__VvVZe2cfsToIkMH8cuB2Gv7xiw4CqPPkldxYhBrFvMY",
+                  "date": "2026-07-16"
+                },
+                {
+                  "name": "Spend management firm Clara secures $60M amid rapid transaction growth in LatAm | TechCrunch",
+                  "document": "https://techcrunch.com/2023/04/26/spend-management-clara-fintech-latin-america",
+                  "date": "2023-04-26"
+                }
+              ],
+              "id": "9311fd9a-ac5a-587a-a295-133218d7dfba",
+              "valid_since": "2025-12-01"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "2e1907c4-9921-4d0d-8d46-c92ff29cef53",
+            "name": "Colombia",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Hyper LATAM",
+                  "document": "https://www.hyperlatam.com/latin-american-startups-that-raised-capital-in-august",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Hyper LATAM",
+                  "document": "https://hyperlatam.com/latin-american-startups-that-raised-capital-in-august",
+                  "date": "2026-07-29"
+                }
+              ],
+              "id": "37406f00-2cdd-5d3d-872a-6ec980d928ed"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

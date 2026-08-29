@@ -1,0 +1,37 @@
+/* ---------------------------------------------------------------------------
+   El tablón infinito.
+
+   La rejilla ya no vive dentro de la superficie que se mueve (ahí siempre se
+   acababa: era un div con medidas). Ahora es una capa fija al viewport que
+   pinta la rejilla en coordenadas de pantalla y la desplaza con
+   `background-position`, así que se repite sin final en las cuatro
+   direcciones. La superficie se queda solo con las fichas.
+   --------------------------------------------------------------------------- */
+
+/* Sin tamaño y sin corcho pintado: no hay borde que se pueda alcanzar. Las
+   fichas siguen posicionándose contra su origen (0,0) igual que antes. */
+.board-surface {
+  width: 0;
+  height: 0;
+  background: none;
+}
+
+/* La capa de la rejilla es también la que recoge el arrastre del tablón: al
+   cubrir todo el viewport, se puede empezar a desplazar desde cualquier hueco
+   vacío, no solo desde donde llegaba el antiguo rectángulo. */
+.board-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  touch-action: none;
+  background-color: var(--board);
+  background-repeat: repeat;
+}
+
+/* El SVG de los hilos se dimensiona por contenido desde Hilos.tsx; hay que
+   soltar el `inset: 0` de globals para que mande el recuadro calculado. */
+.threads {
+  right: auto;
+  bottom: auto;
+}

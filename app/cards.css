@@ -1,0 +1,353 @@
+/* ---------------------------------------------------------------------------
+   LAS FICHAS
+
+   Dos cosas viven aquí:
+
+   1. El expediente que se hojea. Fuera la lente global: cada ficha enseña su
+      portada —nombre, dinero y ubicación a la vez— y se pasa de hoja para
+      leer la descripción por detrás.
+
+   2. Los tres niveles del tablón, que antes solo se diferenciaban por tamaño:
+      el caso, las fichas del anillo y las pistas que caen al tirar de un hilo.
+      La escalera se lee sin necesidad de leer: cabeza roja > cabeza negra >
+      sin cabeza; 14 > 8 > 3 de sombra; 3 > 2 > 1 marcas de rango.
+
+   Se carga después de globals.css, así que a igualdad de especificidad manda
+   este fichero. Los estados que globals define con `.clase.clase` (elegida,
+   reencuentro) se vuelven a declarar al final con la clase de nivel para que
+   sigan ganando; si no, la ficha se quedaba sin su anillo verde.
+   --------------------------------------------------------------------------- */
+
+
+/* ── Rango: las marcas que dicen quién manda ───────────────────────────
+   Un cuadradito por nivel, dibujado con la rejilla y no con una fuente,
+   para que sean píxeles exactos: 6px de marca y 4px de aire. */
+.rango {
+  display: block;
+  flex: none;
+  height: 6px;
+  background-image: repeating-linear-gradient(90deg, currentColor 0 6px, transparent 6px 10px);
+}
+.nivel-caso .rango { width: 26px; }   /* ■ ■ ■ */
+.nivel-ficha .rango { width: 16px; opacity: .8; }  /* ■ ■ */
+.nivel-pista .rango { width: 6px; opacity: .45; }  /* ■ */
+
+
+/* ══ NIVEL 3 · EL CASO ═══════════════════════════════════════════════
+   Lo único clavado con chincheta y lo único con la cabecera en rojo. Va
+   enmarcado dos veces —papel y halo— para que se despegue del corcho más
+   que ninguna otra cosa. Mide 296x184 y ahí se queda: Hilos.tsx ata los
+   hilos a ese centro. */
+.case-node.nivel-caso {
+  z-index: 20;
+  border: 3px solid var(--ink);
+  border-top: 12px solid var(--red);
+  box-shadow:
+    14px 14px 0 rgba(32, 27, 24, .78),
+    0 0 0 3px var(--paper),
+    0 0 0 6px rgba(214, 75, 55, .32);
+}
+.case-node.nivel-caso.has-finding {
+  border-top-color: var(--green);
+  box-shadow:
+    14px 14px 0 rgba(32, 27, 24, .78),
+    0 0 0 3px var(--paper),
+    0 0 0 6px rgba(77, 127, 84, .38);
+}
+
+/* La chincheta: cabeza con brillo y aguja clavada hacia abajo. */
+.case-pin {
+  position: absolute;
+  left: 50%;
+  top: -21px;
+  width: 18px;
+  height: 18px;
+  margin-left: -9px;
+  border: 2px solid var(--ink);
+  background: var(--red);
+  box-shadow: inset 4px 4px 0 rgba(255, 248, 223, .5), 0 5px 0 var(--ink);
+}
+.nivel-caso.has-finding .case-pin { background: var(--green); }
+
+.nivel-caso > header {
+  min-height: 40px;
+  gap: 10px;
+  letter-spacing: .12em;
+}
+.nivel-caso h2 {
+  margin: 8px 12px 0;
+  font-size: 21px;
+  line-height: .92;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.nivel-caso code { margin: 6px 12px; font-size: 12px; }
+.nivel-caso .case-finding {
+  margin: 6px 12px;
+  padding: 5px 7px;
+  font-size: 15px;
+  line-height: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.nivel-caso footer { justify-content: space-between; }
+
+
+/* ══ NIVEL 2 · LA FICHA ══════════════════════════════════════════════
+   Cabecera negra maciza: el rótulo del expediente. Es lo que la separa de
+   una pista de un vistazo, sin tener que comparar tamaños. */
+.entity-card.nivel-ficha {
+  z-index: 12;
+  border: 2px solid var(--ink);
+  border-top: 8px solid var(--ink);
+  background: var(--paper-bright);
+  box-shadow: 8px 8px 0 rgba(32, 27, 24, .72);
+}
+
+.nivel-ficha .card-drag {
+  min-height: 50px;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  gap: 9px;
+  padding: 5px 8px;
+  border-bottom: 2px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper-bright);
+}
+/* Retrato de fichaje: sobre la banda negra necesita su propio filo claro,
+   porque el marco que trae el SVG es del mismo color que la banda. */
+.nivel-ficha .retrato {
+  background: var(--paper-bright);
+  box-shadow: 0 0 0 2px var(--paper-bright);
+}
+.nivel-ficha .card-id { min-width: 0; }
+.nivel-ficha .card-id strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-size: 11px;
+  line-height: 1.2;
+}
+.nivel-ficha .card-id small {
+  display: block;
+  margin-top: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--yellow);
+  font-size: 14px;
+  line-height: 1;
+}
+.nivel-ficha .card-mark { display: flex; align-items: center; gap: 7px; }
+
+
+/* ── La hoja que se pasa ───────────────────────────────────────────────
+   Botón propio, y por eso no se pisa con nada: el clic de la carpeta vive
+   en el rótulo negro y el arrastre también (`.card-drag`), los cabos ya
+   paran su propio clic, y aquí se corta la propagación.
+
+   El volteo no es un giro 3D suavizado, que en pixel art se ve borroso: la
+   cara que está arriba se pliega contra el canto izquierdo hasta desaparecer
+   y la otra se despliega desde el mismo canto, las dos en `steps(3)`. Como
+   la de atrás sale con 130ms de retraso, nunca se ven las dos a la vez y el
+   gesto se lee como pasar una página del expediente. */
+.card-leaf {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  text-align: left;
+  cursor: pointer;
+  /* El interior del expediente, que asoma mientras la hoja gira. */
+  background:
+    repeating-linear-gradient(90deg, rgba(32, 27, 24, .10) 0 2px, transparent 2px 7px),
+    var(--paper);
+  box-shadow: inset 3px 0 0 rgba(32, 27, 24, .22);
+}
+
+.leaf {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  padding: 6px 9px;
+  background: var(--paper-bright);
+  box-shadow: 2px 0 0 rgba(32, 27, 24, .35);
+  transform-origin: left center;
+  transition: transform 120ms steps(3, end);
+}
+.leaf-portada { transform: scaleX(1); transition-delay: 130ms; }
+.leaf-dorso { transform: scaleX(0); transition-delay: 0ms; background: var(--paper); }
+.entity-card.is-dorso .leaf-portada { transform: scaleX(0); transition-delay: 0ms; }
+.entity-card.is-dorso .leaf-dorso { transform: scaleX(1); transition-delay: 130ms; }
+
+/* Portada: los tres datos a la vez. El nombre está siempre en el rótulo, así
+   que aquí van el dinero y el sitio, en dos renglones de registro. */
+.leaf-line {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 7px;
+}
+.leaf i {
+  font-family: var(--font-display);
+  font-size: 7px;
+  font-style: normal;
+  letter-spacing: .05em;
+  color: var(--blue);
+}
+.leaf b {
+  min-width: 0;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* El importe llega citado del archivo ("over €83 million"): ni se parsea ni
+   se redondea, así que tampoco se le da formato de número. */
+.leaf time {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 0 4px;
+  background: var(--yellow);
+  font-size: 13px;
+}
+/* Un hueco se cuenta, no se deja en blanco. */
+.leaf .is-void { opacity: .5; }
+
+/* Dorso: la descripción, con más aire porque es un párrafo. */
+.leaf-dorso { justify-content: flex-start; gap: 4px; }
+.leaf-dorso b {
+  font-size: 16px;
+  line-height: 1.02;
+  -webkit-line-clamp: 4;
+}
+
+/* El canto del expediente: las hojas que quedan debajo, vistas de lado. */
+.card-leaf::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 14px;
+  border-top: 1px solid rgba(32, 27, 24, .5);
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(180deg, rgba(32, 27, 24, .26) 0 1px, transparent 1px 4px);
+}
+/* Y la pestaña por la que se agarra para pasarla. */
+.leaf-tab {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  padding: 3px 7px 2px;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+  background: #e8dcb6;
+  font-family: var(--font-display);
+  font-size: 7px;
+  letter-spacing: .05em;
+}
+.card-leaf:hover .leaf-tab,
+.card-leaf:focus-visible .leaf-tab { background: var(--yellow); }
+.card-leaf:hover .leaf { translate: 0 -1px; }
+
+
+/* ══ NIVEL 1 · LA PISTA ══════════════════════════════════════════════
+   Ni cabeza ni volumen: papel apagado, sombra corta y una sola marca de
+   rango. Se lee como material sin revelar, que es justo lo que es hasta
+   que la abrís. */
+.lead-card.nivel-pista {
+  z-index: 10;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  gap: 8px;
+  padding: 8px 9px 18px;
+  border: 2px solid var(--ink);
+  border-left: 6px solid var(--thread-investment);
+  background: var(--paper);
+  box-shadow: 3px 3px 0 rgba(32, 27, 24, .55);
+}
+.lead-card.nivel-pista:hover {
+  box-shadow: 5px 5px 0 var(--yellow);
+  translate: -1px -1px;
+}
+.lead-card.nivel-pista .retrato { box-shadow: none; opacity: .9; }
+.nivel-pista .lead-id { min-width: 0; }
+.nivel-pista .lead-id strong { font-size: 8px; line-height: 1.2; }
+.nivel-pista .lead-id small {
+  display: block;
+  margin-top: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: .55;
+}
+.nivel-pista .rango { align-self: center; }
+.lead-foot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 3px 7px 2px;
+  border-top: 1px solid rgba(32, 27, 24, .5);
+  background: #e2d4a8;
+  font-family: var(--font-display);
+  font-size: 7px;
+  text-align: right;
+  letter-spacing: .05em;
+}
+.lead-card.nivel-pista:hover .lead-foot { background: var(--yellow); }
+.nivel-pista .dedup-badge { position: absolute; top: -9px; right: -5px; z-index: 2; }
+
+
+/* ══ Estados que tienen que seguir ganando ═══════════════════════════
+   Globals los declara con dos clases; las reglas de nivel de arriba empatan
+   en especificidad y llegan después, así que se repiten aquí con el nivel
+   incluido. El anillo del reencuentro va el último: es el instante por el
+   que existe la app. */
+.entity-card.nivel-ficha.is-selected {
+  box-shadow: 10px 10px 0 var(--yellow);
+  translate: -2px -2px;
+}
+.lead-card.nivel-pista.is-selected { box-shadow: 5px 5px 0 var(--yellow); }
+
+.entity-card.nivel-ficha:has(.dedup-badge),
+.lead-card.nivel-pista:has(.dedup-badge) {
+  z-index: 30;
+  box-shadow: 8px 8px 0 rgba(32, 27, 24, .6), 0 0 0 4px var(--green);
+}
+.entity-card.nivel-ficha:has(.dedup-badge) { border-top-color: var(--green); }
+.lead-card.nivel-pista:has(.dedup-badge) { border-left-color: var(--green); }
+.entity-card.nivel-ficha:has(.dedup-badge):hover,
+.lead-card.nivel-pista:has(.dedup-badge):hover {
+  box-shadow: 10px 10px 0 var(--yellow), 0 0 0 4px var(--green);
+  translate: -1px -1px;
+}
+
+
+/* globals apaga las duraciones, pero no los retrasos: sin esto, la hoja se
+   quedaría 130ms en blanco antes de aparecer la otra cara. */
+@media (prefers-reduced-motion: reduce) {
+  .leaf { transition-delay: 0ms !important; }
+}

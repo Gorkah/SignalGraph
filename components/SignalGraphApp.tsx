@@ -9,6 +9,7 @@ import type { SeedPayload } from "@/lib/types";
 
 export function SignalGraphApp({ seed }: { seed: SeedPayload }) {
   const initialize = useBoardStore((state) => state.initialize);
+  const setCaseView = useBoardStore((state) => state.setCaseView);
   const finishHydration = useBoardStore((state) => state.finishHydration);
   const hydrated = useBoardStore((state) => state.hydrated);
   const graph = useBoardStore((state) => state.researchCase);
@@ -18,9 +19,10 @@ export function SignalGraphApp({ seed }: { seed: SeedPayload }) {
   useEffect(() => {
     void Promise.resolve(useBoardStore.persist.rehydrate()).then(() => {
       initialize(seed.researchCase);
+      setCaseView(seed.caseView);
       finishHydration();
     });
-  }, [finishHydration, initialize, seed.researchCase]);
+  }, [finishHydration, initialize, setCaseView, seed.caseView, seed.researchCase]);
 
   useEffect(() => {
     if (!toast) return;
@@ -40,8 +42,8 @@ export function SignalGraphApp({ seed }: { seed: SeedPayload }) {
           <div><h1>SIGNALGRAPH</h1><p>{graph.title}</p></div>
         </div>
         <div className="board-stats">
-          <span>FICHAS <b>{graph.cards.length}</b></span>
-          <span>CHINCHETAS <b>{graph.pins.length}</b></span>
+          <span>FICHAS <b>{graph.cards.filter((card) => card.density === "full").length}</b></span>
+          <span>PISTAS <b>{graph.cards.filter((card) => card.density === "lead").length}</b></span>
           <span>HILOS <b>{graph.edges.length}</b></span>
         </div>
       </header>

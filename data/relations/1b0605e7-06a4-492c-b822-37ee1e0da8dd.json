@@ -1,0 +1,331 @@
+{
+  "id": "1b0605e7-06a4-492c-b822-37ee1e0da8dd",
+  "name": "Prophero",
+  "introspection": {
+    "properties": [
+      "name",
+      "website",
+      "legal_name",
+      "aliases",
+      "registered_address",
+      "founding_date",
+      "employee_count",
+      "description",
+      "id"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY",
+        "HAS_PRESENCE_IN",
+        "INVESTED_IN"
+      ],
+      "incoming": [
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "1b0605e7-06a4-492c-b822-37ee1e0da8dd",
+    "name": "Prophero",
+    "entity_type": "Organization",
+    "description": "A Madrid‑based PropTech startup founded in 2021 that operates in software, fintech and real‑estate services.",
+    "properties": {
+      "name": {
+        "value": "Prophero",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-03-27"
+          }
+        ]
+      },
+      "description": {
+        "value": "A Madrid‑based PropTech startup founded in 2021 that operates in software, fintech and real‑estate services.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-20"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+            "name": "REAL_ESTATE",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Empowering global tech founders",
+                  "document": "https://startupvalencia.org/investment-spanish-startups-2025",
+                  "date": "2026-05-08"
+                }
+              ],
+              "id": "f7aa0087-745c-5cb1-b3f0-ba61091e265a"
+            }
+          },
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startup Rise EU - European Startup News | Funding | Startup Insights",
+                  "document": "https://startuprise.co.uk/prophero-raises-e2-5-million-funding-from-bbva-spark",
+                  "date": "2026-06-17"
+                }
+              ],
+              "id": "de81d195-a977-5b61-bba8-171b7f78f95d"
+            }
+          },
+          {
+            "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+            "name": "SOFTWARE_AND_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "startuphub.ai",
+                  "document": "https://www.startuphub.ai/ai-news/funding-round/2025/ai-proptech-prophero-raises-e2-5m-for-spanish-market-growth/",
+                  "date": "2026-05-09"
+                }
+              ],
+              "id": "44b37623-6f05-54a7-b687-1572066528ca"
+            }
+          }
+        ],
+        "HAS_PRESENCE_IN": [
+          {
+            "id": "3bbe8853-c47f-442c-b9b3-e1f522ba614e",
+            "name": "Australia",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startup Rise EU - European Startup News | Funding | Startup Insights",
+                  "document": "https://startuprise.co.uk/prophero-raises-e2-5-million-funding-from-bbva-spark/",
+                  "date": "2026-04-29"
+                }
+              ],
+              "id": "b33a4eb0-ee6f-5056-900e-303ba0ce56c5"
+            }
+          },
+          {
+            "id": "52454e7c-081b-4cc9-ba80-460d55900127",
+            "name": "Ireland",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Capital Brief",
+                  "document": "https://www.capitalbrief.com/briefing/prophero-raises-251m-in-series-a-funding-15adfd07-a067-4d31-88e3-e5d6efb5512c",
+                  "date": "2026-04-29"
+                }
+              ],
+              "id": "a7c88706-b9f3-593c-ad46-8cbf73780fbc"
+            }
+          },
+          {
+            "id": "66cf65cf-d7e5-479c-9381-966699086591",
+            "name": "Europe",
+            "entity_type": "GPE",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/2025/08/australian-born-spanish-grown-prophero-lands-e2-5-million-from-bbva-spark-to-fuel-real-estate-tech-push-in-spain",
+                  "date": "2026-05-08"
+                }
+              ],
+              "id": "9a671fcc-a6de-5107-bf01-b64d5a6d9604"
+            }
+          },
+          {
+            "id": "8fb5fa24-b302-409b-abfd-28f114cc7db4",
+            "name": "Asia",
+            "entity_type": "GPE",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/2025/08/australian-born-spanish-grown-prophero-lands-e2-5-million-from-bbva-spark-to-fuel-real-estate-tech-push-in-spain",
+                  "date": "2026-05-08"
+                }
+              ],
+              "id": "e3866174-c492-5b27-be2b-425bca3914d0"
+            }
+          },
+          {
+            "id": "ae488aa7-a00f-4f47-a108-e895c3ff4f52",
+            "name": "India",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Home",
+                  "document": "https://www.startupdaily.net/topic/funding/real-estate-investment-startup-prophero-scoops-up-8-million-seed-round/",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "a48a0c2f-7b9d-5968-95a2-e1d77c58cfa5"
+            }
+          },
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "startuphub.ai",
+                  "document": "https://www.startuphub.ai/ai-news/funding-round/2025/ai-proptech-prophero-raises-e2-5m-for-spanish-market-growth/",
+                  "date": "2026-04-29"
+                }
+              ],
+              "id": "1a3480b4-eb33-5b26-81df-cb5edcb40af4"
+            }
+          },
+          {
+            "id": "d0bc843f-df34-42df-9cc4-a0d5ab9ee1e5",
+            "name": "Argentina",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Home",
+                  "document": "https://www.startupdaily.net/topic/funding/real-estate-investment-startup-prophero-scoops-up-8-million-seed-round/",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "c61cd04c-759e-580d-b475-cbc8234bc070"
+            }
+          },
+          {
+            "id": "d7ca2138-2706-4fa0-8c77-f59b0fae9249",
+            "name": "Indonesia",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Capital Brief",
+                  "document": "https://www.capitalbrief.com/briefing/prophero-raises-251m-in-series-a-funding-15adfd07-a067-4d31-88e3-e5d6efb5512c",
+                  "date": "2026-04-29"
+                }
+              ],
+              "id": "ac6295a1-15c2-5618-9ab4-cf024c9a9886"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "4f58ee07-8093-4dfc-ba31-c71c02e4fee0",
+            "name": "Bailador",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Dealflow - Spanish startup, tech and Venture Capital news",
+                  "document": "https://dealflow.es/issue/455/prophero-raised-16m-4founders-new-fund-freepik-ai-video",
+                  "date": "2026-06-21"
+                }
+              ],
+              "id": "695ba6cc-00fb-5fc0-958b-90149513aae9"
+            }
+          },
+          {
+            "id": "7447faaf-8cf8-4c1e-be4b-746dece1dbe9",
+            "name": "BBVA Spark",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/2025/08/australian-born-spanish-grown-prophero-lands-e2-5-million-from-bbva-spark-to-fuel-real-estate-tech-push-in-spain",
+                  "date": "2026-06-15"
+                },
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/companies/prophero/__J6YJvos5021oIWHxKtF2cLrttzXxAYqPuFDl7FMiWR0/funding-and-investors",
+                  "date": "2026-06-15"
+                }
+              ],
+              "id": "f9663360-d345-5cd7-9fa8-082b57483e3d"
+            }
+          },
+          {
+            "id": "76516af3-d6c5-4762-8f89-c3159f69c264",
+            "name": "Samaipata Ventures",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Samaipata Insights | Substack",
+                  "document": "https://samaipata.substack.com/p/h1-2025-samaipata-highlights",
+                  "date": "2026-07-28"
+                }
+              ],
+              "id": "48254a99-99b4-5a9a-8a76-e003b46fad68"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "4f58ee07-8093-4dfc-ba31-c71c02e4fee0",
+            "name": "Bailador",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Dealflow - Spanish startup, tech and Venture Capital news",
+                  "document": "https://dealflow.es/issue/455/prophero-raised-16m-4founders-new-fund-freepik-ai-video",
+                  "date": "2026-07-11"
+                }
+              ],
+              "id": "75356a1f-d996-5ef4-9a9d-19cca84a89c0"
+            }
+          },
+          {
+            "id": "7447faaf-8cf8-4c1e-be4b-746dece1dbe9",
+            "name": "BBVA Spark",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/directory/lca",
+                  "date": "2026-06-20"
+                }
+              ],
+              "id": "23064287-d962-5a96-9592-af1e560795ed"
+            }
+          },
+          {
+            "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+            "name": "BBVA Spark Fund",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/directory/lca",
+                  "date": "2026-07-16"
+                }
+              ],
+              "id": "c3e2be9c-e675-5a10-ba99-4323ecb54b2d"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

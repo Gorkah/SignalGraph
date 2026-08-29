@@ -1,0 +1,167 @@
+{
+  "id": "0e43f081-ce1f-4542-90c6-b94b7631dd21",
+  "name": "SIX FinTech Ventures",
+  "introspection": {
+    "properties": [
+      "description",
+      "founding_date",
+      "id",
+      "name",
+      "registered_address",
+      "website"
+    ],
+    "relationships": {
+      "outgoing": [
+        "INVESTED_IN",
+        "OPERATES_IN_INDUSTRY"
+      ],
+      "incoming": [
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "0e43f081-ce1f-4542-90c6-b94b7631dd21",
+    "name": "SIX FinTech Ventures",
+    "entity_type": "Organization",
+    "description": "A Swiss venture capital firm that serves as the investment arm of financial infrastructure provider SIX Group.",
+    "properties": {
+      "name": {
+        "value": "SIX FinTech Ventures",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-06-20"
+          }
+        ]
+      },
+      "description": {
+        "value": "A Swiss venture capital firm that serves as the investment arm of financial infrastructure provider SIX Group.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-04"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "INVESTED_IN": [
+          {
+            "id": "175aa84a-2d6b-4b94-a43e-fde275d7bee0",
+            "name": "Toq.io",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "uktechnews.info",
+                  "document": "https://www.uktechnews.info/2021/07/06/toqio-fintech-secures-6-84-million-seed-investment-from-investors-including-seaya-ventures",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "7ec72e2a-cb58-5b51-9bd9-09efb4139106"
+            }
+          },
+          {
+            "id": "c166cb69-dddb-451d-bf8b-5b1c4d012202",
+            "name": "Shift Cryptosecurity",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.fintechfutures.com",
+                  "document": "https://www.fintechfutures.com/cybersecurity/six-fintech-ventures-invests-in-vestr-and-shift-cryptosecurity",
+                  "date": "2026-08-29"
+                },
+                {
+                  "name": "SIX FinTech Ventures Invests in FinTech Companies Vestr and Shift Cryptosecurity",
+                  "document": "https://www.six-group.com/en/newsroom/archive/2018/20181112-sixfintechventures.html",
+                  "date": "2018-11-12"
+                }
+              ],
+              "id": "20ed1a16-ef65-5c7b-8f4a-8beb6eab490a",
+              "valid_since": "2018-11-12"
+            }
+          },
+          {
+            "id": "ffe1ba1c-c236-41d1-8245-946ea2ad458d",
+            "name": "Vestr Ag",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.fintechfutures.com",
+                  "document": "https://www.fintechfutures.com/cybersecurity/six-fintech-ventures-invests-in-vestr-and-shift-cryptosecurity",
+                  "date": "2026-08-29"
+                },
+                {
+                  "name": "SIX FinTech Ventures Invests in FinTech Companies Vestr and Shift Cryptosecurity",
+                  "document": "https://www.six-group.com/en/newsroom/archive/2018/20181112-sixfintechventures.html",
+                  "date": "2018-11-12"
+                }
+              ],
+              "id": "85136e11-17c9-5d3c-a14d-6e6c2aa1fcef",
+              "valid_since": "2018-11-12"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "uktechnews.info",
+                  "document": "https://www.uktechnews.info/2021/07/06/toqio-fintech-secures-6-84-million-seed-investment-from-investors-including-seaya-ventures",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "4fed6688-1012-5b12-ad43-f8cdfb45fb2b"
+            }
+          },
+          {
+            "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+            "name": "VENTURE_CAPITAL",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "uktechnews.info",
+                  "document": "https://www.uktechnews.info/2021/07/06/toqio-fintech-secures-6-84-million-seed-investment-from-investors-including-seaya-ventures",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "193036be-bd3a-5146-968f-c5ab1847e6a5"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "7b2c9a92-07e3-4ce3-8bd9-ffc0a897747a",
+            "name": "ClimateTrade",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "ESG Today: Week in Review",
+                  "document": "https://esg-investing.com/2022/01/26/carbon-markets-startup-climatetrade-raising-e20-million-to-fund-international-expansion",
+                  "date": "2026-06-20"
+                }
+              ],
+              "id": "569612a0-9f9b-5468-95aa-b1810e8ff2cd"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

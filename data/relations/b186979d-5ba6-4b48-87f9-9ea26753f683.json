@@ -1,0 +1,777 @@
+{
+  "id": "b186979d-5ba6-4b48-87f9-9ea26753f683",
+  "name": "ALDEA VENTURES, S.G.E.I.C. S.A.",
+  "introspection": {
+    "properties": [
+      "description",
+      "aliases",
+      "website",
+      "headquarters_address",
+      "id",
+      "name",
+      "registered_address",
+      "lei",
+      "legal_name",
+      "founding_date",
+      "employee_count"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY",
+        "HAS_PRESENCE_IN",
+        "INVESTED_IN",
+        "PARTICIPATES_IN_CORPORATE_EVENT",
+        "IS_MEMBER_OF",
+        "IS_REGISTERED_IN",
+        "HAS_HEADQUARTERS_IN"
+      ],
+      "incoming": [
+        "INVESTED_IN",
+        "IS_MEMBER_OF",
+        "FOUNDED",
+        "IS_COO_OF",
+        "WORKS_AT"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "b186979d-5ba6-4b48-87f9-9ea26753f683",
+    "name": "ALDEA VENTURES, S.G.E.I.C. S.A.",
+    "entity_type": "Company",
+    "description": "Barcelona-based venture capital firm founded in 2020 by Carlos Trenchs, Gonzalo Rodés, Josep Duran, and Alfonso Bassols",
+    "properties": {
+      "name": {
+        "value": "ALDEA VENTURES, S.G.E.I.C. S.A.",
+        "sources": [
+          {
+            "name": "GLEIF",
+            "document": "https://search.gleif.org/#/record/959800T3Y8RJ2SPDKT92",
+            "date": "2026-08-18"
+          }
+        ]
+      },
+      "description": {
+        "value": "Barcelona-based venture capital firm founded in 2020 by Carlos Trenchs, Gonzalo Rodés, Josep Duran, and Alfonso Bassols",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-07-24"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "capital-riesgo.es",
+                  "document": "https://capital-riesgo.es/es/articles/tags/six+fintech+ventures",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "6ee9f7a6-54f0-5b11-b61f-ee67445ad8b8"
+            }
+          },
+          {
+            "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+            "name": "VENTURE_CAPITAL",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Aldea Ventures | European Formation, Global Venture Investing",
+                  "document": "https://aldea.vc/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "vcwire.tech",
+                  "document": "https://vcwire.tech/2025/04/28/aldea-ventures-holds-first-e50m-close-of-second-fund-of-funds-towards-e125m/",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "706fcc44-3982-4980-ae62-1e5ade21c11a"
+            }
+          }
+        ],
+        "HAS_PRESENCE_IN": [
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Aldea Ventures | European Formation, Global Venture Investing",
+                  "document": "https://aldea.vc/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "vcwire.tech",
+                  "document": "https://vcwire.tech/2025/04/28/aldea-ventures-holds-first-e50m-close-of-second-fund-of-funds-towards-e125m/",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "d92eb6b4-4804-46a1-a0b9-045e0ed5a782"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "00ec3bb5-f97e-4c3a-866b-4ff9546ac9f2",
+            "name": "AUTOMATA LTD",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Science lab automation and robotics startup Automata raises $40M | TechCrunch",
+                  "document": "https://techcrunch.com/2023/10/03/lab-automation-and-robotics-startup-automata-raises-40m",
+                  "date": "2023-10-03"
+                },
+                {
+                  "name": "Automata raises $40m to accelerate growth and global presence",
+                  "document": "https://www.automata.tech/company-news/automata-technologies",
+                  "date": "2023-10-03"
+                },
+                {
+                  "name": "Automata: Funding, Team & Investors",
+                  "document": "https://startupintros.com/orgs/automata",
+                  "date": "2026-07-13"
+                }
+              ],
+              "id": "49b4a958-8924-4e6f-bbc5-c18ae5402a52"
+            }
+          },
+          {
+            "id": "0f9ee0a8-c70f-4650-9142-180bd4b159b7",
+            "name": "Yaba",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/460267-39",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "Yaba raised $85M in Series A equity and debt funding backed by Crossbeam Venture Partners and Tikehau Capital.",
+                  "document": "https://nordic9.com/news/yaba-raised-85m-in-series-a-equity-and-debt-funding-backed-by-crossbeam-venture-partners-and-tikehau-capital/",
+                  "date": "2022-03-06"
+                },
+                {
+                  "name": "startupshub.catalonia.com",
+                  "document": "https://startupshub.catalonia.com/startup/barcelona/yaba/5565",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "d5602ec1-0086-4a76-95d7-72cf63742b74"
+            }
+          },
+          {
+            "id": "12e3d6ea-316f-4718-8d32-3a3bfabc0151",
+            "name": "Habyt",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "capital-riesgo.es",
+                  "document": "https://capital-riesgo.es/en/articles?category=private-equity-investors-in-internet-ai-technology-companies-and-deep-tech&p=56",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "ba10f19b-b44c-5de3-9b7d-628240b5aeca"
+            }
+          },
+          {
+            "id": "29c9c19f-992d-4769-9b57-8d67f20185a7",
+            "name": "Citibox",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "radar-innovation.dealroom.co",
+                  "document": "https://radar-innovation.dealroom.co/investors/aldea_ventures",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "fdc93ad9-7763-4cca-8442-508343da1e90"
+            }
+          },
+          {
+            "id": "3282b141-fd2f-49fd-a27d-84e6fd5c5889",
+            "name": "Qogita",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "radar-innovation.dealroom.co",
+                  "document": "https://radar-innovation.dealroom.co/investors/aldea_ventures",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "01b3dfe9-b1f4-4e8d-a979-a149e06f08d3"
+            }
+          },
+          {
+            "id": "333355df-cca1-48a4-aa98-7da6341e4ac8",
+            "name": "Podimo",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.eu-startups.com",
+                  "document": "https://www.eu-startups.com/investor/aldea-ventures/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/aldea-ventures-closes-e50m-of-targeted-e125m-second-fund-to-fuel-deeptech-innovation-of-the-next-generation/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "radar-innovation.dealroom.co",
+                  "document": "https://radar-innovation.dealroom.co/investors/aldea_ventures",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "be8ae215-d110-4ead-8179-4f0a0eed9acf"
+            }
+          },
+          {
+            "id": "3ef8e2d5-31ad-49de-8095-8713fc1ce3e7",
+            "name": "Kenbi",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.eu-startups.com",
+                  "document": "https://www.eu-startups.com/investor/aldea-ventures/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/aldea-ventures-closes-e50m-of-targeted-e125m-second-fund-to-fuel-deeptech-innovation-of-the-next-generation/",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "7b57e870-89a1-4579-a04f-eca889c463fc"
+            }
+          },
+          {
+            "id": "3ff9f1fd-b7d8-44a5-813a-0cd33e4045fa",
+            "name": "Revelock",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/aldea-ventures-closes-e50m-of-targeted-e125m-second-fund-to-fuel-deeptech-innovation-of-the-next-generation/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/455073-49",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "011h raised €25M in Series A funding round led by Redalpine.",
+                  "document": "https://nordic9.com/news/011h-raised-25m-in-series-a-funding-round-led-by-redalpine/",
+                  "date": "2022-07-04"
+                }
+              ],
+              "id": "52354ee4-ee7e-4245-9c3a-db6433c44642"
+            }
+          },
+          {
+            "id": "5366d6c0-ae86-45f7-aace-561ade113193",
+            "name": "Sorare",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.eu-startups.com",
+                  "document": "https://www.eu-startups.com/investor/aldea-ventures/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/aldea-ventures-closes-e50m-of-targeted-e125m-second-fund-to-fuel-deeptech-innovation-of-the-next-generation/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "radar-innovation.dealroom.co",
+                  "document": "https://radar-innovation.dealroom.co/investors/aldea_ventures",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "05a23baa-cbe2-4adb-a617-387dc747680d"
+            }
+          },
+          {
+            "id": "794bddc3-978f-4900-8f6e-537455073acc",
+            "name": "AUTOMATA FRANCE",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.eu-startups.com",
+                  "document": "https://www.eu-startups.com/investor/aldea-ventures/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/aldea-ventures-closes-e50m-of-targeted-e125m-second-fund-to-fuel-deeptech-innovation-of-the-next-generation/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "radar-innovation.dealroom.co",
+                  "document": "https://radar-innovation.dealroom.co/investors/aldea_ventures",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "1c51860c-e2b7-4000-84c4-d2849a8636db"
+            }
+          },
+          {
+            "id": "89db388f-a216-4cd1-ab27-f6a684e876e9",
+            "name": "Exoticca",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Aldea Ventures",
+                  "document": "https://www.cbinsights.com/investor/aldea-ventures",
+                  "date": "2025-05-27"
+                },
+                {
+                  "name": "Barcelona-based travel tech Exoticca nabs €60 million Series D to keep disrupting the multi-day tour segment | EU-Startups",
+                  "document": "https://www.eu-startups.com/2024/07/barcelona-based-travel-tech-exoticca-nabs-e60-million-series-d-to-keep-disrupting-the-multi-day-tour-segment/",
+                  "date": "2024-07-24"
+                },
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/aldea-ventures-closes-e50m-of-targeted-e125m-second-fund-to-fuel-deeptech-innovation-of-the-next-generation/",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "3e39ce90-1ead-4110-b0d7-59bc64b81e27"
+            }
+          },
+          {
+            "id": "a8c9c792-d9ee-486f-915a-ed434094e798",
+            "name": "Jobandtalent",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "radar-innovation.dealroom.co",
+                  "document": "https://radar-innovation.dealroom.co/investors/aldea_ventures",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "afd36879-861d-413b-8047-77a7918f235c"
+            }
+          },
+          {
+            "id": "c0bc83be-2451-4828-9bdd-bddc1bec0289",
+            "name": "Habyt",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "capital-riesgo.es",
+                  "document": "https://capital-riesgo.es/en/articles/habyt-participada-por-inveready-y-aldea-ventures-cumple-5-a-os-adquiere-hmlet-y-se-convierte-en-el-referente-de-co-living-m-s-grande-del-mundo/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "radar-innovation.dealroom.co",
+                  "document": "https://radar-innovation.dealroom.co/investors/aldea_ventures",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "bfa0faee-c3e9-42eb-96a0-b9977b18603b"
+            }
+          },
+          {
+            "id": "f2b20ea8-c011-4ee4-b038-4bee061c8145",
+            "name": "Masia VC",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "InforCapital: Market Intelligence for Private Equity & Venture Capital",
+                  "document": "https://inforcapital.com/companies/masia-vc",
+                  "date": "2026-08-04"
+                }
+              ],
+              "id": "d076edc9-895a-56ad-b348-f80cd6471c82"
+            }
+          }
+        ],
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "2522945f-6b58-42a2-8ca4-680884e68ef1",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Science lab automation and robotics startup Automata raises $40M | TechCrunch",
+                  "document": "https://techcrunch.com/2023/10/03/lab-automation-and-robotics-startup-automata-raises-40m",
+                  "date": "2023-10-03"
+                },
+                {
+                  "name": "Automata raises $40m to accelerate growth and global presence",
+                  "document": "https://www.automata.tech/company-news/automata-technologies",
+                  "date": "2023-10-03"
+                },
+                {
+                  "name": "Automata: Funding, Team & Investors",
+                  "document": "https://startupintros.com/orgs/automata",
+                  "date": "2026-07-13"
+                }
+              ],
+              "event_date": "2023-10-03",
+              "id": "d3a7c8d2-7f8b-46a9-9525-2c4b7a291e36"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "f2b20ea8-c011-4ee4-b038-4bee061c8145",
+            "name": "Masia VC",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "MWC - The Largest And Most Influential Connectivity Event",
+                  "document": "https://www.mwcbarcelona.com/agenda/speakers/17449-carlos-trench",
+                  "date": "2026-08-04"
+                }
+              ],
+              "id": "8fa3daed-8e82-56cb-9790-9608e5046141"
+            }
+          }
+        ],
+        "IS_REGISTERED_IN": [
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/959800T3Y8RJ2SPDKT92",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "927adc3d-db84-5bad-983b-54ef922b67c1"
+            }
+          }
+        ],
+        "HAS_HEADQUARTERS_IN": [
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/959800T3Y8RJ2SPDKT92",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "68258cf1-9d0c-5f9a-a0b3-ab24a5956e91"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "1610f0ed-2677-4503-8633-115c5a27446c",
+            "name": "Lodgify",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "finance.yahoo.com",
+                  "document": "https://finance.yahoo.com/news/vacation-rental-saas-lodgify-raises-143100109.html",
+                  "date": "2026-06-04"
+                }
+              ],
+              "id": "04b3f1d4-f02b-5dad-9c0b-ea576fe084c1"
+            }
+          },
+          {
+            "id": "6fd43585-338c-49b2-a10f-377b395fa930",
+            "name": "011H SUSTAINABLE CONSTRUCTION S.L.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/011h-raised-25m-in-series-a-funding-round-led-by-redalpine",
+                  "date": "2026-07-24"
+                }
+              ],
+              "id": "004f07b8-4bf2-5360-88f4-7afa87944282"
+            }
+          },
+          {
+            "id": "85d4bdcd-e15d-41e2-beac-c7eb7772becd",
+            "name": "HOUSFY REAL ESTATE S.L.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/housfy-raised-30-million-in-series-b-funding-round-led-by-london-based-frog-capital",
+                  "date": "2026-06-16"
+                }
+              ],
+              "id": "a1c66be1-db08-5032-8bf2-1ca598551e64"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "7b853886-fe5f-4092-ad2f-468aba758846",
+            "name": "Carlos Trenchs",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Co-founder & Managing Partner",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/person/carlos-trenchs-sainz-de-la-maza",
+                  "date": "2026-04-14"
+                }
+              ],
+              "id": "301cb1d3-3b8f-54e9-9485-84110fa281e2"
+            }
+          },
+          {
+            "id": "80016840-3b5e-4e4e-a5b9-67c98122274b",
+            "name": "Gonzalo Rodés",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Managing Partner",
+              "sources": [
+                {
+                  "name": "Aldea Ventures | European Formation, Global Venture Investing",
+                  "document": "https://aldea.vc/team",
+                  "date": "2026-04-22"
+                }
+              ],
+              "id": "abc1d734-0adf-4fcf-a308-bce5ae4f2611"
+            }
+          },
+          {
+            "id": "a0d2a666-0b45-462f-94a7-02e97ab635e3",
+            "name": "Josep Duran",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Managing Partner",
+              "sources": [
+                {
+                  "name": "siliconcanals.com",
+                  "document": "https://siliconcanals.com/aldea-ventures-announces-a-60m-first-close/",
+                  "date": "2026-04-22"
+                }
+              ],
+              "id": "ec18caeb-6e7c-4252-aeb7-cd7f23a85998"
+            }
+          },
+          {
+            "id": "de77a110-0f53-4a37-a014-e8f9d4adaca6",
+            "name": "Alfonso Bassols",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Co-founder and Managing Partner",
+              "sources": [
+                {
+                  "name": "Aldea Ventures",
+                  "document": "https://www.privateequityinternational.com/institution-profiles/aldea-ventures.html",
+                  "date": "2022-06-08"
+                },
+                {
+                  "name": "Alfonso Bassols Email & Phone Number | Aldea Ventures Co-founder and Managing Partner Contact Information",
+                  "document": "https://rocketreach.co/alfonso-bassols-email_86595817",
+                  "date": "2026-01-01"
+                }
+              ],
+              "id": "1dc65b17-9401-4006-a119-b170a43eae1d"
+            }
+          },
+          {
+            "id": "f2b20ea8-c011-4ee4-b038-4bee061c8145",
+            "name": "Masia VC",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "InforCapital: Market Intelligence for Private Equity & Venture Capital",
+                  "document": "https://inforcapital.com/companies/masia-vc",
+                  "date": "2026-08-04"
+                }
+              ],
+              "id": "46b14fac-ca59-512f-ad84-0bc15bff561a"
+            }
+          }
+        ],
+        "FOUNDED": [
+          {
+            "id": "7b853886-fe5f-4092-ad2f-468aba758846",
+            "name": "Carlos Trenchs",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/aldeaventures/__Re567KN4JCeWvWV8IUQTHgB45PhUjjsJNfTMUiF172g",
+                  "date": "2026-04-14"
+                }
+              ],
+              "id": "7fa0745b-b526-5af7-8076-f2e9f4a2ffaf"
+            }
+          },
+          {
+            "id": "80016840-3b5e-4e4e-a5b9-67c98122274b",
+            "name": "Gonzalo Rodés",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "InforCapital: Market Intelligence for Private Equity & Venture Capital",
+                  "document": "https://inforcapital.com/companies/aldea-ventures",
+                  "date": "2026-04-22"
+                }
+              ],
+              "id": "ca0e58bf-806c-43d0-bd5c-8912b8d9be97"
+            }
+          },
+          {
+            "id": "a0d2a666-0b45-462f-94a7-02e97ab635e3",
+            "name": "Josep Duran",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "InforCapital: Market Intelligence for Private Equity & Venture Capital",
+                  "document": "https://inforcapital.com/companies/aldea-ventures",
+                  "date": "2026-04-22"
+                }
+              ],
+              "id": "f31cd361-136c-4dab-8396-cbdd1bc90a9f"
+            }
+          },
+          {
+            "id": "de77a110-0f53-4a37-a014-e8f9d4adaca6",
+            "name": "Alfonso Bassols",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "InforCapital: Market Intelligence for Private Equity & Venture Capital",
+                  "document": "https://inforcapital.com/companies/aldea-ventures",
+                  "date": "2026-04-22"
+                }
+              ],
+              "id": "c164b85b-7c3a-4a5b-add7-6263ae4122ae"
+            }
+          }
+        ],
+        "IS_COO_OF": [
+          {
+            "id": "7b853886-fe5f-4092-ad2f-468aba758846",
+            "name": "Carlos Trenchs",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/aldea-ventures/people",
+                  "date": "2026-04-22"
+                }
+              ],
+              "id": "fb9ed421-4142-43db-af14-fd0154c2c64c"
+            }
+          }
+        ],
+        "WORKS_AT": [
+          {
+            "id": "7b853886-fe5f-4092-ad2f-468aba758846",
+            "name": "Carlos Trenchs",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Co-Founder & Managing Partner",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/person/carlos-trenchs-sainz-de-la-maza",
+                  "date": "2026-04-14"
+                }
+              ],
+              "id": "d26d949e-b168-58a2-96de-c002217097a6"
+            }
+          },
+          {
+            "id": "a0d2a666-0b45-462f-94a7-02e97ab635e3",
+            "name": "Josep Duran",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Managing Partner",
+              "sources": [
+                {
+                  "name": "Aldea Ventures creates 'hybrid' European €100M fund to invest both in micro VCs, plus follow-on | TechCrunch",
+                  "document": "https://techcrunch.com/2021/03/21/aldea-ventures-creates-hybrid-european-e100m-fund-to-invest-both-in-micro-vcs-plus-follow-on/",
+                  "date": "2021-03-21"
+                }
+              ],
+              "id": "cecdd38d-6958-495e-bd82-9d5ae6dff0fe",
+              "valid_since": "2021-03-21"
+            }
+          },
+          {
+            "id": "de77a110-0f53-4a37-a014-e8f9d4adaca6",
+            "name": "Alfonso Bassols",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Co-founder and Managing Partner",
+              "sources": [
+                {
+                  "name": "Alfonso Bassols Email & Phone Number | Aldea Ventures Co-founder and Managing Partner Contact Information",
+                  "document": "https://rocketreach.co/alfonso-bassols-email_86595817",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "Aldea Ventures | European Formation, Global Venture Investing",
+                  "document": "https://aldea.vc/team",
+                  "date": "2026-04-22"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/person/alfonso-bassols",
+                  "date": "2026-04-22"
+                }
+              ],
+              "id": "d4980933-a6cd-4de9-85b9-f150cceab152"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "id": "2b569ae9-388e-43b5-a055-cd6cb2fa5f48",
+  "name": "eYeka",
+  "introspection": {
+    "properties": [
+      "description",
+      "name",
+      "website",
+      "id"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY",
+        "HAS_HEADQUARTERS_IN",
+        "PARTICIPATES_IN_CORPORATE_EVENT"
+      ],
+      "incoming": [
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "2b569ae9-388e-43b5-a055-cd6cb2fa5f48",
+    "name": "eYeka",
+    "entity_type": "Company",
+    "description": "A participatory marketing platform that connects brands with creative communities to co-create content and ideas.",
+    "properties": {
+      "name": {
+        "value": "eYeka",
+        "sources": [
+          {
+            "name": "www.pappers.fr",
+            "document": "https://www.pappers.fr/entreprise/i-s-g-sofimac-innovation-420748097",
+            "date": "2026-08-24"
+          },
+          {
+            "name": "www.pappers.fr",
+            "document": "https://www.pappers.fr/entreprise/eyeka-488120916",
+            "date": "2026-08-24"
+          }
+        ]
+      },
+      "description": {
+        "value": "A participatory marketing platform that connects brands with creative communities to co-create content and ideas.",
+        "sources": [
+          {
+            "name": "www.pappers.fr",
+            "document": "https://www.pappers.fr/entreprise/i-s-g-sofimac-innovation-420748097",
+            "date": "2026-08-24"
+          },
+          {
+            "name": "www.pappers.fr",
+            "document": "https://www.pappers.fr/entreprise/eyeka-488120916",
+            "date": "2026-08-24"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "b1d0a7c0-7986-4a8f-a0d5-c78f03d956c6",
+            "name": "ADVERTISING_AND_MARKETING",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.pappers.fr",
+                  "document": "https://www.pappers.fr/entreprise/i-s-g-sofimac-innovation-420748097",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "www.pappers.fr",
+                  "document": "https://www.pappers.fr/entreprise/eyeka-488120916",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "05b31144-576a-4a37-b26a-d23c1f85738f"
+            }
+          },
+          {
+            "id": "bb7858a2-51d8-45e2-82bd-3ea6a06d317a",
+            "name": "INTERNET_AND_WEB_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.pappers.fr",
+                  "document": "https://www.pappers.fr/entreprise/i-s-g-sofimac-innovation-420748097",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "www.pappers.fr",
+                  "document": "https://www.pappers.fr/entreprise/eyeka-488120916",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "ad5b79e4-d098-49c4-957f-ff180811d596"
+            }
+          }
+        ],
+        "HAS_HEADQUARTERS_IN": [
+          {
+            "id": "b6f57d8b-33dd-409a-9fbb-269947c54e23",
+            "name": "France",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.pappers.fr",
+                  "document": "https://www.pappers.fr/entreprise/i-s-g-sofimac-innovation-420748097",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "www.pappers.fr",
+                  "document": "https://www.pappers.fr/entreprise/eyeka-488120916",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "f9624f82-19c1-45e7-98b1-83fb38212479"
+            }
+          }
+        ],
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "31ce2ee3-1a21-4018-9c38-1c4880566307",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "Eyeka raises €3 million for crowd-sourcing ad campaigns | TechCrunch",
+                  "document": "https://techcrunch.com/2010/01/15/eyeka-raises-e3-million-for-crowd-sourcing-ad-campaigns",
+                  "date": "2010-01-15"
+                },
+                {
+                  "name": "Eyeka Raises $4 million To Crowd-Source Ad Campaigns | TechCrunch",
+                  "document": "https://techcrunch.com/2010/01/15/eyeka-raises-4-million",
+                  "date": "2010-01-15"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/eyeka/__N1rlKDYFKx03bV8TGKBlbnlTNV1KC5mgifipS3JgvxQ/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2006-03-01",
+              "id": "cd0002a3-658f-42e2-983b-a174723e8142"
+            }
+          },
+          {
+            "id": "456aa1a6-459d-4d13-b1c2-d2d03fe0084c",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "Eyeka raises €3 million for crowd-sourcing ad campaigns | TechCrunch",
+                  "document": "https://techcrunch.com/2010/01/15/eyeka-raises-e3-million-for-crowd-sourcing-ad-campaigns",
+                  "date": "2010-01-15"
+                },
+                {
+                  "name": "Eyeka Raises $4 million To Crowd-Source Ad Campaigns | TechCrunch",
+                  "document": "https://techcrunch.com/2010/01/15/eyeka-raises-4-million",
+                  "date": "2010-01-15"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/eyeka/__N1rlKDYFKx03bV8TGKBlbnlTNV1KC5mgifipS3JgvxQ/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2010-01-15",
+              "id": "f90325ff-ab2f-40c1-9b57-c99a7384dd12"
+            }
+          },
+          {
+            "id": "5a6110b3-3f70-49c1-a6bc-4cc13a7a688d",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/eyeka/__N1rlKDYFKx03bV8TGKBlbnlTNV1KC5mgifipS3JgvxQ",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/eyeka/__N1rlKDYFKx03bV8TGKBlbnlTNV1KC5mgifipS3JgvxQ/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2013-02-13",
+              "id": "e6ab4896-fc5e-4fdd-89ad-e3ab636463e5"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "5a079c02-0e55-4b48-a203-54c69ea16a13",
+            "name": "Ventech",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Eyeka raises €3 million for crowd-sourcing ad campaigns | TechCrunch",
+                  "document": "https://techcrunch.com/2010/01/15/eyeka-raises-e3-million-for-crowd-sourcing-ad-campaigns",
+                  "date": "2010-01-15"
+                },
+                {
+                  "name": "Eyeka Raises $4 million To Crowd-Source Ad Campaigns | TechCrunch",
+                  "document": "https://techcrunch.com/2010/01/15/eyeka-raises-4-million",
+                  "date": "2010-01-15"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/eyeka/__N1rlKDYFKx03bV8TGKBlbnlTNV1KC5mgifipS3JgvxQ/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "5569b9bd-532d-4540-9165-2985295c64bf"
+            }
+          },
+          {
+            "id": "9267b99c-27ec-4fb2-8439-ee1f73ba0d5b",
+            "name": "i-Source N.V.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Eyeka raises €3 million for crowd-sourcing ad campaigns | TechCrunch",
+                  "document": "https://techcrunch.com/2010/01/15/eyeka-raises-e3-million-for-crowd-sourcing-ad-campaigns",
+                  "date": "2010-01-15"
+                },
+                {
+                  "name": "Eyeka Raises $4 million To Crowd-Source Ad Campaigns | TechCrunch",
+                  "document": "https://techcrunch.com/2010/01/15/eyeka-raises-4-million",
+                  "date": "2010-01-15"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/eyeka/__N1rlKDYFKx03bV8TGKBlbnlTNV1KC5mgifipS3JgvxQ/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "d7cdd8f2-6832-48f7-8184-43a0a37efcc4"
+            }
+          },
+          {
+            "id": "a491fa9e-8529-4391-9d2f-dcfd7875691a",
+            "name": "SOFIMAC INNOVATION",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.pappers.fr",
+                  "document": "https://www.pappers.fr/entreprise/i-s-g-sofimac-innovation-420748097",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "www.pappers.fr",
+                  "document": "https://www.pappers.fr/entreprise/eyeka-488120916",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "2774ec9f-e5aa-4095-8f2b-dacd330155a5"
+            }
+          },
+          {
+            "id": "dc60f800-f723-41b8-9482-810db28c9d70",
+            "name": "DN Capital",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Eyeka raises €3 million for crowd-sourcing ad campaigns | TechCrunch",
+                  "document": "https://techcrunch.com/2010/01/15/eyeka-raises-e3-million-for-crowd-sourcing-ad-campaigns",
+                  "date": "2010-01-15"
+                },
+                {
+                  "name": "Eyeka Raises $4 million To Crowd-Source Ad Campaigns | TechCrunch",
+                  "document": "https://techcrunch.com/2010/01/15/eyeka-raises-4-million",
+                  "date": "2010-01-15"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/eyeka/__N1rlKDYFKx03bV8TGKBlbnlTNV1KC5mgifipS3JgvxQ/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "4ca0fa27-1540-4ace-b273-f22c8ec030e2"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

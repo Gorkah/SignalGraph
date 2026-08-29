@@ -1,6 +1,7 @@
 import "server-only";
 
 import { cacheFirst, readCache } from "@/lib/disk-cache";
+import { loadManifest } from "@/lib/manifest";
 import { claimsForEntity, entityById, getSeedPayload, loadCalaDumps, relationNeighbours, relationsFor } from "@/lib/seed";
 import type {
   ApiErrorCode,
@@ -15,8 +16,9 @@ import type {
 } from "@/lib/types";
 
 const QUERY_URL = process.env.CALA_API_URL ?? "https://api.cala.ai/v1/knowledge/query";
-const PROJECT_URL = process.env.CALA_PROJECT_URL;
-const INTROSPECTION_URL = process.env.CALA_INTROSPECTION_URL;
+const ENTITY_BASE = process.env.CALA_ENTITY_URL ?? "https://api.cala.ai/v1/entities";
+/** Con esto a "0" el tablón no sale a la red: solo caché de disco y volcados. */
+const LIVE = process.env.CALA_LIVE !== "0";
 
 export class CalaError extends Error {
   constructor(
@@ -33,6 +35,7 @@ function wait(ms: number) {
 }
 
 async function fetchCala(url: string, body: unknown, timeoutMs: number) {
+  const method = body === undefined ? "GET" : "POST";
   const apiKey = process.env.CALA_API_KEY;
   if (!apiKey) throw new CalaError("Falta CALA_API_KEY", "UPSTREAM_ERROR", 503);
 
@@ -40,9 +43,9 @@ async function fetchCala(url: string, body: unknown, timeoutMs: number) {
     let response: Response;
     try {
       response = await fetch(url, {
-        method: "POST",
+        method,
         headers: { "Content-Type": "application/json", "X-API-KEY": apiKey },
-        body: JSON.stringify(body),
+        body: body === undefined ? undefined : JSON.stringify(body),
         signal: AbortSignal.timeout(timeoutMs),
         cache: "no-store",
       });
@@ -169,70 +172,200 @@ function localProjection(entityId: string, relationType: string, limit: number):
   return { entityId, relationType, source: "local-evidence", entities };
 }
 
-function normalizeProjection(raw: unknown, entityId: string, relationType: string, limit: number): ProjectionResponse {
-  const payload = raw as { entities?: Array<Record<string, unknown>>; results?: Array<Record<string, unknown>> };
-  const rows = payload.entities ?? payload.results;
-  if (!Array.isArray(rows)) throw new CalaError("Proyección sin entidades", "UPSTREAM_ERROR", 502);
-  const entities = rows.slice(0, limit).flatMap((row): ProjectionEntity[] => {
-    const id = row.id;
-    const name = row.name;
-    if (typeof id !== "string" || typeof name !== "string") return [];
-    return [{ id, name, entityType: typeof row.entity_type === "string" ? row.entity_type : "Entity", claims: [] }];
-  });
-  return { entityId, relationType, source: "live", entities };
+type CalaNeighbour = { id?: unknown; name?: unknown; entity_type?: unknown };
+
+/** Aplana `{outgoing: {TIPO: [...]}, incoming: {...}}` a una lista de vecinos. */
+function flattenRelationships(raw: unknown, relationType: string, limit: number): ProjectionEntity[] {
+  const payload = raw as { relationships?: Record<string, Record<string, CalaNeighbour[]>> };
+  const seen = new Set<string>();
+  const entities: ProjectionEntity[] = [];
+  for (const types of Object.values(payload.relationships ?? {})) {
+    for (const [type, items] of Object.entries(types ?? {})) {
+      if (type !== relationType || !Array.isArray(items)) continue;
+      for (const item of items) {
+        if (typeof item?.id !== "string" || typeof item?.name !== "string") continue;
+        // Cala devuelve la misma empresa bajo varios UUID; deduplicar por
+        // nombre evita clavarla tres veces en el tablón.
+        const key = normalize(item.name);
+        if (!key || seen.has(key)) continue;
+        seen.add(key);
+        entities.push({
+          id: item.id,
+          name: item.name,
+          entityType: typeof item.entity_type === "string" ? item.entity_type : "Entity",
+          claims: [],
+        });
+        if (entities.length >= limit) return entities;
+      }
+    }
+  }
+  return entities;
 }
 
-export async function projectEntity(entityId: string, relationType: string, requestedLimit = 8) {
-  const limit = Math.max(1, Math.min(8, Math.floor(requestedLimit)));
+/**
+ * Tirar de un hilo, en tres escalones: caché de disco, volcados de
+ * `data/relations` y, solo si no hay nada, la API real. El camino ensayado es
+ * instantáneo y sobrevive sin red; lo que se salga de él sigue funcionando.
+ */
+export async function projectEntity(entityId: string, relationType: string, requestedLimit = 5) {
+  const limit = Math.max(1, Math.min(5, Math.floor(requestedLimit)));
   const input = { entityId, relationType, limit };
   const cached = await readCache<ProjectionResponse>("projection", input);
   if (cached) return { ...cached, source: "disk" as const };
 
-  if (!PROJECT_URL) {
-    const { value } = await cacheFirst("projection", input, async () => localProjection(entityId, relationType, limit));
+  const local = localProjection(entityId, relationType, limit);
+  if (local.entities.length) {
+    const { value } = await cacheFirst("projection", input, async () => local);
     return value;
   }
+  if (!LIVE) return local;
 
   const { value, hit } = await cacheFirst("projection", input, async () => {
-    const raw = await fetchCala(PROJECT_URL, input, 30_000);
-    return normalizeProjection(raw, entityId, relationType, limit);
+    const raw = await fetchCala(`${ENTITY_BASE}/${encodeURIComponent(entityId)}`, {
+      properties: ["name", "description"],
+      relationships: {
+        outgoing: { [relationType]: { limit: limit * 3 } },
+        incoming: { [relationType]: { limit: limit * 3 } },
+      },
+    }, 30_000);
+    return {
+      entityId,
+      relationType,
+      source: "live" as const,
+      entities: flattenRelationships(raw, relationType, limit),
+    };
   });
   return { ...value, source: hit ? "disk" as const : value.source };
 }
 
+type PropertyValue = {
+  value?: unknown;
+  sources?: Array<{ name?: string; document?: string; date?: string }>;
+};
+
+/**
+ * Qué propiedades vale la pena pedirle a una entidad recién abierta.
+ *
+ * La introspección dice cuáles EXISTEN y el manifiesto del caso cuáles
+ * IMPORTAN —son las que van en portada y al dorso—, así que se pide solo la
+ * intersección: ni un campo de más, y ninguno inventado. Sin manifiesto queda
+ * lo que describe a cualquier cosa.
+ */
+function askedFields() {
+  const manifest = loadManifest();
+  return [...new Set([
+    "description",
+    ...(manifest?.cover ?? []).flatMap((slot) => slot.fields),
+    ...(manifest?.back?.fields ?? []),
+  ])];
+}
+
+function wantedProperties(available: string[]) {
+  const offer = new Set(available);
+  const wanted = askedFields().filter((field) => offer.has(field));
+  return wanted.length ? wanted.slice(0, 10) : ["description"];
+}
+
+function humanKey(key: string) {
+  return key.replace(/_/g, " ");
+}
+
+/** Un valor de propiedad puede llegar como lista ("aliases") o como número. */
+function plainValue(raw: unknown): string {
+  if (Array.isArray(raw)) return raw.map(plainValue).filter(Boolean).join(", ");
+  if (raw === null || raw === undefined) return "";
+  if (typeof raw === "object") return "";
+  return String(raw).trim();
+}
+
+/**
+ * Las propiedades de la entidad, convertidas en claims con su procedencia
+ * real: Cala devuelve para cada una las fuentes de las que la sacó, así que la
+ * ficha puede decir de dónde viene cada renglón sin inventarse el origen.
+ */
+function claimsFromProperties(raw: unknown): Claim[] {
+  const payload = raw as { description?: string; properties?: Record<string, PropertyValue> };
+  const entries = Object.entries(payload.properties ?? {});
+  const claims: Claim[] = [];
+  for (const [key, property] of entries) {
+    if (key === "name" || key === "id") continue;
+    const value = plainValue(property?.value);
+    if (!value) continue;
+    const origin = property?.sources?.[0];
+    claims.push({
+      key,
+      label: humanKey(key),
+      value,
+      source: {
+        label: origin?.name ?? "Cala · entidad",
+        query: `propiedades de la entidad`,
+        file: "api.cala.ai/v1/entities",
+        runAt: origin?.date ?? new Date().toISOString().slice(0, 10),
+        url: origin?.document,
+      },
+    });
+  }
+  if (!claims.some((claim) => claim.key === "description") && payload.description?.trim()) {
+    claims.unshift({
+      key: "description",
+      label: "description",
+      value: payload.description.trim(),
+      source: {
+        label: "Cala · entidad",
+        query: "propiedades de la entidad",
+        file: "api.cala.ai/v1/entities",
+        runAt: new Date().toISOString().slice(0, 10),
+      },
+    });
+  }
+  return claims;
+}
+
 export async function introspectEntity(entityId: string): Promise<IntrospectionResponse> {
-  const input = { entityId };
+  // Los campos entran en la clave: si el manifiesto cambia lo que quiere en
+  // portada, la caché de ayer ya no sirve para la ficha de hoy.
+  const input = { entityId, fields: askedFields() };
   const cached = await readCache<IntrospectionResponse>("introspection", input);
   if (cached) return { ...cached, source: "disk" };
 
-  if (!INTROSPECTION_URL) {
-    const { value } = await cacheFirst("introspection", input, async () => {
-      const dumps = loadCalaDumps();
-      const entity = entityById(entityId, dumps);
-      if (!entity) throw new CalaError("Entidad no encontrada", "NOT_FOUND", 404);
-      return {
-        entity: { id: entity.id, name: entity.name, entityType: entity.entity_type, claims: claimsForEntity(entity, dumps) },
-        relations: relationsFor(entityId),
-        source: "local-evidence" as const,
-      };
-    });
+  const dumps = loadCalaDumps();
+  const known = entityById(entityId, dumps);
+  const localRelations = relationsFor(entityId);
+  const entity: ProjectionEntity = known
+    ? { id: known.id, name: known.name, entityType: known.entity_type, claims: claimsForEntity(known, dumps) }
+    : { id: entityId, name: "", entityType: "Entity", claims: [] };
+
+  if (localRelations.length) {
+    const { value } = await cacheFirst("introspection", input, async () => ({
+      entity, relations: localRelations, source: "local-evidence" as const,
+    }));
     return value;
   }
+  if (!LIVE) return { entity, relations: [], source: "local-evidence" };
 
   const { value, hit } = await cacheFirst("introspection", input, async () => {
-    const raw = await fetchCala(INTROSPECTION_URL, input, 30_000);
-    const payload = raw as { entity?: Record<string, unknown>; relations?: Array<{ type: string; count: number }> };
-    if (!payload.entity || typeof payload.entity.id !== "string" || typeof payload.entity.name !== "string") {
-      throw new CalaError("Introspección inválida", "UPSTREAM_ERROR", 502);
-    }
+    const raw = await fetchCala(`${ENTITY_BASE}/${encodeURIComponent(entityId)}/introspection`, undefined, 20_000);
+    const payload = raw as {
+      properties?: string[];
+      relationships?: { outgoing?: string[]; incoming?: string[] };
+    };
+    // La introspección lista los tipos disponibles pero no cuántos hay: el
+    // número solo aparece al proyectar, así que el cabo va sin contador.
+    const types = [...new Set([
+      ...(payload.relationships?.outgoing ?? []),
+      ...(payload.relationships?.incoming ?? []),
+    ])];
+    // Una ficha que se abre sin nada que decir no es un expediente. Si el
+    // dossier local no sabía de ella, se le piden a Cala sus propiedades: la
+    // introspección acaba de decir cuáles tiene y el manifiesto cuáles pinta.
+    const claims = entity.claims.length
+      ? entity.claims
+      : await fetchCala(`${ENTITY_BASE}/${encodeURIComponent(entityId)}`, {
+        properties: wantedProperties(payload.properties ?? []),
+      }, 30_000).then(claimsFromProperties).catch(() => []);
     return {
-      entity: {
-        id: payload.entity.id,
-        name: payload.entity.name,
-        entityType: typeof payload.entity.entity_type === "string" ? payload.entity.entity_type : "Entity",
-        claims: [],
-      },
-      relations: Array.isArray(payload.relations) ? payload.relations : [],
+      entity: { ...entity, claims },
+      relations: types.map((type) => ({ type })),
       source: "live" as const,
     };
   });

@@ -19,10 +19,28 @@ const NOUNS: Record<string, string> = {
   DESIGNED_BY: "diseño",
   OPERATED_BY: "operación",
   REPORT_MATCH: "dossier",
+  HAS_HEADQUARTERS_IN: "sede",
+  IS_REGISTERED_IN: "registro",
+  IS_CMO_OF: "dirección",
+  IS_BENEFICIARY_OWNER_OF: "propiedad",
+  IS_ULTIMATE_PARENT_OF: "matriz",
+  IS_DIRECT_PARENT_OF: "matriz",
+  PUBLISHED_BY: "publicación",
 };
 
 export const CASE_RELATION = "LÍNEA DE CASO";
 
+/**
+ * Los sustantivos del caso mandan sobre el mapa estático: el agente los decide
+ * mirando qué relaciones aparecieron de verdad, y sabe de este dominio más que
+ * una tabla escrita a mano. El mapa queda de red para lo que no previera.
+ */
+let caseNouns: Record<string, string> = {};
+
+export function registerNouns(pairs?: Array<{ type: string; noun: string }>) {
+  caseNouns = Object.fromEntries((pairs ?? []).map(({ type, noun }) => [type, noun]));
+}
+
 export function relationNoun(type: string) {
-  return NOUNS[type] ?? type.toLocaleLowerCase("es").replace(/_/g, " ");
+  return caseNouns[type] ?? NOUNS[type] ?? type.toLocaleLowerCase("es").replace(/_/g, " ");
 }

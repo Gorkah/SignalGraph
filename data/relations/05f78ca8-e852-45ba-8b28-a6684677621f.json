@@ -1,0 +1,421 @@
+{
+  "id": "05f78ca8-e852-45ba-8b28-a6684677621f",
+  "name": "COMUNIDAD FILMIN S.L.",
+  "introspection": {
+    "properties": [
+      "description",
+      "headquarters_address",
+      "lei",
+      "name",
+      "id",
+      "registered_address",
+      "legal_name",
+      "founding_date",
+      "aliases"
+    ],
+    "relationships": {
+      "outgoing": [
+        "IS_REGISTERED_IN",
+        "PARTICIPATES_IN_CORPORATE_EVENT",
+        "HAS_HEADQUARTERS_IN"
+      ],
+      "incoming": [
+        "WORKS_AT",
+        "FOUNDED",
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "05f78ca8-e852-45ba-8b28-a6684677621f",
+    "name": "COMUNIDAD FILMIN S.L.",
+    "entity_type": "Company",
+    "description": "a Spanish streaming video platform headquartered in Barcelona, founded in 2007",
+    "properties": {
+      "name": {
+        "value": "COMUNIDAD FILMIN S.L.",
+        "sources": [
+          {
+            "name": "GLEIF",
+            "document": "https://search.gleif.org/#/record/959800LLZEYYJKUPBG23",
+            "date": "2026-08-16"
+          }
+        ]
+      },
+      "description": {
+        "value": "a Spanish streaming video platform headquartered in Barcelona, founded in 2007",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-19"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "IS_REGISTERED_IN": [
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/959800LLZEYYJKUPBG23",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "78951531-a7aa-5dc5-8273-f589c8f4c484"
+            }
+          }
+        ],
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "0d895500-09ff-4d65-9847-509cc7861623",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/filmin/__4wFWqyMKp4Hcv0qoQ_cseEEWExcUyfW2u5wYZFuHJ0g",
+                  "date": "2026-07-28"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/filmin/__4wFWqyMKp4Hcv0qoQ_cseEEWExcUyfW2u5wYZFuHJ0g/funding-and-investors",
+                  "date": "2026-07-28"
+                }
+              ],
+              "event_date": "2022-01-01",
+              "id": "e92c5deb-77d9-428a-ade2-b2f12021495b"
+            }
+          },
+          {
+            "id": "2710c6a1-7f73-4015-a8eb-dfaa0c57e251",
+            "name": "MNA_COMPLETED",
+            "entity_type": "CorporateEvent",
+            "properties": {
+              "role": "TARGET",
+              "sources": [
+                {
+                  "name": "Nazca acquires a majority stake in Filmin",
+                  "document": "https://www.leadersleague.com/es/news/nazca-acquires-a-majority-stake-in-filmin",
+                  "date": "2020-12-01"
+                },
+                {
+                  "name": "Filmin introduces new shareholders to accelerate its growth plan | Nazca",
+                  "document": "https://www.nazca.es/en/noticias/filmin-introduces-new-shareholders-to-accelerate-its-growth-plan",
+                  "date": "2020-11-30"
+                },
+                {
+                  "name": "en.wikipedia.org",
+                  "document": "https://en.wikipedia.org/wiki/Filmin",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Comunidad Filmin, S.L. Asset Profile | Preqin",
+                  "document": "https://www.preqin.com/data/profile/asset/comunidad-filmin--s-l-/404049",
+                  "date": "2025-02-19"
+                }
+              ],
+              "event_date": "2020-11-01",
+              "id": "9803150d-d5fa-4e43-b57b-a3ec245c6fae"
+            }
+          },
+          {
+            "id": "63af7b10-8720-4cf5-9eea-70afd532010b",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/filmin/__4wFWqyMKp4Hcv0qoQ_cseEEWExcUyfW2u5wYZFuHJ0g",
+                  "date": "2026-07-28"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/filmin/__4wFWqyMKp4Hcv0qoQ_cseEEWExcUyfW2u5wYZFuHJ0g/funding-and-investors",
+                  "date": "2026-07-28"
+                }
+              ],
+              "event_date": "2014-11-04",
+              "id": "784a55a1-38cc-451c-80be-5ffaf1fe79c2"
+            }
+          },
+          {
+            "id": "83999ecc-9618-47c2-b84a-a3e95f1bcdf1",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/filmin/__4wFWqyMKp4Hcv0qoQ_cseEEWExcUyfW2u5wYZFuHJ0g",
+                  "date": "2026-07-28"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/filmin/__4wFWqyMKp4Hcv0qoQ_cseEEWExcUyfW2u5wYZFuHJ0g/funding-and-investors",
+                  "date": "2026-07-28"
+                }
+              ],
+              "event_date": "2022-12-01",
+              "id": "e93c6bc9-70c5-4aab-9968-12c3522242f5"
+            }
+          }
+        ],
+        "HAS_HEADQUARTERS_IN": [
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/959800LLZEYYJKUPBG23",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "df9381ba-149b-5b23-9789-4df748c7b6a4"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "WORKS_AT": [
+          {
+            "id": "04464363-4a5a-4153-8bce-13ff925446ca",
+            "name": "Juan Carlos Tous",
+            "entity_type": "Person",
+            "properties": {
+              "role": "CEO",
+              "sources": [
+                {
+                  "name": "es.wikipedia.org",
+                  "document": "https://es.wikipedia.org/wiki/Filmin",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "es.linkedin.com",
+                  "document": "https://es.linkedin.com/in/juan-carlos-tous-371554a",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Juan Carlos Tous",
+                  "document": "https://diversidadaudiovisual.org/entrevista-a-juan-carlos-tous",
+                  "date": "2026-06-13"
+                },
+                {
+                  "name": "Juan Carlos Tous, cofundador de Filmin: “El usuario decide el formato, pero el producto es el mismo” – Academia de cine",
+                  "document": "https://www.academiadecine.com/2020/05/13/juan-carlos-tous-cofundador-de-filmin-el-usuario-decide-el-formato-pero-el-producto-es-el-mismo",
+                  "date": "2020-05-13"
+                },
+                {
+                  "name": "Juan Carlos Tous (Filmin): \"Un fanático del fútbol solo ve a su equipo; un cinéfilo, no\"",
+                  "document": "https://amp.expansion.com/directivos/2023/09/13/65009bcb468aeb437a8b461b.html",
+                  "date": "2023-09-13"
+                }
+              ],
+              "id": "0856ec80-9be6-4534-8056-ff72a461e4fc"
+            }
+          }
+        ],
+        "FOUNDED": [
+          {
+            "id": "04464363-4a5a-4153-8bce-13ff925446ca",
+            "name": "Juan Carlos Tous",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "es.wikipedia.org",
+                  "document": "https://es.wikipedia.org/wiki/Filmin",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "es.linkedin.com",
+                  "document": "https://es.linkedin.com/in/juan-carlos-tous-371554a",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Juan Carlos Tous",
+                  "document": "https://diversidadaudiovisual.org/entrevista-a-juan-carlos-tous",
+                  "date": "2026-06-13"
+                },
+                {
+                  "name": "Juan Carlos Tous, cofundador de Filmin: “El usuario decide el formato, pero el producto es el mismo” – Academia de cine",
+                  "document": "https://www.academiadecine.com/2020/05/13/juan-carlos-tous-cofundador-de-filmin-el-usuario-decide-el-formato-pero-el-producto-es-el-mismo",
+                  "date": "2020-05-13"
+                },
+                {
+                  "name": "Juan Carlos Tous (Filmin): \"Un fanático del fútbol solo ve a su equipo; un cinéfilo, no\"",
+                  "document": "https://amp.expansion.com/directivos/2023/09/13/65009bcb468aeb437a8b461b.html",
+                  "date": "2023-09-13"
+                }
+              ],
+              "id": "7e3a7322-1fe3-4334-98e9-2bf8c61a54ad"
+            }
+          },
+          {
+            "id": "54046ac5-fa09-4f52-88c5-fdbd4339640a",
+            "name": "José Antonio de Luna",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "es.wikipedia.org",
+                  "document": "https://es.wikipedia.org/wiki/Filmin",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Filmin | LinkedIn",
+                  "document": "https://es.linkedin.com/company/filmin",
+                  "date": "2026-07-27"
+                },
+                {
+                  "name": "www.thenewbarcelonapost.com",
+                  "document": "https://www.thenewbarcelonapost.com/historia-de-filmin-15-anos-de-una-idea-en-la-que-pocos-creian",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Juan Carlos Tous, cofundador de Filmin: “El usuario decide el formato, pero el producto es el mismo” – Academia de cine",
+                  "document": "https://www.academiadecine.com/2020/05/13/juan-carlos-tous-cofundador-de-filmin-el-usuario-decide-el-formato-pero-el-producto-es-el-mismo",
+                  "date": "2020-05-13"
+                },
+                {
+                  "name": "Juan Carlos Tous (Filmin): \"Un fanático del fútbol solo ve a su equipo; un cinéfilo, no\"",
+                  "document": "https://amp.expansion.com/directivos/2023/09/13/65009bcb468aeb437a8b461b.html",
+                  "date": "2023-09-13"
+                }
+              ],
+              "id": "3a9d46d4-e7fb-4c00-b0cc-da808274a900"
+            }
+          },
+          {
+            "id": "93b896dc-da83-45ab-9687-5aa95466d1f0",
+            "name": "Jaume Ripoll",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "es.wikipedia.org",
+                  "document": "https://es.wikipedia.org/wiki/Filmin",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Filmin | LinkedIn",
+                  "document": "https://es.linkedin.com/company/filmin",
+                  "date": "2026-07-27"
+                },
+                {
+                  "name": "www.thenewbarcelonapost.com",
+                  "document": "https://www.thenewbarcelonapost.com/historia-de-filmin-15-anos-de-una-idea-en-la-que-pocos-creian",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Comunidad Filmin, entrevistamos a Jaume Ripoll, cofundador de la plataforma de cine independiente - AVisual PRO",
+                  "document": "https://www.avisualpro.es/comunidad-filmin-entrevistamos-jaume-ripoll-cofundador-la-plataforma-cine-independiente",
+                  "date": "2018-04-06"
+                },
+                {
+                  "name": "elpais.com",
+                  "document": "https://elpais.com/icon/2023-06-01/jaume-ripoll-creador-de-filmin-cuanto-mas-se-parezcan-las-peliculas-del-futuro-a-las-de-los-setenta-mas-posibilidades-tendran.html",
+                  "date": "2026-07-29"
+                }
+              ],
+              "id": "505df1e8-b1f8-424b-b44b-0a394fa1f8e8"
+            }
+          },
+          {
+            "id": "de30a936-1fad-4fa8-a729-c2b75fc8818c",
+            "name": "Enrique González Macho",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "es.wikipedia.org",
+                  "document": "https://es.wikipedia.org/wiki/Filmin",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "es.wikipedia.org",
+                  "document": "https://es.wikipedia.org/wiki/Enrique_Gonz%C3%A1lez_Macho",
+                  "date": "2026-07-29"
+                }
+              ],
+              "id": "05060fa8-2d69-4c9d-bd3d-21853d6da4ae"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "45319364-1317-4510-a153-24af17d43fc7",
+            "name": "METROPOLITAN FILMEXPORT",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/filmin/__4wFWqyMKp4Hcv0qoQ_cseEEWExcUyfW2u5wYZFuHJ0g",
+                  "date": "2026-07-28"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/filmin/__4wFWqyMKp4Hcv0qoQ_cseEEWExcUyfW2u5wYZFuHJ0g/funding-and-investors",
+                  "date": "2026-07-28"
+                }
+              ],
+              "id": "b4de4c80-4d51-42a5-9eb4-4424e4700d53"
+            }
+          },
+          {
+            "id": "a9408cad-8127-4c2e-a327-fbdc7ca55088",
+            "name": "Europa",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/filmin/__4wFWqyMKp4Hcv0qoQ_cseEEWExcUyfW2u5wYZFuHJ0g",
+                  "date": "2026-07-28"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/filmin/__4wFWqyMKp4Hcv0qoQ_cseEEWExcUyfW2u5wYZFuHJ0g/funding-and-investors",
+                  "date": "2026-07-28"
+                }
+              ],
+              "id": "a39b93b2-ff82-44bf-aa9e-371315f27fc9"
+            }
+          },
+          {
+            "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+            "name": "Seaya Ventures",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/seaya-ventures-closes-oversubscribed-third-fund-at-e165-million-to-back-european-tech-companies-in-early-stages",
+                  "date": "2026-06-29"
+                }
+              ],
+              "id": "e942ab04-8183-5bc5-85c6-52d290b6ba68"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

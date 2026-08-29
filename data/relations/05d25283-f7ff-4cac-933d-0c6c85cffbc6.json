@@ -1,0 +1,107 @@
+{
+  "id": "05d25283-f7ff-4cac-933d-0c6c85cffbc6",
+  "name": "o11h",
+  "introspection": {
+    "properties": [
+      "name",
+      "employee_count",
+      "website",
+      "description",
+      "id",
+      "registered_address"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY"
+      ],
+      "incoming": [
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "05d25283-f7ff-4cac-933d-0c6c85cffbc6",
+    "name": "o11h",
+    "entity_type": "Organization",
+    "description": "Barcelona-based real estate developer and construction firm",
+    "properties": {
+      "name": {
+        "value": "o11h",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-07-02"
+          }
+        ]
+      },
+      "description": {
+        "value": "Barcelona-based real estate developer and construction firm",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-04"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "1c1977b3-663a-47fb-81eb-51958758b70b",
+            "name": "CONSTRUCTION_AND_ENGINEERING",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "011h | LinkedIn",
+                  "document": "https://es.linkedin.com/company/011h",
+                  "date": "2026-07-14"
+                }
+              ],
+              "id": "f9ae0cc1-838e-56f7-ac39-dcf1bd6c1df0"
+            }
+          },
+          {
+            "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+            "name": "REAL_ESTATE",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "nordic9.com",
+                  "document": "https://nordic9.com/news/011h-secured-8-million-from-foundamental-a-o-proptech-cultivate-and-angel-investors-news6467048343",
+                  "date": "2026-07-20"
+                }
+              ],
+              "id": "0f831843-e4a2-556d-a136-53b3e4e1d808"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+            "name": "Seaya Ventures",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/ukio-raised-27-million-in-a-series-a-round-led-by-felix-capital-joined-by-kreos-capital-breega-partech-heartcore-bynd-and-angel-investors",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "8e13355b-a7f5-5d75-9aa9-10aac467c228"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

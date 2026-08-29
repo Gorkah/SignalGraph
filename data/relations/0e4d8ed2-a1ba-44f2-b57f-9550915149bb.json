@@ -1,0 +1,305 @@
+{
+  "id": "0e4d8ed2-a1ba-44f2-b57f-9550915149bb",
+  "name": "Artur'In",
+  "introspection": {
+    "properties": [
+      "name",
+      "description",
+      "id",
+      "website"
+    ],
+    "relationships": {
+      "outgoing": [
+        "HAS_HEADQUARTERS_IN",
+        "OPERATES_IN_INDUSTRY",
+        "PARTICIPATES_IN_CORPORATE_EVENT"
+      ],
+      "incoming": [
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "0e4d8ed2-a1ba-44f2-b57f-9550915149bb",
+    "name": "Artur'In",
+    "entity_type": "Company",
+    "description": "Provides SMEs with an AI-driven, one-stop-shop digital marketing solution to boost local visibility and customer acquisition across digital channels.",
+    "properties": {
+      "name": {
+        "value": "Artur'In",
+        "sources": [
+          {
+            "name": "What a year for Ventech & Alliance for Impact ! | Audrey Soussan",
+            "document": "https://www.linkedin.com/posts/audrey-soussan-0309b818_what-a-year-for-ventech-alliance-for-impact-activity-7018998348196007936-mvin",
+            "date": "2023-01-11"
+          }
+        ]
+      },
+      "description": {
+        "value": "Provides SMEs with an AI-driven, one-stop-shop digital marketing solution to boost local visibility and customer acquisition across digital channels.",
+        "sources": [
+          {
+            "name": "What a year for Ventech & Alliance for Impact ! | Audrey Soussan",
+            "document": "https://www.linkedin.com/posts/audrey-soussan-0309b818_what-a-year-for-ventech-alliance-for-impact-activity-7018998348196007936-mvin",
+            "date": "2023-01-11"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "HAS_HEADQUARTERS_IN": [
+          {
+            "id": "b6f57d8b-33dd-409a-9fbb-269947c54e23",
+            "name": "France",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "What a year for Ventech & Alliance for Impact ! | Audrey Soussan",
+                  "document": "https://www.linkedin.com/posts/audrey-soussan-0309b818_what-a-year-for-ventech-alliance-for-impact-activity-7018998348196007936-mvin",
+                  "date": "2023-01-11"
+                }
+              ],
+              "id": "2c17427f-ff71-483d-b269-8d75419af656"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+            "name": "SOFTWARE_AND_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "What a year for Ventech & Alliance for Impact ! | Audrey Soussan",
+                  "document": "https://www.linkedin.com/posts/audrey-soussan-0309b818_what-a-year-for-ventech-alliance-for-impact-activity-7018998348196007936-mvin",
+                  "date": "2023-01-11"
+                }
+              ],
+              "id": "6a92311d-4354-4d56-b122-6310ed86c375"
+            }
+          },
+          {
+            "id": "b1d0a7c0-7986-4a8f-a0d5-c78f03d956c6",
+            "name": "ADVERTISING_AND_MARKETING",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "What a year for Ventech & Alliance for Impact ! | Audrey Soussan",
+                  "document": "https://www.linkedin.com/posts/audrey-soussan-0309b818_what-a-year-for-ventech-alliance-for-impact-activity-7018998348196007936-mvin",
+                  "date": "2023-01-11"
+                }
+              ],
+              "id": "c1c38f26-cc06-439c-aa2e-3d54f5510e8f"
+            }
+          }
+        ],
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "584fdcb8-c663-4ac6-8cad-98060f642453",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/arturin/__bBJCffHDyoi4Kp0t3Yi7WQ8k3KWEnNXpSGt4lvgbTZ0",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/arturin/__bBJCffHDyoi4Kp0t3Yi7WQ8k3KWEnNXpSGt4lvgbTZ0/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/230722-30",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2021-06-02",
+              "id": "91f76a08-e182-482b-b337-0094eb626e5e"
+            }
+          },
+          {
+            "id": "d16a2cd1-475c-47ba-8467-b9efec584d27",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/arturin/__bBJCffHDyoi4Kp0t3Yi7WQ8k3KWEnNXpSGt4lvgbTZ0",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/arturin/__bBJCffHDyoi4Kp0t3Yi7WQ8k3KWEnNXpSGt4lvgbTZ0/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/230722-30",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2018-07-10",
+              "id": "6219473a-e7c1-428b-9455-d83a18139a75"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "12f25b56-5c30-4cc2-a844-499cc138d2f6",
+            "name": "VENTECH",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "What a year for Ventech & Alliance for Impact ! | Audrey Soussan",
+                  "document": "https://www.linkedin.com/posts/audrey-soussan-0309b818_what-a-year-for-ventech-alliance-for-impact-activity-7018998348196007936-mvin",
+                  "date": "2023-01-11"
+                }
+              ],
+              "id": "09dac2cf-cd50-43e6-a8cb-5fa9efdc8070"
+            }
+          },
+          {
+            "id": "1cbcede3-7d94-4def-bf7e-b0f799b0daa3",
+            "name": "PSG EQUITY L.L.C.",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/arturin/__bBJCffHDyoi4Kp0t3Yi7WQ8k3KWEnNXpSGt4lvgbTZ0",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/arturin/__bBJCffHDyoi4Kp0t3Yi7WQ8k3KWEnNXpSGt4lvgbTZ0/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/230722-30",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "06c6c600-5f23-4767-b82a-b0d65ed85b21"
+            }
+          },
+          {
+            "id": "5a079c02-0e55-4b48-a203-54c69ea16a13",
+            "name": "Ventech",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/arturin/__bBJCffHDyoi4Kp0t3Yi7WQ8k3KWEnNXpSGt4lvgbTZ0",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/arturin/__bBJCffHDyoi4Kp0t3Yi7WQ8k3KWEnNXpSGt4lvgbTZ0/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/230722-30",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "f55f463d-2115-4984-a76f-740b2b7fdf48"
+            }
+          },
+          {
+            "id": "abd4cae6-8be9-4671-923f-8c4d3a901547",
+            "name": "FJ Labs",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/arturin/__bBJCffHDyoi4Kp0t3Yi7WQ8k3KWEnNXpSGt4lvgbTZ0",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/arturin/__bBJCffHDyoi4Kp0t3Yi7WQ8k3KWEnNXpSGt4lvgbTZ0/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/230722-30",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "baac8af5-d82c-4223-963f-baab056ffd6a"
+            }
+          },
+          {
+            "id": "dc60f800-f723-41b8-9482-810db28c9d70",
+            "name": "DN Capital",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/arturin/__bBJCffHDyoi4Kp0t3Yi7WQ8k3KWEnNXpSGt4lvgbTZ0",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/arturin/__bBJCffHDyoi4Kp0t3Yi7WQ8k3KWEnNXpSGt4lvgbTZ0/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/230722-30",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "092b9ba2-e2c8-43b6-b3c3-dbbbb0290422"
+            }
+          },
+          {
+            "id": "e4207c0a-7a67-46cf-bf72-455705ec80e4",
+            "name": "Angyal Korlátolt Felelősségű Társaság",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/arturin/__bBJCffHDyoi4Kp0t3Yi7WQ8k3KWEnNXpSGt4lvgbTZ0",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/arturin/__bBJCffHDyoi4Kp0t3Yi7WQ8k3KWEnNXpSGt4lvgbTZ0/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/230722-30",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "d430513a-85b1-4654-9770-1ddc57fa7adb"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

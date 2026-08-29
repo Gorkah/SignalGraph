@@ -1,0 +1,769 @@
+{
+  "id": "76516af3-d6c5-4762-8f89-c3159f69c264",
+  "name": "Samaipata Ventures",
+  "introspection": {
+    "properties": [
+      "aliases",
+      "description",
+      "name",
+      "website",
+      "id",
+      "registered_address"
+    ],
+    "relationships": {
+      "outgoing": [
+        "PARTICIPATES_IN_CORPORATE_EVENT",
+        "OPERATES_IN_INDUSTRY",
+        "INVESTED_IN"
+      ],
+      "incoming": [
+        "PUBLISHED_BY",
+        "INVESTED_IN",
+        "FOUNDED"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "76516af3-d6c5-4762-8f89-c3159f69c264",
+    "name": "Samaipata Ventures",
+    "entity_type": "Organization",
+    "description": "A Spanish private equity and venture capital investment firm headquartered in Madrid.",
+    "properties": {
+      "name": {
+        "value": "Samaipata Ventures",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-06-30"
+          }
+        ]
+      },
+      "description": {
+        "value": "A Spanish private equity and venture capital investment firm headquartered in Madrid.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-22"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "22bc3756-0ca7-40b6-ae21-e2609ea53b9a",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Spain's Embat, which has raised $16M, plans to compete with Trovata in real-time accounting | TechCrunch",
+                  "document": "https://techcrunch.com/2024/02/27/embat",
+                  "date": "2024-02-27"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/embat/__U9jK-4YRpbTUmyuPIclbHXdzAhwq12ZYGUejWW8IVBs/funding-and-investors",
+                  "date": "2026-07-28"
+                }
+              ],
+              "event_date": "2024-02-16",
+              "id": "08287e80-d11d-406b-bb1d-e1c72c513447"
+            }
+          },
+          {
+            "id": "25b6d8cc-11ee-495e-82c0-8552603733f6",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Imperia Closes €3 Million in Funding",
+                  "document": "https://www.thesaasnews.com/news/imperia-closes-3-million-in-funding",
+                  "date": "2024-03-25"
+                },
+                {
+                  "name": "www.eu-startups.com",
+                  "document": "https://www.eu-startups.com/2024/03/valencia-based-imperia-raises-e3-million-to-become-the-go-to-saas-for-supply-chain-management-in-europe",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "novobrief.com",
+                  "document": "https://novobrief.com/valencian-startup-imperia-scm-raises-e3m-led-by-samaipata/11046",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2024-03-20",
+              "id": "fd385a24-e261-44ae-9cf4-2d63fcc81c06"
+            }
+          },
+          {
+            "id": "3469a76a-cdd9-474b-9107-0f9c11b81d7c",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/eolasmedical/__1I9QdlGE3f58cthdJ_D2sQTKJu8RZmnyKq_u0fcSKII",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2021-03-12",
+              "id": "8a67664b-0220-48cf-843f-786a6f836cf9"
+            }
+          },
+          {
+            "id": "4b5d3a98-7227-4dfd-96cb-b660bb04f431",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/embat/__U9jK-4YRpbTUmyuPIclbHXdzAhwq12ZYGUejWW8IVBs/funding-and-investors",
+                  "date": "2026-07-28"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/samaipata/__EbTTkgNtiNBpqqSHOg5y19YV8fg7FIMfUCt6XNmTfAQ",
+                  "date": "2026-07-28"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/cathayinnovation/__wih0DGEsHfrTzlhcF-LOfzcQKuMWIfhriAGd0XsP-gE",
+                  "date": "2026-07-28"
+                }
+              ],
+              "event_date": "2026-05-12",
+              "id": "1cdc5342-a5b6-4e86-aa84-18820bf66c27"
+            }
+          },
+          {
+            "id": "9c6d787c-5ba1-4339-b3e1-a866ec596496",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Carbon Maps helps the food industry reduce their climate impact | TechCrunch",
+                  "document": "https://techcrunch.com/2023/02/19/carbon-maps-helps-the-food-industry-reduce-their-climate-impact",
+                  "date": "2023-02-19"
+                },
+                {
+                  "name": "Carbon Maps, an environmental accounting startup for the food industry, gets new backers | TechCrunch",
+                  "document": "https://techcrunch.com?p=2637083",
+                  "date": "2023-12-05"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/carbonmaps/__FfTPgGDqvfnr_k5VS4KK1Bu6oc0VygDGU37Q4ioYgcE/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2023-02-20",
+              "id": "d6229f2b-9e0b-4106-a72d-92dc73110611"
+            }
+          },
+          {
+            "id": "a69e782e-c492-4a98-a72c-52546e163ab8",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Imperia Secures Over €10 Million in Series A",
+                  "document": "https://www.thesaasnews.com/news/imperia-secures-over-10-million-in-series-a",
+                  "date": "2025-02-19"
+                },
+                {
+                  "name": "www.eu-startups.com",
+                  "document": "https://www.eu-startups.com/2025/02/imperia-raises-over-e10-million-for-supply-chain-management-solution",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "Imperia Raises $10.5 Million to Expand Supply Chain Management Software | PYMNTS.com",
+                  "document": "https://www.pymnts.com/supply-chain/2025/imperia-raises-10-5-million-to-expand-supply-chain-management-software",
+                  "date": "2025-02-18"
+                },
+                {
+                  "name": "Imperia raises €10M to expand supply chain management platform across Europe",
+                  "document": "https://tech.eu/2025/02/18/imperia-raises-10m-to-expand-supply-chain-management-platform-across-europe",
+                  "date": "2025-02-18"
+                },
+                {
+                  "name": "Imperia Raises €10M to Accelerate AI-Powered Supply Chain",
+                  "document": "https://thetopvoices.com/story/imperia-raises-euro10m-to-accelerate-ai-powered-supply-chain-innovation",
+                  "date": "2025-02-18"
+                }
+              ],
+              "event_date": "2025-02-18",
+              "id": "6e749423-bb61-4fd4-82a9-bbe54a70c7b5"
+            }
+          },
+          {
+            "id": "b97286bd-50e2-47c7-9c67-d47c4bdf4d12",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Legl gets $7M to help law firms upgrade to digital workflows | TechCrunch",
+                  "document": "https://techcrunch.com/2021/03/11/legl-gets-7m-to-help-law-firms-upgrade-to-digital-workflows",
+                  "date": "2021-03-11"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/legl/__GiyUrT_mE1vcqXuyKWuLvrJte-u_9Avg8TDmh4O17gw/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2021-03-11",
+              "id": "cba6cb72-5ef8-4327-8a8b-464a2d6416fa"
+            }
+          },
+          {
+            "id": "dc139e3a-6a0f-4e25-923b-24c19ca23ac6",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/embat/__U9jK-4YRpbTUmyuPIclbHXdzAhwq12ZYGUejWW8IVBs/funding-and-investors",
+                  "date": "2026-07-28"
+                }
+              ],
+              "event_date": "2023-06-26",
+              "id": "d7fdd1ca-170f-4016-b66a-dacb72d4e843"
+            }
+          },
+          {
+            "id": "dc3a2433-0a54-4e03-ac64-5deb94efb15f",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/fintecture/__rWIFlEnobE9vw_i1-rPvIfUtQTQmjRF7YLk35Q3ta0c/funding-and-investors",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/fintecture/__rWIFlEnobE9vw_i1-rPvIfUtQTQmjRF7YLk35Q3ta0c",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2021-05-04",
+              "id": "c110daac-ca20-48cf-9147-681626a27a8f"
+            }
+          },
+          {
+            "id": "f3b73ab0-bbbd-4f5f-92b3-42b310224261",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Spotahome raises €13.6M to let you view and book mid to long-term accommodation online | TechCrunch",
+                  "document": "https://techcrunch.com/2017/10/17/spotahome",
+                  "date": "2017-10-17"
+                }
+              ],
+              "event_date": "2017-10-17",
+              "id": "62155cd3-2240-4203-b129-618f3a15a984"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "21774ccd-d5c5-4fa2-8ed1-ac3d20b46339",
+            "name": "PRIVATE_EQUITY",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Samaipata | LinkedIn",
+                  "document": "https://uk.linkedin.com/company/samaipata-ventures",
+                  "date": "2026-06-24"
+                }
+              ],
+              "id": "c1728e15-c963-53ec-b7d3-d078d38b34a8"
+            }
+          },
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "CB Insights — Predictive Intelligence on Private Companies",
+                  "document": "https://www.cbinsights.com/investor/samaipata-ventures",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "ae5da430-43de-5a02-8a3f-7b853a531976"
+            }
+          },
+          {
+            "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+            "name": "VENTURE_CAPITAL",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Samaipata | LinkedIn",
+                  "document": "https://uk.linkedin.com/company/samaipata-ventures",
+                  "date": "2026-06-24"
+                }
+              ],
+              "id": "baa21b14-9c45-5810-9f7c-04c587d1853a"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "16efbc09-0d98-45dc-8069-4cef62e95097",
+            "name": "Imperia",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Empowering global tech founders",
+                  "document": "https://startupvalencia.org/investment-spanish-startups-2025",
+                  "date": "2026-07-11"
+                },
+                {
+                  "name": "Dealflow - Spanish startup, tech and Venture Capital news",
+                  "document": "https://dealflow.es/issue/455/prophero-raised-16m-4founders-new-fund-freepik-ai-video",
+                  "date": "2026-07-11"
+                }
+              ],
+              "id": "95d8cbf3-020a-5d79-bfe9-ee2fdc887284"
+            }
+          },
+          {
+            "id": "19e23bec-a315-440c-b560-cede7eb69b09",
+            "name": "Legl",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Legl gets $7M to help law firms upgrade to digital workflows | TechCrunch",
+                  "document": "https://techcrunch.com/2021/03/11/legl-gets-7m-to-help-law-firms-upgrade-to-digital-workflows",
+                  "date": "2021-03-11"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/legl/__GiyUrT_mE1vcqXuyKWuLvrJte-u_9Avg8TDmh4O17gw/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "32adea43-db22-4bad-b410-2f26f8d28d9a"
+            }
+          },
+          {
+            "id": "3105fdbe-e3c9-4019-bc71-7c89d36f4d84",
+            "name": "EMBAT TECHNOLOGIES SL",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Empowering global tech founders",
+                  "document": "https://startupvalencia.org/investment-spanish-startups-2025",
+                  "date": "2026-07-09"
+                }
+              ],
+              "id": "44352475-b354-5c3d-b222-e3fd62df5bac"
+            }
+          },
+          {
+            "id": "43138329-ec24-453a-8cdf-6e9c9fdbd492",
+            "name": "Imperia SCM",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Imperia Closes €3 Million in Funding",
+                  "document": "https://www.thesaasnews.com/news/imperia-closes-3-million-in-funding",
+                  "date": "2024-03-25"
+                },
+                {
+                  "name": "www.eu-startups.com",
+                  "document": "https://www.eu-startups.com/2024/03/valencia-based-imperia-raises-e3-million-to-become-the-go-to-saas-for-supply-chain-management-in-europe",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "novobrief.com",
+                  "document": "https://novobrief.com/valencian-startup-imperia-scm-raises-e3m-led-by-samaipata/11046",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "b0e6e36b-6ec6-45f0-958d-910b4d9b2cc7"
+            }
+          },
+          {
+            "id": "54fdc8a0-0e71-4c1b-81d3-92ebc0862b5e",
+            "name": "FINTECTURE",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/fintecture/__rWIFlEnobE9vw_i1-rPvIfUtQTQmjRF7YLk35Q3ta0c/funding-and-investors",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/fintecture/__rWIFlEnobE9vw_i1-rPvIfUtQTQmjRF7YLk35Q3ta0c",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "2100eae8-01da-44f6-a2d6-07239b81fa6e"
+            }
+          },
+          {
+            "id": "7c2be268-82cf-4924-8f60-408cd6d94980",
+            "name": "Carbon Maps",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Carbon Maps helps the food industry reduce their climate impact | TechCrunch",
+                  "document": "https://techcrunch.com/2023/02/19/carbon-maps-helps-the-food-industry-reduce-their-climate-impact",
+                  "date": "2023-02-19"
+                },
+                {
+                  "name": "Carbon Maps, an environmental accounting startup for the food industry, gets new backers | TechCrunch",
+                  "document": "https://techcrunch.com?p=2637083",
+                  "date": "2023-12-05"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/carbonmaps/__FfTPgGDqvfnr_k5VS4KK1Bu6oc0VygDGU37Q4ioYgcE/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "954cc634-423a-488f-9ae3-14e24c5d635c"
+            }
+          },
+          {
+            "id": "97c68379-ff00-4569-b475-22271a047f8c",
+            "name": "PROPHERO GLOBAL SL",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Samaipata Insights | Substack",
+                  "document": "https://samaipata.substack.com/p/h1-2025-samaipata-highlights",
+                  "date": "2026-07-28"
+                }
+              ],
+              "id": "22f90aa9-cb56-5b8a-9651-b29b2041e566"
+            }
+          },
+          {
+            "id": "d076fe0d-4e98-4f32-86e7-5645354daee9",
+            "name": "Eolas Medical",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/eolasmedical/__1I9QdlGE3f58cthdJ_D2sQTKJu8RZmnyKq_u0fcSKII",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "e6f5306d-45b0-487a-a06c-c78c1059f630"
+            }
+          },
+          {
+            "id": "d5de6fdd-0847-4da6-8e5d-5e519a0b12b2",
+            "name": "Spotahome",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Spotahome raises €13.6M to let you view and book mid to long-term accommodation online | TechCrunch",
+                  "document": "https://techcrunch.com/2017/10/17/spotahome",
+                  "date": "2017-10-17"
+                }
+              ],
+              "id": "5d1cbbf1-aefc-45f4-96aa-405f6634e6d2"
+            }
+          },
+          {
+            "id": "e7449bbf-7400-45ab-9f23-c47d1d65c181",
+            "name": "OnTruck",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "capital-riesgo.es",
+                  "document": "https://capital-riesgo.es/es/articles?category=inversores-de-venture-capital-en-tecnolog%C3%ADa&p=23",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "2439ab42-6899-5dc9-a605-2a84fc162147"
+            }
+          },
+          {
+            "id": "fe92b6b3-5873-437d-9ece-affc317a7ffc",
+            "name": "Imperia",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Empowering global tech founders",
+                  "document": "https://startupvalencia.org/investment-spanish-startups-2025",
+                  "date": "2026-07-09"
+                }
+              ],
+              "id": "0788cbcd-a423-5beb-a445-f71eb50be46d"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "PUBLISHED_BY": [
+          {
+            "id": "1d0f51aa-09c4-4203-bbe7-be996554be52",
+            "name": "Startup Growth Pains: what are they and how to navigate through them (with the great Kintxo Cortés!)",
+            "entity_type": "WorkOfArt",
+            "properties": {
+              "sources": [
+                {
+                  "name": "medium.com",
+                  "document": "https://medium.com/samaipata-ventures/startup-growth-pains-what-are-they-and-how-to-navigate-through-them-with-the-great-kintxo-cortés-ee4443f0c1c4",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "7d7648b9-ed83-5384-b5c1-0f5fbecdb08d"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "1b0605e7-06a4-492c-b822-37ee1e0da8dd",
+            "name": "Prophero",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Samaipata Insights | Substack",
+                  "document": "https://samaipata.substack.com/p/h1-2025-samaipata-highlights",
+                  "date": "2026-07-28"
+                }
+              ],
+              "id": "48254a99-99b4-5a9a-8a76-e003b46fad68"
+            }
+          },
+          {
+            "id": "2448ce87-71ca-43c2-912e-6fd06057ced6",
+            "name": "Embat",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "TechCrunch | Startup and Technology News",
+                  "document": "https://techcrunch.com/2024/02/27/embat",
+                  "date": "2026-07-10"
+                }
+              ],
+              "id": "02c69a5f-ea9f-58dc-ac88-2edf5f4bc8a4"
+            }
+          },
+          {
+            "id": "3105fdbe-e3c9-4019-bc71-7c89d36f4d84",
+            "name": "EMBAT TECHNOLOGIES SL",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Pulse 2.0",
+                  "document": "https://pulse2.com/artificial-intelligence/page/23",
+                  "date": "2026-07-26"
+                }
+              ],
+              "id": "a5d624a4-c08f-5858-a6fc-6fbd1b2af56c"
+            }
+          },
+          {
+            "id": "398863f9-880e-4502-906a-66d1074ad096",
+            "name": "Imperia",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/directory/aip-technology",
+                  "date": "2026-08-02"
+                }
+              ],
+              "id": "8c0835a1-a08a-5466-99f6-0c59c4d26758"
+            }
+          },
+          {
+            "id": "3a9c0371-21e0-46d0-a15d-df434973dd7d",
+            "name": "Genesy",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "app.fundz.net",
+                  "document": "https://app.fundz.net/fundings/genesy-funding-round-seed-e32266",
+                  "date": "2026-07-27"
+                }
+              ],
+              "id": "5cd25f30-17fd-582d-b67c-e7aa1cf5a45f"
+            }
+          },
+          {
+            "id": "4621528d-937b-4b13-bb9c-b84f8fe1a40f",
+            "name": "Imperia",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Empowering global tech founders",
+                  "document": "https://startupvalencia.org/investment-spanish-startups-2025",
+                  "date": "2026-07-22"
+                }
+              ],
+              "id": "6a345972-1bbf-59b3-994b-a69cbcfc8433"
+            }
+          },
+          {
+            "id": "a3b082e0-72a3-44b4-b999-ae9379c87b33",
+            "name": "Imperia",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/2025/02/imperia-raises-over-e10-million-for-supply-chain-management-solution",
+                  "date": "2026-07-11"
+                }
+              ],
+              "id": "123cc2e4-c331-5dfa-9310-ed4a2984ca67"
+            }
+          },
+          {
+            "id": "c8558e12-3d9e-45c9-b274-d7123245e95e",
+            "name": "Imperia",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Empowering global tech founders",
+                  "document": "https://startupvalencia.org/investment-spanish-startups-2025",
+                  "date": "2026-08-28"
+                }
+              ],
+              "id": "b729da5a-74ae-54f7-8c6b-05d70e98e1f9"
+            }
+          },
+          {
+            "id": "cdd5db4b-ab00-47e4-90a5-8933db8196d2",
+            "name": "Imperia",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Feed View | Startbase",
+                  "document": "https://www.startbase.com/news/imperia-sichert-sich-series-a-finanzierung-von-burda-principal-investments",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "1ecb0536-97e8-5b9c-b202-ee1ef8d33276"
+            }
+          },
+          {
+            "id": "d5de6fdd-0847-4da6-8e5d-5e519a0b12b2",
+            "name": "Spotahome",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "finance.yahoo.com",
+                  "document": "https://finance.yahoo.com/news/term-sheet-tuesday-october-17-133911002.html",
+                  "date": "2026-07-11"
+                }
+              ],
+              "id": "3e940c91-ee08-5916-850a-2d4ee7da50c9"
+            }
+          },
+          {
+            "id": "e7449bbf-7400-45ab-9f23-c47d1d65c181",
+            "name": "OnTruck",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "venturebeat.com",
+                  "document": "https://venturebeat.com/enterprise/ontruck-raises-10-million",
+                  "date": "2026-06-30"
+                }
+              ],
+              "id": "7d2d0d6b-1219-58ca-8300-3efc1eb8eb89"
+            }
+          },
+          {
+            "id": "fe92b6b3-5873-437d-9ece-affc317a7ffc",
+            "name": "Imperia",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Empowering global tech founders",
+                  "document": "https://startupvalencia.org/investment-spanish-startups-2025",
+                  "date": "2026-07-15"
+                }
+              ],
+              "id": "b128c288-bfc3-58a3-9cf2-d52da1a1b0fd"
+            }
+          }
+        ],
+        "FOUNDED": [
+          {
+            "id": "cd21137a-34e5-4c5f-9fab-70780dc661c8",
+            "name": "José del Barrio",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "CB Insights — Predictive Intelligence on Private Companies",
+                  "document": "https://www.cbinsights.com/investor/samaipata-ventures",
+                  "date": "2026-08-29"
+                },
+                {
+                  "name": "EYE NEWSFLASH: Bruce brothers back in the game with surprise Purplebricks return",
+                  "document": "https://bebeez.eu/2018/08/06/italys-crowdinvesting-angels-incubators-and-venture-capital-pre-summertime-roundup-news-from-sorgente-samaipata-inveready",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "3b54b9e9-aea6-5271-a4b1-c9578c43669d"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

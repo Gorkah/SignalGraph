@@ -96,18 +96,23 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
   background-size: 16px 16px, 16px 16px, 64px 64px, 64px 64px;
 }
 .board-help {
-  position: absolute; left: 12px; bottom: 10px; padding: 3px 7px;
-  border: 1px solid var(--ink); background: rgba(241, 232, 207, .88); font-family: var(--font-display); font-size: 8px;
+  position: absolute; left: 12px; bottom: 10px; display: flex; align-items: center; gap: 10px;
+  padding: 4px 8px; border: 1px solid var(--ink); background: rgba(241, 232, 207, .92);
+  font-family: var(--font-display); font-size: 8px;
 }
+.board-help i { display: inline-flex; align-items: center; gap: 5px; font-style: normal; }
+.board-help i::before { content: ""; width: 22px; height: 3px; background: var(--thread-investment); }
+.board-help i.is-case::before { height: 0; background: none; border-top: 2px dashed var(--thread-case); }
+.board-help .sep { opacity: .4; }
 
 .threads { position: absolute; inset: 0; overflow: visible; pointer-events: none; }
 .thread polyline:not(.thread-hit) { fill: none; stroke-width: 3; stroke-linejoin: miter; vector-effect: non-scaling-stroke; }
 .thread-hit { fill: none; stroke: transparent; stroke-width: 18; pointer-events: stroke; }
 .thread text {
-  opacity: 0; pointer-events: none; fill: var(--ink); font-family: var(--font-display); font-size: 8px;
+  opacity: 1; pointer-events: none; fill: var(--ink); font-family: var(--font-display); font-size: 8px;
   paint-order: stroke; stroke: var(--paper-bright); stroke-width: 6px; stroke-linejoin: miter;
 }
-.thread:hover text { opacity: 1; }
+.thread:hover text { font-size: 10px; }
 .thread:hover polyline:not(.thread-hit) { stroke-width: 5; }
 
 .entity-card {
@@ -115,13 +120,10 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
   border: var(--border) solid var(--ink); background: var(--paper-bright); box-shadow: 6px 6px 0 rgba(32, 27, 24, .72);
   cursor: default; transition: box-shadow 100ms linear, translate 100ms linear;
 }
-/* Las categorías nunca son fichas: son el color del borde. */
-.entity-card { border-top-width: 6px; border-top-color: var(--thread-default); }
-.entity-card[data-category="Venture capital"] { border-top-color: var(--blue); }
-.entity-card[data-category="Growth finance"] { border-top-color: var(--green); }
-.entity-card[data-category="Fintech"] { border-top-color: var(--red); }
-.entity-card[data-category="Health AI"] { border-top-color: var(--yellow); }
-.entity-card[data-category="Robótica"] { border-top-color: #7a5aa8; }
+/* Un solo sistema de color, el de los hilos. Las tarjetas van neutras: la
+   categoría ya está escrita en texto, y un borde rojo "fintech" junto a un
+   hilo rojo "inversión" hacía leer los hilos como cosas de fintech. */
+.entity-card { border-top-width: 6px; border-top-color: var(--ink); }
 .entity-card.is-selected { box-shadow: 8px 8px 0 var(--yellow); translate: -2px -2px; }
 .card-drag {
   min-height: 42px; display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; align-items: center; gap: 7px;
@@ -246,7 +248,12 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 }
 
 /* El hilo de caso es fino y punteado: cuenta procedencia, no relación. */
-.thread.is-case polyline:not(.thread-hit) { stroke-width: 2; stroke-dasharray: 6 6; opacity: .75; }
+.thread.is-case polyline:not(.thread-hit) {
+  stroke-width: 2; stroke-dasharray: 6 6; opacity: 0; transition: opacity 140ms linear;
+}
+/* Diez líneas de procedencia permanentes enterraban los tres hilos que
+   importan. Se muestran solo al interrogar el caso. */
+.board-surface:has(.case-node:hover) .thread.is-case polyline:not(.thread-hit) { opacity: .8; }
 
 .more-relations { display: grid; place-items: center; padding: 0 7px; background: #ded0a4; font-size: 13px; }
 
@@ -292,3 +299,11 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
   color: var(--paper-bright); text-align: center; font-family: var(--font-display); font-size: 8px;
 }
 .zoom-reset { font-size: 15px; }
+
+.case-finding {
+  margin: 8px 12px; padding: 6px 8px;
+  border: 2px solid var(--ink); background: var(--yellow);
+  font-size: 16px; line-height: 1.05;
+}
+.case-node.has-finding { border-top-color: var(--green); }
+.case-node.has-finding > header { background: var(--green); }

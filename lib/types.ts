@@ -57,6 +57,8 @@ export type CaseNode = {
   title: string;
   query: string;
   position: Point;
+  /** Se rellena cuando el tablón encuentra algo: la pregunta pasa a respuesta. */
+  finding?: string;
 };
 
 export type ResearchCase = {

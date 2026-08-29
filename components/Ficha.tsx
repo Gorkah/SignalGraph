@@ -1,6 +1,7 @@
 "use client";
 
 import { visibleClaim } from "@/lib/fields";
+import { relationNoun } from "@/lib/relations";
 import { useBoardStore } from "@/lib/store";
 import type { EntityCard } from "@/lib/types";
 import { useNodeDrag } from "@/components/useNodeDrag";
@@ -49,7 +50,7 @@ export function Ficha({ card }: { card: EntityCard }) {
               void pullRelation(card.id, relation.type);
             }}
           >
-            <span>{relation.type}</span>
+            <span>{relationNoun(relation.type)}</span>
             <b>{relation.count}</b>
           </button>
         )) : <span className="no-relations">sin cabos locales</span>}

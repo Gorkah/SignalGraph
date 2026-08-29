@@ -2,7 +2,8 @@
 
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-import { ringPosition, snapPoint } from "@/lib/geometry";
+import { CARD_HEIGHT, CARD_WIDTH, combPosition, snapPoint } from "@/lib/geometry";
+import { CASE_RELATION } from "@/lib/relations";
 import type {
   Dossier,
   DossierCandidate,
@@ -132,9 +133,25 @@ export const useBoardStore = create<BoardState>()(
                 source: entity.claims[0]?.source,
               }];
               if (existingCard || existingPin) {
+                // El cruce: este nodo ya estaba en el corcho y ahora lo
+                // sostiene un segundo fondo. Ahí la pregunta se vuelve
+                // respuesta, y por eso el hallazgo sube a la tarjeta de caso.
+                const nextEdges = [...graph.edges, ...edge];
+                const holders = new Set(
+                  nextEdges
+                    .filter((item) => item.targetId === entity.id && item.relationType !== CASE_RELATION)
+                    .map((item) => item.sourceId),
+                );
+                const names = [...holders]
+                  .map((holderId) => graph.cards.find((card) => card.id === holderId)?.name)
+                  .filter(Boolean);
+                const finding = holders.size > 1
+                  ? `${names.join(" y ")} coinciden en ${entity.name}.`
+                  : graph.focus.finding;
                 return {
-                  researchCase: { ...graph, edges: [...graph.edges, ...edge] },
+                  researchCase: { ...graph, focus: { ...graph.focus, finding }, edges: nextEdges },
                   dedup: { ...state.dedup, [entity.id]: true },
+                  toast: holders.size > 1 ? `Coincidencia: ${entity.name} ya estaba en el tablón.` : state.toast,
                 };
               }
               const parent = graph.cards.find((card) => card.id === entityId);
@@ -148,7 +165,13 @@ export const useBoardStore = create<BoardState>()(
                     name: entity.name,
                     entityType: entity.entityType,
                     category: entity.category,
-                    position: ringPosition(parent.position, graph.pins.length + index),
+                    position: combPosition(
+                      { x: parent.position.x + CARD_WIDTH / 2, y: parent.position.y + CARD_HEIGHT / 2 },
+                      graph.focus.position,
+                      // El filtro ya crece con cada chincheta añadida en este
+                      // bucle; sumarle `index` saltaba de columna a mitad del tirón.
+                      graph.pins.filter((item) => item.parentId === entityId).length,
+                    ),
                     parentId: entityId,
                     relationType,
                     claims: entity.claims,
@@ -231,7 +254,11 @@ export const useBoardStore = create<BoardState>()(
               name: candidate.name,
               entityType: candidate.entityType ?? "Entity",
               category: candidate.category,
-              position: ringPosition(anchor.position, graph.pins.length),
+              position: combPosition(
+                { x: anchor.position.x + CARD_WIDTH / 2, y: anchor.position.y + CARD_HEIGHT / 2 },
+                graph.focus.position,
+                graph.pins.filter((item) => item.parentId === anchor.id).length,
+              ),
               parentId: anchor.id,
               relationType: "REPORT_MATCH",
               claims: candidate.claims,

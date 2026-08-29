@@ -10,12 +10,17 @@ import { useNodeDrag } from "@/components/useNodeDrag";
 export function Caso({ focus, cards, edges }: { focus: CaseNode; cards: number; edges: number }) {
   const drag = useNodeDrag(focus.id, focus.position);
   return (
-    <article className="case-node" style={{ left: focus.position.x, top: focus.position.y }}>
+    <article
+      className={`case-node ${focus.finding ? "has-finding" : ""}`}
+      style={{ left: focus.position.x, top: focus.position.y }}
+    >
       <header className="card-drag" {...drag}>
-        <span>CASO ABIERTO</span>
+        <span>{focus.finding ? "CASO · HALLAZGO" : "CASO ABIERTO"}</span>
       </header>
       <h2>{focus.title}</h2>
-      <code>{focus.query}</code>
+      {focus.finding
+        ? <p className="case-finding">{focus.finding}</p>
+        : <code>{focus.query}</code>}
       <footer>
         <span>{cards} FICHAS</span>
         <span>{edges} HILOS</span>

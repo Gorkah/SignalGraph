@@ -142,7 +142,12 @@ export function Tablon() {
         <button type="button" className="zoom-reset" onClick={fitToContent} aria-label="Encajar el caso">◱</button>
       </div>
 
-      <div className="board-help">ARRASTRÁ EL FONDO · RUEDA = ZOOM · +/−/0 · SIN FLECHAS</div>
+      <div className="board-help">
+        <i>inversión</i>
+        <i className="is-case">procedencia (hover en el caso)</i>
+        <span className="sep">·</span>
+        <span>RUEDA = ZOOM · +/−/0</span>
+      </div>
     </section>
   );
 }

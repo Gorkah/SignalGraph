@@ -3,6 +3,8 @@ import "server-only";
 import { createHash } from "node:crypto";
 import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
+import { combPosition } from "@/lib/geometry";
+import { CASE_RELATION } from "@/lib/relations";
 import type {
   CalaEntity,
   CalaQueryDump,
@@ -11,7 +13,9 @@ import type {
   ClaimSource,
   CaseNode,
   Dossier,
+  Edge,
   EntityCard,
+  Pin,
   ResearchCase,
   SeedPayload,
 } from "@/lib/types";
@@ -36,16 +40,8 @@ const RING = [
   ["f214cceb-1823-442b-b891-4f5e4047cab5", "Fintonic", "Fintech"],
 ] as const;
 
-/**
- * Participadas compartidas: cada una la sostienen DOS fondos del anillo, así
- * que cierran un triángulo visible. Son los hilos cruzados del tablón, y
- * salen medidos de `data/relations/_analysis.json`, no inventados.
- */
-const BRIDGES = [
-  ["1a0edbf9-deb5-45be-ba24-0e7a0377cc92", "THEKER Robotics", "Robótica", ["4712a5e8-fa2e-4f27-9375-73b8fdbd3faf", "d13f79c8-6698-4f4f-b98c-1a28d60d80b8"]],
-  ["57dcbb4a-e060-42b3-9f16-d1b96372ef9b", "Tucuvi", "Health AI", ["4712a5e8-fa2e-4f27-9375-73b8fdbd3faf", "e1bedcfd-ee74-4cb3-8059-d30de61462af"]],
-  ["1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca", "Payflow", "Fintech", ["e1bedcfd-ee74-4cb3-8059-d30de61462af", "e3a596f9-cb53-454e-ac29-8bf2c69f1d67"]],
-] as const;
+/** Ficha cuyo hilo viene ya tirado en la semilla, para enseñar la gramática. */
+const SEEDED_PULL = { entityId: "dc60f800-f723-41b8-9482-810db28c9d70", relationType: "INVESTED_IN", count: 4 };
 
 const LABELS: Record<string, string> = {
   name: "Nombre",
@@ -173,7 +169,7 @@ type RelationDump = {
   id: string;
   name: string;
   introspection?: { relationships?: { outgoing?: string[]; incoming?: string[] } };
-  projection?: { relationships?: Record<string, Record<string, Array<{ id: string; name: string }>>> };
+  projection?: { relationships?: Record<string, Record<string, Array<{ id: string; name: string; entity_type?: string }>>> };
 };
 
 let relationCache: Map<string, RelationDump> | undefined;
@@ -194,7 +190,30 @@ function loadRelations() {
   return relationCache;
 }
 
-function relationsFor(id: string) {
+/**
+ * Vecinos reales de una entidad para un tipo de relación, deduplicados por
+ * nombre: Cala devuelve la misma empresa con varios UUID (hay tres "Sesame"),
+ * y sin esto el tablón la pinearía tres veces.
+ */
+export function relationNeighbours(entityId: string, relationType: string) {
+  const dump = loadRelations().get(entityId);
+  const seen = new Set<string>();
+  const neighbours: Array<{ id: string; name: string; entityType: string }> = [];
+  for (const types of Object.values(dump?.projection?.relationships ?? {})) {
+    for (const [type, items] of Object.entries(types)) {
+      if (type !== relationType) continue;
+      for (const item of items) {
+        const key = normalized(item.name);
+        if (!key || seen.has(key)) continue;
+        seen.add(key);
+        neighbours.push({ id: item.id, name: item.name, entityType: item.entity_type ?? "Entity" });
+      }
+    }
+  }
+  return neighbours;
+}
+
+export function relationsFor(id: string) {
   const dump = loadRelations().get(id);
   const counts = new Map<string, number>();
   for (const types of Object.values(dump?.projection?.relationships ?? {})) {
@@ -248,32 +267,35 @@ function buildCards(dumps: ReturnType<typeof loadCalaDumps>): EntityCard[] {
     });
   });
 
-  // Cada puente va en la bisectriz angular de sus dos fondos, en un anillo
-  // exterior. Promediar vectores unitarios evita el salto de 360°.
-  const angles = new Map(RING.map(([id], index) => [id, ringAngle(index, RING.length)]));
-  for (const [id, fallbackName, category, parents] of BRIDGES) {
-    const parentAngles = parents.map((parent) => angles.get(parent)).filter((angle): angle is number => angle !== undefined);
-    if (parentAngles.length < 2) continue;
-    const ux = parentAngles.reduce((sum, angle) => sum + Math.cos(angle), 0) / parentAngles.length;
-    const uy = parentAngles.reduce((sum, angle) => sum + Math.sin(angle), 0) / parentAngles.length;
-    const norm = Math.hypot(ux, uy) || 1;
-    const centre = {
-      x: CENTRE.x + (ux / norm) * RING_RX * 1.72,
-      y: CENTRE.y + (uy / norm) * RING_RY * 1.72,
-    };
-    const entity = entityById(id, dumps);
-    cards.push({
-      id,
-      name: entity?.name || fallbackName,
-      entityType: entity?.entity_type ?? "Company",
-      category,
-      position: cardCorner(centre.x, centre.y),
-      claims: entity ? claimsForEntity(entity, dumps) : [],
-      relations: relationsFor(id),
-    });
-  }
-
   return cards;
+}
+
+function buildSeededPins(cards: EntityCard[], dumps: ReturnType<typeof loadCalaDumps>) {
+  const parent = cards.find((card) => card.id === SEEDED_PULL.entityId);
+  if (!parent) return { pins: [] as Pin[], edges: [] as Edge[] };
+  const neighbours = relationNeighbours(SEEDED_PULL.entityId, SEEDED_PULL.relationType).slice(0, SEEDED_PULL.count);
+  const origin = { x: parent.position.x + CARD_W / 2, y: parent.position.y + CARD_H / 2 };
+  const pins: Pin[] = [];
+  const edges: Edge[] = [];
+  neighbours.forEach((neighbour, index) => {
+    const entity = entityById(neighbour.id, dumps);
+    pins.push({
+      id: neighbour.id,
+      name: neighbour.name,
+      entityType: neighbour.entityType,
+      position: combPosition(origin, CENTRE, index),
+      parentId: SEEDED_PULL.entityId,
+      relationType: SEEDED_PULL.relationType,
+      claims: entity ? claimsForEntity(entity, dumps) : [],
+    });
+    edges.push({
+      id: `${SEEDED_PULL.entityId}:${SEEDED_PULL.relationType}:${neighbour.id}`,
+      sourceId: SEEDED_PULL.entityId,
+      targetId: neighbour.id,
+      relationType: SEEDED_PULL.relationType,
+    });
+  });
+  return { pins, edges };
 }
 
 function buildCase(dumps: ReturnType<typeof loadCalaDumps>): ResearchCase {
@@ -296,28 +318,28 @@ function buildCase(dumps: ReturnType<typeof loadCalaDumps>): ResearchCase {
     id: `case-${id}`,
     sourceId: focus.id,
     targetId: id,
-    relationType: "LÍNEA DE CASO",
+    relationType: CASE_RELATION,
   }));
 
-  // Hilos cruzados reales: fondo → participada compartida.
-  const bridgeEdges = BRIDGES.flatMap(([id, , , parents]) =>
-    parents.map((parent) => ({
-      id: `inv-${parent}-${id}`,
-      sourceId: parent,
-      targetId: id,
-      relationType: "INVESTED_IN",
-      source: relationSource,
-    })),
-  );
-
   const cards = buildCards(dumps);
-  const edges = [...caseEdges, ...bridgeEdges];
+  const seeded = buildSeededPins(cards, dumps);
+  const edges = [...caseEdges, ...seeded.edges.map((edge) => ({ ...edge, source: relationSource }))];
+
+  // El cabo ya no ofrece lo que está pineado: el contador refleja lo que queda.
+  for (const card of cards) {
+    if (card.id !== SEEDED_PULL.entityId) continue;
+    card.relations = card.relations.map((relation) =>
+      relation.type === SEEDED_PULL.relationType
+        ? { ...relation, count: Math.max(0, relation.count - seeded.pins.length) }
+        : relation,
+    );
+  }
 
   // El id sale del contenido: si cambia la semilla o el layout, el tablón
   // guardado en localStorage deja de coincidir y se regenera solo. Sin esto,
   // cualquier ajuste de posición queda invisible tras el primer render.
   const signature = createHash("sha1")
-    .update(JSON.stringify([focus.position, cards.map((c) => [c.id, c.position]), edges.map((e) => e.id)]))
+    .update(JSON.stringify([focus.position, cards.map((c) => [c.id, c.position]), seeded.pins.map((p) => [p.id, p.position]), edges.map((e) => e.id)]))
     .digest("hex")
     .slice(0, 8);
 
@@ -326,7 +348,7 @@ function buildCase(dumps: ReturnType<typeof loadCalaDumps>): ResearchCase {
     title: "Caso · capital fintech España",
     focus,
     cards,
-    pins: [],
+    pins: seeded.pins,
     edges,
   };
 }

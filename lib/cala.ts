@@ -1,7 +1,7 @@
 import "server-only";
 
 import { cacheFirst, readCache } from "@/lib/disk-cache";
-import { claimsForEntity, entityById, getSeedPayload, loadCalaDumps } from "@/lib/seed";
+import { claimsForEntity, entityById, getSeedPayload, loadCalaDumps, relationNeighbours, relationsFor } from "@/lib/seed";
 import type {
   ApiErrorCode,
   CalaEntity,
@@ -148,31 +148,24 @@ export async function queryDossier(input: string, options: { timeoutMs?: number;
   return { ...value, source: hit ? "disk" as const : "live" as const };
 }
 
-const LOCAL_EDGES: Record<string, Record<string, string[]>> = {
-  "dc60f800-f723-41b8-9482-810db28c9d70": {
-    INVESTED_IN: ["eb86df55-d9fb-41bc-8104-ad6a892dc7ec"],
-  },
-  "4712a5e8-fa2e-4f27-9375-73b8fdbd3faf": {
-    INVESTED_IN: ["81410730-336a-455d-aa77-1098b4fc9a23", "57dcbb4a-e060-42b3-9f16-d1b96372ef9b"],
-  },
-  "e3a596f9-cb53-454e-ac29-8bf2c69f1d67": {
-    FINANCED: ["cac5c8eb-f483-428a-9ee1-0897ae037133"],
-  },
-};
-
+/**
+ * Tirar de un hilo se resuelve contra `data/relations`, que trajo
+ * `scripts/pull-relations.mjs`. Cero llamadas en vivo y datos reales: el
+ * ensayo paga, la demo cobra.
+ */
 function localProjection(entityId: string, relationType: string, limit: number): ProjectionResponse {
   const dumps = loadCalaDumps();
-  const ids = (LOCAL_EDGES[entityId]?.[relationType] ?? []).slice(0, limit);
-  const entities: ProjectionEntity[] = ids.flatMap((id) => {
-    const entity = entityById(id, dumps);
-    if (!entity) return [];
-    return [{
-      id: entity.id,
-      name: entity.name,
-      entityType: entity.entity_type,
-      claims: claimsForEntity(entity, dumps),
-    }];
-  });
+  const entities: ProjectionEntity[] = relationNeighbours(entityId, relationType)
+    .slice(0, limit)
+    .map((neighbour) => {
+      const known = entityById(neighbour.id, dumps);
+      return {
+        id: neighbour.id,
+        name: neighbour.name,
+        entityType: neighbour.entityType,
+        claims: known ? claimsForEntity(known, dumps) : [],
+      };
+    });
   return { entityId, relationType, source: "local-evidence", entities };
 }
 
@@ -217,10 +210,9 @@ export async function introspectEntity(entityId: string): Promise<IntrospectionR
       const dumps = loadCalaDumps();
       const entity = entityById(entityId, dumps);
       if (!entity) throw new CalaError("Entidad no encontrada", "NOT_FOUND", 404);
-      const relationMap = LOCAL_EDGES[entityId] ?? {};
       return {
         entity: { id: entity.id, name: entity.name, entityType: entity.entity_type, claims: claimsForEntity(entity, dumps) },
-        relations: Object.entries(relationMap).map(([type, ids]) => ({ type, count: ids.length })),
+        relations: relationsFor(entityId),
         source: "local-evidence" as const,
       };
     });

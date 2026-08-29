@@ -1,13 +1,14 @@
 "use client";
 
-import { CARD_HEIGHT, CARD_WIDTH, manhattanPath } from "@/lib/geometry";
+import { CARD_HEIGHT, CARD_WIDTH, PIN_WIDTH, manhattanPath } from "@/lib/geometry";
+import { CASE_RELATION, relationNoun } from "@/lib/relations";
 import type { ResearchCase } from "@/lib/types";
 
 const COLORS: Record<string, string> = {
   INVESTED_IN: "var(--thread-investment)",
   FINANCED: "var(--thread-finance)",
   REPORT_MATCH: "var(--thread-report)",
-  "LÍNEA DE CASO": "var(--thread-case)",
+  [CASE_RELATION]: "var(--thread-case)",
 };
 
 const CASE_WIDTH = 296;
@@ -23,23 +24,43 @@ export function Hilos({ graph }: { graph: ResearchCase }) {
     ...graph.pins.map((pin) => [pin.id, { x: pin.position.x + 6, y: pin.position.y + 6 }] as const),
   ]);
 
+  // Las chinchetas se apilan a un lado u otro de su ficha; el hilo debe entrar
+  // por el borde que mira a la ficha, no cruzando la etiqueta.
+  const pinIds = new Set(graph.pins.map((pin) => pin.id));
+  function anchor(id: string, towards: { x: number; y: number }) {
+    const node = nodes.get(id);
+    if (!node || !pinIds.has(id)) return node;
+    return towards.x > node.x ? { x: node.x + PIN_WIDTH - 12, y: node.y } : node;
+  }
+
+  // Solo se rotula lo que une dos fichas: una chincheta ya viene explicada
+  // por el cabo del que salió, y cuatro rótulos juntos tapaban la ficha padre.
+  const cardIds = new Set(graph.cards.map((card) => card.id));
+
   return (
     <svg className="threads" width="2200" height="1300" aria-label="Relaciones del grafo">
       {graph.edges.map((edge) => {
-        const start = nodes.get(edge.sourceId);
-        const end = nodes.get(edge.targetId);
-        if (!start || !end) return null;
+        const rawStart = nodes.get(edge.sourceId);
+        const rawEnd = nodes.get(edge.targetId);
+        if (!rawStart || !rawEnd) return null;
+        const start = anchor(edge.sourceId, rawEnd)!;
+        const end = anchor(edge.targetId, rawStart)!;
         const points = manhattanPath(start, end);
         const labelX = (start.x + end.x) / 2;
         const labelY = (start.y + end.y) / 2;
-        const details = edge.source ? `${edge.relationType} · ${edge.source.query}` : edge.relationType;
-        const isCase = edge.relationType === "LÍNEA DE CASO";
+        const details = [
+          `${relationNoun(edge.relationType)} · ${edge.relationType}`,
+          "dirección sin verificar",
+          edge.source?.query,
+        ].filter(Boolean).join("\n");
+        const isCase = edge.relationType === CASE_RELATION;
+        const betweenCards = cardIds.has(edge.sourceId) && cardIds.has(edge.targetId);
         return (
           <g className={`thread ${isCase ? "is-case" : ""}`} key={edge.id}>
             <title>{details}</title>
             <polyline className="thread-hit" points={points} />
             <polyline points={points} style={{ stroke: COLORS[edge.relationType] ?? "var(--thread-default)" }} />
-            {!isCase && <text x={labelX} y={labelY - 7}>{edge.relationType}</text>}
+            {!isCase && betweenCards && <text x={labelX} y={labelY - 7}>{relationNoun(edge.relationType)}</text>}
           </g>
         );
       })}

@@ -1,4 +1,6 @@
 import { CalaError, introspectEntity } from "@/lib/cala";
+import { errorResponse } from "@/app/api/middleware";
+import { logger } from "@/lib/logger";
 
 export const runtime = "nodejs";
 
@@ -8,11 +10,17 @@ export async function GET(
 ) {
   try {
     const { id } = await context.params;
-    return Response.json(await introspectEntity(id));
+    logger.debug("Introspection request", { entityId: id });
+    
+    const result = await introspectEntity(id);
+    logger.info("Introspection completed", { entityId: id, relationCount: result.relations?.length ?? 0 });
+    return Response.json(result);
   } catch (error) {
+    const { id } = await context.params;
     if (error instanceof CalaError) {
-      return Response.json({ error: error.message, code: error.code }, { status: error.status });
+      return errorResponse(error.status, error.code, error.message, { entityId: id });
     }
-    return Response.json({ error: "No se pudo abrir la ficha", code: "UPSTREAM_ERROR" }, { status: 500 });
+    logger.error("Introspection failed", error, { entityId: id });
+    return errorResponse(500, "UPSTREAM_ERROR", "No se pudo abrir la ficha");
   }
 }

@@ -1,13 +1,14 @@
 "use client";
 
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 import { Bandeja } from "@/components/Bandeja";
 import { Carpeta } from "@/components/Carpeta";
 import { Tablon } from "@/components/Tablon";
 import { useBoardStore } from "@/lib/store";
+import { UI_TIMEOUTS } from "@/lib/constants";
 import type { SeedPayload } from "@/lib/types";
 
-export function SignalGraphApp({ seed }: { seed: SeedPayload }) {
+function SignalGraphAppComponent({ seed }: { seed: SeedPayload }) {
   const initialize = useBoardStore((state) => state.initialize);
   const setCaseView = useBoardStore((state) => state.setCaseView);
   const finishHydration = useBoardStore((state) => state.finishHydration);
@@ -26,7 +27,7 @@ export function SignalGraphApp({ seed }: { seed: SeedPayload }) {
 
   useEffect(() => {
     if (!toast) return;
-    const timer = window.setTimeout(() => setToast(undefined), 4200);
+    const timer = window.setTimeout(() => setToast(undefined), UI_TIMEOUTS.TOAST_DURATION_MS);
     return () => window.clearTimeout(timer);
   }, [setToast, toast]);
 
@@ -56,3 +57,5 @@ export function SignalGraphApp({ seed }: { seed: SeedPayload }) {
     </main>
   );
 }
+
+export const SignalGraphApp = memo(SignalGraphAppComponent);

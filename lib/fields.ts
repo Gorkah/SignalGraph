@@ -1,4 +1,5 @@
 import type { Claim } from "@/lib/types";
+import { DEFAULTS } from "@/lib/constants";
 
 // Las unidades van de más larga a más corta: si `m` va primero se come la
 // "m" de "million" y deja "€83 m". El importe se muestra como cita textual
@@ -56,19 +57,18 @@ export function placeFromClaims(claims: Claim[]) {
  * tiene prosa, la portada enseña el arranque —cortado por la primera frase o
  * por la última palabra que cabe— y el resto se lee al dorso.
  */
-const TEASER_MAX = 54;
 
 export function isProse(claim: Claim) {
-  return claim.value.trim().length > TEASER_MAX;
+  return claim.value.trim().length > DEFAULTS.TEASER_MAX_LENGTH;
 }
 
 export function teaser(value: string) {
   const text = value.trim();
-  if (text.length <= TEASER_MAX) return text;
-  const stop = text.slice(0, TEASER_MAX + 1).lastIndexOf(". ");
+  if (text.length <= DEFAULTS.TEASER_MAX_LENGTH) return text;
+  const stop = text.slice(0, DEFAULTS.TEASER_MAX_LENGTH + 1).lastIndexOf(". ");
   if (stop > 24) return text.slice(0, stop + 1);
-  const cut = text.lastIndexOf(" ", TEASER_MAX);
-  return `${text.slice(0, cut > 24 ? cut : TEASER_MAX).trimEnd()}…`;
+  const cut = text.lastIndexOf(" ", DEFAULTS.TEASER_MAX_LENGTH);
+  return `${text.slice(0, cut > 24 ? cut : DEFAULTS.TEASER_MAX_LENGTH).trimEnd()}…`;
 }
 
 /**

@@ -1,8 +1,10 @@
 import "server-only";
 
 import { createHash } from "node:crypto";
-import { mkdir, readFile, rename, unlink, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, rename, stat, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { logger } from "@/lib/logger";
+import { CACHE } from "@/lib/constants";
 
 const CACHE_DIR = path.join(process.cwd(), "data", "cache");
 const inFlight = new Map<string, Promise<unknown>>();
@@ -65,4 +67,51 @@ export async function cacheFirst<T>(operation: string, input: unknown, loader: (
   } finally {
     inFlight.delete(key);
   }
+}
+
+/**
+ * Clean old cache files based on age
+ * Files older than MAX_AGE_DAYS are deleted
+ */
+export async function cleanOldCache(maxAgeDays = CACHE.MAX_AGE_DAYS): Promise<number> {
+  try {
+    await mkdir(CACHE_DIR, { recursive: true });
+  } catch {
+    return 0;
+  }
+
+  let deleted = 0;
+  const now = Date.now();
+  const maxAgeMs = maxAgeDays * 24 * 60 * 60 * 1000;
+
+  try {
+    const files = await readdir(CACHE_DIR);
+    for (const file of files) {
+      const filePath = path.join(CACHE_DIR, file);
+      try {
+        const { mtime } = await stat(filePath);
+        if (now - mtime.getTime() > maxAgeMs) {
+          await unlink(filePath);
+          deleted++;
+          logger.debug("Cleaned old cache file", { file, age: Math.round((now - mtime.getTime()) / 1000 / 60 / 60 / 24) });
+        }
+      } catch (error) {
+        logger.warn("Failed to check cache file", { file, error: String(error) });
+      }
+    }
+    if (deleted > 0) {
+      logger.info("Cache cleanup completed", { deleted });
+    }
+  } catch (error) {
+    logger.error("Cache cleanup failed", error);
+  }
+
+  return deleted;
+}
+
+// Run cache cleanup on startup
+if (process.env.NODE_ENV !== "test") {
+  void cleanOldCache().catch((error) => {
+    logger.error("Failed to run cache cleanup on startup", error);
+  });
 }

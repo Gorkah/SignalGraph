@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useBoardStore } from "@/lib/store";
+import { UI_TIMEOUTS } from "@/lib/constants";
 import type { Dossier, SeedPayload } from "@/lib/types";
 
 function ReceiptTimer({ startedAt }: { startedAt: number }) {
@@ -53,7 +54,7 @@ export function Bandeja({ fallbackDossier, defaultReportQuery }: Pick<SeedPayloa
     };
     forceFallback.current = localDelivery;
     addReceipt({ id, query: input, startedAt: Date.now(), state: "pending" });
-    const fallbackTimer = window.setTimeout(localDelivery, 90_000);
+    const fallbackTimer = window.setTimeout(localDelivery, UI_TIMEOUTS.FALLBACK_DELIVERY_MS);
     try {
       const response = await fetch("/api/report", {
         method: "POST",

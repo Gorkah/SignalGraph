@@ -5,6 +5,8 @@ import { createJSONStorage, persist } from "zustand/middleware";
 import { CARD_HEIGHT, CARD_WIDTH, combPosition, narrativePosition, snapPoint } from "@/lib/geometry";
 import { buildPotentialQuestionContext, investigationTrail } from "@/lib/investigation";
 import { ANSWER_RELATION, CASE_RELATION, EVIDENCE_RELATION, relationNoun, registerNouns } from "@/lib/relations";
+import { normalizeKey, sameName } from "@/lib/normalize";
+import { UI_TIMEOUTS } from "@/lib/constants";
 import type {
   ClaimSource,
   CaseView,
@@ -58,19 +60,16 @@ type BoardState = {
   setToast: (toast?: string) => void;
 };
 
-export const MIN_ZOOM = 0.25;
-export const MAX_ZOOM = 2;
+export const MIN_ZOOM = ZOOM.MIN;
+export const MAX_ZOOM = ZOOM.MAX;
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 /**
- * Misma normalización que la capa de datos (`normalized` en lib/seed.ts,
- * `normalize` en lib/cala.ts). Cala fragmenta una misma empresa en varios
- * UUID —hay tres "Sesame"—, así que el nombre normalizado es lo único que la
- * identifica de verdad; el id sigue siendo la identidad del tablón.
+ * Use centralized normalize functions from lib/normalize.ts
  */
-const nameKey = (value: string) => value.toLocaleLowerCase("en").replace(/[^a-z0-9]+/g, "");
-const sameName = (a: string, b: string) => nameKey(a) === nameKey(b);
+// nameKey moved to lib/normalize.ts as normalizeKey
+// sameName moved to lib/normalize.ts
 
 /** "por Seaya Ventures y por BBVA Spark Fund"; con más de dos, comas. */
 function eachOf(names: string[], preposition: string) {

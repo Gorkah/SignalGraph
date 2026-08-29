@@ -1,8 +1,12 @@
 import "server-only";
 
+import { z } from "zod";
 import { cacheFirst, readCache } from "@/lib/disk-cache";
 import { loadManifest } from "@/lib/manifest";
 import { claimsForEntity, entityById, getSeedPayload, loadCalaDumps, relationNeighbours, relationsFor } from "@/lib/seed";
+import { normalizeKey } from "@/lib/normalize";
+import { logger } from "@/lib/logger";
+import { getEnv } from "@/lib/env";
 import type {
   ApiErrorCode,
   CalaEntity,
@@ -15,10 +19,24 @@ import type {
   ProjectionResponse,
 } from "@/lib/types";
 
-const QUERY_URL = process.env.CALA_API_URL ?? "https://api.cala.ai/v1/knowledge/query";
-const ENTITY_BASE = process.env.CALA_ENTITY_URL ?? "https://api.cala.ai/v1/entities";
+let cachedEnv: ReturnType<typeof getEnv> | null = null;
+
+function getCalaEnv() {
+  if (!cachedEnv) {
+    try {
+      cachedEnv = getEnv();
+    } catch (error) {
+      logger.error("Failed to load env config", error);
+      throw error;
+    }
+  }
+  return cachedEnv;
+}
+
+const QUERY_URL = () => `${getCalaEnv().CALA_BASE_URL}/v1/knowledge/query`;
+const ENTITY_BASE = () => `${getCalaEnv().CALA_BASE_URL}/v1/entities`;
 /** Con esto a "0" el tablón no sale a la red: solo caché de disco y volcados. */
-const LIVE = process.env.CALA_LIVE !== "0";
+const LIVE = () => getCalaEnv().CALA_LIVE !== "0";
 
 export class CalaError extends Error {
   constructor(
@@ -36,7 +54,8 @@ function wait(ms: number) {
 
 async function fetchCala(url: string, body: unknown, timeoutMs: number) {
   const method = body === undefined ? "GET" : "POST";
-  const apiKey = process.env.CALA_API_KEY;
+  const env = getCalaEnv();
+  const apiKey = env.CALA_API_KEY;
   if (!apiKey) throw new CalaError("Falta CALA_API_KEY", "UPSTREAM_ERROR", 503);
 
   for (let attempt = 0; attempt < 2; attempt += 1) {
@@ -77,9 +96,8 @@ async function fetchCala(url: string, body: unknown, timeoutMs: number) {
   throw new CalaError("Archivo saturado", "SATURATED", 503);
 }
 
-function normalize(value: string) {
-  return value.toLocaleLowerCase("en").replace(/[^a-z0-9]+/g, "");
-}
+// Use centralized normalize function
+const normalize = normalizeKey;
 
 function principal(result: CalaResult) {
   // Cala cambia el nombre de la columna principal según la pregunta. Las

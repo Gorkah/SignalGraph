@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { memo, useState } from "react";
 import { Retrato } from "@/components/Retrato";
 import { buildCover, teaser } from "@/lib/fields";
 import { relationNoun } from "@/lib/relations";
@@ -14,7 +14,7 @@ const DEFAULT_COVER = [
   { label: "dónde", fields: ["city", "location"], fallback: "sin sitio anotado" },
 ];
 
-export function Ficha({ card }: { card: EntityCard }) {
+function FichaComponent({ card }: { card: EntityCard }) {
   const selected = useBoardStore((state) => state.selectedId === card.id);
   const selectNode = useBoardStore((state) => state.selectNode);
   const pullRelation = useBoardStore((state) => state.pullRelation);
@@ -162,3 +162,14 @@ export function Ficha({ card }: { card: EntityCard }) {
     </article>
   );
 }
+
+/**
+ * Memoized Ficha component
+ * Prevents unnecessary re-renders when parent updates
+ */
+export const Ficha = memo(FichaComponent, (prev, next) => {
+  // Custom comparison: only re-render if card reference or position changed
+  return prev.card.id === next.card.id && 
+         prev.card.position.x === next.card.position.x &&
+         prev.card.position.y === next.card.position.y;
+});

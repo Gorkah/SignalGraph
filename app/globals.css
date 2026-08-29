@@ -116,7 +116,7 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 .thread:hover polyline:not(.thread-hit) { stroke-width: 5; }
 
 .entity-card {
-  position: absolute; z-index: 10; width: 240px; height: 208px; display: flex; flex-direction: column;
+  position: absolute; z-index: 10; width: 240px; height: 240px; display: flex; flex-direction: column;
   border: var(--border) solid var(--ink); background: var(--paper-bright); box-shadow: 6px 6px 0 rgba(32, 27, 24, .72);
   cursor: default; transition: box-shadow 100ms linear, translate 100ms linear;
 }
@@ -134,12 +134,7 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 .card-category { padding: 3px 8px 0; color: var(--blue); font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .visible-claim { flex: 1; margin: 3px 8px; overflow: hidden; font-size: 18px; line-height: .98; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
 .visible-claim time { display: inline-block; margin-left: 6px; padding: 0 4px; background: var(--yellow); font-size: 14px; }
-.entity-card footer { min-height: 30px; display: flex; align-items: stretch; overflow: hidden; border-top: 1px solid var(--ink); }
-.relation-stub { flex: 1; display: flex; justify-content: space-between; align-items: center; min-width: 0; border: 0; border-right: 1px solid var(--ink); background: #ead9ac; padding: 2px 6px; cursor: pointer; font-size: 13px; }
-.relation-stub span { overflow: hidden; text-overflow: ellipsis; }
-.relation-stub b { margin-left: 6px; font-size: 16px; color: var(--red); }
-.relation-stub:hover { background: var(--yellow); }
-.relation-stub:disabled { cursor: wait; opacity: .5; }
+.entity-card footer { min-height: 34px; display: flex; align-items: stretch; overflow: hidden; border-top: 1px solid var(--ink); }
 .no-relations { padding: 3px 7px; opacity: .55; font-size: 14px; }
 .dedup-badge { padding: 2px 4px; background: var(--green); color: white; font-family: var(--font-display); font-size: 7px; animation: badge-pop 280ms steps(3, end); }
 
@@ -254,7 +249,6 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
    importan. Se muestran solo al interrogar el caso. */
 .board-surface:has(.case-node:hover) .thread.is-case polyline:not(.thread-hit) { opacity: .8; }
 
-.more-relations { display: grid; place-items: center; padding: 0 7px; background: #ded0a4; font-size: 13px; }
 
 
 /* ── Zoom ──────────────────────────────────────────────────────────── */

@@ -27,6 +27,9 @@ export function Ficha({ card }: { card: EntityCard }) {
   // store porque hojear es leer, no un estado del caso: al recargar, todas
   // las fichas vuelven a estar por su portada.
   const [dorso, setDorso] = useState(false);
+  // El cajón de los hilos: cerrado por defecto, porque una ficha se lee
+  // antes de tirar de ella.
+  const [hilos, setHilos] = useState(false);
 
   // Una pista es la misma ficha en su densidad mínima: retrato, nombre y tipo.
   // Se vuelve completa al abrirla, que es cuando se pide su introspección.
@@ -57,12 +60,10 @@ export function Ficha({ card }: { card: EntityCard }) {
   // solo sabe que son tres y que uno puede venir vacío.
   const slots = (view?.cover?.length ? view.cover : DEFAULT_COVER).slice(0, 3);
   const { lines: cover, back: description } = buildCover(card.claims, slots, view?.back?.fields);
-  const stubs = card.relations.slice(0, 3);
-  const hidden = card.relations.length - stubs.length;
 
   return (
     <article
-      className={`entity-card nivel-ficha ${selected ? "is-selected" : ""} ${dorso ? "is-dorso" : ""}`}
+      className={`entity-card nivel-ficha ${selected ? "is-selected" : ""} ${dorso ? "is-dorso" : ""} ${hilos ? "is-hilos" : ""}`}
       style={{ left: card.position.x, top: card.position.y }}
       data-category={card.category}
       onClick={() => selectNode(card.id)}
@@ -121,24 +122,43 @@ export function Ficha({ card }: { card: EntityCard }) {
       </button>
 
       <footer>
-        {stubs.length ? stubs.map((relation) => (
+        {card.relations.length ? (
           <button
-            className="relation-stub"
-            key={relation.type}
+            className="hilos-toggle"
             type="button"
-            disabled={busy[`${card.id}:${relation.type}`]}
+            aria-expanded={hilos}
             onPointerDown={(event) => event.stopPropagation()}
             onClick={(event) => {
               event.stopPropagation();
-              void pullRelation(card.id, relation.type);
+              setHilos((open) => !open);
             }}
           >
-            <span>{relationNoun(relation.type)}</span>
-            <b>{relation.count ?? "·"}</b>
+            <span>{card.relations.length} {card.relations.length === 1 ? "hilo" : "hilos"}</span>
+            <b>{hilos ? "cerrar ▴" : "tirar ▾"}</b>
           </button>
-        )) : <span className="no-relations">sin hilos locales</span>}
-        {hidden > 0 && <span className="more-relations">+{hidden}</span>}
+        ) : <span className="no-relations">sin hilos locales</span>}
       </footer>
+
+      {hilos && (
+        <div className="hilos-drawer">
+          {card.relations.map((relation) => (
+            <button
+              className="hilo-row"
+              key={relation.type}
+              type="button"
+              disabled={busy[`${card.id}:${relation.type}`]}
+              onPointerDown={(event) => event.stopPropagation()}
+              onClick={(event) => {
+                event.stopPropagation();
+                void pullRelation(card.id, relation.type).then(() => setHilos(false));
+              }}
+            >
+              <span>{relationNoun(relation.type)}</span>
+              <b>{relation.count ?? "·"}</b>
+            </button>
+          ))}
+        </div>
+      )}
     </article>
   );
 }

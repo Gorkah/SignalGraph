@@ -184,8 +184,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 7px;
-  padding: 6px 9px;
+  gap: 13px;
+  padding: 10px 11px;
   background: var(--paper-bright);
   box-shadow: 2px 0 0 rgba(32, 27, 24, .35);
   transform-origin: left center;
@@ -200,9 +200,9 @@
    que aquí van el dinero y el sitio, en dos renglones de registro. */
 .leaf-line {
   display: grid;
-  grid-template-columns: 44px minmax(0, 1fr);
+  grid-template-columns: 50px minmax(0, 1fr);
   align-items: baseline;
-  gap: 7px;
+  gap: 9px;
 }
 .leaf i {
   font-family: var(--font-display);
@@ -215,7 +215,7 @@
   min-width: 0;
   font-weight: normal;
   font-size: 17px;
-  line-height: 1;
+  line-height: 1.06;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -351,3 +351,64 @@
 @media (prefers-reduced-motion: reduce) {
   .leaf { transition-delay: 0ms !important; }
 }
+
+
+/* ══ LOS HILOS DE UNA FICHA ══════════════════════════════════════════
+   Antes eran cuatro pestañas apretadas en el pie, ilegibles y a medio
+   nombre. Ahora el pie solo cuenta cuántos cabos hay; al tirar, se abre
+   un cajón con un renglón por cabo, ancho entero y con su cuenta. Ni
+   pestañas ni subnodos: un índice que se despliega donde está la ficha. */
+.hilos-toggle {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 0;
+  padding: 3px 10px;
+  border: 0;
+  background: #ead9ac;
+  cursor: pointer;
+  font-size: 14px;
+}
+.hilos-toggle b {
+  font-family: var(--font-display);
+  font-size: 8px;
+  color: var(--red);
+}
+.hilos-toggle:hover { background: var(--yellow); }
+
+.hilos-drawer {
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  left: -2px;
+  right: -2px;
+  max-height: 264px;
+  overflow-y: auto;
+  border: 2px solid var(--ink);
+  border-top: 0;
+  background: var(--paper);
+  box-shadow: 8px 8px 0 rgba(32, 27, 24, .72);
+}
+.hilo-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border: 0;
+  border-bottom: 1px solid rgba(32, 27, 24, .3);
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font-size: 15px;
+}
+.hilo-row:last-child { border-bottom: 0; }
+.hilo-row span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hilo-row b { font-size: 17px; color: var(--red); }
+.hilo-row:hover { background: var(--yellow); }
+.hilo-row:disabled { cursor: wait; opacity: .5; }
+
+/* Con el cajón abierto la ficha pasa por delante de sus vecinas. */
+.entity-card.is-hilos { z-index: 40; }

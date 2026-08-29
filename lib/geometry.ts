@@ -4,7 +4,7 @@ export const GRID_SIZE = 16;
 export const CARD_WIDTH = 240;
 export const LEAD_WIDTH = 176;
 export const LEAD_HEIGHT = 96;
-export const CARD_HEIGHT = 208;
+export const CARD_HEIGHT = 240;
 
 export function snap(value: number) {
   return Math.round(value / GRID_SIZE) * GRID_SIZE;

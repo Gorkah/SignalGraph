@@ -11,7 +11,7 @@ import { RespuestaNarrativa } from "@/components/RespuestaNarrativa";
 import { Hilos } from "@/components/Hilos";
 import { CARD_HEIGHT, CARD_WIDTH, GRID_SIZE, LEAD_WIDTH, STACK_HEIGHT, portfolioPosition } from "@/lib/geometry";
 import { MAX_ZOOM, MIN_ZOOM, useBoardStore } from "@/lib/store";
-import { ZOOM, LAYOUT, CARD } from "@/lib/constants";
+import { ZOOM, LAYOUT } from "@/lib/constants";
 import type { Point } from "@/lib/types";
 
 // Unified zoom constants from lib/constants.ts
@@ -141,8 +141,8 @@ export function Tablon() {
       const centre = viewport.current
         ? { x: viewport.current.clientWidth / 2, y: viewport.current.clientHeight / 2 }
         : undefined;
-      if (event.key === "+" || event.key === "=") setZoom(useBoardStore.getState().zoom * ZOOM_STEP, centre);
-      if (event.key === "-" || event.key === "_") setZoom(useBoardStore.getState().zoom / ZOOM_STEP, centre);
+      if (event.key === "+" || event.key === "=") setZoom(useBoardStore.getState().zoom * ZOOM.STEP, centre);
+      if (event.key === "-" || event.key === "_") setZoom(useBoardStore.getState().zoom / ZOOM.STEP, centre);
       if (event.key === "0") fitToContent();
     }
     window.addEventListener("keydown", onKey);
@@ -237,9 +237,9 @@ export function Tablon() {
       </div>
 
       <div className="zoom-dock" role="group" aria-label="Zoom del tablón">
-        <button type="button" onClick={() => step(ZOOM_STEP)} disabled={zoom >= MAX_ZOOM} aria-label="Acercar">+</button>
+        <button type="button" onClick={() => step(ZOOM.STEP)} disabled={zoom >= MAX_ZOOM} aria-label="Acercar">+</button>
         <output aria-label="Nivel de zoom">{Math.round(zoom * 100)}%</output>
-        <button type="button" onClick={() => step(1 / ZOOM_STEP)} disabled={zoom <= MIN_ZOOM} aria-label="Alejar">−</button>
+        <button type="button" onClick={() => step(1 / ZOOM.STEP)} disabled={zoom <= MIN_ZOOM} aria-label="Alejar">−</button>
         <button type="button" className="zoom-reset" onClick={fitToContent} aria-label="Encajar el caso">◱</button>
       </div>
 

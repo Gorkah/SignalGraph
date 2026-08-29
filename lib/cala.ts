@@ -177,7 +177,7 @@ export async function queryDossier(input: string, options: { timeoutMs?: number;
   }
 
   const { value, hit } = await cacheFirst("report", { input: normalizedInput }, async () => {
-    const raw = await fetchCala(QUERY_URL, { input: normalizedInput }, options.timeoutMs ?? 120_000);
+    const raw = await fetchCala(QUERY_URL(), { input: normalizedInput }, options.timeoutMs ?? 120_000);
     const body = raw as { data?: unknown };
     return dossierFromData(normalizedInput, body.data ?? raw);
   });

@@ -6,7 +6,7 @@ import { CARD_HEIGHT, CARD_WIDTH, combPosition, narrativePosition, snapPoint } f
 import { buildPotentialQuestionContext, investigationTrail } from "@/lib/investigation";
 import { ANSWER_RELATION, CASE_RELATION, EVIDENCE_RELATION, relationNoun, registerNouns } from "@/lib/relations";
 import { normalizeKey, sameName } from "@/lib/normalize";
-import { UI_TIMEOUTS } from "@/lib/constants";
+import { UI_TIMEOUTS, ZOOM } from "@/lib/constants";
 import type {
   ClaimSource,
   CaseView,

@@ -34,9 +34,8 @@ Abre [http://localhost:3000](http://localhost:3000).
 
 ```dotenv
 CALA_API_KEY=
-CALA_API_URL=https://api.cala.ai/v1/knowledge/query
-CALA_ENTITY_URL=https://api.cala.ai/v1/entities
-CALA_LIVE=true
+CALA_BASE_URL=https://api.cala.ai
+CALA_LIVE=1
 CALA_TIMEOUT_MS=180000
 ```
 

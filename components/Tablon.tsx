@@ -6,6 +6,8 @@ import { Cartera } from "@/components/Cartera";
 import { Caso } from "@/components/Caso";
 import { Ficha } from "@/components/Ficha";
 import { Mazo, RecogerMazo } from "@/components/Mazo";
+import { PreguntaPotencial } from "@/components/PreguntaPotencial";
+import { RespuestaNarrativa } from "@/components/RespuestaNarrativa";
 import { Hilos } from "@/components/Hilos";
 import { CARD_HEIGHT, CARD_WIDTH, GRID_SIZE, LEAD_WIDTH, STACK_HEIGHT, portfolioPosition } from "@/lib/geometry";
 import { MAX_ZOOM, MIN_ZOOM, useBoardStore } from "@/lib/store";
@@ -172,7 +174,7 @@ export function Tablon() {
   // Un fondo enseña su cartera cerrada mientras no se haya tirado de ella.
   const pulled = new Set(graph.cards.map((card) => card.stackId).filter(Boolean));
   const carteras = graph.cards.filter(
-    (card) => card.density === "full" && !card.parentId && !pulled.has(`${card.id}:INVESTED_IN`),
+    (card) => card.density === "full" && !card.story && !card.parentId && !pulled.has(`${card.id}:INVESTED_IN`),
   );
 
   function startPan(event: ReactPointerEvent<HTMLDivElement>) {
@@ -218,7 +220,9 @@ export function Tablon() {
       >
         <Hilos graph={graph} />
         <Caso focus={graph.focus} cards={graph.cards.length} edges={graph.edges.length} />
-        {loose.map((card) => <Ficha key={card.id} card={card} />)}
+        {loose.map((card) => card.story
+          ? <RespuestaNarrativa key={card.id} card={card} />
+          : <Ficha key={card.id} card={card} />)}
         {carteras.map((card) => <Cartera key={`cartera-${card.id}`} card={card} focus={graph.focus} />)}
         {[...stacks].map(([stackId, group]) => (
           <Mazo key={stackId} cards={group} parentName={group[0].parentId ? cardName.get(group[0].parentId) : undefined} />
@@ -231,6 +235,7 @@ export function Tablon() {
             y={Math.min(...group.map((card) => card.position.y)) - 38}
           />
         ))}
+        <PreguntaPotencial />
       </div>
 
       <div className="zoom-dock" role="group" aria-label="Zoom del tablón">

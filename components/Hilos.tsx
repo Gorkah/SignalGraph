@@ -1,7 +1,7 @@
 "use client";
 
 import { CARD_HEIGHT, CARD_WIDTH, LEAD_HEIGHT, LEAD_WIDTH, manhattanPath } from "@/lib/geometry";
-import { CASE_RELATION, relationNoun } from "@/lib/relations";
+import { ANSWER_RELATION, CASE_RELATION, EVIDENCE_RELATION, QUESTION_RELATION, relationNoun } from "@/lib/relations";
 import { useBoardStore } from "@/lib/store";
 import type { ResearchCase } from "@/lib/types";
 
@@ -9,6 +9,9 @@ const COLORS: Record<string, string> = {
   INVESTED_IN: "var(--thread-investment)",
   FINANCED: "var(--thread-finance)",
   REPORT_MATCH: "var(--thread-report)",
+  [QUESTION_RELATION]: "var(--thread-question)",
+  [ANSWER_RELATION]: "var(--thread-answer)",
+  [EVIDENCE_RELATION]: "var(--thread-evidence)",
   [CASE_RELATION]: "var(--thread-case)",
 };
 
@@ -79,8 +82,9 @@ export function Hilos({ graph }: { graph: ResearchCase }) {
         const labelled = !isCase && fullIds.has(edge.sourceId) && fullIds.has(edge.targetId);
         const details = [
           `${relationNoun(edge.relationType)} · ${edge.relationType}`,
+          edge.question,
           "dirección sin verificar",
-          edge.source?.query,
+          edge.source?.query !== edge.question ? edge.source?.query : undefined,
         ].filter(Boolean).join("\n");
         return (
           <g className={`thread ${isCase ? "is-case" : ""}`} key={edge.id}>

@@ -2,18 +2,25 @@
 
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-import { CARD_HEIGHT, CARD_WIDTH, combPosition, snapPoint } from "@/lib/geometry";
-import { CASE_RELATION, relationNoun, registerNouns } from "@/lib/relations";
+import { CARD_HEIGHT, CARD_WIDTH, combPosition, narrativePosition, snapPoint } from "@/lib/geometry";
+import { buildPotentialQuestionContext, investigationTrail } from "@/lib/investigation";
+import { ANSWER_RELATION, CASE_RELATION, EVIDENCE_RELATION, relationNoun, registerNouns } from "@/lib/relations";
 import type {
+  ClaimSource,
   CaseView,
   Dossier,
   DossierCandidate,
   InboxReceipt,
   IntrospectionResponse,
   Point,
+  PotentialQuestion,
   ProjectionResponse,
   ResearchCase,
+  StoryAnswer,
+  EntityCard,
 } from "@/lib/types";
+
+type QuestionStatus = "loading" | "ready" | "empty" | "asking" | "done" | "error";
 
 type BoardState = {
   researchCase: ResearchCase | null;
@@ -24,6 +31,8 @@ type BoardState = {
   hydrated: boolean;
   busy: Record<string, boolean>;
   dedup: Record<string, boolean>;
+  questionDrafts: Record<string, PotentialQuestion>;
+  questionStatus: Record<string, QuestionStatus>;
   toast?: string;
   initialize: (researchCase: ResearchCase) => void;
   finishHydration: () => void;
@@ -43,6 +52,9 @@ type BoardState = {
   deliverDossier: (receiptId: string, dossier: Dossier) => void;
   failReceipt: (receiptId: string, error: string) => void;
   pinCandidate: (candidate: DossierCandidate) => void;
+  startResearch: (question: string, dossier: Dossier) => Promise<void>;
+  suggestQuestion: (id: string) => Promise<void>;
+  continueQuestion: (id: string) => Promise<void>;
   setToast: (toast?: string) => void;
 };
 
@@ -87,6 +99,117 @@ async function apiJson<T>(url: string, init?: RequestInit): Promise<T> {
   return body;
 }
 
+function storyEvidence(dossier: Dossier) {
+  return dossier.candidates.slice(0, 10).map((candidate) => ({
+    name: candidate.name,
+    entityType: candidate.entityType,
+    category: candidate.category,
+    claims: candidate.claims.slice(0, 8).map((claim) => ({
+      label: claim.label,
+      value: claim.value,
+      source: {
+        label: claim.source.label,
+        query: claim.source.query,
+        runAt: claim.source.runAt,
+        url: claim.source.url,
+      },
+    })),
+  }));
+}
+
+function storySource(story: StoryAnswer, deliveredAt: string): ClaimSource {
+  return {
+    label: story.provider === "openai" ? `OpenAI · ${story.model}` : `OpenAI via Pioneer · ${story.model}`,
+    query: story.question,
+    file: "Síntesis del modelo sobre evidencia Cala",
+    runAt: deliveredAt,
+  };
+}
+
+function appendNarrative(graph: ResearchCase, parentId: string, story: StoryAnswer, dossier: Dossier) {
+  const parentCard = graph.cards.find((card) => card.id === parentId);
+  const parentPosition = parentCard?.position ?? graph.focus.position;
+  const depth = parentCard ? investigationTrail(graph, parentId).filter((card) => card.story).length + 1 : 0;
+  const answerId = `story:${crypto.randomUUID()}`;
+  const source = storySource(story, dossier.deliveredAt);
+  const answerPosition = narrativePosition(parentPosition, depth);
+  const answer: EntityCard = {
+    id: answerId,
+    name: story.title,
+    entityType: "NarrativeAnswer",
+    category: story.beat,
+    position: answerPosition,
+    claims: [
+      { key: "answer", label: "respuesta", value: story.answer, source },
+      { key: "because", label: "por qué", value: story.because, source },
+    ],
+    relations: [],
+    density: "full" as const,
+    parentId: parentCard ? parentId : undefined,
+    relationType: ANSWER_RELATION,
+    story: {
+      question: story.question,
+      title: story.title,
+      answer: story.answer,
+      because: story.because,
+      beat: story.beat,
+      nextQuestion: story.nextQuestion,
+      confidence: story.confidence,
+      model: story.model,
+      provider: story.provider,
+      evidenceNames: story.evidenceNames,
+    },
+  };
+  const edges = [...graph.edges, {
+    id: `${parentId}:${ANSWER_RELATION}:${answerId}`,
+    sourceId: parentId,
+    targetId: answerId,
+    relationType: ANSWER_RELATION,
+    question: story.question,
+    source,
+  }];
+  const cards = [...graph.cards, answer];
+  const evidenceCandidates = dossier.candidates
+    .filter((candidate) => story.evidenceNames.length === 0 || story.evidenceNames.includes(candidate.name))
+    .slice(0, 5);
+  const stackId = `${answerId}:${EVIDENCE_RELATION}`;
+
+  for (const candidate of evidenceCandidates) {
+    const existing = cards.find((card) => sameName(card.name, candidate.name));
+    const candidateId = candidate.id ?? `evidence:${crypto.randomUUID()}`;
+    const targetId = existing?.id ?? candidateId;
+    if (!edges.some((edge) => edge.sourceId === answerId && edge.targetId === targetId && edge.relationType === EVIDENCE_RELATION)) {
+      edges.push({
+        id: `${answerId}:${EVIDENCE_RELATION}:${targetId}`,
+        sourceId: answerId,
+        targetId,
+        relationType: EVIDENCE_RELATION,
+        source: candidate.claims[0]?.source,
+      });
+    }
+    if (!existing) {
+      cards.push({
+        id: candidateId,
+        name: candidate.name,
+        entityType: candidate.entityType ?? "Entity",
+        category: candidate.category,
+        position: combPosition(
+          { x: answerPosition.x + CARD_WIDTH / 2, y: answerPosition.y + CARD_HEIGHT / 2 },
+          graph.focus.position,
+          cards.filter((card) => card.stackId === stackId).length,
+        ),
+        claims: candidate.claims,
+        relations: [],
+        density: "lead" as const,
+        parentId: answerId,
+        relationType: EVIDENCE_RELATION,
+        stackId,
+      });
+    }
+  }
+  return { graph: { ...graph, cards, edges }, answerId, evidenceCount: evidenceCandidates.length };
+}
+
 export const useBoardStore = create<BoardState>()(
   persist(
     (set, get) => ({
@@ -97,10 +220,15 @@ export const useBoardStore = create<BoardState>()(
       hydrated: false,
       busy: {},
       dedup: {},
+      questionDrafts: {},
+      questionStatus: {},
       expandedStacks: [],
 
+      // La semilla solo abre un tablón vacío. Si persist ya rehidrató una
+      // investigación —incluido un caso narrativo creado por el usuario— no
+      // debe sustituirse en cada refresh de React/Next.
       initialize: (researchCase) => set((state) => ({
-        researchCase: state.researchCase?.id === researchCase.id ? state.researchCase : researchCase,
+        researchCase: state.researchCase ?? researchCase,
       })),
       finishHydration: () => set({ hydrated: true }),
       // El resaltado del reencuentro no caduca solo: vive hasta el siguiente
@@ -296,6 +424,216 @@ export const useBoardStore = create<BoardState>()(
         }
       },
 
+      suggestQuestion: async (id) => {
+        // Un nodo se evalúa una vez por sesión. `empty` también es un resultado:
+        // Pioneer decidió que añadir una pregunta aquí sería ruido.
+        if (get().questionStatus[id]) return;
+        const graph = get().researchCase;
+        if (!graph) return;
+        const story = graph.cards.find((card) => card.id === id)?.story;
+        if (story) {
+          const repeated = graph.edges.some((edge) => edge.sourceId === id && edge.question === story.nextQuestion);
+          if (!story.nextQuestion || repeated) {
+            set((state) => ({ questionStatus: { ...state.questionStatus, [id]: repeated ? "done" : "empty" } }));
+            return;
+          }
+          set((state) => ({
+            questionDrafts: {
+              ...state.questionDrafts,
+              [id]: {
+                nodeId: id,
+                worthwhile: true,
+                question: story.nextQuestion,
+                rationale: story.because,
+                score: story.confidence,
+                source: story.provider,
+                provider: story.provider,
+                model: story.model,
+              },
+            },
+            questionStatus: { ...state.questionStatus, [id]: "ready" },
+          }));
+          return;
+        }
+        const context = buildPotentialQuestionContext(graph, id);
+        if (!context) return;
+        set((state) => ({
+          questionStatus: { ...state.questionStatus, [id]: "loading" },
+        }));
+        try {
+          const suggestion = await apiJson<PotentialQuestion>("/api/pioneer/question", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(context),
+          });
+          set((state) => suggestion.worthwhile && suggestion.question
+            ? {
+                questionDrafts: { ...state.questionDrafts, [id]: suggestion },
+                questionStatus: { ...state.questionStatus, [id]: "ready" },
+              }
+            : {
+                questionStatus: { ...state.questionStatus, [id]: "empty" },
+              });
+        } catch (error) {
+          set((state) => ({
+            questionStatus: { ...state.questionStatus, [id]: "error" },
+            toast: error instanceof Error ? `Modelo · ${error.message}` : "El modelo no pudo evaluar esta ficha",
+          }));
+        }
+      },
+
+      continueQuestion: async (id) => {
+        const draft = get().questionDrafts[id];
+        const question = draft?.question;
+        if (!question || get().questionStatus[id] !== "ready") return;
+        const busyKey = `question:${id}`;
+        set((state) => ({
+          busy: { ...state.busy, [busyKey]: true },
+          questionStatus: { ...state.questionStatus, [id]: "asking" },
+          toast: undefined,
+          dedup: {},
+        }));
+        try {
+          let dossier = await apiJson<Dossier>("/api/report", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ input: question, mode: "live" }),
+          });
+          const currentGraph = get().researchCase;
+          if (!currentGraph) throw new Error("El caso ya no está abierto");
+          if (!dossier.candidates.length) {
+            dossier = {
+              ...dossier,
+              source: "fallback",
+              candidates: currentGraph.cards
+                .filter((card) => !card.story && card.claims.length > 0)
+                .slice(0, 10)
+                .map((card) => ({
+                  id: card.id.startsWith("evidence:") ? undefined : card.id,
+                  name: card.name,
+                  entityType: card.entityType,
+                  category: card.category,
+                  claims: card.claims,
+                })),
+            };
+          }
+          if (!dossier.candidates.length) throw new Error("La pregunta no devolvió evidencia suficiente");
+          const context = buildPotentialQuestionContext(currentGraph, id);
+          const story = await apiJson<StoryAnswer>("/api/story", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question, context, evidence: storyEvidence(dossier) }),
+          });
+
+          set((state) => {
+            if (!state.researchCase) return state;
+            const appended = appendNarrative(state.researchCase, id, story, dossier);
+            const questionDrafts = { ...state.questionDrafts };
+            delete questionDrafts[id];
+            if (story.nextQuestion) {
+              questionDrafts[appended.answerId] = {
+                nodeId: appended.answerId,
+                worthwhile: true,
+                question: story.nextQuestion,
+                rationale: story.because,
+                score: story.confidence,
+                source: story.source,
+                provider: story.provider,
+                model: story.model,
+              };
+            }
+            return {
+              researchCase: appended.graph,
+              selectedId: appended.answerId,
+              questionDrafts,
+              questionStatus: {
+                ...state.questionStatus,
+                [id]: "done",
+                [appended.answerId]: story.nextQuestion ? "ready" : "empty",
+              },
+              toast: `Respuesta construida con ${appended.evidenceCount} pistas · Tab continúa el relato`,
+            };
+          });
+        } catch (error) {
+          set((state) => ({
+            questionStatus: { ...state.questionStatus, [id]: "ready" },
+            toast: error instanceof Error ? error.message : "No se pudo continuar la pregunta",
+          }));
+        } finally {
+          set((state) => ({ busy: { ...state.busy, [busyKey]: false } }));
+        }
+      },
+
+      startResearch: async (question, dossier) => {
+        const input = question.trim();
+        if (!input || get().busy["new-case"]) return;
+        set((state) => ({
+          busy: { ...state.busy, "new-case": true },
+          toast: "Construyendo la primera respuesta con evidencia…",
+          dedup: {},
+        }));
+        try {
+          if (!dossier.candidates.length) throw new Error("El archivo no devolvió evidencia para abrir el caso");
+          const caseId = `case:${crypto.randomUUID()}`;
+          const base: ResearchCase = {
+            id: caseId,
+            title: input,
+            focus: {
+              id: `${caseId}:focus`,
+              title: input,
+              query: dossier.query || input,
+              position: { x: 800, y: 240 },
+            },
+            cards: [],
+            edges: [],
+          };
+          const story = await apiJson<StoryAnswer>("/api/story", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              question: input,
+              context: { case: { id: caseId, title: input }, trail: [], edges: [] },
+              evidence: storyEvidence(dossier),
+            }),
+          });
+          const appended = appendNarrative(base, base.focus.id, story, dossier);
+          const questionDrafts: Record<string, PotentialQuestion> = {};
+          const questionStatus: Record<string, QuestionStatus> = {};
+          if (story.nextQuestion) {
+            questionDrafts[appended.answerId] = {
+              nodeId: appended.answerId,
+              worthwhile: true,
+              question: story.nextQuestion,
+              rationale: story.because,
+              score: story.confidence,
+              source: story.source,
+              provider: story.provider,
+              model: story.model,
+            };
+            questionStatus[appended.answerId] = "ready";
+          } else {
+            questionStatus[appended.answerId] = "empty";
+          }
+          registerNouns(undefined);
+          set({
+            researchCase: appended.graph,
+            selectedId: appended.answerId,
+            questionDrafts,
+            questionStatus,
+            expandedStacks: [],
+            caseView: undefined,
+            framedCaseId: undefined,
+            pan: { x: 40, y: 24 },
+            zoom: 1,
+            toast: story.nextQuestion ? "Caso abierto · Tab continúa la cadena causal" : "Caso abierto",
+          });
+        } catch (error) {
+          set({ toast: error instanceof Error ? error.message : "No se pudo abrir el caso" });
+        } finally {
+          set((state) => ({ busy: { ...state.busy, "new-case": false } }));
+        }
+      },
+
       addReceipt: (receipt) => set((state) => ({
         inbox: [receipt, ...state.inbox.filter((item) => item.id !== receipt.id)].slice(0, 8),
       })),
@@ -365,6 +703,8 @@ export const useBoardStore = create<BoardState>()(
         pan: state.pan,
         zoom: state.zoom,
         inbox: state.inbox,
+        selectedId: state.selectedId,
+        questionDrafts: state.questionDrafts,
       }),
     },
   ),

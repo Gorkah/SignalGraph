@@ -82,7 +82,18 @@ function normalize(value: string) {
 }
 
 function principal(result: CalaResult) {
-  const value = result.name ?? result.startup;
+  // Cala cambia el nombre de la columna principal según la pregunta. Las
+  // consultas de cartera suelen devolver `company`; limitarse a name/startup
+  // convertía Voicemod, Digibee o Factorial en "Entidad sin nombre".
+  const value = result.name
+    ?? result.startup
+    ?? result.company
+    ?? result.empresa
+    ?? result.compania
+    ?? result["compañía"]
+    ?? result.organization
+    ?? result.fund
+    ?? result.entity;
   return typeof value === "string" ? value : "Entidad sin nombre";
 }
 
@@ -111,7 +122,11 @@ function dossierFromData(input: string, data: unknown): Dossier {
     throw new CalaError("La respuesta no contiene results/entities", "UPSTREAM_ERROR", 502);
   }
   const deliveredAt = new Date().toISOString();
-  const candidates: DossierCandidate[] = payload.results.map((result) => {
+  const candidates: DossierCandidate[] = payload.results
+    // Cala expresa algunas negativas como una fila `{error: ...}` con HTTP
+    // 200. No es evidencia y no debe entrar al grafo como entidad.
+    .filter((result) => typeof result.error !== "string")
+    .map((result) => {
     const name = principal(result);
     const entity = entityForResult(name, payload.entities ?? []);
     return {
@@ -121,7 +136,7 @@ function dossierFromData(input: string, data: unknown): Dossier {
       category: typeof result.sector === "string" ? result.sector : typeof result.focus === "string" ? result.focus : undefined,
       claims: claimsFromLiveResult(result, input, deliveredAt),
     };
-  });
+    });
   return {
     id: `live-${Date.now()}`,
     query: input,

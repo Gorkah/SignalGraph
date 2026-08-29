@@ -54,3 +54,16 @@ export function portfolioPosition(origin: Point, away: Point): Point {
     y: origin.y - STACK_HEIGHT / 2,
   });
 }
+
+/**
+ * Las respuestas forman una escalera narrativa alrededor del caso. Alternar
+ * izquierda/derecha evita que varios Tab conviertan el relato en una línea
+ * horizontal imposible de encajar en pantalla.
+ */
+export function narrativePosition(parent: Point, depth: number): Point {
+  const direction = depth % 2 === 0 ? 1 : -1;
+  return snapPoint({
+    x: parent.x + direction * (CARD_WIDTH + 144),
+    y: parent.y + CARD_HEIGHT + 112,
+  });
+}

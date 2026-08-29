@@ -15,10 +15,12 @@ function ReceiptTimer({ startedAt }: { startedAt: number }) {
 
 export function Bandeja({ fallbackDossier, defaultReportQuery }: Pick<SeedPayload, "fallbackDossier" | "defaultReportQuery">) {
   const [query, setQuery] = useState(defaultReportQuery);
+  const [openingCase, setOpeningCase] = useState(false);
   const inbox = useBoardStore((state) => state.inbox);
   const addReceipt = useBoardStore((state) => state.addReceipt);
   const deliverDossier = useBoardStore((state) => state.deliverDossier);
   const pinCandidate = useBoardStore((state) => state.pinCandidate);
+  const startResearch = useBoardStore((state) => state.startResearch);
   const setToast = useBoardStore((state) => state.setToast);
   const forceFallback = useRef<(() => void) | null>(null);
 
@@ -75,6 +77,39 @@ export function Bandeja({ fallbackDossier, defaultReportQuery }: Pick<SeedPayloa
     }
   }
 
+  async function openNewCase() {
+    const input = query.trim();
+    if (!input || openingCase) return;
+    const id = crypto.randomUUID();
+    setOpeningCase(true);
+    addReceipt({ id, query: input, startedAt: Date.now(), state: "pending" });
+    try {
+      const response = await fetch("/api/report", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ input, mode: "live" }),
+      });
+      const body = await response.json() as Dossier & { error?: string };
+      if (!response.ok) throw new Error(body.error ?? "El archivo no responde");
+      const dossier: Dossier = body.candidates.length ? body : {
+        ...fallbackDossier,
+        id: `fallback-${id}`,
+        query: input,
+        deliveredAt: new Date().toISOString(),
+        source: "fallback",
+      };
+      deliverDossier(id, dossier);
+      if (!body.candidates.length) setToast("Sin coincidencias en vivo: abriendo con evidencia local disponible.");
+      await startResearch(input, dossier);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "No se pudo abrir el caso";
+      useBoardStore.getState().failReceipt(id, message);
+      setToast(message);
+    } finally {
+      setOpeningCase(false);
+    }
+  }
+
   return (
     <aside className="inbox" aria-label="Bandeja de dossieres">
       <header>
@@ -84,7 +119,12 @@ export function Bandeja({ fallbackDossier, defaultReportQuery }: Pick<SeedPayloa
       <div className="query-box">
         <label htmlFor="archive-query">Preguntá al archivo</label>
         <textarea id="archive-query" value={query} onChange={(event) => setQuery(event.target.value)} rows={2} />
-        <button className="primary-button" type="button" onClick={() => void submit()}>pedir dossier</button>
+        <div className="query-actions">
+          <button className="primary-button" type="button" disabled={openingCase} onClick={() => void openNewCase()}>
+            {openingCase ? "abriendo caso…" : "abrir caso nuevo"}
+          </button>
+          <button className="secondary-button" type="button" disabled={openingCase} onClick={() => void submit()}>solo pedir dossier</button>
+        </div>
       </div>
       <div className="receipt-stack">
         {inbox.length === 0 && <p className="empty-inbox">Todavía no hay resguardos.</p>}
@@ -95,9 +135,12 @@ export function Bandeja({ fallbackDossier, defaultReportQuery }: Pick<SeedPayloa
               {receipt.state === "pending" && <ReceiptTimer startedAt={receipt.startedAt} />}
             </div>
             <p>{receipt.query}</p>
-            {receipt.dossier && (
+            {receipt.dossier && receipt.dossier.candidates.length > 0 && (
               <div className="candidate-fan">
                 <small>{receipt.dossier.candidates.length} pistas · clic para clavarlas</small>
+                <button className="receipt-open-case" type="button" onClick={() => void startResearch(receipt.query, receipt.dossier!)}>
+                  <span>↳</span> abrir este dossier como caso
+                </button>
                 {receipt.dossier.candidates.slice(0, 8).map((candidate, index) => (
                   <button
                     key={`${candidate.id ?? candidate.name}-${index}`}

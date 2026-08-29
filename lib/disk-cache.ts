@@ -7,7 +7,13 @@ import { logger } from "@/lib/logger";
 import { CACHE } from "@/lib/constants";
 
 const CACHE_DIR = path.join(process.cwd(), "data", "cache");
+// Vercel empaqueta la aplicación bajo /var/task, que es de solo lectura. La
+// caché en memoria sigue evitando duplicar llamadas durante una instancia
+// caliente; la caché de disco queda para entornos con filesystem persistente.
+const DISK_CACHE_ENABLED = process.env.VERCEL !== "1" && !process.env.AWS_LAMBDA_FUNCTION_NAME;
 const inFlight = new Map<string, Promise<unknown>>();
+const memoryCache = new Map<string, unknown>();
+let diskWarningShown = false;
 
 function stable(value: unknown): string {
   if (Array.isArray(value)) return `[${value.map(stable).join(",")}]`;
@@ -31,6 +37,8 @@ function cachePath(operation: string, key: string) {
 
 export async function readCache<T>(operation: string, input: unknown): Promise<T | undefined> {
   const key = cacheKey(operation, input);
+  if (memoryCache.has(key)) return memoryCache.get(key) as T;
+  if (!DISK_CACHE_ENABLED) return undefined;
   try {
     return JSON.parse(await readFile(cachePath(operation, key), "utf8")) as T;
   } catch (error) {
@@ -40,16 +48,24 @@ export async function readCache<T>(operation: string, input: unknown): Promise<T
 }
 
 export async function writeCache<T>(operation: string, input: unknown, value: T) {
-  await mkdir(CACHE_DIR, { recursive: true });
   const key = cacheKey(operation, input);
+  memoryCache.set(key, value);
+  if (!DISK_CACHE_ENABLED) return value;
+
   const target = cachePath(operation, key);
   const temporary = `${target}.${process.pid}.${Date.now()}.tmp`;
-  await writeFile(temporary, JSON.stringify(value, null, 2), "utf8");
   try {
+    await mkdir(CACHE_DIR, { recursive: true });
+    await writeFile(temporary, JSON.stringify(value, null, 2), "utf8");
     await rename(temporary, target);
   } catch (error) {
     await unlink(temporary).catch(() => undefined);
-    throw error;
+    // La caché es una optimización: nunca debe convertir una respuesta válida
+    // de Cala/Pioneer en un error de la API si el filesystem no está disponible.
+    if (!diskWarningShown) {
+      diskWarningShown = true;
+      logger.warn("Disk cache unavailable; using memory cache", { error: String(error) });
+    }
   }
   return value;
 }
@@ -74,6 +90,7 @@ export async function cacheFirst<T>(operation: string, input: unknown, loader: (
  * Files older than MAX_AGE_DAYS are deleted
  */
 export async function cleanOldCache(maxAgeDays = CACHE.MAX_AGE_DAYS): Promise<number> {
+  if (!DISK_CACHE_ENABLED) return 0;
   try {
     await mkdir(CACHE_DIR, { recursive: true });
   } catch {
@@ -110,7 +127,7 @@ export async function cleanOldCache(maxAgeDays = CACHE.MAX_AGE_DAYS): Promise<nu
 }
 
 // Run cache cleanup on startup
-if (process.env.NODE_ENV !== "test") {
+if (DISK_CACHE_ENABLED && process.env.NODE_ENV !== "test") {
   void cleanOldCache().catch((error) => {
     logger.error("Failed to run cache cleanup on startup", error);
   });

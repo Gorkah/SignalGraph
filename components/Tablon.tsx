@@ -4,12 +4,15 @@ import { useCallback, useEffect, useRef } from "react";
 import type { CSSProperties, PointerEvent as ReactPointerEvent } from "react";
 import { Cartera } from "@/components/Cartera";
 import { Caso } from "@/components/Caso";
+import { Cursores } from "@/components/Cursores";
 import { Ficha } from "@/components/Ficha";
 import { Mazo, RecogerMazo } from "@/components/Mazo";
 import { Hilos } from "@/components/Hilos";
+import { Notas } from "@/components/Notas";
 import { CARD_HEIGHT, CARD_WIDTH, GRID_SIZE, LEAD_WIDTH, STACK_HEIGHT, portfolioPosition } from "@/lib/geometry";
 import { MAX_ZOOM, MIN_ZOOM, useBoardStore } from "@/lib/store";
 import type { Point } from "@/lib/types";
+import { useMyPresence } from "@/liveblocks.config";
 
 const ZOOM_STEP = 1.25;
 
@@ -67,6 +70,19 @@ export function Tablon() {
   const expandedStacks = useBoardStore((state) => state.expandedStacks);
   const viewport = useRef<HTMLElement | null>(null);
   const dragging = useRef<{ id: number; x: number; y: number; originX: number; originY: number } | null>(null);
+  const [, updateMyPresence] = useMyPresence();
+
+  // El cursor se guarda en coordenadas del tablón (deshaciendo pan/zoom) para
+  // que `Cursores` lo pinte igual que a una ficha, sin reconvertir nada.
+  function trackCursor(event: ReactPointerEvent<HTMLElement>) {
+    const rect = event.currentTarget.getBoundingClientRect();
+    updateMyPresence({
+      cursor: {
+        x: (event.clientX - rect.left - pan.x) / zoom,
+        y: (event.clientY - rect.top - pan.y) / zoom,
+      },
+    });
+  }
 
   // Encaja todo el caso en el viewport: el tablón debe leerse entero
   // de un vistazo antes de que nadie toque nada.
@@ -200,7 +216,13 @@ export function Tablon() {
   }
 
   return (
-    <section className="board-viewport" aria-label="Tablón de investigación" ref={viewport}>
+    <section
+      className="board-viewport"
+      aria-label="Tablón de investigación"
+      ref={viewport}
+      onPointerMove={trackCursor}
+      onPointerLeave={() => updateMyPresence({ cursor: null })}
+    >
       {/* La mesa de trabajo: rejilla sin final y zona de arrastre del tablón. */}
       <div
         className="board-grid"
@@ -231,6 +253,8 @@ export function Tablon() {
             y={Math.min(...group.map((card) => card.position.y)) - 38}
           />
         ))}
+        <Notas graph={graph} />
+        <Cursores />
       </div>
 
       <div className="zoom-dock" role="group" aria-label="Zoom del tablón">

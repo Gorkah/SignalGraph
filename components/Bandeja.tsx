@@ -13,14 +13,24 @@ function ReceiptTimer({ startedAt }: { startedAt: number }) {
   return <time>{String(Math.floor(seconds / 60)).padStart(2, "0")}:{String(seconds % 60).padStart(2, "0")}</time>;
 }
 
+/**
+ * Pedir un dossier nuevo al archivo. Es una vía viva —consulta a Cala y
+ * candidatas que se clavan en el corcho—, pero no participa en el relato del
+ * caso: mientras nadie la usa, un cuarto de pantalla de formulario compite con
+ * el corcho por la atención de la sala. Así que arranca plegada en un canto y
+ * se despliega cuando hace falta; el corcho se queda con el ancho.
+ */
 export function Bandeja({ fallbackDossier, defaultReportQuery }: Pick<SeedPayload, "fallbackDossier" | "defaultReportQuery">) {
   const [query, setQuery] = useState(defaultReportQuery);
+  const [abierta, setAbierta] = useState(false);
   const inbox = useBoardStore((state) => state.inbox);
   const addReceipt = useBoardStore((state) => state.addReceipt);
   const deliverDossier = useBoardStore((state) => state.deliverDossier);
   const pinCandidate = useBoardStore((state) => state.pinCandidate);
   const setToast = useBoardStore((state) => state.setToast);
   const forceFallback = useRef<(() => void) | null>(null);
+  const llegados = inbox.filter((item) => item.state === "arrived").length;
+  const panelLabel = useBoardStore((state) => state.caseView?.ui?.archivePanel) ?? "NUEVA CONSULTA";
 
   useEffect(() => {
     function handleKey(event: KeyboardEvent) {
@@ -59,7 +69,7 @@ export function Bandeja({ fallbackDossier, defaultReportQuery }: Pick<SeedPayloa
         body: JSON.stringify({ input, mode: "live" }),
       });
       const body = await response.json() as Dossier & { error?: string };
-      if (!response.ok) throw new Error(body.error ?? "El archivo no responde");
+      if (!response.ok) throw new Error(body.error ?? "Cala no responde");
       if (!settled) {
         settled = true;
         deliverDossier(id, body);
@@ -75,19 +85,46 @@ export function Bandeja({ fallbackDossier, defaultReportQuery }: Pick<SeedPayloa
     }
   }
 
+  if (!abierta) {
+    return (
+      <aside className="inbox is-plegada" aria-label="Bandeja de dossieres">
+        <button
+          type="button"
+          className="inbox-canto"
+          aria-expanded={false}
+          title="Pedir un dossier nuevo a Cala"
+          onClick={() => setAbierta(true)}
+        >
+          <span aria-hidden="true">▸</span>
+          <span className="inbox-canto-rotulo">{panelLabel}</span>
+          {llegados > 0 && <b>{llegados}</b>}
+        </button>
+      </aside>
+    );
+  }
+
   return (
     <aside className="inbox" aria-label="Bandeja de dossieres">
       <header>
-        <span>DOSSIERES PEDIDOS</span>
-        <b>{inbox.filter((item) => item.state === "arrived").length}</b>
+        <button
+          type="button"
+          className="inbox-plegar"
+          aria-expanded
+          title="Plegar la bandeja y devolverle el ancho al corcho"
+          onClick={() => setAbierta(false)}
+        >
+          ▸
+        </button>
+        <span>{panelLabel}</span>
+        <b>{llegados}</b>
       </header>
       <div className="query-box">
-        <label htmlFor="archive-query">Preguntá al archivo</label>
+        <label htmlFor="archive-query">Pregunta a Cala</label>
         <textarea id="archive-query" value={query} onChange={(event) => setQuery(event.target.value)} rows={2} />
         <button className="primary-button" type="button" onClick={() => void submit()}>pedir dossier</button>
       </div>
       <div className="receipt-stack">
-        {inbox.length === 0 && <p className="empty-inbox">Todavía no hay resguardos.</p>}
+        {inbox.length === 0 && <p className="empty-inbox">Ningún dossier pedido. Esta vía abre un caso nuevo; el del corcho ya está servido.</p>}
         {inbox.map((receipt) => (
           <article className={`receipt is-${receipt.state}`} key={receipt.id}>
             <div className="receipt-head">
@@ -97,7 +134,7 @@ export function Bandeja({ fallbackDossier, defaultReportQuery }: Pick<SeedPayloa
             <p>{receipt.query}</p>
             {receipt.dossier && (
               <div className="candidate-fan">
-                <small>{receipt.dossier.candidates.length} pistas · clic para clavarlas</small>
+                <small>{receipt.dossier.candidates.length} resultados · clic para añadirlos</small>
                 {receipt.dossier.candidates.slice(0, 8).map((candidate, index) => (
                   <button
                     key={`${candidate.id ?? candidate.name}-${index}`}

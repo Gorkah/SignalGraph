@@ -2506,6 +2506,32 @@
         "dir": "incoming"
       }
     ],
+    "Fotocasa": [
+      {
+        "id": "bf17d96b-3cbf-4713-a0c9-56129a24cc03",
+        "name": "PixiePixel",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+        "name": "REAL_ESTATE",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "bb7858a2-51d8-45e2-82bd-3ea6a06d317a",
+        "name": "INTERNET_AND_WEB_SERVICES",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "9c8ee23e-569d-42b2-a0a5-1c2bb9d1c72e",
+        "name": "ImmoScout24",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
     "JME Ventures": [
       {
         "id": "1df5b32c-1db4-4368-9b3b-84604324aec9",
@@ -4682,6 +4708,7 @@
         "Prophero",
         "AEDAS HOMES SA",
         "Neinor Homes",
+        "Fotocasa",
         "idealista",
         "Seaya Ventures"
       ]
@@ -4815,6 +4842,7 @@
         "CrowdFarming",
         "eYeka",
         "eWings.com",
+        "Fotocasa",
         "idealista",
         "Kibo Ventures"
       ]

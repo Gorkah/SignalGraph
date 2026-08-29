@@ -5,12 +5,12 @@
   "generatedAt": "2026-08-29T14:40:00.000Z",
   "model": "claude-opus-5 + verificación local",
   "calls": 5,
-  "question": "¿En cuántas manos está quedando el negocio de la vivienda?",
-  "subtitle": "Promotores, socimis y portales: un mercado que parece disperso hasta tirar del hilo.",
+  "question": "¿Quién está detrás de la vivienda en Barcelona?",
+  "subtitle": "La vivienda está repartida. El negocio, no tanto.",
   "openVerb": {
     "relation": "IS_DIRECT_PARENT_OF",
-    "label": "control",
-    "noun": "titularidad",
+    "label": "propiedad",
+    "noun": "propiedad",
     "hidden": true
   },
   "ring": [
@@ -18,134 +18,221 @@
       "id": "50bc23a5-398d-43d4-a715-b98ca0dd6216",
       "name": "Neinor Homes",
       "role": "protagonista",
-      "subtitle": "El mayor promotor residencial español tras integrar Aedas en 2026."
+      "subtitle": "Promotor residencial · actor del caso."
     },
     {
       "id": "35718438-638e-43b6-acb3-03e2eedd8cbf",
       "name": "AEDAS HOMES SA",
       "role": "protagonista",
-      "subtitle": "Segundo gran promotor; el registro jurídico lo conecta ya con Neinor."
-    },
-    {
-      "id": "0ed56aed-9849-40f7-aa80-99999f72ed5c",
-      "name": "MERLIN PROPERTIES SOCIMI, S.A.",
-      "role": "secundaria",
-      "subtitle": "Socimi del IBEX que reaparece en el consejo de Aedas; Cala la tipa erróneamente como persona."
+      "subtitle": "Promotor residencial · actor del caso."
     },
     {
       "id": "e20f6b22-4b15-413a-89de-9f6fa175ac3c",
       "name": "COMPAÑÍA ESPAÑOLA DE VIVIENDAS EN ALQUILER S.A.",
-      "role": "secundaria",
-      "subtitle": "CEVASA: alquiler residencial cotizado desde Barcelona desde 1968."
+      "role": "protagonista",
+      "subtitle": "Empresa de alquiler residencial · vinculada a Barcelona en Cala."
+    },
+    {
+      "id": "768f3092-460a-4eaa-9430-75301c703b7c",
+      "name": "Fotocasa",
+      "role": "protagonista",
+      "subtitle": "Portal inmobiliario · conecta oferta y demanda."
     },
     {
       "id": "935231d1-656d-4921-ba00-47ed2f182d2b",
       "name": "idealista",
       "role": "protagonista",
-      "subtitle": "El portal reconocible que conecta la experiencia cotidiana con propietarios e inversores."
+      "subtitle": "Portal inmobiliario · conecta oferta y demanda."
     },
     {
       "id": "65342723-3382-42ff-a2e7-e1f064d36af6",
       "name": "Habitación.com",
       "role": "protagonista",
-      "subtitle": "Convierte habitaciones individuales en un producto comprable por inversores."
+      "subtitle": "Plataforma de inversión en habitaciones."
     }
   ],
-  "headline": {
-    "bridge": "Neinor Homes → Aedas Homes",
-    "why": "No es una coincidencia nominal ni una noticia: GLEIF registra a Neinor como matriz directa y última de Aedas con datos actualizados el 16 de agosto de 2026."
-  },
   "bridges": [
     {
       "name": "Neinor Homes",
       "id": "fde8bc5b-57a2-4b24-af49-ef36bde9d612",
-      "holders": ["AEDAS HOMES SA"],
+      "holders": [
+        "AEDAS HOMES SA"
+      ],
       "verified": true
     },
     {
       "name": "MERLIN PROPERTIES SOCIMI, S.A.",
       "id": "0ed56aed-9849-40f7-aa80-99999f72ed5c",
-      "holders": ["AEDAS HOMES SA"],
+      "holders": [
+        "AEDAS HOMES SA"
+      ],
       "verified": true
     }
   ],
   "cover": [
     {
       "label": "Papel",
-      "fields": ["type", "focus", "sector"],
+      "fields": [
+        "type",
+        "focus",
+        "sector"
+      ],
       "fallback": "papel no clasificado"
     },
     {
       "label": "Dónde",
-      "fields": ["city", "location", "registered_address", "headquarters_address"],
+      "fields": [
+        "city",
+        "location",
+        "registered_address",
+        "headquarters_address"
+      ],
       "fallback": "sin ubicación anotada"
     },
     {
       "label": "Huella",
-      "fields": ["notes", "notable_details", "description", "founded", "founded_year"],
-      "fallback": "sin detalle en el dossier"
+      "fields": [
+        "founded",
+        "founded_year"
+      ],
+      "fallback": "sin fecha anotada"
     }
   ],
   "back": {
-    "fields": ["notes", "notable_details", "description", "focus", "website"],
-    "hint": "Qué lugar ocupa cada actor y qué afirma exactamente el archivo sobre él."
+    "fields": [
+      "notes",
+      "notable_details",
+      "description",
+      "focus",
+      "website"
+    ],
+    "hint": "Qué lugar ocupa cada actor y qué afirma exactamente Cala sobre él."
   },
   "nouns": [
-    { "type": "IS_DIRECT_PARENT_OF", "noun": "titularidad directa" },
-    { "type": "IS_ULTIMATE_PARENT_OF", "noun": "control último" },
-    { "type": "IS_BOARD_MEMBER_OF", "noun": "consejo" },
-    { "type": "IS_MEMBER_OF", "noun": "membresía" },
-    { "type": "OPERATES_IN_INDUSTRY", "noun": "sector" },
-    { "type": "AFFECTS_INDUSTRY", "noun": "regulación" },
-    { "type": "INVESTED_IN", "noun": "inversión" },
-    { "type": "PARTICIPATES_IN_CORPORATE_EVENT", "noun": "evento corporativo" },
-    { "type": "IS_REGISTERED_IN", "noun": "registro" },
-    { "type": "HAS_HEADQUARTERS_IN", "noun": "sede" },
-    { "type": "FOUNDED", "noun": "fundación" },
-    { "type": "IS_CEO_OF", "noun": "dirección ejecutiva" },
-    { "type": "WORKS_AT", "noun": "vínculo laboral" }
-  ],
-  "finding": {
-    "template": "{holders} lleva a {target}: ya estaba en el tablero.",
-    "toast": "YA ESTABA: al tirar de {holders}, el archivo vuelve a {target}."
-  },
-  "questions": [
     {
-      "id": "question-laws-real-estate",
-      "prompt": "¿Qué normas cuelgan de este negocio?",
-      "lane": "archive",
-      "target": {
-        "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
-        "name": "REAL_ESTATE",
-        "entityType": "Industry",
-        "relation": "AFFECTS_INDUSTRY",
-        "preferred": [
-          "Ley 29/1994 de Arrendamientos Urbanos",
-          "Ley 15/2022",
-          "RDL 2/2026",
-          "RDL 8/2026",
-          "Opkoopbescherming"
-        ]
-      },
-      "answer": {
-        "title": "REAL_ESTATE · 20 normas",
-        "body": "Cinco fichas con identidad han caído del archivo. Los hilos representan AFFECTS_INDUSTRY; no unen ninguna ley directamente con una empresa.",
-        "sourceLabel": "Cala · grafo de entidades",
-        "asOf": "29 ago 2026"
-      }
+      "type": "IS_DIRECT_PARENT_OF",
+      "noun": "propiedad"
     },
     {
-      "id": "question-rental-ownership",
-      "prompt": "¿Qué parte del alquiler está en manos de empresas privadas?",
-      "lane": "web",
-      "answer": {
-        "title": "La estimación nacional: 8%",
-        "body": "El Banco de España situó en un 8% las viviendas de alquiler en manos de empresas privadas. No describe Barcelona ni equivale a todos los grandes tenedores.",
-        "sourceLabel": "Banco de España · Informe Anual 2023",
-        "sourceUrl": "https://www.bde.es/f/webbe/GAP/Secciones/SalaPrensa/IntervencionesPublicas/DirectoresGenerales/economia/Arc/Fic/IIPP-2024-04-23-gavilan2-es-or.pdf",
-        "asOf": "datos 2023"
-      }
+      "type": "IS_ULTIMATE_PARENT_OF",
+      "noun": "grupo propietario"
+    },
+    {
+      "type": "IS_BOARD_MEMBER_OF",
+      "noun": "consejo"
+    },
+    {
+      "type": "IS_MEMBER_OF",
+      "noun": "membresía"
+    },
+    {
+      "type": "OPERATES_IN_INDUSTRY",
+      "noun": "sector"
+    },
+    {
+      "type": "AFFECTS_INDUSTRY",
+      "noun": "regulación"
+    },
+    {
+      "type": "INVESTED_IN",
+      "noun": "inversión"
+    },
+    {
+      "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+      "noun": "evento corporativo"
+    },
+    {
+      "type": "IS_REGISTERED_IN",
+      "noun": "registro"
+    },
+    {
+      "type": "HAS_HEADQUARTERS_IN",
+      "noun": "sede"
+    },
+    {
+      "type": "FOUNDED",
+      "noun": "fundación"
+    },
+    {
+      "type": "IS_CEO_OF",
+      "noun": "dirección ejecutiva"
+    },
+    {
+      "type": "WORKS_AT",
+      "noun": "vínculo laboral"
     }
   ],
-  "notes": "Caso compuesto con tres consultas de Cala y proyecciones verificadas. No se usa Seaya→Spotahome: esa arista no existe en los volcados. La absorción Neinor/Aedas no se presenta como PARTICIPATES_IN_CORPORATE_EVENT; se muestra con IS_DIRECT_PARENT_OF e IS_ULTIMATE_PARENT_OF desde GLEIF (2026-08-16). Merlin aparece en el consejo de Aedas con fuente CNMV, pero Cala la tipa como Person: es una anomalía visible, no una identidad corregida en silencio. Las preguntas respetan dos carriles: Cala puebla por UUID; la web solo contextualiza. El 8% externo es una estimación nacional de 2023 y se rotula con ese alcance."
+  "finding": {
+    "template": "{target} es la matriz directa de {holders}.",
+    "toast": "CONEXIÓN ENCONTRADA: {target} controla directamente a {holders}."
+  },
+  "story": {
+    "restartOnLoad": true,
+    "label": "QUIÉN TIENE LA VIVIENDA",
+    "questionLabel": "PREGUNTA",
+    "scope": "Barcelona · propiedad, promoción e intermediación",
+    "answer": {
+      "label": "RESPUESTA HONESTA",
+      "headline": "La vivienda está repartida. El negocio, no tanto.",
+      "body": "Empezamos por una cifra y seguimos las empresas que aparecen alrededor de la vivienda."
+    },
+    "facts": [
+      {
+        "value": "8%",
+        "label": "del alquiler en España estaba en manos de empresas privadas.",
+        "detail": "Referencia nacional para abrir la investigación; el tablero sigue después las empresas.",
+        "sourceLabel": "Banco de España · Informe Anual 2023",
+        "sourceUrl": "https://www.bde.es/f/webbe/GAP/Secciones/SalaPrensa/IntervencionesPublicas/DirectoresGenerales/economia/Arc/Fic/IIPP-2024-04-23-gavilan2-es-or.pdf",
+        "asOf": "España · alquiler · 2023"
+      }
+    ],
+    "actors": {
+      "label": "QUIÉN APARECE",
+      "title": "No todas estas empresas poseen viviendas.",
+      "body": "CEVASA opera en alquiler residencial; Neinor y Aedas promueven vivienda; idealista y Fotocasa son portales; Habitación.com convierte habitaciones en inversión."
+    },
+    "limitationLabel": "LO QUE FALTA",
+    "limitation": "No hay aquí un porcentaje de Barcelona, un ranking local de propietarios ni un número de viviendas por empresa.",
+    "action": {
+      "label": "Seguir la propiedad de Aedas",
+      "body": "Busca Aedas, pulsa «ver conexiones» y elige «propiedad».",
+      "entityId": "35718438-638e-43b6-acb3-03e2eedd8cbf",
+      "relationType": "IS_DIRECT_PARENT_OF",
+      "pendingLabel": "AHORA, TIRA DEL HILO",
+      "revealedLabel": "CONEXIÓN ENCONTRADA"
+    },
+    "reveal": {
+      "headline": "Aedas no es independiente.",
+      "body": "Neinor figura como su matriz directa y última. Dos nombres del tablero pertenecen al mismo grupo.",
+      "sourceLabel": "GLEIF",
+      "asOf": "actualizado el 16 ago 2026"
+    },
+    "nextLabel": "SIGUIENTE PREGUNTA",
+    "nextQuestion": "Para cerrar la pregunta original falta obtener el reparto de propiedad específico de Barcelona."
+  },
+  "ui": {
+    "caseOpen": "LA PREGUNTA",
+    "caseFinding": "CONEXIÓN ENCONTRADA",
+    "cards": "ACTORES",
+    "leads": "RESULTADOS",
+    "connections": "CONEXIONES",
+    "connection": "CONEXIÓN",
+    "noConnections": "sin conexiones disponibles",
+    "showConnections": "ver ▾",
+    "hideConnections": "ocultar ▴",
+    "foundConnection": "CONEXIÓN ENCONTRADA",
+    "openLead": "ver",
+    "lead": "resultado",
+    "details": "detalles",
+    "front": "resumen",
+    "moreConnections": "más conexiones",
+    "collectConnections": "ocultar conexiones",
+    "archiveQuestion": "DATO DE CALA",
+    "externalQuestion": "CONTEXTO EXTERNO",
+    "askArchive": "consultar ▸",
+    "askExternal": "ver contexto ▸",
+    "archivePanel": "CONSULTAR CALA"
+  },
+  "questions": [],
+  "notes": "Caso compuesto con tres consultas de Cala y proyecciones verificadas. No se usa Seaya→Spotahome: esa arista no existe en los volcados. La absorción Neinor/Aedas no se presenta como PARTICIPATES_IN_CORPORATE_EVENT; se muestra con IS_DIRECT_PARENT_OF e IS_ULTIMATE_PARENT_OF desde GLEIF (2026-08-16). Merlin aparece en el consejo de Aedas con fuente CNMV, pero Cala la tipa como Person: es una anomalía visible, no una identidad corregida en silencio. Las preguntas respetan dos carriles: Cala puebla por UUID; la web solo contextualiza. El 8% externo es una estimación nacional de 2023 y se rotula con ese alcance. CEVASA salió del anillo por ficha muerta: el dossier la nombra «Compañía Española de Viviendas en Alquiler (CEVASA)» y la entidad se llama «COMPAÑÍA ESPAÑOLA DE VIVIENDAS EN ALQUILER S.A.», así que ningún claim la encontraba —los tres huecos de portada salían con su texto de reserva— y no tenía relaciones descargadas: cero hilos locales. La sustituye Fotocasa (768f3092-460a-4eaa-9430-75301c703b7c), comprobada antes de entrar con pull-relations: portada con sector y ubicación, y cuatro vecinos reales en dos hilos —INVESTED_IN con PixiePixel y con ImmoScout24, OPERATES_IN_INDUSTRY con REAL_ESTATE e INTERNET_AND_WEB_SERVICES—, los dos sectores que ya comparte idealista."
 }

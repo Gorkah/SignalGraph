@@ -9,6 +9,7 @@ export function Pregunta({ question }: { question: QuestionNode }) {
   const budget = useBoardStore((state) => state.archiveBudget);
   const answered = question.state === "answered";
   const archive = question.lane === "archive";
+  const ui = useBoardStore((state) => state.caseView?.ui);
 
   return (
     <article
@@ -16,14 +17,14 @@ export function Pregunta({ question }: { question: QuestionNode }) {
       style={{ left: question.position.x, top: question.position.y }}
     >
       <header>
-        <span>{archive ? "PREGUNTA AL ARCHIVO" : "FUERA DEL ARCHIVO"}</span>
+        <span>{archive ? (ui?.archiveQuestion ?? "DATO DE CALA") : (ui?.externalQuestion ?? "CONTEXTO EXTERNO")}</span>
         <b>{archive ? `${budget}/10` : "WEB"}</b>
       </header>
       {!answered ? (
         <>
           <p>{question.prompt}</p>
           <button type="button" disabled={busy} onClick={() => void answerQuestion(question.id)}>
-            {busy ? "buscando…" : archive ? "gastar 1 consulta ▸" : "traer contexto ▸"}
+            {busy ? "buscando…" : archive ? (ui?.askArchive ?? "consultar ▸") : (ui?.askExternal ?? "ver contexto ▸")}
           </button>
         </>
       ) : (

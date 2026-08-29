@@ -3,13 +3,15 @@
 import { useCallback, useEffect, useRef } from "react";
 import type { CSSProperties, PointerEvent as ReactPointerEvent } from "react";
 import { Cartera } from "@/components/Cartera";
+import { DatoClave } from "@/components/DatoClave";
 import { Caso } from "@/components/Caso";
 import { Ficha } from "@/components/Ficha";
 import { Mazo, RecogerMazo } from "@/components/Mazo";
 import { Pregunta } from "@/components/Pregunta";
 import { Hilos } from "@/components/Hilos";
-import { CARD_HEIGHT, CARD_WIDTH, GRID_SIZE, LEAD_WIDTH, QUESTION_HEIGHT, QUESTION_WIDTH, STACK_HEIGHT, portfolioPosition } from "@/lib/geometry";
+import { GRID_SIZE, cardBox, occupiedBoxes } from "@/lib/geometry";
 import { MAX_ZOOM, MIN_ZOOM, useBoardStore } from "@/lib/store";
+import { CASE_RELATION } from "@/lib/relations";
 import type { Point } from "@/lib/types";
 
 const ZOOM_STEP = 1.25;
@@ -67,36 +69,25 @@ export function Tablon() {
   const setView = useBoardStore((state) => state.setView);
   const expandedStacks = useBoardStore((state) => state.expandedStacks);
   const caseView = useBoardStore((state) => state.caseView);
+  const storyStarted = useBoardStore((state) => state.storyStarted);
   const viewport = useRef<HTMLElement | null>(null);
   const dragging = useRef<{ id: number; x: number; y: number; originX: number; originY: number } | null>(null);
+  // Qué fichas había la última vez: lo que no esté aquí acaba de caer.
+  const clavadas = useRef(new Set<string>());
+  // Y si el caso ya tenía veredicto: la tarjeta de cierre se clava sola.
+  const veredicto = useRef(false);
 
   // Encaja todo el caso en el viewport: el tablón debe leerse entero
   // de un vistazo antes de que nadie toque nada.
   const fitToContent = useCallback(() => {
     const node = viewport.current;
-    const current = useBoardStore.getState().researchCase;
+    const { researchCase: current, caseView: vista, storyStarted: started } = useBoardStore.getState();
     if (!node || !current) return;
-    const boxes = [
-      { ...current.focus.position, w: 296, h: 184 },
-      ...current.cards.map((card) => card.density === "lead"
-        ? { ...card.position, w: LEAD_WIDTH, h: 96 }
-        : { ...card.position, w: CARD_WIDTH, h: CARD_HEIGHT }),
-      ...current.cards
-        .filter((card) => card.density === "full" && !card.parentId)
-        .map((card) => ({
-          ...portfolioPosition(
-            { x: card.position.x + CARD_WIDTH / 2, y: card.position.y + CARD_HEIGHT / 2 },
-            current.focus.position,
-          ),
-          w: LEAD_WIDTH,
-          h: STACK_HEIGHT,
-        })),
-      ...current.questions.map((question) => ({
-        ...question.position,
-        w: QUESTION_WIDTH,
-        h: QUESTION_HEIGHT,
-      })),
-    ];
+    // Una sola lista de cajas, la misma que usa la colocación: caso, fichas,
+    // resultados, mazos, carteras y preguntas. Cuando aparezca un tipo de nodo
+    // nuevo entra por ahí y el encuadre lo recoge sin tocar nada aquí.
+    const framed = started ? current : { focus: current.focus, cards: [], questions: [] };
+    const boxes = occupiedBoxes(framed, vista);
     const minX = Math.min(...boxes.map((b) => b.x));
     const minY = Math.min(...boxes.map((b) => b.y));
     const maxX = Math.max(...boxes.map((b) => b.x + b.w));
@@ -123,6 +114,39 @@ export function Tablon() {
     if (!graph || useBoardStore.getState().framedCaseId === graph.id) return;
     fitToContent();
     useBoardStore.setState({ framedCaseId: graph.id });
+  }, [fitToContent, graph]);
+
+  useEffect(() => {
+    fitToContent();
+  }, [fitToContent, storyStarted]);
+
+  // El corcho crece: cinco leyes cayendo de una pregunta, un mazo tirado de un
+  // cabo. Lo que acaba de aterrizar no puede quedarse fuera de la vista —había
+  // que ir a buscarlo a mano—, así que si cae fuera del encuadre se reencuadra.
+  // Solo mira lo recién clavado: arrastrar una ficha al borde o alejarse a mano
+  // son gestos del usuario y el tablón no se los discute.
+  useEffect(() => {
+    const node = viewport.current;
+    if (!graph || !node) return;
+    const conocidas = clavadas.current;
+    const recien = graph.cards.filter((card) => !conocidas.has(card.id));
+    clavadas.current = new Set(graph.cards.map((card) => card.id));
+    // El hallazgo clava la tarjeta de cierre, que no es una ficha: no hay nada
+    // "recién caído" que la represente, así que se mira aparte.
+    const hayVeredicto = Boolean(graph.focus.finding);
+    const veredictoNuevo = hayVeredicto && !veredicto.current;
+    veredicto.current = hayVeredicto;
+    if (!recien.length && !veredictoNuevo) return;
+    const { pan: vista, zoom: escala, caseView: guion } = useBoardStore.getState();
+    const dentro = (box: { x: number; y: number; w: number; h: number }) =>
+      box.x * escala + vista.x >= 0
+      && box.y * escala + vista.y >= 0
+      && (box.x + box.w) * escala + vista.x <= node.clientWidth
+      && (box.y + box.h) * escala + vista.y <= node.clientHeight;
+    // Al caer el veredicto se mira el corcho entero —es el momento en que se
+    // lee el caso completo—; el resto del tiempo, solo lo que acaba de caer.
+    const mirar = veredictoNuevo ? occupiedBoxes(graph, guion) : recien.map(cardBox);
+    if (!mirar.every(dentro)) fitToContent();
   }, [fitToContent, graph]);
 
   // Rueda = zoom anclado al cursor. Va en un listener no pasivo porque
@@ -224,15 +248,20 @@ export function Tablon() {
         className="board-surface"
         style={{ transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${zoom})` }}
       >
-        <Hilos graph={graph} />
-        <Caso focus={graph.focus} cards={graph.cards.length} edges={graph.edges.length} />
-        {graph.questions.map((question) => <Pregunta key={question.id} question={question} />)}
-        {loose.map((card) => <Ficha key={card.id} card={card} />)}
-        {carteras.map((card) => <Cartera key={`cartera-${card.id}`} card={card} focus={graph.focus} />)}
-        {[...stacks].map(([stackId, group]) => (
+        <Hilos graph={storyStarted ? graph : { ...graph, cards: [], edges: [], questions: [] }} />
+        <Caso
+          focus={graph.focus}
+          cards={storyStarted ? graph.cards.length : 0}
+          edges={storyStarted ? graph.edges.filter((edge) => edge.relationType !== CASE_RELATION).length : 0}
+        />
+        <DatoClave />
+        {storyStarted && graph.questions.map((question) => <Pregunta key={question.id} question={question} />)}
+        {storyStarted && loose.map((card, index) => <Ficha key={card.id} card={card} entranceIndex={index} />)}
+        {storyStarted && carteras.map((card) => <Cartera key={`cartera-${card.id}`} card={card} focus={graph.focus} />)}
+        {storyStarted && [...stacks].map(([stackId, group]) => (
           <Mazo key={stackId} cards={group} parentName={group[0].parentId ? cardName.get(group[0].parentId) : undefined} />
         ))}
-        {[...openGroups].map(([stackId, group]) => (
+        {storyStarted && [...openGroups].map(([stackId, group]) => (
           <RecogerMazo
             key={stackId}
             stackId={stackId}
@@ -249,12 +278,7 @@ export function Tablon() {
         <button type="button" className="zoom-reset" onClick={fitToContent} aria-label="Encajar el caso">◱</button>
       </div>
 
-      <div className="board-help">
-        <i>inversión</i>
-        <i className="is-case">procedencia (hover en el caso)</i>
-        <span className="sep">·</span>
-        <span>RUEDA = ZOOM · +/−/0</span>
-      </div>
+      <div className="board-help">RUEDA = ZOOM · ARRASTRA PARA MOVERTE</div>
     </section>
   );
 }

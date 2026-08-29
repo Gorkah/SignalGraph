@@ -1,0 +1,137 @@
+{
+  "id": "768f3092-460a-4eaa-9430-75301c703b7c",
+  "name": "Fotocasa",
+  "introspection": {
+    "properties": [
+      "name",
+      "employee_count",
+      "website",
+      "description",
+      "registered_address",
+      "id"
+    ],
+    "relationships": {
+      "outgoing": [
+        "INVESTED_IN",
+        "OPERATES_IN_INDUSTRY"
+      ],
+      "incoming": [
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "768f3092-460a-4eaa-9430-75301c703b7c",
+    "name": "Fotocasa",
+    "entity_type": "Organization",
+    "description": "Spanish online real estate platform headquartered in Madrid",
+    "properties": {
+      "name": {
+        "value": "Fotocasa",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-06-27"
+          }
+        ]
+      },
+      "description": {
+        "value": "Spanish online real estate platform headquartered in Madrid",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-03"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "INVESTED_IN": [
+          {
+            "id": "bf17d96b-3cbf-4713-a0c9-56129a24cc03",
+            "name": "PixiePixel",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Fotocasa acquires Spanish PropTech PixiePixel",
+                  "document": "https://adevinta.com/press-releases/fotocasa-acquires-spanish-proptech-pixiepixel",
+                  "date": "2021-12-13"
+                },
+                {
+                  "name": "Ampliamos la familia adquiriendo PixiePixel para Fotocasa",
+                  "document": "https://adevinta.com/es/notas-de-prensa/ampliamos-familia-adquisicion-pixiepixel-fotocasa",
+                  "date": "2021-12-13"
+                }
+              ],
+              "id": "d9a67f59-6ee5-5c13-843b-0ccf2dfa93d5",
+              "valid_since": "2021-12-13"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+            "name": "REAL_ESTATE",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Encuentra tu inmueble ideal entre los 0 00000 00001 00002 00003 00004 activos disponibles",
+                  "document": "https://www.servihabitat.com/es/venta/terreno/barcelona-maresme-argentona",
+                  "date": "2026-07-20"
+                },
+                {
+                  "name": "Buy land,",
+                  "document": "https://www.cocampo.com/es/es/explorar/arrendar/fincas-agricolas/espana/cataluna/barcelona/argentona",
+                  "date": "2026-07-20"
+                }
+              ],
+              "id": "214a286e-5d1a-5ced-9904-75e374154e8e"
+            }
+          },
+          {
+            "id": "bb7858a2-51d8-45e2-82bd-3ea6a06d317a",
+            "name": "INTERNET_AND_WEB_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.linkedin.com",
+                  "document": "https://www.linkedin.com/company/fotocasa",
+                  "date": "2026-07-20"
+                }
+              ],
+              "id": "5b9ac30e-5bbe-5148-bb94-2526deccf91a"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "9c8ee23e-569d-42b2-a0a5-1c2bb9d1c72e",
+            "name": "ImmoScout24",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Scout24 SE Scout24 acquires Spanish online real estate platforms Fotocasa and Habitaclia",
+                  "document": "https://www.eqs-news.com/news/corporate/scout24-acquires-spanish-online-real-estate-platforms-fotocasa-and-habitaclia/154ef1aa-8511-412d-945e-d9cacfe0d12d_en",
+                  "date": "2025-09-18"
+                }
+              ],
+              "id": "ff739f06-a78c-5099-93e7-ccf9294d4b8e",
+              "valid_since": "2025-09-18"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

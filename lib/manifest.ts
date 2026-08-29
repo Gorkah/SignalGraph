@@ -14,7 +14,7 @@ const CASES_DIR = path.join(process.cwd(), "data", "cases");
  *
  * Se elige con CASE_SLUG, o el más reciente si no se dice nada.
  */
-export function loadManifest(): CaseManifest | undefined {
+export function loadManifest(slug?: string): CaseManifest | undefined {
   let files: string[];
   try {
     files = readdirSync(CASES_DIR).filter((file) => file.endsWith(".json"));
@@ -23,7 +23,8 @@ export function loadManifest(): CaseManifest | undefined {
   }
   if (!files.length) return undefined;
 
-  const wanted = process.env.CASE_SLUG ? `${process.env.CASE_SLUG}.json` : undefined;
+  const wantedSlug = slug ?? process.env.CASE_SLUG;
+  const wanted = wantedSlug ? `${wantedSlug}.json` : undefined;
   const chosen = (wanted && files.includes(wanted) ? wanted : undefined)
     ?? files.map((file) => ({ file, at: readCaseDate(file) }))
       .sort((a, b) => b.at.localeCompare(a.at))[0].file;
@@ -33,6 +34,28 @@ export function loadManifest(): CaseManifest | undefined {
   } catch {
     return undefined;
   }
+}
+
+export function listCaseOptions() {
+  let files: string[];
+  try {
+    files = readdirSync(CASES_DIR).filter((file) => file.endsWith(".json"));
+  } catch {
+    return [];
+  }
+  return files.flatMap((file) => {
+    try {
+      const manifest = JSON.parse(readFileSync(path.join(CASES_DIR, file), "utf8")) as CaseManifest;
+      return [{
+        slug: manifest.slug,
+        question: manifest.question,
+        subtitle: manifest.subtitle,
+        recommended: manifest.slug === process.env.CASE_SLUG,
+      }];
+    } catch {
+      return [];
+    }
+  }).sort((a, b) => Number(b.recommended) - Number(a.recommended));
 }
 
 function readCaseDate(file: string) {
@@ -54,5 +77,7 @@ export function clientView(manifest: CaseManifest | undefined) {
     back: manifest.back,
     nouns: manifest.nouns,
     finding: manifest.finding,
+    story: manifest.story,
+    ui: manifest.ui,
   };
 }

@@ -5,19 +5,23 @@ fichero que configura el tablón de investigación. Estas instrucciones valen
 igual ejecutadas por código (`scripts/build-case.mjs`) o por una persona con un
 agente; el contrato de salida es el mismo.
 
-## Qué es el tablón
+## Qué es el producto
 
-Un corcho de detective. La gramática, de la que no te puedes salir:
+Una investigación visual guiada. El usuario debe poder entenderla sin conocer
+Cala, grafos ni la consulta original. El corcho es la escena, no la historia:
+el manifiesto escribe el relato y la interfaz lo revela por pasos.
 
-- **El caso** manda en el centro: una pregunta, y más tarde su respuesta.
+- **El producto empieza en cero** con un selector de preguntas reales.
+- **Al elegir una pregunta**, su reparto aparece directamente; no existe un
+  segundo botón de confirmación.
 - **Las fichas** del anillo son las entidades protagonistas de la pregunta.
 - **Cada ficha tiene una cartera cerrada**: un mazo que promete N cosas. Abrirla
   tira del hilo y trae **pistas**, fichas en densidad mínima.
 - **Un hilo** une dos fichas. No lleva flecha: la dirección que da Cala no es
   fiable, así que se nombra con un sustantivo simétrico ("inversión", no
   "invirtió en").
-- **El hallazgo** ocurre cuando una pista que cae de una cartera **ya estaba en
-  el tablón** por otra. Ese cruce es la razón de existir de la aplicación.
+- **El hallazgo** ocurre cuando una entidad recuperada ya estaba en el tablón.
+  El texto debe explicar qué significa, no describir la mecánica del grafo.
 - **Una pregunta** abre una de dos rutas: Cala devuelve entidades con UUID y
   puede poblar el tablón; la web devuelve texto, se marca FUERA DEL ARCHIVO y
   nunca crea fichas ni hilos.
@@ -33,8 +37,8 @@ se cruzan. De ahí salen las tres cosas que importan:
    solapes, el mapa del reparto; si no los hay, que cada cual tiene su coto.
 2. **El reparto**: quién va al anillo, quién queda dentro de una cartera y quién
    es ruido y no debe ocupar sitio.
-3. **El hallazgo esperado**: qué cruce va a aparecer y entre qué fichas, para
-   que quien presente sepa qué carteras abrir.
+3. **El relato**: respuesta inicial, evidencia, límite explícito, una única
+   acción recomendada y la revelación que produce.
 
 ## Reglas duras
 
@@ -53,6 +57,15 @@ se cruzan. De ahí salen las tres cosas que importan:
   ya verificada; si no la tenés, no la inventes ni la incluyas.
 - **Los hubs solo se tiran por el lado que discrimina.** No puebles desde un
   lado de alto grado si devuelve categorías o sociedades arbitrarias.
+- **No prometas más que la evidencia.** Si la consulta pide Barcelona y el dato
+  es nacional, la respuesta es parcial y ese alcance se escribe en `story`.
+- **No conviertas el complemento de una cifra en otra cifra.** Un 8% de una
+  categoría no demuestra por sí solo que el 92% pertenezca a otra.
+- **No mezcles papeles.** Propietarios, promotores, portales, personas y leyes
+  pueden compartir caso, pero el relato debe distinguir qué representa cada uno.
+- **No uses vocabulario de dominio en el código visual.** Todo rótulo específico
+  —incluidos ficha, actor, inversión o propiedad— sale de `ui`, `nouns`,
+  `cover` o `story`.
 
 ## Trampas conocidas, medidas en estos datos
 
@@ -83,12 +96,16 @@ se cruzan. De ahí salen las tres cosas que importan:
   Elegí lo que de verdad distingue una ficha de otra aquí, y decí qué poner
   cuando el dato falte.
 - `back` — qué se lee al voltear la ficha, que es donde vive el relato largo.
-- `headline` — de todos los cruces, cuál es **el** de la demo y por qué.
+- `story` — alcance, respuesta directa, hasta tres hechos con fuente, reparto,
+  límite, una acción recomendada, revelación y siguiente pregunta. Es el guion
+  que permite entender el caso sin presentador.
+- `ui` — todos los nombres visibles de piezas y acciones. Deben sonar naturales
+  para esta consulta y no heredar conceptos del caso anterior.
 - `nouns` — un sustantivo por **cada** tipo de relación que hayas visto, no solo
   el de abrir. Los que falten salen en crudo en pantalla, con su nombre de
   base de datos a la vista.
 - `finding` — cómo se redacta el hallazgo en la tarjeta y en el aviso.
-- `questions` — hasta dos preguntas posteriores: `archive` puede materializar
-  entidades; `web` solo contextualiza. Nunca devuelvas coordenadas.
+- `questions` — hasta dos ramificaciones opcionales, fuera del camino principal:
+  `archive` puede materializar entidades; `web` solo contextualiza.
 - `notes` — lo que aprendiste y no cabe en el resto: falsos positivos que
   descartaste, entidades dudosas, por qué dejaste algo fuera.

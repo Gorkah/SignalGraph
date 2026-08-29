@@ -205,6 +205,73 @@ export type CaseManifest = {
   back: { fields: string[]; hint: string };
   nouns: Array<{ type: string; noun: string }>;
   finding: { template: string; toast: string };
+  /**
+   * El relato que hace comprensible el caso sin un narrador al lado. Todo el
+   * contenido depende del manifiesto: la interfaz no presupone un sector, una
+   * geografía ni siquiera que el hallazgo sea una empresa.
+   */
+  story?: {
+    restartOnLoad?: boolean;
+    label?: string;
+    questionLabel?: string;
+    scope: string;
+    answer: { label?: string; headline: string; body: string };
+    facts?: Array<{
+      value?: string;
+      label: string;
+      detail?: string;
+      sourceLabel: string;
+      sourceUrl?: string;
+      asOf?: string;
+    }>;
+    actors?: { label?: string; title: string; body: string };
+    limitationLabel?: string;
+    limitation?: string;
+    action: {
+      label: string;
+      body: string;
+      entityId?: string;
+      relationType?: string;
+      pendingLabel?: string;
+      revealedLabel?: string;
+    };
+    reveal?: {
+      headline: string;
+      body: string;
+      sourceLabel: string;
+      sourceUrl?: string;
+      asOf?: string;
+    };
+    nextLabel?: string;
+    nextQuestion?: string;
+  };
+  /** Vocabulario de la escena. Los defaults son neutrales y solo sirven para
+   * manifiestos antiguos; un caso puede renombrar toda la gramática visible. */
+  ui?: {
+    caseOpen?: string;
+    caseFinding?: string;
+    cards?: string;
+    leads?: string;
+    connections?: string;
+    connection?: string;
+    noConnections?: string;
+    showConnections?: string;
+    hideConnections?: string;
+    foundConnection?: string;
+    openLead?: string;
+    lead?: string;
+    details?: string;
+    front?: string;
+    moreConnections?: string;
+    collectConnections?: string;
+    archiveQuestion?: string;
+    externalQuestion?: string;
+    askArchive?: string;
+    askExternal?: string;
+    archivePanel?: string;
+  };
+  /** El veredicto que se lee al final, cuando el caso ya tiene hallazgos. */
+  closing?: string;
   questions?: Array<{
     id: string;
     prompt: string;
@@ -227,4 +294,8 @@ export type CaseManifest = {
   notes: string;
 };
 
-export type CaseView = Pick<CaseManifest, "query" | "openVerb" | "cover" | "back" | "nouns" | "finding">;
+/** Lo que el cliente necesita para pintar la investigación y su relato. */
+export type CaseView = Pick<
+  CaseManifest,
+  "query" | "openVerb" | "cover" | "back" | "nouns" | "finding" | "story" | "ui"
+>;

@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 import { Bandeja } from "@/components/Bandeja";
 import { Carpeta } from "@/components/Carpeta";
 import { Tablon } from "@/components/Tablon";
 import { useBoardStore } from "@/lib/store";
+import { CASE_RELATION } from "@/lib/relations";
 import type { SeedPayload } from "@/lib/types";
 
 export function SignalGraphApp({ seed }: { seed: SeedPayload }) {
@@ -15,15 +17,20 @@ export function SignalGraphApp({ seed }: { seed: SeedPayload }) {
   const graph = useBoardStore((state) => state.researchCase);
   const toast = useBoardStore((state) => state.toast);
   const setToast = useBoardStore((state) => state.setToast);
-  const archiveBudget = useBoardStore((state) => state.archiveBudget);
+  const ui = useBoardStore((state) => state.caseView?.ui);
+  const storyStarted = useBoardStore((state) => state.storyStarted);
+  const startStory = useBoardStore((state) => state.startStory);
 
   useEffect(() => {
     void Promise.resolve(useBoardStore.persist.rehydrate()).then(() => {
-      initialize(seed.researchCase);
+      initialize(seed.researchCase, seed.caseView?.story?.restartOnLoad);
       setCaseView(seed.caseView);
+      // Elegir el caso en la portada ya es el gesto de inicio. La ruta abre el
+      // tablero directamente; no pide una segunda confirmación.
+      startStory();
       finishHydration();
     });
-  }, [finishHydration, initialize, setCaseView, seed.caseView, seed.researchCase]);
+  }, [finishHydration, initialize, setCaseView, startStory, seed.caseView, seed.researchCase]);
 
   useEffect(() => {
     if (!toast) return;
@@ -32,22 +39,20 @@ export function SignalGraphApp({ seed }: { seed: SeedPayload }) {
   }, [setToast, toast]);
 
   if (!hydrated || !graph) {
-    return <main className="boot-screen"><span>SG/01</span><p>ABRIENDO EL ARCHIVO…</p></main>;
+    return <main className="boot-screen"><span>SG/01</span><p>CONSULTANDO CALA…</p></main>;
   }
 
   return (
     <main className="workbench">
       <header className="topbar">
         <div className="brand-lockup">
-          <span className="brand-mark">SG</span>
+          <Link className="brand-mark" href="/" aria-label="Elegir otra investigación">SG</Link>
           <div><h1>SIGNALGRAPH</h1><p>{graph.title}</p></div>
         </div>
-        <div className="board-stats">
-          <span>FICHAS <b>{graph.cards.filter((card) => card.density === "full").length}</b></span>
-          <span>PISTAS <b>{graph.cards.filter((card) => card.density === "lead").length}</b></span>
-          <span>HILOS <b>{graph.edges.length}</b></span>
-          <span>ARCHIVO <b>{archiveBudget}/10</b></span>
-        </div>
+        {storyStarted && <div className="board-stats">
+          <span>{ui?.cards ?? "ACTORES"} <b>{graph.cards.filter((card) => card.density === "full").length}</b></span>
+          <span>{ui?.connections ?? "CONEXIONES"} <b>{graph.edges.filter((edge) => edge.relationType !== CASE_RELATION).length}</b></span>
+        </div>}
       </header>
       <div className="workspace">
         <Tablon />

@@ -3,6 +3,7 @@ import "server-only";
 import { createHash } from "node:crypto";
 import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
+import { occupiedBoxes, questionPositions } from "@/lib/geometry";
 import { loadManifest, clientView } from "@/lib/manifest";
 import { CASE_RELATION } from "@/lib/relations";
 import { entityNameKey } from "@/lib/names";
@@ -322,15 +323,16 @@ function buildCase(dumps: ReturnType<typeof loadCalaDumps>, manifest: ReturnType
 
   const cards = buildCards(dumps, manifest);
   const edges = [...caseEdges];
-  const questions = (manifest?.questions ?? []).slice(0, 2).map((question, index) => ({
+  // Las preguntas cuelgan del caso, en fila bajo su tarjeta, y se corren solas
+  // al hueco libre más cercano si el anillo ya ocupa ese sitio. El agente
+  // decide qué preguntar, no coordenadas: esa frontera sigue intacta, y el
+  // manifiesto puede cambiar el anillo entero sin dejarlas encima de una ficha.
+  const asked = (manifest?.questions ?? []).slice(0, 2);
+  const slots = questionPositions(focus.position, asked.length, occupiedBoxes({ focus, cards }));
+  const questions = asked.map((question, index) => ({
     ...question,
     state: "open" as const,
-    // Las preguntas viven dentro del anillo, debajo del caso. El agente decide
-    // qué preguntar, no coordenadas: esa frontera sigue intacta.
-    position: {
-      x: snapTo(CENTRE.x + (index === 0 ? -500 : 260)),
-      y: snapTo(CENTRE.y + 190),
-    },
+    position: slots[index],
   }));
 
   // El id sale del contenido: si cambia la semilla o el layout, el tablón
@@ -342,6 +344,8 @@ function buildCase(dumps: ReturnType<typeof loadCalaDumps>, manifest: ReturnType
       cards.map((c) => [c.id, c.position]),
       edges.map((e) => e.id),
       questions.map((q) => [q.id, q.prompt, q.position]),
+      manifest?.story,
+      manifest?.ui,
     ]))
     .digest("hex")
     .slice(0, 8);
@@ -381,9 +385,9 @@ function buildFallbackDossier(dumps: ReturnType<typeof loadCalaDumps>, query: st
   };
 }
 
-export function getSeedPayload(): SeedPayload {
+export function getSeedPayload(caseSlug?: string): SeedPayload {
   const dumps = loadCalaDumps();
-  const manifest = loadManifest();
+  const manifest = loadManifest(caseSlug);
   const reportQuery = manifest?.query ?? DEFAULT_REPORT_QUERY;
   return {
     caseView: clientView(manifest),

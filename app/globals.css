@@ -56,7 +56,39 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 .boot-screen span { font-family: var(--font-display); font-size: 44px; color: var(--red); }
 .boot-screen p { margin: 0; }
 
-.workbench { height: 100vh; background: var(--board); display: flex; flex-direction: column; }
+.case-chooser {
+  min-height: 100dvh; overflow-y: auto; padding: 22px clamp(20px, 5vw, 72px) 48px;
+  background-color: var(--board);
+  background-image:
+    linear-gradient(rgba(32, 27, 24, .13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(32, 27, 24, .13) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+.case-chooser > header { display: flex; align-items: center; gap: 13px; }
+.case-chooser > header div { display: grid; gap: 3px; }
+.case-chooser > header b { font-family: var(--font-display); font-size: 14px; }
+.case-chooser > header small { font-size: 14px; }
+.case-chooser > section { width: min(980px, 100%); margin: clamp(50px, 8vh, 96px) auto 0; }
+.chooser-kicker { margin: 0; color: var(--red); font-family: var(--font-display); font-size: 11px; }
+.case-chooser h1 { margin: 10px 0 12px; font-size: clamp(42px, 6vw, 76px); line-height: .86; letter-spacing: -.035em; }
+.chooser-intro { max-width: 620px; margin: 0 0 30px; font-size: 23px; line-height: 1.05; }
+.case-options { display: grid; gap: 13px; }
+.case-options > a {
+  position: relative; display: grid; grid-template-columns: 42px minmax(0, 1fr) 34px; gap: 13px; align-items: center;
+  padding: 16px 17px; border: 2px solid var(--ink); background: var(--paper-bright); color: var(--ink);
+  box-shadow: 6px 6px 0 rgba(32, 27, 24, .72); text-decoration: none;
+  transition: translate 140ms linear, box-shadow 140ms linear, background 140ms linear;
+}
+.case-options > a:nth-child(even) { translate: 10px 0; }
+.case-options > a:hover { translate: -3px -3px; box-shadow: 10px 10px 0 var(--ink); background: var(--yellow); }
+.case-options > a > span { font-family: var(--font-display); font-size: 13px; color: var(--red); }
+.case-options h2 { margin: 3px 0 6px; font-size: 25px; line-height: .94; text-wrap: balance; }
+.case-options p { margin: 0; font-size: 17px; line-height: 1.05; }
+.case-options small { color: var(--green); font-family: var(--font-display); font-size: 9px; }
+.case-options > a > b { font-size: 28px; }
+.case-options > a.is-recommended { border-left: 10px solid var(--red); }
+
+.workbench { height: 100dvh; background: var(--board); display: flex; flex-direction: column; }
 .topbar {
   height: 84px;
   flex: 0 0 84px;
@@ -75,6 +107,7 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
   display: grid; place-items: center; width: 50px; height: 50px;
   border: var(--border) solid var(--ink); background: var(--red); color: var(--paper-bright);
   box-shadow: 4px 4px 0 var(--ink); font-family: var(--font-display); font-size: 17px;
+  text-decoration: none;
 }
 .brand-lockup h1 { margin: 0; font-family: var(--font-display); font-size: 16px; letter-spacing: -.03em; }
 .brand-lockup p { margin: 4px 0 0; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -83,7 +116,9 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 .board-stats span { white-space: nowrap; }
 .board-stats b { display: inline-grid; place-items: center; min-width: 25px; height: 25px; margin-left: 3px; background: var(--ink); color: var(--paper-bright); }
 
-.workspace { position: relative; flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 344px; }
+/* La segunda columna la mide la propia bandeja: plegada es un canto de 46px y
+   el corcho se queda con todo lo demás. */
+.workspace { position: relative; flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto; }
 .board-viewport { position: relative; min-width: 0; overflow: hidden; background: var(--board); border-right: var(--border) solid var(--ink); cursor: grab; }
 .board-viewport:active { cursor: grabbing; }
 .board-surface {
@@ -140,8 +175,23 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 .dedup-badge { padding: 2px 4px; background: var(--green); color: white; font-family: var(--font-display); font-size: 7px; animation: badge-pop 280ms steps(3, end); }
 
 
-.inbox { min-width: 0; overflow: hidden; display: flex; flex-direction: column; background: #aa9a72; }
-.inbox > header { height: 42px; flex: 0 0 42px; display: flex; justify-content: space-between; align-items: center; padding: 0 10px; border-bottom: 2px solid var(--ink); background: var(--blue); color: white; font-family: var(--font-display); font-size: 9px; }
+.inbox { width: 344px; min-width: 0; overflow: hidden; display: flex; flex-direction: column; background: #aa9a72; }
+.inbox > header { height: 42px; flex: 0 0 42px; display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 0 10px; border-bottom: 2px solid var(--ink); background: var(--blue); color: white; font-family: var(--font-display); font-size: 9px; }
+.inbox > header > span { flex: 1; }
+.inbox-plegar { width: 24px; height: 24px; border: 2px solid var(--ink); background: var(--paper-bright); color: var(--ink); cursor: pointer; font-size: 14px; line-height: 1; }
+.inbox-plegar:hover { background: var(--yellow); }
+
+/* Plegada: un canto con el rótulo de pie, para que se sepa que sigue ahí sin
+   que le quite sitio al corcho. */
+.inbox.is-plegada { width: 46px; background: var(--blue); }
+.inbox-canto {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 10px;
+  width: 100%; padding: 10px 0; border: 0; background: transparent; color: white; cursor: pointer;
+  font-family: var(--font-display); font-size: 9px;
+}
+.inbox-canto:hover { background: var(--thread-finance); }
+.inbox-canto-rotulo { writing-mode: vertical-rl; letter-spacing: .14em; }
+.inbox-canto b { display: grid; place-items: center; min-width: 22px; height: 22px; background: var(--paper-bright); color: var(--ink); }
 .inbox > header b { display: grid; place-items: center; min-width: 24px; height: 24px; background: var(--paper-bright); color: var(--ink); }
 .query-box { padding: 9px; border-bottom: 2px solid var(--ink); background: var(--paper); }
 .query-box label { display: block; margin-bottom: 3px; font-family: var(--font-display); font-size: 8px; }
@@ -152,7 +202,7 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 .primary-button:disabled { opacity: .45; cursor: not-allowed; }
 .query-box .primary-button { width: 100%; margin-top: 6px; }
 .receipt-stack { min-height: 0; flex: 1; overflow-y: auto; padding: 10px; }
-.empty-inbox { margin: 10px; text-align: center; opacity: .65; }
+.empty-inbox { margin: 10px 4px; font-size: 15px; line-height: 1.05; text-align: center; opacity: .7; }
 .receipt { margin-bottom: 10px; border: 2px solid var(--ink); background: var(--paper-bright); box-shadow: 4px 4px 0 rgba(32, 27, 24, .55); }
 .receipt.is-arrived { animation: dossier-arrive 360ms steps(4, end); }
 .receipt-head { display: flex; justify-content: space-between; padding: 3px 6px; border-bottom: 1px solid var(--ink); background: var(--paper); font-family: var(--font-display); font-size: 8px; }
@@ -173,6 +223,9 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
   overflow-y: auto; border: 2px solid var(--ink); background: var(--paper-bright); box-shadow: 8px 8px 0 rgba(32, 27, 24, .65);
   animation: folder-open 220ms steps(4, end);
 }
+/* Con la bandeja plegada la carpeta recupera el canto derecho: si no, dejaba
+   un pasillo vacío de 344px donde ya no hay panel. */
+.workspace:has(.inbox.is-plegada) .folder { right: 58px; width: min(420px, calc(100% - 82px)); }
 .folder > header { position: sticky; top: 0; z-index: 1; display: flex; justify-content: space-between; align-items: start; padding: 9px 10px; border-bottom: 2px solid var(--ink); background: var(--yellow); }
 .folder > header span, .folder h3 { font-family: var(--font-display); font-size: 8px; }
 .folder h2 { margin: 2px 0 0; font-size: 28px; line-height: .9; }
@@ -208,8 +261,13 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 @media (max-width: 1120px) {
   .topbar { grid-template-columns: 1fr auto; }
   .board-stats { display: none; }
-  .workspace { grid-template-columns: minmax(0, 1fr) 300px; }
+  .inbox { width: 300px; }
   .folder { right: 312px; width: min(390px, calc(100% - 330px)); }
+  .workspace:has(.inbox.is-plegada) .folder { right: 58px; width: min(390px, calc(100% - 82px)); }
+}
+
+@media (max-width: 820px) {
+  .workspace { grid-template-columns: minmax(0, 1fr) auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -236,6 +294,24 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
   margin: 8px 12px; padding: 4px 6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   background: var(--paper); border: 1px solid var(--ink); font-family: var(--font-mono), monospace; font-size: 13px;
 }
+.case-instruction, .case-answer { margin: 8px 12px; font-size: 15px; line-height: 1.05; }
+.case-answer { padding: 5px 7px; border-left: 5px solid var(--yellow); background: var(--paper); }
+.key-fact {
+  position: absolute; z-index: 18; width: 232px; min-height: 168px;
+  padding: 13px 14px 10px; rotate: -2deg;
+  border: 2px solid var(--ink); background: var(--yellow);
+  box-shadow: 7px 7px 0 rgba(32, 27, 24, .62);
+  animation: pin-land 300ms steps(4, end) backwards;
+}
+.key-fact-pin {
+  position: absolute; top: -10px; left: 50%; width: 14px; height: 14px;
+  margin-left: -7px; border: 2px solid var(--ink); border-radius: 50%; background: var(--red);
+}
+.key-fact > small { font-family: var(--font-display); font-size: 9px; }
+.key-fact > strong { display: block; margin: 3px 0 -2px; font-family: var(--font-display); font-size: 38px; }
+.key-fact > p { margin: 0; font-size: 17px; line-height: .96; }
+.key-fact > footer { margin-top: 9px; font-family: var(--font-mono); font-size: 8px; line-height: 1.3; }
+.key-fact a { color: var(--blue); }
 .case-node footer {
   margin-top: auto; display: flex; gap: 12px; padding: 5px 12px;
   border-top: 2px solid var(--ink); background: var(--paper);
@@ -296,7 +372,11 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 }
 .question-node > button:hover:not(:disabled) { background: var(--paper-bright); }
 .question-node > button:disabled { opacity: .55; cursor: wait; }
-.question-node.is-answered { rotate: 0deg; background: var(--paper-bright); }
+/* Respondida, la hoja deja de medir 176px y crece con lo que diga. La
+   salvedad honesta del carril web —«no cubre a todos los grandes tenedores»—
+   es la última línea del cuerpo, y es justo la que se perdía por abajo. Una
+   caja de altura fija recorta lo que más protege al proyecto. */
+.question-node.is-answered { height: auto; min-height: 176px; rotate: 0deg; background: var(--paper-bright); }
 .question-node.is-web.is-answered {
   border-style: dashed;
   background: #ecebea;
@@ -317,21 +397,18 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
   line-height: 1.2;
 }
 .question-answer p {
-  margin: 5px 0;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  margin: 5px 0 8px;
   font-size: 15px;
-  line-height: 1;
+  line-height: 1.06;
 }
+/* La procedencia se lee entera: enlace y fecha. Con `nowrap` y elipsis, una
+   fuente larga se quedaba a medias y la cita dejaba de ser comprobable. */
 .question-answer small {
   margin-top: auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
   font-family: var(--font-mono);
   font-size: 8px;
+  line-height: 1.5;
 }
 .question-answer a { color: var(--blue); }
 /* Diez líneas de procedencia permanentes enterraban los tres hilos que
@@ -367,6 +444,165 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 }
 .case-node.has-finding { border-top-color: var(--green); }
 .case-node.has-finding > header { background: var(--green); }
+
+
+/* ── El sobre lacrado: la predicción escrita antes del primer hilo ────
+   No es una ficha ni una pregunta: es papel de otro momento, y por eso va
+   en kraft, sin cabecera de color y con su propio rótulo. Se abre solo con
+   el primer YA ESTABA del tablón, que es cuando la sala entiende que hubo
+   una investigación antes del render. */
+.sobre {
+  position: absolute;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--ink);
+  background: #e3d2a6;
+  box-shadow: 8px 8px 0 rgba(32, 27, 24, .6);
+  rotate: -1deg;
+}
+.sobre.is-abierto { rotate: 0deg; animation: sobre-abrir 260ms steps(3, end); }
+.sobre-chincheta {
+  position: absolute;
+  left: 22px;
+  top: -13px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--ink);
+  background: var(--ink);
+  box-shadow: inset 3px 3px 0 rgba(255, 248, 223, .45), 0 4px 0 rgba(32, 27, 24, .5);
+}
+.sobre > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 9px 6px;
+  border-bottom: 2px dashed rgba(32, 27, 24, .55);
+  font-family: var(--font-display);
+  font-size: 8px;
+  letter-spacing: .06em;
+}
+.sobre > header b {
+  padding: 2px 5px;
+  border: 1px solid var(--ink);
+  background: var(--red);
+  color: var(--paper-bright);
+  font-size: 7px;
+}
+.sobre.is-abierto > header b { background: var(--green); }
+
+/* La solapa: dos medias diagonales que se juntan abajo en el centro. Abierta,
+   la V se invierte y el papel de dentro se ve más oscuro. */
+.sobre-solapa {
+  position: relative;
+  height: 52px;
+  border-bottom: 2px solid rgba(32, 27, 24, .45);
+  background-color: #e9dab4;
+  background-repeat: no-repeat;
+  background-size: 50.5% 100%, 50.5% 100%;
+  background-position: left top, right top;
+  background-image:
+    linear-gradient(to top right, transparent calc(50% - 1px), var(--ink) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px)),
+    linear-gradient(to bottom right, transparent calc(50% - 1px), var(--ink) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px));
+}
+.sobre.is-abierto .sobre-solapa {
+  height: 34px;
+  background-color: #cdb987;
+  background-image:
+    linear-gradient(to bottom right, transparent calc(50% - 1px), var(--ink) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px)),
+    linear-gradient(to top right, transparent calc(50% - 1px), var(--ink) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px));
+}
+/* El lacre, con la misma gramática que la chincheta del caso: cuadrado con
+   brillo. Al abrirse el sobre se rompe y se cae. */
+.sobre-lacre {
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  border: 2px solid var(--ink);
+  background: var(--red);
+  box-shadow: inset 5px 5px 0 rgba(255, 248, 223, .4);
+  rotate: 45deg;
+}
+.sobre.is-abierto .sobre-lacre { animation: lacre-roto 300ms steps(3, end) forwards; }
+
+.sobre-cerrado { padding: 20px 12px 12px; text-align: center; }
+.sobre-cerrado p { margin: 0; font-size: 17px; line-height: 1.02; }
+.sobre-cerrado small {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-display);
+  font-size: 7px;
+  letter-spacing: .05em;
+  opacity: .65;
+}
+
+/* La carta: papel de archivo dentro del kraft, para que se lea como algo que
+   estaba guardado y ahora está fuera. */
+.sobre-carta {
+  margin: 10px;
+  padding: 8px 9px 9px;
+  border: 2px solid var(--ink);
+  background: var(--paper-bright);
+  box-shadow: 3px 3px 0 rgba(32, 27, 24, .45);
+  animation: carta-sale 300ms steps(4, end);
+}
+.sobre-carta strong {
+  display: block;
+  padding: 3px 5px;
+  border: 2px solid var(--ink);
+  font-family: var(--font-display);
+  font-size: 8px;
+  letter-spacing: .06em;
+  text-align: center;
+}
+.sobre-carta .es-acierto { background: var(--green); color: var(--paper-bright); }
+.sobre-carta .es-fallo { background: var(--yellow); }
+.sobre-carta code {
+  display: block;
+  margin: 7px 0 6px;
+  padding: 3px 5px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.sobre-carta p { margin: 0; font-size: 16px; line-height: 1.04; }
+
+@keyframes sobre-abrir { from { translate: 0 -6px; } to { translate: 0 0; } }
+@keyframes lacre-roto { to { transform: translateY(18px) rotate(16deg); opacity: .28; } }
+@keyframes carta-sale { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: none; } }
+
+
+/* ── La tarjeta de cierre: el veredicto ──────────────────────────────
+   Se clava cuando el caso ya tiene hallazgo y es lo último que lee la sala,
+   así que pesa como conclusión: chincheta verde, banda verde y un párrafo
+   que no compite con nadie porque nada más se abre a la vez. */
+.cierre {
+  position: absolute;
+  z-index: 18;
+  border: 3px solid var(--ink);
+  border-top: 10px solid var(--green);
+  background: var(--paper-bright);
+  box-shadow: 12px 12px 0 rgba(32, 27, 24, .72), 0 0 0 3px var(--paper), 0 0 0 6px rgba(77, 127, 84, .32);
+  animation: pin-land 320ms steps(4, end);
+}
+.cierre .case-pin { background: var(--green); }
+.cierre > header {
+  padding: 6px;
+  border-bottom: 2px solid var(--ink);
+  background: var(--green);
+  color: var(--paper-bright);
+  font-family: var(--font-display);
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-align: center;
+}
+.cierre > p { margin: 0; padding: 11px 13px 13px; font-size: 17px; line-height: 1.04; }
 
 /* El marco del retrato lo dibuja el propio SVG; aquí solo va lo que lo clava
    al corcho: sombra dura, cero suavizado y prohibido encogerse dentro de la

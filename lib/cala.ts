@@ -52,7 +52,7 @@ async function fetchCala(url: string, body: unknown, timeoutMs: number) {
       });
     } catch (error) {
       if (error instanceof DOMException && error.name === "TimeoutError") {
-        throw new CalaError("El archivo tardó demasiado", "TIMEOUT", 504);
+        throw new CalaError("Cala tardó demasiado", "TIMEOUT", 504);
       }
       throw new CalaError(`No se pudo contactar con Cala: ${String(error)}`, "UPSTREAM_ERROR", 502);
     }
@@ -62,7 +62,7 @@ async function fetchCala(url: string, body: unknown, timeoutMs: number) {
         await wait(2_000);
         continue;
       }
-      throw new CalaError("Archivo saturado", "SATURATED", 503);
+      throw new CalaError("Cala está saturada", "SATURATED", 503);
     }
 
     const text = await response.text();
@@ -75,7 +75,7 @@ async function fetchCala(url: string, body: unknown, timeoutMs: number) {
       throw new CalaError("Cala devolvió una respuesta inválida", "UPSTREAM_ERROR", 502);
     }
   }
-  throw new CalaError("Archivo saturado", "SATURATED", 503);
+  throw new CalaError("Cala está saturada", "SATURATED", 503);
 }
 
 function normalize(value: string) {

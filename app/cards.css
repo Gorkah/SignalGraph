@@ -106,7 +106,28 @@
   border-top: 8px solid var(--ink);
   background: var(--paper-bright);
   box-shadow: 8px 8px 0 rgba(32, 27, 24, .72);
+  animation: pin-land 280ms steps(4, end) backwards;
+  animation-delay: var(--enter, 0ms);
 }
+.entity-card.nivel-ficha.is-story-target {
+  box-shadow: 8px 8px 0 rgba(32, 27, 24, .72), 0 0 0 5px rgba(214, 75, 55, .32);
+}
+.story-card-hint {
+  position: absolute; z-index: 4; right: -22px; top: -74px; width: 190px;
+  border: 0; background: transparent; color: var(--red); cursor: pointer;
+  rotate: -3deg; text-align: left;
+}
+.story-card-hint::after {
+  content: "↙"; position: absolute; right: 6px; top: 25px;
+  font-size: 34px; transform: rotate(-8deg);
+}
+.story-card-hint small { display: block; font-family: var(--font-display); font-size: 9px; }
+.story-card-hint span {
+  display: inline; font-size: 18px; line-height: .9;
+  text-decoration-line: underline; text-decoration-style: wavy; text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+.story-card-hint:hover { color: var(--ink); translate: 0 -2px; }
 
 .nivel-ficha .card-drag {
   min-height: 50px;
@@ -353,62 +374,236 @@
 }
 
 
-/* ══ LOS HILOS DE UNA FICHA ══════════════════════════════════════════
-   Antes eran cuatro pestañas apretadas en el pie, ilegibles y a medio
-   nombre. Ahora el pie solo cuenta cuántos cabos hay; al tirar, se abre
-   un cajón con un renglón por cabo, ancho entero y con su cuenta. Ni
-   pestañas ni subnodos: un índice que se despliega donde está la ficha. */
-.hilos-toggle {
+/* ══ LOS CABOS DE UNA FICHA ══════════════════════════════════════════
+   La historia de este trozo importa para no repetirla. Primero fueron
+   pestañas apretadas en el pie: cuatro nombres a medias, ilegibles. Después
+   se probó un nodo por relación suelto en el tablón: el corcho dejaba de
+   leerse. El cajón desplegable acertó con la información —cuántos cabos hay,
+   cómo se llama cada uno, cuánto trae— pero se leía como un `select` de
+   formulario: nada en él decía que estabas tirando de un cabo.
+
+   Aquí se conserva esa información exacta y se le cambia el material.
+   Recogida, la ficha deja colgando un fleco por fuera de su borde de abajo:
+   un cordel por tipo de relación, que se cuentan de un vistazo sin abrir
+   nada y sin tapar ni portada ni pie. Al tirar, el fleco cae en una ristra
+   de etiquetas de cartón atadas una a la de arriba; cada cordel se amarra en
+   un punto distinto del ancho, así que se lee como algo colgado a mano y no
+   como una lista. Al apuntar una etiqueta su cordel se tensa y ella sube; al
+   pulsarla, da el tirón. Ocupa lo mismo que el cajón que reemplaza. */
+
+
+/* ── El pie: cuántos cabos hay ─────────────────────────────────────── */
+.cabos-toggle {
   flex: 1;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 7px;
   min-width: 0;
-  padding: 3px 10px;
+  padding: 3px 9px;
   border: 0;
   background: #ead9ac;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
 }
-.hilos-toggle b {
+.cabos-toggle span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cabos-toggle b {
+  margin-left: auto;
+  flex: none;
   font-family: var(--font-display);
   font-size: 8px;
   color: var(--red);
 }
-.hilos-toggle:hover { background: var(--yellow); }
+.cabos-toggle:hover { background: var(--yellow); }
+/* Con la ristra suelta el pie se queda encendido: el amarillo es lo que en
+   todo el tablón dice "esto está activo". */
+.entity-card.is-hilos .cabos-toggle { background: var(--yellow); }
 
-.hilos-drawer {
+/* El mismo bloque de tinta con el que un mazo cuenta sus pistas: el número
+   que promete el cabo es el número que va a llegar apilado. */
+.cabos-toggle i,
+.cabo-etiqueta b {
+  flex: none;
+  display: grid;
+  place-items: center;
+  min-width: 20px;
+  height: 17px;
+  padding: 0 3px;
+  background: var(--ink);
+  color: var(--paper-bright);
+  font-family: var(--font-display);
+  font-style: normal;
+  font-size: 9px;
+}
+
+
+/* ── El fleco: los cabos sin tirar ──────────────────────────────────
+   No es un control —el botón es el pie—, es el recuento hecho materia. Va
+   por fuera del borde de abajo y sin recoger clics. */
+.cabo-fleco {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  pointer-events: none;
+}
+/* Cordel de dos píxeles con la torsión marcada en la propia rejilla: un
+   escalón de tono cada cuatro píxeles, que a este tamaño es lo que hace que
+   se lea como cuerda y no como raya. Las alturas se alternan para que el
+   fleco no salga peinado, y cada cabo acaba en punta deshilachada. */
+.cabo-fleco i,
+.cabo-cuerda {
+  background-image: repeating-linear-gradient(180deg, rgba(32, 27, 24, .85) 0 3px, rgba(32, 27, 24, .5) 3px 4px);
+}
+.cabo-fleco i {
+  position: relative;
+  width: 2px;
+  height: 13px;
+  transition: height 90ms steps(2, end);
+}
+.cabo-fleco i::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  bottom: -2px;
+  width: 4px;
+  height: 2px;
+  background: rgba(32, 27, 24, .8);
+}
+.cabo-fleco i:nth-child(2n) { height: 19px; }
+.cabo-fleco i:nth-child(3n) { height: 10px; }
+.cabo-fleco i:nth-child(5n) { height: 24px; }
+/* Al apuntar al pie, los cabos se descuelgan: el gesto se anuncia antes de
+   pulsarlo. */
+.entity-card:has(.cabos-toggle:hover) .cabo-fleco i { height: 28px; }
+
+
+/* ── La ristra: cordel, nudo y etiqueta ─────────────────────────────
+   Sin fondo ni caja: lo que cuelga son las etiquetas, y los huecos entre
+   ellas dejan pasar el clic al tablón. */
+.cabos-ristra {
   position: absolute;
   z-index: 2;
   top: 100%;
   left: -2px;
   right: -2px;
-  max-height: 264px;
-  overflow-y: auto;
-  border: 2px solid var(--ink);
-  border-top: 0;
-  background: var(--paper);
-  box-shadow: 8px 8px 0 rgba(32, 27, 24, .72);
+  pointer-events: none;
 }
-.hilo-row {
-  width: 100%;
+/* Cada etiqueta se cuelga corrida respecto a la de arriba (`--x`, que pone
+   el componente): así la ristra baja en zigzag y no vuelve a leerse como la
+   columna de un formulario. La etiqueta mide lo que dice —no hay dos
+   iguales—, que es lo que la separa de un renglón de lista. */
+.cabo {
+  position: relative;
+  padding-top: 10px;
+  padding-left: var(--x);
+  animation: cabo-cae 200ms steps(3, end) backwards;
+  animation-delay: calc(var(--i) * 26ms);
+}
+/* El cordel que la ata a la de arriba. Entra siempre 12px dentro del cartón,
+   así que ninguna etiqueta lo deja al aire por corto que sea su nombre. Y va
+   quebrado: un cordel colgado entre dos cosas no cae a plomo, y dos tramos
+   con dos píxeles de desvío es como se dibuja eso en esta rejilla. Sin el
+   quiebro, la ristra se leía como el conector de un diagrama de flujo. */
+.cabo-cuerda {
+  position: absolute;
+  left: calc(var(--x) + 12px);
+  top: 0;
+  width: 2px;
+  height: 6px;
+  transition: height 90ms steps(2, end);
+}
+.cabo-cuerda::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 100%;
+  width: 2px;
+  height: 6px;
+  background-image: inherit;
+  transition: height 90ms steps(2, end), left 90ms steps(2, end);
+}
+/* El nudo, apoyado en el canto de la etiqueta. */
+.cabo-cuerda::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: calc(100% + 5px);
+  width: 4px;
+  height: 4px;
+  background: var(--ink);
+}
+
+/* La etiqueta: cartón del mismo tono que la pestaña del expediente. */
+.cabo-etiqueta {
+  position: relative;
+  pointer-events: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  padding: 7px 10px;
-  border: 0;
-  border-bottom: 1px solid rgba(32, 27, 24, .3);
-  background: transparent;
+  gap: 8px;
+  max-width: 100%;
+  padding: 1px 8px;
+  border: 2px solid var(--ink);
+  background: #e8dcb6;
+  box-shadow: 2px 2px 0 rgba(32, 27, 24, .5);
   cursor: pointer;
   text-align: left;
   font-size: 15px;
+  transition: translate 90ms steps(2, end), box-shadow 90ms steps(2, end);
 }
-.hilo-row:last-child { border-bottom: 0; }
-.hilo-row span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.hilo-row b { font-size: 17px; color: var(--red); }
-.hilo-row:hover { background: var(--yellow); }
-.hilo-row:disabled { cursor: wait; opacity: .5; }
+.cabo-etiqueta > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Tensar: al apuntarla, el cordel pierde el quiebro, se acorta y se pone
+   tieso, y la etiqueta sube los mismos dos píxeles que él encoge. Es el
+   único sitio donde el cordel deja de estar trenzado. */
+.cabo-etiqueta:hover { background: var(--yellow); translate: 0 -2px; }
+.cabo.is-recommended .cabo-etiqueta {
+  border-color: var(--red); background: var(--yellow); box-shadow: 4px 4px 0 var(--red);
+}
+.cabo.is-recommended .cabo-etiqueta > span {
+  text-decoration-line: underline; text-decoration-style: wavy; text-decoration-color: var(--red);
+  text-underline-offset: 3px;
+}
+.cabo:has(.cabo-etiqueta:hover) .cabo-cuerda,
+.cabo:has(.cabo-etiqueta:hover) .cabo-cuerda::before {
+  height: 5px;
+  background-image: none;
+  background-color: var(--ink);
+}
+.cabo:has(.cabo-etiqueta:hover) .cabo-cuerda::before { left: 0; }
+.cabo:has(.cabo-etiqueta:hover) .cabo-cuerda::after { top: calc(100% + 3px); }
+/* El tirón. */
+.cabo-etiqueta:active { translate: 0 -4px; box-shadow: 1px 1px 0 rgba(32, 27, 24, .5); }
+.cabo-etiqueta:disabled { cursor: wait; opacity: .55; }
 
-/* Con el cajón abierto la ficha pasa por delante de sus vecinas. */
-.entity-card.is-hilos { z-index: 40; }
+/* El manojo: lo que no cuelga suelto cuelga atado, en cartón sin estrenar y
+   con el filo de puntos de lo que todavía no se ha soltado. */
+.cabo.is-manojo .cabo-etiqueta {
+  border-style: dashed;
+  background: var(--paper);
+  box-shadow: none;
+}
+.cabo.is-manojo .cabo-etiqueta:hover { border-style: solid; background: var(--yellow); }
+.cabo.is-manojo .cabo-etiqueta b {
+  background: var(--paper-bright);
+  color: var(--ink);
+  box-shadow: inset 0 0 0 2px var(--ink);
+}
+
+/* Caen escalonadas, de arriba abajo, como si se soltaran de una en una. */
+@keyframes cabo-cae {
+  from { opacity: 0; translate: 0 -10px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+/* Con la ristra suelta la ficha pasa por delante de sus vecinas. Va con el
+   nivel incluido porque el anillo del reencuentro (`:has(.dedup-badge)`) es
+   más específico y si no la dejaba por debajo con el cruce en pantalla. */
+.entity-card.nivel-ficha.is-hilos { z-index: 44; }

@@ -2,7 +2,7 @@
 
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-import { CARD_HEIGHT, CARD_WIDTH, combPosition, snapPoint } from "@/lib/geometry";
+import { CARD_HEIGHT, CARD_WIDTH, cascadePositions, combPosition, occupiedBoxes, snapPoint } from "@/lib/geometry";
 import { entityNameKey } from "@/lib/names";
 import { CASE_RELATION, relationNoun, registerNouns } from "@/lib/relations";
 import type {
@@ -27,7 +27,9 @@ type BoardState = {
   dedup: Record<string, boolean>;
   toast?: string;
   archiveBudget: number;
-  initialize: (researchCase: ResearchCase) => void;
+  storyStarted: boolean;
+  startStory: () => void;
+  initialize: (researchCase: ResearchCase, restart?: boolean) => void;
   finishHydration: () => void;
   setPan: (pan: Point) => void;
   setZoom: (zoom: number, anchor?: Point) => void;
@@ -76,6 +78,22 @@ const CROSS_PHRASE: Record<string, { verb: string; preposition: string }> = {
   FINANCED: { verb: "financiada", preposition: "por" },
 };
 
+/**
+ * Nodos que el archivo cuelga de todo el mundo: el sector, el país, la ciudad.
+ * Que dos fichas del caso coincidan ahí no es un hallazgo, es la premisa: todas
+ * las empresas de este tablón operan en inmobiliario y casi todas están
+ * registradas en España. El sello YA ESTABA es lo único que sostiene la
+ * mecánica entera, y gastarlo una vez en una tautología abarata por contagio el
+ * cruce que sí vale —Neinor→Aedas, firmado por GLEIF—. Así que la pista cae y
+ * se ve si alguien tira de ese hilo (el nodo de industria es además lo que
+ * enlaza el caso con las veinte normas), pero se queda fuera del negocio de los
+ * cruces: ni sello, ni hilo de cruce, ni hallazgo en la tarjeta de caso.
+ */
+const HUB_TAUTOLOGICO = new Set(["Industry", "Country", "CountrySubdivision", "Municipality", "GPE"]);
+
+const esHubTautologico = (...types: Array<string | undefined>) =>
+  types.some((type) => type !== undefined && HUB_TAUTOLOGICO.has(type));
+
 function crossToast(name: string, holders: string[], relationType: string) {
   const phrase = CROSS_PHRASE[relationType]
     ?? { verb: `${relationNoun(relationType)} en común`, preposition: "con" };
@@ -85,7 +103,7 @@ function crossToast(name: string, holders: string[], relationType: string) {
 async function apiJson<T>(url: string, init?: RequestInit): Promise<T> {
   const response = await fetch(url, init);
   const body = await response.json().catch(() => ({})) as { error?: string } & T;
-  if (!response.ok) throw new Error(body.error ?? "El archivo no responde");
+  if (!response.ok) throw new Error(body.error ?? "Cala no responde");
   return body;
 }
 
@@ -101,10 +119,12 @@ export const useBoardStore = create<BoardState>()(
       dedup: {},
       expandedStacks: [],
       archiveBudget: 10,
+      storyStarted: false,
+      startStory: () => set({ storyStarted: true }),
 
-      initialize: (researchCase) => set((state) => state.researchCase?.id === researchCase.id
+      initialize: (researchCase, restart = false) => set((state) => !restart && state.researchCase?.id === researchCase.id
         ? { researchCase: state.researchCase }
-        : { researchCase, archiveBudget: 10, expandedStacks: [], dedup: {}, selectedId: undefined }),
+        : { researchCase, archiveBudget: 10, storyStarted: false, expandedStacks: [], dedup: {}, selectedId: undefined }),
       finishHydration: () => set({ hydrated: true }),
       // El resaltado del reencuentro no caduca solo: vive hasta el siguiente
       // gesto del usuario sobre el caso —tirar de un cabo, abrir una ficha,
@@ -192,6 +212,11 @@ export const useBoardStore = create<BoardState>()(
                 source: entity.claims[0]?.source,
               }];
               if (existingCard) {
+                // Coincidir en el sector o en el país no es reencontrarse: el
+                // nodo se queda donde está, sin sello y sin hilo de cruce.
+                if (esHubTautologico(existingCard.entityType, entity.entityType)) {
+                  return { toast: `${existingCard.name} — lo comparte todo el caso: no cuenta como cruce.` };
+                }
                 // El cruce: este nodo ya estaba en el corcho y ahora lo
                 // sostiene un segundo fondo. Ahí la pregunta se vuelve
                 // respuesta, y por eso el hallazgo sube a la tarjeta de caso.
@@ -267,7 +292,7 @@ export const useBoardStore = create<BoardState>()(
             });
           }
         } catch (error) {
-          set({ toast: error instanceof Error ? error.message : "Archivo saturado" });
+          set({ toast: error instanceof Error ? error.message : "Cala está saturada" });
         } finally {
           set((state) => ({ busy: { ...state.busy, [busyKey]: false } }));
         }
@@ -291,11 +316,11 @@ export const useBoardStore = create<BoardState>()(
         }
 
         if (!question.target) {
-          set({ toast: "Esta pregunta no tiene una ruta de archivo verificable." });
+          set({ toast: "Esta pregunta no tiene una ruta verificable en Cala." });
           return;
         }
         if (get().archiveBudget <= 0) {
-          set({ toast: "No quedan consultas de archivo para este caso." });
+          set({ toast: "No quedan consultas de Cala para este caso." });
           return;
         }
 
@@ -322,16 +347,16 @@ export const useBoardStore = create<BoardState>()(
             const parent = graph.questions.find((item) => item.id === id);
             if (!parent) return state;
             const additions = entities.filter((entity) => !graph.cards.some((card) => sameName(card.name, entity.name)));
+            // Lo que cae del archivo cuelga del propio nodo-pregunta, en bloque
+            // y esquivando lo ya clavado: con el peine de las carteras salía
+            // disparado hacia el costado del caso y se iba fuera de pantalla.
+            const landing = cascadePositions(parent.position, additions.length, occupiedBoxes(graph, state.caseView));
             const cards = additions.map((entity, index) => ({
               id: entity.id,
               name: entity.name,
               entityType: entity.entityType,
               category: "norma",
-              position: combPosition(
-                { x: parent.position.x + CARD_WIDTH / 2, y: parent.position.y + 78 },
-                graph.focus.position,
-                index,
-              ),
+              position: landing[index],
               claims: entity.claims,
               relations: [],
               density: "lead" as const,
@@ -359,7 +384,7 @@ export const useBoardStore = create<BoardState>()(
                   ? { ...item, state: "answered" as const }
                   : item),
               },
-              toast: `${entities.length} fichas con UUID han caído del archivo.`,
+              toast: `${entities.length} ${state.caseView?.ui?.leads?.toLocaleLowerCase("es") ?? "resultados"} añadidos desde Cala.`,
             };
           });
         } catch (error) {

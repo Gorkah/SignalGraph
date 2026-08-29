@@ -1,0 +1,158 @@
+{
+  "id": "f214cceb-1823-442b-b891-4f5e4047cab5",
+  "name": "Fintonic",
+  "introspection": {
+    "properties": [
+      "name",
+      "website",
+      "registered_address",
+      "founding_date",
+      "employee_count",
+      "description",
+      "id"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY",
+        "INVESTED_IN"
+      ],
+      "incoming": []
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "f214cceb-1823-442b-b891-4f5e4047cab5",
+    "name": "Fintonic",
+    "entity_type": "Organization",
+    "description": "a Madrid‑based fintech startup headquartered in Spain",
+    "properties": {
+      "name": {
+        "value": "Fintonic",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-06-30"
+          }
+        ]
+      },
+      "description": {
+        "value": "a Madrid‑based fintech startup headquartered in Spain",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-24"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "708a2cd3-d084-4edd-aa83-927e8527d82a",
+            "name": "ASSET_MANAGEMENT",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/explore/investment-tech-startups-in-spain/__bwg8HLn9xu3pvw3Gzx8-9MtFXfRoBqJYX3wEycmeAj8/companies",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "c2db9f95-7427-54cc-bc19-e47a7bd8e373"
+            }
+          },
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Dealflow - Spanish startup, tech and Venture Capital news",
+                  "document": "https://dealflow.es/issue/160/movo-s-escooters-raise-20m-fintonic-raises-19m-rollbox-acquired-by-personio-bq-sold-51-stake-for-36m-stock-options-in-spain",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "20188749-49fd-5ab6-b8f4-98b550b0dbc3"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "232d0a38-d6d0-41e2-aeaa-988fa8b51533",
+            "name": "PSN Group",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Dealflow - Spanish startup, tech and Venture Capital news",
+                  "document": "https://dealflow.es/issue/160/movo-s-escooters-raise-20m-fintonic-raises-19m-rollbox-acquired-by-personio-bq-sold-51-stake-for-36m-stock-options-in-spain",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "229ef487-c7f2-5636-910e-25ec83180dac"
+            }
+          },
+          {
+            "id": "685a2360-b8c3-41f7-87bd-de616026c569",
+            "name": "Zank Financial",
+            "entity_type": "Organization",
+            "properties": {
+              "valid_until": "2021-08-18",
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/57286-63",
+                  "date": "2026-07-02"
+                },
+                {
+                  "name": "Unión Financiera Asturiana acquires financial platform Zank Financial",
+                  "document": "https://www.cuatrecasas.com/en/global/art/union_financiera_asturiana_acquires_financial_platform_zank_financial",
+                  "date": "2021-08-06"
+                }
+              ],
+              "id": "c64170e5-1d02-5d75-aaa6-e9abbfd59638",
+              "valid_since": "2018-03-13"
+            }
+          },
+          {
+            "id": "6eb0f1a7-d891-481f-825a-25cc6edacb07",
+            "name": "Square One Capital",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/explore/consumer-startups-in-madrid-spain/__P6aAMCt26S3tKfwx4TqYGJ629CY5UvIqCvY-kZJi1MA/companies",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "4af922f0-66bf-5643-9791-38080f463f3d"
+            }
+          },
+          {
+            "id": "da2d99e4-cb84-4fad-9c1e-763e9024f56e",
+            "name": "ING Ventures",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Dealflow - Spanish startup, tech and Venture Capital news",
+                  "document": "https://dealflow.es/issue/160/movo-s-escooters-raise-20m-fintonic-raises-19m-rollbox-acquired-by-personio-bq-sold-51-stake-for-36m-stock-options-in-spain",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "e8f1a55d-cca1-5ef1-8761-6f11602168e5"
+            }
+          }
+        ]
+      },
+      "incoming": {}
+    },
+    "numerical_observations": []
+  }
+}

@@ -1,0 +1,1281 @@
+{
+  "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+  "name": "Seaya Ventures",
+  "introspection": {
+    "properties": [
+      "name",
+      "founding_date",
+      "employee_count",
+      "aliases",
+      "website",
+      "description",
+      "id",
+      "registered_address"
+    ],
+    "relationships": {
+      "outgoing": [
+        "PARTICIPATES_IN_CORPORATE_EVENT",
+        "OPERATES_IN_INDUSTRY",
+        "INVESTED_IN",
+        "IS_MEMBER_OF"
+      ],
+      "incoming": [
+        "WORKS_AT",
+        "INVESTED_IN",
+        "IS_CEO_OF",
+        "OPERATED_BY",
+        "IS_MEMBER_OF",
+        "FOUNDED"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+    "name": "Seaya Ventures",
+    "entity_type": "Organization",
+    "description": "A Madrid‑based venture capital firm founded in 2013 that invests in early‑stage and growth‑stage technology companies.",
+    "properties": {
+      "name": {
+        "value": "Seaya Ventures",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-06-01"
+          }
+        ]
+      },
+      "description": {
+        "value": "A Madrid‑based venture capital firm founded in 2013 that invests in early‑stage and growth‑stage technology companies.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-23"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "0938cf9b-9b99-40bf-8dce-b55d3b28fd82",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Look out Amazon Go — A Lisbon startup plans to offer autonomous stores to other retailers | TechCrunch",
+                  "document": "https://techcrunch.com/2021/04/27/look-out-amazon-go-a-lisbon-startup-plans-to-offer-autonomous-stores-to-other-retailers",
+                  "date": "2021-04-27"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/sensei/__5XhoVHGVGfygXmoDpne1E7TdujLrJhQaEE5FuvKXbp8/funding-and-investors",
+                  "date": "2026-07-29"
+                }
+              ],
+              "event_date": "2021-04-27",
+              "id": "db7cbd66-db32-4ff0-8aa2-4fbcf9d68fc3"
+            }
+          },
+          {
+            "id": "0aa0a184-a21d-4925-8a07-27e4ec75e4fa",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Glovo gets $134M to beef up its on-demand delivery business | TechCrunch",
+                  "document": "https://techcrunch.com/2018/07/18/glovo-gets-134m-to-beef-up-its-on-demand-delivery-business",
+                  "date": "2018-07-18"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/glovo/__-2D9UfkDSWBfX0LNRAy7wkKbf3t2P_7oH-o1tHwmkzI/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2018-07-18",
+              "id": "6d45d662-3664-4875-b737-0d4831113b15"
+            }
+          },
+          {
+            "id": "4bf0ac04-0430-4d0c-b11b-2545cab38dd8",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "European on-demand delivery startup Glovo raises €30 million Series B | TechCrunch",
+                  "document": "https://techcrunch.com/2017/10/04/glovo-series-b",
+                  "date": "2017-10-04"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/glovo/__-2D9UfkDSWBfX0LNRAy7wkKbf3t2P_7oH-o1tHwmkzI/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2017-10-04",
+              "id": "f87aba30-32a6-4dd3-973a-bbf96e1481ba"
+            }
+          },
+          {
+            "id": "59168477-d930-4658-a03c-2a87daebb6c3",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Spain's Payflow, a salary advance startup, banks $9.1M",
+                  "document": "https://techcrunch.com/2022/01/17/payflow-series-a",
+                  "date": "2022-01-17"
+                }
+              ],
+              "event_date": "2022-01-17",
+              "id": "6e75c78e-26bd-426b-aece-f84be890d8aa"
+            }
+          },
+          {
+            "id": "77b6b8bf-bc4d-46bd-86b5-cbc118945aba",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/fracttal/__dnsS4u8ZvzUilhZr_95eHwQvCrtzG2MJapxbwSacaYA",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "Seaya Ventures, Cathay Innovation launch $125M fund for LatAm startups | TechCrunch",
+                  "document": "https://techcrunch.com/2021/11/23/seaya-ventures-cathay-innovation-launch-125m-fund-for-latam-startups",
+                  "date": "2021-11-23"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/113741-11",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "c2dc4819-4d5b-4c69-a77d-7fa3d52a7a6f"
+            }
+          },
+          {
+            "id": "819efc67-d778-4ab0-84aa-97b1f9d9a704",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Delivery startup Glovo scores €5M Series A, backers include Postmates investor Entreé Capital | TechCrunch",
+                  "document": "https://techcrunch.com/2016/08/11/the-glovos-are-off",
+                  "date": "2016-08-11"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/glovo/__-2D9UfkDSWBfX0LNRAy7wkKbf3t2P_7oH-o1tHwmkzI/funding-and-investors",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2016-08-11",
+              "id": "49c271b7-6192-4316-ae11-c997e7b4f5a3"
+            }
+          },
+          {
+            "id": "a32c8bf0-c64b-4646-b6b8-7920eaf8117a",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Look out Amazon Go — A Lisbon startup plans to offer autonomous stores to other retailers | TechCrunch",
+                  "document": "https://techcrunch.com/2021/04/27/look-out-amazon-go-a-lisbon-startup-plans-to-offer-autonomous-stores-to-other-retailers",
+                  "date": "2021-04-27"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/sensei/__5XhoVHGVGfygXmoDpne1E7TdujLrJhQaEE5FuvKXbp8/funding-and-investors",
+                  "date": "2026-07-29"
+                }
+              ],
+              "event_date": "2021-04-27",
+              "id": "643e2f84-74a6-441a-8990-4ceb7cca83d1"
+            }
+          },
+          {
+            "id": "b6fb4812-3f62-4b2a-ad05-dd1978f601a8",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/bewe/__mXu4FHNc_pEgEtDraNUeCY5xoJWP7WPQANyNT_68P8A",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/bewe/__mXu4FHNc_pEgEtDraNUeCY5xoJWP7WPQANyNT_68P8A/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/miora",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/125376-85",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2020-06-12",
+              "id": "bb50baa6-9275-4984-ba81-d69f41ce2fb3"
+            }
+          },
+          {
+            "id": "c6805f6a-589d-4328-9ba7-ffba96559e9d",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Spain's exposure to climate change helps Madrid-based VC Seaya close €300M climate tech fund | TechCrunch",
+                  "document": "https://techcrunch.com/2024/07/04/spains-exposure-to-climate-change-helps-madrid-based-vc-seaya-close-e300m-climate-tech-fund",
+                  "date": "2024-07-04"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/recycleye/__txRPAwsqPFjojYvtNQoLf7gT9serjCT_8A9DqoVqInc/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2022-02-01",
+              "id": "7adb559f-abab-4570-8fd2-8c78195b44a4"
+            }
+          },
+          {
+            "id": "f3b73ab0-bbbd-4f5f-92b3-42b310224261",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Spotahome raises €13.6M to let you view and book mid to long-term accommodation online | TechCrunch",
+                  "document": "https://techcrunch.com/2017/10/17/spotahome",
+                  "date": "2017-10-17"
+                }
+              ],
+              "event_date": "2017-10-17",
+              "id": "00e165e7-8f0c-41e4-9dec-997b254dff32"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "11ce48e0-a853-4085-8142-f674977b1a3a",
+            "name": "RENEWABLE_ENERGY",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startup Rise EU - European Startup News | Funding | Startup Insights",
+                  "document": "https://startuprise.co.uk/seaya-acquires-spain-based-adsmurai",
+                  "date": "2026-06-26"
+                }
+              ],
+              "id": "95009024-8621-51a7-aa19-f5a1cf1eb127"
+            }
+          },
+          {
+            "id": "21774ccd-d5c5-4fa2-8ed1-ac3d20b46339",
+            "name": "PRIVATE_EQUITY",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.linkedin.com",
+                  "document": "https://www.linkedin.com/company/seaya",
+                  "date": "2026-06-01"
+                }
+              ],
+              "id": "159cc4b9-cf5d-5643-9dfb-5041b4988dc8",
+              "valid_since": "2013-01-01"
+            }
+          },
+          {
+            "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+            "name": "REAL_ESTATE",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/investors/seaya-ventures",
+                  "date": "2026-06-24"
+                }
+              ],
+              "id": "a957ade3-34c6-5e3e-b166-6b9e9b9360bd"
+            }
+          },
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/investors/seaya-ventures",
+                  "date": "2026-06-24"
+                }
+              ],
+              "id": "0c0321da-1689-5de5-9266-1ad5ac151e8c"
+            }
+          },
+          {
+            "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+            "name": "SOFTWARE_AND_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Failory: 90% of Startups Fail — Learn How Not To.",
+                  "document": "https://www.failory.com/blog/venture-capital-firms-madrid",
+                  "date": "2026-06-01"
+                },
+                {
+                  "name": "Starter Story: Learn How People Are Starting Successful Businesses",
+                  "document": "https://www.starterstory.com/spain-vc-firms",
+                  "date": "2026-06-01"
+                }
+              ],
+              "id": "57116984-d983-51d6-88b3-35259f340038"
+            }
+          },
+          {
+            "id": "b58fd009-906d-4a11-9aef-8ef566128a5c",
+            "name": "FOOD_AND_BEVERAGE",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startup Rise EU - European Startup News | Funding | Startup Insights",
+                  "document": "https://startuprise.co.uk/seaya-acquires-spain-based-adsmurai",
+                  "date": "2026-06-26"
+                }
+              ],
+              "id": "b4aa6764-38b5-5487-b649-b59814d62e0a"
+            }
+          },
+          {
+            "id": "dd70bbef-ce9b-4560-babf-e60310d2c6b1",
+            "name": "HEALTHCARE_PROVIDERS",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/investors/seaya-ventures",
+                  "date": "2026-06-24"
+                }
+              ],
+              "id": "26c0c0cb-1dc4-5b5c-b955-018494334fc8"
+            }
+          },
+          {
+            "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+            "name": "VENTURE_CAPITAL",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Failory: 90% of Startups Fail — Learn How Not To.",
+                  "document": "https://www.failory.com/blog/venture-capital-firms-madrid",
+                  "date": "2026-06-01"
+                },
+                {
+                  "name": "Starter Story: Learn How People Are Starting Successful Businesses",
+                  "document": "https://www.starterstory.com/spain-vc-firms",
+                  "date": "2026-06-01"
+                }
+              ],
+              "id": "4eeb2778-8677-5c7e-91a0-85e264183453"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "05d25283-f7ff-4cac-933d-0c6c85cffbc6",
+            "name": "o11h",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/ukio-raised-27-million-in-a-series-a-round-led-by-felix-capital-joined-by-kreos-capital-breega-partech-heartcore-bynd-and-angel-investors",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "8e13355b-a7f5-5d75-9aa9-10aac467c228"
+            }
+          },
+          {
+            "id": "05f78ca8-e852-45ba-8b28-a6684677621f",
+            "name": "COMUNIDAD FILMIN S.L.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/seaya-ventures-closes-oversubscribed-third-fund-at-e165-million-to-back-european-tech-companies-in-early-stages",
+                  "date": "2026-06-29"
+                }
+              ],
+              "id": "e942ab04-8183-5bc5-85c6-52d290b6ba68"
+            }
+          },
+          {
+            "id": "0b3aaf51-1b00-4598-a7db-b88fb0b028ee",
+            "name": "Plenummedia",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Tech.eu - European Startup, Funding and Technology News",
+                  "document": "https://tech.eu/2014/05/30/spanish-vc-industry-just-got-248-million-euro-capital-injection",
+                  "date": "2026-07-15"
+                }
+              ],
+              "id": "709c792d-bc5c-57e5-84d2-1f370e0a84d4"
+            }
+          },
+          {
+            "id": "1a2f0cac-5a0b-44ff-9304-b65498da6ac6",
+            "name": "CrowdFarming",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/investors/seaya-ventures",
+                  "date": "2026-06-24"
+                }
+              ],
+              "id": "c18e2f23-38c7-56b1-ba61-1c63a2b5e9d2"
+            }
+          },
+          {
+            "id": "1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca",
+            "name": "Payflow",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Spain's Payflow, a salary advance startup, banks $9.1M",
+                  "document": "https://techcrunch.com/2022/01/17/payflow-series-a",
+                  "date": "2022-01-17"
+                }
+              ],
+              "id": "eaa79fe5-6a6a-4d69-b346-53bc477cbbad"
+            }
+          },
+          {
+            "id": "235c173a-531f-4353-8e2c-d67cdc0c227b",
+            "name": "SENSEI AI LTD",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/seaya-ventures-closes-oversubscribed-third-fund-at-e165-million-to-back-european-tech-companies-in-early-stages",
+                  "date": "2026-06-29"
+                }
+              ],
+              "id": "f59049eb-c3f8-56b3-bebb-bb124413cbd4"
+            }
+          },
+          {
+            "id": "2419a648-b092-4386-b3fd-556e52ed293f",
+            "name": "Restalo",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/explore/consumer-startups-in-spain/__eD1i-VrRizt4xfVQqB9Wy1AhM56_bgISztr31Qi3suM/companies",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "28d21453-a83e-50e5-bbf1-ef6063c64cbc"
+            }
+          },
+          {
+            "id": "24b6968d-5690-4131-9843-709b0465333d",
+            "name": "Reuse",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Dealflow - Spanish startup, tech and Venture Capital news",
+                  "document": "https://dealflow.es/issue/417/securitize-raised-47m-trouble-for-holaluz-and-solar-companies",
+                  "date": "2026-07-20"
+                }
+              ],
+              "id": "c7535101-7ee6-51ba-a44b-b06c7d38d4cc"
+            }
+          },
+          {
+            "id": "2b99245f-110b-4f5a-b522-faa2a0dad5d6",
+            "name": "Aegir Insights",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/investors/seaya-ventures",
+                  "date": "2026-06-24"
+                }
+              ],
+              "id": "15945d54-af93-5b17-abb0-ee62ab140fee"
+            }
+          },
+          {
+            "id": "2d40c798-6d85-48da-8f4e-1b9c374ced48",
+            "name": "AUNOA SOFTWARE SOCIEDAD LIMITADA",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "capital-riesgo.es",
+                  "document": "https://capital-riesgo.es/es/articles/tags/global+omnium",
+                  "date": "2026-06-21"
+                }
+              ],
+              "id": "710b6f52-8abf-5a24-b64d-5447cfd51c54"
+            }
+          },
+          {
+            "id": "386c88b9-20d2-46c9-93b5-86055b52b097",
+            "name": "Wallbox",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/explore/deep-tech-startups-in-barcelona-spain/__19jXouKIL6z_ravPPBisApx8j_Is4A_4IIgxovKPoP4/companies",
+                  "date": "2026-07-09"
+                }
+              ],
+              "id": "cdb391c1-4f36-56eb-a5af-bde2b303e677"
+            }
+          },
+          {
+            "id": "3bbce8b4-dced-4c25-9875-ad7638f0b393",
+            "name": "Pompeii",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/186851-53",
+                  "date": "2026-07-20"
+                }
+              ],
+              "id": "eeb0542d-f6e8-5b6f-a06f-c50a77655fd3"
+            }
+          },
+          {
+            "id": "3fa26ad5-e213-4aa9-bb59-71d0abeb40db",
+            "name": "Wallbox N.V.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Failory: 90% of Startups Fail — Learn How Not To.",
+                  "document": "https://www.failory.com/blog/venture-capital-firms-madrid",
+                  "date": "2026-06-01"
+                },
+                {
+                  "name": "Repositorio Institucional de Documentos",
+                  "document": "https://zaguan.unizar.es/record/129248/files/TAZ-TFG-2023-1692.pdf",
+                  "date": "2026-06-01"
+                }
+              ],
+              "id": "40f36dbc-72c4-5fe0-8921-fb1be980789d"
+            }
+          },
+          {
+            "id": "42c0645b-8c0a-486e-9dc8-96918c0ca69d",
+            "name": "receeve",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/seaya-ventures-closes-oversubscribed-third-fund-at-e165-million-to-back-european-tech-companies-in-early-stages",
+                  "date": "2026-06-29"
+                }
+              ],
+              "id": "61e9b571-0261-5e2d-88af-4347ac8fc621"
+            }
+          },
+          {
+            "id": "480d77d9-8907-444c-99d5-93797a1f2d9e",
+            "name": "Toqio",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "uktechnews.info",
+                  "document": "https://www.uktechnews.info/2021/07/06/toqio-fintech-secures-6-84-million-seed-investment-from-investors-including-seaya-ventures",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "6f807d34-3180-5ac1-9b92-227e95ffdf2e"
+            }
+          },
+          {
+            "id": "521f5052-f9aa-48aa-a1a7-b0ab5195c431",
+            "name": "Sensei",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Look out Amazon Go — A Lisbon startup plans to offer autonomous stores to other retailers | TechCrunch",
+                  "document": "https://techcrunch.com/2021/04/27/look-out-amazon-go-a-lisbon-startup-plans-to-offer-autonomous-stores-to-other-retailers",
+                  "date": "2021-04-27"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/sensei/__5XhoVHGVGfygXmoDpne1E7TdujLrJhQaEE5FuvKXbp8/funding-and-investors",
+                  "date": "2026-07-29"
+                }
+              ],
+              "id": "841fc332-6193-4ae0-b623-ceb77d96581d"
+            }
+          },
+          {
+            "id": "561f0678-111a-4513-9478-b04e48ba0c03",
+            "name": "Fracttal SpA",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Ground News",
+                  "document": "https://ground.news/article/h2site-raises-eur36m-in-series-b-funding",
+                  "date": "2026-07-02"
+                },
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/ukio-raised-27-million-in-a-series-a-round-led-by-felix-capital-joined-by-kreos-capital-breega-partech-heartcore-bynd-and-angel-investors",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "f89d23a5-7001-57b3-ac66-b77cfcf563fe"
+            }
+          },
+          {
+            "id": "5b6cfe8e-6b0b-45e5-ab70-2b55f2939602",
+            "name": "ALMA",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/2024/07/seaya-closes-e300-million-climate-tech-fund-southern-europes-biggest-investment-vehicle-for-impact-driven-companies",
+                  "date": "2026-06-24"
+                }
+              ],
+              "id": "577359f1-a4e7-5c72-a729-400212aa97ec"
+            }
+          },
+          {
+            "id": "5d71f10c-423f-4efb-9abf-2d9466a21607",
+            "name": "Tucuvi",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/jobandtalent-secured-42-million-in-series-b-investment-round-led-by-atomico-news8155825230",
+                  "date": "2026-08-28"
+                },
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/category/investments",
+                  "date": "2026-08-28"
+                },
+                {
+                  "name": "app.fundz.net",
+                  "document": "https://app.fundz.net/fundings/tucuvi-funding-round-series-a-fb0861",
+                  "date": "2026-08-28"
+                }
+              ],
+              "id": "a6d9d534-94b5-54bd-8a26-003fd623f7ea"
+            }
+          },
+          {
+            "id": "65b357e1-d365-48fb-8343-b2cf371a5475",
+            "name": "CATHAY INNOVATION",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "CB Insights — Predictive Intelligence on Private Companies",
+                  "document": "https://www.cbinsights.com/investor/seaya-ventures",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/tag/seaya-ventures/feed",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "92bd947f-e72e-51d2-9736-a55d521cf8d5"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "65b357e1-d365-48fb-8343-b2cf371a5475",
+            "name": "CATHAY INNOVATION",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/tag/seaya-ventures",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "03e26679-3cfe-56b3-9454-de140cb2502d"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "WORKS_AT": [
+          {
+            "id": "24cc6c1e-8913-49d8-80aa-6c29b61e2e9d",
+            "name": "Beatriz González",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Founder & Managing Partner",
+              "sources": [
+                {
+                  "name": "Beatriz González - Founder & Managing Partner at Seaya Ventures | The Org",
+                  "document": "https://theorg.com/org/seaya-ventures/org-chart/beatriz-gonzalez",
+                  "date": "2024-03-04"
+                },
+                {
+                  "name": "www.lavca.org",
+                  "document": "https://www.lavca.org/people/beatriz-gonzalez",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "7b270aae-66a6-51f7-9b7f-ae9f21141643"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "169615f8-9d70-47a8-bd8e-ccb71847fe4c",
+            "name": "Seabery",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/investors/seaya-ventures",
+                  "date": "2026-06-01"
+                }
+              ],
+              "id": "ae3cd602-4b5d-51e4-95b8-59f83a6f3ae4"
+            }
+          },
+          {
+            "id": "17679909-b322-4a18-815e-aac945bfb815",
+            "name": "Seaya → Adsmurai",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Dealflow - Spanish startup, tech and Venture Capital news",
+                  "document": "https://dealflow.es/",
+                  "date": "2026-06-23"
+                }
+              ],
+              "id": "896dc833-1584-510c-8b5f-92ac50b11d30"
+            }
+          },
+          {
+            "id": "1a2f0cac-5a0b-44ff-9304-b65498da6ac6",
+            "name": "CrowdFarming",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/investors/seaya-ventures",
+                  "date": "2026-06-01"
+                },
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://seedtable.com/investors/seaya-ventures",
+                  "date": "2026-06-01"
+                }
+              ],
+              "id": "1b2bb03e-87fb-5c48-b32e-8a7895e819ec"
+            }
+          },
+          {
+            "id": "1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca",
+            "name": "Payflow",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/payflow-announced-closing-a-91-million-series-a-funding-round-co-led-by-seaya-ventures-cathay-innovation-and-entrepreneurs-fund",
+                  "date": "2026-07-21"
+                },
+                {
+                  "name": "EYE NEWSFLASH: Bruce brothers back in the game with surprise Purplebricks return",
+                  "document": "https://bebeez.eu/2024/07/24/barcelona-based-payflow-raises-e6-million-to-expand-flexible-salary-in-iberian-and-latam-markets",
+                  "date": "2026-07-21"
+                }
+              ],
+              "id": "5fc8db98-d625-54cd-9776-6be78e9c1bea"
+            }
+          },
+          {
+            "id": "2b99245f-110b-4f5a-b522-faa2a0dad5d6",
+            "name": "Aegir Insights",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/investors/seaya-ventures",
+                  "date": "2026-06-01"
+                },
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://seedtable.com/investors/seaya-ventures",
+                  "date": "2026-06-01"
+                }
+              ],
+              "id": "af68352c-01dc-59ee-b81c-fa6537e69021"
+            }
+          },
+          {
+            "id": "3bbce8b4-dced-4c25-9875-ad7638f0b393",
+            "name": "Pompeii",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/186851-53",
+                  "date": "2026-07-20"
+                }
+              ],
+              "id": "a4588cc3-1ceb-5176-8009-36e7e3254cbf"
+            }
+          },
+          {
+            "id": "3c5232d5-33f6-49a2-93f4-10c269cef502",
+            "name": "Seaya → Adsmurai",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Dealflow - Spanish startup, tech and Venture Capital news",
+                  "document": "https://dealflow.es/",
+                  "date": "2026-07-20"
+                }
+              ],
+              "id": "87d666df-f1a9-5adb-8038-be77d519f229"
+            }
+          },
+          {
+            "id": "3fa26ad5-e213-4aa9-bb59-71d0abeb40db",
+            "name": "Wallbox N.V.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Failory: 90% of Startups Fail — Learn How Not To.",
+                  "document": "https://www.failory.com/blog/venture-capital-firms-madrid",
+                  "date": "2026-06-01"
+                },
+                {
+                  "name": "Repositorio Institucional de Documentos",
+                  "document": "https://zaguan.unizar.es/record/129248/files/TAZ-TFG-2023-1692.pdf",
+                  "date": "2026-06-01"
+                }
+              ],
+              "id": "5835663a-bbbe-51fd-9fac-b45b7055d6c7"
+            }
+          },
+          {
+            "id": "556d1087-f7e0-4acf-9fb5-560848ea197d",
+            "name": "iPronics",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startup Rise EU - European Startup News | Funding | Startup Insights",
+                  "document": "https://startuprise.co.uk/seaya-acquires-spain-based-adsmurai",
+                  "date": "2026-06-19"
+                }
+              ],
+              "id": "da57dfe3-6a8e-5117-8cce-5217162ec0f8"
+            }
+          },
+          {
+            "id": "57dcbb4a-e060-42b3-9f16-d1b96372ef9b",
+            "name": "Tucuvi",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/jobandtalent-secured-42-million-in-series-b-investment-round-led-by-atomico-news8155825230",
+                  "date": "2026-08-28"
+                },
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/category/investments",
+                  "date": "2026-08-28"
+                }
+              ],
+              "id": "2ad916ec-0c06-54b3-ac32-0053c6424a73"
+            }
+          },
+          {
+            "id": "5bef6530-1129-4fb4-b33e-0d42e7708bd7",
+            "name": "Movo",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Dealflow - Spanish startup, tech and Venture Capital news",
+                  "document": "https://dealflow.es/issue/160/movo-s-escooters-raise-20m-fintonic-raises-19m-rollbox-acquired-by-personio-bq-sold-51-stake-for-36m-stock-options-in-spain",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "3f57842e-c0e3-5caa-aad7-63aae6ce0499"
+            }
+          },
+          {
+            "id": "5c0812a6-7efd-40c1-8ae6-640b7f9c2cd6",
+            "name": "Seaya → Adsmurai",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Dealflow - Spanish startup, tech and Venture Capital news",
+                  "document": "https://dealflow.es/",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "bd42935b-e273-52aa-a8c0-2900014bcbd1"
+            }
+          },
+          {
+            "id": "5c0fcdcd-67fe-4fea-a782-35afdc5504d4",
+            "name": "Savana Médica",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "siliconcanals.com",
+                  "document": "https://siliconcanals.com/healthcare-savana-raises-12-8m",
+                  "date": "2026-06-12"
+                },
+                {
+                  "name": "Tech.eu - European Startup, Funding and Technology News",
+                  "document": "https://tech.eu/2022/04/05/savana-gets-25-million-booster-to-make-clinical-research-faster-and-more-powerful",
+                  "date": "2026-06-12"
+                }
+              ],
+              "id": "d1e187bf-4475-54ce-94db-5c36cea433b7"
+            }
+          },
+          {
+            "id": "5d71f10c-423f-4efb-9abf-2d9466a21607",
+            "name": "Tucuvi",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/tucuvi-raised-20-million-in-series-a-funding-co-led-by-cathay-innovation-and-leadwind-joined-by-frontline-ventures-seaya-ventures-and-shilling",
+                  "date": "2026-06-30"
+                },
+                {
+                  "name": "app.fundz.net",
+                  "document": "https://app.fundz.net/fundings/tucuvi-funding-round-series-a-fb0861",
+                  "date": "2026-06-30"
+                }
+              ],
+              "id": "95241444-c09a-5633-b94a-a8d9e512efa6"
+            }
+          },
+          {
+            "id": "6fd43585-338c-49b2-a10f-377b395fa930",
+            "name": "011H SUSTAINABLE CONSTRUCTION S.L.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startup Rise EU - European Startup News | Funding | Startup Insights",
+                  "document": "https://startuprise.co.uk/barcelona-based-011h-secures-e20m-funding-round",
+                  "date": "2026-06-03"
+                },
+                {
+                  "name": "app.dealroom.co",
+                  "document": "https://app.dealroom.co/companies/011h",
+                  "date": "2026-06-03"
+                }
+              ],
+              "id": "09fd5f1e-6265-5a06-aa2f-1590b7c5a355"
+            }
+          },
+          {
+            "id": "74bd652d-b5e9-438b-b76f-7e6dcfce36c5",
+            "name": "TCA GLOVO SL",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "cathayinnovation.com",
+                  "document": "https://cathayinnovation.com/european-on-demand-delivery-startup-glovo-raises-e30-million-series-b",
+                  "date": "2026-07-14"
+                }
+              ],
+              "id": "9c546bbe-c01e-5795-9175-2fcf7ba5c983"
+            }
+          },
+          {
+            "id": "7c8a608e-a8c1-4102-98e5-94eb64e98464",
+            "name": "Wallbox N.V.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "startupmodels.io",
+                  "document": "https://startupmodels.io/blog/insights-for-startups/vc-spain",
+                  "date": "2026-06-17"
+                }
+              ],
+              "id": "189517cd-8548-5b90-ad23-8a39680fb32d"
+            }
+          },
+          {
+            "id": "7d5361d1-5ec0-44ab-bb14-01687e149113",
+            "name": "ADSMURAI S.L.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/investor/59079-61",
+                  "date": "2026-06-01"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/investor/59079-61#investments",
+                  "date": "2026-06-01"
+                }
+              ],
+              "id": "1cbc5668-7ddf-59a0-a94e-adc14ac445c9"
+            }
+          },
+          {
+            "id": "7d9b857b-aa5f-4414-8cfb-96e8ac778de1",
+            "name": "Adsmurai S.L.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Dealflow - Spanish startup, tech and Venture Capital news",
+                  "document": "https://dealflow.es/",
+                  "date": "2026-06-19"
+                }
+              ],
+              "id": "2b2d2cba-7621-57ab-b9d4-dbcda9d00106"
+            }
+          },
+          {
+            "id": "7eb121ed-7c27-40da-9683-a7eb2b031c5b",
+            "name": "NeuralTrust",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "bouncewatch.com",
+                  "document": "https://bouncewatch.com/",
+                  "date": "2026-07-09"
+                },
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/",
+                  "date": "2026-07-09"
+                },
+                {
+                  "name": "SaaS B2B Fundraising News | The SaaS News",
+                  "document": "https://www.thesaasnews.com/",
+                  "date": "2026-07-09"
+                },
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/",
+                  "date": "2026-07-09"
+                },
+                {
+                  "name": "app.dealroom.co",
+                  "document": "https://app.dealroom.co/",
+                  "date": "2026-07-09"
+                },
+                {
+                  "name": "NeuralTrust lands $20M seed round for enterprise AI agent security platform",
+                  "document": "https://vestbee.com/",
+                  "date": "2026-07-09"
+                },
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/",
+                  "date": "2026-07-09"
+                },
+                {
+                  "name": "Startup Rise EU - European Startup News | Funding | Startup Insights",
+                  "document": "https://startuprise.co.uk/",
+                  "date": "2026-07-09"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/",
+                  "date": "2026-07-09"
+                }
+              ],
+              "id": "8934d467-c95f-5bac-954b-d29de1bd831b"
+            }
+          }
+        ],
+        "IS_CEO_OF": [
+          {
+            "id": "24cc6c1e-8913-49d8-80aa-6c29b61e2e9d",
+            "name": "Beatriz González",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/tag/seaya-ventures/feed",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "40889e18-76a2-53a2-ae79-608baa43f93b"
+            }
+          }
+        ],
+        "OPERATED_BY": [
+          {
+            "id": "df1949b1-4652-4070-921a-cc74b0c6ead1",
+            "name": "Adsmurai",
+            "entity_type": "Product",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Dealflow - Spanish startup, tech and Venture Capital news",
+                  "document": "https://dealflow.es/",
+                  "date": "2026-06-24"
+                }
+              ],
+              "id": "5862a7a8-6fbc-518a-a766-9a324f3f1613"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "9b72c259-dc5a-5c90-8126-af1de76a4504",
+            "name": "Enric Asuncion Escorsa",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Founder and Managing Partner",
+              "sources": [
+                {
+                  "name": "Enric Asunción Escorsa - Executive Bio, Work History, and Contacts",
+                  "document": "https://people.equilar.com/bio/person/enric-escorsa-wallbox-nv/28167433",
+                  "date": "2025-07-30"
+                }
+              ],
+              "id": "73a600f3-f241-5eb1-af68-e02fdb316cea"
+            }
+          },
+          {
+            "id": "abc036f9-8750-430c-ab1d-c2726c35bdd1",
+            "name": "Jesús Encinar",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Advisory board member",
+              "sources": [
+                {
+                  "name": "Jesús Encinar: The Man Behind Idealista and 11870.com",
+                  "document": "https://www.compasslist.com/insights/jesus-encinar-the-man-behind-idealista-and-11870com",
+                  "date": "2018-10-02"
+                },
+                {
+                  "name": "www.eu-startups.com",
+                  "document": "https://www.eu-startups.com/page/548?ibsa=share&id=830",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "6fc6165d-45cc-5a14-837b-f6814ac356ce"
+            }
+          }
+        ],
+        "FOUNDED": [
+          {
+            "id": "24cc6c1e-8913-49d8-80aa-6c29b61e2e9d",
+            "name": "Beatriz González",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "CB Insights — Predictive Intelligence on Private Companies",
+                  "document": "https://www.cbinsights.com/investor/seaya-ventures",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/tag/seaya-ventures/feed",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "89033c6a-773e-5b81-95fd-ff550c172346"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "input": "investors.location=Spain.sector=fintech",
+  "runAt": "2026-08-29T10:10:55.922Z",
+  "ok": true,
+  "status": 200,
+  "ms": 60637,
+  "attempt": 0,
+  "data": {
+    "results": [
+      {
+        "name": "Seaya Ventures",
+        "location": "Madrid, Spain",
+        "type": "Venture Capital Firm",
+        "description": "One of Spain's leading VC firms, managing ~€300M across multiple funds. Invests in fintech from Seed to Series B stages, with notable fintech-related deals including Toqio and participation alongside SIX FinTech Ventures. Also has a strategic partnership with Cathay Innovation."
+      },
+      {
+        "name": "Kibo Ventures",
+        "location": "Madrid, Spain",
+        "type": "Venture Capital Firm",
+        "description": "Considered one of Spain's most successful VCs, with ~€300M AuM. Invests in early-stage digital technology companies including fintech (e.g., Capchase, Gotrade). Founded by Aquilino Peña and Javier Torremocha."
+      },
+      {
+        "name": "K Fund",
+        "location": "Madrid, Spain",
+        "type": "Venture Capital Firm",
+        "description": "Supports founders in Southern Europe and Latin America from Seed to Series B (€100K–€10M). Active in fintech; also manages the €250M Leadwind growth fund in partnership with Telefónica."
+      },
+      {
+        "name": "Samaipata Ventures",
+        "location": "Madrid, Spain",
+        "type": "Venture Capital Firm",
+        "description": "Focuses on digital platforms and marketplaces across Europe, including fintech. Founded by José del Barrio in 2015, with a pan-European investment strategy."
+      },
+      {
+        "name": "JME Ventures",
+        "location": "Madrid, Spain",
+        "type": "Venture Capital Firm",
+        "description": "Active in fintech at Seed and Series A stages. Co-invests frequently with other Spanish VCs such as Seaya, Kibo, and K Fund."
+      },
+      {
+        "name": "Inveready Technology Investment Group",
+        "location": "Barcelona, Spain",
+        "type": "Venture Capital Firm",
+        "description": "Invests across multiple stages in technology companies, including fintech startups in Spain and internationally."
+      },
+      {
+        "name": "Aldea Ventures",
+        "location": "Spain",
+        "type": "Venture Capital Firm",
+        "description": "Early-stage VC with fintech among its sector interests."
+      },
+      {
+        "name": "4Founders Capital",
+        "location": "Barcelona, Spain",
+        "type": "Venture Capital Firm",
+        "description": "Invests in early-stage fintech and tech startups, participating in deals like Flanks (Series A) and Embat (Seed)."
+      },
+      {
+        "name": "Encomenda Smart Capital",
+        "location": "Spain",
+        "type": "Venture Capital Firm",
+        "description": "Active in seed-stage fintech investments, including backing companies like Goin and Nemuru."
+      },
+      {
+        "name": "Bonsai Partners",
+        "location": "Madrid, Spain",
+        "type": "Venture Capital Firm",
+        "description": "Invests in tech startups at all stages, with fintech as one of its focus areas."
+      },
+      {
+        "name": "Bankia Fintech Venture / Tenedora Fintech Venture",
+        "location": "Spain",
+        "type": "Corporate Venture / Institutional",
+        "description": "Originally Bankia's fintech-focused fund, now under CaixaBank following the merger. Invested in companies like Nemuru."
+      },
+      {
+        "name": "Propel (BBVA)",
+        "location": "Spain",
+        "type": "Corporate Venture / Institutional",
+        "description": "BBVA's fintech investment arm, backing companies in authentication, payments, and financial infrastructure."
+      },
+      {
+        "name": "Wayra (Telefónica)",
+        "location": "Spain",
+        "type": "Corporate Venture / Institutional",
+        "description": "Telefónica's open innovation platform, active in fintech investments across Spain and Latin America."
+      },
+      {
+        "name": "Sabadell Venture Capital / BStartup (Banco Sabadell)",
+        "location": "Spain",
+        "type": "Corporate Venture / Institutional",
+        "description": "Banco Sabadell's venture arm, co-investing in fintech and tech deals."
+      },
+      {
+        "name": "Caixa Capital Risc / Criteria Venture Tech",
+        "location": "Spain",
+        "type": "Corporate Venture / Institutional",
+        "description": "La Caixa's venture capital arm, investing in fintech and technology startups."
+      },
+      {
+        "name": "David Riudor",
+        "location": "Spain",
+        "type": "Angel Investor",
+        "description": "Solo angel investor focused on early-stage fintech."
+      },
+      {
+        "name": "David Conde",
+        "location": "Spain",
+        "type": "Angel Investor",
+        "description": "Angel investor with expertise in banking, investing $1K–$25K in early-stage fintech companies."
+      }
+    ],
+    "entities": [
+      {
+        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+        "name": "Spain",
+        "entity_type": "Country",
+        "mentions": [
+          "Spain"
+        ]
+      },
+      {
+        "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+        "name": "Seaya Ventures",
+        "entity_type": "Organization",
+        "mentions": [
+          "Seaya Ventures"
+        ]
+      },
+      {
+        "id": "e122a8b3-d711-53bf-b81a-d843895c5081",
+        "name": "Madrid",
+        "entity_type": "Municipality",
+        "mentions": [
+          "Madrid"
+        ]
+      },
+      {
+        "id": "0e43f081-ce1f-4542-90c6-b94b7631dd21",
+        "name": "SIX FinTech Ventures",
+        "entity_type": "Organization",
+        "mentions": [
+          "SIX FinTech Ventures"
+        ]
+      },
+      {
+        "id": "65b357e1-d365-48fb-8343-b2cf371a5475",
+        "name": "CATHAY INNOVATION",
+        "entity_type": "Company",
+        "mentions": [
+          "Cathay Innovation"
+        ]
+      },
+      {
+        "id": "d13f79c8-6698-4f4f-b98c-1a28d60d80b8",
+        "name": "Kibo Ventures",
+        "entity_type": "Company",
+        "mentions": [
+          "Kibo Ventures"
+        ]
+      },
+      {
+        "id": "4a411217-13cf-4722-bdd1-ac299fbf15a6",
+        "name": "Aquilino Peña",
+        "entity_type": "Person",
+        "mentions": [
+          "Aquilino Peña"
+        ]
+      },
+      {
+        "id": "3cdae03c-b346-4a40-8811-8fa17e4710a4",
+        "name": "Javier Torremocha",
+        "entity_type": "Person",
+        "mentions": [
+          "Javier Torremocha"
+        ]
+      },
+      {
+        "id": "b20582ee-8896-427c-a0c9-d8189f09f17c",
+        "name": "Capchase",
+        "entity_type": "Company",
+        "mentions": [
+          "Capchase"
+        ]
+      },
+      {
+        "id": "0241c00b-bb0a-4968-9dfc-f7da6596fa13",
+        "name": "Gotrade",
+        "entity_type": "Company",
+        "mentions": [
+          "Gotrade"
+        ]
+      },
+      {
+        "id": "4712a5e8-fa2e-4f27-9375-73b8fdbd3faf",
+        "name": "K-Fund",
+        "entity_type": "Organization",
+        "mentions": [
+          "K Fund"
+        ]
+      },
+      {
+        "id": "1a6b7e08-aeed-489c-aeb6-c22cffdedfa0",
+        "name": "TELEFONICA SA",
+        "entity_type": "Company",
+        "mentions": [
+          "Telefónica"
+        ]
+      },
+      {
+        "id": "76516af3-d6c5-4762-8f89-c3159f69c264",
+        "name": "Samaipata Ventures",
+        "entity_type": "Organization",
+        "mentions": [
+          "Samaipata Ventures"
+        ]
+      },
+      {
+        "id": "cd21137a-34e5-4c5f-9fab-70780dc661c8",
+        "name": "José del Barrio",
+        "entity_type": "Person",
+        "mentions": [
+          "José del Barrio"
+        ]
+      },
+      {
+        "id": "8aad7b66-72a3-4778-9e44-82373c15e79f",
+        "name": "JME Ventures",
+        "entity_type": "Company",
+        "mentions": [
+          "JME Ventures"
+        ]
+      },
+      {
+        "id": "463bf2e2-a1f7-4d0a-b5f0-afa60379995c",
+        "name": "Inveready Technology Investment Group",
+        "entity_type": "Organization",
+        "mentions": [
+          "Inveready Technology Investment Group"
+        ]
+      },
+      {
+        "id": "7d7e89cd-567d-554c-9a67-7a4a0c9915ab",
+        "name": "Barcelona",
+        "entity_type": "Municipality",
+        "mentions": [
+          "Barcelona"
+        ]
+      },
+      {
+        "id": "b186979d-5ba6-4b48-87f9-9ea26753f683",
+        "name": "ALDEA VENTURES, S.G.E.I.C. S.A.",
+        "entity_type": "Company",
+        "mentions": [
+          "Aldea Ventures"
+        ]
+      },
+      {
+        "id": "73a2fa29-c572-4f3e-9c25-22abf944a752",
+        "name": "4Founders Capital",
+        "entity_type": "Company",
+        "mentions": [
+          "4Founders Capital"
+        ]
+      },
+      {
+        "id": "90871b30-2cfb-46f3-bc5a-44593ac0648f",
+        "name": "Encomenda Smart Capital",
+        "entity_type": "Organization",
+        "mentions": [
+          "Encomenda Smart Capital"
+        ]
+      },
+      {
+        "id": "fcb82b73-fdfe-4504-8b4f-ac7979f2e251",
+        "name": "Goin",
+        "entity_type": "Organization",
+        "mentions": [
+          "Goin"
+        ]
+      },
+      {
+        "id": "f1a5b5e7-2e23-49d9-ac60-23d4be9b71d7",
+        "name": "Nemuru",
+        "entity_type": "Company",
+        "mentions": [
+          "Nemuru"
+        ]
+      },
+      {
+        "id": "741e026e-344c-4f0b-9af1-19945cfd582b",
+        "name": "BONSAI PARTNERS SGEIC SA",
+        "entity_type": "Company",
+        "mentions": [
+          "Bonsai Partners"
+        ]
+      },
+      {
+        "id": "7addeb6d-ab4e-4848-b5b5-dc20ab862bc0",
+        "name": "Bankia Fintech Venture",
+        "entity_type": "Organization",
+        "mentions": [
+          "Bankia Fintech Venture"
+        ]
+      },
+      {
+        "id": "048fc63f-4764-4073-ad1a-e97048f50a43",
+        "name": "CAIXABANK, S.A.",
+        "entity_type": "Company",
+        "mentions": [
+          "CaixaBank"
+        ]
+      },
+      {
+        "id": "1150ec4f-b397-4155-bd4c-da78fab80208",
+        "name": "Propel",
+        "entity_type": "Company",
+        "mentions": [
+          "Propel"
+        ]
+      },
+      {
+        "id": "941759e7-8275-4ddc-a569-a0b8b3e82844",
+        "name": "BBVA SA",
+        "entity_type": "Organization",
+        "mentions": [
+          "BBVA"
+        ]
+      },
+      {
+        "id": "eaf1f667-4d67-41ff-83fa-0df3cdd0ed49",
+        "name": "Wayra Open Future",
+        "entity_type": "Organization",
+        "mentions": [
+          "Wayra"
+        ]
+      },
+      {
+        "id": "d5cfe795-cf3c-4949-af42-1f2371db52f4",
+        "name": "Sabadell Venture Capital",
+        "entity_type": "Company",
+        "mentions": [
+          "Sabadell Venture Capital"
+        ]
+      },
+      {
+        "id": "297c9eca-62f5-4046-bdfb-5ddfe2b5f02c",
+        "name": "BStartup",
+        "entity_type": "Organization",
+        "mentions": [
+          "BStartup"
+        ]
+      },
+      {
+        "id": "fcaf58a0-b1db-47f6-a2d4-9fafa019d547",
+        "name": "Banco Sabadell",
+        "entity_type": "Company",
+        "mentions": [
+          "Banco Sabadell"
+        ]
+      },
+      {
+        "id": "e2a48684-3bb8-4398-956b-a8a0938a97c3",
+        "name": "Caixa Capital Risc",
+        "entity_type": "Organization",
+        "mentions": [
+          "Caixa Capital Risc"
+        ]
+      },
+      {
+        "id": "de8fa8db-c9a3-4e9c-9388-b3cc3bced403",
+        "name": "CRITERIA VENTURE TECH SICC S.A.",
+        "entity_type": "Company",
+        "mentions": [
+          "Criteria Venture Tech"
+        ]
+      },
+      {
+        "id": "2c9aa35a-deb9-4076-a8e7-e5aaf6bd3388",
+        "name": "David Riudor",
+        "entity_type": "Person",
+        "mentions": [
+          "David Riudor"
+        ]
+      },
+      {
+        "id": "adabc025-7491-4d21-9c0e-40974a780998",
+        "name": "David Conde",
+        "entity_type": "Person",
+        "mentions": [
+          "David Conde"
+        ]
+      }
+    ]
+  }
+}

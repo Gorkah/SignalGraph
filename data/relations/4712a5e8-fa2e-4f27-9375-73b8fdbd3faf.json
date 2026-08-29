@@ -1,0 +1,1267 @@
+{
+  "id": "4712a5e8-fa2e-4f27-9375-73b8fdbd3faf",
+  "name": "K-Fund",
+  "introspection": {
+    "properties": [
+      "description",
+      "id",
+      "name",
+      "registered_address",
+      "aliases",
+      "website"
+    ],
+    "relationships": {
+      "outgoing": [
+        "PARTICIPATES_IN_CORPORATE_EVENT",
+        "INVESTED_IN",
+        "OPERATES_IN_INDUSTRY"
+      ],
+      "incoming": [
+        "WORKS_AT",
+        "INVESTED_IN",
+        "FOUNDED"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "4712a5e8-fa2e-4f27-9375-73b8fdbd3faf",
+    "name": "K-Fund",
+    "entity_type": "Organization",
+    "description": "A Madrid‑based Spanish venture capital firm that invests in software, services, and fintech companies.",
+    "properties": {
+      "name": {
+        "value": "K-Fund",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-06-28"
+          }
+        ]
+      },
+      "description": {
+        "value": "A Madrid‑based Spanish venture capital firm that invests in software, services, and fintech companies.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-04"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "06582c4d-0e54-4a6e-8753-b0e84905fa7f",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Hubtype raises $1.1M to help developers build richer chat support | TechCrunch",
+                  "document": "https://techcrunch.com/2019/05/07/hubtype-raises-1-1m-to-help-developers-build-richer-chat-support",
+                  "date": "2019-05-07"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/hubtype/financial_details",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/hubtype/__o4cW4G2V1NCa7g5URxwgIAvokIWE5AuikcUhzE5CCa4",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2019-05-07",
+              "id": "15b0aedd-bce2-4e18-9a8c-cb2cbfc6b079"
+            }
+          },
+          {
+            "id": "0c4f5339-c0e8-411f-b4b6-c8eb91a0c4fe",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "medium.com",
+                  "document": "https://medium.com/an-honest-startup-story/everything-you-wanted-to-know-about-factorials-2-8m-seed-round-but-were-afraid-to-ask-74e6e9eeba5d",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/factorial",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2018-10-01",
+              "id": "c59cfc58-c581-4665-b86f-cb0a90ca86f2"
+            }
+          },
+          {
+            "id": "1a2e4edf-73a0-4ff0-b7d5-124ca46350cc",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/happyrobot/__tpvjXC1ztQVCcmwI5nABkYY6mAzlVf0z6lPp3kO-tjk/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/happyrobot/__tpvjXC1ztQVCcmwI5nABkYY6mAzlVf0z6lPp3kO-tjk",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2026-08-04",
+              "id": "3ff4281b-82a0-44cc-8629-3e9bfc35aa01"
+            }
+          },
+          {
+            "id": "268e27a8-6d89-42c0-b0f4-cb17f4d7cda4",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "www.businesswire.com",
+                  "document": "https://www.businesswire.com/news/home/20210907005612/en/Factorial-Closes-a-Series-B-Funding-Round-with-%2480-Million",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "Spain's Factorial raises $80M on the back of strong traction for its 'Workday for SMBs' | TechCrunch",
+                  "document": "https://techcrunch.com/2021/09/05/spains-factorial-raises-80m-at-a-530m-valuation-on-the-back-of-strong-traction-for-its-workday-for-smbs",
+                  "date": "2021-09-05"
+                }
+              ],
+              "event_date": "2021-09-05",
+              "id": "826276f0-1ec3-494c-a0ba-589139e9ac0e"
+            }
+          },
+          {
+            "id": "2fe34a8c-4760-4a18-a82e-6930b24b0187",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/venture/briefing-11-17-20",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/bdeo/__KbZIOgR2wN9dRwhXVxqMWQH_UO7YxnooQAwL2MP93qk/funding-and-investors",
+                  "date": "2026-07-29"
+                }
+              ],
+              "event_date": "2020-11-17",
+              "id": "c6ad9ef3-2c2c-4f8e-8f42-1ededd278dc6"
+            }
+          },
+          {
+            "id": "30968e9f-22ad-4b5a-8c50-9c9f75a640c0",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/theker/__74PkMeRB6zMmocP-KsD0SCIJ8XorEx9iiER6Us27LD8",
+                  "date": "2026-08-05"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/theker/__Vu61jIsp8_4oa7RZ4IGo2yFNaviX3kuONiDy3z8EUrA",
+                  "date": "2026-08-05"
+                },
+                {
+                  "name": "Theker just raised $85M to build the factory robot that doesn't specialize in anything | TechCrunch",
+                  "document": "https://techcrunch.com/2026/06/11/theker-just-raised-85m-to-build-the-factory-robot-that-doesnt-specialize-in-anything",
+                  "date": "2026-06-11"
+                },
+                {
+                  "name": "Beyond Lovable and Mistral: 21 European startups to watch | TechCrunch",
+                  "document": "https://techcrunch.com/2026/05/02/beyond-lovable-and-mistral-21-european-startups-to-watch",
+                  "date": "2026-05-02"
+                }
+              ],
+              "event_date": "2025-07-15",
+              "id": "dd7e7a49-586a-45ea-9d59-e5b28d6b1ff6"
+            }
+          },
+          {
+            "id": "46b129e5-785b-406f-b4bd-eb85dec38dc1",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/bdeo/__KbZIOgR2wN9dRwhXVxqMWQH_UO7YxnooQAwL2MP93qk/funding-and-investors",
+                  "date": "2026-07-29"
+                }
+              ],
+              "event_date": "2019-04-24",
+              "id": "0372a42d-54ec-4fa4-bdde-a0e80161b337"
+            }
+          },
+          {
+            "id": "4d5051e4-fe5e-4211-827f-ebc43395d41b",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/omnia/__SQGyPp4jhWSUbb0GsPJ5uS9mjkfIHaD1sU_RGOLoB30",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/omnia/__SQGyPp4jhWSUbb0GsPJ5uS9mjkfIHaD1sU_RGOLoB30/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2025-10-16",
+              "id": "104e5f29-ee1a-4aa0-8c1e-f481aae502ef"
+            }
+          },
+          {
+            "id": "57296257-dba3-4970-b825-c24411bc0440",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/zynap/__hstgIzItHbxNEMZAQa8AErrVIg0MJfVqAsucylqnUQo/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/zynap/__hstgIzItHbxNEMZAQa8AErrVIg0MJfVqAsucylqnUQo",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/zynap-6e3f/news_and_analysis",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/funding_round/zynap-6e3f-seed--cb1eea5b",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/zynap-6e3f",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2025-01-21",
+              "id": "9c36096f-c246-4fe3-8a8b-b1abc46cfe83"
+            }
+          },
+          {
+            "id": "5d0e6343-816a-4587-b6ca-428e4a1153a4",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/barkibu/__8aG8aJm_1SBepmlbXwyp3of_N9QWgratNqyO_EBZwSs/funding-and-investors",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/barkibu/__8aG8aJm_1SBepmlbXwyp3of_N9QWgratNqyO_EBZwSs",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/trending-business-models/startups-in-pet-insurances/__FGLZpThcqoXZJuNTxTvh1UZ5mikL-MIjja-NpoUjtd0",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/explore/veterinary-healthtech-startups-in-spain/__enJdTM84hbFYcR8u9S5WHrdIxvuuTzhrt-x75_1Kc1g/companies",
+                  "date": "2026-07-29"
+                }
+              ],
+              "event_date": "2023-05-04",
+              "id": "e41e8126-f456-43f7-b0d8-02cbde05e1d3"
+            }
+          },
+          {
+            "id": "6200ee35-c051-4111-9b97-cd1b98efafd8",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/2501.ai/__aOKf4nD7FY2oe7u7BIgFNNCnNQDginrgRx-7-Yhn7c4/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/2501.ai/__aOKf4nD7FY2oe7u7BIgFNNCnNQDginrgRx-7-Yhn7c4/founders-and-board-of-directors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/2501ai/__aOKf4nD7FY2oe7u7BIgFNNCnNQDginrgRx-7-Yhn7c4",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2025-09-25",
+              "id": "0642bdd7-e237-4805-9b93-74eaa3804af7"
+            }
+          },
+          {
+            "id": "6cb580ab-5ebc-490c-8da7-12085160d5cc",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/lucera/financial_details",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/danka-capital",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/117203-50",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "K Fund is a new €50M VC fund investing in early-stage Spanish startups | TechCrunch",
+                  "document": "https://techcrunch.com/2016/10/16/k-fund",
+                  "date": "2016-10-16"
+                }
+              ],
+              "id": "d2e1cc70-0c04-41d1-8bfb-f507c6e7022e"
+            }
+          },
+          {
+            "id": "90d47e1b-a107-4229-aa02-9bb1fb834a69",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Abacum Review [2026]: Pricing, AI & Mid-Market FP&A Fit",
+                  "document": "https://www.cfoshortlist.com/vendors/abacum",
+                  "date": "2026-07-15"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/abacum/__xDxRifljOKgQzZe2E_piFD7so-KdlCGxVaHO-det66A/funding-and-investors",
+                  "date": "2026-07-28"
+                }
+              ],
+              "event_date": "2025-05-28",
+              "id": "1cbf5b5e-441b-4a75-a33d-0798667b387e"
+            }
+          },
+          {
+            "id": "9f5a29be-4262-4dad-8b8e-ab919b37172b",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/beonx/__5cls1-OLEZxOrHrUfYo8h4sl_V8NJpu5KEGsAgMeoyc",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/beonx/__5cls1-OLEZxOrHrUfYo8h4sl_V8NJpu5KEGsAgMeoyc/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2021-05-31",
+              "id": "6d78e481-21a9-4b06-9243-69595aa0fac2"
+            }
+          },
+          {
+            "id": "b25ee349-c081-4161-b420-be649e53c84f",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/beonx/__5cls1-OLEZxOrHrUfYo8h4sl_V8NJpu5KEGsAgMeoyc/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2017-05-30",
+              "id": "01b59e0a-e24e-4dd0-8bf7-f2955f5fd068"
+            }
+          },
+          {
+            "id": "b7d83422-4d3a-4c0e-a1db-993bb11126a4",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/beonx/__5cls1-OLEZxOrHrUfYo8h4sl_V8NJpu5KEGsAgMeoyc/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2020-01-09",
+              "id": "fadf16a7-debe-493c-b7c3-cdee8e400596"
+            }
+          },
+          {
+            "id": "b870217d-e25b-4948-b88b-a0c3b6170ab9",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/finnecto/__BCiAsk7Z3VZIYdz4T9qNr2sliMEGP7h21btA55jEdms",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/explore/saas-startups-in-mexico/__aJ4Xa7GqbTLyPMp8XVc0jA98RiYJ-6FKkwiTC6c7XGM/companies",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/finnecto",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/634312-99",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2025-06-03",
+              "id": "2abb67ab-3e2e-49b5-aa39-60442bcb5fe6"
+            }
+          },
+          {
+            "id": "bb622623-2c35-4c15-96ee-c50e9b9fe9db",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Factorial Hits Unicorn Status With $120M Raise",
+                  "document": "https://news.crunchbase.com/job-market/factorial-unicorn-hr",
+                  "date": "2022-10-11"
+                }
+              ],
+              "event_date": "2022-10-11",
+              "id": "941fac57-ee6f-43fa-be9e-8e07606e11d4"
+            }
+          },
+          {
+            "id": "beda5617-2af2-4cea-8acb-eb0447dc5096",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Factorial raises $16M to take on the HR world with a platform for SMBs | TechCrunch",
+                  "document": "https://techcrunch.com/2020/04/27/factorial-raises-16m-to-take-on-the-hr-world-with-a-platform-for-smbs",
+                  "date": "2020-04-27"
+                },
+                {
+                  "name": "Factorial Raises $16 Million - Spain’s Largest Funding Round of 2020!",
+                  "document": "https://factorialhr.com/blog/factorial-raises-16-million-series-a-funding-round-of-2020",
+                  "date": "2020-04-28"
+                }
+              ],
+              "event_date": "2020-04-27",
+              "id": "0e71a92d-a2ff-412c-9aa7-7ea6601c900c"
+            }
+          },
+          {
+            "id": "cac24563-3e46-41a3-81b9-718897c4cea2",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/banktrack/__g8NiHhzAMEFpB7TM2aPgekJPCPZ6uY9_HJNvj4ak1oQ",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/banktrack/__g8NiHhzAMEFpB7TM2aPgekJPCPZ6uY9_HJNvj4ak1oQ/funding-and-investors",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/banktrack",
+                  "date": "2026-07-29"
+                }
+              ],
+              "event_date": "2022-10-10",
+              "id": "a20ada50-290c-4d3c-855b-a5d66e6a009e"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "01c0d729-be62-48e2-aeaf-313dfe311c61",
+            "name": "Abacum",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Kfund: The Early Stage Founder's Guide",
+                  "document": "https://superscout.co/investor/kfund",
+                  "date": "2023-01-01"
+                },
+                {
+                  "name": "Why we’re doubling down on Abacum: Real-time finance, real strategic impact — K Fund",
+                  "document": "https://www.kfund.vc/post/why-were-doubling-down-on-abacum-real-time-finance-real-strategic-impact",
+                  "date": "2025-06-23"
+                }
+              ],
+              "id": "27382dc4-f16c-58eb-9dc9-b7a601b9057f",
+              "valid_since": "2023-03-01"
+            }
+          },
+          {
+            "id": "0804911d-7269-4d24-af73-0acbcd79bb8a",
+            "name": "BEONx",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/beonx/__5cls1-OLEZxOrHrUfYo8h4sl_V8NJpu5KEGsAgMeoyc/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "97342269-fa0e-47da-9aea-809cb111010c"
+            }
+          },
+          {
+            "id": "08ced7a4-94ad-4d45-83d7-99d2d86204be",
+            "name": "Barkibu",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Pet health insurance provider Barkibu raises $5 million",
+                  "document": "https://tech.eu/2023/05/04/kfund-pours-5-million-into-pet-health-insurance-provider-barkibus-bowl",
+                  "date": "2023-05-04"
+                },
+                {
+                  "name": "novobrief.com",
+                  "document": "https://novobrief.com/barkibu-raises-e4-5-million-round-led-by-kfund-as-pet-health-insurance-market-booms/10333",
+                  "date": "2026-07-28"
+                }
+              ],
+              "id": "511d1bb6-879b-5473-9ded-be466dbbc80a",
+              "valid_since": "2023-05-04"
+            }
+          },
+          {
+            "id": "12459b37-17fb-4ccd-8307-d8e22da64e66",
+            "name": "Hubtype",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Hubtype raises $1.1M to help developers build richer chat support | TechCrunch",
+                  "document": "https://techcrunch.com/2019/05/07/hubtype-raises-1-1m-to-help-developers-build-richer-chat-support",
+                  "date": "2019-05-07"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/hubtype/financial_details",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/hubtype/__o4cW4G2V1NCa7g5URxwgIAvokIWE5AuikcUhzE5CCa4",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "e70a317a-9568-4ad6-a717-ee532dbdb34b"
+            }
+          },
+          {
+            "id": "17fdba51-ef48-424d-8de7-05deb1cf1b94",
+            "name": "Exoticca",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "capital-riesgo.es",
+                  "document": "https://capital-riesgo.es/es/articles?category=inversores-de-venture-capital-en-tecnolog%C3%ADa&p=23",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "34e9619f-2780-5975-81e5-282ab665c008"
+            }
+          },
+          {
+            "id": "1a0edbf9-deb5-45be-ba24-0e7a0377cc92",
+            "name": "THEKER Robotics",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/theker/__74PkMeRB6zMmocP-KsD0SCIJ8XorEx9iiER6Us27LD8",
+                  "date": "2026-08-05"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/theker/__Vu61jIsp8_4oa7RZ4IGo2yFNaviX3kuONiDy3z8EUrA",
+                  "date": "2026-08-05"
+                },
+                {
+                  "name": "Theker just raised $85M to build the factory robot that doesn't specialize in anything | TechCrunch",
+                  "document": "https://techcrunch.com/2026/06/11/theker-just-raised-85m-to-build-the-factory-robot-that-doesnt-specialize-in-anything",
+                  "date": "2026-06-11"
+                },
+                {
+                  "name": "Beyond Lovable and Mistral: 21 European startups to watch | TechCrunch",
+                  "document": "https://techcrunch.com/2026/05/02/beyond-lovable-and-mistral-21-european-startups-to-watch",
+                  "date": "2026-05-02"
+                }
+              ],
+              "id": "003c5d55-bbc9-4e80-bca4-115ad54fa225"
+            }
+          },
+          {
+            "id": "2102bd9c-8835-4cbe-8d34-1999d874ebc8",
+            "name": "ABACUM PLANNING S.L. (SOCIEDAD UNIPERSONAL)",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "YC-backed Abacum nets $7M to empower finance teams with real-time data and collaboration tools | TechCrunch",
+                  "document": "https://techcrunch.com/2021/04/08/yc-backed-abacum-nets-7m-to-empower-finance-teams-with-real-time-data-and-collaboration-tools",
+                  "date": "2021-04-08"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/abacum/__xDxRifljOKgQzZe2E_piFD7so-KdlCGxVaHO-det66A/funding-and-investors",
+                  "date": "2026-07-28"
+                }
+              ],
+              "id": "9e53882f-3f1f-471c-9141-4737ee8f33ea"
+            }
+          },
+          {
+            "id": "269e515a-4927-484f-922f-e4fd932d7669",
+            "name": "BankTrack",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/banktrack/__g8NiHhzAMEFpB7TM2aPgekJPCPZ6uY9_HJNvj4ak1oQ",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/banktrack/__g8NiHhzAMEFpB7TM2aPgekJPCPZ6uY9_HJNvj4ak1oQ/funding-and-investors",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/banktrack",
+                  "date": "2026-07-29"
+                }
+              ],
+              "id": "6a9bbd4f-f1d1-4ccc-820f-cd627c8f6926"
+            }
+          },
+          {
+            "id": "2a628d23-dfc6-48f9-a5d0-cbfee08001a0",
+            "name": "MITO AI",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "CB Insights — Predictive Intelligence on Private Companies",
+                  "document": "https://www.cbinsights.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "https://lsvp.com/companies/",
+                  "document": "https://lsvp.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Kibo Ventures | Portfolio, Investments & AUM | Caplight",
+                  "document": "https://www.caplight.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "MITO AI raised $4.5M — Voice, Music & Video funding & jobs | MapCo",
+                  "document": "https://www.mapco.ai/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "finance.yahoo.com",
+                  "document": "https://finance.yahoo.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "trymito.io",
+                  "document": "https://www.trymito.io/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Reinventing video creation with collaborative AI: Why we invested in MITO — K Fund",
+                  "document": "https://www.kfund.vc/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Pulse 2.0",
+                  "document": "https://pulse2.com/mito-ai-4-5-million-pre-seed-funding-closed-for-collaborative-ai-video-creation-platform",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "am970theanswer.com",
+                  "document": "https://am970theanswer.com/technology/mito-ai-raises-45m-preseed-led-by-lightspeed-to-empower-creatives-with-collabora/372056561501477e898b75a10ea0fd08",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "SaaS B2B Fundraising News | The SaaS News",
+                  "document": "https://www.thesaasnews.com/news/mito-ai-secures-4-5m-pre-seed-funding",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "streetinsider.com",
+                  "document": "https://www.streetinsider.com/Business+Wire/MITO+AI+Raises+%244.5M+Preseed+Led+by+Lightspeed+to+Empower+Creatives+with+Collaborative+AI+Video+Tools/25914669.html",
+                  "date": "2026-08-04"
+                }
+              ],
+              "id": "1b31cdaa-12d1-542d-bbde-da7c9149ceac"
+            }
+          },
+          {
+            "id": "41357013-833e-4464-8a36-fecc68d464d3",
+            "name": "Lucera",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/lucera/financial_details",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/danka-capital",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/117203-50",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "K Fund is a new €50M VC fund investing in early-stage Spanish startups | TechCrunch",
+                  "document": "https://techcrunch.com/2016/10/16/k-fund",
+                  "date": "2016-10-16"
+                }
+              ],
+              "id": "3be6a7c2-5450-4fec-adb7-46c9be8895b6"
+            }
+          },
+          {
+            "id": "54e4650a-d7b6-461c-bd2d-2a473b1c98ed",
+            "name": "Frontity",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "capital-riesgo.es",
+                  "document": "https://capital-riesgo.es/es/articles?category=inversores-de-venture-capital-en-tecnolog%C3%ADa&p=23",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "897562c3-a0da-56a9-925e-0f88f508a59b"
+            }
+          },
+          {
+            "id": "57dcbb4a-e060-42b3-9f16-d1b96372ef9b",
+            "name": "Tucuvi",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/explore/native-ai-startups-in-spain/__G_kBsk_RmSdiSsycT-aP9rGPTo9Rz9WyGmcjD_WLC3s/companies",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "f288ff0a-4c80-552d-9c14-4cd549fab26e"
+            }
+          },
+          {
+            "id": "779c7f10-3f4b-40bf-9634-906cfbc0ac0e",
+            "name": "restb.ai",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/explore/ai-native-computer-vision-startups-in-barcelona-spain/__l8nPWcVS_AVZY3vKqgB6bCwFPMh-nJ1Mm0_t13BGVR0/companies",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "9d3bd173-f5e2-54a1-b5cb-45e02332c4b5"
+            }
+          },
+          {
+            "id": "7de642cc-fd51-4560-8fbf-168f1749f006",
+            "name": "Dersu",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "capital-riesgo.es",
+                  "document": "https://capital-riesgo.es/es/articles/tags/extensi%C3%B3n+fund",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "e604197d-601e-5e5a-835d-976a641160c9"
+            }
+          },
+          {
+            "id": "81410730-336a-455d-aa77-1098b4fc9a23",
+            "name": "Voicemod",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/voicemod-raised-145-million-series-a-led-by-k-fund-joined-by-minifund-and-previous-investor-bitkraft-ventures",
+                  "date": "2026-07-28"
+                }
+              ],
+              "id": "68d55624-3954-50cd-b786-b85f5ddd45a3"
+            }
+          },
+          {
+            "id": "92a3b004-2bdb-47f6-8a16-c508cd078da6",
+            "name": "Artificial Intelligence companies in Spain",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "medium.com",
+                  "document": "https://medium.com/an-honest-startup-story/everything-you-wanted-to-know-about-factorials-2-8m-seed-round-but-were-afraid-to-ask-74e6e9eeba5d",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/factorial",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "12b4cf32-72d0-456d-81d9-0fe94799e74f"
+            }
+          },
+          {
+            "id": "97984bfa-98a0-4094-8b9a-8fc060188ace",
+            "name": "Goin",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "capital-riesgo.es",
+                  "document": "https://capital-riesgo.es/es/articles?category=inversores-de-venture-capital-en-tecnolog%C3%ADa&p=23",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "c122dc00-5975-58d1-a778-b754c285028a"
+            }
+          },
+          {
+            "id": "a26ccd22-8986-4fcd-b029-b4b53821f14d",
+            "name": "Zynap",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/zynap/__hstgIzItHbxNEMZAQa8AErrVIg0MJfVqAsucylqnUQo/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/zynap/__hstgIzItHbxNEMZAQa8AErrVIg0MJfVqAsucylqnUQo",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/zynap-6e3f/news_and_analysis",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/funding_round/zynap-6e3f-seed--cb1eea5b",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/zynap-6e3f",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "8b53fe73-e933-4d17-a1d8-a2b4ed61f7e6"
+            }
+          },
+          {
+            "id": "a3715bbc-d851-4a7f-a2eb-0f1b9f39f799",
+            "name": "2501",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/2501.ai/__aOKf4nD7FY2oe7u7BIgFNNCnNQDginrgRx-7-Yhn7c4/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/2501.ai/__aOKf4nD7FY2oe7u7BIgFNNCnNQDginrgRx-7-Yhn7c4/founders-and-board-of-directors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/2501ai/__aOKf4nD7FY2oe7u7BIgFNNCnNQDginrgRx-7-Yhn7c4",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "1db81342-c5b0-4725-953f-8dc8aa1d8113"
+            }
+          },
+          {
+            "id": "d108a1a5-d9cc-42f8-87f4-3872b111c5a5",
+            "name": "Factorial",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "From seed to Series C: our journey with Factorial — K Fund",
+                  "document": "https://www.kfund.vc/post/from-seed-to-series-c-our-journey-with-factorial",
+                  "date": "2024-02-27"
+                }
+              ],
+              "id": "b700740f-31d8-5c3b-9e5a-b005df85966b",
+              "valid_since": "2018-06-01"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Kfund: The Early Stage Founder's Guide",
+                  "document": "https://superscout.co/investor/kfund",
+                  "date": "2023-01-01"
+                },
+                {
+                  "name": "fundable",
+                  "document": "https://www.tryfundable.ai/investor/k-fund",
+                  "date": "2016-07-01"
+                }
+              ],
+              "id": "8a94d4b3-db94-504b-a10a-cf67685c5d01"
+            }
+          },
+          {
+            "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+            "name": "SOFTWARE_AND_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Kfund: The Early Stage Founder's Guide",
+                  "document": "https://superscout.co/investor/kfund",
+                  "date": "2023-01-01"
+                },
+                {
+                  "name": "fundable",
+                  "document": "https://www.tryfundable.ai/investor/k-fund",
+                  "date": "2016-07-01"
+                }
+              ],
+              "id": "372eef46-f1d4-5d1a-b56f-20fd56ca907b"
+            }
+          },
+          {
+            "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+            "name": "VENTURE_CAPITAL",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "The K Funds | LinkedIn",
+                  "document": "https://www.linkedin.com/company/www.thekfund.com",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "Kfund: The Early Stage Founder's Guide",
+                  "document": "https://superscout.co/investor/kfund",
+                  "date": "2023-01-01"
+                }
+              ],
+              "id": "f7876496-ca3a-5265-8109-1f74b7ed7ce4"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "WORKS_AT": [
+          {
+            "id": "bae69919-f41d-4f34-89aa-35418bc7c615",
+            "name": "Pablo Ventura Aranguren",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Partner",
+              "sources": [
+                {
+                  "name": "Pablo Aranguren - LinkedIn, Twitter, Facebook",
+                  "document": "https://me.sh/profile/pablo-ventura-aranguren",
+                  "date": "2025-12-05"
+                },
+                {
+                  "name": "Pablo Ventura Aranguren's Investing Profile - KFund Partner | Signal",
+                  "document": "https://signal.nfx.com/investors/pablo-ventura-aranguren",
+                  "date": "2025-11-11"
+                }
+              ],
+              "id": "a644e552-8837-581d-bad1-dc281ba6d2df"
+            }
+          },
+          {
+            "id": "f90e4eaa-58dd-4f17-853d-c395c8f224ca",
+            "name": "Íñigo María de Arrola Ruiz de la Escalera",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "CB Insights — Predictive Intelligence on Private Companies",
+                  "document": "https://www.cbinsights.com/company/salupro",
+                  "date": "2026-08-26"
+                },
+                {
+                  "name": "venturecapitalarchive.com",
+                  "document": "https://venturecapitalarchive.com/venture-funds/kanoar-ventures-kfund-kanoarventures-com",
+                  "date": "2026-08-26"
+                }
+              ],
+              "id": "1ad5ff08-8cb2-54a6-b830-01010395abb6"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "01c0d729-be62-48e2-aeaf-313dfe311c61",
+            "name": "Abacum",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/abacum-announced-raising-7-million-in-a-round-backed-by-profounders-k-fund-and-creandum",
+                  "date": "2026-07-25"
+                }
+              ],
+              "id": "83c383e7-4af4-578d-abce-bf0621c18a06"
+            }
+          },
+          {
+            "id": "01c894d5-9eee-4929-a536-c1626fcddb96",
+            "name": "European Investment Bank",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Tech.eu - European Startup, Funding and Technology News",
+                  "document": "https://tech.eu/2016/10/17/k-fund-e50-million",
+                  "date": "2026-08-15"
+                }
+              ],
+              "id": "fd300e8c-52e6-530d-89ae-9e7dd4c86b12"
+            }
+          },
+          {
+            "id": "08a67896-18ed-4b75-9f99-30e48c1cd24c",
+            "name": "Jorge Campo",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Team — K Fund",
+                  "document": "https://www.kfund.vc/team",
+                  "date": "2022-01-01"
+                },
+                {
+                  "name": "Jorge Campo | Web Summit",
+                  "document": "https://websummit.com/attendees/lis24/16779f34-f47f-4873-9247-39591de6efd7/jorge-campo",
+                  "date": "2025-10-10"
+                },
+                {
+                  "name": "Kfund: The Early Stage Founder's Guide",
+                  "document": "https://superscout.co/investor/kfund",
+                  "date": "2023-01-01"
+                }
+              ],
+              "id": "918f86ba-d250-5519-8494-c4aa82a55095"
+            }
+          },
+          {
+            "id": "12459b37-17fb-4ccd-8307-d8e22da64e66",
+            "name": "Hubtype",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/explore/artificial-intelligence-old-startups-in-barcelona-spain/__3npYGO9ppb9k3dQc-z8crJg_24di_4ePQnfI1Sz29rA/companies",
+                  "date": "2026-07-23"
+                }
+              ],
+              "id": "501985c8-18b0-55a8-aa0b-ead10a434e3f"
+            }
+          },
+          {
+            "id": "3a9c0371-21e0-46d0-a15d-df434973dd7d",
+            "name": "Genesy",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/2025/01/genesy-secures-e5-million-in-landmark-funding-to-further-b2b-sales-with-ai-powered-agents",
+                  "date": "2026-07-27"
+                }
+              ],
+              "id": "3dd78d95-b395-5844-b913-31ddce75c9cb"
+            }
+          },
+          {
+            "id": "57dcbb4a-e060-42b3-9f16-d1b96372ef9b",
+            "name": "Tucuvi",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/explore/native-ai-startups-in-spain/__G_kBsk_RmSdiSsycT-aP9rGPTo9Rz9WyGmcjD_WLC3s/companies",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "126b00c5-cf91-57bd-bb0a-a5dcd2c1a474"
+            }
+          },
+          {
+            "id": "81410730-336a-455d-aa77-1098b4fc9a23",
+            "name": "Voicemod",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/explore/generative-ai-startups-in-spain/__JYvohyOZikljlt5x5bz6FK2GznnZzaL3NYLSOujLlvE/companies",
+                  "date": "2026-07-23"
+                }
+              ],
+              "id": "1a33e8da-02cd-5279-a556-11c7924e62b7"
+            }
+          },
+          {
+            "id": "8ecb289d-6c04-4fb9-ab08-a007c5ef9fa6",
+            "name": "Tucuvi",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "bouncewatch.com",
+                  "document": "https://bouncewatch.com/explore/startup/tucuvi",
+                  "date": "2026-08-26"
+                }
+              ],
+              "id": "1bb1cecf-ff2b-50a8-ad41-6b86efc66c58"
+            }
+          }
+        ],
+        "FOUNDED": [
+          {
+            "id": "f90e4eaa-58dd-4f17-853d-c395c8f224ca",
+            "name": "Íñigo María de Arrola Ruiz de la Escalera",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Madrid-based Kfund raises a €70M fund to support Southern European founders",
+                  "document": "https://vestbee.com/insights/articles/kfund-raises-a-70-m-fund",
+                  "date": "2024-06-17"
+                }
+              ],
+              "id": "2027034b-deaa-5ae4-8612-7608e862b71a"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

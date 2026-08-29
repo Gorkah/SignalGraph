@@ -1,0 +1,9 @@
+# Cache de demo. Queries deliberadamente solapadas: comparten inversores y
+# geografías, así que el grafo resultante es denso y los "reencuentros" ocurren.
+# BEAT 1 / cierre: esta query solapa con Bnext (UUID del tablón) y TaxDown.
+startups.location=Spain.sector=fintech
+startups.location=Spain.funding>10M.funding<50M
+startups.location=Barcelona.funding>5M
+startups.location=Madrid.sector=fintech
+investors.location=Spain.sector=fintech
+startups.location=Spain.sector=AI

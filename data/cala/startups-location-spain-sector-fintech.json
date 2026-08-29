@@ -1,0 +1,342 @@
+{
+  "input": "startups.location=Spain.sector=fintech",
+  "runAt": "2026-08-29T09:53:12.200Z",
+  "ok": true,
+  "status": 200,
+  "ms": 67081,
+  "attempt": 0,
+  "data": {
+    "results": [
+      {
+        "name": "Payflow",
+        "city": "Madrid",
+        "focus": "Earned wage access / financial superapp",
+        "notable_details": "Founded 2020; ~82 employees; ~$49.7M total raised (Series B, Oct 2025); YC S21 alumnus; products include on-demand pay, savings, financial education, and flexible benefits"
+      },
+      {
+        "name": "Bit2Me",
+        "city": "Spain",
+        "focus": "Cryptocurrency exchange & blockchain services",
+        "notable_details": "Leading crypto platform in Spain with 400K+ users and 20+ crypto products; 7+ years in the sector"
+      },
+      {
+        "name": "Verse",
+        "city": "Barcelona",
+        "focus": "Digital wallet / P2P payments",
+        "notable_details": "Top consumer fintech in Barcelona's ecosystem"
+      },
+      {
+        "name": "Fintonic",
+        "city": "Madrid",
+        "focus": "Personal finance management & lending",
+        "notable_details": "App-based PFM tool with credit scoring (FinScore); Series D funded; investors include ING Ventures and Square One Capital"
+      },
+      {
+        "name": "MyInvestor",
+        "city": "Madrid",
+        "focus": "Digital wealth management / neobank",
+        "notable_details": "Open-architecture investment platform (funds, ETFs, stocks, pension plans); Series C (Dec 2023); ranked #1 startup in Madrid by StartupBlink"
+      },
+      {
+        "name": "TaxDown",
+        "city": "Madrid",
+        "focus": "AI-driven digital tax filing",
+        "notable_details": "Raised multiple rounds including €4M from BBVA Spark (Mar 2026); expanding across Spain and Latin America"
+      },
+      {
+        "name": "SeQura",
+        "city": "Barcelona",
+        "focus": "BNPL / flexible payments",
+        "notable_details": "Founded 2013; raised ~$435.6M total; investors include Citi and M&G; major player in Spain's BNPL market (surpassed $1B)"
+      },
+      {
+        "name": "Cobee",
+        "city": "Madrid",
+        "focus": "Employee benefits platform",
+        "notable_details": "Cloud-based flexible compensation; Series B funded (Nov 2022); winner of BBVA Open Talent 2019"
+      },
+      {
+        "name": "Bnext",
+        "city": "Madrid",
+        "focus": "Neobank / mobile banking",
+        "notable_details": "First Spanish neobank; 300K+ users; €40M+ raised; marketplace of financial, insurance, and travel products; regulated by Bank of Spain"
+      },
+      {
+        "name": "ID Finance",
+        "city": "Barcelona",
+        "focus": "Digital consumer lending & credit scoring",
+        "notable_details": "Founded 2012; operates across Europe and Latin America; data-science-driven underwriting"
+      },
+      {
+        "name": "Cleverea",
+        "city": "Spain",
+        "focus": "Insurtech / digital insurance",
+        "notable_details": "Innovative insurance solutions within the fintech space"
+      },
+      {
+        "name": "Indexa Capital",
+        "city": "Madrid",
+        "focus": "Robo-advisor / automated investment",
+        "notable_details": "Specialist in passive index-based investment management"
+      },
+      {
+        "name": "Capchase",
+        "city": "Madrid",
+        "focus": "Revenue-based financing",
+        "notable_details": "Most-funded Madrid fintech startup; ~$130M in funding"
+      },
+      {
+        "name": "Orain",
+        "city": "Barcelona",
+        "focus": "digital financial services",
+        "notable_details": null
+      },
+      {
+        "name": "NoviCap",
+        "city": "Barcelona",
+        "focus": "invoice financing",
+        "notable_details": null
+      },
+      {
+        "name": "Goin",
+        "city": "Barcelona",
+        "focus": "automated micro-savings",
+        "notable_details": null
+      },
+      {
+        "name": "Crescenta",
+        "city": null,
+        "focus": "digital private fund investment platform",
+        "notable_details": null
+      },
+      {
+        "name": "DOST",
+        "city": null,
+        "focus": null,
+        "notable_details": "Series A (€8.5M, Nov 2025) backed by Octopus Ventures"
+      },
+      {
+        "name": "Devengo",
+        "city": null,
+        "focus": null,
+        "notable_details": "Seed round (Nov 2025) backed by Bankinter"
+      },
+      {
+        "name": "Vumi",
+        "city": null,
+        "focus": "SaaS wealth management platform",
+        "notable_details": "seed round (€100K, Aug 2026)"
+      }
+    ],
+    "entities": [
+      {
+        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+        "name": "Spain",
+        "entity_type": "Country",
+        "mentions": [
+          "Spain"
+        ]
+      },
+      {
+        "id": "e122a8b3-d711-53bf-b81a-d843895c5081",
+        "name": "Madrid",
+        "entity_type": "Municipality",
+        "mentions": [
+          "Madrid"
+        ]
+      },
+      {
+        "id": "7d7e89cd-567d-554c-9a67-7a4a0c9915ab",
+        "name": "Barcelona",
+        "entity_type": "Municipality",
+        "mentions": [
+          "Barcelona"
+        ]
+      },
+      {
+        "id": "1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca",
+        "name": "Payflow",
+        "entity_type": "Organization",
+        "mentions": [
+          "Payflow"
+        ]
+      },
+      {
+        "id": "4f8bde7c-e795-4da5-8410-a6acf259dfb8",
+        "name": "Bit2Me",
+        "entity_type": "Organization",
+        "mentions": [
+          "Bit2Me"
+        ]
+      },
+      {
+        "id": "2935910d-2624-4291-857a-712fc8c05617",
+        "name": "Verse",
+        "entity_type": "Company",
+        "mentions": [
+          "Verse"
+        ]
+      },
+      {
+        "id": "f214cceb-1823-442b-b891-4f5e4047cab5",
+        "name": "Fintonic",
+        "entity_type": "Organization",
+        "mentions": [
+          "Fintonic"
+        ]
+      },
+      {
+        "id": "c0f9fdec-2e96-4bee-aa3a-cc17b4a244fa",
+        "name": "MYINVESTOR BANCO, S.A.",
+        "entity_type": "Company",
+        "mentions": [
+          "MyInvestor"
+        ]
+      },
+      {
+        "id": "cac5c8eb-f483-428a-9ee1-0897ae037133",
+        "name": "TaxDown",
+        "entity_type": "Company",
+        "mentions": [
+          "TaxDown"
+        ]
+      },
+      {
+        "id": "703e07c2-4e86-4445-bb91-1d178dc7cc73",
+        "name": "SEQURA WORLDWIDE S.A.",
+        "entity_type": "Company",
+        "mentions": [
+          "SeQura"
+        ]
+      },
+      {
+        "id": "b8ac6dd9-8705-4a95-ad61-7998acfd92bb",
+        "name": "Cobee",
+        "entity_type": "Organization",
+        "mentions": [
+          "Cobee"
+        ]
+      },
+      {
+        "id": "eb86df55-d9fb-41bc-8104-ad6a892dc7ec",
+        "name": "Bnext",
+        "entity_type": "Organization",
+        "mentions": [
+          "Bnext"
+        ]
+      },
+      {
+        "id": "a3b32963-8bf4-49e2-84ac-f33d89daa146",
+        "name": "ID Finance",
+        "entity_type": "Organization",
+        "mentions": [
+          "ID Finance"
+        ]
+      },
+      {
+        "id": "bc8ea47b-cf3e-4858-bc36-12ab026d3c30",
+        "name": "Cleverea",
+        "entity_type": "Company",
+        "mentions": [
+          "Cleverea"
+        ]
+      },
+      {
+        "id": "3a45763c-41db-4951-95fa-79d0a9971b06",
+        "name": "Indexa Capital Group",
+        "entity_type": "Organization",
+        "mentions": [
+          "Indexa Capital"
+        ]
+      },
+      {
+        "id": "01c2ec42-cb2e-443a-a947-7d9e29420454",
+        "name": "Capchase",
+        "entity_type": "Organization",
+        "mentions": [
+          "Capchase"
+        ]
+      },
+      {
+        "id": "8851b4f9-a2ac-47d2-b4d3-d992b53bffd0",
+        "name": "Orain",
+        "entity_type": "Organization",
+        "mentions": [
+          "Orain"
+        ]
+      },
+      {
+        "id": "98c8618e-8ca6-48de-96c1-1bb86f241c74",
+        "name": "NoviCap",
+        "entity_type": "Organization",
+        "mentions": [
+          "NoviCap"
+        ]
+      },
+      {
+        "id": "97984bfa-98a0-4094-8b9a-8fc060188ace",
+        "name": "Goin",
+        "entity_type": "Organization",
+        "mentions": [
+          "Goin"
+        ]
+      },
+      {
+        "id": "ee8dd31d-eff3-4772-a2b9-822ada157ba6",
+        "name": "CRESCENTA INVESTMENTS, SGIIC SA",
+        "entity_type": "Company",
+        "mentions": [
+          "Crescenta"
+        ]
+      },
+      {
+        "id": "1b256b95-4fc6-4510-9244-32bfacb7bff3",
+        "name": "DOST",
+        "entity_type": "Organization",
+        "mentions": [
+          "DOST"
+        ]
+      },
+      {
+        "id": "585d7fab-e4a9-4f54-a96f-295ded5c6409",
+        "name": "Devengo",
+        "entity_type": "Company",
+        "mentions": [
+          "Devengo"
+        ]
+      },
+      {
+        "id": "8e25c612-4c4c-4a89-86e2-13b1f4bd6b06",
+        "name": "Vumi",
+        "entity_type": "Organization",
+        "mentions": [
+          "Vumi"
+        ]
+      },
+      {
+        "id": "7447faaf-8cf8-4c1e-be4b-746dece1dbe9",
+        "name": "BBVA Spark",
+        "entity_type": "Company",
+        "mentions": [
+          "BBVA Spark"
+        ]
+      },
+      {
+        "id": "cc4b1e7e-a167-472a-b9f4-f833a2c86db0",
+        "name": "Octopus Ventures",
+        "entity_type": "Organization",
+        "mentions": [
+          "Octopus Ventures"
+        ]
+      },
+      {
+        "id": "8924aa9a-c152-4d3a-9d27-8f913abbb811",
+        "name": "BANKINTER SOCIEDAD ANONIMA",
+        "entity_type": "Company",
+        "mentions": [
+          "Bankinter"
+        ]
+      }
+    ]
+  }
+}

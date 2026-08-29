@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# Local Pi runtime state
+.atl/
+
+# Runtime Cala proxy cache (demo data under data/cala remains versionable)
+/data/cache/

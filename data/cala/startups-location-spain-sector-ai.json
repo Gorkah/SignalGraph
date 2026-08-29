@@ -1,0 +1,194 @@
+{
+  "input": "startups.location=Spain.sector=AI",
+  "runAt": "2026-08-29T10:10:55.922Z",
+  "ok": true,
+  "status": 200,
+  "ms": 73989,
+  "attempt": 0,
+  "data": {
+    "results": [
+      {
+        "name": "Voicemod",
+        "focus": "Real-time voice modification & audio tools",
+        "notable_details": "Total funding: $22.6M; Series B (Feb 2023); Investors include BITKRAFT Ventures, K Fund",
+        "location": null
+      },
+      {
+        "name": "NeuralTrust",
+        "focus": "AI enterprise applications",
+        "notable_details": "Seed round: ~$9.6M (Jun 2026); Investors include Alstin Capital",
+        "location": null
+      },
+      {
+        "name": "Mediktor",
+        "focus": "AI-based medical triage & pre-diagnosis chatbot",
+        "notable_details": "Series B (Oct 2021)",
+        "location": null
+      },
+      {
+        "name": "Nymiz",
+        "focus": "AI-powered data anonymization & pseudonymization",
+        "notable_details": "Series A (Sep 2025)",
+        "location": null
+      },
+      {
+        "name": "FacePhi",
+        "focus": "Facial recognition & biometric verification (KYC)",
+        "notable_details": "Post-IPO; publicly traded",
+        "location": null
+      },
+      {
+        "name": "Tucuvi",
+        "focus": "AI clinical agent for patient management",
+        "notable_details": "Series A (Jan 2026); Investors include Cathay Innovation, K Fund",
+        "location": null
+      },
+      {
+        "name": "Nuclia",
+        "focus": "RAG-as-a-Service, AI search",
+        "notable_details": "Acquired by Progress (Jul 2025)",
+        "location": null
+      },
+      {
+        "name": "Smartvel",
+        "focus": "AI-based travel content management",
+        "notable_details": "Total funding: $3.09M",
+        "location": null
+      },
+      {
+        "name": "IDOVEN",
+        "focus": "AI-powered cardiology diagnostics & monitoring",
+        "notable_details": "Total funding: $14.9M",
+        "location": null
+      },
+      {
+        "name": "Seedtag",
+        "focus": "AI-driven contextual advertising",
+        "notable_details": "Major player in Madrid's AI scene",
+        "location": null
+      }
+    ],
+    "entities": [
+      {
+        "id": "e122a8b3-d711-53bf-b81a-d843895c5081",
+        "name": "Madrid",
+        "entity_type": "Municipality",
+        "mentions": [
+          "Madrid"
+        ]
+      },
+      {
+        "id": "81410730-336a-455d-aa77-1098b4fc9a23",
+        "name": "Voicemod",
+        "entity_type": "Company",
+        "mentions": [
+          "Voicemod"
+        ]
+      },
+      {
+        "id": "cf3556bd-4eb3-4eee-8e08-c8e886564851",
+        "name": "BITKRAFT Ventures",
+        "entity_type": "Organization",
+        "mentions": [
+          "BITKRAFT Ventures"
+        ]
+      },
+      {
+        "id": "4712a5e8-fa2e-4f27-9375-73b8fdbd3faf",
+        "name": "K-Fund",
+        "entity_type": "Organization",
+        "mentions": [
+          "K Fund"
+        ]
+      },
+      {
+        "id": "f402cd6a-58a1-4b50-9d04-7d689c6817a1",
+        "name": "NeuralTrust",
+        "entity_type": "Organization",
+        "mentions": [
+          "NeuralTrust"
+        ]
+      },
+      {
+        "id": "f36abff9-79ae-4fef-990f-9fedc1d51fb5",
+        "name": "ALSTIN Capital",
+        "entity_type": "Organization",
+        "mentions": [
+          "Alstin Capital"
+        ]
+      },
+      {
+        "id": "d65d9abb-105c-4532-9609-681d69764c8a",
+        "name": "Mediktor",
+        "entity_type": "Organization",
+        "mentions": [
+          "Mediktor"
+        ]
+      },
+      {
+        "id": "6d369240-d20a-4be7-913a-a02620e2b0a1",
+        "name": "Nymiz",
+        "entity_type": "Organization",
+        "mentions": [
+          "Nymiz"
+        ]
+      },
+      {
+        "id": "ecb117ca-3bfb-488c-aa8b-b053328d5c70",
+        "name": "FacePhi",
+        "entity_type": "Organization",
+        "mentions": [
+          "FacePhi"
+        ]
+      },
+      {
+        "id": "57dcbb4a-e060-42b3-9f16-d1b96372ef9b",
+        "name": "Tucuvi",
+        "entity_type": "Organization",
+        "mentions": [
+          "Tucuvi"
+        ]
+      },
+      {
+        "id": "a40d05fa-e437-4558-b0b3-61a8f5627ae5",
+        "name": "Nuclia",
+        "entity_type": "Organization",
+        "mentions": [
+          "Nuclia"
+        ]
+      },
+      {
+        "id": "0c55d211-23d0-4638-a636-157db7b1fd8e",
+        "name": "Progress Software",
+        "entity_type": "Company",
+        "mentions": [
+          "Progress"
+        ]
+      },
+      {
+        "id": "229fb23b-c0c0-4344-a671-896dd3bc5c71",
+        "name": "Smartvel",
+        "entity_type": "Organization",
+        "mentions": [
+          "Smartvel"
+        ]
+      },
+      {
+        "id": "3c0347a2-3c01-4e29-827a-435269ad06a4",
+        "name": "IDOVEN",
+        "entity_type": "Organization",
+        "mentions": [
+          "IDOVEN"
+        ]
+      },
+      {
+        "id": "5762b7df-8aad-4d8f-9567-ee4cdcb37ddb",
+        "name": "SEEDTAG ADVERTISING",
+        "entity_type": "Company",
+        "mentions": [
+          "Seedtag"
+        ]
+      }
+    ]
+  }
+}

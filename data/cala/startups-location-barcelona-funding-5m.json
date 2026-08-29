@@ -1,0 +1,308 @@
+{
+  "input": "startups.location=Barcelona.funding>5M",
+  "runAt": "2026-08-29T10:10:55.922Z",
+  "ok": true,
+  "status": 200,
+  "ms": 57394,
+  "attempt": 0,
+  "data": {
+    "results": [
+      {
+        "name": "Factorial",
+        "sector": "HR Tech / SaaS",
+        "notable_funding": "Series A (€15M), later €120M+ round at €1B+ valuation; most recently raised €129M reaching a €2.1B valuation",
+        "total_key_round": "Unicorn status"
+      },
+      {
+        "name": "Glovo",
+        "sector": "Delivery / On-demand",
+        "notable_funding": "€5M (2016), €25M (2017, led by Rakuten), €115M Series C (2018)",
+        "total_key_round": "One of Spain's most funded startups"
+      },
+      {
+        "name": "Impress",
+        "sector": "HealthTech / Orthodontics",
+        "notable_funding": "€123M (2022), €110M+ (2024)",
+        "total_key_round": "€47M+ raised by 2021; continued large rounds"
+      },
+      {
+        "name": "Exoticca",
+        "sector": "TravelTech",
+        "notable_funding": "€20M (2022); extended Series B to €16M total earlier",
+        "total_key_round": "Significant growth-stage funding"
+      },
+      {
+        "name": "Biorce",
+        "sector": "HealthTech / AI Clinical Trials",
+        "notable_funding": "€43.8M Series A (Feb 2026); €8.5M seed prior",
+        "total_key_round": "Over €50.6M total raised"
+      },
+      {
+        "name": "Koa Health",
+        "sector": "Digital Health",
+        "notable_funding": "Extended Series A to €30M",
+        "total_key_round": "Mental health platform"
+      },
+      {
+        "name": "Holded",
+        "sector": "SaaS / Business OS",
+        "notable_funding": "€6M Series A (2019, led by Lakestar)",
+        "total_key_round": "Business management platform"
+      },
+      {
+        "name": "Onna",
+        "sector": "Legal Tech / AI",
+        "notable_funding": "$5M (2018), $27M Series B (led by Atomico)",
+        "total_key_round": "Knowledge integration platform"
+      },
+      {
+        "name": "Lodgify",
+        "sector": "PropTech / Vacation Rentals",
+        "notable_funding": "$5M Series A (2018)",
+        "total_key_round": "Direct channel tech for vacation rentals"
+      },
+      {
+        "name": "Gate2Brain",
+        "sector": "Biotech",
+        "notable_funding": "€7M (recent round)",
+        "total_key_round": "Brain tumour drug delivery"
+      },
+      {
+        "name": "Rever",
+        "sector": "E-commerce / Returns",
+        "notable_funding": "€7.5M (2023, backed by Sequoia & Y Combinator)",
+        "total_key_round": "Returns management for online stores"
+      },
+      {
+        "name": "Agile Content",
+        "sector": "Media / OTT Video",
+        "notable_funding": "€7M financing",
+        "total_key_round": "Video service expansion"
+      },
+      {
+        "name": "Cubiq Foods",
+        "sector": "FoodTech",
+        "notable_funding": "€5M",
+        "total_key_round": "Sustainable replacement fats"
+      },
+      {
+        "name": "Supersonik",
+        "sector": "AI / Sales Tech",
+        "notable_funding": "$5M seed (2025, led by Andreessen Horowitz)",
+        "total_key_round": "AI-powered live software demos"
+      },
+      {
+        "name": "Sateliot",
+        "sector": "SpaceTech / IoT",
+        "notable_funding": "Seeking €100M",
+        "total_key_round": null
+      },
+      {
+        "name": "011h",
+        "sector": "ConstructionTech",
+        "notable_funding": "€10M",
+        "total_key_round": "Sustainable building technology"
+      },
+      {
+        "name": "Cafler",
+        "sector": "Mobility / On-demand",
+        "notable_funding": "Between €5M–€10M raised",
+        "total_key_round": "Vehicle services marketplace"
+      }
+    ],
+    "entities": [
+      {
+        "id": "d108a1a5-d9cc-42f8-87f4-3872b111c5a5",
+        "name": "Factorial",
+        "entity_type": "Company",
+        "mentions": [
+          "Factorial"
+        ]
+      },
+      {
+        "id": "bfcd3b17-8e15-4a0b-aa79-2cbded0456df",
+        "name": "Glovo",
+        "entity_type": "Company",
+        "mentions": [
+          "Glovo"
+        ]
+      },
+      {
+        "id": "6e64f944-0dc0-4a84-a68a-ff0005433d89",
+        "name": "Rakuten Group, Inc.",
+        "entity_type": "Company",
+        "mentions": [
+          "Rakuten"
+        ]
+      },
+      {
+        "id": "5d737e5f-0866-4f5f-81bd-a1879373f7c0",
+        "name": "Impress",
+        "entity_type": "Organization",
+        "mentions": [
+          "Impress"
+        ]
+      },
+      {
+        "id": "89db388f-a216-4cd1-ab27-f6a684e876e9",
+        "name": "Exoticca",
+        "entity_type": "Company",
+        "mentions": [
+          "Exoticca"
+        ]
+      },
+      {
+        "id": "853573cb-50dd-4950-9271-d084ced6b80a",
+        "name": "Biorce",
+        "entity_type": "Organization",
+        "mentions": [
+          "Biorce"
+        ]
+      },
+      {
+        "id": "437241ff-69da-4c50-a519-08e8ece61352",
+        "name": "Koa Health",
+        "entity_type": "Company",
+        "mentions": [
+          "Koa Health"
+        ]
+      },
+      {
+        "id": "7d56f0b2-cf04-43a4-91e7-c564b3d871d5",
+        "name": "Holded",
+        "entity_type": "Company",
+        "mentions": [
+          "Holded"
+        ]
+      },
+      {
+        "id": "16bdbb1a-6658-4fa2-9b04-0a48011841d2",
+        "name": "Lakestar",
+        "entity_type": "Organization",
+        "mentions": [
+          "Lakestar"
+        ]
+      },
+      {
+        "id": "c860834d-d74e-4d37-848b-9343cb091614",
+        "name": "Onna Technologies",
+        "entity_type": "Organization",
+        "mentions": [
+          "Onna"
+        ]
+      },
+      {
+        "id": "d4640009-5578-485e-9f77-3ab64881cddd",
+        "name": "ATOMICO (UK) LIMITED",
+        "entity_type": "Company",
+        "mentions": [
+          "Atomico"
+        ]
+      },
+      {
+        "id": "1610f0ed-2677-4503-8633-115c5a27446c",
+        "name": "Lodgify",
+        "entity_type": "Organization",
+        "mentions": [
+          "Lodgify"
+        ]
+      },
+      {
+        "id": "dad59a83-62e9-412b-808c-816d85623d46",
+        "name": "Gate2Brain",
+        "entity_type": "Organization",
+        "mentions": [
+          "Gate2Brain"
+        ]
+      },
+      {
+        "id": "5c40f779-f30a-47de-bf02-70ac9db7d522",
+        "name": "Rever",
+        "entity_type": "Organization",
+        "mentions": [
+          "Rever"
+        ]
+      },
+      {
+        "id": "151bf814-7566-4b14-a7d2-f0d802ef0981",
+        "name": "Sequoia Capital",
+        "entity_type": "Organization",
+        "mentions": [
+          "Sequoia"
+        ]
+      },
+      {
+        "id": "1e86655e-373d-4fe8-be13-af3713581f73",
+        "name": "Y Combinator",
+        "entity_type": "Company",
+        "mentions": [
+          "Y Combinator"
+        ]
+      },
+      {
+        "id": "2e257390-ec08-4545-94b4-7fb471a34aaf",
+        "name": "Agile Content",
+        "entity_type": "Organization",
+        "mentions": [
+          "Agile Content"
+        ]
+      },
+      {
+        "id": "e3a4ce4f-1672-40db-b7ad-7966781902c8",
+        "name": "Cubiq Foods",
+        "entity_type": "Organization",
+        "mentions": [
+          "Cubiq Foods"
+        ]
+      },
+      {
+        "id": "5cf7bc0b-33cf-4553-afaa-e37391559d96",
+        "name": "Supersonik",
+        "entity_type": "Organization",
+        "mentions": [
+          "Supersonik"
+        ]
+      },
+      {
+        "id": "2b6fbe57-c5cd-49b7-b7bd-ba7587bfd77f",
+        "name": "Sateliot",
+        "entity_type": "Company",
+        "mentions": [
+          "Sateliot"
+        ]
+      },
+      {
+        "id": "daebf7ee-cf07-459c-a3c6-65523efcefa7",
+        "name": "Andreessen Horowitz",
+        "entity_type": "Company",
+        "mentions": [
+          "Andreessen Horowitz"
+        ]
+      },
+      {
+        "id": "6fd43585-338c-49b2-a10f-377b395fa930",
+        "name": "011H SUSTAINABLE CONSTRUCTION S.L.",
+        "entity_type": "Company",
+        "mentions": [
+          "011h"
+        ]
+      },
+      {
+        "id": "c136b338-071c-4a5f-bd50-f9d171e4fd5d",
+        "name": "Cafler",
+        "entity_type": "Organization",
+        "mentions": [
+          "Cafler"
+        ]
+      },
+      {
+        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+        "name": "Spain",
+        "entity_type": "Country",
+        "mentions": [
+          "Spain"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "input": "startups.location=Madrid.sector=fintech",
+  "runAt": "2026-08-29T10:10:55.922Z",
+  "ok": true,
+  "status": 200,
+  "ms": 54643,
+  "attempt": 0,
+  "data": {
+    "results": [
+      {
+        "name": "Fintonic",
+        "description": "App-based personal financial management tool and personal loans platform",
+        "founded_year": 2012,
+        "funding": "over €83 million",
+        "employees": 250,
+        "sector": "Personal Finance & Neobanking",
+        "location": "Madrid"
+      },
+      {
+        "name": "Bnext",
+        "description": "Spanish neobank offering a marketplace of financial, insurance, and travel-related products managed through a single account",
+        "founded_year": null,
+        "funding": "over €40 million (Series A)",
+        "employees": null,
+        "sector": "Personal Finance & Neobanking",
+        "location": "Madrid"
+      },
+      {
+        "name": "MyInvestor",
+        "description": "Digital investment and savings platform, ranked among the top fintech companies in Madrid",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "Personal Finance & Neobanking",
+        "location": "Madrid"
+      },
+      {
+        "name": "Payflow",
+        "description": "Mobile app enabling employees to access their earned wages instantly",
+        "founded_year": null,
+        "funding": "Series B (October 2025)",
+        "employees": null,
+        "sector": "Payments & Earned-Wage Access",
+        "location": "Madrid"
+      },
+      {
+        "name": "Verse",
+        "description": "Peer-to-peer payments platform",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "Payments & Earned-Wage Access",
+        "location": "Madrid"
+      },
+      {
+        "name": "Embat",
+        "description": "AI-powered corporate treasury management platform that centralises collections, payments, and bank reconciliation",
+        "founded_year": null,
+        "funding": "€14.7 million Series A (2024)",
+        "employees": null,
+        "sector": "Treasury & Corporate Finance",
+        "location": "Madrid"
+      },
+      {
+        "name": "Divilo",
+        "description": "B2B financial platform for companies and sole traders",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "Treasury & Corporate Finance",
+        "location": "Madrid"
+      },
+      {
+        "name": "TaxDown",
+        "description": "AI-driven digital tax filing and management platform serving over 4 million users",
+        "founded_year": null,
+        "funding": "Series B (April 2025) and €4 million from BBVA Spark (March 2026)",
+        "employees": null,
+        "sector": "Tax & Accounting",
+        "location": "Madrid"
+      },
+      {
+        "name": "Exaccta",
+        "description": "Invoice data extraction and expense management tool, approved by Spanish tax agencies",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "Tax & Accounting",
+        "location": "Madrid"
+      },
+      {
+        "name": "Cobee",
+        "description": "Employee benefits and flexible remuneration platform",
+        "founded_year": 2018,
+        "funding": null,
+        "employees": null,
+        "sector": "Insurance & Benefits",
+        "location": "Madrid"
+      },
+      {
+        "name": "Cleverea",
+        "description": "Insurtech startup offering innovative insurance solutions",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "Insurance & Benefits",
+        "location": "Madrid"
+      },
+      {
+        "name": "ID Finance",
+        "description": "Consumer lending and credit scoring fintech",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "Lending & Investment",
+        "location": "Madrid"
+      },
+      {
+        "name": "La Bolsa Social",
+        "description": "Impact investing marketplace connecting investors with companies that have positive social/environmental values",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "Lending & Investment",
+        "location": "Madrid"
+      },
+      {
+        "name": "Copernicus Credit",
+        "description": "Loans for real estate development, investments, and restructuring",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "Lending & Investment",
+        "location": "Madrid"
+      },
+      {
+        "name": "BCAS",
+        "description": "Fintech unlocking access to quality education through student finance",
+        "founded_year": null,
+        "funding": "€30 million in debt financing",
+        "employees": null,
+        "sector": "Lending & Investment",
+        "location": "Madrid"
+      },
+      {
+        "name": "Fonetic",
+        "description": "Real-time automated monitoring of marketing content and compliance solutions for banks and the financial sector",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "B2B / SaaS Fintech",
+        "location": "Madrid"
+      },
+      {
+        "name": "TechRules",
+        "description": "Wealth management solutions for asset managers and financial planners, including robo-advisory and portfolio creation",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "B2B / SaaS Fintech",
+        "location": "Madrid"
+      },
+      {
+        "name": "GO PONTIO",
+        "description": "Point-of-sale financing platform for sustainable energy projects",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "B2B / SaaS Fintech",
+        "location": "Madrid"
+      },
+      {
+        "name": "Gibobs Allbanks",
+        "description": "Fintech platform matching consumers and companies with financial service providers",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "B2B / SaaS Fintech",
+        "location": "Madrid"
+      },
+      {
+        "name": "Fuell",
+        "description": "Finance and accounting technology startup",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "B2B / SaaS Fintech",
+        "location": "Madrid"
+      },
+      {
+        "name": "Bit2Me",
+        "description": "Cryptocurrency exchange platform",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "Crypto & Trading",
+        "location": "Madrid"
+      },
+      {
+        "name": "Atani",
+        "description": "One-stop crypto trading platform integrating 20+ exchanges with technical analysis tools and automated tax reporting",
+        "founded_year": null,
+        "funding": null,
+        "employees": null,
+        "sector": "Crypto & Trading",
+        "location": "Madrid"
+      }
+    ],
+    "entities": [
+      {
+        "id": "e122a8b3-d711-53bf-b81a-d843895c5081",
+        "name": "Madrid",
+        "entity_type": "Municipality",
+        "mentions": [
+          "Madrid"
+        ]
+      },
+      {
+        "id": "f214cceb-1823-442b-b891-4f5e4047cab5",
+        "name": "Fintonic",
+        "entity_type": "Organization",
+        "mentions": [
+          "Fintonic"
+        ]
+      },
+      {
+        "id": "9e1a6699-2bba-4d10-852a-3b895a0061fa",
+        "name": "Bnext",
+        "entity_type": "Organization",
+        "mentions": [
+          "Bnext"
+        ]
+      },
+      {
+        "id": "c0f9fdec-2e96-4bee-aa3a-cc17b4a244fa",
+        "name": "MYINVESTOR BANCO, S.A.",
+        "entity_type": "Company",
+        "mentions": [
+          "MyInvestor"
+        ]
+      },
+      {
+        "id": "8296d62a-fae3-4041-9ddc-e490722aada1",
+        "name": "Payflow",
+        "entity_type": "Company",
+        "mentions": [
+          "Payflow"
+        ]
+      },
+      {
+        "id": "2935910d-2624-4291-857a-712fc8c05617",
+        "name": "Verse",
+        "entity_type": "Company",
+        "mentions": [
+          "Verse"
+        ]
+      },
+      {
+        "id": "3105fdbe-e3c9-4019-bc71-7c89d36f4d84",
+        "name": "EMBAT TECHNOLOGIES SL",
+        "entity_type": "Company",
+        "mentions": [
+          "Embat"
+        ]
+      },
+      {
+        "id": "c1fbb13c-6686-4951-9da7-7c3792d5e9f9",
+        "name": "DIVILO FINTECH SL",
+        "entity_type": "Company",
+        "mentions": [
+          "Divilo"
+        ]
+      },
+      {
+        "id": "cac5c8eb-f483-428a-9ee1-0897ae037133",
+        "name": "TaxDown",
+        "entity_type": "Company",
+        "mentions": [
+          "TaxDown"
+        ]
+      },
+      {
+        "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+        "name": "BBVA Spark Fund",
+        "entity_type": "Organization",
+        "mentions": [
+          "BBVA Spark"
+        ]
+      },
+      {
+        "id": "3df9655a-97e6-4a02-a994-e8f7cae409f3",
+        "name": "EXACCTA XPENS SL",
+        "entity_type": "Company",
+        "mentions": [
+          "Exaccta"
+        ]
+      },
+      {
+        "id": "b8ac6dd9-8705-4a95-ad61-7998acfd92bb",
+        "name": "Cobee",
+        "entity_type": "Organization",
+        "mentions": [
+          "Cobee"
+        ]
+      },
+      {
+        "id": "bc8ea47b-cf3e-4858-bc36-12ab026d3c30",
+        "name": "Cleverea",
+        "entity_type": "Company",
+        "mentions": [
+          "Cleverea"
+        ]
+      },
+      {
+        "id": "a3b32963-8bf4-49e2-84ac-f33d89daa146",
+        "name": "ID Finance",
+        "entity_type": "Organization",
+        "mentions": [
+          "ID Finance"
+        ]
+      },
+      {
+        "id": "1a8eec4b-b382-46b0-82f4-c31eb0a424f6",
+        "name": "Fondo Bolsa Social",
+        "entity_type": "Company",
+        "mentions": [
+          "La Bolsa Social"
+        ]
+      },
+      {
+        "id": "e60cddc8-bdf6-46a2-b261-ad098893009f",
+        "name": "Copernicus Credit",
+        "entity_type": "Organization",
+        "mentions": [
+          "Copernicus Credit"
+        ]
+      },
+      {
+        "id": "eee2451a-4772-4d24-b90a-c97542cf82ee",
+        "name": "Bcas",
+        "entity_type": "Organization",
+        "mentions": [
+          "BCAS"
+        ]
+      },
+      {
+        "id": "ca8b2a6e-eff3-43fb-8fe1-28ed799eef74",
+        "name": "TECHRULES SA",
+        "entity_type": "Company",
+        "mentions": [
+          "TechRules"
+        ]
+      },
+      {
+        "id": "4e3870ac-0c1c-4954-95c3-87029561fb20",
+        "name": "GO PONTIO",
+        "entity_type": "Organization",
+        "mentions": [
+          "GO PONTIO"
+        ]
+      },
+      {
+        "id": "45d1120b-5d7d-435c-8edf-8d694ec3c5fe",
+        "name": "Gibobs Allbanks",
+        "entity_type": "Organization",
+        "mentions": [
+          "Gibobs Allbanks"
+        ]
+      },
+      {
+        "id": "52e8e920-a418-4108-bcc3-fd933f3dd132",
+        "name": "FUELL LIMITED",
+        "entity_type": "Company",
+        "mentions": [
+          "Fuell"
+        ]
+      },
+      {
+        "id": "4f8bde7c-e795-4da5-8410-a6acf259dfb8",
+        "name": "Bit2Me",
+        "entity_type": "Organization",
+        "mentions": [
+          "Bit2Me"
+        ]
+      },
+      {
+        "id": "3990c877-3206-40bd-9333-bd25b3654209",
+        "name": "Atani",
+        "entity_type": "Organization",
+        "mentions": [
+          "Atani"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,520 @@
+{
+  "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+  "name": "BBVA Spark Fund",
+  "introspection": {
+    "properties": [
+      "aliases",
+      "name",
+      "id",
+      "website",
+      "founding_date",
+      "description"
+    ],
+    "relationships": {
+      "outgoing": [
+        "INVESTED_IN",
+        "OPERATES_IN_INDUSTRY"
+      ],
+      "incoming": [
+        "INVESTED_IN"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+    "name": "BBVA Spark Fund",
+    "entity_type": "Organization",
+    "description": "A 2022‑incorporated investment fund that provides equity‑free growth financing to SaaS companies in the software, fintech and venture‑capital sectors.",
+    "properties": {
+      "name": {
+        "value": "BBVA Spark Fund",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-04-23"
+          }
+        ]
+      },
+      "description": {
+        "value": "A 2022‑incorporated investment fund that provides equity‑free growth financing to SaaS companies in the software, fintech and venture‑capital sectors.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-24"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "INVESTED_IN": [
+          {
+            "id": "17f83a18-dac8-4186-9b31-5808361ec7a3",
+            "name": "Sesame",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/tag/hrtech/feed",
+                  "date": "2026-07-17"
+                },
+                {
+                  "name": "Pulse 2.0",
+                  "document": "https://pulse2.com/sesame-e50-million-financing-secured-from-bbva-spark",
+                  "date": "2026-07-17"
+                },
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/2025/10/valencias-sesame-secures-up-to-e50-million-through-bbva-sparks-new-equity-free-growth-instrument",
+                  "date": "2026-07-17"
+                },
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/?p=343296",
+                  "date": "2026-07-17"
+                }
+              ],
+              "id": "b566d43f-c0ac-568a-bd5e-7744d449c9ff"
+            }
+          },
+          {
+            "id": "191aec45-7cd4-4bf2-a6d8-3848d5799af1",
+            "name": "Habi",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/corporate-investments/investments-by-bbva-spark/__VvVZe2cfsToIkMH8cuB2Gv7xiw4CqPPkldxYhBrFvMY",
+                  "date": "2026-07-16"
+                },
+                {
+                  "name": "Habi - Structured Line of Credit - Colombia",
+                  "document": "https://idbinvest.org/en/projects/habi-structured-line-credit-colombia",
+                  "date": "2025-08-07"
+                }
+              ],
+              "id": "a9e68e9a-1f8c-5302-8545-ee0587356d29",
+              "valid_since": "2026-04-21"
+            }
+          },
+          {
+            "id": "1b0605e7-06a4-492c-b822-37ee1e0da8dd",
+            "name": "Prophero",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/directory/lca",
+                  "date": "2026-07-16"
+                }
+              ],
+              "id": "c3e2be9c-e675-5a10-ba99-4323ecb54b2d"
+            }
+          },
+          {
+            "id": "1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca",
+            "name": "Payflow",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/spanish-fintech-payflow-snaps-e20m-to-expand-its-financial-superapp-for-employees",
+                  "date": "2026-08-13"
+                },
+                {
+                  "name": "Tech.eu - European Startup, Funding and Technology News",
+                  "document": "https://tech.eu/2023/09/18/spanish-fintech-lender-payflow-secures-up-to-eur20m-growth-capital-in-bbva-spark-deal",
+                  "date": "2026-08-13"
+                },
+                {
+                  "name": "bouncewatch.com",
+                  "document": "https://bouncewatch.com/company/payflow",
+                  "date": "2026-08-13"
+                }
+              ],
+              "id": "103c4570-513f-5f8d-8770-f55523e947cf"
+            }
+          },
+          {
+            "id": "4342ab23-3e2a-43b4-b9e0-c76a84b170fa",
+            "name": "Clara",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/corporate-investments/investments-by-bbva-spark/__VvVZe2cfsToIkMH8cuB2Gv7xiw4CqPPkldxYhBrFvMY",
+                  "date": "2026-07-16"
+                },
+                {
+                  "name": "Spend management firm Clara secures $60M amid rapid transaction growth in LatAm | TechCrunch",
+                  "document": "https://techcrunch.com/2023/04/26/spend-management-clara-fintech-latin-america",
+                  "date": "2023-04-26"
+                }
+              ],
+              "id": "9311fd9a-ac5a-587a-a295-133218d7dfba",
+              "valid_since": "2025-12-01"
+            }
+          },
+          {
+            "id": "8057c278-8959-4069-afa1-62ca16c68a57",
+            "name": "Baubap",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/corporate-investments/investments-by-bbva-spark/__VvVZe2cfsToIkMH8cuB2Gv7xiw4CqPPkldxYhBrFvMY",
+                  "date": "2026-07-16"
+                },
+                {
+                  "name": "Baubap Secures MX$400 Million Credit Line from BBVA Spark",
+                  "document": "https://mexicobusiness.news/finance/news/baubap-secures-mx400-million-credit-line-bbva-spark",
+                  "date": "2026-06-30"
+                }
+              ],
+              "id": "86e0976e-2219-5c67-ba69-c954084b8582",
+              "valid_since": "2026-06-30"
+            }
+          },
+          {
+            "id": "86401f6b-1283-4929-8d23-da96ec53b184",
+            "name": "Sesame",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/?p=343296",
+                  "date": "2026-07-17"
+                }
+              ],
+              "id": "517ddc27-5055-59e5-b890-25598333ebb3"
+            }
+          },
+          {
+            "id": "89db031c-2fd8-4484-ae6f-4314d8e4f9fc",
+            "name": "Sesame",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/directory/lca",
+                  "date": "2026-07-16"
+                }
+              ],
+              "id": "6a7e8c62-e754-599c-ac9c-475af4185f71"
+            }
+          },
+          {
+            "id": "97c68379-ff00-4569-b475-22271a047f8c",
+            "name": "PROPHERO GLOBAL SL",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/tag/bbva-spark",
+                  "date": "2026-08-13"
+                }
+              ],
+              "id": "0ebc60b9-5eac-54a7-9e49-1f7fa4b3d486"
+            }
+          },
+          {
+            "id": "988baeef-5fdf-41ab-8bac-4b433bb97f03",
+            "name": "Solvento",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/corporate-investments/investments-by-bbva-spark/__VvVZe2cfsToIkMH8cuB2Gv7xiw4CqPPkldxYhBrFvMY",
+                  "date": "2026-07-16"
+                },
+                {
+                  "name": "Solvento: How This Fintech Company Is Addressing Challenges In The LatAm Trucking And Logistics Market",
+                  "document": "https://pulse2.com/solvento-jaime-tabachnik-profile/amp",
+                  "date": "2024-02-22"
+                }
+              ],
+              "id": "009cde69-ee2e-5520-b204-b76b87102645",
+              "valid_since": "2026-02-16"
+            }
+          },
+          {
+            "id": "b26d8977-8d98-4483-bd45-518f4b49f568",
+            "name": "Sesame",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/?p=343296",
+                  "date": "2026-07-29"
+                }
+              ],
+              "id": "a09d9e5a-c3a4-5c8e-821b-118a4138b0d4"
+            }
+          },
+          {
+            "id": "c06d86cd-ad0c-4c83-86db-39a163db957f",
+            "name": "Sesame",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/?p=343296",
+                  "date": "2026-07-30"
+                }
+              ],
+              "id": "98ca4251-f716-58c5-8144-510794cdfb9b"
+            }
+          },
+          {
+            "id": "cac5c8eb-f483-428a-9ee1-0897ae037133",
+            "name": "TaxDown",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/directory/taxdown",
+                  "date": "2026-07-16"
+                }
+              ],
+              "id": "bc8fe493-f8b4-5fdd-a331-b0e0b6558a38"
+            }
+          },
+          {
+            "id": "e8e7255c-1c3d-45ab-842e-a6578a3422b9",
+            "name": "Tuhabi",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/corporate-investments/investments-by-bbva-spark/__VvVZe2cfsToIkMH8cuB2Gv7xiw4CqPPkldxYhBrFvMY",
+                  "date": "2026-07-16"
+                },
+                {
+                  "name": "Colombian unicorn Habi acquires Mexican company Pulppo",
+                  "document": "https://contxto.com/en/acquisition/colombian-unicorn-habi-acquires-mexican-company-pulppo",
+                  "date": "2026-01-29"
+                }
+              ],
+              "id": "b33aaa83-78e7-5bd5-ace1-ded3d57ea3ae",
+              "valid_since": "2026-04-21"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Fintech | BBVA",
+                  "document": "https://www.bbva.com/en/economy-and-finance/finance/financial-and-commercial-services/fintech",
+                  "date": "2020-08-03"
+                },
+                {
+                  "name": "www.bbvaspark.com",
+                  "document": "https://www.bbvaspark.com/en",
+                  "date": "2026-07-16"
+                }
+              ],
+              "id": "0bd9baec-cdf2-5df8-945a-e6b7d6c95428"
+            }
+          },
+          {
+            "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+            "name": "SOFTWARE_AND_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/?p=343296",
+                  "date": "2026-07-17"
+                }
+              ],
+              "id": "a1518bb0-9110-56e5-a165-7560830a453e"
+            }
+          },
+          {
+            "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+            "name": "VENTURE_CAPITAL",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/directory/taxdown",
+                  "date": "2026-07-16"
+                },
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/directory/lca",
+                  "date": "2026-07-16"
+                }
+              ],
+              "id": "7b3eb832-53e9-5b3d-870d-24db6022e8cc"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "17f83a18-dac8-4186-9b31-5808361ec7a3",
+            "name": "Sesame",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "bouncewatch.com",
+                  "document": "https://bouncewatch.com/explore/startup/orbio",
+                  "date": "2026-08-01"
+                },
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/2025/10/valencias-sesame-secures-up-to-e50-million-through-bbva-sparks-new-equity-free-growth-instrument",
+                  "date": "2026-08-01"
+                }
+              ],
+              "id": "bf02123b-4bc1-5bcc-a909-0a6d764dd046"
+            }
+          },
+          {
+            "id": "1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca",
+            "name": "Payflow",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startup Rise EU - European Startup News | Funding | Startup Insights",
+                  "document": "https://startuprise.co.uk/payflow-funding-news-madrid-based-payflow-raises-e10-million-funding-round",
+                  "date": "2026-07-26"
+                }
+              ],
+              "id": "b4540fe8-2dad-5837-b080-96328ade38e3"
+            }
+          },
+          {
+            "id": "86401f6b-1283-4929-8d23-da96ec53b184",
+            "name": "Sesame",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/tag/hrtech/feed",
+                  "date": "2026-07-17"
+                },
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/tag/sesame/feed",
+                  "date": "2026-07-17"
+                }
+              ],
+              "id": "cf4ac8e7-fd04-5df4-997e-7d2f483a74ce"
+            }
+          },
+          {
+            "id": "89db031c-2fd8-4484-ae6f-4314d8e4f9fc",
+            "name": "Sesame",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "bouncewatch.com",
+                  "document": "https://bouncewatch.com/explore/startup/orbio",
+                  "date": "2026-07-24"
+                }
+              ],
+              "id": "8b065bcf-5a29-57c0-b405-56d2d63ed9ea"
+            }
+          },
+          {
+            "id": "9d674d01-af3d-4423-af7c-5fcde1793f20",
+            "name": "Sesame HR",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "bouncewatch.com",
+                  "document": "https://bouncewatch.com/explore/startup/orbio",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/tag/hrtech/feed",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "a4ad47f4-a391-5f37-a1e5-939f0dead1ef"
+            }
+          },
+          {
+            "id": "b26d8977-8d98-4483-bd45-518f4b49f568",
+            "name": "Sesame",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "bouncewatch.com",
+                  "document": "https://bouncewatch.com/explore/startup/orbio",
+                  "date": "2026-07-28"
+                }
+              ],
+              "id": "a4c0173d-3c5c-578c-8963-72837ae5c9be"
+            }
+          },
+          {
+            "id": "c06d86cd-ad0c-4c83-86db-39a163db957f",
+            "name": "Sesame",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "bouncewatch.com",
+                  "document": "https://bouncewatch.com/explore/startup/orbio",
+                  "date": "2026-08-26"
+                }
+              ],
+              "id": "d0d7af4c-63e5-5071-bd3c-bdde23fcee79"
+            }
+          },
+          {
+            "id": "cac5c8eb-f483-428a-9ee1-0897ae037133",
+            "name": "TaxDown",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eu-startups.com",
+                  "document": "https://www.eu-startups.com/directory/taxdown",
+                  "date": "2026-08-03"
+                }
+              ],
+              "id": "16574974-8509-5b04-b37d-ba4525716f51"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

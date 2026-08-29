@@ -1,0 +1,2163 @@
+{
+  "id": "d13f79c8-6698-4f4f-b98c-1a28d60d80b8",
+  "name": "Kibo Ventures",
+  "introspection": {
+    "properties": [
+      "description",
+      "employee_count",
+      "website",
+      "headquarters_address",
+      "name",
+      "id",
+      "registered_address",
+      "esg_policy",
+      "legal_name",
+      "founding_date",
+      "aliases"
+    ],
+    "relationships": {
+      "outgoing": [
+        "HAS_PRESENCE_IN",
+        "INVESTED_IN",
+        "IS_MEMBER_OF",
+        "OPERATES_IN_INDUSTRY",
+        "PARTICIPATES_IN_CORPORATE_EVENT"
+      ],
+      "incoming": [
+        "IS_COO_OF",
+        "IS_CFO_OF",
+        "INVESTED_IN",
+        "FOUNDED",
+        "WORKS_AT",
+        "IS_CEO_OF",
+        "IS_MEMBER_OF"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "d13f79c8-6698-4f4f-b98c-1a28d60d80b8",
+    "name": "Kibo Ventures",
+    "entity_type": "Company",
+    "description": "A Madrid-based venture capital firm founded in 2013 that invests in software, internet, fintech and private‑equity ventures.",
+    "properties": {
+      "name": {
+        "value": "Kibo Ventures",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-04-24"
+          }
+        ]
+      },
+      "description": {
+        "value": "A Madrid-based venture capital firm founded in 2013 that invests in software, internet, fintech and private‑equity ventures.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-23"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "HAS_PRESENCE_IN": [
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Empowering global tech founders",
+                  "document": "https://startupvalencia.org/investment-spanish-startups-2025",
+                  "date": "2026-04-30"
+                }
+              ],
+              "id": "51243285-4dc1-5883-9e24-8911ba5e7b61"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "0024a3af-98bc-4374-9ce7-d4cb315546d6",
+            "name": "CLARITY AI EUROPE, S.L.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.webcapitalriesgo.com",
+                  "document": "https://www.webcapitalriesgo.com/softbank-and-fifth-wall-invest-in-sustainability-tech-firm-clarity-ai-a-seaya-ventures-company/",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "Kibo Ventures launches its €120M Fund IV, reinforcing its commitment to Europe",
+                  "document": "https://capital-riesgo.es/en/articles/kibo-ventures-launches-its-120m-fund-iv-reinforcing-its-commitment-to-europe/",
+                  "date": "2025-12-15"
+                }
+              ],
+              "id": "abd97ba0-6297-4322-a341-f4c89f4ecba3"
+            }
+          },
+          {
+            "id": "0241c00b-bb0a-4968-9dfc-f7da6596fa13",
+            "name": "Gotrade",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "vc.projectstartups.com",
+                  "document": "https://vc.projectstartups.com/kiboventureskiboventures.com/",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "52cf100d-b16f-4465-85b3-6877a5198e1b"
+            }
+          },
+          {
+            "id": "04401b32-b3f6-442a-80b2-673a5ecc3b59",
+            "name": "Green Eagle Solutions",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Green Eagle raises €2.5M from SET and Kibo - SET Ventures",
+                  "document": "https://setventures.com/green-eagle-solutions-raises-eur-2-5m-from-set-ventures-and-kibo-ventures/",
+                  "date": "2021-05-18"
+                },
+                {
+                  "name": "Green Eagle Solutions secures €6M for AI-powered renewable energy automation",
+                  "document": "https://tech.eu/2023/12/19/green-eagle-solutions-secures-eur6m-for-ai-powered-renewable-energy-automation/",
+                  "date": "2023-12-19"
+                }
+              ],
+              "id": "ff21d0e6-b304-4e19-944f-179b965ab311"
+            }
+          },
+          {
+            "id": "070aedfb-ce05-484f-947f-228d2360a7e7",
+            "name": "Belvo",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "news.crunchbase.com",
+                  "document": "https://news.crunchbase.com/",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "Portfolio",
+                  "document": "https://www.venturesouq.com/",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "Y Combinator",
+                  "document": "https://github.com/",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "Portfolio — KIBO",
+                  "document": "https://kiboventures.com/",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "www.crowdfundinsider.com",
+                  "document": "https://www.crowdfundinsider.com/",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "VC Analyst @ KIBO Ventures in Madrid, Spain",
+                  "document": "https://johngannonblog.com/",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "Future Positive, Kibo Ventures, FJ Labs, Others Invest USD43m Series A for Mexican Fintech Belvo",
+                  "document": "https://www.globalprivatecapital.org/",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "Investing in Belvo, the Leading Open Finance API Platform in Latin America",
+                  "document": "https://www.citi.com/",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/",
+                  "date": "2026-07-30"
+                },
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/companies/belvo/__BJKrJJG_IfnX3PmJGwnk8iwbHdGPG3Lumk1rxX0jucY",
+                  "date": "2026-07-30"
+                }
+              ],
+              "id": "de27f1b4-1e91-58e7-afcf-399afeefcddd"
+            }
+          },
+          {
+            "id": "091c396a-b15e-4aed-b7a4-7fc62ad180c8",
+            "name": "Lifeness",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-07-19"
+                }
+              ],
+              "id": "29ce8227-217a-5720-a413-15493df4fda7"
+            }
+          },
+          {
+            "id": "0e1c37bc-21de-43b2-851f-1ab64df718e0",
+            "name": "Promofarma",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "vc.projectstartups.com",
+                  "document": "https://vc.projectstartups.com/kiboventureskiboventures.com/",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "Kibo Ventures profile at Startupxplore",
+                  "document": "https://startupxplore.com/en/investors/kibo-ventures",
+                  "date": "2018-07-31"
+                }
+              ],
+              "id": "4618dfe2-cb13-42c0-86b6-a33dd85700c4"
+            }
+          },
+          {
+            "id": "0f9290b7-348e-49f0-8272-16abe09c1483",
+            "name": "Bipi",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "medium.com",
+                  "document": "https://medium.com/kibo-ventures",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "Kibo Ventures - Startup Match Score & Focus Areas",
+                  "document": "https://www.hopohopo.io/investors/kibo-ventures",
+                  "date": "2025-12-27"
+                }
+              ],
+              "id": "af012b17-2afd-400c-848b-153be82b68bb"
+            }
+          },
+          {
+            "id": "12168685-b7e3-4988-8464-c3449af6d824",
+            "name": "Evernest",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "vc.projectstartups.com",
+                  "document": "https://vc.projectstartups.com/kiboventureskiboventures.com/",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "49d022e3-4d60-42ba-9c1a-291967798b3d"
+            }
+          },
+          {
+            "id": "1471d16c-8a5d-4d1f-89ea-50f2187c701d",
+            "name": "FOSSA Systems",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "spacenews.com",
+                  "document": "https://spacenews.com/spain-backed-fund-joins-fossas-sovereign-satellite-communications-push/",
+                  "date": "2026-06-27"
+                }
+              ],
+              "id": "b35b236b-d236-5418-b834-99c3031e2388"
+            }
+          },
+          {
+            "id": "149d1c24-edb8-454c-bc3a-cde87f9f5dd6",
+            "name": "Lifeness",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-08-20"
+                }
+              ],
+              "id": "d2ec09ad-3718-5743-9bf9-7ccba1490d58"
+            }
+          },
+          {
+            "id": "155d4eab-1239-4b42-9e5e-7aab643933c9",
+            "name": "White Vega",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.webcapitalriesgo.com",
+                  "document": "https://www.webcapitalriesgo.com/nzyme-invierte-en-white-vega-plataforma-saas-de-referencia-para-gestion-de-activos-fisicos/",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "Nzyme, backed by Kibo Ventures, invests in White Vega, a leading SaaS platform for physical asset management",
+                  "document": "https://capital-riesgo.es/en/articles/nzyme-backed-by-kibo-ventures-invests-in-white-vega-a-leading-saas-platform-for-physical-asset-management/",
+                  "date": "2025-12-22"
+                }
+              ],
+              "id": "68da6042-6a87-41ab-85f0-042a06b07b8d"
+            }
+          },
+          {
+            "id": "1a0edbf9-deb5-45be-ba24-0e7a0377cc92",
+            "name": "THEKER Robotics",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Kibo Ventures hits €80m first close of new fund, doubles down on rest of Europe",
+                  "document": "https://sifted.eu/articles/kibo-ventures-80m-new-fund-doubles-down-on-rest-of-europe",
+                  "date": "2025-12-15"
+                },
+                {
+                  "name": "Our investment in Theker: automating real-world problems — K Fund",
+                  "document": "https://www.kfund.vc/post/our-investment-in-theker-automating-real-world-problems",
+                  "date": "2025-08-29"
+                }
+              ],
+              "id": "4a2ac1ea-8caf-4649-84d8-ebaa151b5775",
+              "valid_since": "2026-06-11"
+            }
+          },
+          {
+            "id": "1a4e810e-083e-4430-a421-4ce0ae9b0683",
+            "name": "Sorare SAS",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio — KIBO",
+                  "document": "https://kiboventures.com/portfolio",
+                  "date": "2012-09-27"
+                }
+              ],
+              "id": "a4dbbdd3-3ee8-47c0-be8c-497bf8779ce9"
+            }
+          },
+          {
+            "id": "1a501268-d3e2-4dea-9925-d1bdb1fcb1b9",
+            "name": "CartoDB",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Mapping Startup CartoDB Raises $8M To Aim At Being A Geospatial Standard | TechCrunch",
+                  "document": "https://techcrunch.com/2014/09/10/mapping-startup-cartodb-raises-8m-to-aim-at-being-a-geospatial-standard",
+                  "date": "2014-09-10"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/newsletter/cartodb-maps-out-8m-series-a",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "835ccf1b-f65c-4bfc-a42e-37b6ef3432ef"
+            }
+          },
+          {
+            "id": "1ce07185-3589-4b04-afd8-e8ce5238d9b1",
+            "name": "Job&Talent",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/jobandtalent/__FibZ0RSHGFHfV2g8R62f0-gyyhb3TRQUB7dOcPlwgpE/funding-and-investors",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Jobandtalent's Linguistic Analysis Recruitment Platform Nabs $14M | TechCrunch",
+                  "document": "https://techcrunch.com/2014/07/10/jobandtalent-series-a",
+                  "date": "2014-07-10"
+                }
+              ],
+              "id": "8c60c1ee-a51a-4424-aa0f-4c35cf161445"
+            }
+          },
+          {
+            "id": "1e1dfdd3-687a-4493-80da-783efa4a5be7",
+            "name": "HWK TECHINVESTMENT SGEIC, S.A.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "ONUM: Funding, Team & Investors",
+                  "document": "https://startupintros.com/orgs/onum",
+                  "date": "2026-07-13"
+                },
+                {
+                  "name": "startupfundraising.com",
+                  "document": "https://startupfundraising.com/companies/onum",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "f4.fund",
+                  "document": "https://f4.fund/firms/hwk-techinvestment",
+                  "date": "2026-08-24"
+                }
+              ],
+              "id": "5f29c105-1b32-45d7-a1d9-ee28b2e669ce"
+            }
+          },
+          {
+            "id": "1e41dbb0-6298-4d94-927f-97c8ccf3d37c",
+            "name": "Cuidum",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-06-29"
+                }
+              ],
+              "id": "37ae7701-74f8-5e5b-a7b2-0346327e33ba"
+            }
+          },
+          {
+            "id": "1eae53e4-907c-4e7c-9adc-98dc08628cbf",
+            "name": "EnjoyHQ",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Kibo Ventures",
+                  "document": "https://www.capboard.io/en/investor/kibo-ventures",
+                  "date": "2011-01-01"
+                },
+                {
+                  "name": "EnjoyHQ Secures $2 Million To Scale User Research For UX Teams",
+                  "document": "https://pulse2.com/enjoyhq-raises-2-million/",
+                  "date": "2019-08-09"
+                }
+              ],
+              "id": "446dba65-9974-4ebb-8714-2f8a84f279be"
+            }
+          },
+          {
+            "id": "1f0d86a5-f6c6-4561-b910-2bb084003849",
+            "name": "Mitiga",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio — KIBO",
+                  "document": "https://kiboventures.com/portfolio",
+                  "date": "2012-09-27"
+                }
+              ],
+              "id": "671feca7-e8a4-40f0-8e1b-42761c448f95"
+            }
+          },
+          {
+            "id": "24c216c7-8b4d-419e-adfa-e3f27cadb88a",
+            "name": "Devo",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "medium.com",
+                  "document": "https://medium.com/kibo-ventures",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "US growth specialist Kibo Ventures launches new fund",
+                  "document": "https://sifted.eu/articles/kibo-new-fund",
+                  "date": "2020-10-06"
+                },
+                {
+                  "name": "Devo scores $25 million and a cool new name | TechCrunch",
+                  "document": "https://techcrunch.com/2018/06/07/devo-scores-25-million-and-cool-new-name/",
+                  "date": "2018-06-07"
+                }
+              ],
+              "id": "f22880dd-40cc-4abd-ae71-b5e4450c3ada"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "54b2f84c-0dbb-4ed0-90a8-0ca5e6f62a0e",
+            "name": "Level20.org",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Inicio - Webcapitalriesgo",
+                  "document": "https://www.webcapitalriesgo.com/level20-org-y-kibo-ventures-lanzan-una-iniciativa-de-apoyo-a-mujeres-emprendedoras",
+                  "date": "2026-06-09"
+                }
+              ],
+              "id": "634f6051-5760-5ffb-9e1a-92a11e740f07"
+            }
+          },
+          {
+            "id": "a865be69-166b-46bd-ac27-9afcbc7108a8",
+            "name": "Asociación Española de Capital, Crecimiento e Inversión (ASCRI)",
+            "entity_type": "Organization",
+            "properties": {
+              "valid_until": "2020-12-31",
+              "role": "vice president",
+              "sources": [
+                {
+                  "name": "Aquilino Peña, socio fundador de Kibo Ventures, nuevo vicepresidente de Ascri - Funds Society",
+                  "document": "https://www.fundssociety.com/es/noticias/appointments/aquilino-pena-socio-fundador-de-kibo-ventures-nuevo-vicepresidente-de-ascri",
+                  "date": "2026-06-25"
+                }
+              ],
+              "id": "1c25330d-21d8-4904-b006-e488747ab7bf",
+              "valid_since": "2019-01-01"
+            }
+          }
+        ],
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "21774ccd-d5c5-4fa2-8ed1-ac3d20b46339",
+            "name": "PRIVATE_EQUITY",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "es.linkedin.com",
+                  "document": "https://es.linkedin.com/company/kiboventures",
+                  "date": "2026-06-28"
+                },
+                {
+                  "name": "Kibo Ventures: The Early Stage Founder's Guide",
+                  "document": "https://superscout.co/investor/kibo-ventures",
+                  "date": "2012-01-01"
+                }
+              ],
+              "id": "534e6a9b-79e4-4e8e-b05e-789e70cd647d"
+            }
+          },
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "craft.co",
+                  "document": "https://craft.co/kibo-ventures",
+                  "date": "2026-06-10"
+                }
+              ],
+              "id": "7739d633-8049-5dbf-82ee-f7d9496603fe"
+            }
+          },
+          {
+            "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+            "name": "SOFTWARE_AND_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "craft.co",
+                  "document": "https://craft.co/kibo-ventures",
+                  "date": "2026-06-10"
+                }
+              ],
+              "id": "e16802c3-869b-5b26-9a3d-bc8db7ffac76"
+            }
+          },
+          {
+            "id": "bb7858a2-51d8-45e2-82bd-3ea6a06d317a",
+            "name": "INTERNET_AND_WEB_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "craft.co",
+                  "document": "https://craft.co/kibo-ventures",
+                  "date": "2026-06-10"
+                }
+              ],
+              "id": "efb497c2-192a-5083-96e8-745c5ffbc6c6"
+            }
+          },
+          {
+            "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+            "name": "VENTURE_CAPITAL",
+            "entity_type": "Industry",
+            "properties": {
+              "id": "bd064565-4f4e-4b63-b65d-8fa28c9f504a"
+            }
+          }
+        ],
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "03eb1c3b-ba25-4ade-a227-ec417e833f76",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Qida company information, funding & investors",
+                  "document": "https://app.dealroom.co/companies/qida",
+                  "date": "2018-03-01"
+                },
+                {
+                  "name": "medium.com",
+                  "document": "https://medium.com/kibo-ventures/qida-passion-for-improving-the-lives-of-the-senior-population-at-home-c75263ee7c85",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2023-03-21",
+              "id": "76425ffb-1ba2-40b5-9988-5f2254c175eb"
+            }
+          },
+          {
+            "id": "0739e238-fa33-4e69-bef9-9740af95861a",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/carto",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2016-01-01",
+              "id": "884f4b9b-94a0-4e4f-bfdb-aaa6c2a52a64"
+            }
+          },
+          {
+            "id": "16b6655a-c2cd-4086-9cd8-da6b7f2348ba",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/jobandtalent/__FibZ0RSHGFHfV2g8R62f0-gyyhb3TRQUB7dOcPlwgpE/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "Jobandtalent Raises $3.3M For Its Linguistics Algorithm-Based Approach To Recruitment | TechCrunch",
+                  "document": "https://techcrunch.com/2013/07/22/jobandtalent-funding",
+                  "date": "2013-07-22"
+                }
+              ],
+              "event_date": "2013-07-22",
+              "id": "21b4e946-8389-4f3a-916b-b73352411a39"
+            }
+          },
+          {
+            "id": "1b82ee68-eb12-415b-9608-4221b07d6e0d",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/jobandtalent/__FibZ0RSHGFHfV2g8R62f0-gyyhb3TRQUB7dOcPlwgpE/funding-and-investors",
+                  "date": "2026-07-29"
+                }
+              ],
+              "event_date": "2015-05-27",
+              "id": "545e6273-5a12-4480-9933-9448452859eb"
+            }
+          },
+          {
+            "id": "2014875d-b77f-4a18-9778-371cec787152",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/jobandtalent/__FibZ0RSHGFHfV2g8R62f0-gyyhb3TRQUB7dOcPlwgpE",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/jobandtalent/__FibZ0RSHGFHfV2g8R62f0-gyyhb3TRQUB7dOcPlwgpE/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2025-04-10",
+              "id": "85fbbb1c-1c95-41a9-80de-d8ba83c78549"
+            }
+          },
+          {
+            "id": "2160c404-716e-4fd1-9e86-d0ce4aa8b348",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/jobandtalent/__FibZ0RSHGFHfV2g8R62f0-gyyhb3TRQUB7dOcPlwgpE/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "Jobandtalent Gets $25M To Steer Its Linguistic Analysis Recruitment Platform Toward The U.S. | TechCrunch",
+                  "document": "https://techcrunch.com/2015/05/27/jobandtalent-series-a-expansion",
+                  "date": "2015-05-27"
+                }
+              ],
+              "event_date": "2015-05-27",
+              "id": "aa5b7607-6cf7-46e6-ab6b-966ec514a489"
+            }
+          },
+          {
+            "id": "21b66237-c5d2-47f8-bbbf-3084bf7b86c5",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/devo/__DpgWmAQnVELpjuouR3tlBubu5w74nVD1jrynuPS4mfM/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "Market demand for cybersecurity products helps Devo raise $250M at unicorn valuation | TechCrunch",
+                  "document": "https://techcrunch.com/2021/10/26/market-demand-for-cybsersecurity-products-helps-devo-raises-250m-at-unicorn-valuation",
+                  "date": "2021-10-26"
+                }
+              ],
+              "event_date": "2021-10-26",
+              "id": "78fd3b6c-ad96-45f4-9418-5c9a5856adf4"
+            }
+          },
+          {
+            "id": "2414c0e5-b2be-46ae-adee-5f5e302c6db1",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/jobandtalent/__FibZ0RSHGFHfV2g8R62f0-gyyhb3TRQUB7dOcPlwgpE/funding-and-investors",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Jobandtalent grabs $500M for its workforce marketplace",
+                  "document": "https://techcrunch.com/2021/12/01/jobandtalent-series-e",
+                  "date": "2021-12-01"
+                }
+              ],
+              "event_date": "2021-12-01",
+              "id": "a9f06583-45f5-48ec-b4c0-73fe5134d3e8"
+            }
+          },
+          {
+            "id": "26cbfad9-dcf3-46b3-be9a-43917d05dce4",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/devo/__DpgWmAQnVELpjuouR3tlBubu5w74nVD1jrynuPS4mfM/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "The Week’s 10 Biggest Funding Rounds: Acrisure And Upstream Bio Raise Big In A Slow Week For Large Rounds",
+                  "document": "https://news.crunchbase.com/fintech-ecommerce/biggest-vc-startup-funding-deals-biotech-edtech",
+                  "date": "2022-06-03"
+                }
+              ],
+              "event_date": "2022-06-02",
+              "id": "66cd84ce-4c9d-4499-b4c8-2a910f7c92ca"
+            }
+          },
+          {
+            "id": "283ef7a8-bad8-4156-9f7a-1a21f7562e5f",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/57086-11",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/kd/__bO65nCt8zzIk--kEoZFdrFMrLGJb_E5iWyunE3HH25I/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "1763ff42-6d8c-4624-841d-e3847284d061"
+            }
+          },
+          {
+            "id": "28813070-83ea-4dd7-a762-d5b47e38df51",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/pandago/financial_details",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/pandago/company_financials",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/491394-43",
+                  "date": "2026-08-25"
+                }
+              ],
+              "id": "8f3aa7fd-a9f0-45ac-8cfb-ba34e8dd930a"
+            }
+          },
+          {
+            "id": "2ee0c201-2e9b-421f-ab5a-57a356e9c623",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/jobandtalent/__FibZ0RSHGFHfV2g8R62f0-gyyhb3TRQUB7dOcPlwgpE/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "Jobandtalent grabs $500M for its workforce marketplace",
+                  "document": "https://techcrunch.com/2021/12/01/jobandtalent-series-e",
+                  "date": "2021-12-01"
+                }
+              ],
+              "event_date": "2021-12-01",
+              "id": "18bd56d8-abee-49c1-a079-7e693d509c65"
+            }
+          },
+          {
+            "id": "2ee1c629-3ed4-4987-8370-26c5d9af0b17",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/carto",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2014-06-01",
+              "id": "317ed0d1-4119-41e5-9366-7fac5bd033b5"
+            }
+          },
+          {
+            "id": "30968e9f-22ad-4b5a-8c50-9c9f75a640c0",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/theker/__74PkMeRB6zMmocP-KsD0SCIJ8XorEx9iiER6Us27LD8",
+                  "date": "2026-08-05"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/thekerai/__Vu61jIsp8_4oa7RZ4IGo2yFNaviX3kuONiDy3z8EUrA",
+                  "date": "2026-08-05"
+                },
+                {
+                  "name": "Beyond Lovable and Mistral: 21 European startups to watch | TechCrunch",
+                  "document": "https://techcrunch.com/2026/05/02/beyond-lovable-and-mistral-21-european-startups-to-watch",
+                  "date": "2026-05-02"
+                }
+              ],
+              "event_date": "2025-07-15",
+              "id": "49fd4228-f24b-48c9-8b6c-8377d13fea04"
+            }
+          },
+          {
+            "id": "320dc904-e222-44bf-93b5-1ade74dcdc54",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/funding_round/fossa-systems-series-a--76d80007",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/fossa-systems/financial_details",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/profiles/company/464113-72",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/fossa-systems/__uTM4oUptbWpogWnA_2jBKp9jPtj_uTZ5SQ2xQ3Y6ZGQ/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2024-06-19",
+              "id": "5acbe52c-f93b-460a-849a-adbde56a2ca5"
+            }
+          },
+          {
+            "id": "38e4b376-f9ea-4a3b-b548-510dddc836d0",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Spain-backed fund joins FOSSA’s sovereign satellite communications push",
+                  "document": "https://spacenews.com/spain-backed-fund-joins-fossas-sovereign-satellite-communications-push",
+                  "date": "2026-06-26"
+                },
+                {
+                  "name": "www.satellitetoday.com",
+                  "document": "https://www.satellitetoday.com/finance/2026/06/24/spanish-iot-startup-fossa-secures-10m-in-funding",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "Dealroom.co | Fossa Systems raises €9.25M early-stage round to scale sovereign satellite constellation",
+                  "document": "https://app.dealroom.co/news/note/fossa-systems-raises-9-25m-early-stage-round-to-scale-sovereign-satellite-constellation",
+                  "date": "2026-06-24"
+                }
+              ],
+              "event_date": "2026-06-24",
+              "id": "071db853-ef9c-4bc0-af49-d9ccacc05d37"
+            }
+          },
+          {
+            "id": "39e073e5-cdc8-4f30-9b0b-328750fbe3ee",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/devo/__DpgWmAQnVELpjuouR3tlBubu5w74nVD1jrynuPS4mfM/funding-and-investors",
+                  "date": "2026-08-25"
+                },
+                {
+                  "name": "Devo scores $25 million and a cool new name | TechCrunch",
+                  "document": "https://techcrunch.com/2018/06/07/devo-scores-25-million-and-cool-new-name",
+                  "date": "2018-06-07"
+                }
+              ],
+              "event_date": "2018-06-07",
+              "id": "07dac0bc-6af7-471c-ac86-f340e62cafe0"
+            }
+          },
+          {
+            "id": "39f0568e-ae32-4758-b65b-179e43c419c5",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/organization/carto",
+                  "date": "2026-08-24"
+                },
+                {
+                  "name": "carto.com",
+                  "document": "https://carto.com/blog/carto-raises-61-million-series-c/",
+                  "date": "2026-08-24"
+                }
+              ],
+              "event_date": "2021-09-01",
+              "id": "7ac67608-bc21-4213-abe9-8dad36e3d6cd"
+            }
+          },
+          {
+            "id": "40c8efc4-d3b2-4554-af23-7d78638c7f96",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/jobandtalent/__FibZ0RSHGFHfV2g8R62f0-gyyhb3TRQUB7dOcPlwgpE/funding-and-investors",
+                  "date": "2026-07-29"
+                },
+                {
+                  "name": "Jobandtalent's Linguistic Analysis Recruitment Platform Nabs $14M | TechCrunch",
+                  "document": "https://techcrunch.com/2014/07/10/jobandtalent-series-a",
+                  "date": "2014-07-10"
+                }
+              ],
+              "event_date": "2013-07-22",
+              "id": "618e35fb-58ac-42e5-b5bc-2d1fb488304c"
+            }
+          },
+          {
+            "id": "41a717bd-35ea-4bbb-a42d-87c347136cf7",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "INVESTOR",
+              "sources": [
+                {
+                  "name": "Jobandtalent Gets $25M To Steer Its Linguistic Analysis Recruitment Platform Toward The U.S. | TechCrunch",
+                  "document": "https://techcrunch.com/2015/05/27/jobandtalent-series-a-expansion",
+                  "date": "2015-05-27"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/jobandtalent/__FibZ0RSHGFHfV2g8R62f0-gyyhb3TRQUB7dOcPlwgpE/funding-and-investors",
+                  "date": "2026-08-25"
+                }
+              ],
+              "event_date": "2015-05-27",
+              "id": "8c6cc419-d0ff-45f9-a3d7-dc6e83f80246"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "IS_COO_OF": [
+          {
+            "id": "2c439612-7bec-4517-bdd8-c560f779e858",
+            "name": "Aquilino Peña",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "venturecapitalarchive.com",
+                  "document": "https://venturecapitalarchive.com/venture-funds/kibo-ventures-kiboventures-com",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "a6145af3-8c55-5d48-a885-89054d35f92b"
+            }
+          }
+        ],
+        "IS_CFO_OF": [
+          {
+            "id": "2c439612-7bec-4517-bdd8-c560f779e858",
+            "name": "Aquilino Peña",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "venturecapitalarchive.com",
+                  "document": "https://venturecapitalarchive.com/venture-funds/kibo-ventures-kiboventures-com",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "51c06cd1-ea07-5fb3-a05e-35f9994f7967"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "1ce07185-3589-4b04-afd8-e8ce5238d9b1",
+            "name": "Job&Talent",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/geographies/spain/__0xE1O7znI7FaLwcsRxQre6dIbiKDPND5Y7fzprr14-s/companies",
+                  "date": "2026-08-10"
+                }
+              ],
+              "id": "e76acb66-2c0f-562a-8b31-1af7e3f75007"
+            }
+          },
+          {
+            "id": "227a3980-35bf-43f1-9bfd-1daf29f045a2",
+            "name": "Mowido",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-08-03"
+                }
+              ],
+              "id": "0156bbec-aed0-577e-97e6-7fe3be724536"
+            }
+          },
+          {
+            "id": "2bdea5e8-a630-4098-9fb1-3f84bbaa77a2",
+            "name": "Cala",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Forbes España: Nada personal, solo negocios - Forbes España",
+                  "document": "https://forbes.es/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "https://www.wikidata.org/wiki/Q77862013",
+                  "document": "https://www.wikidata.org/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Home | TheFutureParty",
+                  "document": "https://www.futureparty.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Clara Ventures",
+                  "document": "https://www.clara.ventures/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Dealroom",
+                  "document": "https://app.dealroom.co/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "I serendipitously said yes to an unexpected role at Cala and this is how my onboarding week went: Monday - first day, new office, breakfast with the team, laptop setup Wednesday - jump on stage to… | · Elies Delgado Tamarit · | 32 comments",
+                  "document": "https://www.linkedin.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Elisenda Bou-Balust",
+                  "document": "https://eel.upc.edu/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Bilbostack",
+                  "document": "https://bilbostack.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "MWC - The Largest And Most Influential Connectivity Event",
+                  "document": "https://www.mwcbarcelona.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Home Page",
+                  "document": "https://www.pymnts.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "dealroom.co",
+                  "document": "https://app.dealroom.co/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "https://startup-seeker.com/company/cala~ai",
+                  "document": "https://startup-seeker.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "wa4steam.com",
+                  "document": "https://wa4steam.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Thank you to all our attendees and sponsors",
+                  "document": "https://4yfn.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Angel fund Masia launches today with the goal of deploying €20 million across startups in Barcelona | EU-Startups | Audacious Investor™️",
+                  "document": "https://www.linkedin.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "https://www.zonebourse.com/insider/BALUST-ELISENDA-BOU-A2617K",
+                  "document": "https://www.zonebourse.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "medium.com",
+                  "document": "https://medium.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Demócrata | Medio político de referencia para los que deciden",
+                  "document": "https://www.democrata.es/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "es.linkedin.com",
+                  "document": "https://es.linkedin.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "#wa4steam #steam #womenintech #investors #wa4steamawards #bestentrepreneur #womeninsteam #leadership #innovation #barcelona | WA4STEAM",
+                  "document": "https://www.linkedin.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Cala | LinkedIn",
+                  "document": "https://www.linkedin.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Ferrovial SE (FER) Shareholder/Analyst Call Prepared Remarks Transcript",
+                  "document": "https://www.seekingalpha.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "AI Daily - Latest AI News, Research & Technology Updates",
+                  "document": "https://ai-daily.news/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Two years ago, when Elisenda Bou-Balust , member of Masia’s Advisory Board, and Pau Agullo first told us about FriquiFund, it was immediately clear to me that this was something we wanted — and… | Carlos Trenchs Sainz de la Maza",
+                  "document": "https://www.linkedin.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Thank you to all our attendees and sponsors",
+                  "document": "https://www.4yfn.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Building the verified knowledge graph: Your AI agents need better data",
+                  "document": "https://infiniteloop.media/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Euro Seed 50 | Creandum",
+                  "document": "https://euroseed50.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Issey Masuda Mora",
+                  "document": "https://bilbostack.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "www.marketscreener.com",
+                  "document": "https://www.marketscreener.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "#30 Elisenda Bou: from Barcelona to building robots in MIT & NASA, founding AI startup, and being acquired by Apple",
+                  "document": "https://www.viewsbypol.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Masia",
+                  "document": "https://www.masia.vc/",
+                  "date": "2026-08-04"
+                }
+              ],
+              "id": "85320e70-5d51-5586-87a0-a77a659e4832"
+            }
+          },
+          {
+            "id": "2ea52267-5360-48b1-8c36-c41ec14f1b51",
+            "name": "Jobandtalent",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/jobandtalent-announced-raising-88-million-in-series-c-funding-news1028002534",
+                  "date": "2026-08-07"
+                }
+              ],
+              "id": "e963f57b-261a-5191-9e17-46d679c42c1f"
+            }
+          },
+          {
+            "id": "345e13d4-3e47-4ef6-98c1-540d905c4bdc",
+            "name": "Qida",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-07-23"
+                }
+              ],
+              "id": "bf3899bc-db1e-5558-bef8-6d2113b81e81"
+            }
+          },
+          {
+            "id": "349658f4-f353-496c-a2dd-cf7f38692cfc",
+            "name": "Caser Residencial",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-08-15"
+                }
+              ],
+              "id": "51a98c33-8063-536e-b62c-691daa74c487"
+            }
+          },
+          {
+            "id": "37974fda-2069-4174-8edf-869330fc9a83",
+            "name": "Miuda",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-08-10"
+                }
+              ],
+              "id": "2eebf0e6-47cc-5545-aff2-53a9cfbd73a0"
+            }
+          },
+          {
+            "id": "3a04c361-5124-492e-9ff7-210553552aa0",
+            "name": "Curenergía",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-08-16"
+                }
+              ],
+              "id": "49177fb3-152d-5ffd-8e65-c3f99ebc37cb"
+            }
+          },
+          {
+            "id": "66cab772-4e9c-431b-8d86-25afd809954a",
+            "name": "Unnamed senior services company",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-08-12"
+                }
+              ],
+              "id": "e00138cd-573b-5c90-81e4-fe09831e778e"
+            }
+          },
+          {
+            "id": "81cfdabc-53f7-426a-b358-a942e159ca0f",
+            "name": "Cala AI",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Demócrata | Medio político de referencia para los que deciden",
+                  "document": "https://www.democrata.es/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Cala | LinkedIn",
+                  "document": "https://www.linkedin.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "wa4steam.com",
+                  "document": "https://wa4steam.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "dealroom.co",
+                  "document": "https://app.dealroom.co/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Thank you to all our attendees and sponsors",
+                  "document": "https://4yfn.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "#30 Elisenda Bou: from Barcelona to building robots in MIT & NASA, founding AI startup, and being acquired by Apple",
+                  "document": "https://www.viewsbypol.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "https://startup-seeker.com/company/cala~ai",
+                  "document": "https://startup-seeker.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "#wa4steam #steam #womenintech #investors #wa4steamawards #bestentrepreneur #womeninsteam #leadership #innovation #barcelona | WA4STEAM",
+                  "document": "https://www.linkedin.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Home | TheFutureParty",
+                  "document": "https://www.futureparty.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "MWC - The Largest And Most Influential Connectivity Event",
+                  "document": "https://www.mwcbarcelona.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Masia",
+                  "document": "https://www.masia.vc/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "medium.com",
+                  "document": "https://medium.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Two years ago, when Elisenda Bou-Balust , member of Masia’s Advisory Board, and Pau Agullo first told us about FriquiFund, it was immediately clear to me that this was something we wanted — and… | Carlos Trenchs Sainz de la Maza",
+                  "document": "https://www.linkedin.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "I serendipitously said yes to an unexpected role at Cala and this is how my onboarding week went: Monday - first day, new office, breakfast with the team, laptop setup Wednesday - jump on stage to… | · Elies Delgado Tamarit · | 32 comments",
+                  "document": "https://www.linkedin.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Thank you to all our attendees and sponsors",
+                  "document": "https://www.4yfn.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Forbes España: Nada personal, solo negocios - Forbes España",
+                  "document": "https://forbes.es/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Home Page",
+                  "document": "https://www.pymnts.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "www.marketscreener.com",
+                  "document": "https://www.marketscreener.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Bilbostack",
+                  "document": "https://bilbostack.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Elisenda Bou-Balust",
+                  "document": "https://eel.upc.edu/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Euro Seed 50 | Creandum",
+                  "document": "https://euroseed50.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "AI Daily - Latest AI News, Research & Technology Updates",
+                  "document": "https://ai-daily.news/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Ferrovial SE (FER) Shareholder/Analyst Call Prepared Remarks Transcript",
+                  "document": "https://www.seekingalpha.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "es.linkedin.com",
+                  "document": "https://es.linkedin.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "https://www.wikidata.org/wiki/Q77862013",
+                  "document": "https://www.wikidata.org/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Building the verified knowledge graph: Your AI agents need better data",
+                  "document": "https://infiniteloop.media/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Angel fund Masia launches today with the goal of deploying €20 million across startups in Barcelona | EU-Startups | Audacious Investor™️",
+                  "document": "https://www.linkedin.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "https://www.zonebourse.com/insider/BALUST-ELISENDA-BOU-A2617K",
+                  "document": "https://www.zonebourse.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Issey Masuda Mora",
+                  "document": "https://bilbostack.com/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Clara Ventures",
+                  "document": "https://www.clara.ventures/",
+                  "date": "2026-08-04"
+                },
+                {
+                  "name": "Dealroom",
+                  "document": "https://app.dealroom.co/",
+                  "date": "2026-08-04"
+                }
+              ],
+              "id": "60024720-ed23-5869-a2b6-9062d1ee566a"
+            }
+          },
+          {
+            "id": "b20582ee-8896-427c-a0c9-d8189f09f17c",
+            "name": "Capchase",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Seedtable: Connect with fast-growing startups at the perfect moment",
+                  "document": "https://www.seedtable.com/investors/kibo-ventures",
+                  "date": "2026-08-29"
+                }
+              ],
+              "id": "b5912e9b-480c-52b0-9d36-2fa3695d0343"
+            }
+          },
+          {
+            "id": "b5097b92-a66b-40b3-bf95-5f10837fe071",
+            "name": "Zepo Intelligence",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-07-22"
+                }
+              ],
+              "id": "c56cb471-96e8-596d-a678-c1c4a39fe28c"
+            }
+          },
+          {
+            "id": "b6994604-a464-4aa2-bfad-da6d87bf0413",
+            "name": "Mioti",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-08-02"
+                }
+              ],
+              "id": "5e08d568-a1bd-5f79-8058-359a16d1cef3"
+            }
+          },
+          {
+            "id": "ca676678-cc30-4da0-b5e2-eb13a66663d0",
+            "name": "Zepo Intelligence",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startup Rise EU - European Startup News | Funding | Startup Insights",
+                  "document": "https://startuprise.co.uk/spains-zepo-intelligence-secures-e12-8-million-to-combat-ai-driven-human-cyber-risks",
+                  "date": "2026-07-28"
+                },
+                {
+                  "name": "Pulse 2.0",
+                  "document": "https://pulse2.com/zepo-intelligence-15-million-seed-round-raised-to-protect-workspaces-from-ai-driven-social-engineering/amp",
+                  "date": "2026-07-28"
+                }
+              ],
+              "id": "2dc115b9-ef51-56a0-aa54-b703716ec73c"
+            }
+          },
+          {
+            "id": "da14978a-cf6d-45fd-920f-b96683b1aeac",
+            "name": "Jobandtalent",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-08-27"
+                }
+              ],
+              "id": "429775f7-9ce8-5db6-9e88-8c7b3c600053"
+            }
+          },
+          {
+            "id": "de6868da-e543-4c5b-a987-2df61392b42d",
+            "name": "Unnamed senior care services company",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-08-03"
+                }
+              ],
+              "id": "cf6f06f2-e1ca-5f1f-9ed2-e717b67273ea"
+            }
+          },
+          {
+            "id": "e927ec62-539d-4eb2-b24f-0393c5078388",
+            "name": "Belvo",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/abacum-raised-25-million-in-a-series-a-round-led-by-atomico",
+                  "date": "2026-07-25"
+                }
+              ],
+              "id": "4dcae84c-c89d-5ada-96fe-13369a8b5c73"
+            }
+          },
+          {
+            "id": "e93eee2c-f1e6-411c-804b-03349955b786",
+            "name": "Senior-care startup",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-08-21"
+                }
+              ],
+              "id": "f1b19b32-62e4-5e21-a88a-786d5a1d841f"
+            }
+          },
+          {
+            "id": "f2dd4315-469a-4e5a-8a41-e2608ed092a8",
+            "name": "Mirai Advisory",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-08-22"
+                }
+              ],
+              "id": "c49a9e95-7a14-581d-9ca3-921be3fc79d9"
+            }
+          },
+          {
+            "id": "f426c7e0-f3d1-4e3d-a90e-bb84fd5ef385",
+            "name": "Belvo",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Discover what happens on the European investment scene",
+                  "document": "https://nordic9.com/news/abacum-raised-25-million-in-a-series-a-round-led-by-atomico",
+                  "date": "2026-08-06"
+                }
+              ],
+              "id": "9e34daaa-7978-5b5b-8872-70441168cc6f"
+            }
+          }
+        ],
+        "FOUNDED": [
+          {
+            "id": "3cdae03c-b346-4a40-8811-8fa17e4710a4",
+            "name": "Javier Torremocha",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Please wait",
+                  "document": "https://ffnews.com/people/javier-torremocha/",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "Kibo Ventures | LinkedIn",
+                  "document": "https://www.linkedin.com/company/kiboventures/",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "Kibo Ventures Overview, Address & Contact",
+                  "document": "https://prospeo.io/c/kibo-ventures",
+                  "date": "2012-01-01"
+                }
+              ],
+              "id": "57ad3ce2-e8d1-54b6-8b3c-a1c70ed78bf5",
+              "valid_since": "2012-01-01"
+            }
+          },
+          {
+            "id": "4a411217-13cf-4722-bdd1-ac299fbf15a6",
+            "name": "Aquilino Peña",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "The Org",
+                  "document": "https://theorg.com/org/kibo-ventures/org-chart/aquilino-pena",
+                  "date": "2026-06-10"
+                }
+              ],
+              "id": "daa9ecc7-e464-5b3f-aaed-3a72f2e0999c"
+            }
+          },
+          {
+            "id": "c4f0f1b7-0b50-48f3-aecf-5de9bcc5f227",
+            "name": "José María Amusategui",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "venturecapitalarchive.com",
+                  "document": "https://venturecapitalarchive.com/venture-funds/kibo-ventures-kiboventures-com",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "cbc8df90-894c-54c8-82ae-40c49ea19324"
+            }
+          }
+        ],
+        "WORKS_AT": [
+          {
+            "id": "1f2eb8e4-87c9-4b1e-a16c-ed4dda34fc9a",
+            "name": "Ignacio Pallás",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/venture-capital/kiboventures/__960mKJT8o_5FuqipzJpJHxfugcmi3muInSx61MRXpFs",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "56584fea-89db-5f5b-94b0-90d0a7474c1a"
+            }
+          },
+          {
+            "id": "3cdae03c-b346-4a40-8811-8fa17e4710a4",
+            "name": "Javier Torremocha",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Co-founder & Managing Partner",
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/person/javier-torremocha",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "1f6f8fb8-9ae3-59b0-9266-adbc7c78086b"
+            }
+          },
+          {
+            "id": "4a411217-13cf-4722-bdd1-ac299fbf15a6",
+            "name": "Aquilino Peña",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "The Org",
+                  "document": "https://theorg.com/org/kibo-ventures/org-chart/aquilino-pena",
+                  "date": "2026-06-10"
+                },
+                {
+                  "name": "craft.co",
+                  "document": "https://craft.co/kibo-ventures",
+                  "date": "2026-06-10"
+                },
+                {
+                  "name": "Private Equity Real Estate | PERE",
+                  "document": "https://www.perenews.com/institution-profiles/kibo-ventures.html",
+                  "date": "2026-06-10"
+                },
+                {
+                  "name": "Private Equity International | PEI | Global Private Equity News & Analysis",
+                  "document": "https://www.privateequityinternational.com/institution-profiles/kibo-ventures.html",
+                  "date": "2026-06-10"
+                }
+              ],
+              "id": "9cd6f5d9-7da7-504a-973c-d13581d6022f"
+            }
+          },
+          {
+            "id": "6d3096fb-5a33-4bf3-a2ca-c61ca90f3e1a",
+            "name": "Joaquín Melgarejo",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/venture-capital/kiboventures/__960mKJT8o_5FuqipzJpJHxfugcmi3muInSx61MRXpFs",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "42d1ea1f-a3ee-51fa-8925-71fb5c7f8e59"
+            }
+          },
+          {
+            "id": "96f677de-e09f-4be2-b8de-c1c122951627",
+            "name": "Sonia Fernandez",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "venturecapitalarchive.com",
+                  "document": "https://venturecapitalarchive.com/venture-funds/kibo-ventures-kiboventures-com",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "725e8926-c89a-50c7-9bcd-a5a410e8cdb8"
+            }
+          },
+          {
+            "id": "9e367cfd-e2b0-48b7-8edb-6ad2c5383cec",
+            "name": "Jordi Vidal",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "The latest startup news and analysis from Europe | Sifted",
+                  "document": "https://www.sifted.eu/articles/kibo-ventures-80m-new-fund-doubles-down-on-rest-of-europe",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "582d3106-71cf-5c63-97cf-00af361e1655"
+            }
+          },
+          {
+            "id": "c4f0f1b7-0b50-48f3-aecf-5de9bcc5f227",
+            "name": "José María Amusategui",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Founding Partner",
+              "sources": [
+                {
+                  "name": "Kibo Ventures",
+                  "document": "https://www.compasslist.com/investors/kibo-ventures",
+                  "date": "2026-01-01"
+                },
+                {
+                  "name": "Kibo Ventures Information",
+                  "document": "https://rocketreach.co/kibo-ventures-profile_b5eb8301f42e857f",
+                  "date": "2026-01-01"
+                }
+              ],
+              "id": "87f9f61e-01c2-577d-89b0-4a9c7e52e32d",
+              "valid_since": "2011-01-01"
+            }
+          },
+          {
+            "id": "decc8f11-d36f-43c6-9aae-3f7d052852c8",
+            "name": "Jordi Vidal",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/venture-capital/kiboventures/__960mKJT8o_5FuqipzJpJHxfugcmi3muInSx61MRXpFs",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "04add95b-39bc-5d0e-9598-a6af5641b47f"
+            }
+          },
+          {
+            "id": "ffd5d305-0c99-4d78-812d-25ea5d0c8f50",
+            "name": "Gonzalo Duarte Señor",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "The Org",
+                  "document": "https://theorg.com/org/kibo-ventures/org-chart/gonzalo-duarte-senor",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "96c065cc-136d-5b77-830e-d9751ec8f41b"
+            }
+          }
+        ],
+        "IS_CEO_OF": [
+          {
+            "id": "3cdae03c-b346-4a40-8811-8fa17e4710a4",
+            "name": "Javier Torremocha",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "venturecapitalarchive.com",
+                  "document": "https://venturecapitalarchive.com/venture-funds/kibo-ventures-kiboventures-com",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "eeb6f0af-5251-5ea2-a311-57b61c1031af"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "1ce07185-3589-4b04-afd8-e8ce5238d9b1",
+            "name": "Job&Talent",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "spacenews.com",
+                  "document": "https://spacenews.com/spain-backed-fund-joins-fossas-sovereign-satellite-communications-push/",
+                  "date": "2026-06-27"
+                }
+              ],
+              "id": "feb7031a-80ac-5e30-935d-2c0ac0cd7eee"
+            }
+          },
+          {
+            "id": "1f2eb8e4-87c9-4b1e-a16c-ed4dda34fc9a",
+            "name": "Ignacio Pallás",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Partner",
+              "sources": [
+                {
+                  "name": "Team — KIBO",
+                  "document": "https://kiboventures.com/team",
+                  "date": "2000-01-01"
+                }
+              ],
+              "id": "7fe6bf1e-95b7-5a01-8132-e7c5c823053d"
+            }
+          },
+          {
+            "id": "3cdae03c-b346-4a40-8811-8fa17e4710a4",
+            "name": "Javier Torremocha",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "venturecapitalarchive.com",
+                  "document": "https://venturecapitalarchive.com/venture-funds/kibo-ventures-kiboventures-com",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "a70a0d18-bd8a-5536-bdc9-cae20433f8ee"
+            }
+          },
+          {
+            "id": "4a411217-13cf-4722-bdd1-ac299fbf15a6",
+            "name": "Aquilino Peña",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Co-Founder & Managing Partner",
+              "sources": [
+                {
+                  "name": "Aquilino Peña - Co-Founder & Managing Partner at Kibo Ventures | The Org",
+                  "document": "https://theorg.com/org/kibo-ventures/org-chart/aquilino-pena",
+                  "date": "2024-11-10"
+                }
+              ],
+              "id": "f2d2d5e3-0b12-5473-84db-b6edea4f9eab",
+              "valid_since": "2011-01-01"
+            }
+          },
+          {
+            "id": "6d3096fb-5a33-4bf3-a2ca-c61ca90f3e1a",
+            "name": "Joaquín Melgarejo",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Partner",
+              "sources": [
+                {
+                  "name": "Joaquin Rebuelta Melgarejo - Kibo Ventures | LinkedIn",
+                  "document": "https://es.linkedin.com/in/joaquinrebuelta",
+                  "date": "2022-01-25"
+                }
+              ],
+              "id": "b599f4b0-03fc-5871-8101-2ae30f819612"
+            }
+          },
+          {
+            "id": "a5929218-834b-4526-9830-766f004f965d",
+            "name": "CoverWallet",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "The AI Journal is your ultimate channel for trends and anlysis on AI and emerging technology.",
+                  "document": "https://aijourn.com/infinitewatch-announces-4m-pre-seed-led-by-base10-partners-to-power-agentic-customer-interaction-intelligence",
+                  "date": "2026-08-04"
+                }
+              ],
+              "id": "b2a5befc-e0ea-5b69-b823-83fc4dad2141"
+            }
+          },
+          {
+            "id": "d64e7428-875a-40e9-b1b7-b35f3b5985d7",
+            "name": "Juan López Santamaría",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/venture-capital/kiboventures/__960mKJT8o_5FuqipzJpJHxfugcmi3muInSx61MRXpFs",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "9b86daa8-974b-585a-8769-b660abaef6d1"
+            }
+          },
+          {
+            "id": "decc8f11-d36f-43c6-9aae-3f7d052852c8",
+            "name": "Jordi Vidal",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Technology & Data for Venture Capital, Corp Dev, Investment Banks",
+                  "document": "https://tracxn.com/d/venture-capital/kiboventures/__960mKJT8o_5FuqipzJpJHxfugcmi3muInSx61MRXpFs",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "b99412f9-418f-5a71-a842-5ae16ce58f28"
+            }
+          },
+          {
+            "id": "f27a792d-a346-4e63-bba9-917eb64fc758",
+            "name": "César Bardají",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Investor",
+              "sources": [
+                {
+                  "name": "Las emprendedoras e inversoras en ‘startups’ siguen siendo minoría",
+                  "document": "https://www.iese.edu/es/noticias/las-emprendedoras-e-inversoras-en-startups-siguen-siendo-minoria",
+                  "date": "2019-11-13"
+                }
+              ],
+              "id": "780ca7d1-a7d6-51ad-9e58-730fb51a8137"
+            }
+          },
+          {
+            "id": "fce36ae0-a284-47cf-aa2a-70af7eeaf9ff",
+            "name": "Fundación Ship2B",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "techfundingnews.com",
+                  "document": "https://techfundingnews.com/march-wrap-up-10-women-founded-tech-startups-that-received-funding-in-europe",
+                  "date": "2026-08-03"
+                }
+              ],
+              "id": "05d0302e-34fe-5bb4-96f9-7bfa6d5a62d1"
+            }
+          },
+          {
+            "id": "ffd5d305-0c99-4d78-812d-25ea5d0c8f50",
+            "name": "Gonzalo Duarte Señor",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Investment Manager",
+              "sources": [
+                {
+                  "name": "www.linkedin.com",
+                  "document": "https://www.linkedin.com/in/gonzalo-duarte",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "Kibo Ventures | LinkedIn",
+                  "document": "https://www.linkedin.com/company/kiboventures/",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "7b3c17cc-5b15-5dfe-9fa5-fd6db49961b2",
+              "valid_since": "2023-09-01"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

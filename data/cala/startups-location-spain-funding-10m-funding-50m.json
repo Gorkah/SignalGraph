@@ -1,0 +1,105 @@
+{
+  "input": "startups.location=Spain.funding>10M.funding<50M",
+  "runAt": "2026-08-29T10:10:55.922Z",
+  "ok": true,
+  "status": 200,
+  "ms": 784,
+  "attempt": 0,
+  "data": {
+    "results": [
+      {
+        "startup": "Sesame",
+        "location": "Valencia",
+        "funding": "Up to €50M",
+        "sector": "HRTech / AI",
+        "details": "Secured up to €50M in growth funding through BBVA Spark's equity-free financial instrument for SaaS companies. Focused on AI-powered talent management."
+      },
+      {
+        "startup": "Zepo Intelligence",
+        "location": "Spain",
+        "funding": "€12.8M",
+        "sector": "Cybersecurity",
+        "details": "Raised €12.8M to protect workplaces from AI-driven human-targeted cyber threats."
+      },
+      {
+        "startup": "Flanks",
+        "location": "Barcelona",
+        "funding": "$25.4M (~€23M)",
+        "sector": "WealthTech",
+        "details": "Provider of wealth management data aggregation and reporting solutions. Total funding of $25.4M across 3 rounds, with a Series B in February 2025."
+      },
+      {
+        "startup": "Lifeness",
+        "location": "Spain",
+        "funding": "€11M",
+        "sector": "Biotech",
+        "details": "A Spanish biotech company specialising in diseases with unmet medical needs raised an €11M debt facility from the European Investment Bank (EIB)."
+      },
+      {
+        "startup": "BNext",
+        "location": "Madrid",
+        "funding": "€21M",
+        "sector": "Fintech",
+        "details": "Raised a €21M Series A round led by DN Capital."
+      }
+    ],
+    "entities": [
+      {
+        "id": "86401f6b-1283-4929-8d23-da96ec53b184",
+        "name": "Sesame",
+        "entity_type": "Organization",
+        "mentions": [
+          "Sesame"
+        ]
+      },
+      {
+        "id": "74ff2e4b-b589-5646-9432-f3b8dc2c2592",
+        "name": "Valencia",
+        "entity_type": "Municipality",
+        "mentions": [
+          "Valencia"
+        ]
+      },
+      {
+        "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+        "name": "BBVA Spark Fund",
+        "entity_type": "Organization",
+        "mentions": [
+          "BBVA Spark"
+        ]
+      },
+      {
+        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+        "name": "Spain",
+        "entity_type": "Country",
+        "mentions": [
+          "Spain"
+        ]
+      },
+      {
+        "id": "01c894d5-9eee-4929-a536-c1626fcddb96",
+        "name": "European Investment Bank",
+        "entity_type": "Organization",
+        "mentions": [
+          "European Investment Bank"
+        ]
+      },
+      {
+        "id": "eb86df55-d9fb-41bc-8104-ad6a892dc7ec",
+        "name": "Bnext",
+        "entity_type": "Organization",
+        "mentions": [
+          "BNext"
+        ]
+      },
+      {
+        "id": "dc60f800-f723-41b8-9482-810db28c9d70",
+        "name": "DN Capital",
+        "entity_type": "Organization",
+        "mentions": [
+          "DN Capital"
+        ]
+      }
+    ]
+  }
+}

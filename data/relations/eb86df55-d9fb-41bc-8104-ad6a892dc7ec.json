@@ -1,0 +1,161 @@
+{
+  "id": "eb86df55-d9fb-41bc-8104-ad6a892dc7ec",
+  "name": "Bnext",
+  "introspection": {
+    "properties": [
+      "name",
+      "employee_count",
+      "founding_date",
+      "registered_address",
+      "id",
+      "description",
+      "website"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY",
+        "INVESTED_IN"
+      ],
+      "incoming": []
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "eb86df55-d9fb-41bc-8104-ad6a892dc7ec",
+    "name": "Bnext",
+    "entity_type": "Organization",
+    "description": "A Spanish fintech startup founded in 2018, based in Madrid, that operates as a mobile‑first neobank.",
+    "properties": {
+      "name": {
+        "value": "Bnext",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-06-30"
+          }
+        ]
+      },
+      "description": {
+        "value": "A Spanish fintech startup founded in 2018, based in Madrid, that operates as a mobile‑first neobank.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-24"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+            "name": "FINTECH",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/?p=1523",
+                  "date": "2026-07-02"
+                },
+                {
+                  "name": "fintechfutures.com",
+                  "document": "https://www.fintechfutures.com/fintech/bnext-becomes-first-fintech-in-spain-to-raise-a-25m-series-a-plans-latam-expansion",
+                  "date": "2026-07-02"
+                },
+                {
+                  "name": "Startup Rise EU - European Startup News | Funding | Startup Insights",
+                  "document": "https://startuprise.co.uk/top-10-fintech-startups-in-spain",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "3300441b-8435-5212-8b21-59488f58fe59"
+            }
+          },
+          {
+            "id": "a710b325-14d8-4652-854a-f4ea646f15d3",
+            "name": "BANKING",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.zoominfo.com",
+                  "document": "https://www.zoominfo.com/c/bnext/426004162",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "56490762-98a4-5ab3-a96d-8cc785682458"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "363d5692-004d-493e-aec1-424a35663c25",
+            "name": "Founders Future",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/?p=1523",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "4c119ca6-b33c-5bc1-b43d-361105663a0a"
+            }
+          },
+          {
+            "id": "6fec62d7-11ed-46dc-8922-eb24c6ecf635",
+            "name": "DN Capital",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/?p=1523",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "55bd0754-2af4-5b53-978a-e9dd8093ce4b"
+            }
+          },
+          {
+            "id": "8932a610-7903-431d-8366-905e45c68ee4",
+            "name": "Redalpine",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/?p=1523",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "73d101d8-8815-5b85-8769-d38f74f04a6e"
+            }
+          },
+          {
+            "id": "94e0ca6a-4e39-4181-bd84-11f264d0aa62",
+            "name": "Speedinvest GmbH",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/?p=1523",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "3354f316-a873-5423-a332-c72eff93579f"
+            }
+          }
+        ]
+      },
+      "incoming": {}
+    },
+    "numerical_observations": []
+  }
+}

@@ -5,14 +5,17 @@ import type { CSSProperties, PointerEvent as ReactPointerEvent } from "react";
 import { Cartera } from "@/components/Cartera";
 import { DatoClave } from "@/components/DatoClave";
 import { Caso } from "@/components/Caso";
+import { Cursores } from "@/components/Cursores";
 import { Ficha } from "@/components/Ficha";
 import { Mazo, RecogerMazo } from "@/components/Mazo";
 import { Pregunta } from "@/components/Pregunta";
 import { Hilos } from "@/components/Hilos";
+import { Notas } from "@/components/Notas";
 import { GRID_SIZE, cardBox, occupiedBoxes } from "@/lib/geometry";
 import { MAX_ZOOM, MIN_ZOOM, useBoardStore } from "@/lib/store";
 import { CASE_RELATION } from "@/lib/relations";
 import type { Point } from "@/lib/types";
+import { useMyPresence } from "@/liveblocks.config";
 
 const ZOOM_STEP = 1.25;
 
@@ -76,6 +79,19 @@ export function Tablon() {
   const clavadas = useRef(new Set<string>());
   // Y si el caso ya tenía veredicto: la tarjeta de cierre se clava sola.
   const veredicto = useRef(false);
+  const [, updateMyPresence] = useMyPresence();
+
+  // El cursor se guarda en coordenadas del tablón (deshaciendo pan/zoom) para
+  // que `Cursores` lo pinte igual que a una ficha, sin reconvertir nada.
+  function trackCursor(event: ReactPointerEvent<HTMLElement>) {
+    const rect = event.currentTarget.getBoundingClientRect();
+    updateMyPresence({
+      cursor: {
+        x: (event.clientX - rect.left - pan.x) / zoom,
+        y: (event.clientY - rect.top - pan.y) / zoom,
+      },
+    });
+  }
 
   // Encaja todo el caso en el viewport: el tablón debe leerse entero
   // de un vistazo antes de que nadie toque nada.
@@ -232,7 +248,13 @@ export function Tablon() {
   }
 
   return (
-    <section className="board-viewport" aria-label="Tablón de investigación" ref={viewport}>
+    <section
+      className="board-viewport"
+      aria-label="Tablón de investigación"
+      ref={viewport}
+      onPointerMove={trackCursor}
+      onPointerLeave={() => updateMyPresence({ cursor: null })}
+    >
       {/* La mesa de trabajo: rejilla sin final y zona de arrastre del tablón. */}
       <div
         className="board-grid"
@@ -269,6 +291,8 @@ export function Tablon() {
             y={Math.min(...group.map((card) => card.position.y)) - 38}
           />
         ))}
+        <Notas graph={graph} />
+        <Cursores />
       </div>
 
       <div className="zoom-dock" role="group" aria-label="Zoom del tablón">

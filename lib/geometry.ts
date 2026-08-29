@@ -9,6 +9,8 @@ export const QUESTION_WIDTH = 272;
 export const QUESTION_HEIGHT = 176;
 export const CASE_WIDTH = 296;
 export const CASE_HEIGHT = 184;
+export const NOTE_WIDTH = 168;
+export const NOTE_HEIGHT = 168;
 
 export function snap(value: number) {
   return Math.round(value / GRID_SIZE) * GRID_SIZE;

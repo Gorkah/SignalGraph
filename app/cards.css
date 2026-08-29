@@ -618,3 +618,147 @@
    nivel incluido porque el anillo del reencuentro (`:has(.dedup-badge)`) es
    más específico y si no la dejaba por debajo con el cruce en pantalla. */
 .entity-card.nivel-ficha.is-hilos { z-index: 44; }
+
+/* Con el cajón abierto la ficha pasa por delante de sus vecinas. */
+.entity-card.is-hilos, .entity-card.is-nota, .lead-card.is-nota { z-index: 40; }
+
+
+/* ══ NOTAS COMPARTIDAS ═══════════════════════════════════════════════
+   Lo que clava un colaborador junto a una ficha: no es hallazgo del
+   archivo (nunca lleva fuente), así que se pinta aparte —papel más
+   pequeño, hilo punteado, color de quien la escribió en vez de tipo de
+   relación. */
+.nota-composer {
+  position: absolute;
+  z-index: 3;
+  top: 100%;
+  left: -2px;
+  right: -2px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  border: 2px solid var(--ink);
+  border-top: 0;
+  background: var(--paper);
+  box-shadow: 8px 8px 0 rgba(32, 27, 24, .72);
+}
+.nota-composer textarea {
+  resize: none;
+  min-height: 54px;
+  border: 2px solid var(--ink);
+  background: var(--paper-bright);
+  padding: 5px 7px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.35;
+}
+.nota-composer-hint {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: rgba(32, 27, 24, .6);
+}
+.nota-composer button {
+  align-self: flex-end;
+  border: 2px solid var(--ink);
+  background: var(--yellow);
+  box-shadow: 3px 3px 0 var(--ink);
+  padding: 4px 9px;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 8px;
+  text-transform: uppercase;
+}
+.nota-composer button:disabled { opacity: .5; cursor: not-allowed; }
+
+.nota-card {
+  position: absolute;
+  /* Por delante de cualquier ficha o hilo con los que se cruce: un post-it
+     clavado encima nunca queda tapado por lo que hay debajo. */
+  z-index: 45;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px;
+  border: 0;
+  border-radius: 6px;
+  /* Amarillo suave y esquinas redondeadas: post-it clásico, no ficha del
+     archivo. Sin rotar ni recuadrar: el estilo pedido es limpio, no de
+     recorte de periódico. */
+  background: #fdeb8f;
+  box-shadow: 0 3px 10px rgba(32, 27, 24, .22);
+  font-size: 12px;
+  line-height: 1.4;
+}
+.nota-borrar {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(32, 27, 24, .3);
+  border-radius: 50%;
+  background: var(--paper-bright);
+  box-shadow: 0 1px 3px rgba(32, 27, 24, .35);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+}
+.nota-borrar:hover { background: var(--red); border-color: var(--red); color: var(--paper-bright); }
+
+.nota-card p { margin: 0; flex: 1; white-space: pre-wrap; }
+.nota-card footer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  align-self: flex-end;
+  font-family: var(--font-display);
+  font-size: 7px;
+  text-transform: uppercase;
+  color: rgba(32, 27, 24, .55);
+}
+.nota-card footer::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--nota-color, var(--ink));
+}
+
+.nota-hilo {
+  fill: none;
+  stroke: var(--thread-default);
+  stroke-width: 2;
+  stroke-dasharray: 3 4;
+  vector-effect: non-scaling-stroke;
+}
+
+/* Cursor de otro investigador conectado a la misma sala: pintado como
+   ficha más, en coordenadas del tablón, para que el pan/zoom lo mueva
+   solo sin recalcular nada. */
+.cursor-remoto {
+  position: absolute;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  pointer-events: none;
+  transform: translate(-2px, -2px);
+}
+.cursor-etiqueta {
+  padding: 2px 6px;
+  /* Fondo fijo, siempre oscuro: el color de cada investigador solo vive en
+     el borde y en la punta del cursor. Un fondo pastel con texto blanco
+     desaparecía con colores claros; esto se lee igual con cualquiera. */
+  border: 1px solid var(--cursor-color, var(--ink));
+  background: var(--ink);
+  color: var(--paper-bright);
+  font-family: var(--font-display);
+  font-size: 7px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 2px 2px 0 rgba(32, 27, 24, .6);
+}

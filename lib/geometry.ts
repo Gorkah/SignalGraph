@@ -5,6 +5,9 @@ export const CARD_WIDTH = 240;
 export const LEAD_WIDTH = 176;
 export const LEAD_HEIGHT = 96;
 export const CARD_HEIGHT = 240;
+export const NOTE_WIDTH = 168;
+export const NOTE_HEIGHT = 168;
+export const STACK_HEIGHT = 130;
 
 export function snap(value: number) {
   return Math.round(value / GRID_SIZE) * GRID_SIZE;
@@ -38,8 +41,6 @@ export function combPosition(origin: Point, away: Point, index: number, slots = 
     y: origin.y + (slot - (slots - 1) / 2) * (LEAD_HEIGHT + 52),
   });
 }
-
-export const STACK_HEIGHT = 130;
 
 /**
  * La cartera cerrada va al costado de su fondo y centrada con él. Reutilizar

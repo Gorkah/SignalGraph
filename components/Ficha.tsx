@@ -1,12 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { LiveObject } from "@liveblocks/client";
 import { Retrato } from "@/components/Retrato";
 import { buildCover, teaser } from "@/lib/fields";
+import { placeNota } from "@/lib/notePlacement";
 import { relationNoun } from "@/lib/relations";
 import { useBoardStore } from "@/lib/store";
 import type { EntityCard } from "@/lib/types";
 import { useNodeDrag } from "@/components/useNodeDrag";
+import { useMutation, useMyPresence, useStorage } from "@/liveblocks.config";
+import type { NotaPayload } from "@/liveblocks.config";
 
 /** Sin manifiesto —o con uno viejo— la ficha sigue diciendo algo útil. */
 const DEFAULT_COVER = [
@@ -30,15 +34,54 @@ export function Ficha({ card }: { card: EntityCard }) {
   // El cajón de los hilos: cerrado por defecto, porque una ficha se lee
   // antes de tirar de ella.
   const [hilos, setHilos] = useState(false);
+  // Composer de nota compartida: mismo patrón que el cajón de hilos, pero
+  // para clavar una lectura propia junto a la ficha.
+  const [notaAbierta, setNotaAbierta] = useState(false);
+  const [texto, setTexto] = useState("");
+  const [myPresence] = useMyPresence();
+  const notas = useStorage((root) => root.notas);
+  const addNota = useMutation(({ storage }, payload: NotaPayload) => {
+    storage.get("notas").push(new LiveObject(payload));
+  }, []);
+
+  function submitNota(event: React.FormEvent) {
+    event.preventDefault();
+    const value = texto.trim();
+    if (!value) return;
+    const graph = useBoardStore.getState().researchCase;
+    if (!graph) return;
+    const portfolioRelation = view?.openVerb.relation ?? "INVESTED_IN";
+    addNota({
+      id: crypto.randomUUID(),
+      cardId: card.id,
+      text: value,
+      author: myPresence.name.trim() || "Anónimo",
+      color: myPresence.color || "#e0c341",
+      // Anillos crecientes desde la ficha hasta el primer hueco libre: ni
+      // ficha, ni cartera cerrada, ni caso, ni otra nota ya clavada.
+      position: placeNota(card.position, graph, portfolioRelation, notas ?? []),
+      createdAt: Date.now(),
+    });
+    setTexto("");
+    setNotaAbierta(false);
+  }
+
+  function onContextMenu(event: React.MouseEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+    setNotaAbierta(true);
+  }
 
   // Una pista es la misma ficha en su densidad mínima: retrato, nombre y tipo.
   // Se vuelve completa al abrirla, que es cuando se pide su introspección.
   if (card.density === "lead") {
     return (
       <article
-        className={`lead-card nivel-pista ${selected ? "is-selected" : ""}`}
+        className={`lead-card nivel-pista ${selected ? "is-selected" : ""} ${notaAbierta ? "is-nota" : ""}`}
         style={{ left: card.position.x, top: card.position.y }}
         onClick={() => void openCard(card.id)}
+        onContextMenu={onContextMenu}
+        title="Clic derecho para clavar una nota"
         {...drag}
       >
         <Retrato entityType={card.entityType} name={card.name} size={28} />
@@ -49,6 +92,24 @@ export function Ficha({ card }: { card: EntityCard }) {
         <span className="rango" aria-hidden="true" />
         {dedup && <span className="dedup-badge">YA ESTABA</span>}
         <span className="lead-foot">{busy[`open:${card.id}`] ? "abriendo…" : "abrir ▸"}</span>
+
+        {notaAbierta && (
+          <form
+            className="nota-composer"
+            onPointerDown={(event) => event.stopPropagation()}
+            onClick={(event) => event.stopPropagation()}
+            onSubmit={submitNota}
+          >
+            <span className="nota-composer-hint">Una duda, un dato a verificar, un recordatorio…</span>
+            <textarea
+              autoFocus
+              placeholder={`p. ej.: "confirmar si ${card.name} también entró en la ronda de..."`}
+              value={texto}
+              onChange={(event) => setTexto(event.target.value)}
+            />
+            <button type="submit" disabled={!texto.trim()}>clavar en el tablón</button>
+          </form>
+        )}
       </article>
     );
   }
@@ -63,10 +124,12 @@ export function Ficha({ card }: { card: EntityCard }) {
 
   return (
     <article
-      className={`entity-card nivel-ficha ${selected ? "is-selected" : ""} ${dorso ? "is-dorso" : ""} ${hilos ? "is-hilos" : ""}`}
+      className={`entity-card nivel-ficha ${selected ? "is-selected" : ""} ${dorso ? "is-dorso" : ""} ${hilos ? "is-hilos" : ""} ${notaAbierta ? "is-nota" : ""}`}
       style={{ left: card.position.x, top: card.position.y }}
       data-category={card.category}
       onClick={() => selectNode(card.id)}
+      onContextMenu={onContextMenu}
+      title="Clic derecho para clavar una nota"
     >
       <header className="card-drag" {...drag} title="Arrastrá para moverla · clic para abrir su carpeta">
         <Retrato entityType={card.entityType} name={card.name} size={38} />
@@ -138,6 +201,24 @@ export function Ficha({ card }: { card: EntityCard }) {
           </button>
         ) : <span className="no-relations">sin hilos locales</span>}
       </footer>
+
+      {notaAbierta && (
+        <form
+          className="nota-composer"
+          onPointerDown={(event) => event.stopPropagation()}
+          onClick={(event) => event.stopPropagation()}
+          onSubmit={submitNota}
+        >
+          <span className="nota-composer-hint">Una duda, un dato a verificar, un recordatorio…</span>
+          <textarea
+            autoFocus
+            placeholder={`p. ej.: "confirmar si ${card.name} también entró en la ronda de..."`}
+            value={texto}
+            onChange={(event) => setTexto(event.target.value)}
+          />
+          <button type="submit" disabled={!texto.trim()}>clavar en el tablón</button>
+        </form>
+      )}
 
       {hilos && (
         <div className="hilos-drawer">

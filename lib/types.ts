@@ -66,12 +66,38 @@ export type CaseNode = {
   finding?: string;
 };
 
+export type QuestionLane = "archive" | "web";
+
+export type QuestionNode = {
+  id: string;
+  prompt: string;
+  lane: QuestionLane;
+  position: Point;
+  state: "open" | "answered";
+  /** El carril de archivo tira de una entidad real y una relación real. */
+  target?: {
+    id: string;
+    name: string;
+    entityType: string;
+    relation: string;
+    preferred: string[];
+  };
+  answer: {
+    title: string;
+    body: string;
+    sourceLabel: string;
+    sourceUrl?: string;
+    asOf?: string;
+  };
+};
+
 export type ResearchCase = {
   id: string;
   title: string;
   focus: CaseNode;
   cards: EntityCard[];
   edges: Edge[];
+  questions: QuestionNode[];
 };
 
 export type DossierCandidate = {
@@ -171,7 +197,7 @@ export type CaseManifest = {
   generatedAt: string;
   question: string;
   subtitle: string;
-  openVerb: { relation: string; label: string; noun: string };
+  openVerb: { relation: string; label: string; noun: string; hidden?: boolean };
   ring: Array<{ id: string; name: string; role: string; subtitle: string }>;
   headline?: { bridge: string; why: string };
   bridges: Array<{ name: string; id: string | null; holders: string[]; verified: boolean }>;
@@ -179,6 +205,25 @@ export type CaseManifest = {
   back: { fields: string[]; hint: string };
   nouns: Array<{ type: string; noun: string }>;
   finding: { template: string; toast: string };
+  questions?: Array<{
+    id: string;
+    prompt: string;
+    lane: QuestionLane;
+    target?: {
+      id: string;
+      name: string;
+      entityType: string;
+      relation: string;
+      preferred: string[];
+    };
+    answer: {
+      title: string;
+      body: string;
+      sourceLabel: string;
+      sourceUrl?: string;
+      asOf?: string;
+    };
+  }>;
   notes: string;
 };
 

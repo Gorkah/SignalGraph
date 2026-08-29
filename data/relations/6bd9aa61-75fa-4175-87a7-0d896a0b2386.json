@@ -1,0 +1,730 @@
+{
+  "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+  "name": "REAL_ESTATE",
+  "introspection": {
+    "properties": [
+      "name",
+      "description",
+      "id"
+    ],
+    "relationships": {
+      "outgoing": [],
+      "incoming": [
+        "OPERATES_IN_INDUSTRY",
+        "AFFECTS_INDUSTRY"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+    "name": "REAL_ESTATE",
+    "entity_type": "Industry",
+    "description": "An industry centered on the development, ownership, and management of land and buildings.",
+    "properties": {
+      "name": {
+        "value": "REAL_ESTATE",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-06-10"
+          }
+        ]
+      },
+      "description": {
+        "value": "An industry centered on the development, ownership, and management of land and buildings.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-21"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {},
+      "incoming": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "000014b3-df93-4cc7-aa0a-07226a025690",
+            "name": "SFP UK IBERIAN HOTEL OPERATIONS LTD",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/14960650",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "a392e935-9ab1-51cf-ac7d-04a4d0863729"
+            }
+          },
+          {
+            "id": "0000616f-b787-4a77-88d2-4f99442d91ab",
+            "name": "SQUARE APE 2 LTD",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/15847936",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "c0c42794-0662-5c35-bd0c-8f27f152846c"
+            }
+          },
+          {
+            "id": "00006482-bf08-406c-8149-2a440bde7280",
+            "name": "RJS LAND PARTNERSHIPS LTD",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "rjslandpartnerships.co.uk",
+                  "document": "http://rjslandpartnerships.co.uk",
+                  "date": "2026-06-09"
+                }
+              ],
+              "id": "c7285138-136d-59db-ab53-21d871a042a6"
+            }
+          },
+          {
+            "id": "000064f3-1abf-45eb-b4f0-13e2042f7e77",
+            "name": "EGGINTON'S RENTALS LTD",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/11919492",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "c6e0ce41-a75f-58b0-80ef-84b9156cd8c2"
+            }
+          },
+          {
+            "id": "00007887-25b9-459f-b7c8-744f247a8f45",
+            "name": "THE GOWERY MANAGEMENT COMPANY LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/10265566",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "8c52c5de-9e52-5141-aff8-eb9a15cd02b0"
+            }
+          },
+          {
+            "id": "000078a7-c1f7-4535-bd74-1cdec32823ce",
+            "name": "STOPFORD PARK ESTATE MANAGEMENT COMPANY LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/17084628",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "d98b35b2-8e4f-5ecb-8234-175271f2fda9"
+            }
+          },
+          {
+            "id": "0000a333-f01c-40d4-a3cd-9dba04359b04",
+            "name": "23 FIR TREE LODGE LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/14231494",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "e0e3b93f-802d-5b46-becc-227bd0645ad8"
+            }
+          },
+          {
+            "id": "0000a549-43b8-422e-b945-4c817303ddcd",
+            "name": "DOMUS DEVELOPMENTS LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/00678738",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "2638b3ee-105b-5c85-8afc-24a9f98a9815"
+            }
+          },
+          {
+            "id": "0000cebb-efb8-48fc-9f23-1170abaec750",
+            "name": "TK & J HOLDINGS LTD",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/16933629",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "43f50597-2321-5b1a-bd26-145edd2352d8"
+            }
+          },
+          {
+            "id": "0000f7a8-f5f9-4bec-b1ed-f5d8ad698918",
+            "name": "FINSBURY LEASECO LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/16913268",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "2dd9da79-6a10-58a5-a714-dd2859362ddd"
+            }
+          },
+          {
+            "id": "00014891-ae3a-4b59-bcc2-0c891aaadb14",
+            "name": "KENCHINGTON LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/00680916",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "d46aa04e-8c84-5e20-93c3-71f4afa69337"
+            }
+          },
+          {
+            "id": "00018339-9050-4985-86ef-aaf290bad44c",
+            "name": "OMNIA HOUSE LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/14275967",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "551a912a-869d-5acb-8ed1-2c42b222399d"
+            }
+          },
+          {
+            "id": "000184c8-9a40-45ee-b188-6b1accf4de7c",
+            "name": "SIX THAMES CIRCLE LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/16334786",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "c877bf29-0c1a-5586-ac7a-a979733e6eab"
+            }
+          },
+          {
+            "id": "0001a6cb-3590-47ad-a893-3f903b80f52a",
+            "name": "ODONESA PROPERTY HOLDINGS LTD",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/16876425",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "f96e9332-5bbc-5aca-9c41-e09546a9c3b4"
+            }
+          },
+          {
+            "id": "0001c803-9d15-4bf5-bb63-6434534dc604",
+            "name": "HOLLY TREE ASSET MANAGEMENT LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/16378412",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "4c68802f-4b0b-55c0-9bec-30a1cb3086a5"
+            }
+          },
+          {
+            "id": "0001d327-3fbb-456a-b0e0-96f12d8050dc",
+            "name": "SARUM PROPERTIES LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/02194078",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "d7a47b01-d29e-54cd-8468-ba596ef97330"
+            }
+          },
+          {
+            "id": "0001d4a7-1d4b-4831-9eb1-52d6fde6aa61",
+            "name": "18 FONTENOY ROAD LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/03989901",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "5446d652-8994-54b6-8ca1-cc2ecf0f9652"
+            }
+          },
+          {
+            "id": "0001d708-a049-496b-86a6-7bfb11d9b83a",
+            "name": "LUXURY COMMERCE (PROPERTY) LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/16075258",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "6cc70ef5-98d5-530b-ad4a-34c9ddf39213"
+            }
+          },
+          {
+            "id": "0001dc13-0b9f-43cf-8592-43f073a8d4df",
+            "name": "PAPA ARCHITECTS LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/04137617",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "a2302c4a-ae6c-5374-85d2-0ffd780f72fc"
+            }
+          },
+          {
+            "id": "0001e163-b313-433a-849f-aeb3e455eaa1",
+            "name": "JACCSS LTD",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Companies House UK",
+                  "document": "https://find-and-update.company-information.service.gov.uk/company/09190781",
+                  "date": "2026-05-01"
+                }
+              ],
+              "id": "bc47bbab-a0ab-566e-8270-1b05962b6f76"
+            }
+          }
+        ],
+        "AFFECTS_INDUSTRY": [
+          {
+            "id": "06da0dee-af80-4bbc-8e48-69bcf05564d2",
+            "name": "Ley Concursal",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "¿Cómo afecta la Ley Concursal a los activos inmobiliarios? - fotocasa - blog profesional",
+                  "document": "https://blogprofesional.fotocasa.es/como-afecta-la-ley-concursal-a-los-activos-inmobiliarios",
+                  "date": "2026-03-24"
+                }
+              ],
+              "id": "bf41ea26-558e-52b6-b497-44fe66e8b254",
+              "valid_since": "2022-09-26"
+            }
+          },
+          {
+            "id": "0780a3bd-9e1d-46aa-888b-72497f1e563b",
+            "name": "Opkoopbescherming",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "global.morningstar.com",
+                  "document": "https://global.morningstar.com/en-ca/markets/will-banning-investment-properties-cool-home-prices-probably-not",
+                  "date": "2026-06-19"
+                },
+                {
+                  "name": "thedutchdaily.nl",
+                  "document": "https://thedutchdaily.nl/homeownership-declines-in-germany-and-netherlands-a-growing-european-trend",
+                  "date": "2026-06-19"
+                }
+              ],
+              "id": "4ca169b1-1d77-565a-8bbd-f24990862418"
+            }
+          },
+          {
+            "id": "07ec0e67-fad9-4b44-8728-a26124de6ab7",
+            "name": "Decreto Legislativo 1/2023",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "jccm.es",
+                  "document": "https://www.jccm.es/viad/documentos/B1D4C64B392BC9504DD877",
+                  "date": "2026-07-09"
+                },
+                {
+                  "name": "Notarios y Registradores",
+                  "document": "https://www.notariosyregistradores.com/web/secciones/oficina-registral/estudios/la-publicidad-registral-en-la-normativa-autonomica-derecho-registral-urbanistico-en-castilla-la-mancha",
+                  "date": "2026-07-09"
+                },
+                {
+                  "name": "jccm.es",
+                  "document": "https://www.jccm.es/sede/tramite/M7A",
+                  "date": "2026-07-09"
+                }
+              ],
+              "id": "c06bca19-d682-59da-9279-60b2dd2c1875"
+            }
+          },
+          {
+            "id": "08dc0afa-49dd-4908-9330-51360aaa02a4",
+            "name": "Hawksbill Creek Agreement",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Grand Bahama Museum",
+                  "document": "https://www.grandbahamamuseum.org/exhibits/history-of-grand-bahama-and-freeport/wallace-groves-island-free-port",
+                  "date": "2026-08-23"
+                }
+              ],
+              "id": "5871ffb0-e9a1-59aa-b080-9e1373d455ff"
+            }
+          },
+          {
+            "id": "0d259107-a2ea-4a09-8c11-57a39aea2346",
+            "name": "RDL 2/2026",
+            "entity_type": "Law",
+            "properties": {
+              "valid_until": "2026-02-26",
+              "sources": [
+                {
+                  "name": "RDL 2/2026 y desahucios: ¿qué protección real mantiene el “escudo social” y dónde empieza a prevalecer el arrendador? - Martell Abogados",
+                  "document": "https://martellabogados.es/rdl-2-2026-y-desahucios-que-proteccion-real-mantiene-el-escudo-social-y-donde-empieza-a-prevalecer-el-arrendador",
+                  "date": "2026-02-23"
+                },
+                {
+                  "name": "Acuerdo de derogación del Real Decreto-ley 2/2026",
+                  "document": "https://www.iustel.com/diario_del_derecho/noticia.asp?ref_iustel=1263581",
+                  "date": "2026-02-01"
+                }
+              ],
+              "id": "2fb67560-d09d-54ac-8dc5-69a0a7d6cac0",
+              "valid_since": "2026-02-03"
+            }
+          },
+          {
+            "id": "0dd70a6a-fefd-463f-bf29-64e5fc8e8e4a",
+            "name": "artículo 1454 del Código Civil",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Arras penitenciales: qué son y consecuencias - Francisco Orozco & Asoc.",
+                  "document": "https://orozcoyasociados.es/derecho-inmobiliario/arras-penitenciales",
+                  "date": "2026-04-09"
+                },
+                {
+                  "name": "en.wikipedia.org",
+                  "document": "https://en.wikipedia.org/wiki/Civil_Code_of_Spain",
+                  "date": "2026-06-01"
+                }
+              ],
+              "id": "cb7f4c20-b81d-5586-ae84-fa4dbe73e0d8",
+              "valid_since": "1889-07-24"
+            }
+          },
+          {
+            "id": "0f0127d8-8010-441c-b9dd-4136fc414868",
+            "name": "Convenio de Ramsar",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "CREDAI challenges construction ban near Pallikaranai Ramsar site, Madras HC seeks CMDA's response",
+                  "document": "https://www.newindianexpress.com/states/tamil-nadu/2026/Mar/04/credai-challenges-construction-ban-near-pallikaranai-ramsar-site-madras-hc-seeks-cmdas-response",
+                  "date": "2026-03-04"
+                }
+              ],
+              "id": "5a91df93-a5bd-5590-aa86-1cd7d076fe2f"
+            }
+          },
+          {
+            "id": "106270c5-93a6-46f8-ba9a-2b9c3a79de8b",
+            "name": "Decreto Legislativo 1/2015",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Agencia Estatal Boletín Oficial del Estado",
+                  "document": "https://www.boe.es/buscar/act.php?lang=va&id=DOG-g-2015-90508&tn=1&p=",
+                  "date": "2026-06-19"
+                },
+                {
+                  "name": "López Abogados",
+                  "document": "https://lopezabogados.org/ley-22016-del-suelo-de-galicia-y-reglamento-1432016-concordado-comentada-y-con-jurisprudencia-titulos-vi-y-vii",
+                  "date": "2026-06-19"
+                }
+              ],
+              "id": "a2235bf1-6cc9-548c-9f35-f5239ce0ac03"
+            }
+          },
+          {
+            "id": "11c0ae36-4f17-4c04-8b57-54289fa62bf3",
+            "name": "Ley 39/2015 del Procedimiento Administrativo Común",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "EL ESPAÑOL - Diario digital, plural, libre, indomable, tuyo",
+                  "document": "https://www.elespanol.com/treintayseis/vigo/20251120/bng-denuncia-irregularidades-graves-respuestas-concello-alegaciones-pxom-vigo/1003744022971_0.html",
+                  "date": "2026-06-23"
+                }
+              ],
+              "id": "6207b7d7-8ff6-5432-96c6-0cb016c4b7f7"
+            }
+          },
+          {
+            "id": "16eb517d-7458-40c4-ab04-01d7dadcacd4",
+            "name": "Wet werkelijk rendement box 3",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "ntlinternational.com",
+                  "document": "https://ntlinternational.com/press/netherlands-box-3-reform-structural-shifts-and-the-36-tax",
+                  "date": "2026-06-19"
+                },
+                {
+                  "name": "Deloitte Sverige | Together makes progress",
+                  "document": "https://www.deloitte.com/nl/en/services/tax/perspectives/wetsvoorstel-wet-werkelijk-rendement-box-3-ingediend-tweede-kamer.html",
+                  "date": "2026-06-19"
+                }
+              ],
+              "id": "af691c35-6aa1-561d-90ea-000cb3f74dc7"
+            }
+          },
+          {
+            "id": "170a6218-b066-4b3a-88f5-a4fa255fe503",
+            "name": "CARES Act",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "newsweek.com",
+                  "document": "https://www.newsweek.com/wells-fargo-settlement-lawsuit-cares-act-payout-11550750",
+                  "date": "2026-07-14"
+                }
+              ],
+              "id": "faebb4b4-befd-5345-b1ac-c4b26bfa0c66"
+            }
+          },
+          {
+            "id": "19c86573-0519-4b3d-93f6-5cdbdabb0bc9",
+            "name": "Ley 15/2022",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.mutualia.eus",
+                  "document": "https://www.mutualia.eus/es/ley-15-2022-de-12-de-julio-boe-13-07-2022-integral-para-la-igualdad-de-trato-y-la-no-discriminacion",
+                  "date": "2026-06-01"
+                }
+              ],
+              "id": "2ee029bc-658f-5572-b114-ba6d95a82453",
+              "valid_since": "2022-07-14"
+            }
+          },
+          {
+            "id": "1a8c4993-56f2-4c92-9a29-5bd80672c2e0",
+            "name": "Ley 29/1994 de Arrendamientos Urbanos",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "noticias.juridicas.com",
+                  "document": "https://noticias.juridicas.com/base_datos/Privado/r0-l29-1994.html",
+                  "date": "2026-05-13"
+                },
+                {
+                  "name": "LEY 29/1994, de 24 de noviembre, de Arrendamientos Urbanos.",
+                  "document": "https://www.iberley.es/legislacion/ley-29-1994-24-noviembre-arrendamientos-urbanos-1301607",
+                  "date": "2004-05-27"
+                }
+              ],
+              "id": "4ecc321a-b42e-5233-8f35-8d0426d88b4a",
+              "valid_since": "1994-11-24"
+            }
+          },
+          {
+            "id": "1c8e0d52-de75-4d66-9206-3ac404d7b44c",
+            "name": "Decreto Legislativo 1/2010",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Actualidad Jurídica Ambiental",
+                  "document": "https://www.actualidadjuridicaambiental.com/legislacion-al-dia-castilla-la-mancha-7",
+                  "date": "2026-07-09"
+                },
+                {
+                  "name": "Actualidad Jurídica Ambiental",
+                  "document": "https://www.actualidadjuridicaambiental.com/legislacion-al-dia-castilla-la-mancha-urbanismo-suelo-rustico-reforestacion",
+                  "date": "2026-07-09"
+                }
+              ],
+              "id": "79a0fb51-3f0c-5d5c-b81e-2467f4c3de78"
+            }
+          },
+          {
+            "id": "1cc448d6-ffc4-4bae-9540-1b3ce81d5406",
+            "name": "RDL 8/2026",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Fundación Hay Derecho",
+                  "document": "https://www.hayderecho.com/?p=94243",
+                  "date": "2026-05-13"
+                }
+              ],
+              "id": "d5ddc56e-58c2-5412-9d5a-6fb63d6b656c"
+            }
+          },
+          {
+            "id": "1e7951d8-bd03-484f-84e0-047b6a0e12e6",
+            "name": "Llei de l'Impost sobre Societats",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Agencia Estatal Boletín Oficial del Estado",
+                  "document": "https://www.boe.es/buscar/act.php?id=BOE-A-2014-12328",
+                  "date": "2026-03-21"
+                },
+                {
+                  "name": "Como declarar correctamente el Impuesto sobre Sociedades",
+                  "document": "https://blogprofesional.fotocasa.es/impuesto-sobre-sociedades-declaracion-inmobiliaria",
+                  "date": "2026-06-29"
+                }
+              ],
+              "id": "947ee26b-3fd2-529e-9a2b-8af86f9a10cd",
+              "valid_since": "2010-12-29"
+            }
+          },
+          {
+            "id": "231bc937-828a-465d-a61f-ad32384cce19",
+            "name": "Act respecting the Caisse de dépôt et placement du Québec",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/",
+                  "date": "2026-06-15"
+                },
+                {
+                  "name": "La Caisse | Groupe mondial d'investissement",
+                  "document": "https://www.cdpq.com/",
+                  "date": "2026-06-15"
+                }
+              ],
+              "id": "a726c56f-deb9-5ecf-9e39-71b15d1abaed"
+            }
+          },
+          {
+            "id": "245d71d7-2ed2-4064-a076-6cc436f596c3",
+            "name": "Ley General Tributaria",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "eleconomista.es",
+                  "document": "https://www.eleconomista.es/opinion/noticias/13763304/02/26/employer-of-record-eor-y-ley-beckham-son-compatibles.html",
+                  "date": "2026-06-06"
+                }
+              ],
+              "id": "fbc1a2fe-d2a8-5b13-8941-9ed1d67058e1"
+            }
+          },
+          {
+            "id": "24aa699e-91d0-45b3-84aa-458fc4ed65a7",
+            "name": "Decreto 571/1963",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "IBI. Edificios con escudo heráldico y exención en el impuesto. | gtt",
+                  "document": "https://www.gtt.es/boletinjuridico/ibi-edificios-con-escudo-heraldico-y-exencion-en-el-impuesto",
+                  "date": "2025-05-06"
+                },
+                {
+                  "name": "La Dirección General de Tributos publica una consulta sobre exención del IBI para las casas blasonadas - Ramhg",
+                  "document": "https://ramhg.es/la-direccion-general-de-tributos-publica-una-consulta-sobre-exencion-del-ibi-para-las-casas-blasonadas",
+                  "date": "2025-02-21"
+                }
+              ],
+              "id": "77e83e5a-0b16-5356-a8a2-3d9efbd515a9",
+              "valid_since": "1963-03-14"
+            }
+          },
+          {
+            "id": "26c7f5dc-1551-4a1c-ba43-f88591913b59",
+            "name": "Decreto 92/2019, de 11 de julio",
+            "entity_type": "Law",
+            "properties": {
+              "sources": [
+                {
+                  "name": "La Administración al Día - Edición de 4/3/2026",
+                  "document": "https://laadministracionaldia.inap.es/noticia.asp?id=1190581",
+                  "date": "2026-06-30"
+                },
+                {
+                  "name": "Portada",
+                  "document": "https://www.xunta.gal/dog/Publicados/2016/20161109/AnuncioG0422-281016-0013_es.html",
+                  "date": "2026-06-30"
+                }
+              ],
+              "id": "e8793b6b-da73-5a8c-a51e-283b45a585b5"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

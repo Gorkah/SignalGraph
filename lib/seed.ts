@@ -5,6 +5,7 @@ import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { loadManifest, clientView } from "@/lib/manifest";
 import { CASE_RELATION } from "@/lib/relations";
+import { entityNameKey } from "@/lib/names";
 import type {
   CalaEntity,
   CalaQueryDump,
@@ -62,7 +63,7 @@ const MONTHS: Record<string, string> = {
 };
 
 function normalized(value: string) {
-  return value.toLocaleLowerCase("en").replace(/[^a-z0-9]+/g, "");
+  return entityNameKey(value);
 }
 
 function principal(result: CalaResult) {
@@ -321,12 +322,27 @@ function buildCase(dumps: ReturnType<typeof loadCalaDumps>, manifest: ReturnType
 
   const cards = buildCards(dumps, manifest);
   const edges = [...caseEdges];
+  const questions = (manifest?.questions ?? []).slice(0, 2).map((question, index) => ({
+    ...question,
+    state: "open" as const,
+    // Las preguntas viven dentro del anillo, debajo del caso. El agente decide
+    // qué preguntar, no coordenadas: esa frontera sigue intacta.
+    position: {
+      x: snapTo(CENTRE.x + (index === 0 ? -500 : 260)),
+      y: snapTo(CENTRE.y + 190),
+    },
+  }));
 
   // El id sale del contenido: si cambia la semilla o el layout, el tablón
   // guardado en localStorage deja de coincidir y se regenera solo. Sin esto,
   // cualquier ajuste de posición queda invisible tras el primer render.
   const signature = createHash("sha1")
-    .update(JSON.stringify([focus.position, cards.map((c) => [c.id, c.position]), edges.map((e) => e.id)]))
+    .update(JSON.stringify([
+      focus.position,
+      cards.map((c) => [c.id, c.position]),
+      edges.map((e) => e.id),
+      questions.map((q) => [q.id, q.prompt, q.position]),
+    ]))
     .digest("hex")
     .slice(0, 8);
 
@@ -336,12 +352,14 @@ function buildCase(dumps: ReturnType<typeof loadCalaDumps>, manifest: ReturnType
     focus,
     cards,
     edges,
+    questions,
   };
 }
 
-function buildFallbackDossier(dumps: ReturnType<typeof loadCalaDumps>): Dossier {
-  const entry = dumps.find(({ dump }) => dump.input === DEFAULT_REPORT_QUERY);
-  if (!entry) throw new Error(`Fallback dossier missing for ${DEFAULT_REPORT_QUERY}`);
+function buildFallbackDossier(dumps: ReturnType<typeof loadCalaDumps>, query: string): Dossier {
+  const entry = dumps.find(({ dump }) => dump.input === query)
+    ?? dumps.find(({ dump }) => dump.input === DEFAULT_REPORT_QUERY);
+  if (!entry) throw new Error(`Fallback dossier missing for ${query}`);
   const candidates = (entry.dump.data?.results ?? []).map((result) => {
     const name = principal(result) ?? "Entidad sin nombre";
     const entity = entityForName(name, [entry]);
@@ -366,10 +384,11 @@ function buildFallbackDossier(dumps: ReturnType<typeof loadCalaDumps>): Dossier 
 export function getSeedPayload(): SeedPayload {
   const dumps = loadCalaDumps();
   const manifest = loadManifest();
+  const reportQuery = manifest?.query ?? DEFAULT_REPORT_QUERY;
   return {
     caseView: clientView(manifest),
     researchCase: buildCase(dumps, manifest),
-    fallbackDossier: buildFallbackDossier(dumps),
-    defaultReportQuery: DEFAULT_REPORT_QUERY,
+    fallbackDossier: buildFallbackDossier(dumps, reportQuery),
+    defaultReportQuery: reportQuery,
   };
 }

@@ -121,6 +121,7 @@ const manifest = z.object({
     relation: z.string().describe("Tipo de relación que significa 'abrir' una ficha, p. ej. INVESTED_IN"),
     label: z.string().describe("Cómo lo llama la interfaz: cartera, expediente, entorno…"),
     noun: z.string().describe("Sustantivo simétrico del hilo, p. ej. inversión"),
+    hidden: z.boolean().optional().describe("true si el caso no tiene una única cartera común y debe usar el cajón de relaciones de cada ficha"),
   }),
   ring: z.array(z.object({
     id: z.string(),
@@ -167,6 +168,25 @@ const manifest = z.object({
     template: z.string().describe("Con {holders} y {target}"),
     toast: z.string().describe("Con {holders} y {target}"),
   }),
+  questions: z.array(z.object({
+    id: z.string(),
+    prompt: z.string(),
+    lane: z.enum(["archive", "web"]),
+    target: z.object({
+      id: z.string(),
+      name: z.string(),
+      entityType: z.string(),
+      relation: z.string(),
+      preferred: z.array(z.string()).max(5),
+    }).optional(),
+    answer: z.object({
+      title: z.string(),
+      body: z.string(),
+      sourceLabel: z.string(),
+      sourceUrl: z.string().optional(),
+      asOf: z.string().optional(),
+    }),
+  })).max(2).optional().default([]),
   notes: z.string().describe("Falsos positivos descartados, dudas, por qué quedó algo fuera"),
 });
 

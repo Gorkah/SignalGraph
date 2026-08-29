@@ -15,6 +15,7 @@ export function SignalGraphApp({ seed }: { seed: SeedPayload }) {
   const graph = useBoardStore((state) => state.researchCase);
   const toast = useBoardStore((state) => state.toast);
   const setToast = useBoardStore((state) => state.setToast);
+  const archiveBudget = useBoardStore((state) => state.archiveBudget);
 
   useEffect(() => {
     void Promise.resolve(useBoardStore.persist.rehydrate()).then(() => {
@@ -45,6 +46,7 @@ export function SignalGraphApp({ seed }: { seed: SeedPayload }) {
           <span>FICHAS <b>{graph.cards.filter((card) => card.density === "full").length}</b></span>
           <span>PISTAS <b>{graph.cards.filter((card) => card.density === "lead").length}</b></span>
           <span>HILOS <b>{graph.edges.length}</b></span>
+          <span>ARCHIVO <b>{archiveBudget}/10</b></span>
         </div>
       </header>
       <div className="workspace">

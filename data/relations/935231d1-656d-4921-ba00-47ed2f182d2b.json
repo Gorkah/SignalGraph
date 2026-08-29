@@ -1,0 +1,678 @@
+{
+  "id": "935231d1-656d-4921-ba00-47ed2f182d2b",
+  "name": "idealista",
+  "introspection": {
+    "properties": [
+      "description",
+      "website",
+      "headquarters_address",
+      "id",
+      "name",
+      "registered_address",
+      "legal_name",
+      "lei",
+      "founding_date",
+      "employee_count"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY",
+        "INVESTED_IN",
+        "PARTICIPATES_IN_CORPORATE_EVENT",
+        "IS_REGISTERED_IN",
+        "IS_DIRECT_PARENT_OF",
+        "HAS_HEADQUARTERS_IN"
+      ],
+      "incoming": [
+        "INVESTED_IN",
+        "IS_CEO_OF",
+        "IS_MEMBER_OF",
+        "FOUNDED",
+        "IS_DIRECT_PARENT_OF",
+        "DESIGNED_BY",
+        "WORKS_AT"
+      ]
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "935231d1-656d-4921-ba00-47ed2f182d2b",
+    "name": "idealista",
+    "entity_type": "Company",
+    "description": "Spanish proptech company founded in 2000, headquartered in Madrid, that provides internet and web services for the real‑estate market.",
+    "properties": {
+      "name": {
+        "value": "idealista",
+        "sources": [
+          {
+            "name": "Portfolio Companies Archive | Cinven - Focused European Integrated World-class",
+            "document": "https://cinven.com/portfolio",
+            "date": "2026-03-24"
+          }
+        ]
+      },
+      "description": {
+        "value": "Spanish proptech company founded in 2000, headquartered in Madrid, that provides internet and web services for the real‑estate market.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-22"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+            "name": "REAL_ESTATE",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.novobrief.com",
+                  "document": "https://www.novobrief.com/bonsai-venture-capital-exits/3786/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/bonsaipartners/__sAHGP6k9iQGZ4Q9mT-bNYGtbdP5GyvSk5VEAKWCvUYs",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "e4ef2074-f50c-4ec6-b376-615e209c85a2"
+            }
+          },
+          {
+            "id": "bb7858a2-51d8-45e2-82bd-3ea6a06d317a",
+            "name": "INTERNET_AND_WEB_SERVICES",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.novobrief.com",
+                  "document": "https://www.novobrief.com/bonsai-venture-capital-exits/3786/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/bonsaipartners/__sAHGP6k9iQGZ4Q9mT-bNYGtbdP5GyvSk5VEAKWCvUYs",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "cec32ffd-8c7b-4522-9467-e03874a01080"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "935231d1-656d-4921-ba00-47ed2f182d2b",
+            "name": "idealista",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/tag/travelperk/feed",
+                  "date": "2026-06-09"
+                }
+              ],
+              "id": "52a1be90-b568-5a1c-9cd6-7dfe3068190f"
+            }
+          }
+        ],
+        "PARTICIPATES_IN_CORPORATE_EVENT": [
+          {
+            "id": "09b5033c-28f8-4e21-b7e7-157daa7730d9",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/idealista/__sXD_5Siaw2Yv2srB1gBJMZXnM8sOfQ2M6WdHbaZw8Qc",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/idealista/__sXD_5Siaw2Yv2srB1gBJMZXnM8sOfQ2M6WdHbaZw8Qc/funding-and-investors",
+                  "date": "2026-05-11"
+                }
+              ],
+              "event_date": "2021-01-26",
+              "id": "d8e6459f-8dfa-4949-856d-10f4696a85d3"
+            }
+          },
+          {
+            "id": "c497ae76-4ccb-474c-9679-6acd83559f7e",
+            "name": "MNA_COMPLETED",
+            "entity_type": "CorporateEvent",
+            "properties": {
+              "role": "TARGET",
+              "sources": [
+                {
+                  "name": "Cinven agrees to acquire a majority stake in idealista | Cinven - Focused European Integrated World-class",
+                  "document": "https://www.cinven.com/news-insights/cinven-agrees-to-acquire-a-majority-stake-in-idealista",
+                  "date": "2024-06-28"
+                },
+                {
+                  "name": "EQT to sell majority stake in real estate platform | EQT",
+                  "document": "https://eqtgroup.com/en/news/eqt-to-sell-majority-stake-in-real-estate-platform-idealista-in-eur-29-billion-transaction-2024-06-28",
+                  "date": "2024-06-28"
+                },
+                {
+                  "name": "EQT to sell majority stake in real estate platform idealista in EUR 2.9 billion transaction",
+                  "document": "https://www.prnewswire.com/news-releases/eqt-to-sell-majority-stake-in-real-estate-platform-idealista-in-eur-2-9-billion-transaction-302185515.html",
+                  "date": "2024-06-28"
+                },
+                {
+                  "name": "ec.europa.eu",
+                  "document": "https://ec.europa.eu/competition/mergers/cases1/202444/M_11654_10320571_175_3.pdf",
+                  "date": "2026-07-29"
+                }
+              ],
+              "event_date": "2024-06-28",
+              "id": "410b4810-8d16-4c77-af33-29432d0f0fce"
+            }
+          },
+          {
+            "id": "d078adf3-124e-4b75-9e9a-4dc19ef5c3b9",
+            "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+            "entity_type": "PrivateCompanyFundingRound",
+            "properties": {
+              "role": "ISSUER",
+              "sources": [
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/idealista/__sXD_5Siaw2Yv2srB1gBJMZXnM8sOfQ2M6WdHbaZw8Qc",
+                  "date": "2026-05-11"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/companies/idealista/__sXD_5Siaw2Yv2srB1gBJMZXnM8sOfQ2M6WdHbaZw8Qc/funding-and-investors",
+                  "date": "2026-05-11"
+                }
+              ],
+              "event_date": "2022-12-21",
+              "id": "602914a9-c114-4da6-992b-0431fe04133f"
+            }
+          }
+        ],
+        "IS_REGISTERED_IN": [
+          {
+            "id": "16cecda7-3371-454b-af6e-10103db76161",
+            "name": "Madrid",
+            "entity_type": "CountrySubdivision",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/959800B18KTHAPP4D880",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "a8ca2c34-c4ee-5187-a97c-1cbf80010310"
+            }
+          },
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/959800B18KTHAPP4D880",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "c1bbddf4-6557-5649-a45b-eb651852ef23"
+            }
+          }
+        ],
+        "IS_DIRECT_PARENT_OF": [
+          {
+            "id": "237410fd-1771-4f49-9d68-080c9772912c",
+            "name": "AVAIBOOK ON-LINE SOCIEDAD LIMITADA",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/984500F2B3EQ5EU74539",
+                  "date": "2026-06-02"
+                }
+              ],
+              "id": "86ef17ca-9d2e-5f78-8432-a0fb50e23bb4",
+              "valid_since": "2021-01-01"
+            }
+          },
+          {
+            "id": "674353f7-3319-424b-822f-783c666805fc",
+            "name": "APLICACIONES INMOVILLA SL",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/959800SW0R773Y3F5V40",
+                  "date": "2026-08-16"
+                }
+              ],
+              "id": "5d9408cc-5e35-5e33-acf9-0a64cfa9f3ad",
+              "valid_since": "2024-05-06"
+            }
+          }
+        ],
+        "HAS_HEADQUARTERS_IN": [
+          {
+            "id": "16cecda7-3371-454b-af6e-10103db76161",
+            "name": "Madrid",
+            "entity_type": "CountrySubdivision",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/959800B18KTHAPP4D880",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "ac001fd4-da60-55e4-a436-fef31fbef195"
+            }
+          },
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.novobrief.com",
+                  "document": "https://www.novobrief.com/bonsai-venture-capital-exits/3786/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/bonsaipartners/__sAHGP6k9iQGZ4Q9mT-bNYGtbdP5GyvSk5VEAKWCvUYs",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "1fb944cf-bf7e-49a3-bb07-e4186e8f81d3"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "INVESTED_IN": [
+          {
+            "id": "1b109cbb-2c95-4b01-a1a8-ab347959fd7c",
+            "name": "CINVEN PARTNERS LLP",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio Companies Archive | Cinven - Focused European Integrated World-class",
+                  "document": "https://cinven.com/portfolio",
+                  "date": "2026-03-24"
+                }
+              ],
+              "id": "4e5edfdf-18ea-4a8d-9f41-aaa4c01772ae"
+            }
+          },
+          {
+            "id": "30e1ac14-327f-4cb2-9201-03d330df83bc",
+            "name": "OAKLEY CAPITAL LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Preqin | Alternative Assets Data, Solutions and Insights",
+                  "document": "https://www.preqin.com/news/eqt-sells-majority-stake-in-idealista-in-eur2-9bn-tertiary-buyout",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "SUR in English - Spanish news in English",
+                  "document": "https://www.surinenglish.com/spain/british-firm-acquires-share-spains-leading-property-20240628115940-nt.html",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "Valencia Plaza - Noticias de última hora y actualidad",
+                  "document": "https://valenciaplaza.com/valenciaplaza/cinven-adquiere-idealista-2900-millones-eqt-pasa-a-tener-participacion-18",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "Ground News",
+                  "document": "https://ground.news/article/cinven-closes-the-purchase-of-idealista-with-a-final-value-of-2-925-million",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "f9a10ce4-da48-58b5-a245-f8b657132e53"
+            }
+          },
+          {
+            "id": "32dbb62d-b755-563b-8da5-3833bf780fb3",
+            "name": "Apax Partners",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Preqin | Alternative Assets Data, Solutions and Insights",
+                  "document": "https://www.preqin.com/news/eqt-sells-majority-stake-in-idealista-in-eur2-9bn-tertiary-buyout",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "SUR in English - Spanish news in English",
+                  "document": "https://www.surinenglish.com/spain/british-firm-acquires-share-spains-leading-property-20240628115940-nt.html",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "Valencia Plaza - Noticias de última hora y actualidad",
+                  "document": "https://valenciaplaza.com/valenciaplaza/cinven-adquiere-idealista-2900-millones-eqt-pasa-a-tener-participacion-18",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "0668503e-25e2-5bec-b6ab-1440f5895757"
+            }
+          },
+          {
+            "id": "47d0d672-b1aa-4f37-affe-58b492434471",
+            "name": "Apax Partners",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "idealista (2015) | Apax Partners",
+                  "document": "https://www.apax.com/partnerships/idealista-2015",
+                  "date": "2026-01-05"
+                }
+              ],
+              "id": "bce39d68-4c88-511d-b2f1-8c4af7ac2376",
+              "valid_since": "2015-01-01"
+            }
+          },
+          {
+            "id": "68fc9d2f-a4b4-4a95-a0ec-6c6e5b535f3a",
+            "name": "APAX PARTNERS LLP",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "pitchbook.com",
+                  "document": "https://pitchbook.com/newsletter/apax-to-exit-idealista-to-eqt-for-13b",
+                  "date": "2026-05-11"
+                }
+              ],
+              "id": "43681a41-25af-4f15-a2cd-6730808a542c"
+            }
+          },
+          {
+            "id": "90a14e58-f1bd-4d89-a559-f7305b815a55",
+            "name": "Apax Partners",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "All Investments (Listed Alphabetically) | Apax Partners",
+                  "document": "https://www.apax.com/all-investments-listed-alphabetically",
+                  "date": "2026-01-01"
+                }
+              ],
+              "id": "fe1b01df-0998-5b72-8eae-6c88d154ccb7"
+            }
+          },
+          {
+            "id": "935231d1-656d-4921-ba00-47ed2f182d2b",
+            "name": "idealista",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Startups Real - News about startups and entrepreneurs in Spain",
+                  "document": "https://startupsreal.com/tag/travelperk/feed",
+                  "date": "2026-06-09"
+                }
+              ],
+              "id": "52a1be90-b568-5a1c-9cd6-7dfe3068190f"
+            }
+          },
+          {
+            "id": "96af50a4-8481-407f-81c6-375ea572f6fd",
+            "name": "Bonsai Partners",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Backing tech leaders since 2001",
+                  "document": "https://bonsaipartners.eu",
+                  "date": "2026-01-01"
+                }
+              ],
+              "id": "6c110432-f12e-5137-90b7-9a2719ee6019"
+            }
+          },
+          {
+            "id": "b75483e8-687f-5f0e-8a69-db4805d2e9c9",
+            "name": "Eqt Ab (Publ)",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Preqin | Alternative Assets Data, Solutions and Insights",
+                  "document": "https://www.preqin.com/news/eqt-sells-majority-stake-in-idealista-in-eur2-9bn-tertiary-buyout",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "SUR in English - Spanish news in English",
+                  "document": "https://www.surinenglish.com/spain/british-firm-acquires-share-spains-leading-property-20240628115940-nt.html",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "Valencia Plaza - Noticias de última hora y actualidad",
+                  "document": "https://valenciaplaza.com/valenciaplaza/cinven-adquiere-idealista-2900-millones-eqt-pasa-a-tener-participacion-18",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "irei.com",
+                  "document": "https://irei.com/news/eqt-to-sell-majority-stake-in-real-estate-platform-idealista-in-e2-9b-transaction",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "Creating value that creates more value.",
+                  "document": "https://www.eqtgroup.com/news/eqt-to-sell-majority-stake-in-real-estate-platform-idealista-in-eur-29-billion-transaction-2024-06-28",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "041ea5ee-cec0-57e7-b7fa-54cdba438bf8"
+            }
+          },
+          {
+            "id": "e0f3466e-9da6-435a-ab55-cb96ba8424f4",
+            "name": "BONSAI VENTURE CAPITAL SA",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.novobrief.com",
+                  "document": "https://www.novobrief.com/bonsai-venture-capital-exits/3786/",
+                  "date": "2026-05-10"
+                },
+                {
+                  "name": "tracxn.com",
+                  "document": "https://tracxn.com/d/venture-capital/bonsaipartners/__sAHGP6k9iQGZ4Q9mT-bNYGtbdP5GyvSk5VEAKWCvUYs",
+                  "date": "2026-05-10"
+                }
+              ],
+              "id": "6cdad8ce-f03b-4246-a17c-414700723887"
+            }
+          },
+          {
+            "id": "ea5eefb1-f430-46a3-bb06-2609999cb6ce",
+            "name": "Apax Partners",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "idealista (2015) | Apax Partners",
+                  "document": "https://www.apax.com/partnerships/idealista-2015",
+                  "date": "2026-01-05"
+                }
+              ],
+              "id": "1a20e2c9-adc2-5c93-b51f-06358734b404",
+              "valid_since": "2015-01-01"
+            }
+          }
+        ],
+        "IS_CEO_OF": [
+          {
+            "id": "abc036f9-8750-430c-ab1d-c2726c35bdd1",
+            "name": "Jesús Encinar",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Preqin | Alternative Assets Data, Solutions and Insights",
+                  "document": "https://www.preqin.com/news/eqt-sells-majority-stake-in-idealista-in-eur2-9bn-tertiary-buyout",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "SUR in English - Spanish news in English",
+                  "document": "https://www.surinenglish.com/spain/british-firm-acquires-share-spains-leading-property-20240628115940-nt.html",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "Creating value that creates more value.",
+                  "document": "https://www.eqtgroup.com/news/eqt-to-sell-majority-stake-in-real-estate-platform-idealista-in-eur-29-billion-transaction-2024-06-28",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "0f7c9cb0-3711-5409-aa3e-a681e7c377d7"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "24cc6c1e-8913-49d8-80aa-6c29b61e2e9d",
+            "name": "Beatriz González",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Independent board member",
+              "sources": [
+                {
+                  "name": "www.lavca.org",
+                  "document": "https://www.lavca.org/people/beatriz-gonzalez",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "rocketreach.co",
+                  "document": "https://rocketreach.co/beatriz-gonzalez-email_4842271",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "e2e81137-8d34-5f6a-ae30-e021eafd5a87"
+            }
+          }
+        ],
+        "FOUNDED": [
+          {
+            "id": "abc036f9-8750-430c-ab1d-c2726c35bdd1",
+            "name": "Jesús Encinar",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Preqin | Alternative Assets Data, Solutions and Insights",
+                  "document": "https://www.preqin.com/news/eqt-sells-majority-stake-in-idealista-in-eur2-9bn-tertiary-buyout",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "c86dec42-1322-50a7-993b-1d7c73ef7096"
+            }
+          }
+        ],
+        "IS_DIRECT_PARENT_OF": [
+          {
+            "id": "c5d95eca-7b96-4393-9cfd-f977747c14e0",
+            "name": "IDEALISTA GLOBAL SA",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/959800B18KTHAPP4D880",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "439c9227-6d6b-54d2-8823-60aa6f6d0bcc",
+              "valid_since": "2022-07-22"
+            }
+          }
+        ],
+        "DESIGNED_BY": [
+          {
+            "id": "31a00080-a85d-4917-ac73-1bb57d507e63",
+            "name": "Inmovilla",
+            "entity_type": "Product",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.trustpilot.com",
+                  "document": "https://www.trustpilot.com/review/inmovilla.com",
+                  "date": "2026-06-02"
+                },
+                {
+                  "name": "idealista adquiere Inmovilla",
+                  "document": "https://www.idealista.com/news/inmobiliario/blog-de-idealista/2022/06/10/797139-idealista-adquiere-inmovilla",
+                  "date": "2022-06-10"
+                }
+              ],
+              "id": "cd182d5b-a6af-5106-881b-0ebf23b3fa36"
+            }
+          }
+        ],
+        "WORKS_AT": [
+          {
+            "id": "24cc6c1e-8913-49d8-80aa-6c29b61e2e9d",
+            "name": "Beatriz González",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Board Member",
+              "sources": [
+                {
+                  "name": "www.lavca.org",
+                  "document": "https://www.lavca.org/people/beatriz-gonzalez",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "7e1f129e-4d58-5c74-b4f1-1d29c10552c4"
+            }
+          },
+          {
+            "id": "abc036f9-8750-430c-ab1d-c2726c35bdd1",
+            "name": "Jesús Encinar",
+            "entity_type": "Person",
+            "properties": {
+              "role": "CEO",
+              "sources": [
+                {
+                  "name": "Jesús Encinar - SeedRocket",
+                  "document": "https://www.seedrocket.com/mentores/mentores-nuestros/jesus-encinar",
+                  "date": "2024-11-18"
+                },
+                {
+                  "name": "Fesabid 2009 - XI Jornadas Españolas de Documentación",
+                  "document": "https://www.fesabid.org/zaragoza2009/index37d8.html?page_id=1358",
+                  "date": "2009-02-01"
+                }
+              ],
+              "id": "be4c213e-2f9f-57c7-9467-a02ed1b527ff"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

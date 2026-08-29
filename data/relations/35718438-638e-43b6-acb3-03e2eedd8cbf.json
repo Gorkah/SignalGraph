@@ -1,0 +1,2193 @@
+{
+  "id": "35718438-638e-43b6-acb3-03e2eedd8cbf",
+  "name": "AEDAS HOMES SA",
+  "introspection": {
+    "properties": [
+      "description",
+      "aliases",
+      "headquarters_address",
+      "id",
+      "name",
+      "registered_address",
+      "lei",
+      "legal_name",
+      "founding_date",
+      "nif",
+      "employee_count"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY",
+        "IS_MEMBER_OF",
+        "IS_REGISTERED_IN",
+        "IS_DIRECT_PARENT_OF",
+        "IS_ULTIMATE_PARENT_OF",
+        "HAS_HEADQUARTERS_IN"
+      ],
+      "incoming": [
+        "IS_CEO_OF",
+        "IS_MEMBER_OF",
+        "IS_VICEPRESIDENT_OF",
+        "IS_DIRECT_PARENT_OF",
+        "IS_BOARD_MEMBER_OF",
+        "IS_ULTIMATE_PARENT_OF",
+        "WORKS_AT"
+      ]
+    },
+    "numerical_observations": {
+      "FinancialMetric": [
+        {
+          "id": "7b1e81b3-b39c-5b0b-b5a1-1c8b672d95b6",
+          "name": "Inmovilizado intangible > b) Otro inmovilizado intangible",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "7072a2dd-3d61-516e-910b-ed1fdb85cd33",
+          "name": "Deudores comerciales y otras cuentas a cobrar > a) Clientes por ventas y prestaciones de servicios",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "273a85fc-7766-516e-baf8-5618c7be5fbf",
+          "name": "Deudores comerciales y otras cuentas a cobrar > b) Otros deudores",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "d6f5e84f-891c-5d4e-a768-627773f81498",
+          "name": "Deudores comerciales y otras cuentas a cobrar > c) Activos por impuesto corriente",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "246a5aee-eff0-5804-8211-f4d4bdf348a8",
+          "name": "TOTAL ACTIVO (Activo No Corriente + Activo Corriente)",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "5061c991-4fc0-58f0-a647-332056610737",
+          "name": "PATRIMONIO NETO (Fondos Propios + Otro Resultado Integral Acumulado + Participaciones No Controladoras)",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "3f3dc9d5-79a5-5f23-a280-87c99999f637",
+          "name": "Capital > a) Capital escriturado",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "6efff0f7-e291-58c6-977f-4269cf5e0993",
+          "name": "PATRIMONIO NETO ATRIBUIDO A LA ENTIDAD CONTROLADORA (Fondos Propios + Otro Resultado Integral Acumulado)",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "2463132c-254b-584c-9416-90fe1d2f5d96",
+          "name": "Pasivos financieros no corrientes > a) Deudas con entidades de crédito y obligaciones u otros valores negociables",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "391a7972-6955-5207-84af-c71b3ecf1889",
+          "name": "Pasivos financieros no corrientes > b) Otros pasivos financieros",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "9dcae617-70fa-5332-8a26-a8328d33cfea",
+          "name": "Pasivos financieros corrientes > a) Deudas con entidades de crédito y obligaciones u otros valores negociables",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "f99852ff-ddbe-5c7b-8fd7-a4b545b56bc7",
+          "name": "Pasivos financieros corrientes > b) Otros pasivos financieros",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "c7fc4f4f-8ba3-5470-84ba-e12182a6e62a",
+          "name": "Acreedores comerciales y otras cuentas a pagar > a) Proveedores",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "68f48ff2-166d-55db-a14c-509b1a962b29",
+          "name": "Acreedores comerciales y otras cuentas a pagar > b) Otros acreedores",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "c0dc0b7b-5079-5a62-93f8-4d7bc9a28820",
+          "name": "TOTAL PASIVO Y PATRIMONIO NETO (Patrimonio Neto + Pasivo No Corriente + Pasivo Corriente)",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "87f3a7c0-7ddc-5c21-87f3-ffbd241f7f78",
+          "name": "Saldo final",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "8d5aa8a3-41b7-5ab4-8f21-e0d541cf3e87",
+          "name": "Saldo inicial ajustado",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "98393a0d-823b-5012-a0e4-11f07ff2e5c6",
+          "name": "FLUJOS DE EFECTIVO DE LAS ACTIVIDADES DE EXPLOTACION (Resultado antes de impuestos + Ajustes + Cambios capital corriente + Otros flujos)",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": "FLUJOS DE EFECTIVO DE LAS ACTIVIDADES DE EXPLOTACION (Resultado antes de impuestos + Ajustes + Cambios capital corriente + Otros flujos) extracted from a corporate report (cnmv-ipp, euro, 6m)."
+        },
+        {
+          "id": "9ef0f9d3-137d-5c22-a762-ae02f38b89b2",
+          "name": "Ajustes del resultado > (+) Amortización del inmovilizado",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "37cb7a9d-0261-5aca-b6ff-95dbf8cc1373",
+          "name": "Ajustes del resultado > (+/-) Otros ajustes del resultado (netos)",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "0d199c33-af23-5309-8463-aac94d9261af",
+          "name": "Otros flujos de efectivo de las actividades de explotación > (-) Pagos de intereses",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "6058eda2-5cff-5af0-bc77-4bd782ec088f",
+          "name": "FLUJOS DE EFECTIVO DE LAS ACTIVIDADES DE INVERSION (Pagos por inversiones + Cobros por desinversiones + Otros)",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "5478aeba-6d58-5a8b-ad4e-1ed67b0e0c55",
+          "name": "Pagos por inversiones > (-) Empresas del grupo, asociadas y unidades de negocio",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "9fb730f0-b60a-5abb-8009-632cf6b619f6",
+          "name": "Pagos por inversiones > (-) Otros activos financieros",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "39478145-32f4-5a99-98e9-1e6a65bdd21d",
+          "name": "Cobros por desinversiones > (+) Inmovilizado material, intangible e inversiones inmobiliarias",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "92aa1e85-cd60-5e45-bdba-274c18901166",
+          "name": "FLUJOS DE EFECTIVO DE LAS ACTIVIDADES DE FINANCIACION (Instrumentos de patrimonio + Instrumentos de pasivo financiero + Pagos dividendos + Otros)",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "ab798f55-1741-5b98-8202-9f63dfdd842e",
+          "name": "Cobros y (pagos) por instrumentos de pasivo financiero > (+) Emisión",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "3f3915f0-8846-587d-b74f-58cb97aa6611",
+          "name": "Cobros y (pagos) por instrumentos de pasivo financiero > (-) Devolución y amortización",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "b46d7bd6-9b8f-5d67-9dea-a9a98710c38b",
+          "name": "AUMENTO/(DISMINUCION) NETO DE EFECTIVO Y EQUIVALENTES (Flujos Explotacion + Flujos Inversion + Flujos Financiacion + Efecto Tipos de Cambio)",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "6f4cbddb-09bc-59cd-a9c7-59de637347ac",
+          "name": "EFECTIVO Y EQUIVALENTES AL FINAL DEL PERIODO (Aumento Neto + Efectivo al Inicio del Periodo)",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "54cd0979-08f9-5334-9efc-72d67859b7f3",
+          "name": "(+) Caja y bancos",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "f3640fa4-8c7a-5f55-b98b-29d128338046",
+          "name": "TOTAL EFECTIVO Y EQUIVALENTES AL FINAL DEL PERIODO",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": "TOTAL EFECTIVO Y EQUIVALENTES AL FINAL DEL PERIODO extracted from a corporate report (cnmv-ipp, euro, 6m)."
+        },
+        {
+          "id": "bbfcbfde-db2f-51e6-b389-2c52da8d5d2b",
+          "name": "Mercado nacional",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "2e2cee49-4b9d-5d7f-92d3-b5615c9ac7bc",
+          "name": "Area Geografica > TOTAL",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "d033495b-4b92-5a6a-bd6b-c87ccec5eb2b",
+          "name": "PLANTILLA MEDIA",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "b5b4591e-7b6e-5edb-a97b-04c6ecfcf000",
+          "name": "Hombres",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "78358f6a-2a33-5bfb-a7b9-8042b9e6449c",
+          "name": "Mujeres",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "bf5c2751-3d2c-572e-90be-a27e9e5ef142",
+          "name": "Retribución variable en efectivo",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "81bcc3cb-6d9d-51eb-93d1-0733384ac408",
+          "name": "Sistemas de ahorro a largo plazo",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "24c2c530-9472-5b59-add3-5687e8042eb6",
+          "name": "Remuneraciones del Consejo > TOTAL",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "ffc7ed8d-f498-5f41-a534-1b9777e4a3d9",
+          "name": "Pagos por inversiones > (-) Inmovilizado material, intangible e inversiones inmobiliarias",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "68866011-6d27-53ce-9487-25524c57a014",
+          "name": "Sistemas de retribución basados en acciones",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "8a4a3090-0584-561c-93e4-951a66e7dd6f",
+          "name": "Activos financieros no corrientes > c) A coste amortizado",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "eeb57e48-4f40-506f-b38a-c00a8a9792f4",
+          "name": "Activos financieros corrientes > c) A coste amortizado",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "5dba9559-4da6-5968-959e-66e7243121bc",
+          "name": "(+) Importe neto de la cifra de negocios",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "365027db-38ef-5c6d-a71f-b6ae50f35d12",
+          "name": "(+/-) Variación de existencias de productos terminados y en curso de fabricación",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "0d71bd1a-66c8-58c9-bc17-8a8ddb43ae04",
+          "name": "(-) Aprovisionamientos",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "85ee934c-f780-5566-bbcc-90f5b3c13f9e",
+          "name": "(+) Otros ingresos de explotación",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "4a82e809-4cc4-5348-b7a8-2cdcf3aff9e8",
+          "name": "(-) Gastos de personal",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "40d7db03-94e1-544b-a1b7-3befbf09283a",
+          "name": "(-) Otros gastos de explotación",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "842dfb92-6fa3-5eaf-9b52-9466dc9f3710",
+          "name": "(-) Amortización del inmovilizado",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "73345a96-4b1a-5e58-8c4d-c94ea101a99a",
+          "name": "= RESULTADO DE EXPLOTACIÓN",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "7252b1d6-9512-5ac2-b0cc-c36cc1271469",
+          "name": "(+) Ingresos financieros",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "1cfc8a6b-4e8d-5afe-ab19-79855e59644a",
+          "name": "Ingresos financieros > b) Resto",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "7f6e4d33-a979-5115-bd31-5308479a58a3",
+          "name": "(-) Gastos financieros",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "6aa9840e-57ed-5512-b1f7-44e4fcee879d",
+          "name": "(+/-) Diferencias de cambio",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "9e28bcc3-ee8d-5b8d-90e4-e2b151e2582c",
+          "name": "(+/-) Pérdida/Reversión por deterioro de instrumentos financieros",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "46c39e4a-0149-5fea-b531-2317df178f3e",
+          "name": "(+/-) Resultado por enajenaciones de instrumentos financieros",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "05c3d5b2-4441-5e15-9be0-414bc3c19139",
+          "name": "= RESULTADO FINANCIERO",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "a8f25ebd-f171-562f-9f50-0510386a48ef",
+          "name": "(+/-) Resultado de entidades valoradas por el método de la participación",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "3a1138ae-e88f-5196-bf61-968aa91ad319",
+          "name": "= RESULTADO ANTES DE IMPUESTOS",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "5db82cf9-a788-5254-8963-2d5ef69e0315",
+          "name": "(+/-) Impuesto sobre beneficios",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "8ed051a5-bd9c-5548-b8aa-1497b4633eee",
+          "name": "= RESULTADO DEL PERIODO PROCEDENTE DE OPERACIONES CONTINUADAS",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "ce5b8020-8bd5-5088-90e1-4f37fa499067",
+          "name": "= RESULTADO CONSOLIDADO DEL PERIODO",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "61891f6f-4af6-586f-9f3d-a3ec052b5814",
+          "name": "RESULTADO CONSOLIDADO DEL PERIODO > a) Resultado atribuido a la entidad controladora",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "3c1fda11-b58e-523a-a1a3-ab80f24ef56e",
+          "name": "Resultado por accion > Básico",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "3d2df651-c1b7-5468-936a-3be84fdce7c0",
+          "name": "Resultado por accion > Diluido",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "d8f8b8df-12d5-5713-a1aa-8a1597afffcc",
+          "name": "3. Participación en otro resultado integral reconocidos por las inversiones en negocios conjuntos y asociadas:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "4d39e47c-551d-5906-b50d-06e8e6abb916",
+          "name": "RESULTADO INTEGRAL TOTAL DEL PERIODO (Resultado Consolidado + Otro Resultado Integral No Reclasificable + Otro Resultado Integral Reclasificable)",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "cd6852d2-fa7f-58f2-8d46-17eec7fda359",
+          "name": "RESULTADO INTEGRAL TOTAL DEL PERIODO (Resultado Consolidado + Otro Resultado Integral No Reclasificable + Otro Resultado Integral Reclasificable) > a) Atribuidos a la entidad controladora",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "e5a44763-01b3-516f-b66d-e2157baff275",
+          "name": "Ajustes por cambios de criterios contables",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "591b5ab5-6d52-571b-aad5-c07cde042672",
+          "name": "Ajustes por errores",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "aa841da8-fd55-5241-b87e-85b25f8c4021",
+          "name": "Dividendos totales pagados",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "96df66ad-cb97-5dc4-a5d5-b23ce228a79a",
+          "name": "Mercado internacional",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "7d625407-d3c8-56f1-82ec-a0e3797b6197",
+          "name": "Mercado internacional > a) Unión Europea",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "dabde37b-97ef-5337-82b5-143b8d1d2d76",
+          "name": "TOTAL de los segmentos a informar",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "518e54d8-2d5a-51ef-a8c4-4b0ef0daa036",
+          "name": "Remuneración por pertenencia al Consejo y/o Comisiones del Consejo",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "377d7ebd-b29b-5e47-87e4-079107bd507d",
+          "name": "Sueldos",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "c7e59aec-8197-509c-9cec-8399288bff14",
+          "name": "Otros conceptos",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "4bac5b55-6858-5efd-903d-7782873b8899",
+          "name": "Total remuneraciones recibidas por los directivos",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "1e68ad1d-bde0-5a26-80b3-ee94f2ed8b96",
+          "name": "Acciones ordinarias",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "b20362e3-796c-5fb8-8db1-12df003d3f5e",
+          "name": "Acreedores comerciales y otras cuentas a pagar > c) Pasivos por impuesto corriente",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "7de8ac14-1d8a-5bc9-b203-6a3d22f6b08b",
+          "name": "Otros flujos de efectivo de las actividades de explotación > (+) Cobros de dividendos",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "69041199-f5db-5cf3-991d-bd6262d27cd0",
+          "name": "Otros flujos de efectivo de las actividades de explotación > (+) Cobros de intereses",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "8020fee7-f34b-500b-b8f1-6dc996be3bd3",
+          "name": "Otros flujos de efectivo de las actividades de explotación > (+/-) Cobros/(Pagos) por impuesto sobre beneficios",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "95387dbe-ea10-58f9-818b-3d8fb6d3d3af",
+          "name": "Otros flujos de efectivo de las actividades de explotación > (+/-) Otros cobros/(pagos) de actividades de explotación",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "ef99363d-17fa-50a2-b044-0e02be753d3a",
+          "name": "Cobros y (pagos) por instrumentos de patrimonio > (-) Adquisición",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "8a5305bf-25c9-5292-b8cf-64058a71df4b",
+          "name": "Cobros por desinversiones > (+) Empresas del grupo, asociadas y unidades de negocio",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "de66a7a2-4e5b-5bfd-b957-1000b4ed8381",
+          "name": "Cobros por desinversiones > (+) Otros activos financieros",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "36ae4c05-3f7b-5a40-8ad8-59ad455f65ca",
+          "name": "(+) Trabajos realizados por la empresa para su activo",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "3b3c0784-a697-59ce-b931-98494743223e",
+          "name": "Ingresos financieros > a) Ingresos por intereses calculados según el método del tipo de interés efectivo",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "30db01f2-4c91-5059-880c-a6f3c39bf61f",
+          "name": "RESULTADO CONSOLIDADO DEL PERIODO > b) Resultado atribuido a las participaciones no controladoras",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "f96155f5-e132-5d0c-9d3a-2cde47702acd",
+          "name": "RESULTADO INTEGRAL TOTAL DEL PERIODO (Resultado Consolidado + Otro Resultado Integral No Reclasificable + Otro Resultado Integral Reclasificable) > b) Atribuidos a participaciones no controladoras",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "6643cdc3-566b-5fe2-8f49-f51b6564aa5e",
+          "name": "Cobros y (pagos) por instrumentos de patrimonio > (+) Enajenación",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "119d6e86-b129-5772-be58-6635c6d7ac63",
+          "name": "(+) Otros activos financieros",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "5c2d2d25-9557-558e-880a-1a8e9d17a7f9",
+          "name": "(+/-) Variación de valor razonable en instrumentos financieros",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "96334434-acb0-59d4-af0c-722230304799",
+          "name": "Pagos por inversiones > (-) Otros activos",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "bc4da7c8-fba6-5002-91ab-4a650c192050",
+          "name": "(+/-) Otros resultados",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "4f2b480f-b63d-595f-929d-cbc09625570d",
+          "name": "Otros flujos de efectivo de actividades de financiación > (+/-) Otros cobros/(pagos) de actividades de financiación",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "ee48a013-bc8e-5408-be14-4bf289dd9a89",
+          "name": "Indemnizaciones",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "ceb7603c-92e5-566e-b3fa-f6bfc3de2eec",
+          "name": "ACTIVO NO CORRIENTE",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "a8f89038-b093-5620-9f1d-31a48fc08624",
+          "name": "Inmovilizado intangible:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "ab2cce7a-be41-58e1-a469-c0cf6854e80d",
+          "name": "Inmovilizado material",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "6e1999b8-d776-5bd2-bd09-c66e32caf11e",
+          "name": "Inversiones inmobiliarias",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "f15e8329-0a7f-5935-a262-ee9f4fac17c8",
+          "name": "Inversiones contabilizadas aplicando el método de la participación",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "e743e9f9-e435-5bf0-9508-1f088aaf0c81",
+          "name": "ACTIVO CORRIENTE",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "06ae15eb-fa46-50f5-9720-d2a9c4401dba",
+          "name": "Existencias",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "3b8de711-bf80-57e6-8285-8ab559b1471b",
+          "name": "Deudores comerciales y otras cuentas a cobrar:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "39357bdd-0742-5c19-96a8-6872881985f4",
+          "name": "Activos financieros corrientes",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "3c42bdf3-cde1-5dd5-b5e0-14fb674988d6",
+          "name": "Otros activos corrientes",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "9a8fcf44-887e-51f1-9f12-6c231f5ed773",
+          "name": "Efectivo y otros activos líquidos equivalentes",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "66e28678-a4f2-5bce-b140-f66a5a0ef1bb",
+          "name": "FONDOS PROPIOS",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "8dc50025-e217-5a7a-822a-7b197f60df9f",
+          "name": "Capital",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "775fb519-30e6-5357-96ac-97c5152ea24e",
+          "name": "Prima de emisión",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "514447cd-7fca-588a-80fb-42982a2cc436",
+          "name": "Reservas",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "d9912861-1ff6-587d-9cfa-463f78805f45",
+          "name": "Menos: Acciones y participaciones en patrimonio propias",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "71b84ba3-eb9a-59de-8f29-9e53630a0036",
+          "name": "Resultados de ejercicios anteriores",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "ef469675-e37d-5047-a25f-33341d169166",
+          "name": "Resultado del periodo atribuido a la entidad controladora",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "c93701a3-9713-519d-9d89-bbac60648743",
+          "name": "PARTICIPACIONES NO CONTROLADORAS",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "49d03597-9adb-520f-80b4-d986f1c54864",
+          "name": "PASIVO NO CORRIENTE",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "61cd7ead-f5a7-5110-9d40-2ca863067fb0",
+          "name": "Pasivos financieros no corrientes:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "c511abee-de10-589c-a29b-ffb400bece92",
+          "name": "Pasivos por impuesto diferido",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "e4c1cd9d-8872-59ac-a397-4ad5bbe2e274",
+          "name": "PASIVO CORRIENTE",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "ce9b4dd7-5ec2-579d-9fbe-c36a717ebddd",
+          "name": "Provisiones corrientes",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "1d7eab7d-0b14-5db5-949c-b6ec4a3a39c4",
+          "name": "Pasivos financieros corrientes:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "1a75bfc9-eff2-5560-b06d-512d8db98ff3",
+          "name": "Acreedores comerciales y otras cuentas a pagar:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "4ba2ea9f-ed60-5cc2-851a-4a407ab357cb",
+          "name": "Resultado Integral Total del periodo",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "c677be87-e2bc-58c6-a389-11a7b0e5f795",
+          "name": "Resultado antes de impuestos",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "927530df-d6d3-5a8d-b5b1-5fb4a94c6f4f",
+          "name": "Ajustes del resultado:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "4e1ca2a5-8b97-5f1f-94e0-f0f24a358049",
+          "name": "Cambios en el capital corriente",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "30789205-65ce-5e74-a2fd-93211a28f0d3",
+          "name": "Otros flujos de efectivo de las actividades de explotación:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "4f73ad42-8b6f-54c4-8265-2ce47d7b1695",
+          "name": "Pagos por inversiones:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "54ed945e-bbef-5132-a066-3f8908706f14",
+          "name": "Cobros por desinversiones:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "58ad732b-6fed-5ef7-8d12-2b762e1f50cd",
+          "name": "Cobros y (pagos) por instrumentos de pasivo financiero:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "704e3f9f-c62b-5af6-b7c3-3b9f5e221f14",
+          "name": "EFECTIVO Y EQUIVALENTES AL INICIO DEL PERÍODO",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "355b3e0e-9121-52aa-b6cd-454eedcb1da8",
+          "name": "Activos por impuesto diferido",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "1c327d00-1291-5740-8679-fa3c18658c19",
+          "name": "Activos financieros no corrientes",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "740342ea-3d02-5b0b-a678-47643b142cf3",
+          "name": "Derivados no corrientes",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "6d96efd8-03ef-574f-8564-986c7edae3a0",
+          "name": "Derivados corrientes",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "0dd25f57-b857-5117-9ed8-d293929f8f4c",
+          "name": "OTRO RESULTADO INTEGRAL ACUMULADO",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "38a62e5d-0de9-53fa-9521-c584b101e70f",
+          "name": "Partidas que no se reclasifican al resultado del ejercicio",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "8b53fcc3-f86a-5a07-ac0b-1f21d38f988d",
+          "name": "Partidas que pueden reclasificarse posteriormente al resultado del ejercicio",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "9da2285b-7c3a-54df-b63c-23030164c58d",
+          "name": "RESULTADO CONSOLIDADO DEL PERIODO (de la cuenta de pérdidas y ganancias)",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "d02e1aec-645d-57fa-bfd6-4bbf918f2994",
+          "name": "OTRO RESULTADO INTEGRAL - PARTIDAS QUE NO SE RECLASIFICAN AL RESULTADO DEL PERIODO:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "25a98119-c4df-558e-91cc-2b2ddeb15d5b",
+          "name": "OTRO RESULTADO INTEGRAL - PARTIDAS QUE PUEDEN RECLASIFICARSE POSTERIORMENTE AL RESULTADO DEL PERIODO:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "f9ef22f7-fb15-5897-b73d-d328f098a16c",
+          "name": "Operaciones de cobertura:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "a536e42f-61cd-5aaf-8143-bba3b455a1e5",
+          "name": "Diferencias de conversión:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "fd0a80dd-bd66-5f9c-b6fc-98598fc98a0f",
+          "name": "Instrumentos de deuda a valor razonable con cambios en otro resultado integral",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "314a45bc-ab7a-578e-bc3d-37d62d2429d3",
+          "name": "Resto de ingresos y gastos que pueden reclasificarse posteriormente al resultado del período",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "deef222e-c589-50f5-98a8-546fd9ebc432",
+          "name": "Operaciones con socios o propietarios",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "ebdc105c-ad8e-5f0d-8f54-abc9384896e5",
+          "name": "Operaciones con socios o propietarios > 1. Aumentos/ (Reducciones) de capital",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "af1a3ea6-4fd8-5043-9713-23e07f6e17c8",
+          "name": "Operaciones con socios o propietarios > 2. Conversión de pasivos financieros en patrimonio neto",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "7c89ceaa-7729-5667-8c66-82d7f70fd185",
+          "name": "Operaciones con socios o propietarios > 3. Distribución de dividendos",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "9d6132bc-b32a-51ee-9fbd-16938b8f7fdf",
+          "name": "Operaciones con acciones  o participaciones  en patrimonio propias (netas)",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "1c5724e0-60d0-513b-b2b0-3431fec8db83",
+          "name": "Operaciones con socios o propietarios > 5. Incrementos/ (Reducciones) por combinaciones de negocios",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "5ce2677e-5a6c-5b2c-9e02-ee5c41ad3076",
+          "name": "Operaciones con socios o propietarios > 6. Otras operaciones con socios o propietarios",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "27610b19-2b4c-5d6e-a7bf-88d01a2baf05",
+          "name": "Otras variaciones de patrimonio neto",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "1d08dddd-46d7-5923-afe8-df89a9302ad0",
+          "name": "Otras variaciones de patrimonio neto > 1. Pagos basados en instrumentos de patrimonio",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "c4945c89-a52e-539b-a18f-a0ca8cfaf7c7",
+          "name": "Otras variaciones de patrimonio neto > 2. Traspasos entre partidas de patrimonio neto",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "93b31394-5ee6-5d3a-8fa4-4676bc28a397",
+          "name": "Otras variaciones de patrimonio neto > 3. Otras variaciones",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "333fc634-121c-5307-8350-fe6232f4b79a",
+          "name": "Otros flujos de efectivo de actividades de inversión",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "1ca6f3b8-d389-55fe-b57c-a1156d8c9736",
+          "name": "Cobros y (pagos) por instrumentos de patrimonio:",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "d6ab8829-43e6-5378-8bad-c78d68f02690",
+          "name": "Otros flujos de efectivo de actividades de financiación",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "b709c51e-be0b-5a0f-a2d1-8603cc78c9ed",
+          "name": "Dividendos con cargo a resultados",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "0f805fe8-b5c9-52c1-8770-97db57b3240a",
+          "name": "Otros pasivos no corrientes",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "6c36ad36-87fa-55de-aa36-5ca451dc27e2",
+          "name": "Pagos por dividendos y remuneraciones de otros instrumentos de patrimonio",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "3ed69720-c62d-509c-bdb5-20e452ed9ef2",
+          "name": "Dividendos con cargo a reservas o prima de emisión",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "73668c14-f524-5981-8fe2-8022afa9e652",
+          "name": "Otros instrumentos de patrimonio neto",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "407436ea-91df-5891-98dc-f03daf274e56",
+          "name": "Menos: Dividendo a cuenta",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "770c7187-d493-5b14-b0ed-1a80795246ef",
+          "name": "Cobros por desinversiones > (+) Otros activos",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "b4355845-8160-5329-80bf-f4773f6c7214",
+          "name": "Derivados no corrientes > b) Resto",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "e1887e09-306a-5eef-9800-670fd5d2a096",
+          "name": "Resultado por enajenaciones de instrumentos financieros > b) Resto de instrumentos financieros",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "5b4a2fca-5e36-5289-818f-0fa47c2ff04d",
+          "name": "Cobros y (pagos) por instrumentos de patrimonio > (+) Emisión",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        },
+        {
+          "id": "309df9a3-73a1-5ac2-90a6-115def753a17",
+          "name": "Otras aportaciones de socios",
+          "cadence": "half-yearly",
+          "taxonomy": "cnmv-ipp",
+          "unit": "EUR",
+          "description": ""
+        }
+      ]
+    }
+  },
+  "projection": {
+    "id": "35718438-638e-43b6-acb3-03e2eedd8cbf",
+    "name": "AEDAS HOMES SA",
+    "entity_type": "Company",
+    "description": "A Spanish real estate and construction firm headquartered in Madrid, founded in 2016.",
+    "properties": {
+      "name": {
+        "value": "AEDAS HOMES SA",
+        "sources": [
+          {
+            "name": "GLEIF",
+            "document": "https://search.gleif.org/#/record/9598005H67MP8U20RW81",
+            "date": "2026-08-16"
+          },
+          {
+            "name": "Comision Nacional del Mercado de Valores",
+            "document": "https://www.cnmv.es/ipps",
+            "date": "2026-03-31"
+          }
+        ]
+      },
+      "description": {
+        "value": "A Spanish real estate and construction firm headquartered in Madrid, founded in 2016.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-21"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "1c1977b3-663a-47fb-81eb-51958758b70b",
+            "name": "CONSTRUCTION_AND_ENGINEERING",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio",
+                  "document": "https://talde.com/",
+                  "date": "2026-06-11"
+                },
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/",
+                  "date": "2026-06-11"
+                },
+                {
+                  "name": "Lone Star sells 27% of Neinor Homes",
+                  "document": "https://www.iberian.property/",
+                  "date": "2026-06-11"
+                },
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/",
+                  "date": "2026-06-11"
+                },
+                {
+                  "name": "en.wikipedia.org",
+                  "document": "https://en.wikipedia.org/",
+                  "date": "2026-06-11"
+                }
+              ],
+              "id": "ef1a71e7-16c2-5e4f-b905-ccd77953bdea"
+            }
+          },
+          {
+            "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+            "name": "REAL_ESTATE",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/",
+                  "date": "2026-06-08"
+                },
+                {
+                  "name": "Lone Star sells 27% of Neinor Homes",
+                  "document": "https://www.iberian.property/",
+                  "date": "2026-06-08"
+                },
+                {
+                  "name": "en.wikipedia.org",
+                  "document": "https://en.wikipedia.org/",
+                  "date": "2026-06-08"
+                },
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/",
+                  "date": "2026-06-08"
+                }
+              ],
+              "id": "33ae855b-fbdc-545b-bdd0-be3d48a7ffea"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "fde8bc5b-57a2-4b24-af49-ef36bde9d612",
+            "name": "NEINOR HOMES SA",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/",
+                  "date": "2026-06-08"
+                },
+                {
+                  "name": "Lone Star sells 27% of Neinor Homes",
+                  "document": "https://www.iberian.property/",
+                  "date": "2026-06-08"
+                },
+                {
+                  "name": "en.wikipedia.org",
+                  "document": "https://en.wikipedia.org/",
+                  "date": "2026-06-08"
+                },
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/",
+                  "date": "2026-06-08"
+                }
+              ],
+              "id": "07a7600d-287d-53ea-88d8-7f7814b4046e"
+            }
+          }
+        ],
+        "IS_REGISTERED_IN": [
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/9598005H67MP8U20RW81",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "f1da201e-3488-5483-9b75-e5e0716d6a85"
+            }
+          }
+        ],
+        "IS_DIRECT_PARENT_OF": [
+          {
+            "id": "d81cbb0a-caaa-4412-b038-7caed615d03f",
+            "name": "AEDAS HOMES OPCO, SL",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/959800NRD7BJBYEDBG71",
+                  "date": "2026-08-16"
+                }
+              ],
+              "id": "92c21d93-9bd8-5e08-8a53-83846420fa3f",
+              "valid_since": "2021-05-10"
+            }
+          }
+        ],
+        "IS_ULTIMATE_PARENT_OF": [
+          {
+            "id": "bbdc452d-8b59-4bdc-830f-57b85ddc0b53",
+            "name": "ESPACIO PROYECTOS SPV II, S.L.",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/959800Y6MLJFAHV02966",
+                  "date": "2026-08-18"
+                }
+              ],
+              "id": "481d820a-7d29-5122-92db-2cdd034e41bf",
+              "valid_since": "2025-02-14"
+            }
+          },
+          {
+            "id": "d81cbb0a-caaa-4412-b038-7caed615d03f",
+            "name": "AEDAS HOMES OPCO, SL",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/959800NRD7BJBYEDBG71",
+                  "date": "2026-08-16"
+                }
+              ],
+              "id": "7ccb2818-6aaf-5f30-9c2d-d7b7c89a187b",
+              "valid_since": "2021-05-10"
+            }
+          }
+        ],
+        "HAS_HEADQUARTERS_IN": [
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/9598005H67MP8U20RW81",
+                  "date": "2026-04-08"
+                }
+              ],
+              "id": "d6e5103f-3320-581d-9664-2313a4629dc4"
+            }
+          }
+        ]
+      },
+      "incoming": {
+        "IS_CEO_OF": [
+          {
+            "id": "91b89e8a-c384-4d1c-9222-256872c1063d",
+            "name": "David Martínez Montero",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2021-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "6ccf9e39-a9a1-5693-b6f0-daf74537b5ba",
+              "valid_since": "2021-04-01"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "2d74e6cc-c4e1-409c-a6f9-120a0e48af52",
+            "name": "Javier Martínez-Piqueras",
+            "entity_type": "Person",
+            "properties": {
+              "role": "consejero independiente (Independent Director)",
+              "sources": [
+                {
+                  "name": "Javier Martínez-Piqueras, nuevo Consejero independiente de AEDAS Homes",
+                  "document": "https://www.aedashomes.com/prensa/nombramiento-javier-martinez-piqueras",
+                  "date": "2020-10-22"
+                },
+                {
+                  "name": "www.cnmv.es",
+                  "document": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7B60aaa8bd-7685-4002-99eb-f4ec122e17da%7D",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "50ca35f4-4fea-52e7-800c-d2296fcdb992",
+              "valid_since": "2021-10-19"
+            }
+          },
+          {
+            "id": "4b195fe5-50ee-475b-a388-c118ee65ec25",
+            "name": "Cristina Álvarez",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Non‑Executive Director / Board member",
+              "sources": [
+                {
+                  "name": "Cristina Álvarez | IE Insights",
+                  "document": "https://www.ie.edu/insights/authors/cristina-alvarez",
+                  "date": "2019-04-03"
+                },
+                {
+                  "name": "www.marketscreener.com",
+                  "document": "https://www.marketscreener.com/insider/CRISTINA-ALVAREZ-ALVAREZ-A2BHSW",
+                  "date": "2026-08-20"
+                }
+              ],
+              "id": "5826ab42-f79d-533b-b4dc-c88d1c4e127f",
+              "valid_since": "2017-10-03"
+            }
+          }
+        ],
+        "IS_VICEPRESIDENT_OF": [
+          {
+            "id": "91b89e8a-c384-4d1c-9222-256872c1063d",
+            "name": "David Martínez Montero",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2023-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "6596b1f8-e665-5713-9e1c-0e2a6a646644",
+              "valid_since": "2023-04-01"
+            }
+          }
+        ],
+        "IS_DIRECT_PARENT_OF": [
+          {
+            "id": "fde8bc5b-57a2-4b24-af49-ef36bde9d612",
+            "name": "NEINOR HOMES SA",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/9598005H67MP8U20RW81",
+                  "date": "2026-08-16"
+                }
+              ],
+              "id": "d5c0e072-c8e4-5b71-a49f-bf87f22da49e",
+              "valid_since": "2026-05-27"
+            }
+          }
+        ],
+        "IS_BOARD_MEMBER_OF": [
+          {
+            "id": "0c7fb13a-b28f-48d9-b3c9-fa8c5c5c5e55",
+            "name": "Cristina Álvarez Álvarez",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "533926a0-b54b-5830-ab7f-9bed520982b7",
+              "valid_since": "2025-04-01"
+            }
+          },
+          {
+            "id": "0ed56aed-9849-40f7-aa80-99999f72ed5c",
+            "name": "MERLIN PROPERTIES SOCIMI, S.A.",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2017-12-31",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "0210eae0-8f9b-5952-973c-f8eb82af27bb",
+              "valid_since": "2017-01-01"
+            }
+          },
+          {
+            "id": "29940866-ae8b-4a01-bb9a-e1038c970a09",
+            "name": "Eduardo D´Alessandro Cishek",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "34210a48-fd31-54de-a7f4-0ed0a245af8e",
+              "valid_since": "2025-04-01"
+            }
+          },
+          {
+            "id": "2a1c7803-80ee-4b3a-a968-d9294b0cda0e",
+            "name": "Cristina Alvárez",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2020-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "89fc2021-bcd7-58a3-9c29-c2f9b95df7ac",
+              "valid_since": "2019-01-01"
+            }
+          },
+          {
+            "id": "2b495974-4bd1-4d45-b9b3-320a3d0e2453",
+            "name": "SANTIAGO FERNANDEZ VALBUENA",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2023-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "b7c520ea-29d7-543c-aeb2-ee9904f6075a",
+              "valid_since": "2017-01-01"
+            }
+          },
+          {
+            "id": "2d74e6cc-c4e1-409c-a6f9-120a0e48af52",
+            "name": "Javier Martínez-Piqueras",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2020-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "e8a42038-df50-516e-984a-1b3ab0f9a545",
+              "valid_since": "2020-04-01"
+            }
+          },
+          {
+            "id": "3111fec4-567b-4ed9-a3df-9483f5cc8409",
+            "name": "EDUARDO EDMUNDO DALESSANDRO CISHEK",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2017-12-31",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "eb062d93-6b58-5524-8422-f1e831a78eb7",
+              "valid_since": "2017-01-01"
+            }
+          },
+          {
+            "id": "41874448-085b-5006-a6f9-29abd32e4f34",
+            "name": "Evan Andrew Carruthers",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2022-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "ea4aa957-ac52-5e78-a208-f71dc631f9d7",
+              "valid_since": "2017-01-01"
+            }
+          },
+          {
+            "id": "5e53645b-b470-4aec-9161-b941488264d9",
+            "name": "Milagros Méndez Ureña",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2024-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "200ee9d2-2a1c-5334-b7e6-7689f990bfe4",
+              "valid_since": "2021-04-01"
+            }
+          },
+          {
+            "id": "75b70c8c-cb4f-4a3f-a036-c55b728e76d1",
+            "name": "MERLIN PROPERTIES SOCIMI SA",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2018-06-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "5f419763-6d40-5fbf-b9b4-ac69f80916af",
+              "valid_since": "2018-01-01"
+            }
+          },
+          {
+            "id": "8ab4c3d1-b810-4510-bce7-d026c365c0d4",
+            "name": "MIGUEL TEMBOURY REDONDO",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2018-06-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "7f030235-a0a2-5adb-a9f4-912c233200a5",
+              "valid_since": "2017-01-01"
+            }
+          },
+          {
+            "id": "91b89e8a-c384-4d1c-9222-256872c1063d",
+            "name": "David Martínez Montero",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2024-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "efc2c189-5856-5b17-a5fc-6b4ce1c21c82",
+              "valid_since": "2024-04-01"
+            }
+          },
+          {
+            "id": "bcc75d24-df70-432d-824e-8fc6dd60f9d4",
+            "name": "JAVIER LAPASTORA TURPIN",
+            "entity_type": "Person",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "480f44d1-9999-5347-aad4-b48a30695d17",
+              "valid_since": "2017-01-01"
+            }
+          },
+          {
+            "id": "bdcb5e62-3dbe-4ebf-acaa-5363865a5cb5",
+            "name": "Miquel Temboury Redondo",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2022-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "4656d27d-3f3b-554e-801d-269b93703e82",
+              "valid_since": "2019-01-01"
+            }
+          },
+          {
+            "id": "bf5846f3-ae4f-417a-a4cd-1c902ac27e48",
+            "name": "DAVID MARTINEZ MONTERO",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2020-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "e2ae53d7-423b-563e-8adb-87fb9606cad2",
+              "valid_since": "2017-01-01"
+            }
+          },
+          {
+            "id": "bfe6dafe-2a11-4fb0-9336-5d7ee99d5f23",
+            "name": "Milagros Méndez",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2020-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "2db07658-061c-5fb3-bdd4-56cf9eeada3c",
+              "valid_since": "2019-01-01"
+            }
+          },
+          {
+            "id": "c43cdaaa-4d49-43ca-bfdf-6f31459d44e6",
+            "name": "EDUARDO EDMUNDO D ALESSANDRO CISHEK",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2024-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "834c27b2-9a31-5e37-ac38-3e28f7577086",
+              "valid_since": "2018-01-01"
+            }
+          },
+          {
+            "id": "e92b53e2-3001-47fb-aea4-435f24d32e65",
+            "name": "CRISTINA ALVAREZ ALVAREZ",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2024-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "1c0d3ecb-567e-53c9-a53f-53239c8a2056",
+              "valid_since": "2017-01-01"
+            }
+          },
+          {
+            "id": "eba34fb7-6127-4e2b-aaea-45e0a83d174e",
+            "name": "Javier Martínez-Piqueras Barceló",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2021-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "c2486e1e-b44d-5a15-82da-86eb1a8b2ff4",
+              "valid_since": "2021-04-01"
+            }
+          },
+          {
+            "id": "efdde26e-c044-4379-ab5b-4d871767984e",
+            "name": "Santiago Fernández Valbuena",
+            "entity_type": "Person",
+            "properties": {
+              "valid_until": "2024-09-30",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "068806b5-0b42-5b53-8354-2a45d895889e",
+              "valid_since": "2024-04-01"
+            }
+          }
+        ],
+        "IS_ULTIMATE_PARENT_OF": [
+          {
+            "id": "fde8bc5b-57a2-4b24-af49-ef36bde9d612",
+            "name": "NEINOR HOMES SA",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/#/record/9598005H67MP8U20RW81",
+                  "date": "2026-08-16"
+                }
+              ],
+              "id": "d4211d54-cb87-5113-ad9d-6428f0055bbe",
+              "valid_since": "2026-05-27"
+            }
+          }
+        ],
+        "WORKS_AT": [
+          {
+            "id": "2b495974-4bd1-4d45-b9b3-320a3d0e2453",
+            "name": "SANTIAGO FERNANDEZ VALBUENA",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Presidente no ejecutivo",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2026-03-31"
+                }
+              ],
+              "id": "8f92049f-1005-586f-aed3-a2d800a717e3",
+              "valid_since": "2025-04-01"
+            }
+          },
+          {
+            "id": "2d74e6cc-c4e1-409c-a6f9-120a0e48af52",
+            "name": "Javier Martínez-Piqueras",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Independent Director",
+              "sources": [
+                {
+                  "name": "www.marketscreener.com",
+                  "document": "https://www.marketscreener.com/insider/JAVIER-MARTINEZ-PIQUERAS-A33Q40",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "Javier Martínez-Piqueras, nuevo Consejero independiente de AEDAS Homes",
+                  "document": "https://www.aedashomes.com/prensa/nombramiento-javier-martinez-piqueras",
+                  "date": "2020-10-22"
+                }
+              ],
+              "id": "adf4218c-baeb-523b-9caf-33076e906285",
+              "valid_since": "2020-01-01"
+            }
+          },
+          {
+            "id": "4b195fe5-50ee-475b-a388-c118ee65ec25",
+            "name": "Cristina Álvarez",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Independent Director",
+              "sources": [
+                {
+                  "name": "www.marketscreener.com",
+                  "document": "https://www.marketscreener.com/insider/CRISTINA-ALVAREZ-ALVAREZ-A2BHSW",
+                  "date": "2026-08-20"
+                }
+              ],
+              "id": "8a0db5fb-4441-5cc8-8d21-36312d375ce7",
+              "valid_since": "2017-01-01"
+            }
+          },
+          {
+            "id": "efdde26e-c044-4379-ab5b-4d871767984e",
+            "name": "Santiago Fernández Valbuena",
+            "entity_type": "Person",
+            "properties": {
+              "role": "Presidente no ejecutivo",
+              "sources": [
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/ipps",
+                  "date": "2025-09-30"
+                }
+              ],
+              "id": "6a7fd96c-7d95-5570-a649-cebef51a061d",
+              "valid_since": "2025-04-01"
+            }
+          }
+        ]
+      }
+    },
+    "numerical_observations": []
+  }
+}

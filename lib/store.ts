@@ -3,6 +3,7 @@
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 import { CARD_HEIGHT, CARD_WIDTH, combPosition, snapPoint } from "@/lib/geometry";
+import { entityNameKey } from "@/lib/names";
 import { CASE_RELATION, relationNoun, registerNouns } from "@/lib/relations";
 import type {
   CaseView,
@@ -25,6 +26,7 @@ type BoardState = {
   busy: Record<string, boolean>;
   dedup: Record<string, boolean>;
   toast?: string;
+  archiveBudget: number;
   initialize: (researchCase: ResearchCase) => void;
   finishHydration: () => void;
   setPan: (pan: Point) => void;
@@ -39,6 +41,7 @@ type BoardState = {
   expandedStacks: string[];
   caseView?: CaseView;
   setCaseView: (view?: CaseView) => void;
+  answerQuestion: (id: string) => Promise<void>;
   addReceipt: (receipt: InboxReceipt) => void;
   deliverDossier: (receiptId: string, dossier: Dossier) => void;
   failReceipt: (receiptId: string, error: string) => void;
@@ -57,8 +60,7 @@ const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
  * UUID —hay tres "Sesame"—, así que el nombre normalizado es lo único que la
  * identifica de verdad; el id sigue siendo la identidad del tablón.
  */
-const nameKey = (value: string) => value.toLocaleLowerCase("en").replace(/[^a-z0-9]+/g, "");
-const sameName = (a: string, b: string) => nameKey(a) === nameKey(b);
+const sameName = (a: string, b: string) => entityNameKey(a) === entityNameKey(b);
 
 /** "por Seaya Ventures y por BBVA Spark Fund"; con más de dos, comas. */
 function eachOf(names: string[], preposition: string) {
@@ -98,10 +100,11 @@ export const useBoardStore = create<BoardState>()(
       busy: {},
       dedup: {},
       expandedStacks: [],
+      archiveBudget: 10,
 
-      initialize: (researchCase) => set((state) => ({
-        researchCase: state.researchCase?.id === researchCase.id ? state.researchCase : researchCase,
-      })),
+      initialize: (researchCase) => set((state) => state.researchCase?.id === researchCase.id
+        ? { researchCase: state.researchCase }
+        : { researchCase, archiveBudget: 10, expandedStacks: [], dedup: {}, selectedId: undefined }),
       finishHydration: () => set({ hydrated: true }),
       // El resaltado del reencuentro no caduca solo: vive hasta el siguiente
       // gesto del usuario sobre el caso —tirar de un cabo, abrir una ficha,
@@ -201,30 +204,32 @@ export const useBoardStore = create<BoardState>()(
                 const names = [...holders]
                   .map((holderId) => graph.cards.find((card) => card.id === holderId)?.name)
                   .filter((name): name is string => Boolean(name));
-                // Hay cruce cuando la sostienen dos manos distintas; volver a
-                // tirar del mismo fondo no resalta media cartera.
-                const crossed = holders.size > 1;
+                // En un caso heterogéneo el hallazgo no siempre es una
+                // coinversión: Neinor → Aedas importa porque Aedas ya estaba
+                // en el anillo. Una arista nueva que vuelve a cualquier ficha
+                // existente también es un reencuentro verificable.
+                const rediscovered = !alreadyLinked;
                 // El hallazgo se redacta con la plantilla que decidió el
                 // agente para este caso, no con una frase de financiación.
                 const view = state.caseView;
                 const fill = (tpl: string) => tpl
                   .replace("{holders}", names.join(" y "))
                   .replace("{target}", existingCard.name);
-                const finding = crossed
+                const finding = rediscovered
                   ? fill(view?.finding.template ?? "{holders} coinciden en {target}.")
                   : graph.focus.finding;
                 // Si la reencontrada seguía dentro de un mazo cerrado, el
                 // mazo se abre: un resaltado que nadie ve no es un clímax.
                 const crossedStack = existingCard.stackId;
-                const expandedStacks = crossed && crossedStack && !state.expandedStacks.includes(crossedStack)
+                const expandedStacks = rediscovered && crossedStack && !state.expandedStacks.includes(crossedStack)
                   ? [...state.expandedStacks, crossedStack]
                   : state.expandedStacks;
                 return {
                   expandedStacks,
                   researchCase: { ...graph, focus: { ...graph.focus, finding }, edges: nextEdges },
-                  dedup: crossed ? { ...state.dedup, [existingCard.id]: true } : state.dedup,
+                  dedup: rediscovered ? { ...state.dedup, [existingCard.id]: true } : state.dedup,
                   // El aviso cuenta el hallazgo con nombres, no la mecánica.
-                  toast: crossed
+                  toast: rediscovered
                     ? (view?.finding.toast
                         ? fill(view.finding.toast)
                         : crossToast(existingCard.name, names, relationType))
@@ -265,6 +270,102 @@ export const useBoardStore = create<BoardState>()(
           set({ toast: error instanceof Error ? error.message : "Archivo saturado" });
         } finally {
           set((state) => ({ busy: { ...state.busy, [busyKey]: false } }));
+        }
+      },
+
+      answerQuestion: async (id) => {
+        const question = get().researchCase?.questions.find((item) => item.id === id);
+        if (!question || question.state === "answered" || get().busy[`question:${id}`]) return;
+
+        if (question.lane === "web") {
+          set((state) => state.researchCase ? ({
+            researchCase: {
+              ...state.researchCase,
+              questions: state.researchCase.questions.map((item) => item.id === id
+                ? { ...item, state: "answered" as const }
+                : item),
+            },
+            toast: "Contexto externo añadido. No crea fichas ni hilos rojos.",
+          }) : state);
+          return;
+        }
+
+        if (!question.target) {
+          set({ toast: "Esta pregunta no tiene una ruta de archivo verificable." });
+          return;
+        }
+        if (get().archiveBudget <= 0) {
+          set({ toast: "No quedan consultas de archivo para este caso." });
+          return;
+        }
+
+        set((state) => ({
+          busy: { ...state.busy, [`question:${id}`]: true },
+          toast: undefined,
+          dedup: {},
+        }));
+        try {
+          const projection = await apiJson<ProjectionResponse>(`/api/entity/${encodeURIComponent(question.target.id)}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ projection: question.target.relation, limit: 20 }),
+          });
+          const wanted = question.target.preferred.map(entityNameKey);
+          const ranked = projection.entities
+            .filter((entity) => wanted.includes(entityNameKey(entity.name)))
+            .sort((a, b) => wanted.indexOf(entityNameKey(a.name)) - wanted.indexOf(entityNameKey(b.name)));
+          const entities = ranked.length ? ranked.slice(0, 5) : projection.entities.slice(0, 5);
+
+          set((state) => {
+            if (!state.researchCase) return state;
+            const graph = state.researchCase;
+            const parent = graph.questions.find((item) => item.id === id);
+            if (!parent) return state;
+            const additions = entities.filter((entity) => !graph.cards.some((card) => sameName(card.name, entity.name)));
+            const cards = additions.map((entity, index) => ({
+              id: entity.id,
+              name: entity.name,
+              entityType: entity.entityType,
+              category: "norma",
+              position: combPosition(
+                { x: parent.position.x + CARD_WIDTH / 2, y: parent.position.y + 78 },
+                graph.focus.position,
+                index,
+              ),
+              claims: entity.claims,
+              relations: [],
+              density: "lead" as const,
+              parentId: parent.id,
+              relationType: question.target!.relation,
+            }));
+            const edges = entities.flatMap((entity) => {
+              const existing = graph.cards.find((card) => sameName(card.name, entity.name));
+              const targetId = existing?.id ?? entity.id;
+              if (graph.edges.some((edge) => edge.sourceId === id && edge.targetId === targetId && edge.relationType === question.target!.relation)) return [];
+              return [{
+                id: `${id}:${question.target!.relation}:${targetId}`,
+                sourceId: id,
+                targetId,
+                relationType: question.target!.relation,
+              }];
+            });
+            return {
+              archiveBudget: Math.max(0, state.archiveBudget - 1),
+              researchCase: {
+                ...graph,
+                cards: [...graph.cards, ...cards],
+                edges: [...graph.edges, ...edges],
+                questions: graph.questions.map((item) => item.id === id
+                  ? { ...item, state: "answered" as const }
+                  : item),
+              },
+              toast: `${entities.length} fichas con UUID han caído del archivo.`,
+            };
+          });
+        } catch (error) {
+          set({ toast: error instanceof Error ? error.message : "La pregunta no pudo resolverse" });
+        } finally {
+          set((state) => ({ busy: { ...state.busy, [`question:${id}`]: false } }));
         }
       },
 
@@ -365,6 +466,7 @@ export const useBoardStore = create<BoardState>()(
         pan: state.pan,
         zoom: state.zoom,
         inbox: state.inbox,
+        archiveBudget: state.archiveBudget,
       }),
     },
   ),

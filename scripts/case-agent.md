@@ -18,6 +18,9 @@ Un corcho de detective. La gramática, de la que no te puedes salir:
   "invirtió en").
 - **El hallazgo** ocurre cuando una pista que cae de una cartera **ya estaba en
   el tablón** por otra. Ese cruce es la razón de existir de la aplicación.
+- **Una pregunta** abre una de dos rutas: Cala devuelve entidades con UUID y
+  puede poblar el tablón; la web devuelve texto, se marca FUERA DEL ARCHIVO y
+  nunca crea fichas ni hilos.
 
 ## Tu trabajo
 
@@ -44,6 +47,12 @@ se cruzan. De ahí salen las tres cosas que importan:
   el cruce solo se ve si de **ambas** se puede tirar del hilo. Comprobalo.
 - **Respetá el presupuesto de llamadas.** Cala corta sobre las diez seguidas.
   Elegí bien a quién interrogás en vez de recorrer el grafo a lo ancho.
+- **Dos preguntas como máximo**, y solo si enseñan una frontera real del caso.
+  Una pregunta de archivo debe declarar la entidad, relación y hasta cinco
+  nombres preferidos que comprobaste. La externa necesita una fuente concreta
+  ya verificada; si no la tenés, no la inventes ni la incluyas.
+- **Los hubs solo se tiran por el lado que discrimina.** No puebles desde un
+  lado de alto grado si devuelve categorías o sociedades arbitrarias.
 
 ## Trampas conocidas, medidas en estos datos
 
@@ -79,5 +88,7 @@ se cruzan. De ahí salen las tres cosas que importan:
   el de abrir. Los que falten salen en crudo en pantalla, con su nombre de
   base de datos a la vista.
 - `finding` — cómo se redacta el hallazgo en la tarjeta y en el aviso.
+- `questions` — hasta dos preguntas posteriores: `archive` puede materializar
+  entidades; `web` solo contextualiza. Nunca devuelvas coordenadas.
 - `notes` — lo que aprendiste y no cabe en el resto: falsos positivos que
   descartaste, entidades dudosas, por qué dejaste algo fuera.

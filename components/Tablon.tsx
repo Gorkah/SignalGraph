@@ -6,8 +6,9 @@ import { Cartera } from "@/components/Cartera";
 import { Caso } from "@/components/Caso";
 import { Ficha } from "@/components/Ficha";
 import { Mazo, RecogerMazo } from "@/components/Mazo";
+import { Pregunta } from "@/components/Pregunta";
 import { Hilos } from "@/components/Hilos";
-import { CARD_HEIGHT, CARD_WIDTH, GRID_SIZE, LEAD_WIDTH, STACK_HEIGHT, portfolioPosition } from "@/lib/geometry";
+import { CARD_HEIGHT, CARD_WIDTH, GRID_SIZE, LEAD_WIDTH, QUESTION_HEIGHT, QUESTION_WIDTH, STACK_HEIGHT, portfolioPosition } from "@/lib/geometry";
 import { MAX_ZOOM, MIN_ZOOM, useBoardStore } from "@/lib/store";
 import type { Point } from "@/lib/types";
 
@@ -65,6 +66,7 @@ export function Tablon() {
   const setZoom = useBoardStore((state) => state.setZoom);
   const setView = useBoardStore((state) => state.setView);
   const expandedStacks = useBoardStore((state) => state.expandedStacks);
+  const caseView = useBoardStore((state) => state.caseView);
   const viewport = useRef<HTMLElement | null>(null);
   const dragging = useRef<{ id: number; x: number; y: number; originX: number; originY: number } | null>(null);
 
@@ -89,6 +91,11 @@ export function Tablon() {
           w: LEAD_WIDTH,
           h: STACK_HEIGHT,
         })),
+      ...current.questions.map((question) => ({
+        ...question.position,
+        w: QUESTION_WIDTH,
+        h: QUESTION_HEIGHT,
+      })),
     ];
     const minX = Math.min(...boxes.map((b) => b.x));
     const minY = Math.min(...boxes.map((b) => b.y));
@@ -171,8 +178,9 @@ export function Tablon() {
 
   // Un fondo enseña su cartera cerrada mientras no se haya tirado de ella.
   const pulled = new Set(graph.cards.map((card) => card.stackId).filter(Boolean));
-  const carteras = graph.cards.filter(
-    (card) => card.density === "full" && !card.parentId && !pulled.has(`${card.id}:INVESTED_IN`),
+  const openRelation = caseView?.openVerb.relation ?? "INVESTED_IN";
+  const carteras = caseView?.openVerb.hidden ? [] : graph.cards.filter(
+    (card) => card.density === "full" && !card.parentId && !pulled.has(`${card.id}:${openRelation}`),
   );
 
   function startPan(event: ReactPointerEvent<HTMLDivElement>) {
@@ -218,6 +226,7 @@ export function Tablon() {
       >
         <Hilos graph={graph} />
         <Caso focus={graph.focus} cards={graph.cards.length} edges={graph.edges.length} />
+        {graph.questions.map((question) => <Pregunta key={question.id} question={question} />)}
         {loose.map((card) => <Ficha key={card.id} card={card} />)}
         {carteras.map((card) => <Cartera key={`cartera-${card.id}`} card={card} focus={graph.focus} />)}
         {[...stacks].map(([stackId, group]) => (

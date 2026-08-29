@@ -1,6 +1,6 @@
 "use client";
 
-import { CARD_HEIGHT, CARD_WIDTH, LEAD_HEIGHT, LEAD_WIDTH, manhattanPath } from "@/lib/geometry";
+import { CARD_HEIGHT, CARD_WIDTH, LEAD_HEIGHT, LEAD_WIDTH, QUESTION_HEIGHT, QUESTION_WIDTH, manhattanPath } from "@/lib/geometry";
 import { CASE_RELATION, relationNoun } from "@/lib/relations";
 import { useBoardStore } from "@/lib/store";
 import type { ResearchCase } from "@/lib/types";
@@ -10,6 +10,7 @@ const COLORS: Record<string, string> = {
   FINANCED: "var(--thread-finance)",
   REPORT_MATCH: "var(--thread-report)",
   [CASE_RELATION]: "var(--thread-case)",
+  AFFECTS_INDUSTRY: "var(--thread-law)",
 };
 
 const CASE_WIDTH = 296;
@@ -47,6 +48,10 @@ export function Hilos({ graph }: { graph: ResearchCase }) {
       const height = card.density === "lead" ? LEAD_HEIGHT : CARD_HEIGHT;
       return [card.id, { x: card.position.x + width / 2, y: card.position.y + height / 2 }] as const;
     }),
+    ...graph.questions.map((question) => [question.id, {
+      x: question.position.x + QUESTION_WIDTH / 2,
+      y: question.position.y + QUESTION_HEIGHT / 2,
+    }] as const),
   ]);
 
   // Solo se rotula lo que une dos fichas completas: una pista ya viene

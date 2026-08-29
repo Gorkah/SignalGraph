@@ -1,0 +1,192 @@
+{
+  "id": "50bc23a5-398d-43d4-a715-b98ca0dd6216",
+  "name": "Neinor Homes",
+  "introspection": {
+    "properties": [
+      "name",
+      "registered_address",
+      "website",
+      "description",
+      "employee_count",
+      "aliases",
+      "id"
+    ],
+    "relationships": {
+      "outgoing": [
+        "OPERATES_IN_INDUSTRY",
+        "INVESTED_IN",
+        "IS_MEMBER_OF"
+      ],
+      "incoming": []
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "50bc23a5-398d-43d4-a715-b98ca0dd6216",
+    "name": "Neinor Homes",
+    "entity_type": "Organization",
+    "description": "Spanish real estate and construction firm headquartered in Bilbao.",
+    "properties": {
+      "name": {
+        "value": "Neinor Homes",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-07-01"
+          }
+        ]
+      },
+      "description": {
+        "value": "Spanish real estate and construction firm headquartered in Bilbao.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-04"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "OPERATES_IN_INDUSTRY": [
+          {
+            "id": "1c1977b3-663a-47fb-81eb-51958758b70b",
+            "name": "CONSTRUCTION_AND_ENGINEERING",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio",
+                  "document": "https://talde.com/",
+                  "date": "2026-07-02"
+                },
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/",
+                  "date": "2026-07-02"
+                },
+                {
+                  "name": "en.wikipedia.org",
+                  "document": "https://en.wikipedia.org/",
+                  "date": "2026-07-02"
+                },
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/",
+                  "date": "2026-07-02"
+                },
+                {
+                  "name": "Lone Star sells 27% of Neinor Homes",
+                  "document": "https://www.iberian.property/",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "b0e9b63c-6d82-5494-a8a1-c4f2e61eaf0e"
+            }
+          },
+          {
+            "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+            "name": "REAL_ESTATE",
+            "entity_type": "Industry",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Portfolio",
+                  "document": "https://talde.com/",
+                  "date": "2026-07-02"
+                },
+                {
+                  "name": "Comision Nacional del Mercado de Valores",
+                  "document": "https://www.cnmv.es/",
+                  "date": "2026-07-02"
+                },
+                {
+                  "name": "en.wikipedia.org",
+                  "document": "https://en.wikipedia.org/",
+                  "date": "2026-07-02"
+                },
+                {
+                  "name": "GLEIF",
+                  "document": "https://search.gleif.org/",
+                  "date": "2026-07-02"
+                },
+                {
+                  "name": "Lone Star sells 27% of Neinor Homes",
+                  "document": "https://www.iberian.property/",
+                  "date": "2026-07-02"
+                }
+              ],
+              "id": "7cdb6d43-c4c1-5de1-9a3c-8d4095973a1d"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "258b8dfa-a7bc-49be-a105-c5e3f7c2e6a9",
+            "name": "Avenue Capital Group",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Neinor Homes and Avenue Capital create new Joint Venture to manage development of 700 housing units in Costa del Sol",
+                  "document": "https://www.neinorhomes.com/en/news/neinor-homes-and-avenue-capital-create-new-joint-venture-to-manage-development-of-700-housing-units-in-costa-del-sol",
+                  "date": "2024-08-05"
+                },
+                {
+                  "name": "Noticias | Neinor Homes",
+                  "document": "https://www.neinorhomes.com/es/noticias?pag=10%2F",
+                  "date": "2024-05-21"
+                }
+              ],
+              "id": "708caaf8-cf04-5345-bc42-4eb9085e6e92",
+              "valid_since": "2024-07-25"
+            }
+          },
+          {
+            "id": "bafa6a81-52db-494c-90b3-f737ed1d13dd",
+            "name": "Promociones Habitat",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.prnewswire.com",
+                  "document": "https://www.prnewswire.com/in/news-releases/neinor-homes-signs-a-joint-venture-with-bain-capital-to-strengthen-its-leading-position-in-the-spanish-market-302255553.html",
+                  "date": "2026-07-02"
+                },
+                {
+                  "name": "Bain Capital signs €700mn Joint Venture agreement with Neinor Homes",
+                  "document": "https://www.baincapital.com/news/bain-capital-signs-%E2%82%AC700mn-joint-venture-agreement-neinor-homes",
+                  "date": "2024-09-23"
+                }
+              ],
+              "id": "b80ea37b-3784-5d52-b255-a96133371e8e",
+              "valid_since": "2024-09-23"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "8119675c-d8a8-421a-850c-c382ab19a1b6",
+            "name": "Plataforma Tecnológica Española de Construcción (PTEC)",
+            "entity_type": "Organization",
+            "properties": {
+              "role": "member",
+              "sources": [
+                {
+                  "name": "NEINOR HOMES - PTEC Plataforma Tecnológica Española de Construcción",
+                  "document": "https://plataformaptec.es/miembros/neinor-homes",
+                  "date": "2022-11-28"
+                }
+              ],
+              "id": "c33842da-bfec-58ab-837c-8f8c0cda0201"
+            }
+          }
+        ]
+      },
+      "incoming": {}
+    },
+    "numerical_observations": []
+  }
+}

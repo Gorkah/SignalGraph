@@ -1,6 +1,284 @@
 {
   "neighbors": {
-    "DN Capital": [
+    "Gotrade": [
+      {
+        "id": "14a04520-c069-447d-bd87-d06ed83b5440",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "cca52a98-80f6-45b4-b73d-87db10b9f2e7",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "80570ae7-a8b1-485d-b1a9-cee2b6db40a1",
+        "name": "Mazowieckie",
+        "type": "HAS_HEADQUARTERS_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "9929317f-bdad-448a-8658-898fc7ec6e30",
+        "name": "Poland",
+        "type": "IS_REGISTERED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+        "name": "FINTECH",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+        "name": "SOFTWARE_AND_SERVICES",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1989f4c8-697c-5f3a-ac84-06c525b7d933",
+        "name": "YC Summer 2019",
+        "type": "IS_MEMBER_OF",
+        "dir": "outgoing"
+      },
+      {
+        "id": "7531aa19-e755-4106-ac78-ce0d984e4de0",
+        "name": "Singapore",
+        "type": "HAS_HEADQUARTERS_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "e332ff3d-605d-4b01-8222-5098236a3aff",
+        "name": "United Kingdom",
+        "type": "HAS_HEADQUARTERS_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "0f793746-4205-4ac8-9a1d-65b6b7169697",
+        "name": "Peter Hoang",
+        "type": "FOUNDED",
+        "dir": "incoming"
+      },
+      {
+        "id": "3322933a-0ed0-4b39-94c3-c40cba85b574",
+        "name": "Rohit Mulani",
+        "type": "FOUNDED",
+        "dir": "incoming"
+      },
+      {
+        "id": "334efcc9-4c89-480d-b32e-1da7ac17b74b",
+        "name": "Norman Wanto",
+        "type": "FOUNDED",
+        "dir": "incoming"
+      },
+      {
+        "id": "d6890173-dff2-43c2-832e-b7aad69a1b97",
+        "name": "David Grant",
+        "type": "FOUNDED",
+        "dir": "incoming"
+      },
+      {
+        "id": "0ea5659d-662f-410c-93e6-1775879f5989",
+        "name": "Velocity Capital Fintech Ventures Coöperatief U.A.",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "1e86655e-373d-4fe8-be13-af3713581f73",
+        "name": "Y Combinator",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "7faf31b1-b7a2-4e93-b820-1fed0d86d2fa",
+        "name": "Candor",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "a81efff2-1b1b-41e0-b068-3216380923a7",
+        "name": "KIBO VENTURES PARTNERS SGEIC, SA",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "d13f79c8-6698-4f4f-b98c-1a28d60d80b8",
+        "name": "Kibo Ventures",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "6cd40fea-39e3-438b-a07a-68693cfde48c",
+        "name": "Andrew Haryono",
+        "type": "FOUNDED",
+        "dir": "incoming"
+      }
+    ],
+    "o11h": [
+      {
+        "id": "1c1977b3-663a-47fb-81eb-51958758b70b",
+        "name": "CONSTRUCTION_AND_ENGINEERING",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+        "name": "REAL_ESTATE",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+        "name": "Seaya Ventures",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "COMUNIDAD FILMIN S.L.": [
+      {
+        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+        "name": "Spain",
+        "type": "HAS_HEADQUARTERS_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "0d895500-09ff-4d65-9847-509cc7861623",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "2710c6a1-7f73-4015-a8eb-dfaa0c57e251",
+        "name": "MNA_COMPLETED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "63af7b10-8720-4cf5-9eea-70afd532010b",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "83999ecc-9618-47c2-b84a-a3e95f1bcdf1",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "04464363-4a5a-4153-8bce-13ff925446ca",
+        "name": "Juan Carlos Tous",
+        "type": "FOUNDED",
+        "dir": "incoming"
+      },
+      {
+        "id": "54046ac5-fa09-4f52-88c5-fdbd4339640a",
+        "name": "José Antonio de Luna",
+        "type": "FOUNDED",
+        "dir": "incoming"
+      },
+      {
+        "id": "93b896dc-da83-45ab-9687-5aa95466d1f0",
+        "name": "Jaume Ripoll",
+        "type": "FOUNDED",
+        "dir": "incoming"
+      },
+      {
+        "id": "de30a936-1fad-4fa8-a729-c2b75fc8818c",
+        "name": "Enrique González Macho",
+        "type": "FOUNDED",
+        "dir": "incoming"
+      },
+      {
+        "id": "45319364-1317-4510-a153-24af17d43fc7",
+        "name": "METROPOLITAN FILMEXPORT",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "a9408cad-8127-4c2e-a327-fbdc7ca55088",
+        "name": "Europa",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+        "name": "Seaya Ventures",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "Plenummedia": [
+      {
+        "id": "01552894-6b07-4396-b18b-006cdbf489c4",
+        "name": "NEWS_AND_INFORMATION",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "a710b325-14d8-4652-854a-f4ea646f15d3",
+        "name": "BANKING",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "b1d0a7c0-7986-4a8f-a0d5-c78f03d956c6",
+        "name": "ADVERTISING_AND_MARKETING",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "2e080463-5d93-4c77-9885-d9b7edf570b7",
+        "name": "Incientra",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "745df860-9f85-48c2-bca8-e06fea723f7e",
+        "name": "Relevant Traffic",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "ddbd7fac-5176-4980-9f79-c62826113643",
+        "name": "DIGITAL CLICK MEDIA LTD",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+        "name": "Seaya Ventures",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "SIX FinTech Ventures": [
+      {
+        "id": "175aa84a-2d6b-4b94-a43e-fde275d7bee0",
+        "name": "Toq.io",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "c166cb69-dddb-451d-bf8b-5b1c4d012202",
+        "name": "Shift Cryptosecurity",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "ffe1ba1c-c236-41d1-8245-946ea2ad458d",
+        "name": "Vestr Ag",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+        "name": "FINTECH",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
       {
         "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
         "name": "VENTURE_CAPITAL",
@@ -8,103 +286,33 @@
         "dir": "outgoing"
       },
       {
-        "id": "0536dda2-bf96-48a5-afe2-c0a7d69f960e",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "id": "7b2c9a92-07e3-4ce3-8bd9-ffc0a897747a",
+        "name": "ClimateTrade",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "Artur'In": [
+      {
+        "id": "b6f57d8b-33dd-409a-9fbb-269947c54e23",
+        "name": "France",
+        "type": "HAS_HEADQUARTERS_IN",
         "dir": "outgoing"
       },
       {
-        "id": "053b7bd1-5c77-4788-8e1a-ccd6798ee8fe",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+        "name": "SOFTWARE_AND_SERVICES",
+        "type": "OPERATES_IN_INDUSTRY",
         "dir": "outgoing"
       },
       {
-        "id": "0bce10de-6ecc-4c33-954a-7d3186ce070c",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "id": "b1d0a7c0-7986-4a8f-a0d5-c78f03d956c6",
+        "name": "ADVERTISING_AND_MARKETING",
+        "type": "OPERATES_IN_INDUSTRY",
         "dir": "outgoing"
       },
       {
-        "id": "0f40c9c8-c0a6-4409-a0bf-e9be4f84743c",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "31ce2ee3-1a21-4018-9c38-1c4880566307",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "369ed177-b5cf-4535-8051-31847b187690",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "38047888-22e1-48d2-8c96-c002b88292e0",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "456aa1a6-459d-4d13-b1c2-d2d03fe0084c",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "45c366a1-8e47-45a4-a19d-79144cdeab29",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "49c09381-6c5e-43b2-9350-a02017724e65",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "7a0df97d-a380-4a99-9e84-2932a7306506",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "7ae39950-98d1-4484-87fc-f752fac18b79",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "7bf4883b-4d0e-4311-ad4d-7f19465303a4",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "837b850d-ead0-4947-aa49-aa01035b44b5",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "b023f4a3-012d-466d-949d-3958869bfe7e",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "b42b28bd-ead0-4685-9ce1-4fb63220a321",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "b45e88ae-bcc0-472d-8c15-af13bb10e8fe",
+        "id": "584fdcb8-c663-4ac6-8cad-98060f642453",
         "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
         "type": "PARTICIPATES_IN_CORPORATE_EVENT",
         "dir": "outgoing"
@@ -116,151 +324,43 @@
         "dir": "outgoing"
       },
       {
-        "id": "e42b8032-cd91-4a6a-a6a4-c9107f82f0c2",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "e88351c7-a7a7-4ac4-90e8-083023611399",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "0e4d8ed2-a1ba-44f2-b57f-9550915149bb",
-        "name": "Artur'In",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "289fd898-2edc-4355-b5ac-58f2b6cdbb8c",
-        "name": "Bonify",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "2b569ae9-388e-43b5-a055-cd6cb2fa5f48",
-        "name": "eYeka",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "2d984e0e-d11b-41b7-8a57-b63c029e01b7",
-        "name": "eWings.com",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "2ea24cc7-6d17-4a89-b641-2dc01c0128c4",
-        "name": "Prometeo OpenBanking",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "3835fc1c-2333-4476-b1d0-7382ff63b588",
-        "name": "Foodles",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "48ade3d4-5def-4a58-88a3-28c80f2502c3",
-        "name": "AUTO1 Group SE",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "6234c314-b004-4fe8-9437-f8da6059ce67",
-        "name": "Purplebricks",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "851995b0-ff1b-47a2-a520-391dd3a2523c",
-        "name": "PERFORMANCE HORIZON GROUP LIMITED",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "9f61f462-baf1-4bc1-8986-525a9d52b000",
-        "name": "Kyte",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "a4aa33ab-ab65-4380-96fb-f86e70615593",
-        "name": "Edurino",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "a824ee30-acd3-4a6a-b575-8ff1f4ef490c",
-        "name": "Videdressing",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "aa02c0e4-438e-4897-b4b9-974fec80fe92",
-        "name": "Shazam",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "b819bb0f-6b81-4a9f-9424-f62182ccbe1e",
-        "name": "Dott",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "c7ac4a90-45f0-4a13-af7f-8dd5b892ab8e",
-        "name": "Tiger Facility Services",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "cb466d32-7179-455a-8690-1285a74c2728",
-        "name": "Book A Tiger",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "ef4382fb-51e4-446c-bf8c-a0c1d56fb244",
-        "name": "MedKitDoc",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "f6ba60a1-e1b5-45c6-89c2-f0d6133d928e",
-        "name": "FIMPLE GLOBAL LIMITED",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "868d9b68-6729-40bb-b7d1-444bfc9f96e7",
-        "name": "Invest Europe",
-        "type": "IS_MEMBER_OF",
-        "dir": "outgoing"
-      },
-      {
-        "id": "53f27696-7872-474e-aa57-811f4e697c18",
-        "name": "Shazam",
-        "type": "DESIGNED_BY",
-        "dir": "incoming"
-      },
-      {
-        "id": "51c0573f-6d61-4d78-b351-ffe0221f5f15",
-        "name": "Interloom",
+        "id": "12f25b56-5c30-4cc2-a844-499cc138d2f6",
+        "name": "VENTECH",
         "type": "INVESTED_IN",
         "dir": "incoming"
       },
       {
-        "id": "85d4bdcd-e15d-41e2-beac-c7eb7772becd",
-        "name": "HOUSFY REAL ESTATE S.L.",
+        "id": "1cbcede3-7d94-4def-bf7e-b0f799b0daa3",
+        "name": "PSG EQUITY L.L.C.",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "5a079c02-0e55-4b48-a203-54c69ea16a13",
+        "name": "Ventech",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "abd4cae6-8be9-4671-923f-8c4d3a901547",
+        "name": "FJ Labs",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "dc60f800-f723-41b8-9482-810db28c9d70",
+        "name": "DN Capital",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "e4207c0a-7a67-46cf-bf72-455705ec80e4",
+        "name": "Angyal Korlátolt Felelősségű Társaság",
         "type": "INVESTED_IN",
         "dir": "incoming"
       }
     ],
-    "Bnext": [
+    "Sesame": [
       {
         "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
         "name": "FINTECH",
@@ -268,34 +368,986 @@
         "dir": "outgoing"
       },
       {
-        "id": "a710b325-14d8-4652-854a-f4ea646f15d3",
-        "name": "BANKING",
+        "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+        "name": "SOFTWARE_AND_SERVICES",
         "type": "OPERATES_IN_INDUSTRY",
         "dir": "outgoing"
       },
       {
-        "id": "363d5692-004d-493e-aec1-424a35663c25",
-        "name": "Founders Future",
+        "id": "7447faaf-8cf8-4c1e-be4b-746dece1dbe9",
+        "name": "BBVA Spark",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "c254f0f5-d39e-4ba7-8b7f-eb2308d00589",
+        "name": "BBVA Spark Growth Instrument",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+        "name": "BBVA Spark Fund",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "83e96495-8c13-4c94-bab8-3b810651955d",
+        "name": "BBVA",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "8672a93f-fa51-4933-a8f3-9b4b74557373",
+        "name": "BBVA",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "Habi": [
+      {
+        "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+        "name": "REAL_ESTATE",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+        "name": "FINTECH",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "7bd74a42-1747-46ae-96a6-b511daae7289",
+        "name": "Juan Esteve Soler",
+        "type": "IS_CMO_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "27d940fd-6a3f-4bb8-b638-f650fec5d282",
+        "name": "FlyBridge Zártkörűen Működő Részvénytársaság",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "3a801afa-9716-49f5-9832-7b642206ca28",
+        "name": "Banorte",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "c254f0f5-d39e-4ba7-8b7f-eb2308d00589",
+        "name": "BBVA Spark Growth Instrument",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+        "name": "BBVA Spark Fund",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "CrowdFarming": [
+      {
+        "id": "58fd376e-37a9-40ea-bd5a-439ae80e9db2",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+        "name": "Seaya Ventures",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "158d8539-b41b-4ef1-94e1-56906da02337",
+        "name": "RETAIL",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "b58fd009-906d-4a11-9aef-8ef566128a5c",
+        "name": "FOOD_AND_BEVERAGE",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "bb7858a2-51d8-45e2-82bd-3ea6a06d317a",
+        "name": "INTERNET_AND_WEB_SERVICES",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+        "name": "Spain",
+        "type": "HAS_HEADQUARTERS_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "3f7c054b-b3fa-4641-b349-cee146c7a620",
+        "name": "Astanor Ventures",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "5ec07c08-dcf4-4c11-b174-69be110f220b",
+        "name": "Seaya Capital Gestión SGEIC SA",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "85635854-6d65-4bf9-8019-0ca5966ce7e9",
+        "name": "Cipio Partners",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "acc24eab-8b33-4143-9484-60f04a6c4322",
+        "name": "Good Harvest Ventures Management S.à r.l.",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "d1f90da7-7cb5-4462-bfbd-df9670f5ad7a",
+        "name": "Pymwymic",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "TELEFONICA SA": [
+      {
+        "id": "161e58e5-147d-4344-97a2-f2889afe63dd",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "2c043435-d623-4ba8-b5d0-bb713ec74bc1",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "5966543c-0aec-4430-b0c2-18ec8e459c89",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "6ea968fc-fb2d-47d2-9293-87d6f695b43d",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "82803fc4-aa54-4fa9-8b55-68215f20b976",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "a6e53263-2e5b-4f3a-a5b4-baf96ba72b8b",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "de735947-994a-4d29-bb1f-42a68b93a777",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "e3d09deb-9f65-4741-b7b6-5ff56db1e071",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "edc659dd-9d69-40b0-ba83-0366621dd821",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "3f7ad5f6-cc3b-4c19-8943-7c410239ed9f",
+        "name": "Amobee",
         "type": "INVESTED_IN",
         "dir": "outgoing"
       },
       {
-        "id": "6fec62d7-11ed-46dc-8922-eb24c6ecf635",
+        "id": "5039a4a1-24a3-4f0e-9f9d-0b1b5ed4abd2",
+        "name": "TELXIUS TELECOM S.A.",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "80583d4e-fa59-47a4-956c-e425b7c98de5",
+        "name": "Monogoto",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "bd8eeaad-7409-4c32-8ca6-c6addc68a8fa",
+        "name": "Olé",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "c2413391-5436-4e1b-b54c-0de3bc273358",
+        "name": "Raylo",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "e6588df7-62ea-47b7-b48a-01c086ba198b",
+        "name": "Meditelecom",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "f8b44f1a-20d8-43c9-b142-8975380369d6",
+        "name": "flexiWAN",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "f8df4e20-4094-4826-9364-a8204dd9a6cb",
+        "name": "VALERANN UK LIMITED",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "ed1ecdd2-fa79-4792-bb39-40cbe03bbf1c",
+        "name": "Andrés Padilla Fuentes",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "e54f3f3b-1c7b-47b0-9915-a5730f7be7c5",
+        "name": "BlackRock, Inc.",
+        "type": "IS_BENEFICIARY_OWNER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "7c68c8ff-aa38-4072-bd22-59bfc9829fef",
+        "name": "SALUPRO SPAIN SL",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "Prophero": [
+      {
+        "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+        "name": "REAL_ESTATE",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+        "name": "FINTECH",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+        "name": "SOFTWARE_AND_SERVICES",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "3bbe8853-c47f-442c-b9b3-e1f522ba614e",
+        "name": "Australia",
+        "type": "HAS_PRESENCE_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "52454e7c-081b-4cc9-ba80-460d55900127",
+        "name": "Ireland",
+        "type": "HAS_PRESENCE_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "66cf65cf-d7e5-479c-9381-966699086591",
+        "name": "Europe",
+        "type": "HAS_PRESENCE_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8fb5fa24-b302-409b-abfd-28f114cc7db4",
+        "name": "Asia",
+        "type": "HAS_PRESENCE_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "ae488aa7-a00f-4f47-a108-e895c3ff4f52",
+        "name": "India",
+        "type": "HAS_PRESENCE_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+        "name": "Spain",
+        "type": "HAS_PRESENCE_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "d0bc843f-df34-42df-9cc4-a0d5ab9ee1e5",
+        "name": "Argentina",
+        "type": "HAS_PRESENCE_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "d7ca2138-2706-4fa0-8c77-f59b0fae9249",
+        "name": "Indonesia",
+        "type": "HAS_PRESENCE_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "4f58ee07-8093-4dfc-ba31-c71c02e4fee0",
+        "name": "Bailador",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "7447faaf-8cf8-4c1e-be4b-746dece1dbe9",
+        "name": "BBVA Spark",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "76516af3-d6c5-4762-8f89-c3159f69c264",
+        "name": "Samaipata Ventures",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+        "name": "BBVA Spark Fund",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "Payflow": [
+      {
+        "id": "59168477-d930-4658-a03c-2a87daebb6c3",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+        "name": "Spain",
+        "type": "HAS_HEADQUARTERS_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1e86655e-373d-4fe8-be13-af3713581f73",
+        "name": "Y Combinator",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "2a979c15-6838-4fbf-8735-59b8dc89ac8e",
+        "name": "TELEFONICA S A",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "302606c8-55fb-41e9-a556-b692b024d553",
+        "name": "6 DEGREES CAPITAL LLP",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "43575cf7-b13e-4738-abd2-2f79c2fa2c3f",
+        "name": "Wayra",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "65b357e1-d365-48fb-8343-b2cf371a5475",
+        "name": "CATHAY INNOVATION",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "71f202e5-20c3-4637-9fc3-2a7d2eea826d",
+        "name": "Cusp Capital",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "7447faaf-8cf8-4c1e-be4b-746dece1dbe9",
+        "name": "BBVA Spark",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8296d62a-fae3-4041-9ddc-e490722aada1",
+        "name": "Payflow",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "9cfec194-2d5a-4e5e-8ec8-128147936447",
+        "name": "Lanai Partners",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "9d6f393d-e70d-4030-81c2-f3e75e71401a",
+        "name": "Thomson Reuters Ventures",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "c254f0f5-d39e-4ba7-8b7f-eb2308d00589",
+        "name": "BBVA Spark Growth Instrument",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "c3959932-3f3b-48ee-8c2f-8008d907ab0f",
+        "name": "Plug and Play Ventures",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "c5f31218-d353-40a8-baf6-e33befb66a1b",
+        "name": "Wille Finance AG",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+        "name": "Seaya Ventures",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "e1e1434e-1090-4bf1-a6ba-480b44b803de",
+        "name": "Rocket Internet GmbH",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+        "name": "BBVA Spark Fund",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "f8080db9-34c4-4e20-a096-96f78fd0dfe9",
+        "name": "FORCE OVER MASS CAPITAL LLP",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "5f375742-7899-400f-ba2a-34a661e9411b",
+        "name": "FINANCIAL_INSURANCE",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+        "name": "FINTECH",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+        "name": "SOFTWARE_AND_SERVICES",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "989f6539-ce4e-4589-8dd9-8759f33524da",
+        "name": "CAMARA DE COMERCIO Y DE INDUSTRIA FRANCESA DE BARCELONA",
+        "type": "IS_MEMBER_OF",
+        "dir": "outgoing"
+      },
+      {
+        "id": "12dfcb17-7c0a-46f2-87df-4915124fbac4",
+        "name": "Rebel Fund",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "7614f41d-233c-4bda-9fde-30052a9039ac",
+        "name": "CATS.VC",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "e1b579ed-3983-4387-9a75-651072c0d26b",
+        "name": "Mango group",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "Bonify": [
+      {
+        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+        "name": "FINTECH",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "0f40c9c8-c0a6-4409-a0bf-e9be4f84743c",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "49c09381-6c5e-43b2-9350-a02017724e65",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "837b850d-ead0-4947-aa49-aa01035b44b5",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "61901653-115d-4cc4-a4e4-04d8c5009f1e",
+        "name": "Germany",
+        "type": "HAS_HEADQUARTERS_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "17001ee5-714a-4b2e-8f85-b4511bef2f23",
+        "name": "GMPVC German Media Pool GmbH",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "3e0fb84a-1b4c-46c9-865a-c071ca1e29c3",
+        "name": "German Media Pool",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "7347b1be-94ea-48e8-9338-6067dd6859ef",
+        "name": "Mosaic Ventures",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "a86da67a-786b-41e2-904c-db485bde5aea",
+        "name": "Avala Capital GmbH",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "dc60f800-f723-41b8-9482-810db28c9d70",
         "name": "DN Capital",
         "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "f02ffdf8-34b1-4a1e-aaf7-9f7d82f9e849",
+        "name": "Experian",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "eYeka": [
+      {
+        "id": "b1d0a7c0-7986-4a8f-a0d5-c78f03d956c6",
+        "name": "ADVERTISING_AND_MARKETING",
+        "type": "OPERATES_IN_INDUSTRY",
         "dir": "outgoing"
       },
       {
-        "id": "8932a610-7903-431d-8366-905e45c68ee4",
-        "name": "Redalpine",
+        "id": "bb7858a2-51d8-45e2-82bd-3ea6a06d317a",
+        "name": "INTERNET_AND_WEB_SERVICES",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "b6f57d8b-33dd-409a-9fbb-269947c54e23",
+        "name": "France",
+        "type": "HAS_HEADQUARTERS_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "31ce2ee3-1a21-4018-9c38-1c4880566307",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "456aa1a6-459d-4d13-b1c2-d2d03fe0084c",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "5a6110b3-3f70-49c1-a6bc-4cc13a7a688d",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "5a079c02-0e55-4b48-a203-54c69ea16a13",
+        "name": "Ventech",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "9267b99c-27ec-4fb2-8439-ee1f73ba0d5b",
+        "name": "i-Source N.V.",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "a491fa9e-8529-4391-9d2f-dcfd7875691a",
+        "name": "SOFIMAC INNOVATION",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "dc60f800-f723-41b8-9482-810db28c9d70",
+        "name": "DN Capital",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "eWings.com": [
+      {
+        "id": "61901653-115d-4cc4-a4e4-04d8c5009f1e",
+        "name": "Germany",
+        "type": "HAS_HEADQUARTERS_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "49e7435a-1935-49a2-bec7-a7848147893e",
+        "name": "HOSPITALITY_AND_TOURISM",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "bb7858a2-51d8-45e2-82bd-3ea6a06d317a",
+        "name": "INTERNET_AND_WEB_SERVICES",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "053b7bd1-5c77-4788-8e1a-ccd6798ee8fe",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "64c415f5-d5a2-4ac3-8ec6-869823814bfd",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1c4f55fa-654c-4f82-a47b-8622cd4b9c9c",
+        "name": "German Startups Group VC GmbH",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "63a2fb1b-119c-4c3d-84af-40a49dc0ea64",
+        "name": "High-Tech Gründerfonds",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "67180cf0-dfe5-442c-a580-255752eb0f96",
+        "name": "SGT German Private Equity Management GmbH",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "dc60f800-f723-41b8-9482-810db28c9d70",
+        "name": "DN Capital",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "AEDAS HOMES SA": [
+      {
+        "id": "1c1977b3-663a-47fb-81eb-51958758b70b",
+        "name": "CONSTRUCTION_AND_ENGINEERING",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+        "name": "REAL_ESTATE",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "fde8bc5b-57a2-4b24-af49-ef36bde9d612",
+        "name": "NEINOR HOMES SA",
+        "type": "IS_ULTIMATE_PARENT_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+        "name": "Spain",
+        "type": "HAS_HEADQUARTERS_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "d81cbb0a-caaa-4412-b038-7caed615d03f",
+        "name": "AEDAS HOMES OPCO, SL",
+        "type": "IS_ULTIMATE_PARENT_OF",
+        "dir": "outgoing"
+      },
+      {
+        "id": "bbdc452d-8b59-4bdc-830f-57b85ddc0b53",
+        "name": "ESPACIO PROYECTOS SPV II, S.L.",
+        "type": "IS_ULTIMATE_PARENT_OF",
+        "dir": "outgoing"
+      },
+      {
+        "id": "91b89e8a-c384-4d1c-9222-256872c1063d",
+        "name": "David Martínez Montero",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "2d74e6cc-c4e1-409c-a6f9-120a0e48af52",
+        "name": "Javier Martínez-Piqueras",
+        "type": "WORKS_AT",
+        "dir": "incoming"
+      },
+      {
+        "id": "4b195fe5-50ee-475b-a388-c118ee65ec25",
+        "name": "Cristina Álvarez",
+        "type": "WORKS_AT",
+        "dir": "incoming"
+      },
+      {
+        "id": "0c7fb13a-b28f-48d9-b3c9-fa8c5c5c5e55",
+        "name": "Cristina Álvarez Álvarez",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "0ed56aed-9849-40f7-aa80-99999f72ed5c",
+        "name": "MERLIN PROPERTIES SOCIMI, S.A.",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "29940866-ae8b-4a01-bb9a-e1038c970a09",
+        "name": "Eduardo D´Alessandro Cishek",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "2a1c7803-80ee-4b3a-a968-d9294b0cda0e",
+        "name": "Cristina Alvárez",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "2b495974-4bd1-4d45-b9b3-320a3d0e2453",
+        "name": "SANTIAGO FERNANDEZ VALBUENA",
+        "type": "WORKS_AT",
+        "dir": "incoming"
+      },
+      {
+        "id": "3111fec4-567b-4ed9-a3df-9483f5cc8409",
+        "name": "EDUARDO EDMUNDO DALESSANDRO CISHEK",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "41874448-085b-5006-a6f9-29abd32e4f34",
+        "name": "Evan Andrew Carruthers",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "5e53645b-b470-4aec-9161-b941488264d9",
+        "name": "Milagros Méndez Ureña",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "75b70c8c-cb4f-4a3f-a036-c55b728e76d1",
+        "name": "MERLIN PROPERTIES SOCIMI SA",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "8ab4c3d1-b810-4510-bce7-d026c365c0d4",
+        "name": "MIGUEL TEMBOURY REDONDO",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "bcc75d24-df70-432d-824e-8fc6dd60f9d4",
+        "name": "JAVIER LAPASTORA TURPIN",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "bdcb5e62-3dbe-4ebf-acaa-5363865a5cb5",
+        "name": "Miquel Temboury Redondo",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "bf5846f3-ae4f-417a-a4cd-1c902ac27e48",
+        "name": "DAVID MARTINEZ MONTERO",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "bfe6dafe-2a11-4fb0-9336-5d7ee99d5f23",
+        "name": "Milagros Méndez",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "c43cdaaa-4d49-43ca-bfdf-6f31459d44e6",
+        "name": "EDUARDO EDMUNDO D ALESSANDRO CISHEK",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "e92b53e2-3001-47fb-aea4-435f24d32e65",
+        "name": "CRISTINA ALVAREZ ALVAREZ",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "eba34fb7-6127-4e2b-aaea-45e0a83d174e",
+        "name": "Javier Martínez-Piqueras Barceló",
+        "type": "IS_BOARD_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "efdde26e-c044-4379-ab5b-4d871767984e",
+        "name": "Santiago Fernández Valbuena",
+        "type": "WORKS_AT",
+        "dir": "incoming"
+      }
+    ],
+    "Clara": [
+      {
+        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+        "name": "FINTECH",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "6182d1da-bf29-4e2c-844b-77c600dcdd96",
+        "name": "Unknown Investor",
         "type": "INVESTED_IN",
         "dir": "outgoing"
       },
       {
-        "id": "94e0ca6a-4e39-4181-bd84-11f264d0aa62",
-        "name": "Speedinvest GmbH",
+        "id": "c254f0f5-d39e-4ba7-8b7f-eb2308d00589",
+        "name": "BBVA Spark Growth Instrument",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "e3a596f9-cb53-454e-ac29-8bf2c69f1d67",
+        "name": "BBVA Spark Fund",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "2e1907c4-9921-4d0d-8d46-c92ff29cef53",
+        "name": "Colombia",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      }
+    ],
+    "Inveready Technology Investment Group": [
+      {
+        "id": "12e3d6ea-316f-4718-8d32-3a3bfabc0151",
+        "name": "Habyt",
         "type": "INVESTED_IN",
         "dir": "outgoing"
+      },
+      {
+        "id": "2d06d820-5f25-4c06-a0da-3b71888d487c",
+        "name": "SAMY Alliance",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "325d22b8-f25e-4a8a-a46e-fb2dd4bfe566",
+        "name": "VINIEXPORT S.R.L. IN LIQUIDAZIONE",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "38a4374a-4867-4579-afe2-9233cce483c6",
+        "name": "Samy for Brands",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "eefad00e-b2f8-4503-bf56-e84e495a92fb",
+        "name": "GAMELEARN SL",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "98b1e3f1-c781-4216-978c-d1c018e6929c",
+        "name": "Catalonia.health",
+        "type": "IS_MEMBER_OF",
+        "dir": "outgoing"
+      },
+      {
+        "id": "21774ccd-d5c5-4fa2-8ed1-ac3d20b46339",
+        "name": "PRIVATE_EQUITY",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+        "name": "FINTECH",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+        "name": "VENTURE_CAPITAL",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1a108dbb-f10c-4cd4-88b7-372aa8aae442",
+        "name": "Carlos Conti",
+        "type": "WORKS_AT",
+        "dir": "incoming"
+      },
+      {
+        "id": "3d296c9e-c3da-4e2e-9b3e-e2a57410c881",
+        "name": "Sara Secall",
+        "type": "WORKS_AT",
+        "dir": "incoming"
+      },
+      {
+        "id": "4c8cbba0-5548-439a-831b-c23ed073c2fa",
+        "name": "Alexandre Bartolini",
+        "type": "WORKS_AT",
+        "dir": "incoming"
+      },
+      {
+        "id": "91f6c02c-8be2-4654-b1d2-4c66b64d1d47",
+        "name": "Ignacio Puig Masllorens",
+        "type": "WORKS_AT",
+        "dir": "incoming"
       }
     ],
     "K-Fund": [
@@ -594,76 +1646,10 @@
         "dir": "incoming"
       }
     ],
-    "Seaya Ventures": [
+    "Neinor Homes": [
       {
-        "id": "0938cf9b-9b99-40bf-8dce-b55d3b28fd82",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "0aa0a184-a21d-4925-8a07-27e4ec75e4fa",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "4bf0ac04-0430-4d0c-b11b-2545cab38dd8",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "59168477-d930-4658-a03c-2a87daebb6c3",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "77b6b8bf-bc4d-46bd-86b5-cbc118945aba",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "819efc67-d778-4ab0-84aa-97b1f9d9a704",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "a32c8bf0-c64b-4646-b6b8-7920eaf8117a",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "b6fb4812-3f62-4b2a-ad05-dd1978f601a8",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "c6805f6a-589d-4328-9ba7-ffba96559e9d",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "f3b73ab0-bbbd-4f5f-92b3-42b310224261",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "11ce48e0-a853-4085-8142-f674977b1a3a",
-        "name": "RENEWABLE_ENERGY",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "21774ccd-d5c5-4fa2-8ed1-ac3d20b46339",
-        "name": "PRIVATE_EQUITY",
+        "id": "1c1977b3-663a-47fb-81eb-51958758b70b",
+        "name": "CONSTRUCTION_AND_ENGINEERING",
         "type": "OPERATES_IN_INDUSTRY",
         "dir": "outgoing"
       },
@@ -674,936 +1660,22 @@
         "dir": "outgoing"
       },
       {
-        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
-        "name": "FINTECH",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
-        "name": "SOFTWARE_AND_SERVICES",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "b58fd009-906d-4a11-9aef-8ef566128a5c",
-        "name": "FOOD_AND_BEVERAGE",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "dd70bbef-ce9b-4560-babf-e60310d2c6b1",
-        "name": "HEALTHCARE_PROVIDERS",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
-        "name": "VENTURE_CAPITAL",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "05d25283-f7ff-4cac-933d-0c6c85cffbc6",
-        "name": "o11h",
+        "id": "258b8dfa-a7bc-49be-a105-c5e3f7c2e6a9",
+        "name": "Avenue Capital Group",
         "type": "INVESTED_IN",
         "dir": "outgoing"
       },
       {
-        "id": "05f78ca8-e852-45ba-8b28-a6684677621f",
-        "name": "COMUNIDAD FILMIN S.L.",
+        "id": "bafa6a81-52db-494c-90b3-f737ed1d13dd",
+        "name": "Promociones Habitat",
         "type": "INVESTED_IN",
         "dir": "outgoing"
       },
       {
-        "id": "0b3aaf51-1b00-4598-a7db-b88fb0b028ee",
-        "name": "Plenummedia",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "1a2f0cac-5a0b-44ff-9304-b65498da6ac6",
-        "name": "CrowdFarming",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca",
-        "name": "Payflow",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "235c173a-531f-4353-8e2c-d67cdc0c227b",
-        "name": "SENSEI AI LTD",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "2419a648-b092-4386-b3fd-556e52ed293f",
-        "name": "Restalo",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "24b6968d-5690-4131-9843-709b0465333d",
-        "name": "Reuse",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "2b99245f-110b-4f5a-b522-faa2a0dad5d6",
-        "name": "Aegir Insights",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "2d40c798-6d85-48da-8f4e-1b9c374ced48",
-        "name": "AUNOA SOFTWARE SOCIEDAD LIMITADA",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "386c88b9-20d2-46c9-93b5-86055b52b097",
-        "name": "Wallbox",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "3bbce8b4-dced-4c25-9875-ad7638f0b393",
-        "name": "Pompeii",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "3fa26ad5-e213-4aa9-bb59-71d0abeb40db",
-        "name": "Wallbox N.V.",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "42c0645b-8c0a-486e-9dc8-96918c0ca69d",
-        "name": "receeve",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "480d77d9-8907-444c-99d5-93797a1f2d9e",
-        "name": "Toqio",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "521f5052-f9aa-48aa-a1a7-b0ab5195c431",
-        "name": "Sensei",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "561f0678-111a-4513-9478-b04e48ba0c03",
-        "name": "Fracttal SpA",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "5b6cfe8e-6b0b-45e5-ab70-2b55f2939602",
-        "name": "ALMA",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "5d71f10c-423f-4efb-9abf-2d9466a21607",
-        "name": "Tucuvi",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "65b357e1-d365-48fb-8343-b2cf371a5475",
-        "name": "CATHAY INNOVATION",
+        "id": "8119675c-d8a8-421a-850c-c382ab19a1b6",
+        "name": "Plataforma Tecnológica Española de Construcción (PTEC)",
         "type": "IS_MEMBER_OF",
         "dir": "outgoing"
-      },
-      {
-        "id": "24cc6c1e-8913-49d8-80aa-6c29b61e2e9d",
-        "name": "Beatriz González",
-        "type": "FOUNDED",
-        "dir": "incoming"
-      },
-      {
-        "id": "169615f8-9d70-47a8-bd8e-ccb71847fe4c",
-        "name": "Seabery",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "17679909-b322-4a18-815e-aac945bfb815",
-        "name": "Seaya → Adsmurai",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "3c5232d5-33f6-49a2-93f4-10c269cef502",
-        "name": "Seaya → Adsmurai",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "556d1087-f7e0-4acf-9fb5-560848ea197d",
-        "name": "iPronics",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "57dcbb4a-e060-42b3-9f16-d1b96372ef9b",
-        "name": "Tucuvi",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "5bef6530-1129-4fb4-b33e-0d42e7708bd7",
-        "name": "Movo",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "5c0812a6-7efd-40c1-8ae6-640b7f9c2cd6",
-        "name": "Seaya → Adsmurai",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "5c0fcdcd-67fe-4fea-a782-35afdc5504d4",
-        "name": "Savana Médica",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "6fd43585-338c-49b2-a10f-377b395fa930",
-        "name": "011H SUSTAINABLE CONSTRUCTION S.L.",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "74bd652d-b5e9-438b-b76f-7e6dcfce36c5",
-        "name": "TCA GLOVO SL",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "7c8a608e-a8c1-4102-98e5-94eb64e98464",
-        "name": "Wallbox N.V.",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "7d5361d1-5ec0-44ab-bb14-01687e149113",
-        "name": "ADSMURAI S.L.",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "7d9b857b-aa5f-4414-8cfb-96e8ac778de1",
-        "name": "Adsmurai S.L.",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "7eb121ed-7c27-40da-9683-a7eb2b031c5b",
-        "name": "NeuralTrust",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "df1949b1-4652-4070-921a-cc74b0c6ead1",
-        "name": "Adsmurai",
-        "type": "OPERATED_BY",
-        "dir": "incoming"
-      },
-      {
-        "id": "9b72c259-dc5a-5c90-8126-af1de76a4504",
-        "name": "Enric Asuncion Escorsa",
-        "type": "IS_MEMBER_OF",
-        "dir": "incoming"
-      },
-      {
-        "id": "abc036f9-8750-430c-ab1d-c2726c35bdd1",
-        "name": "Jesús Encinar",
-        "type": "IS_MEMBER_OF",
-        "dir": "incoming"
-      }
-    ],
-    "Kibo Ventures": [
-      {
-        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
-        "name": "Spain",
-        "type": "HAS_PRESENCE_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "0024a3af-98bc-4374-9ce7-d4cb315546d6",
-        "name": "CLARITY AI EUROPE, S.L.",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "0241c00b-bb0a-4968-9dfc-f7da6596fa13",
-        "name": "Gotrade",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "04401b32-b3f6-442a-80b2-673a5ecc3b59",
-        "name": "Green Eagle Solutions",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "070aedfb-ce05-484f-947f-228d2360a7e7",
-        "name": "Belvo",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "091c396a-b15e-4aed-b7a4-7fc62ad180c8",
-        "name": "Lifeness",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "0e1c37bc-21de-43b2-851f-1ab64df718e0",
-        "name": "Promofarma",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "0f9290b7-348e-49f0-8272-16abe09c1483",
-        "name": "Bipi",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "12168685-b7e3-4988-8464-c3449af6d824",
-        "name": "Evernest",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "1471d16c-8a5d-4d1f-89ea-50f2187c701d",
-        "name": "FOSSA Systems",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "149d1c24-edb8-454c-bc3a-cde87f9f5dd6",
-        "name": "Lifeness",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "155d4eab-1239-4b42-9e5e-7aab643933c9",
-        "name": "White Vega",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "1a0edbf9-deb5-45be-ba24-0e7a0377cc92",
-        "name": "THEKER Robotics",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "1a4e810e-083e-4430-a421-4ce0ae9b0683",
-        "name": "Sorare SAS",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "1a501268-d3e2-4dea-9925-d1bdb1fcb1b9",
-        "name": "CartoDB",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "1ce07185-3589-4b04-afd8-e8ce5238d9b1",
-        "name": "Job&Talent",
-        "type": "IS_MEMBER_OF",
-        "dir": "incoming"
-      },
-      {
-        "id": "1e1dfdd3-687a-4493-80da-783efa4a5be7",
-        "name": "HWK TECHINVESTMENT SGEIC, S.A.",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "1e41dbb0-6298-4d94-927f-97c8ccf3d37c",
-        "name": "Cuidum",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "1eae53e4-907c-4e7c-9adc-98dc08628cbf",
-        "name": "EnjoyHQ",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "1f0d86a5-f6c6-4561-b910-2bb084003849",
-        "name": "Mitiga",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "24c216c7-8b4d-419e-adfa-e3f27cadb88a",
-        "name": "Devo",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "54b2f84c-0dbb-4ed0-90a8-0ca5e6f62a0e",
-        "name": "Level20.org",
-        "type": "IS_MEMBER_OF",
-        "dir": "outgoing"
-      },
-      {
-        "id": "a865be69-166b-46bd-ac27-9afcbc7108a8",
-        "name": "Asociación Española de Capital, Crecimiento e Inversión (ASCRI)",
-        "type": "IS_MEMBER_OF",
-        "dir": "outgoing"
-      },
-      {
-        "id": "21774ccd-d5c5-4fa2-8ed1-ac3d20b46339",
-        "name": "PRIVATE_EQUITY",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
-        "name": "FINTECH",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
-        "name": "SOFTWARE_AND_SERVICES",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "bb7858a2-51d8-45e2-82bd-3ea6a06d317a",
-        "name": "INTERNET_AND_WEB_SERVICES",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
-        "name": "VENTURE_CAPITAL",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "03eb1c3b-ba25-4ade-a227-ec417e833f76",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "0739e238-fa33-4e69-bef9-9740af95861a",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "16b6655a-c2cd-4086-9cd8-da6b7f2348ba",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "1b82ee68-eb12-415b-9608-4221b07d6e0d",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "2014875d-b77f-4a18-9778-371cec787152",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "2160c404-716e-4fd1-9e86-d0ce4aa8b348",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "21b66237-c5d2-47f8-bbbf-3084bf7b86c5",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "2414c0e5-b2be-46ae-adee-5f5e302c6db1",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "26cbfad9-dcf3-46b3-be9a-43917d05dce4",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "283ef7a8-bad8-4156-9f7a-1a21f7562e5f",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "28813070-83ea-4dd7-a762-d5b47e38df51",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "2ee0c201-2e9b-421f-ab5a-57a356e9c623",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "2ee1c629-3ed4-4987-8370-26c5d9af0b17",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "30968e9f-22ad-4b5a-8c50-9c9f75a640c0",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "320dc904-e222-44bf-93b5-1ade74dcdc54",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "38e4b376-f9ea-4a3b-b548-510dddc836d0",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "39e073e5-cdc8-4f30-9b0b-328750fbe3ee",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "39f0568e-ae32-4758-b65b-179e43c419c5",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "40c8efc4-d3b2-4554-af23-7d78638c7f96",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "41a717bd-35ea-4bbb-a42d-87c347136cf7",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "2c439612-7bec-4517-bdd8-c560f779e858",
-        "name": "Aquilino Peña",
-        "type": "IS_CFO_OF",
-        "dir": "incoming"
-      },
-      {
-        "id": "227a3980-35bf-43f1-9bfd-1daf29f045a2",
-        "name": "Mowido",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "2bdea5e8-a630-4098-9fb1-3f84bbaa77a2",
-        "name": "Cala",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "2ea52267-5360-48b1-8c36-c41ec14f1b51",
-        "name": "Jobandtalent",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "345e13d4-3e47-4ef6-98c1-540d905c4bdc",
-        "name": "Qida",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "349658f4-f353-496c-a2dd-cf7f38692cfc",
-        "name": "Caser Residencial",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "37974fda-2069-4174-8edf-869330fc9a83",
-        "name": "Miuda",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "3a04c361-5124-492e-9ff7-210553552aa0",
-        "name": "Curenergía",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "66cab772-4e9c-431b-8d86-25afd809954a",
-        "name": "Unnamed senior services company",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "81cfdabc-53f7-426a-b358-a942e159ca0f",
-        "name": "Cala AI",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "b20582ee-8896-427c-a0c9-d8189f09f17c",
-        "name": "Capchase",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "b5097b92-a66b-40b3-bf95-5f10837fe071",
-        "name": "Zepo Intelligence",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "b6994604-a464-4aa2-bfad-da6d87bf0413",
-        "name": "Mioti",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "ca676678-cc30-4da0-b5e2-eb13a66663d0",
-        "name": "Zepo Intelligence",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "da14978a-cf6d-45fd-920f-b96683b1aeac",
-        "name": "Jobandtalent",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "de6868da-e543-4c5b-a987-2df61392b42d",
-        "name": "Unnamed senior care services company",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "e927ec62-539d-4eb2-b24f-0393c5078388",
-        "name": "Belvo",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "e93eee2c-f1e6-411c-804b-03349955b786",
-        "name": "Senior-care startup",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "f2dd4315-469a-4e5a-8a41-e2608ed092a8",
-        "name": "Mirai Advisory",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "f426c7e0-f3d1-4e3d-a90e-bb84fd5ef385",
-        "name": "Belvo",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "3cdae03c-b346-4a40-8811-8fa17e4710a4",
-        "name": "Javier Torremocha",
-        "type": "IS_MEMBER_OF",
-        "dir": "incoming"
-      },
-      {
-        "id": "4a411217-13cf-4722-bdd1-ac299fbf15a6",
-        "name": "Aquilino Peña",
-        "type": "IS_MEMBER_OF",
-        "dir": "incoming"
-      },
-      {
-        "id": "c4f0f1b7-0b50-48f3-aecf-5de9bcc5f227",
-        "name": "José María Amusategui",
-        "type": "WORKS_AT",
-        "dir": "incoming"
-      },
-      {
-        "id": "1f2eb8e4-87c9-4b1e-a16c-ed4dda34fc9a",
-        "name": "Ignacio Pallás",
-        "type": "IS_MEMBER_OF",
-        "dir": "incoming"
-      },
-      {
-        "id": "6d3096fb-5a33-4bf3-a2ca-c61ca90f3e1a",
-        "name": "Joaquín Melgarejo",
-        "type": "IS_MEMBER_OF",
-        "dir": "incoming"
-      },
-      {
-        "id": "96f677de-e09f-4be2-b8de-c1c122951627",
-        "name": "Sonia Fernandez",
-        "type": "WORKS_AT",
-        "dir": "incoming"
-      },
-      {
-        "id": "9e367cfd-e2b0-48b7-8edb-6ad2c5383cec",
-        "name": "Jordi Vidal",
-        "type": "WORKS_AT",
-        "dir": "incoming"
-      },
-      {
-        "id": "decc8f11-d36f-43c6-9aae-3f7d052852c8",
-        "name": "Jordi Vidal",
-        "type": "IS_MEMBER_OF",
-        "dir": "incoming"
-      },
-      {
-        "id": "ffd5d305-0c99-4d78-812d-25ea5d0c8f50",
-        "name": "Gonzalo Duarte Señor",
-        "type": "IS_MEMBER_OF",
-        "dir": "incoming"
-      },
-      {
-        "id": "a5929218-834b-4526-9830-766f004f965d",
-        "name": "CoverWallet",
-        "type": "IS_MEMBER_OF",
-        "dir": "incoming"
-      },
-      {
-        "id": "d64e7428-875a-40e9-b1b7-b35f3b5985d7",
-        "name": "Juan López Santamaría",
-        "type": "IS_MEMBER_OF",
-        "dir": "incoming"
-      },
-      {
-        "id": "f27a792d-a346-4e63-bba9-917eb64fc758",
-        "name": "César Bardají",
-        "type": "IS_MEMBER_OF",
-        "dir": "incoming"
-      },
-      {
-        "id": "fce36ae0-a284-47cf-aa2a-70af7eeaf9ff",
-        "name": "Fundación Ship2B",
-        "type": "IS_MEMBER_OF",
-        "dir": "incoming"
-      }
-    ],
-    "BBVA Spark Fund": [
-      {
-        "id": "17f83a18-dac8-4186-9b31-5808361ec7a3",
-        "name": "Sesame",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "191aec45-7cd4-4bf2-a6d8-3848d5799af1",
-        "name": "Habi",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "1b0605e7-06a4-492c-b822-37ee1e0da8dd",
-        "name": "Prophero",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca",
-        "name": "Payflow",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "4342ab23-3e2a-43b4-b9e0-c76a84b170fa",
-        "name": "Clara",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "8057c278-8959-4069-afa1-62ca16c68a57",
-        "name": "Baubap",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "86401f6b-1283-4929-8d23-da96ec53b184",
-        "name": "Sesame",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "89db031c-2fd8-4484-ae6f-4314d8e4f9fc",
-        "name": "Sesame",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "97c68379-ff00-4569-b475-22271a047f8c",
-        "name": "PROPHERO GLOBAL SL",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "988baeef-5fdf-41ab-8bac-4b433bb97f03",
-        "name": "Solvento",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "b26d8977-8d98-4483-bd45-518f4b49f568",
-        "name": "Sesame",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "c06d86cd-ad0c-4c83-86db-39a163db957f",
-        "name": "Sesame",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "cac5c8eb-f483-428a-9ee1-0897ae037133",
-        "name": "TaxDown",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "e8e7255c-1c3d-45ab-842e-a6578a3422b9",
-        "name": "Tuhabi",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
-        "name": "FINTECH",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
-        "name": "SOFTWARE_AND_SERVICES",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
-        "name": "VENTURE_CAPITAL",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "9d674d01-af3d-4423-af7c-5fcde1793f20",
-        "name": "Sesame HR",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      }
-    ],
-    "Fintonic": [
-      {
-        "id": "708a2cd3-d084-4edd-aa83-927e8527d82a",
-        "name": "ASSET_MANAGEMENT",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
-        "name": "FINTECH",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "232d0a38-d6d0-41e2-aeaa-988fa8b51533",
-        "name": "PSN Group",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "685a2360-b8c3-41f7-87bd-de616026c569",
-        "name": "Zank Financial",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "6eb0f1a7-d891-481f-825a-25cc6edacb07",
-        "name": "Square One Capital",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "da2d99e4-cb84-4fad-9c1e-763e9024f56e",
-        "name": "ING Ventures",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      }
-    ],
-    "SIX FinTech Ventures": [
-      {
-        "id": "175aa84a-2d6b-4b94-a43e-fde275d7bee0",
-        "name": "Toq.io",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "c166cb69-dddb-451d-bf8b-5b1c4d012202",
-        "name": "Shift Cryptosecurity",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "ffe1ba1c-c236-41d1-8245-946ea2ad458d",
-        "name": "Vestr Ag",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
-        "name": "FINTECH",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
-        "name": "VENTURE_CAPITAL",
-        "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "7b2c9a92-07e3-4ce3-8bd9-ffc0a897747a",
-        "name": "ClimateTrade",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
       }
     ],
     "CATHAY INNOVATION": [
@@ -1986,363 +2058,245 @@
         "dir": "incoming"
       }
     ],
-    "Capchase": [
+    "REAL_ESTATE": [
       {
-        "id": "37a1f0f5-f5ef-4b63-b3d8-14f5636be703",
-        "name": "United States",
-        "type": "HAS_HEADQUARTERS_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "a3263b7f-7d25-418a-bbb1-f28f456c08a8",
-        "name": "Delaware",
-        "type": "IS_REGISTERED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "5e028c18-54a9-4d0f-b9fc-294d1c26b682",
-        "name": "CAPCHASE FINANCE LLC",
-        "type": "IS_DIRECT_PARENT_OF",
-        "dir": "outgoing"
-      },
-      {
-        "id": "30c6b5b9-db86-442a-a899-2b180e1320d4",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "5ecce220-4626-4ec0-8d71-4ed239af1d57",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "771e6ba1-9b05-4797-9363-320cec369347",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "8ef7d1ae-7a44-4e52-bb53-e4f006152ac4",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "a00fa590-8e76-4340-99d1-1541cfbf15a5",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "a17857ac-1c2d-40a0-8d01-1b4dc3a12f2d",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "ab1980b4-f316-4272-bcaa-33903ee5bb2c",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "b7da1e47-8c99-447f-b50d-b42af2afb000",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "876bf47e-226b-40a1-a1bc-ffd91a0ec66e",
-        "name": "Massachusetts",
-        "type": "HAS_HEADQUARTERS_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "67cc3732-d079-4306-837e-c70c3b4e9ac8",
-        "name": "Fondo OÜ",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "d13f79c8-6698-4f4f-b98c-1a28d60d80b8",
-        "name": "Kibo Ventures",
-        "type": "INVESTED_IN",
-        "dir": "incoming"
-      },
-      {
-        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
-        "name": "FINTECH",
+        "id": "000014b3-df93-4cc7-aa0a-07226a025690",
+        "name": "SFP UK IBERIAN HOTEL OPERATIONS LTD",
         "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
+        "dir": "incoming"
       },
       {
-        "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
-        "name": "SOFTWARE_AND_SERVICES",
+        "id": "0000616f-b787-4a77-88d2-4f99442d91ab",
+        "name": "SQUARE APE 2 LTD",
         "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "1ad8156b-4253-4cda-a719-5e395732aa8a",
-        "name": "Przemyslaw Gotfryd",
-        "type": "FOUNDED",
         "dir": "incoming"
       },
       {
-        "id": "9d338ece-9519-450f-a095-732cfe6ab42c",
-        "name": "Miguel Fernandez Larrea",
-        "type": "FOUNDED",
-        "dir": "incoming"
-      },
-      {
-        "id": "c2aa8e13-c810-4af4-9f31-29236d989f2b",
-        "name": "Adam Bain",
-        "type": "IS_MEMBER_OF",
-        "dir": "incoming"
-      },
-      {
-        "id": "ad5ba5d9-82d2-4409-ae25-36af5c5b50a8",
-        "name": "Ignacio Moreno",
-        "type": "FOUNDED",
-        "dir": "incoming"
-      }
-    ],
-    "Gotrade": [
-      {
-        "id": "14a04520-c069-447d-bd87-d06ed83b5440",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "cca52a98-80f6-45b4-b73d-87db10b9f2e7",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "80570ae7-a8b1-485d-b1a9-cee2b6db40a1",
-        "name": "Mazowieckie",
-        "type": "HAS_HEADQUARTERS_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "9929317f-bdad-448a-8658-898fc7ec6e30",
-        "name": "Poland",
-        "type": "IS_REGISTERED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
-        "name": "FINTECH",
+        "id": "00006482-bf08-406c-8149-2a440bde7280",
+        "name": "RJS LAND PARTNERSHIPS LTD",
         "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
+        "dir": "incoming"
       },
       {
-        "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
-        "name": "SOFTWARE_AND_SERVICES",
+        "id": "000064f3-1abf-45eb-b4f0-13e2042f7e77",
+        "name": "EGGINTON'S RENTALS LTD",
         "type": "OPERATES_IN_INDUSTRY",
-        "dir": "outgoing"
-      },
-      {
-        "id": "1989f4c8-697c-5f3a-ac84-06c525b7d933",
-        "name": "YC Summer 2019",
-        "type": "IS_MEMBER_OF",
-        "dir": "outgoing"
-      },
-      {
-        "id": "7531aa19-e755-4106-ac78-ce0d984e4de0",
-        "name": "Singapore",
-        "type": "HAS_HEADQUARTERS_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "e332ff3d-605d-4b01-8222-5098236a3aff",
-        "name": "United Kingdom",
-        "type": "HAS_HEADQUARTERS_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "0f793746-4205-4ac8-9a1d-65b6b7169697",
-        "name": "Peter Hoang",
-        "type": "FOUNDED",
         "dir": "incoming"
       },
       {
-        "id": "3322933a-0ed0-4b39-94c3-c40cba85b574",
-        "name": "Rohit Mulani",
-        "type": "FOUNDED",
+        "id": "00007887-25b9-459f-b7c8-744f247a8f45",
+        "name": "THE GOWERY MANAGEMENT COMPANY LIMITED",
+        "type": "OPERATES_IN_INDUSTRY",
         "dir": "incoming"
       },
       {
-        "id": "334efcc9-4c89-480d-b32e-1da7ac17b74b",
-        "name": "Norman Wanto",
-        "type": "FOUNDED",
+        "id": "000078a7-c1f7-4535-bd74-1cdec32823ce",
+        "name": "STOPFORD PARK ESTATE MANAGEMENT COMPANY LIMITED",
+        "type": "OPERATES_IN_INDUSTRY",
         "dir": "incoming"
       },
       {
-        "id": "d6890173-dff2-43c2-832e-b7aad69a1b97",
-        "name": "David Grant",
-        "type": "FOUNDED",
+        "id": "0000a333-f01c-40d4-a3cd-9dba04359b04",
+        "name": "23 FIR TREE LODGE LIMITED",
+        "type": "OPERATES_IN_INDUSTRY",
         "dir": "incoming"
       },
       {
-        "id": "0ea5659d-662f-410c-93e6-1775879f5989",
-        "name": "Velocity Capital Fintech Ventures Coöperatief U.A.",
-        "type": "INVESTED_IN",
+        "id": "0000a549-43b8-422e-b945-4c817303ddcd",
+        "name": "DOMUS DEVELOPMENTS LIMITED",
+        "type": "OPERATES_IN_INDUSTRY",
         "dir": "incoming"
       },
       {
-        "id": "1e86655e-373d-4fe8-be13-af3713581f73",
-        "name": "Y Combinator",
-        "type": "INVESTED_IN",
+        "id": "0000cebb-efb8-48fc-9f23-1170abaec750",
+        "name": "TK & J HOLDINGS LTD",
+        "type": "OPERATES_IN_INDUSTRY",
         "dir": "incoming"
       },
       {
-        "id": "7faf31b1-b7a2-4e93-b820-1fed0d86d2fa",
-        "name": "Candor",
-        "type": "INVESTED_IN",
+        "id": "0000f7a8-f5f9-4bec-b1ed-f5d8ad698918",
+        "name": "FINSBURY LEASECO LIMITED",
+        "type": "OPERATES_IN_INDUSTRY",
         "dir": "incoming"
       },
       {
-        "id": "a81efff2-1b1b-41e0-b068-3216380923a7",
-        "name": "KIBO VENTURES PARTNERS SGEIC, SA",
-        "type": "INVESTED_IN",
+        "id": "00014891-ae3a-4b59-bcc2-0c891aaadb14",
+        "name": "KENCHINGTON LIMITED",
+        "type": "OPERATES_IN_INDUSTRY",
         "dir": "incoming"
       },
       {
-        "id": "d13f79c8-6698-4f4f-b98c-1a28d60d80b8",
-        "name": "Kibo Ventures",
-        "type": "INVESTED_IN",
+        "id": "00018339-9050-4985-86ef-aaf290bad44c",
+        "name": "OMNIA HOUSE LIMITED",
+        "type": "OPERATES_IN_INDUSTRY",
         "dir": "incoming"
       },
       {
-        "id": "6cd40fea-39e3-438b-a07a-68693cfde48c",
-        "name": "Andrew Haryono",
-        "type": "FOUNDED",
-        "dir": "incoming"
-      }
-    ],
-    "TELEFONICA SA": [
-      {
-        "id": "161e58e5-147d-4344-97a2-f2889afe63dd",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "2c043435-d623-4ba8-b5d0-bb713ec74bc1",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "5966543c-0aec-4430-b0c2-18ec8e459c89",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "6ea968fc-fb2d-47d2-9293-87d6f695b43d",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "82803fc4-aa54-4fa9-8b55-68215f20b976",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "a6e53263-2e5b-4f3a-a5b4-baf96ba72b8b",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "de735947-994a-4d29-bb1f-42a68b93a777",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "e3d09deb-9f65-4741-b7b6-5ff56db1e071",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "edc659dd-9d69-40b0-ba83-0366621dd821",
-        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
-        "dir": "outgoing"
-      },
-      {
-        "id": "3f7ad5f6-cc3b-4c19-8943-7c410239ed9f",
-        "name": "Amobee",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "5039a4a1-24a3-4f0e-9f9d-0b1b5ed4abd2",
-        "name": "TELXIUS TELECOM S.A.",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "80583d4e-fa59-47a4-956c-e425b7c98de5",
-        "name": "Monogoto",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "bd8eeaad-7409-4c32-8ca6-c6addc68a8fa",
-        "name": "Olé",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "c2413391-5436-4e1b-b54c-0de3bc273358",
-        "name": "Raylo",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "e6588df7-62ea-47b7-b48a-01c086ba198b",
-        "name": "Meditelecom",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "f8b44f1a-20d8-43c9-b142-8975380369d6",
-        "name": "flexiWAN",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "f8df4e20-4094-4826-9364-a8204dd9a6cb",
-        "name": "VALERANN UK LIMITED",
-        "type": "INVESTED_IN",
-        "dir": "outgoing"
-      },
-      {
-        "id": "ed1ecdd2-fa79-4792-bb39-40cbe03bbf1c",
-        "name": "Andrés Padilla Fuentes",
-        "type": "IS_MEMBER_OF",
+        "id": "000184c8-9a40-45ee-b188-6b1accf4de7c",
+        "name": "SIX THAMES CIRCLE LIMITED",
+        "type": "OPERATES_IN_INDUSTRY",
         "dir": "incoming"
       },
       {
-        "id": "e54f3f3b-1c7b-47b0-9915-a5730f7be7c5",
-        "name": "BlackRock, Inc.",
-        "type": "IS_BENEFICIARY_OWNER_OF",
+        "id": "0001a6cb-3590-47ad-a893-3f903b80f52a",
+        "name": "ODONESA PROPERTY HOLDINGS LTD",
+        "type": "OPERATES_IN_INDUSTRY",
         "dir": "incoming"
       },
       {
-        "id": "7c68c8ff-aa38-4072-bd22-59bfc9829fef",
-        "name": "SALUPRO SPAIN SL",
-        "type": "INVESTED_IN",
+        "id": "0001c803-9d15-4bf5-bb63-6434534dc604",
+        "name": "HOLLY TREE ASSET MANAGEMENT LIMITED",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "0001d327-3fbb-456a-b0e0-96f12d8050dc",
+        "name": "SARUM PROPERTIES LIMITED",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "0001d4a7-1d4b-4831-9eb1-52d6fde6aa61",
+        "name": "18 FONTENOY ROAD LIMITED",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "0001d708-a049-496b-86a6-7bfb11d9b83a",
+        "name": "LUXURY COMMERCE (PROPERTY) LIMITED",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "0001dc13-0b9f-43cf-8592-43f073a8d4df",
+        "name": "PAPA ARCHITECTS LIMITED",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "0001e163-b313-433a-849f-aeb3e455eaa1",
+        "name": "JACCSS LTD",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "06da0dee-af80-4bbc-8e48-69bcf05564d2",
+        "name": "Ley Concursal",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "0780a3bd-9e1d-46aa-888b-72497f1e563b",
+        "name": "Opkoopbescherming",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "07ec0e67-fad9-4b44-8728-a26124de6ab7",
+        "name": "Decreto Legislativo 1/2023",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "08dc0afa-49dd-4908-9330-51360aaa02a4",
+        "name": "Hawksbill Creek Agreement",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "0d259107-a2ea-4a09-8c11-57a39aea2346",
+        "name": "RDL 2/2026",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "0dd70a6a-fefd-463f-bf29-64e5fc8e8e4a",
+        "name": "artículo 1454 del Código Civil",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "0f0127d8-8010-441c-b9dd-4136fc414868",
+        "name": "Convenio de Ramsar",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "106270c5-93a6-46f8-ba9a-2b9c3a79de8b",
+        "name": "Decreto Legislativo 1/2015",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "11c0ae36-4f17-4c04-8b57-54289fa62bf3",
+        "name": "Ley 39/2015 del Procedimiento Administrativo Común",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "16eb517d-7458-40c4-ab04-01d7dadcacd4",
+        "name": "Wet werkelijk rendement box 3",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "170a6218-b066-4b3a-88f5-a4fa255fe503",
+        "name": "CARES Act",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "19c86573-0519-4b3d-93f6-5cdbdabb0bc9",
+        "name": "Ley 15/2022",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "1a8c4993-56f2-4c92-9a29-5bd80672c2e0",
+        "name": "Ley 29/1994 de Arrendamientos Urbanos",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "1c8e0d52-de75-4d66-9206-3ac404d7b44c",
+        "name": "Decreto Legislativo 1/2010",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "1cc448d6-ffc4-4bae-9540-1b3ce81d5406",
+        "name": "RDL 8/2026",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "1e7951d8-bd03-484f-84e0-047b6a0e12e6",
+        "name": "Llei de l'Impost sobre Societats",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "231bc937-828a-465d-a61f-ad32384cce19",
+        "name": "Act respecting the Caisse de dépôt et placement du Québec",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "245d71d7-2ed2-4064-a076-6cc436f596c3",
+        "name": "Ley General Tributaria",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "24aa699e-91d0-45b3-84aa-458fc4ed65a7",
+        "name": "Decreto 571/1963",
+        "type": "AFFECTS_INDUSTRY",
+        "dir": "incoming"
+      },
+      {
+        "id": "26c7f5dc-1551-4a1c-ba43-f88591913b59",
+        "name": "Decreto 92/2019, de 11 de julio",
+        "type": "AFFECTS_INDUSTRY",
         "dir": "incoming"
       }
     ],
@@ -2836,84 +2790,278 @@
         "dir": "incoming"
       }
     ],
-    "Inveready Technology Investment Group": [
+    "idealista": [
       {
-        "id": "12e3d6ea-316f-4718-8d32-3a3bfabc0151",
-        "name": "Habyt",
-        "type": "INVESTED_IN",
+        "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+        "name": "REAL_ESTATE",
+        "type": "OPERATES_IN_INDUSTRY",
         "dir": "outgoing"
       },
       {
-        "id": "2d06d820-5f25-4c06-a0da-3b71888d487c",
-        "name": "SAMY Alliance",
+        "id": "bb7858a2-51d8-45e2-82bd-3ea6a06d317a",
+        "name": "INTERNET_AND_WEB_SERVICES",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "935231d1-656d-4921-ba00-47ed2f182d2b",
+        "name": "idealista",
         "type": "INVESTED_IN",
         "dir": "incoming"
       },
       {
-        "id": "325d22b8-f25e-4a8a-a46e-fb2dd4bfe566",
-        "name": "VINIEXPORT S.R.L. IN LIQUIDAZIONE",
+        "id": "09b5033c-28f8-4e21-b7e7-157daa7730d9",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "c497ae76-4ccb-474c-9679-6acd83559f7e",
+        "name": "MNA_COMPLETED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "d078adf3-124e-4b75-9e9a-4dc19ef5c3b9",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "16cecda7-3371-454b-af6e-10103db76161",
+        "name": "Madrid",
+        "type": "HAS_HEADQUARTERS_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+        "name": "Spain",
+        "type": "HAS_HEADQUARTERS_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "237410fd-1771-4f49-9d68-080c9772912c",
+        "name": "AVAIBOOK ON-LINE SOCIEDAD LIMITADA",
+        "type": "IS_DIRECT_PARENT_OF",
+        "dir": "outgoing"
+      },
+      {
+        "id": "674353f7-3319-424b-822f-783c666805fc",
+        "name": "APLICACIONES INMOVILLA SL",
+        "type": "IS_DIRECT_PARENT_OF",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1b109cbb-2c95-4b01-a1a8-ab347959fd7c",
+        "name": "CINVEN PARTNERS LLP",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "30e1ac14-327f-4cb2-9201-03d330df83bc",
+        "name": "OAKLEY CAPITAL LIMITED",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "32dbb62d-b755-563b-8da5-3833bf780fb3",
+        "name": "Apax Partners",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "47d0d672-b1aa-4f37-affe-58b492434471",
+        "name": "Apax Partners",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "68fc9d2f-a4b4-4a95-a0ec-6c6e5b535f3a",
+        "name": "APAX PARTNERS LLP",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "90a14e58-f1bd-4d89-a559-f7305b815a55",
+        "name": "Apax Partners",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "96af50a4-8481-407f-81c6-375ea572f6fd",
+        "name": "Bonsai Partners",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "b75483e8-687f-5f0e-8a69-db4805d2e9c9",
+        "name": "Eqt Ab (Publ)",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "e0f3466e-9da6-435a-ab55-cb96ba8424f4",
+        "name": "BONSAI VENTURE CAPITAL SA",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "ea5eefb1-f430-46a3-bb06-2609999cb6ce",
+        "name": "Apax Partners",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "abc036f9-8750-430c-ab1d-c2726c35bdd1",
+        "name": "Jesús Encinar",
+        "type": "WORKS_AT",
+        "dir": "incoming"
+      },
+      {
+        "id": "24cc6c1e-8913-49d8-80aa-6c29b61e2e9d",
+        "name": "Beatriz González",
+        "type": "WORKS_AT",
+        "dir": "incoming"
+      },
+      {
+        "id": "c5d95eca-7b96-4393-9cfd-f977747c14e0",
+        "name": "IDEALISTA GLOBAL SA",
+        "type": "IS_DIRECT_PARENT_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "31a00080-a85d-4917-ac73-1bb57d507e63",
+        "name": "Inmovilla",
+        "type": "DESIGNED_BY",
+        "dir": "incoming"
+      }
+    ],
+    "Jesús Encinar": [
+      {
+        "id": "31723beb-45b5-4822-91dd-02793bd35443",
+        "name": "Los españoles más influyentes de 2012 – Top 25/Internet (El Mundo)",
+        "type": "RECEIVED_AWARD",
+        "dir": "outgoing"
+      },
+      {
+        "id": "4befcb41-cad9-42a3-bc2e-93b2c044a62f",
+        "name": "Young Global Leader (World Economic Forum)",
+        "type": "RECEIVED_AWARD",
+        "dir": "outgoing"
+      },
+      {
+        "id": "4c2ec85e-1703-41c0-8c76-0a163fd616ae",
+        "name": "Etece",
         "type": "INVESTED_IN",
         "dir": "outgoing"
       },
       {
-        "id": "38a4374a-4867-4579-afe2-9233cce483c6",
-        "name": "Samy for Brands",
-        "type": "INVESTED_IN",
+        "id": "2a173394-6c7f-4e68-83d4-8a00b3e13258",
+        "name": "19 años al pie del cañón: la historia de idealista ...",
+        "type": "FEATURED_IN",
         "dir": "outgoing"
       },
       {
-        "id": "eefad00e-b2f8-4503-bf56-e84e495a92fb",
-        "name": "GAMELEARN SL",
-        "type": "INVESTED_IN",
+        "id": "8a1c0e27-9651-4382-b245-2a8b10e3226b",
+        "name": "Los Mini Podcasts de Innoventures Capital – episode featuring Jesús Encinar",
+        "type": "FEATURED_IN",
         "dir": "outgoing"
       },
       {
-        "id": "98b1e3f1-c781-4216-978c-d1c018e6929c",
-        "name": "Catalonia.health",
+        "id": "c93d15da-dd0e-464a-8e26-86a4114790fb",
+        "name": "Jesús Encinar, el rey Midas de Idealista",
+        "type": "FEATURED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "11e19c01-3715-4484-ab40-0e31b556b36b",
+        "name": "Rockola Media Group SL",
+        "type": "FOUNDED",
+        "dir": "outgoing"
+      },
+      {
+        "id": "646140e4-7bb7-4f65-8d86-0bc0ce14f266",
+        "name": "11870 Información en General SL",
+        "type": "IS_CEO_OF",
+        "dir": "outgoing"
+      },
+      {
+        "id": "935231d1-656d-4921-ba00-47ed2f182d2b",
+        "name": "idealista",
+        "type": "WORKS_AT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "bedee1fb-239c-4fe0-be30-aa4b74be3a72",
+        "name": "Harvard Business School",
+        "type": "STUDIED_AT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "fbf3ed08-b1be-42e1-942b-25664fdf18d6",
+        "name": "ICADE Business School (Universidad Pontificia de Comillas)",
+        "type": "STUDIED_AT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "01c237e4-b375-4c97-8c05-7874c15fecd7",
+        "name": "Mitchell Madison Group",
+        "type": "WORKS_AT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "46bf9402-e078-4878-a7d7-7969534fea75",
+        "name": "11870.com",
+        "type": "WORKS_AT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "4e352ab4-3448-4cc6-a9ed-61d2ecf7d08e",
+        "name": "WOLFF OLINS LIMITED",
+        "type": "WORKS_AT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "55e43b45-6fdf-410a-9b3d-c43061f58fe9",
+        "name": "Toprural",
+        "type": "WORKS_AT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "d2b709f8-e55b-49f0-a0fd-82b30c99a6dd",
+        "name": "RENTALIA IBERICA S XXI SL",
+        "type": "WORKS_AT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+        "name": "Spain",
+        "type": "HAS_NATIONALITY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "c6b7a325-4235-4f88-ba88-30adbe5dbfa0",
+        "name": "World Economic Forum",
         "type": "IS_MEMBER_OF",
         "dir": "outgoing"
       },
       {
-        "id": "21774ccd-d5c5-4fa2-8ed1-ac3d20b46339",
-        "name": "PRIVATE_EQUITY",
-        "type": "OPERATES_IN_INDUSTRY",
+        "id": "c7ae8f31-34b6-495b-8fb3-9803bcd7e3a2",
+        "name": "Association of Internet Investors and Entrepreneurs",
+        "type": "IS_MEMBER_OF",
         "dir": "outgoing"
       },
       {
-        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
-        "name": "FINTECH",
-        "type": "OPERATES_IN_INDUSTRY",
+        "id": "c9f6f389-bb74-4d8c-90cd-2928a0b2647f",
+        "name": "SeedRocket",
+        "type": "IS_MEMBER_OF",
         "dir": "outgoing"
       },
       {
-        "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
-        "name": "VENTURE_CAPITAL",
-        "type": "OPERATES_IN_INDUSTRY",
+        "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+        "name": "Seaya Ventures",
+        "type": "IS_MEMBER_OF",
         "dir": "outgoing"
-      },
-      {
-        "id": "1a108dbb-f10c-4cd4-88b7-372aa8aae442",
-        "name": "Carlos Conti",
-        "type": "WORKS_AT",
-        "dir": "incoming"
-      },
-      {
-        "id": "3d296c9e-c3da-4e2e-9b3e-e2a57410c881",
-        "name": "Sara Secall",
-        "type": "WORKS_AT",
-        "dir": "incoming"
-      },
-      {
-        "id": "4c8cbba0-5548-439a-831b-c23ed073c2fa",
-        "name": "Alexandre Bartolini",
-        "type": "WORKS_AT",
-        "dir": "incoming"
-      },
-      {
-        "id": "91f6c02c-8be2-4654-b1d2-4c66b64d1d47",
-        "name": "Ignacio Puig Masllorens",
-        "type": "WORKS_AT",
-        "dir": "incoming"
       }
     ],
     "ALDEA VENTURES, S.G.E.I.C. S.A.": [
@@ -3067,49 +3215,1695 @@
         "type": "WORKS_AT",
         "dir": "incoming"
       }
+    ],
+    "Capchase": [
+      {
+        "id": "37a1f0f5-f5ef-4b63-b3d8-14f5636be703",
+        "name": "United States",
+        "type": "HAS_HEADQUARTERS_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "a3263b7f-7d25-418a-bbb1-f28f456c08a8",
+        "name": "Delaware",
+        "type": "IS_REGISTERED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "5e028c18-54a9-4d0f-b9fc-294d1c26b682",
+        "name": "CAPCHASE FINANCE LLC",
+        "type": "IS_DIRECT_PARENT_OF",
+        "dir": "outgoing"
+      },
+      {
+        "id": "30c6b5b9-db86-442a-a899-2b180e1320d4",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "5ecce220-4626-4ec0-8d71-4ed239af1d57",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "771e6ba1-9b05-4797-9363-320cec369347",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8ef7d1ae-7a44-4e52-bb53-e4f006152ac4",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "a00fa590-8e76-4340-99d1-1541cfbf15a5",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "a17857ac-1c2d-40a0-8d01-1b4dc3a12f2d",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "ab1980b4-f316-4272-bcaa-33903ee5bb2c",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "b7da1e47-8c99-447f-b50d-b42af2afb000",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "876bf47e-226b-40a1-a1bc-ffd91a0ec66e",
+        "name": "Massachusetts",
+        "type": "HAS_HEADQUARTERS_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "67cc3732-d079-4306-837e-c70c3b4e9ac8",
+        "name": "Fondo OÜ",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "d13f79c8-6698-4f4f-b98c-1a28d60d80b8",
+        "name": "Kibo Ventures",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+        "name": "FINTECH",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+        "name": "SOFTWARE_AND_SERVICES",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1ad8156b-4253-4cda-a719-5e395732aa8a",
+        "name": "Przemyslaw Gotfryd",
+        "type": "FOUNDED",
+        "dir": "incoming"
+      },
+      {
+        "id": "9d338ece-9519-450f-a095-732cfe6ab42c",
+        "name": "Miguel Fernandez Larrea",
+        "type": "FOUNDED",
+        "dir": "incoming"
+      },
+      {
+        "id": "c2aa8e13-c810-4af4-9f31-29236d989f2b",
+        "name": "Adam Bain",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "ad5ba5d9-82d2-4409-ae25-36af5c5b50a8",
+        "name": "Ignacio Moreno",
+        "type": "FOUNDED",
+        "dir": "incoming"
+      }
+    ],
+    "Kibo Ventures": [
+      {
+        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+        "name": "Spain",
+        "type": "HAS_PRESENCE_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "0024a3af-98bc-4374-9ce7-d4cb315546d6",
+        "name": "CLARITY AI EUROPE, S.L.",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "0241c00b-bb0a-4968-9dfc-f7da6596fa13",
+        "name": "Gotrade",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "04401b32-b3f6-442a-80b2-673a5ecc3b59",
+        "name": "Green Eagle Solutions",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "070aedfb-ce05-484f-947f-228d2360a7e7",
+        "name": "Belvo",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "091c396a-b15e-4aed-b7a4-7fc62ad180c8",
+        "name": "Lifeness",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "0e1c37bc-21de-43b2-851f-1ab64df718e0",
+        "name": "Promofarma",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "0f9290b7-348e-49f0-8272-16abe09c1483",
+        "name": "Bipi",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "12168685-b7e3-4988-8464-c3449af6d824",
+        "name": "Evernest",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1471d16c-8a5d-4d1f-89ea-50f2187c701d",
+        "name": "FOSSA Systems",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "149d1c24-edb8-454c-bc3a-cde87f9f5dd6",
+        "name": "Lifeness",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "155d4eab-1239-4b42-9e5e-7aab643933c9",
+        "name": "White Vega",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1a0edbf9-deb5-45be-ba24-0e7a0377cc92",
+        "name": "THEKER Robotics",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1a4e810e-083e-4430-a421-4ce0ae9b0683",
+        "name": "Sorare SAS",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1a501268-d3e2-4dea-9925-d1bdb1fcb1b9",
+        "name": "CartoDB",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1ce07185-3589-4b04-afd8-e8ce5238d9b1",
+        "name": "Job&Talent",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "1e1dfdd3-687a-4493-80da-783efa4a5be7",
+        "name": "HWK TECHINVESTMENT SGEIC, S.A.",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1e41dbb0-6298-4d94-927f-97c8ccf3d37c",
+        "name": "Cuidum",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1eae53e4-907c-4e7c-9adc-98dc08628cbf",
+        "name": "EnjoyHQ",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1f0d86a5-f6c6-4561-b910-2bb084003849",
+        "name": "Mitiga",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "24c216c7-8b4d-419e-adfa-e3f27cadb88a",
+        "name": "Devo",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "54b2f84c-0dbb-4ed0-90a8-0ca5e6f62a0e",
+        "name": "Level20.org",
+        "type": "IS_MEMBER_OF",
+        "dir": "outgoing"
+      },
+      {
+        "id": "a865be69-166b-46bd-ac27-9afcbc7108a8",
+        "name": "Asociación Española de Capital, Crecimiento e Inversión (ASCRI)",
+        "type": "IS_MEMBER_OF",
+        "dir": "outgoing"
+      },
+      {
+        "id": "21774ccd-d5c5-4fa2-8ed1-ac3d20b46339",
+        "name": "PRIVATE_EQUITY",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+        "name": "FINTECH",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+        "name": "SOFTWARE_AND_SERVICES",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "bb7858a2-51d8-45e2-82bd-3ea6a06d317a",
+        "name": "INTERNET_AND_WEB_SERVICES",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+        "name": "VENTURE_CAPITAL",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "03eb1c3b-ba25-4ade-a227-ec417e833f76",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "0739e238-fa33-4e69-bef9-9740af95861a",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "16b6655a-c2cd-4086-9cd8-da6b7f2348ba",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1b82ee68-eb12-415b-9608-4221b07d6e0d",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "2014875d-b77f-4a18-9778-371cec787152",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "2160c404-716e-4fd1-9e86-d0ce4aa8b348",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "21b66237-c5d2-47f8-bbbf-3084bf7b86c5",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "2414c0e5-b2be-46ae-adee-5f5e302c6db1",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "26cbfad9-dcf3-46b3-be9a-43917d05dce4",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "283ef7a8-bad8-4156-9f7a-1a21f7562e5f",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "28813070-83ea-4dd7-a762-d5b47e38df51",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "2ee0c201-2e9b-421f-ab5a-57a356e9c623",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "2ee1c629-3ed4-4987-8370-26c5d9af0b17",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "30968e9f-22ad-4b5a-8c50-9c9f75a640c0",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "320dc904-e222-44bf-93b5-1ade74dcdc54",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "38e4b376-f9ea-4a3b-b548-510dddc836d0",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "39e073e5-cdc8-4f30-9b0b-328750fbe3ee",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "39f0568e-ae32-4758-b65b-179e43c419c5",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "40c8efc4-d3b2-4554-af23-7d78638c7f96",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "41a717bd-35ea-4bbb-a42d-87c347136cf7",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "2c439612-7bec-4517-bdd8-c560f779e858",
+        "name": "Aquilino Peña",
+        "type": "IS_CFO_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "227a3980-35bf-43f1-9bfd-1daf29f045a2",
+        "name": "Mowido",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "2bdea5e8-a630-4098-9fb1-3f84bbaa77a2",
+        "name": "Cala",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "2ea52267-5360-48b1-8c36-c41ec14f1b51",
+        "name": "Jobandtalent",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "345e13d4-3e47-4ef6-98c1-540d905c4bdc",
+        "name": "Qida",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "349658f4-f353-496c-a2dd-cf7f38692cfc",
+        "name": "Caser Residencial",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "37974fda-2069-4174-8edf-869330fc9a83",
+        "name": "Miuda",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "3a04c361-5124-492e-9ff7-210553552aa0",
+        "name": "Curenergía",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "66cab772-4e9c-431b-8d86-25afd809954a",
+        "name": "Unnamed senior services company",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "81cfdabc-53f7-426a-b358-a942e159ca0f",
+        "name": "Cala AI",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "b20582ee-8896-427c-a0c9-d8189f09f17c",
+        "name": "Capchase",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "b5097b92-a66b-40b3-bf95-5f10837fe071",
+        "name": "Zepo Intelligence",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "b6994604-a464-4aa2-bfad-da6d87bf0413",
+        "name": "Mioti",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "ca676678-cc30-4da0-b5e2-eb13a66663d0",
+        "name": "Zepo Intelligence",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "da14978a-cf6d-45fd-920f-b96683b1aeac",
+        "name": "Jobandtalent",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "de6868da-e543-4c5b-a987-2df61392b42d",
+        "name": "Unnamed senior care services company",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "e927ec62-539d-4eb2-b24f-0393c5078388",
+        "name": "Belvo",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "e93eee2c-f1e6-411c-804b-03349955b786",
+        "name": "Senior-care startup",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "f2dd4315-469a-4e5a-8a41-e2608ed092a8",
+        "name": "Mirai Advisory",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "f426c7e0-f3d1-4e3d-a90e-bb84fd5ef385",
+        "name": "Belvo",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "3cdae03c-b346-4a40-8811-8fa17e4710a4",
+        "name": "Javier Torremocha",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "4a411217-13cf-4722-bdd1-ac299fbf15a6",
+        "name": "Aquilino Peña",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "c4f0f1b7-0b50-48f3-aecf-5de9bcc5f227",
+        "name": "José María Amusategui",
+        "type": "WORKS_AT",
+        "dir": "incoming"
+      },
+      {
+        "id": "1f2eb8e4-87c9-4b1e-a16c-ed4dda34fc9a",
+        "name": "Ignacio Pallás",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "6d3096fb-5a33-4bf3-a2ca-c61ca90f3e1a",
+        "name": "Joaquín Melgarejo",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "96f677de-e09f-4be2-b8de-c1c122951627",
+        "name": "Sonia Fernandez",
+        "type": "WORKS_AT",
+        "dir": "incoming"
+      },
+      {
+        "id": "9e367cfd-e2b0-48b7-8edb-6ad2c5383cec",
+        "name": "Jordi Vidal",
+        "type": "WORKS_AT",
+        "dir": "incoming"
+      },
+      {
+        "id": "decc8f11-d36f-43c6-9aae-3f7d052852c8",
+        "name": "Jordi Vidal",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "ffd5d305-0c99-4d78-812d-25ea5d0c8f50",
+        "name": "Gonzalo Duarte Señor",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "a5929218-834b-4526-9830-766f004f965d",
+        "name": "CoverWallet",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "d64e7428-875a-40e9-b1b7-b35f3b5985d7",
+        "name": "Juan López Santamaría",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "f27a792d-a346-4e63-bba9-917eb64fc758",
+        "name": "César Bardají",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "fce36ae0-a284-47cf-aa2a-70af7eeaf9ff",
+        "name": "Fundación Ship2B",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      }
+    ],
+    "DN Capital": [
+      {
+        "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+        "name": "VENTURE_CAPITAL",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "0536dda2-bf96-48a5-afe2-c0a7d69f960e",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "053b7bd1-5c77-4788-8e1a-ccd6798ee8fe",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "0bce10de-6ecc-4c33-954a-7d3186ce070c",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "0f40c9c8-c0a6-4409-a0bf-e9be4f84743c",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "31ce2ee3-1a21-4018-9c38-1c4880566307",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "369ed177-b5cf-4535-8051-31847b187690",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "38047888-22e1-48d2-8c96-c002b88292e0",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "456aa1a6-459d-4d13-b1c2-d2d03fe0084c",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "45c366a1-8e47-45a4-a19d-79144cdeab29",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "49c09381-6c5e-43b2-9350-a02017724e65",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "7a0df97d-a380-4a99-9e84-2932a7306506",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "7ae39950-98d1-4484-87fc-f752fac18b79",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "7bf4883b-4d0e-4311-ad4d-7f19465303a4",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "837b850d-ead0-4947-aa49-aa01035b44b5",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "b023f4a3-012d-466d-949d-3958869bfe7e",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "b42b28bd-ead0-4685-9ce1-4fb63220a321",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "b45e88ae-bcc0-472d-8c15-af13bb10e8fe",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "d16a2cd1-475c-47ba-8467-b9efec584d27",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "e42b8032-cd91-4a6a-a6a4-c9107f82f0c2",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "e88351c7-a7a7-4ac4-90e8-083023611399",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "0e4d8ed2-a1ba-44f2-b57f-9550915149bb",
+        "name": "Artur'In",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "289fd898-2edc-4355-b5ac-58f2b6cdbb8c",
+        "name": "Bonify",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "2b569ae9-388e-43b5-a055-cd6cb2fa5f48",
+        "name": "eYeka",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "2d984e0e-d11b-41b7-8a57-b63c029e01b7",
+        "name": "eWings.com",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "2ea24cc7-6d17-4a89-b641-2dc01c0128c4",
+        "name": "Prometeo OpenBanking",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "3835fc1c-2333-4476-b1d0-7382ff63b588",
+        "name": "Foodles",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "48ade3d4-5def-4a58-88a3-28c80f2502c3",
+        "name": "AUTO1 Group SE",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "6234c314-b004-4fe8-9437-f8da6059ce67",
+        "name": "Purplebricks",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "851995b0-ff1b-47a2-a520-391dd3a2523c",
+        "name": "PERFORMANCE HORIZON GROUP LIMITED",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "9f61f462-baf1-4bc1-8986-525a9d52b000",
+        "name": "Kyte",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "a4aa33ab-ab65-4380-96fb-f86e70615593",
+        "name": "Edurino",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "a824ee30-acd3-4a6a-b575-8ff1f4ef490c",
+        "name": "Videdressing",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "aa02c0e4-438e-4897-b4b9-974fec80fe92",
+        "name": "Shazam",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "b819bb0f-6b81-4a9f-9424-f62182ccbe1e",
+        "name": "Dott",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "c7ac4a90-45f0-4a13-af7f-8dd5b892ab8e",
+        "name": "Tiger Facility Services",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "cb466d32-7179-455a-8690-1285a74c2728",
+        "name": "Book A Tiger",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "ef4382fb-51e4-446c-bf8c-a0c1d56fb244",
+        "name": "MedKitDoc",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "f6ba60a1-e1b5-45c6-89c2-f0d6133d928e",
+        "name": "FIMPLE GLOBAL LIMITED",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "868d9b68-6729-40bb-b7d1-444bfc9f96e7",
+        "name": "Invest Europe",
+        "type": "IS_MEMBER_OF",
+        "dir": "outgoing"
+      },
+      {
+        "id": "53f27696-7872-474e-aa57-811f4e697c18",
+        "name": "Shazam",
+        "type": "DESIGNED_BY",
+        "dir": "incoming"
+      },
+      {
+        "id": "51c0573f-6d61-4d78-b351-ffe0221f5f15",
+        "name": "Interloom",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "85d4bdcd-e15d-41e2-beac-c7eb7772becd",
+        "name": "HOUSFY REAL ESTATE S.L.",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "Seaya Ventures": [
+      {
+        "id": "0938cf9b-9b99-40bf-8dce-b55d3b28fd82",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "0aa0a184-a21d-4925-8a07-27e4ec75e4fa",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "4bf0ac04-0430-4d0c-b11b-2545cab38dd8",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "59168477-d930-4658-a03c-2a87daebb6c3",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "77b6b8bf-bc4d-46bd-86b5-cbc118945aba",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "819efc67-d778-4ab0-84aa-97b1f9d9a704",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "a32c8bf0-c64b-4646-b6b8-7920eaf8117a",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "b6fb4812-3f62-4b2a-ad05-dd1978f601a8",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "c6805f6a-589d-4328-9ba7-ffba96559e9d",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "f3b73ab0-bbbd-4f5f-92b3-42b310224261",
+        "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+        "type": "PARTICIPATES_IN_CORPORATE_EVENT",
+        "dir": "outgoing"
+      },
+      {
+        "id": "11ce48e0-a853-4085-8142-f674977b1a3a",
+        "name": "RENEWABLE_ENERGY",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "21774ccd-d5c5-4fa2-8ed1-ac3d20b46339",
+        "name": "PRIVATE_EQUITY",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "6bd9aa61-75fa-4175-87a7-0d896a0b2386",
+        "name": "REAL_ESTATE",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+        "name": "FINTECH",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+        "name": "SOFTWARE_AND_SERVICES",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "b58fd009-906d-4a11-9aef-8ef566128a5c",
+        "name": "FOOD_AND_BEVERAGE",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "dd70bbef-ce9b-4560-babf-e60310d2c6b1",
+        "name": "HEALTHCARE_PROVIDERS",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+        "name": "VENTURE_CAPITAL",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "05d25283-f7ff-4cac-933d-0c6c85cffbc6",
+        "name": "o11h",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "05f78ca8-e852-45ba-8b28-a6684677621f",
+        "name": "COMUNIDAD FILMIN S.L.",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "0b3aaf51-1b00-4598-a7db-b88fb0b028ee",
+        "name": "Plenummedia",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1a2f0cac-5a0b-44ff-9304-b65498da6ac6",
+        "name": "CrowdFarming",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca",
+        "name": "Payflow",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "235c173a-531f-4353-8e2c-d67cdc0c227b",
+        "name": "SENSEI AI LTD",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "2419a648-b092-4386-b3fd-556e52ed293f",
+        "name": "Restalo",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "24b6968d-5690-4131-9843-709b0465333d",
+        "name": "Reuse",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "2b99245f-110b-4f5a-b522-faa2a0dad5d6",
+        "name": "Aegir Insights",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "2d40c798-6d85-48da-8f4e-1b9c374ced48",
+        "name": "AUNOA SOFTWARE SOCIEDAD LIMITADA",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "386c88b9-20d2-46c9-93b5-86055b52b097",
+        "name": "Wallbox",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "3bbce8b4-dced-4c25-9875-ad7638f0b393",
+        "name": "Pompeii",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "3fa26ad5-e213-4aa9-bb59-71d0abeb40db",
+        "name": "Wallbox N.V.",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "42c0645b-8c0a-486e-9dc8-96918c0ca69d",
+        "name": "receeve",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "480d77d9-8907-444c-99d5-93797a1f2d9e",
+        "name": "Toqio",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "521f5052-f9aa-48aa-a1a7-b0ab5195c431",
+        "name": "Sensei",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "561f0678-111a-4513-9478-b04e48ba0c03",
+        "name": "Fracttal SpA",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "5b6cfe8e-6b0b-45e5-ab70-2b55f2939602",
+        "name": "ALMA",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "5d71f10c-423f-4efb-9abf-2d9466a21607",
+        "name": "Tucuvi",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "65b357e1-d365-48fb-8343-b2cf371a5475",
+        "name": "CATHAY INNOVATION",
+        "type": "IS_MEMBER_OF",
+        "dir": "outgoing"
+      },
+      {
+        "id": "24cc6c1e-8913-49d8-80aa-6c29b61e2e9d",
+        "name": "Beatriz González",
+        "type": "FOUNDED",
+        "dir": "incoming"
+      },
+      {
+        "id": "169615f8-9d70-47a8-bd8e-ccb71847fe4c",
+        "name": "Seabery",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "17679909-b322-4a18-815e-aac945bfb815",
+        "name": "Seaya → Adsmurai",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "3c5232d5-33f6-49a2-93f4-10c269cef502",
+        "name": "Seaya → Adsmurai",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "556d1087-f7e0-4acf-9fb5-560848ea197d",
+        "name": "iPronics",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "57dcbb4a-e060-42b3-9f16-d1b96372ef9b",
+        "name": "Tucuvi",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "5bef6530-1129-4fb4-b33e-0d42e7708bd7",
+        "name": "Movo",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "5c0812a6-7efd-40c1-8ae6-640b7f9c2cd6",
+        "name": "Seaya → Adsmurai",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "5c0fcdcd-67fe-4fea-a782-35afdc5504d4",
+        "name": "Savana Médica",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "6fd43585-338c-49b2-a10f-377b395fa930",
+        "name": "011H SUSTAINABLE CONSTRUCTION S.L.",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "74bd652d-b5e9-438b-b76f-7e6dcfce36c5",
+        "name": "TCA GLOVO SL",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "7c8a608e-a8c1-4102-98e5-94eb64e98464",
+        "name": "Wallbox N.V.",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "7d5361d1-5ec0-44ab-bb14-01687e149113",
+        "name": "ADSMURAI S.L.",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "7d9b857b-aa5f-4414-8cfb-96e8ac778de1",
+        "name": "Adsmurai S.L.",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "7eb121ed-7c27-40da-9683-a7eb2b031c5b",
+        "name": "NeuralTrust",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "df1949b1-4652-4070-921a-cc74b0c6ead1",
+        "name": "Adsmurai",
+        "type": "OPERATED_BY",
+        "dir": "incoming"
+      },
+      {
+        "id": "9b72c259-dc5a-5c90-8126-af1de76a4504",
+        "name": "Enric Asuncion Escorsa",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      },
+      {
+        "id": "abc036f9-8750-430c-ab1d-c2726c35bdd1",
+        "name": "Jesús Encinar",
+        "type": "IS_MEMBER_OF",
+        "dir": "incoming"
+      }
+    ],
+    "BBVA Spark Fund": [
+      {
+        "id": "17f83a18-dac8-4186-9b31-5808361ec7a3",
+        "name": "Sesame",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "191aec45-7cd4-4bf2-a6d8-3848d5799af1",
+        "name": "Habi",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1b0605e7-06a4-492c-b822-37ee1e0da8dd",
+        "name": "Prophero",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "1c30f2a7-f835-40b3-8b67-1d0d2f9de6ca",
+        "name": "Payflow",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "4342ab23-3e2a-43b4-b9e0-c76a84b170fa",
+        "name": "Clara",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8057c278-8959-4069-afa1-62ca16c68a57",
+        "name": "Baubap",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "86401f6b-1283-4929-8d23-da96ec53b184",
+        "name": "Sesame",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "89db031c-2fd8-4484-ae6f-4314d8e4f9fc",
+        "name": "Sesame",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "97c68379-ff00-4569-b475-22271a047f8c",
+        "name": "PROPHERO GLOBAL SL",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "988baeef-5fdf-41ab-8bac-4b433bb97f03",
+        "name": "Solvento",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "b26d8977-8d98-4483-bd45-518f4b49f568",
+        "name": "Sesame",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "c06d86cd-ad0c-4c83-86db-39a163db957f",
+        "name": "Sesame",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "cac5c8eb-f483-428a-9ee1-0897ae037133",
+        "name": "TaxDown",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      },
+      {
+        "id": "e8e7255c-1c3d-45ab-842e-a6578a3422b9",
+        "name": "Tuhabi",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+        "name": "FINTECH",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8ecf5e57-a149-438c-9eb4-089809bade56",
+        "name": "SOFTWARE_AND_SERVICES",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "f48ebf95-99ea-4756-99cc-8a2a2d71f2e2",
+        "name": "VENTURE_CAPITAL",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "9d674d01-af3d-4423-af7c-5fcde1793f20",
+        "name": "Sesame HR",
+        "type": "INVESTED_IN",
+        "dir": "incoming"
+      }
+    ],
+    "Bnext": [
+      {
+        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+        "name": "FINTECH",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "a710b325-14d8-4652-854a-f4ea646f15d3",
+        "name": "BANKING",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "363d5692-004d-493e-aec1-424a35663c25",
+        "name": "Founders Future",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "6fec62d7-11ed-46dc-8922-eb24c6ecf635",
+        "name": "DN Capital",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8932a610-7903-431d-8366-905e45c68ee4",
+        "name": "Redalpine",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "94e0ca6a-4e39-4181-bd84-11f264d0aa62",
+        "name": "Speedinvest GmbH",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      }
+    ],
+    "Fintonic": [
+      {
+        "id": "708a2cd3-d084-4edd-aa83-927e8527d82a",
+        "name": "ASSET_MANAGEMENT",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "8190c30d-2703-40ab-94d0-6c193cb53908",
+        "name": "FINTECH",
+        "type": "OPERATES_IN_INDUSTRY",
+        "dir": "outgoing"
+      },
+      {
+        "id": "232d0a38-d6d0-41e2-aeaa-988fa8b51533",
+        "name": "PSN Group",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "685a2360-b8c3-41f7-87bd-de616026c569",
+        "name": "Zank Financial",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "6eb0f1a7-d891-481f-825a-25cc6edacb07",
+        "name": "Square One Capital",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      },
+      {
+        "id": "da2d99e4-cb84-4fad-9c1e-763e9024f56e",
+        "name": "ING Ventures",
+        "type": "INVESTED_IN",
+        "dir": "outgoing"
+      }
     ]
   },
   "cross": [
     {
-      "name": "VENTURE_CAPITAL",
-      "holders": [
-        "DN Capital",
-        "K-Fund",
-        "Seaya Ventures",
-        "Kibo Ventures",
-        "BBVA Spark Fund",
-        "SIX FinTech Ventures",
-        "CATHAY INNOVATION",
-        "Samaipata Ventures",
-        "JME Ventures",
-        "Inveready Technology Investment Group",
-        "ALDEA VENTURES, S.G.E.I.C. S.A."
-      ]
-    },
-    {
-      "name": "HOUSFY REAL ESTATE S.L.",
-      "holders": [
-        "DN Capital",
-        "ALDEA VENTURES, S.G.E.I.C. S.A."
-      ]
-    },
-    {
       "name": "FINTECH",
       "holders": [
-        "Bnext",
-        "K-Fund",
-        "Seaya Ventures",
-        "Kibo Ventures",
-        "BBVA Spark Fund",
-        "Fintonic",
-        "SIX FinTech Ventures",
-        "CATHAY INNOVATION",
-        "Capchase",
         "Gotrade",
+        "SIX FinTech Ventures",
+        "Sesame",
+        "Habi",
+        "Prophero",
+        "Payflow",
+        "Bonify",
+        "Clara",
+        "Inveready Technology Investment Group",
+        "K-Fund",
+        "CATHAY INNOVATION",
         "Samaipata Ventures",
         "JME Ventures",
+        "ALDEA VENTURES, S.G.E.I.C. S.A.",
+        "Capchase",
+        "Kibo Ventures",
+        "Seaya Ventures",
+        "BBVA Spark Fund",
+        "Bnext",
+        "Fintonic"
+      ]
+    },
+    {
+      "name": "SOFTWARE_AND_SERVICES",
+      "holders": [
+        "Gotrade",
+        "Artur'In",
+        "Sesame",
+        "Prophero",
+        "Payflow",
+        "K-Fund",
+        "Capchase",
+        "Kibo Ventures",
+        "Seaya Ventures",
+        "BBVA Spark Fund"
+      ]
+    },
+    {
+      "name": "Y Combinator",
+      "holders": [
+        "Gotrade",
+        "Payflow"
+      ]
+    },
+    {
+      "name": "Kibo Ventures",
+      "holders": [
+        "Gotrade",
+        "Capchase"
+      ]
+    },
+    {
+      "name": "CONSTRUCTION_AND_ENGINEERING",
+      "holders": [
+        "o11h",
+        "AEDAS HOMES SA",
+        "Neinor Homes"
+      ]
+    },
+    {
+      "name": "REAL_ESTATE",
+      "holders": [
+        "o11h",
+        "Habi",
+        "Prophero",
+        "AEDAS HOMES SA",
+        "Neinor Homes",
+        "idealista",
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "name": "Seaya Ventures",
+      "holders": [
+        "o11h",
+        "COMUNIDAD FILMIN S.L.",
+        "Plenummedia",
+        "CrowdFarming",
+        "Payflow",
+        "CATHAY INNOVATION",
+        "Jesús Encinar"
+      ]
+    },
+    {
+      "name": "Spain",
+      "holders": [
+        "COMUNIDAD FILMIN S.L.",
+        "CrowdFarming",
+        "Prophero",
+        "Payflow",
+        "AEDAS HOMES SA",
+        "JME Ventures",
+        "idealista",
+        "Jesús Encinar",
+        "ALDEA VENTURES, S.G.E.I.C. S.A.",
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "name": "BANKING",
+      "holders": [
+        "Plenummedia",
+        "Bnext"
+      ]
+    },
+    {
+      "name": "ADVERTISING_AND_MARKETING",
+      "holders": [
+        "Plenummedia",
+        "Artur'In",
+        "eYeka"
+      ]
+    },
+    {
+      "name": "VENTURE_CAPITAL",
+      "holders": [
+        "SIX FinTech Ventures",
+        "Inveready Technology Investment Group",
+        "K-Fund",
+        "CATHAY INNOVATION",
+        "Samaipata Ventures",
+        "JME Ventures",
+        "ALDEA VENTURES, S.G.E.I.C. S.A.",
+        "Kibo Ventures",
+        "DN Capital",
+        "Seaya Ventures",
+        "BBVA Spark Fund"
+      ]
+    },
+    {
+      "name": "France",
+      "holders": [
+        "Artur'In",
+        "eYeka",
+        "CATHAY INNOVATION"
+      ]
+    },
+    {
+      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+      "holders": [
+        "Artur'In",
+        "DN Capital"
+      ]
+    },
+    {
+      "name": "Ventech",
+      "holders": [
+        "Artur'In",
+        "eYeka"
+      ]
+    },
+    {
+      "name": "DN Capital",
+      "holders": [
+        "Artur'In",
+        "Bonify",
+        "eYeka",
+        "eWings.com"
+      ]
+    },
+    {
+      "name": "BBVA Spark",
+      "holders": [
+        "Sesame",
+        "Prophero",
+        "Payflow"
+      ]
+    },
+    {
+      "name": "BBVA Spark Growth Instrument",
+      "holders": [
+        "Sesame",
+        "Habi",
+        "Payflow",
+        "Clara"
+      ]
+    },
+    {
+      "name": "BBVA Spark Fund",
+      "holders": [
+        "Sesame",
+        "Habi",
+        "Prophero",
+        "Payflow",
+        "Clara"
+      ]
+    },
+    {
+      "name": "FOOD_AND_BEVERAGE",
+      "holders": [
+        "CrowdFarming",
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "name": "INTERNET_AND_WEB_SERVICES",
+      "holders": [
+        "CrowdFarming",
+        "eYeka",
+        "eWings.com",
+        "idealista",
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+      "holders": [
+        "Payflow",
+        "CATHAY INNOVATION",
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "name": "CATHAY INNOVATION",
+      "holders": [
+        "Payflow",
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "name": "Payflow",
+      "holders": [
+        "Payflow",
+        "CATHAY INNOVATION"
+      ]
+    },
+    {
+      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+      "holders": [
+        "Bonify",
+        "DN Capital"
+      ]
+    },
+    {
+      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+      "holders": [
+        "Bonify",
+        "DN Capital"
+      ]
+    },
+    {
+      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+      "holders": [
+        "Bonify",
+        "DN Capital"
+      ]
+    },
+    {
+      "name": "Germany",
+      "holders": [
+        "Bonify",
+        "eWings.com"
+      ]
+    },
+    {
+      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+      "holders": [
+        "eYeka",
+        "DN Capital"
+      ]
+    },
+    {
+      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+      "holders": [
+        "eYeka",
+        "DN Capital"
+      ]
+    },
+    {
+      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+      "holders": [
+        "eWings.com",
+        "DN Capital"
+      ]
+    },
+    {
+      "name": "Habyt",
+      "holders": [
         "Inveready Technology Investment Group",
         "ALDEA VENTURES, S.G.E.I.C. S.A."
+      ]
+    },
+    {
+      "name": "PRIVATE_EQUITY",
+      "holders": [
+        "Inveready Technology Investment Group",
+        "Samaipata Ventures",
+        "Kibo Ventures",
+        "Seaya Ventures"
       ]
     },
     {
@@ -3130,9 +4924,9 @@
       "name": "THEKER Robotics",
       "holders": [
         "K-Fund",
-        "Kibo Ventures",
         "CATHAY INNOVATION",
-        "JME Ventures"
+        "JME Ventures",
+        "Kibo Ventures"
       ]
     },
     {
@@ -3146,19 +4940,8 @@
       "name": "Tucuvi",
       "holders": [
         "K-Fund",
-        "Seaya Ventures",
-        "CATHAY INNOVATION"
-      ]
-    },
-    {
-      "name": "SOFTWARE_AND_SERVICES",
-      "holders": [
-        "K-Fund",
-        "Seaya Ventures",
-        "Kibo Ventures",
-        "BBVA Spark Fund",
-        "Capchase",
-        "Gotrade"
+        "CATHAY INNOVATION",
+        "Seaya Ventures"
       ]
     },
     {
@@ -3177,126 +4960,18 @@
       ]
     },
     {
-      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+      "name": "United States",
       "holders": [
-        "Seaya Ventures",
-        "CATHAY INNOVATION"
-      ]
-    },
-    {
-      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-      "holders": [
-        "Seaya Ventures",
-        "CATHAY INNOVATION"
-      ]
-    },
-    {
-      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-      "holders": [
-        "Seaya Ventures",
-        "CATHAY INNOVATION"
-      ]
-    },
-    {
-      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
-      "holders": [
-        "Seaya Ventures",
-        "Samaipata Ventures"
-      ]
-    },
-    {
-      "name": "PRIVATE_EQUITY",
-      "holders": [
-        "Seaya Ventures",
-        "Kibo Ventures",
-        "Samaipata Ventures",
-        "Inveready Technology Investment Group"
+        "CATHAY INNOVATION",
+        "Capchase"
       ]
     },
     {
       "name": "Payflow",
       "holders": [
-        "Seaya Ventures",
-        "BBVA Spark Fund",
-        "CATHAY INNOVATION"
-      ]
-    },
-    {
-      "name": "Tucuvi",
-      "holders": [
-        "Seaya Ventures",
-        "CATHAY INNOVATION"
-      ]
-    },
-    {
-      "name": "Savana Médica",
-      "holders": [
-        "Seaya Ventures",
-        "CATHAY INNOVATION"
-      ]
-    },
-    {
-      "name": "011H SUSTAINABLE CONSTRUCTION S.L.",
-      "holders": [
-        "Seaya Ventures",
-        "ALDEA VENTURES, S.G.E.I.C. S.A."
-      ]
-    },
-    {
-      "name": "TCA GLOVO SL",
-      "holders": [
-        "Seaya Ventures",
-        "CATHAY INNOVATION"
-      ]
-    },
-    {
-      "name": "Spain",
-      "holders": [
-        "Kibo Ventures",
-        "JME Ventures",
-        "ALDEA VENTURES, S.G.E.I.C. S.A."
-      ]
-    },
-    {
-      "name": "Job&Talent",
-      "holders": [
-        "Kibo Ventures",
-        "JME Ventures"
-      ]
-    },
-    {
-      "name": "Jobandtalent",
-      "holders": [
-        "Kibo Ventures",
-        "JME Ventures"
-      ]
-    },
-    {
-      "name": "Prophero",
-      "holders": [
-        "BBVA Spark Fund",
-        "Samaipata Ventures"
-      ]
-    },
-    {
-      "name": "PROPHERO GLOBAL SL",
-      "holders": [
-        "BBVA Spark Fund",
-        "Samaipata Ventures"
-      ]
-    },
-    {
-      "name": "TaxDown",
-      "holders": [
-        "BBVA Spark Fund",
-        "JME Ventures"
-      ]
-    },
-    {
-      "name": "United States",
-      "holders": [
         "CATHAY INNOVATION",
-        "Capchase"
+        "Seaya Ventures",
+        "BBVA Spark Fund"
       ]
     },
     {
@@ -3307,10 +4982,38 @@
       ]
     },
     {
+      "name": "Tucuvi",
+      "holders": [
+        "CATHAY INNOVATION",
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "name": "TCA GLOVO SL",
+      "holders": [
+        "CATHAY INNOVATION",
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+      "holders": [
+        "CATHAY INNOVATION",
+        "Seaya Ventures"
+      ]
+    },
+    {
       "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
       "holders": [
         "CATHAY INNOVATION",
         "Samaipata Ventures"
+      ]
+    },
+    {
+      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
+      "holders": [
+        "CATHAY INNOVATION",
+        "Seaya Ventures"
       ]
     },
     {
@@ -3321,17 +5024,87 @@
       ]
     },
     {
-      "name": "Kibo Ventures",
+      "name": "Savana Médica",
       "holders": [
-        "Capchase",
-        "Gotrade"
+        "CATHAY INNOVATION",
+        "Seaya Ventures"
       ]
     },
     {
-      "name": "Habyt",
+      "name": "FINANCING_RAISED_OR_FACILITY_ENTERED",
       "holders": [
-        "Inveready Technology Investment Group",
-        "ALDEA VENTURES, S.G.E.I.C. S.A."
+        "Samaipata Ventures",
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "name": "PROPHERO GLOBAL SL",
+      "holders": [
+        "Samaipata Ventures",
+        "BBVA Spark Fund"
+      ]
+    },
+    {
+      "name": "Prophero",
+      "holders": [
+        "Samaipata Ventures",
+        "BBVA Spark Fund"
+      ]
+    },
+    {
+      "name": "Job&Talent",
+      "holders": [
+        "JME Ventures",
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "name": "TaxDown",
+      "holders": [
+        "JME Ventures",
+        "BBVA Spark Fund"
+      ]
+    },
+    {
+      "name": "Jobandtalent",
+      "holders": [
+        "JME Ventures",
+        "Kibo Ventures"
+      ]
+    },
+    {
+      "name": "idealista",
+      "holders": [
+        "idealista",
+        "Jesús Encinar"
+      ]
+    },
+    {
+      "name": "Jesús Encinar",
+      "holders": [
+        "idealista",
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "name": "Beatriz González",
+      "holders": [
+        "idealista",
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "name": "011H SUSTAINABLE CONSTRUCTION S.L.",
+      "holders": [
+        "ALDEA VENTURES, S.G.E.I.C. S.A.",
+        "Seaya Ventures"
+      ]
+    },
+    {
+      "name": "HOUSFY REAL ESTATE S.L.",
+      "holders": [
+        "ALDEA VENTURES, S.G.E.I.C. S.A.",
+        "DN Capital"
       ]
     }
   ]

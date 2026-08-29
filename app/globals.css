@@ -14,6 +14,7 @@
   --thread-report: #4d7f54;
   --thread-default: #574c3d;
   --thread-case: #8a7a5c;
+  --thread-law: #7a3f91;
   --border: 2px;
 }
 
@@ -245,6 +246,94 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 .thread.is-case polyline:not(.thread-hit) {
   stroke-width: 2; stroke-dasharray: 6 6; opacity: 0; transition: opacity 140ms linear;
 }
+
+/* ── Preguntas de investigación ─────────────────────────────────────
+   El amarillo pregunta. La respuesta de Cala conserva papel de archivo;
+   la respuesta web cambia a papel de impresora gris y nunca gana hilo rojo. */
+.question-node {
+  position: absolute;
+  z-index: 16;
+  width: 272px;
+  height: 176px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--ink);
+  background: #f2d25f;
+  box-shadow: 7px 7px 0 rgba(32, 27, 24, .65);
+  rotate: -1deg;
+}
+.question-node.is-web { rotate: 1deg; }
+.question-node > header {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 7px;
+  border-bottom: 2px solid var(--ink);
+  font-family: var(--font-display);
+  font-size: 8px;
+}
+.question-node > header b {
+  padding: 2px 4px;
+  background: var(--ink);
+  color: var(--paper-bright);
+}
+.question-node > p {
+  flex: 1;
+  margin: 9px 10px 5px;
+  font-size: 20px;
+  line-height: .98;
+}
+.question-node > button {
+  min-height: 31px;
+  border: 0;
+  border-top: 2px solid var(--ink);
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 8px;
+  text-align: right;
+}
+.question-node > button:hover:not(:disabled) { background: var(--paper-bright); }
+.question-node > button:disabled { opacity: .55; cursor: wait; }
+.question-node.is-answered { rotate: 0deg; background: var(--paper-bright); }
+.question-node.is-web.is-answered {
+  border-style: dashed;
+  background: #ecebea;
+  box-shadow: 7px 7px 0 rgba(32, 27, 24, .35);
+}
+.question-node.is-web.is-answered > header { background: #d7d5d1; }
+.question-node.is-archive.is-answered > header { background: var(--green); color: white; }
+.question-answer {
+  min-height: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 7px 9px;
+}
+.question-answer strong {
+  font-family: var(--font-display);
+  font-size: 9px;
+  line-height: 1.2;
+}
+.question-answer p {
+  margin: 5px 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 15px;
+  line-height: 1;
+}
+.question-answer small {
+  margin-top: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 8px;
+}
+.question-answer a { color: var(--blue); }
 /* Diez líneas de procedencia permanentes enterraban los tres hilos que
    importan. Se muestran solo al interrogar el caso. */
 .board-surface:has(.case-node:hover) .thread.is-case polyline:not(.thread-hit) { opacity: .8; }

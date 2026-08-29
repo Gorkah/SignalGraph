@@ -1,0 +1,238 @@
+{
+  "input": "startups.location=Barcelona.sector=proptech",
+  "runAt": "2026-08-29T14:08:40.578Z",
+  "ok": true,
+  "status": 200,
+  "ms": 55593,
+  "attempt": 0,
+  "data": {
+    "results": [
+      {
+        "name": "Housfy",
+        "founded": 2017,
+        "focus": "Home sales platform (no-commission model)",
+        "notable_details": "Operates in real estate and internet/web services. Sells homes at a flat rate (€3,990), active in Spain, Italy, and Portugal. Has raised over €6 million."
+      },
+      {
+        "name": "Badi",
+        "founded": 2015,
+        "focus": "Room rental & roommate matching",
+        "notable_details": "AI-powered platform connecting tenants and rooms. Founded by Carlos Pierre Trias de Bes. Surpassed 1 million users by 2018; raised $30M+ in funding (investors include GoodWater Capital, Spark Capital). Now operating in 20+ countries."
+      },
+      {
+        "name": "Zazume",
+        "founded": null,
+        "focus": "Rental management SaaS",
+        "notable_details": "SaaS platform for real estate professionals to digitise the residential rental lifecycle. Raised €2.5 million to scale its AI-powered rental management platform."
+      },
+      {
+        "name": "Floorfy",
+        "founded": 2018,
+        "focus": "Virtual tours & real estate digitisation",
+        "notable_details": "SaaS platform used by 8,000+ real estate agents for virtual tours, 3D floor plans, and interactive videos. Achieved profitability in 2024. Backed by Metaprop, Encomenda, Wayra, and Lanzame. Recently acquired Italian startup Realisti.co."
+      },
+      {
+        "name": "Aldara",
+        "founded": null,
+        "focus": "Property/community management",
+        "notable_details": "Modern property management for homeowners' associations. Raised €2.7 million in a round led by Y Combinator and KFund."
+      },
+      {
+        "name": "habitacion.com",
+        "founded": null,
+        "focus": "Room-as-investment platform",
+        "notable_details": "Allows investors to purchase individual rooms as an alternative to traditional renting. Raised €1.3 million (~$1.5M) in seed funding led by Demium Capital."
+      },
+      {
+        "name": "Lodgify",
+        "founded": null,
+        "focus": "Holiday rental website builder",
+        "notable_details": "Platform enabling holiday rental owners to build websites and manage bookings across multiple channels."
+      },
+      {
+        "name": "011h",
+        "founded": null,
+        "focus": "Construction technology",
+        "notable_details": "Tech-enabled construction services (design, cost calculation, supply chain, monitoring). Raised $60.8M total, including a Series B round."
+      }
+    ],
+    "entities": [
+      {
+        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+        "name": "Spain",
+        "entity_type": "Country",
+        "mentions": [
+          "Spain"
+        ]
+      },
+      {
+        "id": "85d4bdcd-e15d-41e2-beac-c7eb7772becd",
+        "name": "HOUSFY REAL ESTATE S.L.",
+        "entity_type": "Company",
+        "mentions": [
+          "Housfy"
+        ]
+      },
+      {
+        "id": "80db2e76-4f5f-48f4-be5b-127c72047cca",
+        "name": "Badi",
+        "entity_type": "Organization",
+        "mentions": [
+          "Badi"
+        ]
+      },
+      {
+        "id": "d4f78b5b-d3e8-40f8-a7cf-b4ed31856abc",
+        "name": "Carlos Pierre Trias de Bes",
+        "entity_type": "Person",
+        "mentions": [
+          "Carlos Pierre Trias de Bes"
+        ]
+      },
+      {
+        "id": "5f0e2c7e-9ea3-4ecb-af72-818e6361e894",
+        "name": "Goodwater Capital, LLC",
+        "entity_type": "Company",
+        "mentions": [
+          "GoodWater Capital"
+        ]
+      },
+      {
+        "id": "498fc3e8-784d-47d1-9220-605558bdd31c",
+        "name": "Spark Capital",
+        "entity_type": "Organization",
+        "mentions": [
+          "Spark Capital"
+        ]
+      },
+      {
+        "id": "94ec7dc6-a741-49bb-80c9-720deee10973",
+        "name": "Italy",
+        "entity_type": "Country",
+        "mentions": [
+          "Italy"
+        ]
+      },
+      {
+        "id": "e4dd8a94-8066-4726-8af6-e94e2d63dd47",
+        "name": "Portugal",
+        "entity_type": "GPE",
+        "mentions": [
+          "Portugal"
+        ]
+      },
+      {
+        "id": "da04e5fc-a5b8-4c2d-9cf3-9f3326ba1ca7",
+        "name": "Zazume",
+        "entity_type": "Organization",
+        "mentions": [
+          "Zazume"
+        ]
+      },
+      {
+        "id": "d2bd5d2c-f496-4e02-a823-d452b479d4d1",
+        "name": "Floorfy",
+        "entity_type": "Company",
+        "mentions": [
+          "Floorfy"
+        ]
+      },
+      {
+        "id": "c101b337-a2ab-4551-8792-61731c835b8e",
+        "name": "MetaProp",
+        "entity_type": "Organization",
+        "mentions": [
+          "Metaprop"
+        ]
+      },
+      {
+        "id": "9bbb4a50-3b82-48fc-93b3-c9ca38b03d68",
+        "name": "Encomenda",
+        "entity_type": "Organization",
+        "mentions": [
+          "Encomenda"
+        ]
+      },
+      {
+        "id": "43575cf7-b13e-4738-abd2-2f79c2fa2c3f",
+        "name": "Wayra",
+        "entity_type": "Organization",
+        "mentions": [
+          "Wayra"
+        ]
+      },
+      {
+        "id": "08fb9b12-0f88-4d2b-bc25-ec6cef62d5c8",
+        "name": "LANZAME CAPITAL S.L.",
+        "entity_type": "Company",
+        "mentions": [
+          "Lanzame"
+        ]
+      },
+      {
+        "id": "de8f00e5-12e2-4bd3-a580-49ad794faeb7",
+        "name": "Realisti.co",
+        "entity_type": "Organization",
+        "mentions": [
+          "Realisti.co"
+        ]
+      },
+      {
+        "id": "db3ff836-a359-456d-8fcd-7ec7b68fa720",
+        "name": "Aldara",
+        "entity_type": "Organization",
+        "mentions": [
+          "Aldara"
+        ]
+      },
+      {
+        "id": "1e86655e-373d-4fe8-be13-af3713581f73",
+        "name": "Y Combinator",
+        "entity_type": "Company",
+        "mentions": [
+          "Y Combinator"
+        ]
+      },
+      {
+        "id": "2c557cbb-4e37-44db-9f47-5bc327a86320",
+        "name": "Kfund",
+        "entity_type": "Organization",
+        "mentions": [
+          "KFund"
+        ]
+      },
+      {
+        "id": "65342723-3382-42ff-a2e7-e1f064d36af6",
+        "name": "Habitación.com",
+        "entity_type": "Company",
+        "mentions": [
+          "habitacion.com"
+        ]
+      },
+      {
+        "id": "6f56c437-1e7e-4928-a342-a2f28b7a0802",
+        "name": "Demium Capital",
+        "entity_type": "Organization",
+        "mentions": [
+          "Demium Capital"
+        ]
+      },
+      {
+        "id": "1610f0ed-2677-4503-8633-115c5a27446c",
+        "name": "Lodgify",
+        "entity_type": "Organization",
+        "mentions": [
+          "Lodgify"
+        ]
+      },
+      {
+        "id": "6fd43585-338c-49b2-a10f-377b395fa930",
+        "name": "011H SUSTAINABLE CONSTRUCTION S.L.",
+        "entity_type": "Company",
+        "mentions": [
+          "011h"
+        ]
+      }
+    ]
+  }
+}

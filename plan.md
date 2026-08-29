@@ -4,6 +4,29 @@
 
 **Regla de recorte:** solo entra lo que alimenta uno de los cuatro beats. Todo lo demás está en "Cortado" al final y no se discute a mitad de hackathon.
 
+> **Guion vigente (29-08-2026):** la implementación histórica de los cuatro
+> beats queda debajo como referencia técnica. El caso activo ya no es fintech:
+> es vivienda, configurado por `data/cases/vivienda-negocio-espana.json`.
+
+## Guion de entrega actual — vivienda
+
+1. Abrir con **«¿En cuántas manos está quedando el negocio de la vivienda?»**
+   y seis fichas: Neinor, Aedas, Merlin, CEVASA, idealista y Habitación.com.
+2. En Aedas, tirar de `IS_DIRECT_PARENT_OF`: `NEINOR HOMES SA` vuelve a una
+   ficha que ya estaba. El hilo es registro GLEIF, no un evento inventado.
+3. Tirar de `IS_BOARD_MEMBER_OF`: Merlin vuelve al anillo con fuente CNMV. La
+   anomalía de Cala (`Person`) se conserva visible; no se corrige en silencio.
+4. Resolver la pregunta amarilla de archivo. Consume 1 consulta y deja caer
+   cinco leyes con UUID mediante `AFFECTS_INDUSTRY → REAL_ESTATE`.
+5. Voltear Habitación.com y leer su propuesta de habitaciones como inversión.
+6. Resolver la pregunta externa. La hoja queda gris, rotulada **FUERA DEL
+   ARCHIVO**, cita la estimación nacional del Banco de España (8%, datos 2023)
+   y no crea fichas ni hilos.
+
+Regla de producto: **puebla quien tiene identidad; contextualiza quien solo
+tiene texto**. Cala trae UUID y puede modificar el grafo. La web aporta una
+hoja con fuente y alcance, nunca una relación roja.
+
 ---
 
 ## Los cuatro beats (la demo entera, ~3 min)

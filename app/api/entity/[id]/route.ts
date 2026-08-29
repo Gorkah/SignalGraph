@@ -12,7 +12,7 @@ export async function POST(
     if (typeof body.projection !== "string" || !body.projection.trim()) {
       return Response.json({ error: "Falta la proyección", code: "BAD_REQUEST" }, { status: 400 });
     }
-    const limit = typeof body.limit === "number" ? Math.min(5, Math.max(1, Math.floor(body.limit))) : 5;
+    const limit = typeof body.limit === "number" ? Math.min(20, Math.max(1, Math.floor(body.limit))) : 5;
     return Response.json(await projectEntity(id, body.projection.trim(), limit));
   } catch (error) {
     if (error instanceof CalaError) {

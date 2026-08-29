@@ -4,7 +4,7 @@
  * Throttled a 3s por llamada: el rate limit de Cala salta sobre las ~10 seguidas.
  * "El ensayo paga, la demo cobra" — esto se ejecuta una vez, la app lee el JSON.
  */
-import { writeFile, readFile, mkdir } from 'node:fs/promises';
+import { writeFile, readFile, readdir, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 
 const KEY = process.env.CALA_API_KEY;
@@ -47,12 +47,9 @@ async function api(path, body) {
 }
 
 await mkdir(OUT, { recursive: true });
-const graph = {};
-
 for (const [id, name] of [...SEED, ...EXTRA]) {
   const file = `${OUT}/${id}.json`;
   if (existsSync(file)) {
-    graph[id] = JSON.parse(await readFile(file, 'utf8'));
     console.log(`skip  ${name}`);
     continue;
   }
@@ -73,15 +70,23 @@ for (const [id, name] of [...SEED, ...EXTRA]) {
     await wait(3000);
   }
   const record = { id, name, introspection: intro, projection };
-  // el id se reusa abajo al indexar el grafo
   await writeFile(file, JSON.stringify(record, null, 2));
-  graph[id] = record;
   console.log(`   out=[${out}] in=[${inc}]`);
+}
+
+// El análisis es un índice global, no el resumen del último lote. Antes se
+// recomponía solo con SEED + EXTRA y cada sonda borraba del fichero derivado
+// todas las relaciones históricas que no participaban en esa ejecución.
+const allGraph = {};
+for (const file of (await readdir(OUT)).sort()) {
+  if (!file.endsWith('.json') || file.startsWith('_')) continue;
+  const record = JSON.parse(await readFile(`${OUT}/${file}`, 'utf8'));
+  if (record?.id) allGraph[record.id] = record;
 }
 
 // ¿quién comparte vecinos con quién? Eso son los hilos cruzados del tablón.
 const neighbors = {};
-for (const rec of Object.values(graph)) {
+for (const rec of Object.values(allGraph)) {
   const set = new Map();
   for (const [dir, types] of Object.entries(rec.projection.relationships ?? {}))
     for (const [type, items] of Object.entries(types))

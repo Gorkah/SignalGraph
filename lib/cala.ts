@@ -2,6 +2,7 @@ import "server-only";
 
 import { cacheFirst, readCache } from "@/lib/disk-cache";
 import { loadManifest } from "@/lib/manifest";
+import { entityNameKey } from "@/lib/names";
 import { claimsForEntity, entityById, getSeedPayload, loadCalaDumps, relationNeighbours, relationsFor } from "@/lib/seed";
 import type {
   ApiErrorCode,
@@ -78,7 +79,7 @@ async function fetchCala(url: string, body: unknown, timeoutMs: number) {
 }
 
 function normalize(value: string) {
-  return value.toLocaleLowerCase("en").replace(/[^a-z0-9]+/g, "");
+  return entityNameKey(value);
 }
 
 function principal(result: CalaResult) {
@@ -208,7 +209,10 @@ function flattenRelationships(raw: unknown, relationType: string, limit: number)
  * instantáneo y sobrevive sin red; lo que se salga de él sigue funcionando.
  */
 export async function projectEntity(entityId: string, relationType: string, requestedLimit = 5) {
-  const limit = Math.max(1, Math.min(5, Math.floor(requestedLimit)));
+  // Una ficha normal sigue pidiendo cinco. Las preguntas de archivo pueden
+  // inspeccionar hasta veinte para seleccionar las cinco evidencias que el
+  // manifiesto declaró relevantes sin depender del orden del hub.
+  const limit = Math.max(1, Math.min(20, Math.floor(requestedLimit)));
   const input = { entityId, relationType, limit };
   const cached = await readCache<ProjectionResponse>("projection", input);
   if (cached) return { ...cached, source: "disk" as const };

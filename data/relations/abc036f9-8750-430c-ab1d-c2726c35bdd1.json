@@ -1,0 +1,534 @@
+{
+  "id": "abc036f9-8750-430c-ab1d-c2726c35bdd1",
+  "name": "Jesús Encinar",
+  "introspection": {
+    "properties": [
+      "aliases",
+      "personal_website",
+      "birth_date",
+      "name",
+      "id",
+      "description",
+      "place_of_birth"
+    ],
+    "relationships": {
+      "outgoing": [
+        "RECEIVED_AWARD",
+        "INVESTED_IN",
+        "FEATURED_IN",
+        "FOUNDED",
+        "STUDIED_AT",
+        "IS_CEO_OF",
+        "WORKS_AT",
+        "HAS_NATIONALITY",
+        "IS_MEMBER_OF"
+      ],
+      "incoming": []
+    },
+    "numerical_observations": {}
+  },
+  "projection": {
+    "id": "abc036f9-8750-430c-ab1d-c2726c35bdd1",
+    "name": "Jesús Encinar",
+    "entity_type": "Person",
+    "description": "Spanish entrepreneur born 1970, cofounder and chief executive officer of the online real estate platform Idealista.",
+    "properties": {
+      "name": {
+        "value": "Jesús Encinar",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-06-01"
+          }
+        ]
+      },
+      "description": {
+        "value": "Spanish entrepreneur born 1970, cofounder and chief executive officer of the online real estate platform Idealista.",
+        "sources": [
+          {
+            "name": "Cala AI",
+            "document": "",
+            "date": "2026-08-23"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "outgoing": {
+        "RECEIVED_AWARD": [
+          {
+            "id": "31723beb-45b5-4822-91dd-02793bd35443",
+            "name": "Los españoles más influyentes de 2012 – Top 25/Internet (El Mundo)",
+            "entity_type": "Award",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Los 25 españoles más influyentes en internet",
+                  "document": "https://www.marketingdirecto.com/actualidad/checklists/los-25-espanoles-mas-influyentes-en-internet",
+                  "date": "2012-01-09"
+                }
+              ],
+              "year": 2012,
+              "id": "7abab3ba-4787-5e58-924e-db77aba587d9",
+              "category": "Top 25/Internet"
+            }
+          },
+          {
+            "id": "4befcb41-cad9-42a3-bc2e-93b2c044a62f",
+            "name": "Young Global Leader (World Economic Forum)",
+            "entity_type": "Award",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Jesús Encinar, fundador de Idealista, único empresario español elegido joven líder global 2008",
+                  "document": "https://www.elconfidencial.com/mercados/archivo/2008/03/11/88_jesus_encinar_fundador_idealista_unico_empresario.html",
+                  "date": "2008-03-11"
+                },
+                {
+                  "name": "Il world economic forum nomina jesús encinar young global leader",
+                  "document": "https://www.idealista.it/news/immobiliare/residenziale/2008/03/14/115-il-world-economic-forum-nomina-jesus-encinar-young-global-leader",
+                  "date": "2008-03-14"
+                }
+              ],
+              "year": 2008,
+              "id": "01fa0219-0da1-5414-b27e-72b8f2138faa"
+            }
+          }
+        ],
+        "INVESTED_IN": [
+          {
+            "id": "4c2ec85e-1703-41c0-8c76-0a163fd616ae",
+            "name": "Etece",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/person/jess-encinar-2",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "elreferente.es",
+                  "document": "https://elreferente.es/emprendedores/jesus-encinar",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "app.dealroom.co",
+                  "document": "https://app.dealroom.co/transactions.rounds/f/industries/anyof_jobs%20recruitment/investors/anyof_~carlos_mu_oz~",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "e7b0d9ea-b466-53e5-9657-d9a66d249a9d",
+              "valid_since": "2012-11-01"
+            }
+          }
+        ],
+        "FEATURED_IN": [
+          {
+            "id": "2a173394-6c7f-4e68-83d4-8a00b3e13258",
+            "name": "19 años al pie del cañón: la historia de idealista ...",
+            "entity_type": "WorkOfArt",
+            "properties": {
+              "role": "interviewee",
+              "sources": [
+                {
+                  "name": "podcasts.apple.com",
+                  "document": "https://podcasts.apple.com/uy/podcast/19-a%C3%B1os-al-pie-del-ca%C3%B1%C3%B3n-la-historia-de-idealista/id1189514886?i=1000440219691",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "ba0428b3-23a2-53de-b6a8-f8f303487934",
+              "capacity": "interview"
+            }
+          },
+          {
+            "id": "8a1c0e27-9651-4382-b245-2a8b10e3226b",
+            "name": "Los Mini Podcasts de Innoventures Capital – episode featuring Jesús Encinar",
+            "entity_type": "WorkOfArt",
+            "properties": {
+              "role": "interviewee",
+              "sources": [
+                {
+                  "name": "De llorar por las noches, a Forbes: la historia de Jesús Encinar | Innoventures Capital",
+                  "document": "https://es.linkedin.com/posts/innoventures-capital-sl_de-llorar-por-las-noches-a-forbes-la-historia-activity-7309850867954819072-7eHT",
+                  "date": "2025-03-24"
+                }
+              ],
+              "id": "ed767ac4-492d-57c3-a6e1-7ee4afc1ed57",
+              "capacity": "interview"
+            }
+          },
+          {
+            "id": "c93d15da-dd0e-464a-8e26-86a4114790fb",
+            "name": "Jesús Encinar, el rey Midas de Idealista",
+            "entity_type": "WorkOfArt",
+            "properties": {
+              "role": "subject",
+              "sources": [
+                {
+                  "name": "elpais.com",
+                  "document": "https://elpais.com/economia/2020-09-11/jesus-encinar-el-rey-midas-de-idealista.html",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "57dc45a9-6241-59cb-b6a8-bd6841ec90ea",
+              "valid_since": "2020-09-11",
+              "capacity": "profile"
+            }
+          }
+        ],
+        "FOUNDED": [
+          {
+            "id": "11e19c01-3715-4484-ab40-0e31b556b36b",
+            "name": "Rockola Media Group SL",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.marketscreener.com",
+                  "document": "https://www.marketscreener.com/insider/JESUS-ENCINAR-RODRIGUEZ-A0HL5X",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "72a1a598-153f-5c19-a6d1-5994afb81311",
+              "valid_since": "2007-01-01"
+            }
+          },
+          {
+            "id": "646140e4-7bb7-4f65-8d86-0bc0ce14f266",
+            "name": "11870 Información en General SL",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "www.marketscreener.com",
+                  "document": "https://www.marketscreener.com/insider/JESUS-ENCINAR-RODRIGUEZ-A0HL5X",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "f140e7fe-4026-5290-b0be-080fbd831273",
+              "valid_since": "2006-01-01"
+            }
+          },
+          {
+            "id": "935231d1-656d-4921-ba00-47ed2f182d2b",
+            "name": "idealista",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Preqin | Alternative Assets Data, Solutions and Insights",
+                  "document": "https://www.preqin.com/news/eqt-sells-majority-stake-in-idealista-in-eur2-9bn-tertiary-buyout",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "c86dec42-1322-50a7-993b-1d7c73ef7096"
+            }
+          }
+        ],
+        "STUDIED_AT": [
+          {
+            "id": "bedee1fb-239c-4fe0-be30-aa4b74be3a72",
+            "name": "Harvard Business School",
+            "entity_type": "EducationalInstitution",
+            "properties": {
+              "sources": [
+                {
+                  "name": "elpais.com",
+                  "document": "https://elpais.com/economia/2020-09-11/jesus-encinar-el-rey-midas-de-idealista.html",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "Conociendo a los Harvard Graduates Jesús Encinar",
+                  "document": "https://hcspain.clubs.harvard.edu/article.html?aid=347",
+                  "date": "1998-01-01"
+                }
+              ],
+              "degree": "MBA",
+              "id": "e03ba63b-f3ca-5448-be0f-a36cb7698a36",
+              "field_of_study": "Business Administration"
+            }
+          },
+          {
+            "id": "fbf3ed08-b1be-42e1-942b-25664fdf18d6",
+            "name": "ICADE Business School (Universidad Pontificia de Comillas)",
+            "entity_type": "EducationalInstitution",
+            "properties": {
+              "sources": [
+                {
+                  "name": "elpais.com",
+                  "document": "https://elpais.com/economia/2020-09-11/jesus-encinar-el-rey-midas-de-idealista.html",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "Conociendo a los Harvard Graduates Jesús Encinar",
+                  "document": "https://hcspain.clubs.harvard.edu/article.html?aid=347",
+                  "date": "1998-01-01"
+                }
+              ],
+              "degree": "Licenciatura",
+              "id": "41918415-b651-524a-b45e-3e8bec1f38c7",
+              "field_of_study": "Business Administration"
+            }
+          }
+        ],
+        "IS_CEO_OF": [
+          {
+            "id": "646140e4-7bb7-4f65-8d86-0bc0ce14f266",
+            "name": "11870 Información en General SL",
+            "entity_type": "Organization",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Jesús Encinar: The Man Behind Idealista and 11870.com",
+                  "document": "https://www.compasslist.com/insights/jesus-encinar-the-man-behind-idealista-and-11870com",
+                  "date": "2018-10-02"
+                },
+                {
+                  "name": "Jesus Encinar",
+                  "document": "https://queerbio.com/wiki/index.php/Jesus_Encinar",
+                  "date": "2019-03-28"
+                }
+              ],
+              "id": "883585ed-8594-5ad3-8109-bb1ef74cbadc"
+            }
+          },
+          {
+            "id": "935231d1-656d-4921-ba00-47ed2f182d2b",
+            "name": "idealista",
+            "entity_type": "Company",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Preqin | Alternative Assets Data, Solutions and Insights",
+                  "document": "https://www.preqin.com/news/eqt-sells-majority-stake-in-idealista-in-eur2-9bn-tertiary-buyout",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "SUR in English - Spanish news in English",
+                  "document": "https://www.surinenglish.com/spain/british-firm-acquires-share-spains-leading-property-20240628115940-nt.html",
+                  "date": "2026-07-03"
+                },
+                {
+                  "name": "Creating value that creates more value.",
+                  "document": "https://www.eqtgroup.com/news/eqt-to-sell-majority-stake-in-real-estate-platform-idealista-in-eur-29-billion-transaction-2024-06-28",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "0f7c9cb0-3711-5409-aa3e-a681e7c377d7"
+            }
+          }
+        ],
+        "WORKS_AT": [
+          {
+            "id": "01c237e4-b375-4c97-8c05-7874c15fecd7",
+            "name": "Mitchell Madison Group",
+            "entity_type": "Organization",
+            "properties": {
+              "role": "Consultant",
+              "sources": [
+                {
+                  "name": "Fesabid 2009 - XI Jornadas Españolas de Documentación",
+                  "document": "https://www.fesabid.org/zaragoza2009/index37d8.html?page_id=1358",
+                  "date": "2009-02-01"
+                }
+              ],
+              "id": "471ba737-1fdf-59bd-978e-b0985dff42e9"
+            }
+          },
+          {
+            "id": "46bf9402-e078-4878-a7d7-7969534fea75",
+            "name": "11870.com",
+            "entity_type": "Organization",
+            "properties": {
+              "role": "Founder",
+              "sources": [
+                {
+                  "name": "www.fesabid.org",
+                  "document": "https://www.fesabid.org/zar Zaragoza2009/index37d8.html?page_id=1358",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "01be3412-1844-53ef-8fd3-6fe6ac22b171"
+            }
+          },
+          {
+            "id": "4e352ab4-3448-4cc6-a9ed-61d2ecf7d08e",
+            "name": "WOLFF OLINS LIMITED",
+            "entity_type": "Company",
+            "properties": {
+              "role": "European Director of Consulting and Naming",
+              "sources": [
+                {
+                  "name": "Fesabid 2009 - XI Jornadas Españolas de Documentación",
+                  "document": "https://www.fesabid.org/zaragoza2009/index37d8.html?page_id=1358",
+                  "date": "2009-02-01"
+                }
+              ],
+              "id": "0f071da8-8bfa-5971-ac87-64b14deb2277"
+            }
+          },
+          {
+            "id": "55e43b45-6fdf-410a-9b3d-c43061f58fe9",
+            "name": "Toprural",
+            "entity_type": "Organization",
+            "properties": {
+              "role": "Partner Advisor",
+              "sources": [
+                {
+                  "name": "Fesabid 2009 - XI Jornadas Españolas de Documentación",
+                  "document": "https://www.fesabid.org/zaragoza2009/index37d8.html?page_id=1358",
+                  "date": "2009-02-01"
+                }
+              ],
+              "id": "e295dded-4fa5-5e5a-8099-9079b17ed9e2"
+            }
+          },
+          {
+            "id": "935231d1-656d-4921-ba00-47ed2f182d2b",
+            "name": "idealista",
+            "entity_type": "Company",
+            "properties": {
+              "role": "CEO",
+              "sources": [
+                {
+                  "name": "Jesús Encinar - SeedRocket",
+                  "document": "https://www.seedrocket.com/mentores/mentores-nuestros/jesus-encinar",
+                  "date": "2024-11-18"
+                },
+                {
+                  "name": "Fesabid 2009 - XI Jornadas Españolas de Documentación",
+                  "document": "https://www.fesabid.org/zaragoza2009/index37d8.html?page_id=1358",
+                  "date": "2009-02-01"
+                }
+              ],
+              "id": "be4c213e-2f9f-57c7-9467-a02ed1b527ff"
+            }
+          },
+          {
+            "id": "d2b709f8-e55b-49f0-a0fd-82b30c99a6dd",
+            "name": "RENTALIA IBERICA S XXI SL",
+            "entity_type": "Company",
+            "properties": {
+              "role": "Partner Advisor",
+              "sources": [
+                {
+                  "name": "Fesabid 2009 - XI Jornadas Españolas de Documentación",
+                  "document": "https://www.fesabid.org/zaragoza2009/index37d8.html?page_id=1358",
+                  "date": "2009-02-01"
+                }
+              ],
+              "id": "e52dd6d3-e8f7-527d-ae0a-3789609fb04c"
+            }
+          }
+        ],
+        "HAS_NATIONALITY": [
+          {
+            "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+            "name": "Spain",
+            "entity_type": "Country",
+            "properties": {
+              "sources": [
+                {
+                  "name": "Jesús Encinar: The Man Behind Idealista and 11870.com",
+                  "document": "https://www.compasslist.com/insights/jesus-encinar-the-man-behind-idealista-and-11870com",
+                  "date": "2018-10-02"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/person/jess-encinar-2",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "a3d1bb27-7b56-5c09-a1e9-a98cb0c14f31"
+            }
+          }
+        ],
+        "IS_MEMBER_OF": [
+          {
+            "id": "c6b7a325-4235-4f88-ba88-30adbe5dbfa0",
+            "name": "World Economic Forum",
+            "entity_type": "Organization",
+            "properties": {
+              "role": "Young Global Leader",
+              "sources": [
+                {
+                  "name": "El abulense Jesús Encinar, fundador de idealista.com, entre los líderes empresariales con mejor reputación",
+                  "document": "https://www.europapress.es/castilla-y-leon/noticia-abulense-jesus-encinar-fundador-idealistacom-lideres-empresariales-mejor-reputacion-20100825130153.html",
+                  "date": "2010-08-25"
+                },
+                {
+                  "name": "Jesús Encinar, paradigma de emprendedor y Rey Midas de internet | El Comercio: Diario de Asturias",
+                  "document": "https://www.elcomercio.es/gijon/20090510/television/jesus-encinar-paradigma-emprendedor-20090510.html",
+                  "date": "2009-05-10"
+                }
+              ],
+              "id": "e0552f86-4369-5bca-9d5f-372981e34b42"
+            }
+          },
+          {
+            "id": "c7ae8f31-34b6-495b-8fb3-9803bcd7e3a2",
+            "name": "Association of Internet Investors and Entrepreneurs",
+            "entity_type": "Organization",
+            "properties": {
+              "role": "member",
+              "sources": [
+                {
+                  "name": "Jesús Encinar: The Man Behind Idealista and 11870.com",
+                  "document": "https://www.compasslist.com/insights/jesus-encinar-the-man-behind-idealista-and-11870com",
+                  "date": "2018-10-02"
+                }
+              ],
+              "id": "3715cc96-edcd-5527-8adb-76a342a43a99"
+            }
+          },
+          {
+            "id": "c9f6f389-bb74-4d8c-90cd-2928a0b2647f",
+            "name": "SeedRocket",
+            "entity_type": "Organization",
+            "properties": {
+              "role": "Mentor",
+              "sources": [
+                {
+                  "name": "Jesús Encinar - SeedRocket",
+                  "document": "https://www.seedrocket.com/mentores/mentores-nuestros/jesus-encinar",
+                  "date": "2024-11-18"
+                },
+                {
+                  "name": "www.crunchbase.com",
+                  "document": "https://www.crunchbase.com/person/jess-encinar-2",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "d35ed051-669b-5782-b4d9-7ae98ae80713"
+            }
+          },
+          {
+            "id": "e1bedcfd-ee74-4cb3-8059-d30de61462af",
+            "name": "Seaya Ventures",
+            "entity_type": "Organization",
+            "properties": {
+              "role": "Advisory board member",
+              "sources": [
+                {
+                  "name": "Jesús Encinar: The Man Behind Idealista and 11870.com",
+                  "document": "https://www.compasslist.com/insights/jesus-encinar-the-man-behind-idealista-and-11870com",
+                  "date": "2018-10-02"
+                },
+                {
+                  "name": "www.eu-startups.com",
+                  "document": "https://www.eu-startups.com/page/548?ibsa=share&id=830",
+                  "date": "2026-07-03"
+                }
+              ],
+              "id": "6fc6165d-45cc-5a14-837b-f6814ac356ce"
+            }
+          }
+        ]
+      },
+      "incoming": {}
+    },
+    "numerical_observations": []
+  }
+}

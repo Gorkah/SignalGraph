@@ -1,0 +1,155 @@
+{
+  "input": "startups.location=Spain.sector=real estate marketplace",
+  "runAt": "2026-08-29T14:12:58.655Z",
+  "ok": true,
+  "status": 200,
+  "ms": 69123,
+  "attempt": 0,
+  "data": {
+    "results": [
+      {
+        "name": "idealista",
+        "location": "Madrid, Spain",
+        "sector": "real estate marketplace"
+      },
+      {
+        "name": "Spotahome",
+        "location": "Spain",
+        "sector": "real estate marketplace"
+      },
+      {
+        "name": "Fotocasa",
+        "location": "Spain",
+        "sector": "real estate marketplace"
+      },
+      {
+        "name": "Badi",
+        "location": "Spain",
+        "sector": "real estate marketplace"
+      },
+      {
+        "name": "Housfy",
+        "location": "Barcelona, Spain",
+        "sector": "real estate marketplace"
+      },
+      {
+        "name": "HABITACION.COM",
+        "location": "Madrid, Spain",
+        "sector": "real estate marketplace"
+      },
+      {
+        "name": "Housell",
+        "location": "Spain",
+        "sector": "real estate marketplace"
+      },
+      {
+        "name": "ProntoPiso",
+        "location": "Spain",
+        "sector": "real estate marketplace"
+      },
+      {
+        "name": "Nuroa",
+        "location": "Spain",
+        "sector": "real estate marketplace"
+      }
+    ],
+    "entities": [
+      {
+        "id": "935231d1-656d-4921-ba00-47ed2f182d2b",
+        "name": "idealista",
+        "entity_type": "Company",
+        "mentions": [
+          "idealista"
+        ]
+      },
+      {
+        "id": "e122a8b3-d711-53bf-b81a-d843895c5081",
+        "name": "Madrid",
+        "entity_type": "Municipality",
+        "mentions": [
+          "Madrid"
+        ]
+      },
+      {
+        "id": "d5de6fdd-0847-4da6-8e5d-5e519a0b12b2",
+        "name": "Spotahome",
+        "entity_type": "Organization",
+        "mentions": [
+          "Spotahome"
+        ]
+      },
+      {
+        "id": "cfc32f7f-524f-487b-94a7-3b9be0576277",
+        "name": "Spain",
+        "entity_type": "Country",
+        "mentions": [
+          "Spain"
+        ]
+      },
+      {
+        "id": "768f3092-460a-4eaa-9430-75301c703b7c",
+        "name": "Fotocasa",
+        "entity_type": "Organization",
+        "mentions": [
+          "Fotocasa"
+        ]
+      },
+      {
+        "id": "80db2e76-4f5f-48f4-be5b-127c72047cca",
+        "name": "Badi",
+        "entity_type": "Organization",
+        "mentions": [
+          "Badi"
+        ]
+      },
+      {
+        "id": "85d4bdcd-e15d-41e2-beac-c7eb7772becd",
+        "name": "HOUSFY REAL ESTATE S.L.",
+        "entity_type": "Company",
+        "mentions": [
+          "Housfy"
+        ]
+      },
+      {
+        "id": "7d7e89cd-567d-554c-9a67-7a4a0c9915ab",
+        "name": "Barcelona",
+        "entity_type": "Municipality",
+        "mentions": [
+          "Barcelona"
+        ]
+      },
+      {
+        "id": "4473e89a-d0ef-4017-a88a-0fbfc61df491",
+        "name": "HABITACION.COM",
+        "entity_type": "Organization",
+        "mentions": [
+          "HABITACION.COM"
+        ]
+      },
+      {
+        "id": "81e3b8ff-e772-4edf-9f61-dc6ca565be98",
+        "name": "Housell",
+        "entity_type": "Company",
+        "mentions": [
+          "Housell"
+        ]
+      },
+      {
+        "id": "daee8d58-a728-4729-8308-9e0dfe1b6b53",
+        "name": "ProntoPiso",
+        "entity_type": "Company",
+        "mentions": [
+          "ProntoPiso"
+        ]
+      },
+      {
+        "id": "56492847-cc43-47a8-9712-7126805a52f6",
+        "name": "Nuroa",
+        "entity_type": "Organization",
+        "mentions": [
+          "Nuroa"
+        ]
+      }
+    ]
+  }
+}

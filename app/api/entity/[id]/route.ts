@@ -1,4 +1,6 @@
 import { CalaError, projectEntity } from "@/lib/cala";
+import { ProjectionRequestSchema, ValidationError, errorResponse, validateRequest } from "@/app/api/middleware";
+import { logger } from "@/lib/logger";
 
 export const runtime = "nodejs";
 
@@ -8,16 +10,20 @@ export async function POST(
 ) {
   try {
     const { id } = await context.params;
-    const body = await request.json() as { projection?: unknown; limit?: unknown };
-    if (typeof body.projection !== "string" || !body.projection.trim()) {
-      return Response.json({ error: "Falta la proyección", code: "BAD_REQUEST" }, { status: 400 });
-    }
-    const limit = typeof body.limit === "number" ? Math.min(20, Math.max(1, Math.floor(body.limit))) : 5;
-    return Response.json(await projectEntity(id, body.projection.trim(), limit));
+    logger.debug("Projection query received", { entityId: id });
+    const input = await validateRequest(request, ProjectionRequestSchema, "POST /api/entity/:id");
+    const limit = Math.min(8, Math.max(1, input.limit));
+    const result = await projectEntity(id, input.projection, limit);
+    logger.info("Projection completed", { entityId: id, relationType: input.projection });
+    return Response.json(result);
   } catch (error) {
-    if (error instanceof CalaError) {
-      return Response.json({ error: error.message, code: error.code }, { status: error.status });
+    if (error instanceof ValidationError) {
+      return errorResponse(400, "BAD_REQUEST", "La petición no es válida", { details: error.details });
     }
-    return Response.json({ error: "No se pudo tirar del hilo", code: "UPSTREAM_ERROR" }, { status: 500 });
+    if (error instanceof CalaError) {
+      return errorResponse(error.status, error.code, error.message, { entityId: (await context.params).id });
+    }
+    logger.error("Projection failed", error, { entityId: (await context.params).id });
+    return errorResponse(500, "UPSTREAM_ERROR", "No se pudo tirar del hilo");
   }
 }

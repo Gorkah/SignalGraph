@@ -4,6 +4,10 @@
  * verbo dirigido dibujado sin flecha promete una dirección que la línea no
  * entrega, así que el hilo se nombra con un sustantivo simétrico.
  */
+export const QUESTION_RELATION = "PREGUNTA_PIONEER";
+export const ANSWER_RELATION = "RESPUESTA_OPENAI";
+export const EVIDENCE_RELATION = "EVIDENCIA_DE";
+
 const NOUNS: Record<string, string> = {
   INVESTED_IN: "inversión",
   FINANCED: "financiación",
@@ -26,6 +30,9 @@ const NOUNS: Record<string, string> = {
   IS_ULTIMATE_PARENT_OF: "matriz",
   IS_DIRECT_PARENT_OF: "matriz",
   PUBLISHED_BY: "publicación",
+  [QUESTION_RELATION]: "continuación",
+  [ANSWER_RELATION]: "respuesta",
+  [EVIDENCE_RELATION]: "evidencia",
 };
 
 export const CASE_RELATION = "LÍNEA DE CASO";

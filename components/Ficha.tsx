@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type CSSProperties } from "react";
+import { memo, useState, type CSSProperties } from "react";
 import { LiveObject } from "@liveblocks/client";
 import { Retrato } from "@/components/Retrato";
 import { buildCover, teaser } from "@/lib/fields";
@@ -71,7 +71,7 @@ const DEFAULT_COVER = [
   { label: "dónde", fields: ["city", "location"], fallback: "sin sitio anotado" },
 ];
 
-export function Ficha({ card, entranceIndex = 0 }: { card: EntityCard; entranceIndex?: number }) {
+function FichaComponent({ card, entranceIndex = 0 }: { card: EntityCard; entranceIndex?: number }) {
   const selected = useBoardStore((state) => state.selectedId === card.id);
   const selectNode = useBoardStore((state) => state.selectNode);
   const pullRelation = useBoardStore((state) => state.pullRelation);
@@ -356,3 +356,15 @@ export function Ficha({ card, entranceIndex = 0 }: { card: EntityCard; entranceI
     </article>
   );
 }
+
+/**
+ * Memoized Ficha component
+ * Prevents unnecessary re-renders when parent updates
+ */
+export const Ficha = memo(FichaComponent, (prev, next) => {
+  // Custom comparison: only re-render if card reference or position changed
+  return prev.card.id === next.card.id &&
+         prev.card.position.x === next.card.position.x &&
+         prev.card.position.y === next.card.position.y &&
+         prev.entranceIndex === next.entranceIndex;
+});

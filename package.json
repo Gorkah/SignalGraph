@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "type-check": "tsc --noEmit",
+    "validate:env": "node -e \"require('./lib/env').validateEnvOnStartup()\"",
     "cala": "node --env-file=.env scripts/cala-query.mjs",
     "case": "node --env-file=.env scripts/build-case.mjs"
   },

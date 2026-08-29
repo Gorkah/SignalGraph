@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { relationNoun } from "@/lib/relations";
+import { downloadInvestigationPng } from "@/lib/share-png";
 import { useBoardStore } from "@/lib/store";
 
 export function Carpeta() {
@@ -9,7 +10,9 @@ export function Carpeta() {
   const selectedId = useBoardStore((state) => state.selectedId);
   const selectNode = useBoardStore((state) => state.selectNode);
   const pullRelation = useBoardStore((state) => state.pullRelation);
+  const setToast = useBoardStore((state) => state.setToast);
   const [checked, setChecked] = useState<string[]>([]);
+  const [sharing, setSharing] = useState(false);
   const card = graph?.cards.find((item) => item.id === selectedId);
 
   const selectableRelations = card?.relations.map((relation) => relation.type) ?? [];
@@ -20,6 +23,19 @@ export function Carpeta() {
 
   if (!card) return null;
 
+  async function shareCurrentNode() {
+    if (!graph || !card || sharing) return;
+    setSharing(true);
+    try {
+      const filename = await downloadInvestigationPng(graph, card.id);
+      setToast(`PNG descargado · ${filename}`);
+    } catch (error) {
+      setToast(error instanceof Error ? error.message : "No se pudo crear el PNG");
+    } finally {
+      setSharing(false);
+    }
+  }
+
   return (
     <aside className="folder" aria-label="Carpeta de entidad">
       <header>
@@ -27,7 +43,18 @@ export function Carpeta() {
           <span>CARPETA</span>
           <h2>{card.name}</h2>
         </div>
-        <button type="button" onClick={() => selectNode(undefined)} aria-label="Cerrar carpeta">×</button>
+        <div className="folder-actions">
+          <button
+            type="button"
+            className="share-node"
+            disabled={sharing}
+            onClick={() => void shareCurrentNode()}
+            title="Descargar el recorrido hasta esta ficha como PNG"
+          >
+            {sharing ? "…" : "PNG"}
+          </button>
+          <button type="button" onClick={() => selectNode(undefined)} aria-label="Cerrar carpeta">×</button>
+        </div>
       </header>
       <>
           <section>

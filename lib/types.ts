@@ -33,6 +33,19 @@ export type RelationSummary = {
  */
 export type CardDensity = "lead" | "full";
 
+export type NarrativeStory = {
+  question: string;
+  title: string;
+  answer: string;
+  because: string;
+  beat: "problema" | "causa" | "mecanismo" | "consecuencia" | "tensión";
+  nextQuestion?: string;
+  confidence: number;
+  model: string;
+  provider: "openai" | "pioneer";
+  evidenceNames: string[];
+};
+
 export type EntityCard = {
   id: string;
   name: string;
@@ -49,6 +62,8 @@ export type EntityCard = {
   relationType?: string;
   /** Pistas del mismo tirón comparten mazo y se apilan hasta que lo abrís. */
   stackId?: string;
+  /** Respuesta causal redactada por el modelo únicamente desde evidencia Cala. */
+  story?: NarrativeStory;
 };
 
 export type Edge = {
@@ -56,6 +71,8 @@ export type Edge = {
   sourceId: string;
   targetId: string;
   relationType: string;
+  /** Pregunta que abrió esta continuación, si el hilo nació de un borrador. */
+  question?: string;
   source?: ClaimSource;
 };
 
@@ -189,6 +206,22 @@ export type ApiErrorCode =
 export type ApiErrorResponse = {
   error: string;
   code: ApiErrorCode;
+};
+
+/** Borrador de siguiente pregunta evaluado por Pioneer. */
+export type PotentialQuestion = {
+  nodeId: string;
+  worthwhile: boolean;
+  question?: string;
+  rationale: string;
+  score: number;
+  source: "openai" | "pioneer" | "disk";
+  provider?: "openai" | "pioneer";
+  model: string;
+};
+
+export type StoryAnswer = NarrativeStory & {
+  source: "openai" | "pioneer" | "disk";
 };
 
 /** Lo que un agente decide sobre un caso. Ver `scripts/case-agent.md`. */

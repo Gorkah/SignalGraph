@@ -4,6 +4,8 @@ import { cacheFirst, readCache } from "@/lib/disk-cache";
 import { loadManifest } from "@/lib/manifest";
 import { entityNameKey } from "@/lib/names";
 import { claimsForEntity, entityById, getSeedPayload, loadCalaDumps, relationNeighbours, relationsFor } from "@/lib/seed";
+import { logger } from "@/lib/logger";
+import { getEnv } from "@/lib/env";
 import type {
   ApiErrorCode,
   CalaEntity,
@@ -16,10 +18,24 @@ import type {
   ProjectionResponse,
 } from "@/lib/types";
 
-const QUERY_URL = process.env.CALA_API_URL ?? "https://api.cala.ai/v1/knowledge/query";
-const ENTITY_BASE = process.env.CALA_ENTITY_URL ?? "https://api.cala.ai/v1/entities";
+let cachedEnv: ReturnType<typeof getEnv> | null = null;
+
+function getCalaEnv() {
+  if (!cachedEnv) {
+    try {
+      cachedEnv = getEnv();
+    } catch (error) {
+      logger.error("Failed to load env config", error);
+      throw error;
+    }
+  }
+  return cachedEnv;
+}
+
+const QUERY_URL = () => `${getCalaEnv().CALA_BASE_URL}/v1/knowledge/query`;
+const ENTITY_BASE = () => `${getCalaEnv().CALA_BASE_URL}/v1/entities`;
 /** Con esto a "0" el tablón no sale a la red: solo caché de disco y volcados. */
-const LIVE = process.env.CALA_LIVE !== "0";
+const LIVE = () => getCalaEnv().CALA_LIVE !== "0";
 
 export class CalaError extends Error {
   constructor(
@@ -37,7 +53,8 @@ function wait(ms: number) {
 
 async function fetchCala(url: string, body: unknown, timeoutMs: number) {
   const method = body === undefined ? "GET" : "POST";
-  const apiKey = process.env.CALA_API_KEY;
+  const env = getCalaEnv();
+  const apiKey = env.CALA_API_KEY;
   if (!apiKey) throw new CalaError("Falta CALA_API_KEY", "UPSTREAM_ERROR", 503);
 
   for (let attempt = 0; attempt < 2; attempt += 1) {
@@ -83,7 +100,18 @@ function normalize(value: string) {
 }
 
 function principal(result: CalaResult) {
-  const value = result.name ?? result.startup;
+  // Cala cambia el nombre de la columna principal según la pregunta. Las
+  // consultas de cartera suelen devolver `company`; limitarse a name/startup
+  // convertía Voicemod, Digibee o Factorial en "Entidad sin nombre".
+  const value = result.name
+    ?? result.startup
+    ?? result.company
+    ?? result.empresa
+    ?? result.compania
+    ?? result["compañía"]
+    ?? result.organization
+    ?? result.fund
+    ?? result.entity;
   return typeof value === "string" ? value : "Entidad sin nombre";
 }
 
@@ -112,7 +140,11 @@ function dossierFromData(input: string, data: unknown): Dossier {
     throw new CalaError("La respuesta no contiene results/entities", "UPSTREAM_ERROR", 502);
   }
   const deliveredAt = new Date().toISOString();
-  const candidates: DossierCandidate[] = payload.results.map((result) => {
+  const candidates: DossierCandidate[] = payload.results
+    // Cala expresa algunas negativas como una fila `{error: ...}` con HTTP
+    // 200. No es evidencia y no debe entrar al grafo como entidad.
+    .filter((result) => typeof result.error !== "string")
+    .map((result) => {
     const name = principal(result);
     const entity = entityForResult(name, payload.entities ?? []);
     return {
@@ -122,7 +154,7 @@ function dossierFromData(input: string, data: unknown): Dossier {
       category: typeof result.sector === "string" ? result.sector : typeof result.focus === "string" ? result.focus : undefined,
       claims: claimsFromLiveResult(result, input, deliveredAt),
     };
-  });
+    });
   return {
     id: `live-${Date.now()}`,
     query: input,
@@ -145,7 +177,7 @@ export async function queryDossier(input: string, options: { timeoutMs?: number;
   }
 
   const { value, hit } = await cacheFirst("report", { input: normalizedInput }, async () => {
-    const raw = await fetchCala(QUERY_URL, { input: normalizedInput }, options.timeoutMs ?? 120_000);
+    const raw = await fetchCala(QUERY_URL(), { input: normalizedInput }, options.timeoutMs ?? 120_000);
     const body = raw as { data?: unknown };
     return dossierFromData(normalizedInput, body.data ?? raw);
   });
@@ -222,10 +254,10 @@ export async function projectEntity(entityId: string, relationType: string, requ
     const { value } = await cacheFirst("projection", input, async () => local);
     return value;
   }
-  if (!LIVE) return local;
+  if (!LIVE()) return local;
 
   const { value, hit } = await cacheFirst("projection", input, async () => {
-    const raw = await fetchCala(`${ENTITY_BASE}/${encodeURIComponent(entityId)}`, {
+    const raw = await fetchCala(`${ENTITY_BASE()}/${encodeURIComponent(entityId)}`, {
       properties: ["name", "description"],
       relationships: {
         outgoing: { [relationType]: { limit: limit * 3 } },
@@ -345,10 +377,10 @@ export async function introspectEntity(entityId: string): Promise<IntrospectionR
     }));
     return value;
   }
-  if (!LIVE) return { entity, relations: [], source: "local-evidence" };
+  if (!LIVE()) return { entity, relations: [], source: "local-evidence" };
 
   const { value, hit } = await cacheFirst("introspection", input, async () => {
-    const raw = await fetchCala(`${ENTITY_BASE}/${encodeURIComponent(entityId)}/introspection`, undefined, 20_000);
+    const raw = await fetchCala(`${ENTITY_BASE()}/${encodeURIComponent(entityId)}/introspection`, undefined, 20_000);
     const payload = raw as {
       properties?: string[];
       relationships?: { outgoing?: string[]; incoming?: string[] };
@@ -364,7 +396,7 @@ export async function introspectEntity(entityId: string): Promise<IntrospectionR
     // introspección acaba de decir cuáles tiene y el manifiesto cuáles pinta.
     const claims = entity.claims.length
       ? entity.claims
-      : await fetchCala(`${ENTITY_BASE}/${encodeURIComponent(entityId)}`, {
+      : await fetchCala(`${ENTITY_BASE()}/${encodeURIComponent(entityId)}`, {
         properties: wantedProperties(payload.properties ?? []),
       }, 30_000).then(claimsFromProperties).catch(() => []);
     return {

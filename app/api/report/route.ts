@@ -1,23 +1,33 @@
 import { CalaError, queryDossier } from "@/lib/cala";
+import { ReportRequestSchema, ValidationError, errorResponse, validateRequest } from "@/app/api/middleware";
+import { logger } from "@/lib/logger";
 
 export const runtime = "nodejs";
 export const maxDuration = 120;
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json() as { input?: unknown; mode?: unknown };
-    if (typeof body.input !== "string") {
-      return Response.json({ error: "Falta la consulta", code: "BAD_REQUEST" }, { status: 400 });
-    }
-    const dossier = await queryDossier(body.input, {
+    logger.debug("Report query received");
+    const input = await validateRequest(request, ReportRequestSchema, "POST /api/report");
+
+    const dossier = await queryDossier(input.input, {
       timeoutMs: 120_000,
-      forceLive: body.mode === "live",
+      forceLive: input.mode === "live",
+    });
+
+    logger.info("Report query completed", {
+      source: dossier.source,
+      candidateCount: dossier.candidates.length,
     });
     return Response.json(dossier);
   } catch (error) {
-    if (error instanceof CalaError) {
-      return Response.json({ error: error.message, code: error.code }, { status: error.status });
+    if (error instanceof ValidationError) {
+      return errorResponse(400, "BAD_REQUEST", "La petición no es válida", { details: error.details });
     }
-    return Response.json({ error: "Cala no pudo completar la consulta", code: "UPSTREAM_ERROR" }, { status: 500 });
+    if (error instanceof CalaError) {
+      return errorResponse(error.status, error.code, error.message);
+    }
+    logger.error("Report query failed", error);
+    return errorResponse(500, "UPSTREAM_ERROR", "El archivo no pudo completar la consulta");
   }
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import Link from "next/link";
 import { LiveList } from "@liveblocks/client";
 import { ClientSideSuspense } from "@liveblocks/react";
@@ -11,10 +11,11 @@ import { Tablon } from "@/components/Tablon";
 import { loadIdentity, type GuestIdentity } from "@/lib/identity";
 import { useBoardStore } from "@/lib/store";
 import { CASE_RELATION } from "@/lib/relations";
+import { UI_TIMEOUTS } from "@/lib/constants";
 import type { SeedPayload } from "@/lib/types";
 import { RoomProvider } from "@/liveblocks.config";
 
-export function SignalGraphApp({ seed }: { seed: SeedPayload }) {
+function SignalGraphAppComponent({ seed }: { seed: SeedPayload }) {
   const initialize = useBoardStore((state) => state.initialize);
   const setCaseView = useBoardStore((state) => state.setCaseView);
   const finishHydration = useBoardStore((state) => state.finishHydration);
@@ -51,7 +52,7 @@ export function SignalGraphApp({ seed }: { seed: SeedPayload }) {
 
   useEffect(() => {
     if (!toast) return;
-    const timer = window.setTimeout(() => setToast(undefined), 4200);
+    const timer = window.setTimeout(() => setToast(undefined), UI_TIMEOUTS.TOAST_DURATION_MS);
     return () => window.clearTimeout(timer);
   }, [setToast, toast]);
 
@@ -89,3 +90,5 @@ export function SignalGraphApp({ seed }: { seed: SeedPayload }) {
     </RoomProvider>
   );
 }
+
+export const SignalGraphApp = memo(SignalGraphAppComponent);

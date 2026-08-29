@@ -64,7 +64,6 @@ export function portfolioPosition(origin: Point, away: Point): Point {
   });
 }
 
-
 /* ── Reparto del corcho ───────────────────────────────────────────────
    Todo lo que se clava ocupa una caja. Con las cajas sobre la mesa, colocar
    algo nuevo deja de ser adivinar coordenadas: es buscar dónde no hay nada. */
@@ -227,4 +226,17 @@ export function cascadePositions(question: Point, count: number, occupied: Box[]
     x: origin.x + Math.floor(index / CASCADE_ROWS) * (LEAD_WIDTH + GRID_SIZE),
     y: origin.y + (index % CASCADE_ROWS) * (LEAD_HEIGHT + GRID_SIZE),
   }));
+}
+
+/**
+ * Las respuestas forman una escalera narrativa alrededor del caso. Alternar
+ * izquierda/derecha evita que varios Tab conviertan el relato en una línea
+ * horizontal imposible de encajar en pantalla.
+ */
+export function narrativePosition(parent: Point, depth: number): Point {
+  const direction = depth % 2 === 0 ? 1 : -1;
+  return snapPoint({
+    x: parent.x + direction * (CARD_WIDTH + 144),
+    y: parent.y + CARD_HEIGHT + 112,
+  });
 }

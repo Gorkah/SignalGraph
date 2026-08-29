@@ -12,6 +12,9 @@
   --thread-investment: #d64b37;
   --thread-finance: #2667a6;
   --thread-report: #4d7f54;
+  --thread-question: #6d6963;
+  --thread-answer: #2667a6;
+  --thread-evidence: #c58b21;
   --thread-default: #574c3d;
   --thread-case: #8a7a5c;
   --thread-law: #7a3f91;
@@ -223,6 +226,14 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 .primary-button:active { box-shadow: 1px 1px 0 var(--ink); translate: 2px 2px; }
 .primary-button:disabled { opacity: .45; cursor: not-allowed; }
 .query-box .primary-button { width: 100%; margin-top: 6px; }
+.query-actions { display: grid; grid-template-columns: 1fr; gap: 5px; margin-top: 6px; }
+.query-actions .primary-button { margin-top: 0; }
+.secondary-button {
+  width: 100%; border: 1px solid var(--ink); background: var(--paper-bright); padding: 4px 9px;
+  cursor: pointer; font-family: var(--font-display); font-size: 8px; text-transform: uppercase;
+}
+.secondary-button:hover:not(:disabled) { background: var(--yellow); }
+.secondary-button:disabled { opacity: .45; cursor: not-allowed; }
 .receipt-stack { min-height: 0; flex: 1; overflow-y: auto; padding: 10px; }
 .empty-inbox { margin: 10px 4px; font-size: 15px; line-height: 1.05; text-align: center; opacity: .7; }
 .receipt { margin-bottom: 10px; border: 2px solid var(--ink); background: var(--paper-bright); box-shadow: 4px 4px 0 rgba(32, 27, 24, .55); }
@@ -239,6 +250,11 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 .candidate-fan button:hover { background: var(--yellow); translate: 0 0; }
 .candidate-fan button:disabled { opacity: .45; cursor: not-allowed; }
 .candidate-fan button span { color: var(--red); }
+.candidate-fan .receipt-open-case {
+  margin: 0 0 6px; border: 2px solid var(--ink); background: var(--green); color: white;
+  font-family: var(--font-display); font-size: 8px;
+}
+.candidate-fan .receipt-open-case:hover { background: var(--yellow); color: var(--ink); }
 
 .folder {
   position: absolute; z-index: 40; top: 12px; right: 356px; bottom: 12px; width: min(420px, calc(100% - 380px));
@@ -252,6 +268,13 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 .folder > header span, .folder h3 { font-family: var(--font-display); font-size: 8px; }
 .folder h2 { margin: 2px 0 0; font-size: 28px; line-height: .9; }
 .folder > header button { width: 28px; height: 28px; border: 2px solid var(--ink); background: var(--paper-bright); cursor: pointer; }
+.folder-actions { display: flex; align-items: center; gap: 6px; }
+.folder-actions .share-node {
+  width: 54px; padding: 0 6px; background: var(--green); color: var(--paper-bright);
+  font-family: var(--font-display); font-size: 8px;
+}
+.folder-actions .share-node:hover:not(:disabled) { background: var(--yellow); color: var(--ink); }
+.folder-actions .share-node:disabled { opacity: .55; cursor: wait; }
 .folder section { padding: 10px; border-bottom: 2px solid var(--ink); }
 .folder h3 { margin: 0 0 8px; }
 .claim-list { margin: 0; }
@@ -269,6 +292,61 @@ button:focus-visible, textarea:focus-visible, input:focus-visible {
 .folder-empty { padding: 16px; }
 
 .toast { position: fixed; z-index: 100; left: 16px; bottom: 16px; max-width: 460px; border: 2px solid var(--ink); background: var(--ink); color: var(--paper-bright); box-shadow: 5px 5px 0 var(--red); padding: 7px 11px; animation: toast-in 180ms steps(3, end); }
+
+/* La pregunta todavía no es un nodo: papel gris, semitransparente y borde
+   discontinuo. Solo gana tinta cuando Tab la convierte en investigación. */
+.potential-question {
+  position: absolute; z-index: 34; width: 276px; min-height: 168px;
+  display: flex; flex-direction: column;
+  border: 2px dashed rgba(32, 27, 24, .62);
+  background: rgba(239, 237, 230, .86);
+  color: rgba(32, 27, 24, .74);
+  box-shadow: 5px 5px 0 rgba(32, 27, 24, .20);
+  opacity: .86; cursor: default;
+}
+.potential-question::before {
+  content: ""; position: absolute; top: 50%; width: 40px;
+  border-top: 2px dashed rgba(32, 27, 24, .46);
+}
+.potential-question.is-right::before { right: 100%; }
+.potential-question.is-left::before { left: 100%; }
+.potential-question > header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 6px 8px; border-bottom: 1px dashed rgba(32, 27, 24, .48);
+  background: rgba(210, 208, 202, .68); font-family: var(--font-display); font-size: 8px;
+}
+.potential-question > header b { color: rgba(32, 27, 24, .52); }
+.potential-question p { flex: 1; margin: 0; padding: 10px 11px; font-size: 18px; line-height: 1.02; }
+.potential-question footer {
+  display: flex; align-items: center; gap: 8px; padding: 6px 8px;
+  border-top: 1px dashed rgba(32, 27, 24, .48); font-family: var(--font-display); font-size: 8px;
+}
+.potential-question kbd {
+  min-width: 34px; padding: 3px 5px; border: 1px solid rgba(32, 27, 24, .66);
+  background: rgba(255, 255, 255, .62); box-shadow: 2px 2px 0 rgba(32, 27, 24, .25);
+  text-align: center;
+}
+.potential-question.is-asking { opacity: .58; }
+
+/* La respuesta ya forma parte de la investigación: conserva el tamaño de una
+   ficha para que hilos, encuadre y exportación compartan la misma geometría. */
+.story-card { border-top-color: var(--thread-answer); background: #fffaf0; }
+.story-drag {
+  min-height: 47px; display: grid; grid-template-columns: 32px minmax(0, 1fr); align-items: center; gap: 7px;
+  padding: 5px 8px; border-bottom: 2px solid var(--ink); background: #dbe7f0; cursor: move; touch-action: none;
+}
+.story-ai {
+  display: grid; place-items: center; width: 30px; height: 30px; border: 2px solid var(--ink);
+  background: var(--blue); color: white; font-family: var(--font-display); font-size: 9px;
+}
+.story-drag strong { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: var(--font-display); font-size: 9px; }
+.story-drag small { display: block; margin-top: 2px; font-size: 11px; opacity: .65; }
+.story-body { min-height: 0; flex: 1; overflow: hidden; padding: 6px 8px; }
+.story-body > small { display: block; color: var(--blue); font-family: var(--font-display); font-size: 7px; line-height: 1.25; }
+.story-body p { margin: 5px 0; font-size: 14px; line-height: 1.03; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+.story-body blockquote { margin: 4px 0 0; padding: 4px 6px; border-left: 4px solid var(--yellow); background: var(--paper); font-size: 11px; line-height: 1.05; }
+.story-body blockquote b { font-family: var(--font-display); font-size: 7px; }
+.story-card footer { min-height: 25px; justify-content: space-between; padding: 4px 7px; background: var(--ink); color: white; font-family: var(--font-display); font-size: 7px; }
 
 @keyframes pin-land { from { opacity: 0; transform: translateY(-48px) rotate(-5deg); } to { opacity: 1; transform: none; } }
 @keyframes badge-pop { from { transform: scale(0); } to { transform: scale(1); } }

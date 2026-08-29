@@ -9,24 +9,25 @@ import { Cursores } from "@/components/Cursores";
 import { Ficha } from "@/components/Ficha";
 import { Mazo, RecogerMazo } from "@/components/Mazo";
 import { Pregunta } from "@/components/Pregunta";
+import { PreguntaPotencial } from "@/components/PreguntaPotencial";
+import { RespuestaNarrativa } from "@/components/RespuestaNarrativa";
 import { Hilos } from "@/components/Hilos";
 import { Notas } from "@/components/Notas";
 import { GRID_SIZE, cardBox, occupiedBoxes } from "@/lib/geometry";
 import { MAX_ZOOM, MIN_ZOOM, useBoardStore } from "@/lib/store";
 import { CASE_RELATION } from "@/lib/relations";
+import { ZOOM, LAYOUT } from "@/lib/constants";
 import type { Point } from "@/lib/types";
 import { useMyPresence } from "@/liveblocks.config";
 
-const ZOOM_STEP = 1.25;
+// Unified zoom constants from lib/constants.ts
+// ZOOM.MIN, ZOOM.MAX, ZOOM.STEP
 
 // La rejilla no es decoración: es el encaje real de las fichas (GRID_SIZE px
 // de tablón). Por eso los tres niveles son múltiplos suyos y cualquier línea
 // que se vea cae siempre sobre una posición válida de encaje.
-const GRID_LEVELS = [
-  { units: 1, rgb: "32 27 24", ink: 0.19 },   // 16px: el paso de encaje
-  { units: 4, rgb: "255 248 223", ink: 0.26 }, // 64px: el relieve de siempre
-  { units: 16, rgb: "32 27 24", ink: 0.18 },  // 256px: la retícula grande
-];
+const GRID_LEVELS = LAYOUT.GRID_LEVELS;
+const ZOOM_STEP = ZOOM.STEP;
 
 /**
  * Cuánto pesa un nivel según lo apretado que se vea EN PANTALLA. Por debajo de
@@ -108,7 +109,7 @@ export function Tablon() {
     const minY = Math.min(...boxes.map((b) => b.y));
     const maxX = Math.max(...boxes.map((b) => b.x + b.w));
     const maxY = Math.max(...boxes.map((b) => b.y + b.h));
-    const pad = 44;
+    const pad = LAYOUT.GRID_PADDING_PX;
     const gutterLeft = pad;
     const availableW = node.clientWidth - gutterLeft - pad;
     const availableH = node.clientHeight - pad * 2;
@@ -220,7 +221,7 @@ export function Tablon() {
   const pulled = new Set(graph.cards.map((card) => card.stackId).filter(Boolean));
   const openRelation = caseView?.openVerb.relation ?? "INVESTED_IN";
   const carteras = caseView?.openVerb.hidden ? [] : graph.cards.filter(
-    (card) => card.density === "full" && !card.parentId && !pulled.has(`${card.id}:${openRelation}`),
+    (card) => card.density === "full" && !card.story && !card.parentId && !pulled.has(`${card.id}:${openRelation}`),
   );
 
   function startPan(event: ReactPointerEvent<HTMLDivElement>) {
@@ -278,7 +279,9 @@ export function Tablon() {
         />
         <DatoClave />
         {storyStarted && graph.questions.map((question) => <Pregunta key={question.id} question={question} />)}
-        {storyStarted && loose.map((card, index) => <Ficha key={card.id} card={card} entranceIndex={index} />)}
+        {storyStarted && loose.map((card, index) => card.story
+          ? <RespuestaNarrativa key={card.id} card={card} />
+          : <Ficha key={card.id} card={card} entranceIndex={index} />)}
         {storyStarted && carteras.map((card) => <Cartera key={`cartera-${card.id}`} card={card} focus={graph.focus} />)}
         {storyStarted && [...stacks].map(([stackId, group]) => (
           <Mazo key={stackId} cards={group} parentName={group[0].parentId ? cardName.get(group[0].parentId) : undefined} />
@@ -293,6 +296,7 @@ export function Tablon() {
         ))}
         <Notas graph={graph} />
         <Cursores />
+        {storyStarted && <PreguntaPotencial />}
       </div>
 
       <div className="zoom-dock" role="group" aria-label="Zoom del tablón">

@@ -112,14 +112,25 @@
 .entity-card.nivel-ficha.is-story-target {
   box-shadow: 8px 8px 0 rgba(32, 27, 24, .72), 0 0 0 5px rgba(214, 75, 55, .32);
 }
+.role-tag {
+  position: absolute; z-index: 3; left: 10px; top: -35px;
+  min-width: 88px; padding: 5px 9px 4px;
+  border: 2px solid var(--ink); box-shadow: 3px 3px 0 var(--ink);
+  rotate: -2deg; font-family: var(--font-display); font-size: 10px;
+  line-height: 1; text-align: center; letter-spacing: .04em;
+}
+.role-tag[data-tone="red"] { background: var(--red); color: white; }
+.role-tag[data-tone="blue"] { background: var(--blue); color: white; }
+.role-tag[data-tone="green"] { background: var(--green); color: white; }
+.role-tag[data-tone="yellow"] { background: var(--yellow); color: var(--ink); }
 .story-card-hint {
-  position: absolute; z-index: 4; right: -22px; top: -74px; width: 190px;
+  position: absolute; z-index: 4; left: calc(100% + 24px); top: 18px; width: 190px;
   border: 0; background: transparent; color: var(--red); cursor: pointer;
-  rotate: -3deg; text-align: left;
+  rotate: -2deg; text-align: left;
 }
 .story-card-hint::after {
-  content: "↙"; position: absolute; right: 6px; top: 25px;
-  font-size: 34px; transform: rotate(-8deg);
+  content: "←"; position: absolute; left: -42px; top: 15px;
+  font-size: 34px; transform: rotate(-5deg);
 }
 .story-card-hint small { display: block; font-family: var(--font-display); font-size: 9px; }
 .story-card-hint span {

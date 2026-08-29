@@ -18,36 +18,48 @@
       "id": "50bc23a5-398d-43d4-a715-b98ca0dd6216",
       "name": "Neinor Homes",
       "role": "protagonista",
+      "tag": "PROMOTOR",
+      "tagTone": "red",
       "subtitle": "Promotor residencial · actor del caso."
     },
     {
       "id": "35718438-638e-43b6-acb3-03e2eedd8cbf",
       "name": "AEDAS HOMES SA",
       "role": "protagonista",
+      "tag": "PROMOTOR",
+      "tagTone": "red",
       "subtitle": "Promotor residencial · actor del caso."
     },
     {
       "id": "e20f6b22-4b15-413a-89de-9f6fa175ac3c",
       "name": "COMPAÑÍA ESPAÑOLA DE VIVIENDAS EN ALQUILER S.A.",
       "role": "protagonista",
+      "tag": "ALQUILER",
+      "tagTone": "green",
       "subtitle": "Empresa de alquiler residencial · vinculada a Barcelona en Cala."
     },
     {
       "id": "768f3092-460a-4eaa-9430-75301c703b7c",
       "name": "Fotocasa",
       "role": "protagonista",
+      "tag": "PORTAL",
+      "tagTone": "blue",
       "subtitle": "Portal inmobiliario · conecta oferta y demanda."
     },
     {
       "id": "935231d1-656d-4921-ba00-47ed2f182d2b",
       "name": "idealista",
       "role": "protagonista",
+      "tag": "PORTAL",
+      "tagTone": "blue",
       "subtitle": "Portal inmobiliario · conecta oferta y demanda."
     },
     {
       "id": "65342723-3382-42ff-a2e7-e1f064d36af6",
       "name": "Habitación.com",
       "role": "protagonista",
+      "tag": "INVERSIÓN",
+      "tagTone": "yellow",
       "subtitle": "Plataforma de inversión en habitaciones."
     }
   ],

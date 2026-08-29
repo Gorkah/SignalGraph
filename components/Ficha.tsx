@@ -146,7 +146,8 @@ export function Ficha({ card, entranceIndex = 0 }: { card: EntityCard; entranceI
       data-category={card.category}
       onClick={() => selectNode(card.id)}
     >
-      {storyTarget && (
+      {card.tag && <span className="role-tag" data-tone={card.tagTone ?? "yellow"}>{card.tag}</span>}
+      {storyTarget && !hilos && (
         <button
           type="button"
           className="story-card-hint"

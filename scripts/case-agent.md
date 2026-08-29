@@ -88,7 +88,9 @@ se cruzan. De ahí salen las tres cosas que importan:
 - `question` — la pregunta del caso, en español, para leer en una tarjeta.
 - `openVerb` — qué relación significa "abrir" una ficha en este caso, con el
   nombre que le pone la interfaz (`cartera`, `expediente`, `entorno`…).
-- `ring` — las fichas protagonistas, con rol y un subtítulo de una línea.
+- `ring` — las fichas protagonistas, con rol, un subtítulo de una línea y una
+  etiqueta visual corta (`tag` + `tagTone`) que permita distinguir sus papeles
+  sin leer la ficha completa.
 - `bridges` — los cruces que esperás, con los nombres de quién los sostiene.
 - `cover` — los tres datos que lleva en portada una ficha **de este caso**. No
   hay una respuesta universal: en un caso de fondos puede ser sede y volumen;

@@ -128,6 +128,8 @@ const manifest = z.object({
     name: z.string(),
     role: z.enum(["protagonista", "secundaria"]),
     subtitle: z.string().describe("Una línea humana; qué es y por qué está aquí"),
+    tag: z.string().describe("Papel corto y visual de la entidad en este caso, p. ej. PROMOTOR o REGULADOR"),
+    tagTone: z.enum(["red", "blue", "green", "yellow"]).describe("Color que agrupa papeles equivalentes dentro del caso"),
   })).describe("Entre 3 y 9 fichas protagonistas"),
   headline: z.object({
     bridge: z.string().describe("Nombre del cruce que hay que ensayar: el más legible y más al foco de la pregunta"),

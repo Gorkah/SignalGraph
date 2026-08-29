@@ -275,9 +275,9 @@ function ringCentre(index: number, total: number) {
 /** Anillo del manifiesto si lo hay; si no, la semilla escrita a mano. */
 function ringEntries(manifest: ReturnType<typeof loadManifest>) {
   if (manifest?.ring?.length) {
-    return manifest.ring.map((entry) => [entry.id, entry.name, entry.subtitle] as const);
+    return manifest.ring.map((entry) => [entry.id, entry.name, entry.subtitle, entry.tag, entry.tagTone] as const);
   }
-  return RING_FALLBACK.map(([id, name, category]) => [id, name, category] as const);
+  return RING_FALLBACK.map(([id, name, category]) => [id, name, category, undefined, undefined] as const);
 }
 
 function buildCards(dumps: ReturnType<typeof loadCalaDumps>, manifest: ReturnType<typeof loadManifest>): EntityCard[] {
@@ -285,7 +285,7 @@ function buildCards(dumps: ReturnType<typeof loadCalaDumps>, manifest: ReturnTyp
   const cards: EntityCard[] = [];
   const centres = new Map<string, { x: number; y: number }>();
 
-  RING.forEach(([id, fallbackName, category], index) => {
+  RING.forEach(([id, fallbackName, category, tag, tagTone], index) => {
     const entity = entityById(id, dumps);
     const centre = ringCentre(index, RING.length);
     centres.set(id, centre);
@@ -294,6 +294,8 @@ function buildCards(dumps: ReturnType<typeof loadCalaDumps>, manifest: ReturnTyp
       name: entity?.name || fallbackName,
       entityType: entity?.entity_type ?? "Organization",
       category,
+      tag,
+      tagTone,
       position: cardCorner(centre.x, centre.y),
       claims: entity ? claimsForEntity(entity, dumps) : [],
       relations: relationsFor(id),
@@ -341,7 +343,7 @@ function buildCase(dumps: ReturnType<typeof loadCalaDumps>, manifest: ReturnType
   const signature = createHash("sha1")
     .update(JSON.stringify([
       focus.position,
-      cards.map((c) => [c.id, c.position]),
+      cards.map((c) => [c.id, c.position, c.category, c.tag, c.tagTone]),
       edges.map((e) => e.id),
       questions.map((q) => [q.id, q.prompt, q.position]),
       manifest?.story,

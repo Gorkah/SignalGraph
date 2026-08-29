@@ -38,6 +38,8 @@ export type EntityCard = {
   name: string;
   entityType: string;
   category?: string;
+  tag?: string;
+  tagTone?: "red" | "blue" | "green" | "yellow";
   position: Point;
   claims: Claim[];
   relations: RelationSummary[];
@@ -198,7 +200,14 @@ export type CaseManifest = {
   question: string;
   subtitle: string;
   openVerb: { relation: string; label: string; noun: string; hidden?: boolean };
-  ring: Array<{ id: string; name: string; role: string; subtitle: string }>;
+  ring: Array<{
+    id: string;
+    name: string;
+    role: string;
+    subtitle: string;
+    tag?: string;
+    tagTone?: "red" | "blue" | "green" | "yellow";
+  }>;
   headline?: { bridge: string; why: string };
   bridges: Array<{ name: string; id: string | null; holders: string[]; verified: boolean }>;
   cover: Array<{ label: string; fields: string[]; fallback: string }>;

@@ -1,223 +1,198 @@
 # SignalGraph
 
-Un tablón de investigación interactivo para explorar el grafo de relaciones de Cala AI. Construido con Next.js 16, React 19, y TypeScript con enfoque en performance y UX visual pixel-art.
+SignalGraph convierte una investigación sobre entidades en un grafo navegable. Consulta datos de Cala, genera respuestas narrativas con OpenAI y permite continuar la historia mediante preguntas sugeridas y la tecla `Tab`.
 
-## 🚀 Quick Start
+## Requisitos
 
-### Prerequisitos
-- Node.js 18+
-- npm o pnpm
-- Variables de entorno configuradas (ver `.env.example`)
+- Node.js 18 o superior
+- npm
+- Una API key de Cala
+- Una API key de OpenAI o, como alternativa, de Pioneer
 
-### Instalación
+## Instalación
 
 ```bash
-# Instalar dependencias
+git clone <url-del-repositorio>
+cd SignalGraph
 npm install
-
-# Copiar variables de entorno de ejemplo
 cp .env.example .env.local
+```
 
-# Configurar las API keys en .env.local
-# CALA_API_KEY, OPENAI_API_KEY, PIONEER_API_KEY, etc.
+Edita `.env.local` con tus credenciales y arranca el servidor:
 
-# Ejecutar en desarrollo
+```bash
 npm run dev
 ```
 
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+Abre [http://localhost:3000](http://localhost:3000).
 
-## 📁 Estructura del Proyecto
+> No subas nunca `.env`, `.env.local` ni claves API al repositorio. Si una clave se ha compartido accidentalmente, revócala y genera otra.
 
-```
-├── app/
-│   ├── api/                 # API routes (Next.js route handlers)
-│   │   ├── report/         # POST: query dossier lento
-│   │   ├── entity/[id]/    # POST: tirar de hilo, GET: introspección
-│   │   └── middleware.ts   # Validación Zod + error handling
-│   ├── layout.tsx          # Root layout con fuentes y estilos
-│   └── page.tsx            # Home page
-├── components/             # React components
-│   ├── Tablon.tsx         # Tablón principal (pan, rejilla, SVG)
-│   ├── Ficha.tsx          # Entity card (full/lead density)
-│   ├── Bandeja.tsx        # Inbox + query interface
-│   ├── Carpeta.tsx        # Sidebar detalles
-│   ├── Hilos.tsx          # SVG overlay con relaciones
-│   └── ...                # Otros componentes
-├── lib/
-│   ├── constants.ts       # Magic numbers centralizados
-│   ├── env.ts             # Validación de variables de entorno (Zod)
-│   ├── logger.ts          # Logging estructurado
-│   ├── normalize.ts       # Funciones de normalización centralizadas
-│   ├── cala.ts            # Cliente Cala API (server-side)
-│   ├── disk-cache.ts      # Cache en disco + limpieza automática
-│   ├── store.ts           # Zustand store (board state)
-│   ├── types.ts           # TypeScript types
-│   ├── geometry.ts        # Cálculos de geometría (snap, paths)
-│   ├── fields.ts          # Extracción de campos (money, place, description)
-│   ├── investigation.ts   # Trail & context building
-│   ├── relations.ts       # Mapeo de relaciones
-│   ├── manifest.ts        # Carga de manifiesto de caso
-│   └── seed.ts            # Inicialización desde datos locales
-├── data/
-│   ├── cache/             # Cache de disco (generado)
-│   ├── cala/              # Volcados de consultas JSON
-│   └── cases/             # Manifiestos de casos
-├── public/                # Assets estáticos
-├── scripts/
-│   ├── build-case.mjs     # Generar caso desde relaciones
-│   ├── build-roles.mjs    # Generar roles
-│   └── cala-query.mjs     # Ejecutar query en Cala
-├── app/
-│   ├── globals.css        # Tailwind + temas
-│   ├── cards.css          # Estilos de fichas
-│   └── board.css          # Estilos del tablón
-└── tsconfig.json          # Config TypeScript
+## Variables de entorno
+
+### Cala
+
+```dotenv
+CALA_API_KEY=
+CALA_API_URL=https://api.cala.ai/v1/knowledge/query
+CALA_ENTITY_URL=https://api.cala.ai/v1/entities
+CALA_LIVE=true
+CALA_TIMEOUT_MS=180000
 ```
 
-## 🔧 Configuración
+`CALA_LIVE=true` activa las consultas remotas. Si se desactiva o no hay credenciales, la aplicación puede utilizar los datos locales disponibles en `data/`.
 
-### Variables de Entorno
+### OpenAI
 
-Copiar `.env.example` a `.env.local` y configurar:
+```dotenv
+OPENAI_API_KEY=
+OPENAI_BASE_URL=https://api.openai.com/v1
+OPENAI_MODEL=gpt-5-mini
+OPENAI_TIMEOUT_MS=60000
+```
+
+La aplicación utiliza la Responses API de OpenAI para producir JSON estructurado: respuesta, confianza, si la pregunta merece continuar y la siguiente pregunta sugerida.
+
+### Pioneer como alternativa
+
+```dotenv
+PIONEER_API_KEY=
+PIONEER_BASE_URL=
+PIONEER_MODEL=
+PROVIDER_TIMEOUT_MS=60000
+```
+
+Cuando no está disponible OpenAI, `lib/model-json.ts` intenta usar Pioneer con una interfaz compatible de chat completions. Si se configuran ambos proveedores, OpenAI tiene prioridad.
+
+### Casos y scripts
+
+```dotenv
+CASE_SLUG=
+CASE_MODEL=
+CASE_BUDGET=
+CASE_STEPS=
+CASE_EFFORT=
+```
+
+`CASE_SLUG` permite seleccionar un caso concreto de `data/cases`. Si está vacío, se carga el caso más reciente.
+
+## Flujo de uso
+
+1. Escribe una consulta concreta en la bandeja, por ejemplo: `investors.location=Spain.sector=fintech`.
+2. Pulsa **Abrir caso nuevo** o **Solo pedir dossier**.
+3. Cala devuelve el dossier y las entidades relacionadas.
+4. OpenAI genera una respuesta narrativa para el nodo actual.
+5. Si hay una continuación valiosa, aparece una pregunta en gris claro como borrador.
+6. Pulsa `Tab` para aceptar automáticamente la pregunta, consultar el siguiente nodo y continuar la investigación.
+7. Usa **Compartir nodo** para descargar un PNG con el nodo actual y el recorrido de la investigación hasta llegar a él.
+
+## Ejemplo de storytelling
+
+Una secuencia que funciona bien para contar la historia de un fondo es:
+
+```text
+¿Qué mandato, tamaño, etapa y geografía tenía Leadwind, y qué entidades participaron en el fondo?
+```
+
+Después:
+
+```text
+¿Qué porcentaje de la inversión total aportó Telefónica a Leadwind y cómo se relaciona con el resto de inversores?
+```
+
+Y luego:
+
+```text
+¿Qué monto aportó BBVA dentro de ese 30% restante de Leadwind?
+```
+
+Las preguntas funcionan mejor cuando contienen una entidad y una relación medible: porcentaje, monto, fecha, etapa, sector o geografía. Una pregunta genérica como “¿por qué existe este problema?” puede no encontrar entidades suficientes en Cala; conviene anclarla primero a una empresa, fondo o inversión.
+
+## Arquitectura
+
+```text
+Consulta del usuario
+        ↓
+      Cala ──→ dossier y entidades
+        ↓
+   OpenAI / Pioneer ──→ respuesta JSON + siguiente pregunta
+        ↓
+   nodo del grafo ──→ Tab ──→ siguiente nodo
+        ↓
+     PNG compartible con el historial
+```
+
+Las rutas principales son:
+
+- `POST /api/report`: obtiene o construye el dossier inicial.
+- `POST /api/story`: genera una respuesta narrativa y la siguiente pregunta.
+- `POST /api/pioneer/question`: genera preguntas potenciales en formato JSON.
+- `GET /api/entity/[id]`: carga una entidad y sus relaciones.
+- `GET /api/entity/[id]/introspection`: amplía la información de una entidad.
+
+## Estructura del proyecto
+
+```text
+app/                 Aplicación Next.js y rutas API
+components/          Bandeja, grafo, nodos, preguntas y respuestas
+lib/                 Cala, modelos, storytelling, caché y estado de casos
+data/cala/           Respuestas y dossiers locales de Cala
+data/cases/          Casos narrativos generados
+data/relations/      Relaciones locales entre entidades
+scripts/              Utilidades para consultar Cala y crear casos
+```
+
+## Scripts disponibles
 
 ```bash
-# Cala AI
-CALA_API_KEY=                  # Requerido
-CALA_BASE_URL=                 # Default: https://api.cala.ai
-CALA_TIMEOUT_MS=65000          # Timeout para queries
-
-# OpenAI (para síntesis de narrativas)
-OPENAI_API_KEY=                # Opcional
-OPENAI_MODEL=gpt-4-turbo       # Opcional
-
-# Pioneer (para preguntas potenciales)
-PIONEER_API_KEY=               # Opcional
-PIONEER_BASE_URL=https://api.pioneer.ai
-
-# Otros
-NODE_ENV=development
-LOG_LEVEL=info                 # debug, info, warn, error
-CASE_SLUG=                     # Manifest a usar (default: más reciente)
+npm run dev          # servidor de desarrollo
+npm run build        # build de producción
+npm run start        # servidor de producción
+npm run lint         # ESLint
+npm run type-check   # TypeScript sin emitir archivos
 ```
 
-### Log Level
-
-Controlar verbosidad de logs:
-```bash
-LOG_LEVEL=debug   # Máximo detalle
-LOG_LEVEL=info    # Info normal (default)
-LOG_LEVEL=warn    # Solo warnings y errores
-LOG_LEVEL=error   # Solo errores
-```
-
-## 🎯 Flujo de Datos
-
-```
-1. getSeedPayload() → Carga caso semilla desde data/cala/*.json
-2. Bandeja.tsx → Usuario query el archivo
-3. /api/report → queryDossier() → Cala API (con cache en disco)
-4. Dossier llega → pinCandidate() → EntityCard se agrega al tablón
-5. Click en ficha → openCard() → /api/entity/:id/introspection
-6. Pull hilo → pullRelation() → /api/entity/:id + /api/entity/:id/projection
-7. Hilos.tsx renderiza con Manhattan path
-```
-
-## 🚀 Build & Deploy
-
-### Development
-```bash
-npm run dev      # Hot reload
-npm run lint     # ESLint
-```
-
-### Production
-```bash
-npm run build    # Build optimizado
-npm start        # Server production
-```
-
-**Nota:** La demo corre en local con `next dev` (sin Vercel serverless).
-
-## 🎨 UI/UX
-
-### Diseño
-- **Grid**: 16px snap (GRID_SIZE en constants.ts)
-- **Fuente**: VT323 (pixel art), Silkscreen (display)
-- **Colores**: Paleta Earth tones (ver globals.css)
-- **Rendering**: CSS `image-rendering: pixelated`
-
-### Componentes Principales
-- **Tablon**: Pan + Zoom + Drag fichas + SVG hilos
-- **Ficha**: Card con portada (3 slots) + dorso + carpeta
-- **Bandeja**: Query box + inbox de resguardos
-- **Hilos**: SVG con paths ortogonales (L-shape Manhattan)
-
-## 🔐 Seguridad
-
-- `CALA_API_KEY`: Server-only (nunca en cliente)
-- Rate limiting: Reintentos automáticos en 429
-- Validación: Todos los endpoints con Zod
-- Logging: Estructurado (sin secrets en logs)
-
-## 📊 Performance
-
-- **Cache en disco**: `cacheFirst()` en lib/disk-cache.ts
-- **Limpieza automática**: Archivos >30 días se eliminan
-- **Zustand persist**: State guarday en localStorage
-- **React.memo**: Componentes costosos memoizados
-- **Lazy loading**: Componentes pesados con dynamic()
-
-## 🧪 Testing
+Para consultar Cala desde la terminal:
 
 ```bash
-# Unit tests (futuro)
-npm run test
-
-# E2E tests con Playwright (futuro)
-npm run test:e2e
+node --env-file=.env scripts/cala-query.mjs "startups.location=Spain.funding>10M"
 ```
 
-## 🤝 Contribuir
+También acepta un fichero de consultas:
 
-1. Crear rama: `git checkout -b feature/nueva-cosa`
-2. Commit: `git commit -am "Describe tu cambio"`
-3. Push: `git push origin feature/nueva-cosa`
-4. Pull Request
+```bash
+node --env-file=.env scripts/cala-query.mjs --file queries.txt --concurrency 3
+```
 
-## 📝 Cambios Recientes
+Para generar un caso narrativo experimental:
 
-### v0.2.0
-- ✅ Validación con Zod en endpoints API
-- ✅ Logging estructurado (lib/logger.ts)
-- ✅ Variables de entorno validadas (lib/env.ts)
-- ✅ Constantes centralizadas (lib/constants.ts)
-- ✅ Normalización centralizada (lib/normalize.ts)
-- ✅ Limpieza automática de cache
-- ✅ Middleware centralizado de API
-- ✅ .env.example + documentación
+```bash
+node --env-file=.env scripts/build-case.mjs "investors.location=Spain.sector=fintech"
+```
 
-## 📚 Documentación
+## Datos locales y caché
 
-- [Next.js 16 Docs](https://nextjs.org/docs)
-- [Zustand Docs](https://github.com/pmndrs/zustand)
-- [Zod Docs](https://zod.dev)
-- [Tailwind CSS v4](https://tailwindcss.com/docs)
+Las respuestas de Cala y los casos generados se guardan en `data/`. El navegador conserva el caso activo y las preguntas sugeridas en `localStorage`, por lo que un refresco no debería sustituir una investigación iniciada por el usuario con el caso de ejemplo.
 
-## 💡 Troubleshooting
+Si cambias la consulta o las credenciales y ves datos antiguos, elimina los archivos generados de `data/cache` y vuelve a cargar la aplicación.
 
-### "CALA_API_KEY no está configurada"
-→ Copiar `.env.example` a `.env.local` y rellenar las claves
+## Verificación local
 
-### Cache corrupto
-→ Eliminar `data/cache/` y reiniciar
+Antes de integrar cambios, ejecuta:
 
-### Erro validación Zod
-→ Verificar que requests al API cumplen schema en `app/api/middleware.ts`
+```bash
+npm run lint
+npm run type-check
+npm run build
+```
 
-### Logs vacíos
-→ Poner `LOG_LEVEL=debug` en `.env.local`
+El repositorio no incluye actualmente una suite automatizada de tests; la validación principal combina estos comandos con una prueba manual del flujo de investigación, `Tab` y descarga del PNG.
 
-## 📄 Licencia
+## Referencias
 
-Privado (en desarrollo)
+- [OpenAI Responses API](https://developers.openai.com/api/reference/cli/resources/responses/methods/create)
+- [Next.js](https://nextjs.org/docs)
+
+## Estado
+
+Proyecto de prototipo para investigación narrativa y exploración de grafos. La integración con proveedores externos depende de sus credenciales y de la disponibilidad de sus APIs.

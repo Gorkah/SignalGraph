@@ -1,41 +1,41 @@
 # Publicación para LinkedIn
 
-Investigar no debería ser saltar de enlace en enlace hasta olvidar cómo llegaste a la conclusión.
+Quedamos **3º en el hackathon de {Tech: Europe} × Cala** con una idea que construimos en unas 10 horas: investigar tirando del hilo y poder ver, de principio a fin, cómo llegaste a un hallazgo.
 
-En el hackathon de **{Tech: Europe} × Cala** quedamos **3º** con **SignalGraph**, un experimento que construimos en unas 10 horas junto a Arnau Ropero Garcia y Santiago García Monsalve.
+Así nació **SignalGraph**, junto a Arnau Ropero Garcia y Santiago García Monsalve.
 
-La idea parte de una pregunta sencilla: **¿y si una investigación se pudiera recorrer visualmente, tirando del hilo?**
+La mayoría de buscadores y asistentes te entregan una respuesta terminada. SignalGraph hace visible el recorrido:
 
-SignalGraph no entrega una respuesta cerrada. Abre un tablero:
+→ eliges una pregunta y el agente propone las primeras entidades;
 
-→ eliges una pregunta;
+→ clavas una ficha en el tablero y decides qué relación seguir;
 
-→ un agente propone las entidades iniciales;
+→ cada inversión, propiedad, puesto o evento abre una nueva rama;
 
-→ tú decides qué relación seguir —una inversión, una propiedad, una fundación, un puesto…—;
+→ puedes seguir avanzando varias capas, sin perder los pasos anteriores;
 
-→ cada relación trae nuevas fichas con su evidencia;
+→ si dos caminos vuelven a la misma entidad, el tablero marca la conexión;
 
-→ cuando dos recorridos llegan a la misma entidad, aparece una conexión verificable.
+→ y cada dato conserva la fuente que permite comprobarlo.
 
-Ese último punto es el corazón del proyecto. El resultado no aparece por arte de magia: puedes ver **qué entidades conectaste, qué hilo seguiste y qué fuente sostiene cada dato**.
+En el caso de vivienda, por ejemplo, puedes recorrer **Aedas → Neinor Homes → Avenue Capital Group → nuevas inversiones y eventos corporativos**, mientras otras ramas de idealista siguen creciendo en paralelo. No solo ves el resultado: ves **por qué apareció, desde dónde llegaste y qué podrías investigar después**.
 
-Durante la demo investigamos tres casos distintos:
+Durante el hackathon preparamos tres investigaciones:
 
-• las coinversiones entre fondos españoles activos en fintech;
+• coinversiones entre fondos españoles activos en fintech;
 
-• los equipos compartidos detrás de fundadores de fintech;
+• equipos compartidos detrás de fundadores de fintech;
 
-• y quién aparece alrededor del negocio de la vivienda en Barcelona.
+• quién aparece alrededor del negocio de la vivienda en Barcelona.
 
-Además del grafo interactivo, conseguimos añadir consultas en vivo a Cala, evidencia local para que los recorridos ensayados sean inmediatos, detección de entidades reencontradas, preguntas narrativas con IA, cursores y notas colaborativas con Liveblocks, y exportación del camino de investigación como PNG.
+También añadimos consultas en vivo al grafo de conocimiento de Cala, detección de entidades reencontradas, preguntas de seguimiento con IA, notas y cursores colaborativos con Liveblocks y exportación del recorrido como PNG.
 
-Me quedo con dos cosas: lo que se puede construir cuando el equipo toma decisiones rápido, y una intuición que quiero seguir explorando —**la IA puede proponer por dónde mirar sin ocultar cómo se llega al resultado**.
+Lo que más me interesa del proyecto es esta idea: **la IA puede ayudarnos a decidir dónde mirar sin ocultar cómo se construye una conclusión**.
 
 🔎 Demo: https://signal-graph-tau.vercel.app
 
 💻 Código: https://github.com/Gorkah/SignalGraph
 
-Gracias a **Cala** y **{Tech: Europe}** por el reto y por crear el espacio para construirlo.
+Gracias a **Cala** y **{Tech: Europe}** por el reto, y a Arnau y Santiago por construirlo juntos.
 
 #Hackathon #ArtificialIntelligence #KnowledgeGraphs #DataVisualization #Investigación #BuildInPublic #CalaAI #TechEurope

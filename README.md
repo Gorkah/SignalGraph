@@ -49,9 +49,9 @@ flowchart LR
 5. **Audita el resultado.** Cada dato conserva la consulta, el archivo, la fecha y, cuando existe, la URL de origen.
 6. **Continúa o comparte.** Abre otra pregunta, deja notas colaborativas o exporta el recorrido hasta una ficha como PNG.
 
-La captura ya no corresponde al estado inicial: primero se siguió la propiedad de Aedas hasta reencontrar a Neinor Homes; desde Neinor se abrió la rama de inversión y desde idealista se desplegaron las ramas de inversión y sector. El resultado conserva en una sola vista la pregunta, el hallazgo y las entidades aparecidas durante el recorrido.
+La captura ya no corresponde al estado inicial. Primero se siguió la propiedad de Aedas hasta reencontrar a Neinor Homes; desde Neinor se abrió la rama de inversión hasta Avenue Capital Group y, desde Avenue, se avanzó otra capa por inversiones y eventos corporativos. En paralelo, idealista abre sus propias ramas de inversión y sector. El resultado reúne **16 conexiones** y deja ver tanto la profundidad de un hilo como las bifurcaciones que se descartaron o todavía se pueden explorar.
 
-![Tablero después de recorrer ramas de propiedad, inversión y sector](docs/screenshots/signalgraph-board.png)
+![Tablero frondoso después de recorrer varias capas de propiedad, inversión, eventos corporativos y sector](docs/screenshots/signalgraph-board.png)
 
 ## Qué hace diferente a SignalGraph
 
@@ -65,9 +65,9 @@ La captura ya no corresponde al estado inicial: primero se siguió la propiedad 
 
 ## Un hallazgo, con su recorrido a la vista
 
-En el caso de vivienda, el tablero parte de una pregunta amplia y de una referencia de contexto. Al seguir la relación de propiedad de Aedas, el hilo regresa a una ficha que ya estaba clavada: Neinor Homes. La investigación continúa desde ese cruce: al abrir sus inversiones aparece Avenue Capital Group como entidad de segunda capa, y al abrir su ficha vuelven a aparecer tanto la fuente original como nuevos hilos que se podrían seguir.
+En el caso de vivienda, el tablero parte de una pregunta amplia y de una referencia de contexto. Al seguir la relación de propiedad de Aedas, el hilo regresa a una ficha que ya estaba clavada: Neinor Homes. La investigación continúa desde ese cruce: sus inversiones llevan hasta Avenue Capital Group y, desde allí, una nueva relación alcanza un evento de financiación. Incluso en esa tercera capa se conserva la descripción, la fecha, la consulta de Cala y el artículo original que sostiene el dato.
 
-![Entidad de segunda capa con sus fuentes y siguientes relaciones](docs/screenshots/signalgraph-finding.png)
+![Hallazgo de tercera capa con su descripción, procedencia y siguiente relación disponible](docs/screenshots/signalgraph-finding.png)
 
 ## Funcionalidades
 

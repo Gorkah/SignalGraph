@@ -49,9 +49,9 @@ flowchart LR
 5. **Audita el resultado.** Cada dato conserva la consulta, el archivo, la fecha y, cuando existe, la URL de origen.
 6. **Continúa o comparte.** Abre otra pregunta, deja notas colaborativas o exporta el recorrido hasta una ficha como PNG.
 
-La captura ya no corresponde al estado inicial. Primero se siguió la propiedad de Aedas hasta reencontrar a Neinor Homes; desde Neinor se abrió la rama de inversión hasta Avenue Capital Group y, desde Avenue, se avanzó otra capa por inversiones y eventos corporativos. En paralelo, idealista abre sus propias ramas de inversión y sector. El resultado reúne **16 conexiones** y deja ver tanto la profundidad de un hilo como las bifurcaciones que se descartaron o todavía se pueden explorar.
+La captura ya no corresponde al estado inicial. Sigue una misma rama durante varias capas: **Aedas → Neinor Homes → Avenue Capital Group → DELSEY → DHI Company → Francia**. En ese recorrido se pasa por relaciones de propiedad, inversión, grupo propietario y registro, sin perder la pregunta inicial ni los pasos intermedios. El tablero reúne **17 conexiones** y permite entender de un vistazo de dónde sale cada entidad, qué relación la trajo y hacia dónde se podría continuar.
 
-![Tablero frondoso después de recorrer varias capas de propiedad, inversión, eventos corporativos y sector](docs/screenshots/signalgraph-board.png)
+![Tablero con una rama larga desde Aedas hasta Francia a través de varias entidades y relaciones](docs/screenshots/signalgraph-board.png)
 
 ## Qué hace diferente a SignalGraph
 

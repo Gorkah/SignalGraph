@@ -1,36 +1,36 @@
 # Publicación para LinkedIn
 
-Quedamos **3º en el hackathon de {Tech: Europe} × Cala** con una idea que construimos en unas 10 horas: investigar tirando del hilo y poder ver, de principio a fin, cómo llegaste a un hallazgo.
+Una consulta a un LLM puede darte una conclusión en segundos. Pero muchas veces llega como un bloque largo de texto: tienes la respuesta, aunque resulta fácil perder qué dato llevó al siguiente, qué relación conecta cada pieza o en qué punto cambió la dirección de la investigación.
 
-Así nació **SignalGraph**, junto a Arnau Ropero Garcia y Santiago García Monsalve.
+En el hackathon de **{Tech: Europe} × Cala** quisimos explorar una alternativa.
 
-La mayoría de buscadores y asistentes te entregan una respuesta terminada. SignalGraph hace visible el recorrido:
+Así construimos **SignalGraph** en unas 10 horas junto a Arnau Ropero Garcia y Santiago García Monsalve, y conseguimos el **3º puesto**.
 
-→ eliges una pregunta y el agente propone las primeras entidades;
+SignalGraph convierte la investigación en un recorrido visual formado por **entidades y relaciones**:
 
-→ clavas una ficha en el tablero y decides qué relación seguir;
+→ partes de una pregunta y el agente propone las primeras entidades;
 
-→ cada inversión, propiedad, puesto o evento abre una nueva rama;
+→ eliges una ficha y decides por qué relación continuar;
 
-→ puedes seguir avanzando varias capas, sin perder los pasos anteriores;
+→ cada propiedad, inversión, puesto o evento añade un nuevo tramo al mapa;
 
-→ si dos caminos vuelven a la misma entidad, el tablero marca la conexión;
+→ puedes volver atrás, comparar ramas o profundizar varias capas;
 
-→ y cada dato conserva la fuente que permite comprobarlo.
+→ si dos caminos llegan a la misma entidad, el tablero hace visible el cruce;
 
-En el caso de vivienda, por ejemplo, puedes recorrer **Aedas → Neinor Homes → Avenue Capital Group → nuevas inversiones y eventos corporativos**, mientras otras ramas de idealista siguen creciendo en paralelo. No solo ves el resultado: ves **por qué apareció, desde dónde llegaste y qué podrías investigar después**.
+→ y cada dato mantiene su fuente para que el resultado se pueda comprobar.
 
-Durante el hackathon preparamos tres investigaciones:
+La diferencia importante es que **la IA no decide toda la investigación por ti**. Propone posibilidades, pero eres tú quien elige por dónde tirar. El grafo conserva ese recorrido, así que no pierdes el hilo y puedes entender de un vistazo cómo has llegado hasta una conclusión.
 
-• coinversiones entre fondos españoles activos en fintech;
+En el caso de vivienda, por ejemplo, una misma rama permite recorrer:
 
-• equipos compartidos detrás de fundadores de fintech;
+**Aedas → Neinor Homes → Avenue Capital Group → DELSEY → DHI Company → Francia**
 
-• quién aparece alrededor del negocio de la vivienda en Barcelona.
+No es solo una respuesta. Es el flujo completo de la investigación: las entidades que aparecieron, las relaciones que seguiste, las alternativas que quedaron abiertas y las fuentes que sostienen cada paso.
 
-También añadimos consultas en vivo al grafo de conocimiento de Cala, detección de entidades reencontradas, preguntas de seguimiento con IA, notas y cursores colaborativos con Liveblocks y exportación del recorrido como PNG.
+Durante el hackathon preparamos tres casos: coinversiones entre fondos de fintech, equipos compartidos detrás de fundadores y el negocio de la vivienda en Barcelona. También añadimos consultas en vivo a Cala, detección de entidades reencontradas, preguntas de seguimiento con IA, colaboración mediante Liveblocks y exportación del recorrido como PNG.
 
-Lo que más me interesa del proyecto es esta idea: **la IA puede ayudarnos a decidir dónde mirar sin ocultar cómo se construye una conclusión**.
+La idea que me llevo es esta: **un LLM puede ayudarte a encontrar una conclusión; una interfaz visual también puede ayudarte a no perder el camino que te llevó hasta ella**.
 
 🔎 Demo: https://signal-graph-tau.vercel.app
 
